@@ -4,8 +4,11 @@ This package was first put together by Ian Murdock
 Murdock, Ted Hajek <tedhajek@boombox.micro.umn.edu>, and Sven Rudolph
 <sr1@inf.tu-dresden.de>.
 
-Since Nov 27 1996, it is maintained by Guy Maor <maor@debian.org>.  He
+Since Nov 27 1996, it was maintained by Guy Maor <maor@debian.org>.  He
 rewrote most of it.
+
+Since May 20 2000, it is maintained by Roland Bauerschmidt
+<roland@copyleft.de>.
 
 deluser is Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>
 and based on the source code of adduser.

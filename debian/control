@@ -1,13 +1,13 @@
 Source: adduser
 Section: base
 Priority: required
-Maintainer: Guy Maor <maor@debian.org>
-Standards-Version: 3.0.1.0
+Maintainer: Roland Bauerschmidt <roland@copyleft.de>
+Standards-Version: 3.1.1
 
 Package: adduser
 Architecture: all
 Depends: perl5, passwd (>=961025)
-Description: Add users and groups to the system.
+Description: Add and remove users and groups to/from the system.
  This package includes the adduser and deluser commands for creating
  and removing users.
  .
@@ -25,4 +25,4 @@ Description: Add users and groups to the system.
  Deluser can optionally remove and backup the user's home directory
  and mail spool or all files on the system owned by him.
  .
- Optionally a custom script can be executed after both commands.
+ Optionally a custom script can be executed after each of the commands

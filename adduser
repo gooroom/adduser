@@ -23,7 +23,7 @@
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program; if not, write to the Free Software
-#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
 #
 ####################
@@ -101,6 +101,7 @@ $config{"users_gid"} = "100";
 $config{"grouphomes"} = "no";
 $config{"letterhomes"} = "no";
 $config{"quotauser"} = "";
+$config{"dir_mode"} = 0755;
 
 $action = $0 eq "addgroup" ? "addgroup" : "adduser";
 
@@ -350,7 +351,7 @@ elsif ($action eq "addsysuser") {
 	&mktree($home_dir) || &cleanup("Couldn't create $home_dir: $!.\n");
 	chown($new_uid, $new_gid, $home_dir)
 	    || &cleanup("chown $new_uid:$new_gid $home_dir: $!\n");
-	$dir_mode = $make_group_also ? 02755 : 0755;
+	$dir_mode = get_dir_mode($make_group_also);
 	chmod ($dir_mode, $home_dir) ||
 	    &cleanup("chmod $dir_mode $home_dir: $!\n");
     }
@@ -431,7 +432,7 @@ elsif ($action eq "adduser") {
 	&mktree($home_dir) || &cleanup("Couldn't create $home_dir: $!.\n");
 	chown($new_uid, $new_gid, $home_dir)
 	    || &cleanup("chown $new_uid:$new_gid $home_dir: $!\n");
-	$dir_mode = $make_group_also ? 02755 : 0755;
+	$dir_mode = get_dir_mode($make_group_also);
 	chmod ($dir_mode, $home_dir) ||
 	    &cleanup("chmod $dir_mode $home_dir: $!\n");
 
@@ -504,7 +505,7 @@ sub mktree {
 
 
 sub check_user_group() {
-    dief(_("The user `%s\' already exists.\n"),$new_name) if (getpwnam($new_name));
+    dief(_("The user `%s\' already exists.\n"),$new_name) if(defined getpwnam($new_name));
     dief(_("The UID `%s' already exists.\n"),$new_uid)
 	if (defined($new_uid) && getpwuid($new_uid));
     if ($make_group_also) {
@@ -567,12 +568,12 @@ compatibility with Samba machine accounts also \$ is supported at the
 end of the username\n");
 	exit 1;
     }
-    elsif ($name !~ /^[a-z][a-z0-9]*$/) {
+    elsif ($name !~ /^[a-z][a-z0-9\-]*$/) {
 	if (!$allow_badname) {
 	    print STDERR
 "$0: ",_("Please enter a username consisting of a lower case letter
 followed by lower case letters and numbers.  Use the `--force-badname'
-option to allow underscores, dashes, and uppercase.\n");
+option to allow underscores, and uppercase.\n");
 	    exit 1;
 	}
 	print _("Allowing use of questionable username.\n") if ($verbose);
@@ -808,8 +809,29 @@ sub warnf {
     printf STDERR "$0: $form",@argu;
 }
 
+sub get_dir_mode
+  {
+      my $setgid = shift;
+      my $dir_mode = $config{"dir_mode"};
+      if(!defined($dir_mode) || ! ($dir_mode =~ /[0-7]{3}/ ||
+				   $dir_mode =~ /[0-7]{4}/))
+	{
+	    $dir_mode = $setgid ? 2755 : 0755;
+	}
+      else
+	{
+	    $dir_mode = $config{"dir_mode"};
+	    if($setgid && (length($dir_mode) == 3 || $dir_mode =~ /^[0-1|4-5][0-7]{3}$/))
+	      {
+		  $dir_mode += 2000;
+	      }
+	}
+      return oct($dir_mode);
+  }
 
 # Local Variables:
 # mode:cperl
 # cperl-indent-level:4
 # End:
+
+

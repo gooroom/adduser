@@ -85,6 +85,12 @@ default value is
 \fBQUOTAUSER\fP
 If set to a nonempty value, new users will have quotas copied from
 that user.  The default is empty.
+.TP
+\fDIR_MODE\fP
+If set to a valid value (e.g. 0755 or 755), directories created will have
+the specified permissions. Otherwise 0755 is used as default. If the created
+user also has its own group the setgid bit will be added to the value if not
+set already.
 .SH FILES
 .I /etc/adduser.conf
 .SH SEE ALSO

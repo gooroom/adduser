@@ -1,20 +1,33 @@
+adduser (3.12) unstable; urgency=low
+
+  * New Maintainer
+  * corrected FSF address in adduser and deluser source
+  * fixed function that checks if the user already exists (closes: #54512)
+  * allow dashes in usernames without using --force-badname (closes: #53788)
+  * ability to set a global mode for creating directories in variable
+    DIR_MODE in adduser.conf (closes: #29389)
+
+ -- Roland Bauerschmidt <roland@copyleft.de>  Sat, 20 May 2000 14:16:20 +0200
+
 adduser (3.11.2) unstable; urgency=low
 
   * NMU
   * new tool 'deluser' to remove users the same way like adding them
   * manpage for deluser(8) and deluser.conf(5)
   * translation of adduser and deluser to German
-  * fixed bug that uid and gid 0 were not recognised (fixes: #59859, #60491,
+  * fixed bug that uid and gid 0 were not recognised (closes: #59859, #60491,
     #50620, #56468, #53606)
   * text "enter groupname" instead of "enter username" if adding a group
-    (fixes: #52701)
+    (closes: #52701)
   * also allowing usernames like foo$ with --force-badname for compatibility
-    with Samba machine accounts (fixes: #28149)
+    with Samba machine accounts (closes: #28149)
   * allow also setting full gecos fields with --gecos like
-    "Roland Bauerschmidt,Room 3,0421/3763482,0421/373545" (fixes: #44031)
-  * last NMU has already fixed bug 44810 (fixes: #44810)
+    "Roland Bauerschmidt,Room 3,0421/3763482,0421/373545" (closes: #44031)
+  * last NMU has already fixed bug 44810 (closes: #44810)
+  * corrected FSF address in debian/copyright
+  * moved manpages from /usr/man to /usr/share/man (closes: #53913)
 
- -- Roland Bauerschmidt <roland@copyleft.de>  Mon, 24 Apr 2000 15:20:30 +0200
+ -- Roland Bauerschmidt <roland@copyleft.de>  Sat,  6 May 2000 21:54:57 +0200
 
 adduser (3.11.1) unstable; urgency=low
 
