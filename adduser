@@ -137,10 +137,10 @@ while ($arg = shift(@ARGV)) {
 	$ask_passwd = 0;
     } elsif ($arg eq "--uid") {
 	die "$0: ",_("--uid requires a numeric argument.\n")
-	    if (!($new_uid = shift(@ARGV)) || $new_uid !~ /^\-?\d+$/);
+	    if (!defined ($new_uid = shift(@ARGV)) || $new_uid !~ /^\-?\d+$/);
     } elsif ($arg eq "--gid") {
 	die "$0: ",_("--gid requires a numeric argument.\n")
-	    if (!($new_gid = shift(@ARGV)) || $new_gid !~ /^\-?\d+$/);
+	    if (!defined ($new_gid = shift(@ARGV)) || $new_gid !~ /^\-?\d+$/);
     } elsif ($arg eq "--conf") {
 	die "$0: ",_("--conf requires an argument.\n")
 	    if (!($defaults = shift(@ARGV)));
@@ -160,8 +160,15 @@ while ($arg = shift(@ARGV)) {
 die "$0: ",_("Only root may add a user or group to the system.\n") if ($> != 0);
 
 if (@names == 0) {
-    print _("Enter a username to add: ");
-    chop($answer=<STDIN>);
+    if($found_group_opt || $action eq "addgroup")
+      {
+	  print _("Enter a groupname to add: ");
+      }
+    else
+      {
+	  print _("Enter a username to add: ");
+      }
+    chomp($answer=<STDIN>);
     push(@names, $answer);
 }
 die "$0: ",_("I need a name to add.\n") if (length($names[0]) == 0);
@@ -249,7 +256,7 @@ if ($action eq "addgroup") {
 ####################
 elsif ($action eq "addusertogroup") {
     dief (_("The user `%s' doesn't exist.\n"),$existing_user)
-	if (!getpwnam($existing_user));
+	if (!defined getpwnam($existing_user));
     dief (_("The group `%s' doesn't exist.\n"),$existing_group)
 	if (!getgrnam($existing_group));
     if (&user_is_member($existing_user, $existing_group)) {
@@ -328,7 +335,10 @@ elsif ($action eq "addsysuser") {
     &systemcall('useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		'/bin/false', '-u', $new_uid, $new_name);
     &startnscd();
-    &systemcall('chfn', '-f', $new_gecos, $new_name) if ($new_gecos);
+
+    if($new_gecos) {
+	&ch_gecos($new_gecos);
+    }
 
     if (-e $home_dir) {
 	printf _("Home directory %s already exists.\n"),$home_dir if $verbose;
@@ -443,7 +453,7 @@ elsif ($action eq "adduser") {
     }
 
     if ($new_gecos) {
-	&systemcall('chfn', '-f', $new_gecos, $new_name);
+	&ch_gecos($new_gecos);
     }
     else {
 	for (;;) {
@@ -549,10 +559,12 @@ sub copy_to_dir {
 # is name ok?
 sub checkname {
     my ($name) = @_;
-    if ($allow_badname && $name !~ /^[A-Za-z_][-_A-Za-z0-9]*$/) {
+    if ($allow_badname && $name !~ /^[A-Za-z_][-_A-Za-z0-9]*\$?$/) {
 	print STDERR
 "$0: ",_("To avoid problems, the username should consist of a letter or
-underscore followed by letters, digits, underscores, and dashes.\n");
+underscore followed by letters, digits, underscores, and dashes. For
+compatibility with Samba machine accounts also \$ is supported at the
+end of the username\n");
 	exit 1;
     }
     elsif ($name !~ /^[a-z][a-z0-9]*$/) {
@@ -623,6 +635,26 @@ sub get_users_groups {
     @groups;
 }
 
+sub ch_gecos {
+    my $gecos = shift;
+    if($gecos =~ /,/)
+      {
+	  my($gecos_name,$gecos_room,$gecos_work,$gecos_home,$gecos_other)
+	    = split(/,/,$gecos);
+
+	  &systemcall('chfn', '-f', $gecos_name, '-r', $gecos_room, $new_name);
+	  &systemcall('chfn','-w',$gecos_work,$new_name)
+	    if(defined($gecos_work));
+	  &systemcall('chfn','-h',$gecos_home,$new_name)
+	    if(defined($gecos_home));
+	  &systemcall('chfn','-o',$gecos_other,$new_name)
+	    if(defined($gecos_other));
+      }
+    else
+      {
+	  &systemcall('chfn', '-f', $gecos, $new_name);
+      }
+}
 
 # user is member of group?
 sub user_is_member {

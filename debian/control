@@ -6,7 +6,7 @@ Standards-Version: 3.0.1.0
 
 Package: adduser
 Architecture: all
-Depends: passwd (>=961025)
+Depends: perl5, passwd (>=961025)
 Description: Add users and groups to the system.
  This package includes the adduser and deluser commands for creating
  and removing users.

@@ -1,3 +1,21 @@
+adduser (3.11.2) unstable; urgency=low
+
+  * NMU
+  * new tool 'deluser' to remove users the same way like adding them
+  * manpage for deluser(8) and deluser.conf(5)
+  * translation of adduser and deluser to German
+  * fixed bug that uid and gid 0 were not recognised (fixes: #59859, #60491,
+    #50620, #56468, #53606)
+  * text "enter groupname" instead of "enter username" if adding a group
+    (fixes: #52701)
+  * also allowing usernames like foo$ with --force-badname for compatibility
+    with Samba machine accounts (fixes: #28149)
+  * allow also setting full gecos fields with --gecos like
+    "Roland Bauerschmidt,Room 3,0421/3763482,0421/373545" (fixes: #44031)
+  * last NMU has already fixed bug 44810 (fixes: #44810)
+
+ -- Roland Bauerschmidt <roland@copyleft.de>  Mon, 24 Apr 2000 15:20:30 +0200
+
 adduser (3.11.1) unstable; urgency=low
 
   * NMU for bugsquash, pre potato freeze

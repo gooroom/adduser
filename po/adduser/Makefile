@@ -12,7 +12,7 @@ LOCALEDIR = /usr/share/locale
 %.pox: %.po adduser.pot
 	$(MSGMERGE) -o $@ $^
 
-LANG = ja fr
+LANG = ja fr de
 MO = $(addsuffix .mo,$(LANG))
 POX = $(addsuffix .pox,$(LANG))
 

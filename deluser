@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 # deluser -- a utility to remove users from the system
-$version = 0.01;
+$version = VERSION;
 
 # Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>
 # Based on 'adduser' as pattern by
@@ -122,7 +122,7 @@ while($arg = shift(@ARGV))
     {
         die "$0: ",_("--conf requires an argument.\n")
             if (!($defaults = shift(@ARGV)));
-        dief (_("`%s' doesn't exist.\n"),$defaults)
+        dief (_("`%s' doesn't exist!\n"),$defaults)
             if (! -f $defaults);
     }
     elsif($arg eq "--remove-home")
@@ -153,7 +153,7 @@ foreach(keys(%pconfig))
     $config{$_} = $pconfig{$_};
 }
 
-# die "$0: ",_("Only root may remove a user or group from the system.\n") if ($> != 0);
+die "$0: ",_("Only root may remove a user or group from the system.\n") if ($> != 0);
  
 if(@names == 0) {
     if($action eq "delgroup")
@@ -306,7 +306,7 @@ elsif($action eq "deluserfromgroup")
 
     unless($ingroup)
     {
-	die "$0: ","$user ",_("is not a member of group")," $group.\n";
+	dief(_("%s is not a member of group %s.\n"),$user,$group);
     }
 
     s_printf(_("Removing user %s from group %s...\n"),$user,$group);
