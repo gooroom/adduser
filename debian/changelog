@@ -1,3 +1,21 @@
+adduser (3.25) unstable; urgency=high
+
+  * adduser: checks for nscd in /usr/bin/nscd and /usr/sbin/nscd.
+  * adduser: nscd is invoked with system instead of systemcall, thus
+    adduser doesn't clean up in case nscd returned an error. Closes: #77927.
+  * adduser: if invoked with --system and the uid is correct, adduser
+    exits silently and thus makes it easier for postinsts to make sure
+    that there will be a user with correct parameters. Closes: #79371.
+  * deluser: security bug for option REMOVE_ALL_FILES fixed. rm was
+    invoked insecurely, like system("rm $files"). rm is no longer used to
+    delete files, but they are directly unlink()ed. Closes: #79526.
+  * deluser: external find call for searching for the users files when
+    using REMOVE_ALL_FILES is replaced through File::Find::find()
+  * deluser: insecure calling of tar fixed. This was the same problem as
+    with rm.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sat, 25 Nov 2000 14:28:25 -0600
+
 adduser (3.24) unstable; urgency=low
 
   * Depends on perl5 now. Yeah, finally we can do that. Closes: #76850

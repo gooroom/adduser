@@ -291,6 +291,15 @@ elsif ($action eq "addusertogroup") {
 ## addsysuser ##
 ################
 elsif ($action eq "addsysuser") {
+    # Check if requested user already exists and we can exit safely
+    if ((@tuser = getpwnam($new_name)) && (
+	(!defined($new_uid) && $tuser[2] >= $config{"first_system_uid"} &&
+	 $tuser[2] <= $config{"last_system_uid"} ) ||
+	(defined($new_uid) && $tuser[2] == $new_uid)
+       )) {
+        printf ("User %s does already exist. Exiting...") if $verbose;
+	exit 0;
+    }
     $new_gid = $nogroup_id
 	if (!$ingroup_name && !defined($new_gid) && !$make_group_also);
     &check_user_group();

@@ -5,4 +5,7 @@ Development of adduser 4.0 which is a complete rewrite in C and Shell happens
 at the moment in a private CVS Repository and if this is demanded I'll move it
 to cvs.d.o or somewhere else where more people have access.
 
- -- Roland Bauerschmidt <rb@debian.org>, Wed Oct 25 19:54:31 CDT 2000
+For adduser 3.x there is to do:
+ o Make adduser and deluser use strict and taint mode
+
+ -- Roland Bauerschmidt <rb@debian.org>, Sat Dec 16 01:34:16 CST 2000

@@ -51,8 +51,11 @@ $version = VERSION;
 #     --quiet | -q      don't give process information to stdout
 #     --help | -h       usage message
 #     --version | -v    version number and copyright
-#     --conf | -c FILE  use FILE instead of /etc/deluser.conf      
+#     --conf | -c FILE  use FILE instead of /etc/deluser.conf
 
+$ENV{"PATH"} = "/sbin:/bin:/usr/sbin:/usr/bin";
+
+use File::Find;
 use AdduserCommon;
 
 BEGIN {
@@ -235,30 +238,43 @@ if($action eq "deluser")
     
     if($config{"remove_home"} || $config{"remove_all_files"})
     {
-	s_print(_("Searching for files to backup/remove...\n"));
-	$files = "";
+	s_print(_("Looking for files to backup/remove...\n"));
+	my(@files,@dirs);
 	if($config{"remove_home"} && ! $config{"remove_all_files"})
 	{
-	    $files = "$files $pw_homedir"
+	    push(@files, $pw_homedir)
 		if(-e $pw_homedir);
-	    $files = "$files /var/mail/$user"
+	    push(@files, "/var/mail/$user")
 		if(-e "/var/mail/$user");
 	}
 	else
 	{
-	    $files = `find / -user $user ! -regex '/proc/.*'`;
+	  sub find_match {
+	    my ($dev,$ino,$mode,$nlink,$uid,$gid);
+	    (($dev,$ino,$mode,$nlink,$uid,$gid) = lstat($_)) &&
+	      ($uid == $pw_uid) &&
+		(
+		 ($File::Find::name =~ /^\/proc\// && ($File::Find::prune = 1)) ||
+		 (-f $File::Find::name && push(@files, $File::Find::name)) ||
+		 (-d $File::Find::name && push(@dirs, $File::Find::name))
+		);
+	  }
+	  File::Find::find({wanted => \&find_match, untaint => 1, no_chdir => 1}, '/');
 	}
 
 	if($config{"backup"})
 	{
 	    s_print(_("Backuping files to be removed...\n"));
-	    systemcall("/bin/tar c$z_tar -f $user.tar$z_ext $files > /dev/null 2>&1");
+	    systemcall("/bin/tar", "c$z_tar", "-f", "$user.tar$z_ext", "--", @dirs, @files);
 	}
 
-	if($files)
+	if(@files || @dirs)
 	{
 	    s_print(_("Removing files...\n"));
-	    systemcall("rm -rf $files > /dev/null 2>&1");
+	    unlink(@files) if(@files);
+	    foreach(@dirs) {
+	      rmdir($_);
+	    }
 	}
     }
 
@@ -278,7 +294,8 @@ elsif($action eq "delgroup")
     {
 	dief (_("`%s' does not exist.\n"),$group);
     }
-    if(system("grep ^.*:.*:.*:$gr_gid:.*:.*:.*\$ /etc/passwd > /dev/null 2>&1") == 0)
+    # This need to be fixed
+    if(system("grep", "-q", "^.*:.*:.*:$gr_gid:.*:.*:.*\$", "/etc/passwd") == 0)
     {
 	dief (_("There are users having `%s' as primary group!\n"),$group);
     }
@@ -303,18 +320,6 @@ elsif($action eq "deluserfromgroup")
     {
 	die "$0: ",_("You may not remove the user from his/her primary group.\n");
     }
-
-    #my @groups = get_users_groups($user);
-    #my $ingroup = 0;
-
-    #for($i = 0; $i <= $#groups; $i++)
-    #{
-	#if($groups[$i] eq $group)
-	#{
-	    #$ingroup = 1;
-	    #splice(@groups,$i,1);
-	#}
-    #}
 
     my @members = get_group_members($group);
     my $ismember = 0;

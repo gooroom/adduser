@@ -13,7 +13,18 @@ use vars qw(@EXPORT $VAR1);
 @EXPORT = qw(invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf);
 
 sub invalidate_nscd {
-    my $nscd = "/usr/sbin/nscd";
+    if(-e "/usr/sbin/nscd")
+      {
+        my $nscd = "/usr/sbin/nscd";
+      }
+    elsif(-e "/usr/bin/nscd")
+      {
+        my $nscd = "/usr/bin/nscd";
+      }
+    else
+      {
+        return(0); # nscd is not installed
+      }
     my $nscdpid = "/var/run/nscd.pid";
     # this function replaces startnscd and stopnscd (closes: #54726)
     if(-e $nscdpid)
@@ -21,13 +32,13 @@ sub invalidate_nscd {
 	my $table = shift;
 	if ($table)
 	  {
-	    systemcall ($nscd, "-i", $table);
+	    system ($nscd, "-i", $table);
 	  }
 	else
 	  {
 	    # otherwise we invalidate passwd and group table
-	    systemcall ($nscd, "-i", "passwd");
-	    systemcall ($nscd, "-i", "group");
+	    system ($nscd, "-i", "passwd");
+	    system ($nscd, "-i", "group");
 	  }
       }
 #    if(-e "/var/yp/Makefile")
