@@ -2,6 +2,8 @@ adduser (3.52.1) unstable; urgency=low
 
   * version number not to be released
   * Marc Haber:
+    * fix deluser to allow exotic characters like "+" in the version
+      string by quoting VERSION.
     * Updated Spanish man pages. Thanks to Ruben Porras. Closes: #241087.
     * Updated French man page for adduser.conf. Thanks to Julien
       Louis. Closes: #244639.
@@ -24,7 +26,7 @@ adduser (3.52.1) unstable; urgency=low
     * Updated French translations. Thanks to Christian Perrier.
       Closes: #242773.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 19 Apr 2004 21:38:17 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 20 Apr 2004 10:03:54 +0200
 
 adduser (3.52) unstable; urgency=low
 
