@@ -1,3 +1,11 @@
+adduser (3.16) unstable; urgency=low
+
+  * Included Russian translation from Peter Novodvorsky <petya@logic.ru>
+  * Changed reference to GPL from /usr/doc/copyright/GPL to
+    /usr/share/common-licenses/GPL. Closes: #69014
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sun, 30 Jul 2000 14:26:34 +0200
+
 adduser (3.15) unstable; urgency=low
 
   * deluser: perl is executed with -w now
