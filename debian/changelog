@@ -1,6 +1,5 @@
-adduser (3.57.1) unstable; urgency=low
+adduser (3.58) unstable; urgency=low
 
-  * NOT YET RELEASED
   * fix inconsistent hyphenation in man pages. Thanks to Clint Adams.
     (mh) Closes: #259000.
   * Applied patch for German debconf translation by Florian Ernst.
@@ -13,7 +12,7 @@ adduser (3.57.1) unstable; urgency=low
     (mh) Closes: #260265.
   * Updated Catalan translations by Jordi Mallach <jordi@debian.org>.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 26 Jul 2004 17:33:36 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 26 Jul 2004 21:11:40 +0200
 
 adduser (3.57) unstable; urgency=low
 
