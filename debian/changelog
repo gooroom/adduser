@@ -1,6 +1,8 @@
 adduser (3.52) unstable; urgency=low
 
   * Removed junk from po/nb.po.
+  * Updated Brazilian Portuguese translation of the Debconf
+    templates. Closes: #207944.
 
  -- Roland Bauerschmidt <rb@debian.org>  Sun, 31 Aug 2003 14:08:39 +0200
 
