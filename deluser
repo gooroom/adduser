@@ -69,7 +69,7 @@ BEGIN {
 }
 
 setlocale(LC_MESSAGES, "");
-textdomain("deluser");
+textdomain("adduser");
 
 $verbose = 1;
 $defaults = "/etc/deluser.conf";
@@ -122,7 +122,7 @@ while($arg = shift(@ARGV))
     {
         die "$0: ",_("--conf requires an argument.\n")
             if (!($defaults = shift(@ARGV)));
-        dief (_("`%s' doesn't exist!\n"),$defaults)
+        dief (_("`%s' doesn't exist.\n"),$defaults)
             if (! -f $defaults);
     }
     elsif($arg eq "--remove-home")
@@ -220,7 +220,7 @@ if($action eq "deluser")
 {
     unless(exist_user($user))
     {
-	dief (_("`%s' does not exist!\n"),$user);
+	dief (_("`%s' does not exist.\n"),$user);
     }
     
     if($config{"remove_home"} || $config{"remove_all_files"})
@@ -264,7 +264,7 @@ elsif($action eq "delgroup")
 {
     unless(exist_group($group))
     {
-	dief (_("`%s' does not exist!\n"),$group);
+	dief (_("`%s' does not exist.\n"),$group);
     }
     if(system("grep ^.*:.*:.*:$gr_gid:.*:.*:.*\$ /etc/passwd > /dev/null 2>&1") == 0)
     {
@@ -279,11 +279,11 @@ elsif($action eq "deluserfromgroup")
 {
     unless(exist_user($user))
     {
-	dief (_("`%s' does not exist!\n"),$user);
+	dief (_("`%s' does not exist.\n"),$user);
     }
     unless(exist_group($group))
     {
-	dief (_("`%s' does not exist!\n"),$group);
+	dief (_("`%s' does not exist.\n"),$group);
     }
     if($maingroup eq $group)
     {

@@ -1,11 +1,33 @@
-all:
-	$(MAKE) -C adduser all
-	$(MAKE) -C deluser all
+XGETTEXT = xgettext
+MSGFMT = msgfmt
+MSGMERGE = msgmerge
 
-install:
-	$(MAKE) -C adduser DESTDIR=$(DESTDIR) install
-	$(MAKE) -C deluser DESTDIR=$(DESTDIR) install
+LOCALEDIR = /usr/share/locale
+
+.SUFFIXES: .po .mo .pot
+
+%.mo: %.po
+	$(MSGFMT) -o $@ $<
+
+%.pox: %.po adduser.pot
+	$(MSGMERGE) -o $@ $^
+
+LANG = ja fr de pt_BR es ko
+MO = $(addsuffix .mo,$(LANG))
+POX = $(addsuffix .pox,$(LANG))
+
+all: $(MO)
+update: $(POX)
+
+adduser.pot: ../adduser ../deluser
+	$(XGETTEXT) -k_ -o $@ $?
+
+install: $(MO)
+	for i in $(MO) ; do \
+	  t=$(DESTDIR)/$(LOCALEDIR)/`basename $$i .mo`/LC_MESSAGES ;\
+	  install -d $$t ;\
+	  install -m 644 $$i $$t/adduser.mo ;\
+	done
 
 clean:
-	$(MAKE) -C adduser clean
-	$(MAKE) -C deluser clean
+	$(RM) $(MO) *~ adduser.pot *.pox

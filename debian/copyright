@@ -10,7 +10,7 @@ rewrote most of it.
 Since May 20 2000, it is maintained by Roland Bauerschmidt
 <roland@copyleft.de>.
 
-deluser is Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>
+deluser is Copyright (C) 2000 Roland Bauerschmidt <rb@debian.org>
 and based on the source code of adduser.
 
 adduser is Copyright (C) 1997, 1998, 1999 Guy Maor <maor@debian.org>.

@@ -35,7 +35,8 @@ binary-indep:	checkroot build
 	chmod 644 debian/tmp/usr/share/man/{man5/*.5,man8/*.8}
 	ln -s adduser.8.gz debian/tmp/usr/share/man/man8/addgroup.8.gz
 	ln -s deluser.8.gz debian/tmp/usr/share/man/man8/delgroup.8.gz
-	
+
+	install -m644 TODO debian/tmp/usr/share/doc/adduser/
 	install -m644 debian/changelog debian/tmp/usr/share/doc/adduser/
 	find debian/tmp/usr/share/{doc,man} -type f | xargs gzip -9f
 	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 

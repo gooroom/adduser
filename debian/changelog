@@ -1,3 +1,21 @@
+adduser (3.13) unstable; urgency=low
+
+  * Merged seperate .po-files for adduser and deluser into one
+  * Added Brazilian translation for adduser (closes: #53912), thanks to
+    Cesar Eduardo Barros <cesarb@web4u.com.br>
+  * Added Spanish translation for adduser and deluser (closes: #44902),
+    thanks to Nicolás Lichtmaier <nick@debian.org>
+  * Added Korean translation for adduser (closes: #46836), thanks to
+    Changwoo Ryu <cwryu@adam.kaist.ac.kr>
+  * Worked patch from #52048 into adduser (closes: #52048)
+  * Added deluser in SEE ALSO section of adduser's manpage (closes: #52508)
+  * Don't create home directories for users with their own group per
+    default setgid because this has some bad side effects. Can be set in
+    /etc/adduser.conf with SETGID_HOME=yes (closes: #64806)
+  * Started TODO list for all the things that still have to be done....
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sat, 04 Jun 2000 17:13:51 +0200
+
 adduser (3.12) unstable; urgency=low
 
   * New Maintainer

@@ -1,21 +1,20 @@
 Source: adduser
 Section: base
 Priority: required
-Maintainer: Roland Bauerschmidt <roland@copyleft.de>
+Maintainer: Roland Bauerschmidt <rb@debian.org>
 Standards-Version: 3.1.1
 
 Package: adduser
 Architecture: all
 Depends: perl5, passwd (>=961025)
-Description: Add and remove users and groups to/from the system.
+Description: Add and remove users and groups to resp. from the system.
  This package includes the adduser and deluser commands for creating
  and removing users.
  .
- Adduser can create new users and groups and add existing users to
- existing groups.
- .
- Deluser can remove users and groups and remove users from specific
- groups.
+ o Adduser can create new users and groups and add existing users to
+    existing groups.
+ o Deluser can remove users and groups and remove users from specific
+    groups.
  .
  Adding users with adduser is much easier than adding them by hand.
  Adduser will choose appropriate UID and GID values, create a home

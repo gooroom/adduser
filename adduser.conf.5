@@ -86,11 +86,19 @@ default value is
 If set to a nonempty value, new users will have quotas copied from
 that user.  The default is empty.
 .TP
-\fDIR_MODE\fP
+\fBDIR_MODE\fP
 If set to a valid value (e.g. 0755 or 755), directories created will have
-the specified permissions. Otherwise 0755 is used as default. If the created
-user also has its own group the setgid bit will be added to the value if not
-set already.
+the specified permissions. Otherwise 0755 is used as default.
+.TP
+\fBSETGID_HOME\fP
+If this is set to
+.IR yes ,
+then home directories for users with their own group (
+.IR USERGROUPS=yes
+) will have the setgid bit set. This was the default setting for adduser
+versions << 3.13. Unfortunately it has some bad side effects, so we no
+longer do this per default. If you want it nevertheless you can still
+activate it here.
 .SH FILES
 .I /etc/adduser.conf
 .SH SEE ALSO

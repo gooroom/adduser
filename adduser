@@ -102,12 +102,13 @@ $config{"grouphomes"} = "no";
 $config{"letterhomes"} = "no";
 $config{"quotauser"} = "";
 $config{"dir_mode"} = 0755;
+$config{"setgid_home"} = "no";
 
 $action = $0 eq "addgroup" ? "addgroup" : "adduser";
 
-while ($arg = shift(@ARGV)) {
+while (defined($arg = shift(@ARGV))) {
     die "$0: ",_("No options allowed after names.\n") 
-	if ($names[0] && $arg =~ /^--/);
+	if (defined($names[0]) && $arg =~ /^--/);
     if ($arg eq "--quiet") {
 	$verbose = 0;
     } elsif ($arg eq "--force-badname") {
@@ -124,10 +125,10 @@ while ($arg = shift(@ARGV)) {
 	$found_group_opt = 1;
     } elsif ($arg eq "--ingroup") {
 	die "$0: ",_("--ingroup requires an argument.\n")
-	    if (!($ingroup_name = shift(@ARGV)));
+	    if (!defined($ingroup_name = shift(@ARGV)));
     } elsif ($arg eq "--home") {
 	die "$0: ",_("--home requires an argument.\n")
-	    if (!($special_home = shift(@ARGV)));
+	    if (!defined($special_home = shift(@ARGV)));
 	print "$0: ",_("Warning: The home dir you specified already exists.\n")
 	    if (-d $special_home && $verbose);
 	die "$0: ",_("The home dir must be an absolute path.\n")
@@ -144,7 +145,7 @@ while ($arg = shift(@ARGV)) {
 	    if (!defined ($new_gid = shift(@ARGV)) || $new_gid !~ /^\-?\d+$/);
     } elsif ($arg eq "--conf") {
 	die "$0: ",_("--conf requires an argument.\n")
-	    if (!($defaults = shift(@ARGV)));
+	    if (!defined($defaults = shift(@ARGV)));
 	dief (_("`%s' doesn't exist.\n",$defaults))
 	    if (! -f $defaults);
     } elsif ($arg eq "--no-create-home") {
@@ -219,7 +220,7 @@ die "$0: ",_("--group, --ingroup, and --gid options are mutually exclusive.\n") 
 #####
 
 &read_config($defaults);
-&checkname($new_name) if $new_name;
+&checkname($new_name) if defined $new_name;
 $SIG{'INT'} = $SIG{'QUIT'} = $SIG{'HUP'} = 'handler';
 
 ##############
@@ -227,9 +228,9 @@ $SIG{'INT'} = $SIG{'QUIT'} = $SIG{'HUP'} = 'handler';
 ##############
 if ($action eq "addgroup") {
     dief (_("The group `%s' already exists.\n"),$new_name)
-	if (getgrnam($new_name));
+	if (defined getgrnam($new_name));
     dief (_("The GID `%s' is already in use.\n"),$new_gid)
-	if (defined($new_gid) && getgrgid($new_gid));
+	if (defined($new_gid) && defined(getgrgid($new_gid)));
     if (!defined($new_gid)) {
         $new_gid = &first_avail_id($config{"first_system_uid"},
 				   $config{"last_system_uid"},
@@ -510,15 +511,15 @@ sub check_user_group() {
 	if (defined($new_uid) && getpwuid($new_uid));
     if ($make_group_also) {
 	dief(_("The group `%s' already exists.\n"),$new_name)
-	    if (getgrnam($new_name));
+	    if (defined getgrnam($new_name));
 	dief(_("The GID `%s' already exists.\n"),$new_uid)
-	    if (defined($new_uid) && getgrgid($new_uid));
+	    if (defined($new_uid) && defined(getgrgid($new_uid)));
     }
     else {
 	dief(_("The group `%s' doesn't exist.\n"),$ingroup_name)
-	    if ($ingroup_name && !getgrnam($ingroup_name));
+	    if ($ingroup_name && !defined(getgrnam($ingroup_name)));
 	dief(_("The GID `%s' doesn't exist.\n"),$new_gid)
-	    if (defined($new_gid) && !getgrgid($new_gid));
+	    if (defined($new_gid) && !defined(getgrgid($new_gid)));
     }
 }
 
@@ -812,6 +813,9 @@ sub warnf {
 sub get_dir_mode
   {
       my $setgid = shift;
+      # no longer make home directories setgid per default (closes: #64806)
+      $setgid = 0 unless $config{"setgid_home"} eq "yes";
+
       my $dir_mode = $config{"dir_mode"};
       if(!defined($dir_mode) || ! ($dir_mode =~ /[0-7]{3}/ ||
 				   $dir_mode =~ /[0-7]{4}/))

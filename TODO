@@ -1,0 +1,21 @@
+TODO for adduser
+----------------
+
+currently the following items are on my wishlist:
+
+ * fixing the bugs that are currently assigned to adduser (this has the
+   highest priority and will happen before anything else)
+   - better handling of nscd (need help here)
+   
+ * clean up the code (might happen step by step while working on the other
+   tasks)
+
+ * more translations (need help from others here ;) if you would like to
+   help me here just translate the .po-file and fill a wishlist bug or
+   send it directly via private mail to me; note: please use the latest
+   version from unstable for this)
+
+ * add a interactive frontend for creating and removing users
+   (console-based using libterm-stool-perl)
+
+-- Roland Bauerschmidt <roland@copyleft.de>, Mon May 29 21:42:48 CEST 2000
