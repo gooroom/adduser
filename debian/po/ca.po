@@ -6,8 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.48\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"POT-Creation-Date: 2002-12-05 02:35+0100\n"
 "PO-Revision-Date: 2002-12-05 02:35+0100\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -22,12 +21,11 @@ msgstr "Voleu que els directoris personals siguen llegibles per tothom?"
 
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the  user. If you are unsure, answer yes "
-"to enable system wide readable home directories."
+"home directories only readable by the user. If you are unsure, answer yes to "
+"enable system wide readable home directories."
 msgstr ""
 "Normalment, els directoris personals poden ser llegits per tots els usuaris "
 "del sistema. Si voleu incrementar la seguretat/privacitat del sistema, podeu "
