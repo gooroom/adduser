@@ -19,13 +19,15 @@ deluser, delgroup \- remove a user or group from the system
 .BR deluser " [options] user group"
 .SS COMMON OPTIONS
 .br
-[\-\-quiet] [\-\-help] [\-\-version] [\-\-conf FILE]
+[\-\-quiet] [\-\-system] [\-\-help] [\-\-version] [\-\-conf FILE]
 .SH DESCRIPTION
 .PP
 .BR deluser " and " delgroup
 remove users and groups from the system according to command line options
 and configuration information in
-.IR /etc/deluser.conf .
+.IR /etc/deluser.conf 
+and
+.IR /etc/adduser.conf .
 They are friendlier front ends to the
 .BR userdel " and " groupdel
 programs, removing the home directory as option or even all files on the system
@@ -98,6 +100,11 @@ Display brief instructions.
 .B \-\-quiet
 Suppress progress messages.
 .TP
+.B \-\-system
+Only delete if user/group is a system user/group. This avoids
+accidentally deleting non-system user/groups. This option is mainly
+for use in Debian package maintainer scripts.
+.TP
 .B \-\-version
 Display version and copyright information.
 .SH FILES
@@ -106,7 +113,8 @@ Display version and copyright information.
 deluser.conf(5), adduser(8), userdel(8), groupdel(8)
 
 .SH COPYRIGHT
-Copyright (C) 2000 Roland Bauerschmidt.
+Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004
+Marc Haber.
 This manpage and the deluser program is based on adduser which is:
 .br
 Copyright (C) 1997, 1998, 1999 Guy Maor.

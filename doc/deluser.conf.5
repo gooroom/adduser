@@ -21,6 +21,8 @@ Each option takes the form
 Double or single quotes are allowed around the value.  Comment lines
 must have a pound sign (#) in the first line.
 
+deluser(8) and delgroup(8) also read /etc/adduser.conf.
+
 The valid configuration options are:
 .TP
 \fBREMOVE_HOME\fP
@@ -45,6 +47,4 @@ Values may be 0 or 1.
 .SH FILES
 .I /etc/deluser.conf
 .SH SEE ALSO
-deluser(8)
-
-
+deluser(8), delgroup(8), adduser.conf(5)

@@ -34,12 +34,15 @@ $version = VERSION;
 #     --remove-home             remove the users home directory and mail spool
 #     --remove-all-files        remove all files owned by user
 #     --backup                  backup files before removing
+#     --system                  only remove if system user
 #
 #  delgroup group
 #  deluser --group group
 #     remove a system group from the system
 #     example: deluser --group students
 #     $action = "delgroup"
+#
+#     --system                 only remove is system group
 #
 #  deluser user group
 #     remove the user from a group
@@ -91,6 +94,24 @@ $defaults = "/etc/deluser.conf";
 $config{"remove_home"} = 0;
 $config{"remove_all_files"} = 0;
 $config{"backup"} = 0;
+$config{"dshell"} = "/bin/bash";
+$config{"first_system_uid"} = 100;
+$config{"last_system_uid"} = 999;
+$config{"first_uid"} = 1000;
+$config{"last_uid"} = 29999;
+$config{"first_system_gid"} = 100;
+$config{"last_system_gid"} = 999;
+$config{"first_gid"} = 1000;
+$config{"last_gid"} = 29999;
+$config{"dhome"} = "/home";
+$config{"skel"} = "/etc/skel";
+$config{"usergroups"} = "yes";
+$config{"users_gid"} = "100";
+$config{"grouphomes"} = "no";
+$config{"letterhomes"} = "no";
+$config{"quotauser"} = "";
+$config{"dir_mode"} = "0755";
+$config{"setgid_home"} = "no";
 
 $action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
 
@@ -116,6 +137,8 @@ while($arg = shift(@ARGV))
             if (!($defaults = shift(@ARGV)));
         dief (_("`%s' doesn't exist.\n"),$defaults)
             if (! -f $defaults);
+    } elsif($arg eq "--system") {
+       $pconfig{"system"} = 1;
     } elsif($arg eq "--remove-home") {
 	$pconfig{"remove_home"} = 1;
     } elsif($arg eq "--remove-all-files") {
@@ -131,6 +154,7 @@ while($arg = shift(@ARGV))
 
 # read configfile and override with commandline arguments
 read_config($defaults);
+read_config("/etc/adduser.conf");
 foreach(keys(%pconfig)) {
     $config{$_} = $pconfig{$_};
 }
@@ -204,6 +228,15 @@ if($action eq "deluser") {
 	dief (_("`%s' does not exist.\n"),$user);
     }
     
+    my($dummy1,$dummy2,$uid);
+    if( $config{"system"} && 
+       (($dummy1,$dummy2,$uid) = getpwnam($user)) &&
+       ($uid < $config{"first_system_uid"} ||
+        $uid > $config{"last_system_uid" } ) ) {
+        printf (_("User %s is not a system account... Exiting.\n"), $user) if $verbose;
+       exit 0;
+    }
+
     if($config{"remove_home"} || $config{"remove_all_files"}) {
 	s_print(_("Looking for files to backup/remove...\n"));
 	my(@files,@dirs);
@@ -263,6 +296,14 @@ if($action eq "deluser") {
     &invalidate_nscd();
     unless(exist_group($group)) {
 	dief (_("`%s' does not exist.\n"),$group);
+    }
+    my($dummy1,$dummy2,$gid);
+    if( $config{"system"} && 
+       (($dummy1,$dummy2,$gid) = getgrnam($group)) &&
+       ($gid < $config{"first_system_gid"} ||
+        $gid > $config{"last_system_gid" } )) {
+        printf (_("Group %s is not a system group... Exiting.\n"), $group) if $verbose;
+       exit 0;
     }
     # This need to be fixed
     if(system("grep", "-q", "^.*:.*:.*:$gr_gid:.*:.*:.*\$", "/etc/passwd") == 0) {
