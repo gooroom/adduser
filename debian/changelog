@@ -1,3 +1,13 @@
+adduser (3.35) unstable; urgency=low
+
+  * Removed unnecessary dependency on perl since perl-base should be
+    sufficient. Thanks to Joey Hess for pointing that out. I suspect 
+    we need a versioned dependency on perl-base though since older
+    perl versions don't look in /usr/share/perl5.
+  * Updated usage text for --shell and --disabled-login options.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sun,  6 May 2001 16:16:06 -0500
+
 adduser (3.34) unstable; urgency=low
 
   * Temporary fix for French translation to display [y/n] instead of

@@ -44,8 +44,8 @@
 #      $action = "addgroup"
 #
 #  adduser --system [--home DIR] [--shell SHELL] [--uid ID] [--group |
-#  --ingroup GROUP | --gid ID] [--disabled-password] [--gecos GECOS]
-#  [--no-create-home] user
+#  --ingroup GROUP | --gid ID] [--disabled-password] [--disabled-login]
+#  [--gecos GECOS] [--no-create-home] user
 #      add a system user.  Create a like-named, like-id'd group with
 #      --group, add to an existing group with --ingroup or --gid.  Add
 #      to "nogroup" with neither.
@@ -735,14 +735,14 @@ General Public License, /usr/share/common-licenses/GPL, for more details.
 
 sub usage {
     printf _(
-"adduser [--home DIR] [--no-create-home] [--uid ID] [--firstuid ID]
-[--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]
-[--disabled-password] user
+"adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
+[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]
+[--disabled-password] [--disabled-login] user
    Add a normal user
 
-adduser --system [--home DIR] [--no-create-home] [--uid ID] [--gecos GECOS]
-[--group | --ingroup GROUP | --gid ID] [--disabled-password]
-user
+adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
+[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-password]
+[--disabled-login] user
    Add a system user
 
 adduser --group [--gid ID] group
