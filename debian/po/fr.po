@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.50\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-06 14:11+0100\n"
+"POT-Creation-Date: 2004-03-26 14:05+0100\n"
 "PO-Revision-Date: 2003-06-19 07:35+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -34,11 +34,12 @@ msgstr "Voulez-vous des répertoires personnels lisibles par tous ?"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the  user. If you are unsure, answer yes "
-"to enable system wide readable home directories."
+"home directories only readable by the user. If you are unsure, enable system "
+"wide readable home directories."
 msgstr ""
 "Les répertoires personnels sont habituellement lisibles par tous les "
 "utilisateurs du système. Si vous voulez rendre votre système plus sûr ou "

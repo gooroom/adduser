@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-06 14:11+0100\n"
+"POT-Creation-Date: 2004-03-26 14:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,11 +33,12 @@ msgstr "Czy katalogi domowe mog± byæ przegl±dane przez wszystkich?"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the  user. If you are unsure, answer yes "
-"to enable system wide readable home directories."
+"home directories only readable by the user. If you are unsure, enable system "
+"wide readable home directories."
 msgstr ""
 "Zazwyczaj katalogi domowe mog± byæ przegl±dane przez wszystkich u¿ytkowników "
 "systemu. Je¶li chcesz zwiêkszych bezpieczeñstwo/prywatno¶æ w swoim systemie "

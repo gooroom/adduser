@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-06 14:11+0100\n"
+"POT-Creation-Date: 2004-03-26 14:05+0100\n"
 "PO-Revision-Date: 2004-02-02 05:21+1300\n"
 "Last-Translator: Hiei Xu <nicky@mail.edu.cn>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -32,11 +32,12 @@ msgstr "您希望让主目录全局可读吗？"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the  user. If you are unsure, answer yes "
-"to enable system wide readable home directories."
+"home directories only readable by the user. If you are unsure, enable system "
+"wide readable home directories."
 msgstr ""
 "通常主目录可以被系统的所有用户查看。如果您想要提高系统的安全性或隐私，您也许"
 "想让用户只可以读取自己的主目录。如果您不确定，回答 yes 来允许主目录全局可读。"

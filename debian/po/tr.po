@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-08 13:58+0000\n"
+"POT-Creation-Date: 2004-03-26 14:05+0100\n"
 "PO-Revision-Date: 2004-03-21 03:21+0200\n"
 "Last-Translator: Erçin EKER <erc.caldera@gmx.net>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -25,15 +25,18 @@ msgstr "Ev dizinlerinin herkes tarafından okunabilmesini ister misiniz?"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the  user. If you are unsure, answer yes "
-"to enable system wide readable home directories."
+"home directories only readable by the user. If you are unsure, enable system "
+"wide readable home directories."
 msgstr ""
-"Normalde, ev dizinleri sistemdeki tüm kullanıcılar tarafından görüntülenebilir. "
-"Eğer sisteminizin güvenliğini/gizliliğini artırmak istiyorsanız, ev dizinlerinin sadece ilgili kullanıcılar tarafından okunabilmesini isteyebilirsiniz. Şayet emin değilseniz, evet "
-"diyerek ev dizinlerinin herkes tarafından okunabilir olmasını sağlayın."
+"Normalde, ev dizinleri sistemdeki tüm kullanıcılar tarafından "
+"görüntülenebilir. Eğer sisteminizin güvenliğini/gizliliğini artırmak "
+"istiyorsanız, ev dizinlerinin sadece ilgili kullanıcılar tarafından "
+"okunabilmesini isteyebilirsiniz. Şayet emin değilseniz, evet diyerek ev "
+"dizinlerinin herkes tarafından okunabilir olmasını sağlayın."
 
 #. Type: boolean
 #. Description
@@ -44,4 +47,3 @@ msgid ""
 msgstr ""
 "Bu sadece daha sonra adduser ile eklenen kullanıcıların ev dizinlerini "
 "etkileyecektir."
-

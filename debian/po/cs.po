@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-06 14:11+0100\n"
+"POT-Creation-Date: 2004-03-26 14:05+0100\n"
 "PO-Revision-Date: 2004-02-10 14:37+0100\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
@@ -32,11 +32,12 @@ msgstr "Chcete domovské adresáøe èitelné pro v¹echny u¾ivatele v systému?"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the  user. If you are unsure, answer yes "
-"to enable system wide readable home directories."
+"home directories only readable by the user. If you are unsure, enable system "
+"wide readable home directories."
 msgstr ""
 "Normálnì mohou v¹ichni u¾ivatelé systému prohlí¾et domovské adresáøe "
 "ostatních u¾ivatelù. Pokud chcete zvý¹it bezpeènost/soukromí, mù¾ete "

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"POT-Creation-Date: 2004-03-26 14:05+0100\n"
 "PO-Revision-Date: 2004-03-19 18:19+0100\n"
 "Last-Translator: André Dahlqvist <andre.dahlqvist@telia.com>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
@@ -23,29 +23,33 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
 msgstr "Vill du att hemkataloger ska vara läsbara för hela systemet?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the  user. If you are unsure, answer yes "
-"to enable system wide readable home directories."
+"home directories only readable by the user. If you are unsure, enable system "
+"wide readable home directories."
 msgstr ""
 "Vanligtvis kan hemkataloger läsas av alla användare på systemet. Om du vill "
 "öka säkerheten/avskildheten i ditt system kan du överväga att ha dina "
-"hemkataloger läsbara enbart av användaren. Om du är osäker bör du svara "
-"ja för att göra hemkatalogerna läsbara för hela systemet."
+"hemkataloger läsbara enbart av användaren. Om du är osäker bör du svara ja "
+"för att göra hemkatalogerna läsbara för hela systemet."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
 msgstr ""
-"Detta kommer endast att påverka hemkataloger tillhörande användare som "
-"läggs till med adduser senare."
+"Detta kommer endast att påverka hemkataloger tillhörande användare som läggs "
+"till med adduser senare."
