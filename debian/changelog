@@ -1,6 +1,5 @@
-adduser (3.52.1) unstable; urgency=low
+adduser (3.53) unstable; urgency=low
 
-  * version number not to be released
   * Marc Haber:
     * fix deluser to allow exotic characters like "+" in the version
       string by quoting VERSION.
@@ -26,7 +25,7 @@ adduser (3.52.1) unstable; urgency=low
     * Updated French translations. Thanks to Christian Perrier.
       Closes: #242773.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 20 Apr 2004 10:03:54 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  8 May 2004 10:54:32 +0000
 
 adduser (3.52) unstable; urgency=low
 
