@@ -1,269 +1,251 @@
-# Portuguese translation of adduser
-# Copyright (C) 2000 Cesar Eduardo Barros
-# Cesar Eduardo Barros <cesarb@web4u.com.br>, 2000.
-#
-#    This program is free software; you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation; either version 2 of the License, or
-#    (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with this program; if not, write to the Free Software
-#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+# Czech translation for adduser.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# Miroslav Kure <kurem@debian.cz>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.13\n"
+"Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-06 14:47+0100\n"
-"PO-Revision-Date: 2000-06-05 20:44-0300\n"
-"Last-Translator: Cesar Eduardo Barros <cesarb@nitnet.com.br>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2004-02-10 15:49+0100\n"
+"Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
+"Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../adduser:125 ../deluser:99
 msgid "No options allowed after names.\n"
-msgstr "Opções não são permitidas depois de nomes.\n"
+msgstr "Po jménech nesmí následovat ¾ádné volby.\n"
 
 #: ../adduser:144
 msgid "--ingroup requires an argument.\n"
-msgstr "--ingroup requer um argumento.\n"
+msgstr "--ingroup vy¾aduje argument.\n"
 
 #: ../adduser:147
 msgid "--home requires an argument.\n"
-msgstr "--home requer um argumento.\n"
+msgstr "--home vy¾aduje argument.\n"
 
 #: ../adduser:149
 msgid "Warning: The home dir you specified already exists.\n"
-msgstr "Alerta: o diretório pessoal que você especificou já existe.\n"
+msgstr "Varování: Zadaný domovský adresáø ji¾ existuje.\n"
 
 #: ../adduser:151
 msgid "The home dir must be an absolute path.\n"
-msgstr "O diretório pessoal deve ser um caminho absoluto.\n"
+msgstr "Domovský adresáø musí být absolutní cesta.\n"
 
 #: ../adduser:154
-#, fuzzy
 msgid "--gecos requires an argument.\n"
-msgstr "--conf requer um argumento.\n"
+msgstr "--gecos vy¾aduje argument.\n"
 
 #: ../adduser:157
-#, fuzzy
 msgid "--shell requires an argument.\n"
-msgstr "--home requer um argumento.\n"
+msgstr "--shell vy¾aduje argument.\n"
 
 #: ../adduser:166
 msgid "--uid requires a numeric argument.\n"
-msgstr "--uid requer um argumento numérico.\n"
+msgstr "--uid vy¾aduje èíselný argument.\n"
 
 #: ../adduser:169
-#, fuzzy
 msgid "--firstuid requires a numeric argument.\n"
-msgstr "--uid requer um argumento numérico.\n"
+msgstr "--firstuid vy¾aduje èíselný argument.\n"
 
 #: ../adduser:172
-#, fuzzy
 msgid "--lastuid requires a numeric argument.\n"
-msgstr "--uid requer um argumento numérico.\n"
+msgstr "--lastuid vy¾aduje èíselný argument.\n"
 
 #: ../adduser:175
 msgid "--gid requires a numeric argument.\n"
-msgstr "--gid requer um argumento numérico.\n"
+msgstr "--gid vy¾aduje èíselný argument.\n"
 
 #: ../adduser:178 ../deluser:115
 msgid "--conf requires an argument.\n"
-msgstr "--conf requer um argumento.\n"
+msgstr "--conf vy¾aduje argument.\n"
 
 #: ../adduser:180 ../deluser:117
 #, perl-format
 msgid "`%s' doesn't exist.\n"
-msgstr "`%s' não existe.\n"
+msgstr "'%s' neexistuje.\n"
 
 #: ../adduser:187 ../deluser:126
 #, perl-format
 msgid "Unknown argument `%s'.\n"
-msgstr "Argumento `%s' desconhecido.\n"
+msgstr "Neznámý argument '%s'.\n"
 
 #: ../adduser:193
 msgid "Only root may add a user or group to the system.\n"
-msgstr "Somente root pode acrescentar um usuário ou grupo ao sistema.\n"
+msgstr "Pouze root mù¾e do systému pøidávat u¾ivatele a skupiny.\n"
 
 #: ../adduser:198
 msgid "Enter a groupname to add: "
-msgstr "Entre um nome de grupo para acrescentar: "
+msgstr "Zadejte jméno pøidávané skupiny: "
 
 #: ../adduser:202
 msgid "Enter a username to add: "
-msgstr "Entre um nome de usuário para acrescentar: "
+msgstr "Zadejte jméno pøidávaného u¾ivatele: "
 
 #: ../adduser:207
 msgid "I need a name to add.\n"
-msgstr "Eu preciso de um nome para acrescentar.\n"
+msgstr "Potøebuji jméno pro pøidání.\n"
 
 #: ../adduser:208 ../deluser:156
 msgid "No more than two names.\n"
-msgstr "Não mais de dois nomes.\n"
+msgstr "Ne více ne¾ dvì jména.\n"
 
 #: ../adduser:210 ../deluser:159
 msgid "Specify only one name in this mode.\n"
-msgstr "Especifique somente um nome neste modo.\n"
+msgstr "V tomto re¾imu mù¾ete zadat pouze jedno jméno.\n"
 
 #: ../adduser:231
 msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
-msgstr "Opções --group, --ingroup, e --gid são mutualmente exclusivas.\n"
+msgstr "Volby --group, --ingroup a --gid se navzájem vyluèují.\n"
 
 #: ../adduser:267 ../adduser:297 ../adduser:603
 #, perl-format
 msgid "The group `%s' already exists.\n"
-msgstr "O grupo `%s' já existe.\n"
+msgstr "Skupina '%s' ji¾ existuje.\n"
 
 #: ../adduser:269 ../adduser:299
 #, perl-format
 msgid "The GID `%s' is already in use.\n"
-msgstr "O GID `%s' já está em uso.\n"
+msgstr "GID '%s' je ji¾ pou¾íváno.\n"
 
 #: ../adduser:277 ../adduser:307
 msgid "No GID is available in the range "
-msgstr "Nenhum GID está disponível na faixa "
+msgstr "Ji¾ není volné ¾ádné GID z rozsahu "
 
 #: ../adduser:280 ../adduser:310
 #, perl-format
 msgid "Group `%s' not created.\n"
-msgstr "Grupo `%s' não criado.\n"
+msgstr "Skupina '%s' nebyla vytvoøena.\n"
 
 #: ../adduser:284 ../adduser:314
 #, perl-format
 msgid "Adding group %s (%s)...\n"
-msgstr "Acrescentando grupo %s (%s)...\n"
+msgstr "Pøidávám skupinu %s (%s)...\n"
 
 #: ../adduser:288 ../adduser:318 ../adduser:349
 msgid "Done.\n"
-msgstr "Concluído.\n"
+msgstr "Hotovo.\n"
 
 #: ../adduser:327
 #, perl-format
 msgid "The user `%s' doesn't exist.\n"
-msgstr "O usuário `%s' não existe.\n"
+msgstr "U¾ivatel '%s' neexistuje.\n"
 
 #: ../adduser:329 ../adduser:609
 #, perl-format
 msgid "The group `%s' doesn't exist.\n"
-msgstr "O grupo `%s' não existe.\n"
+msgstr "Skupina '%s' neexistuje.\n"
 
 #: ../adduser:332
 #, perl-format
 msgid "The user `%s' is already a member of %s.\n"
-msgstr "O usuário `%s' já é um membro de %s.\n"
+msgstr "U¾ivatel '%s' je ji¾ èlenem %s.\n"
 
 #: ../adduser:337
 #, perl-format
 msgid "Adding user %s to group %s...\n"
-msgstr "Acrescentando usuário %s ao grupo %s...\n"
+msgstr "Pøidávám u¾ivatele %s do skupiny %s...\n"
 
 #: ../adduser:364
-#, fuzzy, perl-format
+#, perl-format
 msgid "User %s does already exist. Exiting...\n"
-msgstr "O grupo `%s' já existe.\n"
+msgstr "U¾ivatel %s ji¾ existuje. Konèím...\n"
 
 #: ../adduser:370
 #, perl-format
 msgid "Adding system user %s...\n"
-msgstr "Acrescentando usuário de sistema %s...\n"
+msgstr "Pøidávám systémového u¾ivatele %s...\n"
 
 #: ../adduser:377 ../adduser:464
 msgid "No UID/GID pair is available in the range "
-msgstr "Nenhum par UID/GID está disponível na faixa "
+msgstr "Ji¾ není volný pár UID/GID z rozsahu "
 
 #: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
 #, perl-format
 msgid "User `%s' not created.\n"
-msgstr "Usuário `%s' não criado.\n"
+msgstr "U¾ivatel '%s' nebyl vytvoøen.\n"
 
 #: ../adduser:390 ../adduser:477
 msgid "No UID is available in the range "
-msgstr "Nenhum UID está disponível na faixa "
+msgstr "Ji¾ není volné ¾ádné UID z rozsahu "
 
 #: ../adduser:397 ../adduser:403 ../adduser:484 ../adduser:490
 msgid "Internal error"
-msgstr "Erro interno"
+msgstr "Vnitøní chyba"
 
 #: ../adduser:408 ../adduser:495
 #, perl-format
 msgid "Adding new group %s (%s).\n"
-msgstr "Acrescentando novo grupo %s (%s).\n"
+msgstr "Pøidávám novou skupinu %s (%s).\n"
 
 #: ../adduser:414 ../adduser:501
 #, perl-format
 msgid "Adding new user %s (%s) with group %s.\n"
-msgstr "Acrescentando novo usuário %s (%s) com grupo %s.\n"
+msgstr "Pøidávám nového u¾ivatele %s (%s) se skupinou %s.\n"
 
 #: ../adduser:428
 msgid "Not creating home directory.\n"
-msgstr "Não criando diretório pessoal.\n"
+msgstr "Nevytváøím domovský adresáø.\n"
 
 #: ../adduser:430
 #, perl-format
 msgid "Home directory %s already exists.\n"
-msgstr "Diretório pessoal %s já existe.\n"
+msgstr "Domovský adresáø %s ji¾ existuje.\n"
 
 #: ../adduser:432 ../adduser:517
 #, perl-format
 msgid "Creating home directory %s.\n"
-msgstr "Criando diretório pessoal %s.\n"
+msgstr "Vytváøím domovský adresáø %s.\n"
 
 #: ../adduser:457
 #, perl-format
 msgid "Adding user %s...\n"
-msgstr "Acrescentando usuário %s...\n"
+msgstr "Pøidávám u¾ivatele %s...\n"
 
 #: ../adduser:511
 #, perl-format
 msgid "Home directory %s already exists.  Not copying from %s\n"
-msgstr "Diretório pessoal %s já existe.  Não copiando de %s\n"
+msgstr "Domovský adresáø %s ji¾ existuje. Nekopíruji z %s\n"
 
 #: ../adduser:527
 #, perl-format
 msgid "Copying files from %s\n"
-msgstr "Copiando arquivos de %s\n"
+msgstr "Kopíruji soubory z %s\n"
 
 #: ../adduser:553
 msgid "Is the information correct? [y/n] "
-msgstr "A informação está correta? [s/n] "
+msgstr "Jsou informace správné? [a/n]"
 
 #: ../adduser:555
 msgid "y"
-msgstr "s"
+msgstr "a"
 
 #: ../adduser:560
 #, perl-format
 msgid "Setting quota from %s.\n"
-msgstr "Setando quota a partir de %s.\n"
+msgstr "Nastavuji kvótu z %s.\n"
 
 #: ../adduser:599
 #, fuzzy, perl-format
 msgid "The user `%s' already exists.\n"
-msgstr "O grupo `%s' já existe.\n"
+msgstr "Skupina '%s' ji¾ existuje.\n"
 
 #: ../adduser:600
 #, fuzzy, perl-format
 msgid "The UID `%s' already exists.\n"
-msgstr "O grupo `%s' já existe.\n"
+msgstr "Skupina '%s' ji¾ existuje.\n"
 
 #: ../adduser:605
 #, fuzzy, perl-format
 msgid "The GID `%s' already exists.\n"
-msgstr "O grupo `%s' já existe.\n"
+msgstr "Skupina '%s' ji¾ existuje.\n"
 
 #: ../adduser:611
 #, fuzzy, perl-format
 msgid "The GID `%s' doesn't exist.\n"
-msgstr "O usuário `%s' não existe.\n"
+msgstr "U¾ivatel '%s' neexistuje.\n"
 
 #: ../adduser:656
 msgid ""
@@ -287,22 +269,22 @@ msgstr ""
 #: ../adduser:681
 #, fuzzy, perl-format
 msgid "Selecting from %s %s (%s).\n"
-msgstr "Setando quota a partir de %s.\n"
+msgstr "Nastavuji kvótu z %s.\n"
 
 #: ../adduser:746
 #, fuzzy, perl-format
 msgid "Removing directory `%s'\n"
-msgstr "Criando diretório pessoal %s.\n"
+msgstr "Vytváøím domovský adresáø %s.\n"
 
 #: ../adduser:750
 #, fuzzy, perl-format
 msgid "Removing user `%s'.\n"
-msgstr "Removendo usuário %s...\n"
+msgstr "Odstraòuji u¾ivatele %s...\n"
 
 #: ../adduser:754
 #, fuzzy, perl-format
 msgid "Removing group `%s'.\n"
-msgstr "Removendo grupo %s...\n"
+msgstr "Odstraòuji skupinu %s...\n"
 
 #: ../adduser:787
 #, perl-format
@@ -341,105 +323,106 @@ msgid ""
 "you need to install the `perl-modules' package. To accomplish that, run\n"
 "apt-get install perl-modules\n"
 msgstr ""
+"Abyste mohli vyu¾ívat volby --remove-home, --remove-all-files a --backup,\n"
+"musíte nainstalovat balík 'perl-modules'. Toho dosáhnete tøeba pøíkazem\n"
+"apt-get install perl-modules\n"
 
 #: ../deluser:143
 msgid "Only root may remove a user or group from the system.\n"
-msgstr "Somente root pode remover um usuário ou grupo do sistema.\n"
+msgstr "Pouze root mù¾e ze systému odstraòovat u¾ivatele a skupiny.\n"
 
 #: ../deluser:147
 msgid "Enter a groupname to remove: "
-msgstr "Entre um nome de grupo para remover: "
+msgstr "Zadejte jméno odstraòovavé skupiny: "
 
 #: ../deluser:149
 msgid "Enter a username to remove: "
-msgstr "Entre um nome de usuário para remover: "
+msgstr "Zadejte jméno odstraòovavého u¾ivatele: "
 
 #: ../deluser:155
 msgid "I need a name to remove.\n"
-msgstr "Eu preciso de um nome para remover.\n"
+msgstr "Potøebuji jméno pro odstranìní.\n"
 
 #: ../deluser:204 ../deluser:265 ../deluser:281 ../deluser:284
 #, perl-format
 msgid "`%s' does not exist.\n"
-msgstr "`%s' não existe.\n"
+msgstr "'%s' neexistuje.\n"
 
 #: ../deluser:208
-#, fuzzy
 msgid "Looking for files to backup/remove...\n"
-msgstr "Procurando por arquivos para salvar/remover...\n"
+msgstr "Hledám soubory pro zálohu/odstranìní...\n"
 
 #: ../deluser:236
 msgid "Backuping files to be removed...\n"
-msgstr "Salvando arquivos a serem removidos...\n"
+msgstr "Zálohuji soubory k odstranìní...\n"
 
 #: ../deluser:246
 msgid "Removing files...\n"
-msgstr "Removendo arquivos...\n"
+msgstr "Odstraòuji soubory...\n"
 
 #: ../deluser:254
 #, perl-format
 msgid "Removing user %s...\n"
-msgstr "Removendo usuário %s...\n"
+msgstr "Odstraòuji u¾ivatele %s...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
 msgid "done.\n"
-msgstr "concluído.\n"
+msgstr "hotovo.\n"
 
 #: ../deluser:269
 #, perl-format
 msgid "There are users having `%s' as primary group!\n"
-msgstr "Há usuários com `%s' como grupo primário!\n"
+msgstr "Existují u¾ivatelé, kteøí mají nastavenu skupinu '%s' jako primární!\n"
 
 #: ../deluser:272
 #, perl-format
 msgid "Removing group %s...\n"
-msgstr "Removendo grupo %s...\n"
+msgstr "Odstraòuji skupinu %s...\n"
 
 #: ../deluser:287
 msgid "You may not remove the user from his/her primary group.\n"
-msgstr "Você não pode remover o usuário de seu grupo primário.\n"
+msgstr "Nemù¾ete odstranit u¾ivatele z jeho primární skupiny.\n"
 
 #: ../deluser:301
 #, perl-format
 msgid "%s is not a member of group %s.\n"
-msgstr "%s não é um membro do grupo %s.\n"
+msgstr "%s není èlenem skupiny %s.\n"
 
 #: ../deluser:304
 #, perl-format
 msgid "Removing user %s from group %s...\n"
-msgstr "Removendo usuário %s do grupo %s...\n"
+msgstr "Odstraòuji u¾ivatele %s ze skupiny %s...\n"
 
 #: ../deluser:315 ../deluser:334
 msgid "removing user and groups from the system. Version:"
-msgstr "removendo usuário e grupos do sistema. Versão:"
+msgstr "odstraòuje ze systému u¾ivatele a skupiny. Verze:"
 
 #: ../deluser:359
 #, perl-format
 msgid "Global configuration is in the file %s.\n"
-msgstr "Configuração global está no arquivo %s.\n"
+msgstr "Globální nastavení je v souboru %s.\n"
 
 #: ../AdduserCommon.pm:78
 #, perl-format
 msgid "%s: %s doesn't exist.  Using defaults.\n"
-msgstr "%s: %s não existe.  Usando padrões.\n"
+msgstr "%s: %s neexistuje. Pou¾ívám standardní hodnoty.\n"
 
 #: ../AdduserCommon.pm:88
 #, perl-format
 msgid "Couldn't parse %s:%s.\n"
-msgstr "Não pude interpretar %s:%s.\n"
+msgstr "Nemohu zpracovat %s:%s.\n"
 
 #: ../AdduserCommon.pm:93
 #, perl-format
 msgid "Unknown variable `%s' at %s:%s.\n"
-msgstr "Variável `%s' desconhecida em %s:%s.\n"
+msgstr "Neznámá promìnná '%s' v %s:%s.\n"
 
 #, fuzzy
 #~ msgid "Adding new group %s (%d).\n"
-#~ msgstr "Acrescentando novo grupo %s (%s).\n"
+#~ msgstr "Pøidávám novou skupinu %s (%s).\n"
 
 #~ msgid "Adding new group $new_name ($new_gid).\n"
-#~ msgstr "Acrescentando novo grupo $new_name ($new_gid).\n"
+#~ msgstr "Pøidávám novou skupinu $new_name ($new_gid).\n"
 
-# Ugh. This doesn't make any sense. Looks like a bug.
 #~ msgid "@_"
 #~ msgstr "@_"

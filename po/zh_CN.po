@@ -1,269 +1,252 @@
-# Portuguese translation of adduser
-# Copyright (C) 2000 Cesar Eduardo Barros
-# Cesar Eduardo Barros <cesarb@web4u.com.br>, 2000.
-#
-#    This program is free software; you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation; either version 2 of the License, or
-#    (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with this program; if not, write to the Free Software
-#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+# Simplified Chinese(zh_CN) translation of adduser
+# modified from ca.po
+# Hiei Xu <nicky@mail.edu.cn>, 2004
+# Carlos Z.F. Liu <carlos_liu@yahoo.com>, 2004
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.13\n"
+"Project-Id-Version: adduser 3.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-06 14:47+0100\n"
-"PO-Revision-Date: 2000-06-05 20:44-0300\n"
-"Last-Translator: Cesar Eduardo Barros <cesarb@nitnet.com.br>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2004-02-02 05:09+1300\n"
+"Last-Translator: Hiei Xu <nicky@mail.edu.cn>\n"
+"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../adduser:125 ../deluser:99
 msgid "No options allowed after names.\n"
-msgstr "Op��es n�o s�o permitidas depois de nomes.\n"
+msgstr "名字后面不允许加入选项。\n"
 
 #: ../adduser:144
 msgid "--ingroup requires an argument.\n"
-msgstr "--ingroup requer um argumento.\n"
+msgstr "--ingroup 需要一个参数。\n"
 
 #: ../adduser:147
 msgid "--home requires an argument.\n"
-msgstr "--home requer um argumento.\n"
+msgstr "--home 需要一个参数。\n"
 
 #: ../adduser:149
 msgid "Warning: The home dir you specified already exists.\n"
-msgstr "Alerta: o diret�rio pessoal que voc� especificou j� existe.\n"
+msgstr "警告：您指定的主目录已经存在。\n"
 
 #: ../adduser:151
 msgid "The home dir must be an absolute path.\n"
-msgstr "O diret�rio pessoal deve ser um caminho absoluto.\n"
+msgstr "主目录必须是一个绝对路径。\n"
 
 #: ../adduser:154
-#, fuzzy
 msgid "--gecos requires an argument.\n"
-msgstr "--conf requer um argumento.\n"
+msgstr "--gecos 需要一个参数。\n"
 
 #: ../adduser:157
-#, fuzzy
 msgid "--shell requires an argument.\n"
-msgstr "--home requer um argumento.\n"
+msgstr "--shell 需要一个参数。\n"
 
 #: ../adduser:166
 msgid "--uid requires a numeric argument.\n"
-msgstr "--uid requer um argumento num�rico.\n"
+msgstr "--uid 需要一个数字参数。\n"
 
 #: ../adduser:169
-#, fuzzy
 msgid "--firstuid requires a numeric argument.\n"
-msgstr "--uid requer um argumento num�rico.\n"
+msgstr "--firstuid 需要一个数字参数。\n"
 
 #: ../adduser:172
-#, fuzzy
 msgid "--lastuid requires a numeric argument.\n"
-msgstr "--uid requer um argumento num�rico.\n"
+msgstr "--lastuid 需要一个数字参数。\n"
 
 #: ../adduser:175
 msgid "--gid requires a numeric argument.\n"
-msgstr "--gid requer um argumento num�rico.\n"
+msgstr "--gid 需要一个数字参数。\n"
 
 #: ../adduser:178 ../deluser:115
 msgid "--conf requires an argument.\n"
-msgstr "--conf requer um argumento.\n"
+msgstr "--conf 需要一个参数。\n"
 
 #: ../adduser:180 ../deluser:117
 #, perl-format
 msgid "`%s' doesn't exist.\n"
-msgstr "`%s' n�o existe.\n"
+msgstr "“%s” 不存在。\n"
 
 #: ../adduser:187 ../deluser:126
 #, perl-format
 msgid "Unknown argument `%s'.\n"
-msgstr "Argumento `%s' desconhecido.\n"
+msgstr "未知参数“%s”。\n"
 
 #: ../adduser:193
 msgid "Only root may add a user or group to the system.\n"
-msgstr "Somente root pode acrescentar um usu�rio ou grupo ao sistema.\n"
+msgstr "只有 root 才能将用户或组添加到系统。\n"
 
 #: ../adduser:198
 msgid "Enter a groupname to add: "
-msgstr "Entre um nome de grupo para acrescentar: "
+msgstr "请输入要添加的组名："
 
 #: ../adduser:202
 msgid "Enter a username to add: "
-msgstr "Entre um nome de usu�rio para acrescentar: "
+msgstr "请输入要添加的用户名："
 
 #: ../adduser:207
 msgid "I need a name to add.\n"
-msgstr "Eu preciso de um nome para acrescentar.\n"
+msgstr "我需要被添加用户的名字。\n"
 
 #: ../adduser:208 ../deluser:156
 msgid "No more than two names.\n"
-msgstr "N�o mais de dois nomes.\n"
+msgstr "不超过两个名字。\n"
 
 #: ../adduser:210 ../deluser:159
 msgid "Specify only one name in this mode.\n"
-msgstr "Especifique somente um nome neste modo.\n"
+msgstr "这个模式下只能指定一个名字。\n"
 
 #: ../adduser:231
 msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
-msgstr "Op��es --group, --ingroup, e --gid s�o mutualmente exclusivas.\n"
+msgstr "--group，--ingroup，和 --gid 选项是不能同时使用的。\n"
 
 #: ../adduser:267 ../adduser:297 ../adduser:603
 #, perl-format
 msgid "The group `%s' already exists.\n"
-msgstr "O grupo `%s' j� existe.\n"
+msgstr "“%s”组已经存在。\n"
 
 #: ../adduser:269 ../adduser:299
 #, perl-format
 msgid "The GID `%s' is already in use.\n"
-msgstr "O GID `%s' j� est� em uso.\n"
+msgstr "GID “%s”已经被使用。\n"
 
 #: ../adduser:277 ../adduser:307
 msgid "No GID is available in the range "
-msgstr "Nenhum GID est� dispon�vel na faixa "
+msgstr "GID 不能使用这个范围里的数字。 "
 
 #: ../adduser:280 ../adduser:310
 #, perl-format
 msgid "Group `%s' not created.\n"
-msgstr "Grupo `%s' n�o criado.\n"
+msgstr "“%s”组没有被创建。\n"
 
 #: ../adduser:284 ../adduser:314
 #, perl-format
 msgid "Adding group %s (%s)...\n"
-msgstr "Acrescentando grupo %s (%s)...\n"
+msgstr "正在添加组 %s (%s)...\n"
 
 #: ../adduser:288 ../adduser:318 ../adduser:349
 msgid "Done.\n"
-msgstr "Conclu�do.\n"
+msgstr "完成。\n"
 
 #: ../adduser:327
 #, perl-format
 msgid "The user `%s' doesn't exist.\n"
-msgstr "O usu�rio `%s' n�o existe.\n"
+msgstr "用户“%s”不存在。\n"
 
 #: ../adduser:329 ../adduser:609
 #, perl-format
 msgid "The group `%s' doesn't exist.\n"
-msgstr "O grupo `%s' n�o existe.\n"
+msgstr "“%s”组不存在。\n"
 
 #: ../adduser:332
 #, perl-format
 msgid "The user `%s' is already a member of %s.\n"
-msgstr "O usu�rio `%s' j� � um membro de %s.\n"
+msgstr "用户“%s”属于 %s 组。\n"
 
 #: ../adduser:337
 #, perl-format
 msgid "Adding user %s to group %s...\n"
-msgstr "Acrescentando usu�rio %s ao grupo %s...\n"
+msgstr "正在添加用户 %s 到 %s 组...\n"
 
 #: ../adduser:364
-#, fuzzy, perl-format
+#, perl-format
 msgid "User %s does already exist. Exiting...\n"
-msgstr "O grupo `%s' j� existe.\n"
+msgstr "用户 %s 已经存在。退出...\n"
 
 #: ../adduser:370
 #, perl-format
 msgid "Adding system user %s...\n"
-msgstr "Acrescentando usu�rio de sistema %s...\n"
+msgstr "正在添加系统用户 %s...\n"
 
 #: ../adduser:377 ../adduser:464
 msgid "No UID/GID pair is available in the range "
-msgstr "Nenhum par UID/GID est� dispon�vel na faixa "
+msgstr "UID/GID 不能使用这个范围里的数字。 "
 
 #: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
 #, perl-format
 msgid "User `%s' not created.\n"
-msgstr "Usu�rio `%s' n�o criado.\n"
+msgstr "用户“%s”没有被创建。\n"
 
 #: ../adduser:390 ../adduser:477
 msgid "No UID is available in the range "
-msgstr "Nenhum UID est� dispon�vel na faixa "
+msgstr "UID 不允许使用这个范围里的数字。 "
 
 #: ../adduser:397 ../adduser:403 ../adduser:484 ../adduser:490
 msgid "Internal error"
-msgstr "Erro interno"
+msgstr "内部错误"
 
 #: ../adduser:408 ../adduser:495
 #, perl-format
 msgid "Adding new group %s (%s).\n"
-msgstr "Acrescentando novo grupo %s (%s).\n"
+msgstr "正在添加新组 %s (%s)。\n"
 
 #: ../adduser:414 ../adduser:501
 #, perl-format
 msgid "Adding new user %s (%s) with group %s.\n"
-msgstr "Acrescentando novo usu�rio %s (%s) com grupo %s.\n"
+msgstr "正在添加用户 %s (%s) 到 %s 组。\n"
 
 #: ../adduser:428
 msgid "Not creating home directory.\n"
-msgstr "N�o criando diret�rio pessoal.\n"
+msgstr "无法创建主目录。\n"
 
 #: ../adduser:430
 #, perl-format
 msgid "Home directory %s already exists.\n"
-msgstr "Diret�rio pessoal %s j� existe.\n"
+msgstr "主目录 %s 已经存在。\n"
 
 #: ../adduser:432 ../adduser:517
 #, perl-format
 msgid "Creating home directory %s.\n"
-msgstr "Criando diret�rio pessoal %s.\n"
+msgstr "正在创建主目录 %s。\n"
 
 #: ../adduser:457
 #, perl-format
 msgid "Adding user %s...\n"
-msgstr "Acrescentando usu�rio %s...\n"
+msgstr "正在添加用户 %s...\n"
 
 #: ../adduser:511
 #, perl-format
 msgid "Home directory %s already exists.  Not copying from %s\n"
-msgstr "Diret�rio pessoal %s j� existe.  N�o copiando de %s\n"
+msgstr "主目录 %s 已经存在。没有从 %s 复制文件过来。\n"
 
 #: ../adduser:527
 #, perl-format
 msgid "Copying files from %s\n"
-msgstr "Copiando arquivos de %s\n"
+msgstr "正在从 %s 复制文件\n"
 
 #: ../adduser:553
 msgid "Is the information correct? [y/n] "
-msgstr "A informa��o est� correta? [s/n] "
+msgstr "这些信息正确吗？[y/n] "
 
 #: ../adduser:555
 msgid "y"
-msgstr "s"
+msgstr "y"
 
 #: ../adduser:560
 #, perl-format
 msgid "Setting quota from %s.\n"
-msgstr "Setando quota a partir de %s.\n"
+msgstr "正在从 %s 设置磁盘限额(quota)。\n"
 
 #: ../adduser:599
 #, fuzzy, perl-format
 msgid "The user `%s' already exists.\n"
-msgstr "O grupo `%s' j� existe.\n"
+msgstr "“%s”组已经存在。\n"
 
 #: ../adduser:600
 #, fuzzy, perl-format
 msgid "The UID `%s' already exists.\n"
-msgstr "O grupo `%s' j� existe.\n"
+msgstr "“%s”组已经存在。\n"
 
 #: ../adduser:605
 #, fuzzy, perl-format
 msgid "The GID `%s' already exists.\n"
-msgstr "O grupo `%s' j� existe.\n"
+msgstr "“%s”组已经存在。\n"
 
 #: ../adduser:611
 #, fuzzy, perl-format
 msgid "The GID `%s' doesn't exist.\n"
-msgstr "O usu�rio `%s' n�o existe.\n"
+msgstr "用户“%s”不存在。\n"
 
 #: ../adduser:656
 msgid ""
@@ -287,22 +270,22 @@ msgstr ""
 #: ../adduser:681
 #, fuzzy, perl-format
 msgid "Selecting from %s %s (%s).\n"
-msgstr "Setando quota a partir de %s.\n"
+msgstr "正在从 %s 设置磁盘限额(quota)。\n"
 
 #: ../adduser:746
 #, fuzzy, perl-format
 msgid "Removing directory `%s'\n"
-msgstr "Criando diret�rio pessoal %s.\n"
+msgstr "正在创建主目录 %s。\n"
 
 #: ../adduser:750
 #, fuzzy, perl-format
 msgid "Removing user `%s'.\n"
-msgstr "Removendo usu�rio %s...\n"
+msgstr "正在删除用户 %s...\n"
 
 #: ../adduser:754
 #, fuzzy, perl-format
 msgid "Removing group `%s'.\n"
-msgstr "Removendo grupo %s...\n"
+msgstr "正在删除组 %s...\n"
 
 #: ../adduser:787
 #, perl-format
@@ -341,105 +324,106 @@ msgid ""
 "you need to install the `perl-modules' package. To accomplish that, run\n"
 "apt-get install perl-modules\n"
 msgstr ""
+"为了使用 --remove-home，--remove-all-files，和 --backup 功\n"
+"能，您需要安装“perl-modules”软件包。要获得它，请运行\n"
+"apt-get install perl-modules\n"
 
 #: ../deluser:143
 msgid "Only root may remove a user or group from the system.\n"
-msgstr "Somente root pode remover um usu�rio ou grupo do sistema.\n"
+msgstr "只有 root 才能从系统中删除用户或组。\n"
 
 #: ../deluser:147
 msgid "Enter a groupname to remove: "
-msgstr "Entre um nome de grupo para remover: "
+msgstr "请输入要删除的组名："
 
 #: ../deluser:149
 msgid "Enter a username to remove: "
-msgstr "Entre um nome de usu�rio para remover: "
+msgstr "请输入要删除的用户名："
 
 #: ../deluser:155
 msgid "I need a name to remove.\n"
-msgstr "Eu preciso de um nome para remover.\n"
+msgstr "我需要欲删除用户的名字。\n"
 
 #: ../deluser:204 ../deluser:265 ../deluser:281 ../deluser:284
 #, perl-format
 msgid "`%s' does not exist.\n"
-msgstr "`%s' n�o existe.\n"
+msgstr "“%s” 不存在。\n"
 
 #: ../deluser:208
-#, fuzzy
 msgid "Looking for files to backup/remove...\n"
-msgstr "Procurando por arquivos para salvar/remover...\n"
+msgstr "正在寻找要备份或删除的文件...\n"
 
 #: ../deluser:236
 msgid "Backuping files to be removed...\n"
-msgstr "Salvando arquivos a serem removidos...\n"
+msgstr "正在备份将要删除的文件...\n"
 
 #: ../deluser:246
 msgid "Removing files...\n"
-msgstr "Removendo arquivos...\n"
+msgstr "正在删除文件...\n"
 
 #: ../deluser:254
 #, perl-format
 msgid "Removing user %s...\n"
-msgstr "Removendo usu�rio %s...\n"
+msgstr "正在删除用户 %s...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
 msgid "done.\n"
-msgstr "conclu�do.\n"
+msgstr "完成。\n"
 
 #: ../deluser:269
 #, perl-format
 msgid "There are users having `%s' as primary group!\n"
-msgstr "H� usu�rios com `%s' como grupo prim�rio!\n"
+msgstr "有些用户以“%s”为主要组！\n"
 
 #: ../deluser:272
 #, perl-format
 msgid "Removing group %s...\n"
-msgstr "Removendo grupo %s...\n"
+msgstr "正在删除组 %s...\n"
 
 #: ../deluser:287
 msgid "You may not remove the user from his/her primary group.\n"
-msgstr "Voc� n�o pode remover o usu�rio de seu grupo prim�rio.\n"
+msgstr "您不应该将用户从他/她的主要组中删除。\n"
 
 #: ../deluser:301
 #, perl-format
 msgid "%s is not a member of group %s.\n"
-msgstr "%s n�o � um membro do grupo %s.\n"
+msgstr "“%s 不是 %s 组中的成员。\n"
 
 #: ../deluser:304
 #, perl-format
 msgid "Removing user %s from group %s...\n"
-msgstr "Removendo usu�rio %s do grupo %s...\n"
+msgstr "正在将用户 %s 从 %s 组中删除...\n"
 
 #: ../deluser:315 ../deluser:334
 msgid "removing user and groups from the system. Version:"
-msgstr "removendo usu�rio e grupos do sistema. Vers�o:"
+msgstr "正在从系统中删除用户和组。版本："
 
 #: ../deluser:359
 #, perl-format
 msgid "Global configuration is in the file %s.\n"
-msgstr "Configura��o global est� no arquivo %s.\n"
+msgstr "全局配置存在文件 %s 中。\n"
 
 #: ../AdduserCommon.pm:78
 #, perl-format
 msgid "%s: %s doesn't exist.  Using defaults.\n"
-msgstr "%s: %s n�o existe.  Usando padr�es.\n"
+msgstr "%s：%s 不存在。使用默认值。\n"
 
 #: ../AdduserCommon.pm:88
 #, perl-format
 msgid "Couldn't parse %s:%s.\n"
-msgstr "N�o pude interpretar %s:%s.\n"
+msgstr "无法解读 %s:%s。\n"
 
 #: ../AdduserCommon.pm:93
 #, perl-format
 msgid "Unknown variable `%s' at %s:%s.\n"
-msgstr "Vari�vel `%s' desconhecida em %s:%s.\n"
+msgstr "未知变量“%s”在 %s:%s。\n"
 
 #, fuzzy
 #~ msgid "Adding new group %s (%d).\n"
-#~ msgstr "Acrescentando novo grupo %s (%s).\n"
+#~ msgstr "正在添加新组 %s (%s)。\n"
 
 #~ msgid "Adding new group $new_name ($new_gid).\n"
-#~ msgstr "Acrescentando novo grupo $new_name ($new_gid).\n"
+#~ msgstr "正在添加新组 $new_name ($new_gid)。\n"
 
-# Ugh. This doesn't make any sense. Looks like a bug.
 #~ msgid "@_"
 #~ msgstr "@_"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser_3.51\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"POT-Creation-Date: 2004-03-06 14:11+0100\n"
 "PO-Revision-Date: 2003-08-29 19:11-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -23,11 +23,13 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
 msgstr "Deseja que os diretórios pessoais sejam legíveis por todos ?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -36,19 +38,20 @@ msgid ""
 "home directories only readable by the  user. If you are unsure, answer yes "
 "to enable system wide readable home directories."
 msgstr ""
-"Normalmente, diretórios pessoais (diretórios home) podem ser lidos por "
-"todos os usuários do sistema. Caso sua intenção seja aumentar a "
-"segurança e a privacidade em seu sistema, é possível fazer com que os "
-"diretórios pessoais dos usuários sejam legíveis apenas pelos próprios "
-"usuários donos dos desses diretórios. Caso você não tenha certeza sobre "
-"o que responder, aceite a habilitação dos diretórios pessoais legíveis "
-"por todos os usuários do sistema."
+"Normalmente, diretórios pessoais (diretórios home) podem ser lidos por todos "
+"os usuários do sistema. Caso sua intenção seja aumentar a segurança e a "
+"privacidade em seu sistema, é possível fazer com que os diretórios pessoais "
+"dos usuários sejam legíveis apenas pelos próprios usuários donos dos desses "
+"diretórios. Caso você não tenha certeza sobre o que responder, aceite a "
+"habilitação dos diretórios pessoais legíveis por todos os usuários do "
+"sistema."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
 msgstr ""
-"Esta mudança somente irá afetar os diretórios pessoais dos usuários "
-"que forem adicionados com o comand 'adduser' após sua aceitação."
+"Esta mudança somente irá afetar os diretórios pessoais dos usuários que "
+"forem adicionados com o comand 'adduser' após sua aceitação."

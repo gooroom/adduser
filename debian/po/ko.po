@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"POT-Creation-Date: 2004-03-06 14:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,13 @@ msgstr ""
 "Content-Type: text/plain; charset=EUC-KR\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
 msgstr "홈 디렉토리를 시스템 전체에서 읽을 수 있도록 할까요?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -42,6 +44,7 @@ msgstr ""
 "하기를 원할 것입니다. 확실하지 않다면, 예로 대답해서 시스템 전체에서 홈 디렉"
 "토리를 읽을 수 있게 하세요."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""

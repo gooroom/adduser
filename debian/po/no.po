@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"POT-Creation-Date: 2004-03-06 14:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,13 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
 msgstr "Ønsker du globalt lesbare hjemmekataloger?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 #, fuzzy
@@ -43,6 +45,7 @@ msgstr ""
 "ønskelig at hjemmekatalogene bare er lesbare av eieren. Hvis du er usikker, "
 "svar ja for å ha globalt lesbare hjemmekataloger."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""

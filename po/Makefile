@@ -12,7 +12,7 @@ LOCALEDIR = /usr/share/locale
 %.pox: %.po adduser.pot
 	$(MSGMERGE) -o $@ $^
 
-LANG = ja fr de pt_BR es ko ru pl nl da ca
+LANG = ca cs da de es fr ja ko nb nl pl pt_BR ru uk zh_CN
 MO = $(addsuffix .mo,$(LANG))
 POX = $(addsuffix .pox,$(LANG))
 
@@ -20,7 +20,7 @@ all: $(MO)
 update: $(POX)
 
 adduser.pot: ../adduser ../deluser ../AdduserCommon.pm
-	$(XGETTEXT) -k_ -o $@ $?
+	$(XGETTEXT) -L Perl -k_ -o $@ $?
 
 install: $(MO)
 	for i in $(MO) ; do \

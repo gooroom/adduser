@@ -55,7 +55,7 @@ sub invalidate_nscd {
 }
 
 sub _ {
-    return gettext("@_");
+    return gettext(@_);
 }
 
 sub dief {

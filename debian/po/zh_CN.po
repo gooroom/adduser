@@ -11,24 +11,23 @@
 #
 #    Developers do not need to manually edit POT or PO files.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: adduser 3.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-06 14:11+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2004-02-02 05:21+1300\n"
+"Last-Translator: Hiei Xu <nicky@mail.edu.cn>\n"
+"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
-msgstr "Czy katalogi domowe mog� by� przegl�dane przez wszystkich?"
+msgstr "您希望让主目录全局可读吗？"
 
 #. Type: boolean
 #. Description
@@ -39,11 +38,8 @@ msgid ""
 "home directories only readable by the  user. If you are unsure, answer yes "
 "to enable system wide readable home directories."
 msgstr ""
-"Zazwyczaj katalogi domowe mog� by� przegl�dane przez wszystkich u�ytkownik�w "
-"systemu. Je�li chcesz zwi�kszych bezpiecze�stwo/prywatno�� w swoim systemie "
-"mo�esz za�yczy� sobie by katalogi domowe by�y tylko do odczytu u�ytkownika. "
-"Je�li nie jeste� pewien co wybra�, wybierz 'tak' by ustawi� mo�liwo�� "
-"przegl�dania katalog�w przez wszystkich."
+"通常主目录可以被系统的所有用户查看。如果您想要提高系统的安全性或隐私，您也许"
+"想让用户只可以读取自己的主目录。如果您不确定，回答 yes 来允许主目录全局可读。"
 
 #. Type: boolean
 #. Description
@@ -51,5 +47,4 @@ msgstr ""
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
-msgstr ""
-"Opcja ta zadzia�a dopiero dla nowych u�ytkownik�w dodanych przez adduser."
+msgstr "这只会影响到以后使用 adduser 程序添加的用户的主目录。"

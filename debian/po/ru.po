@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"POT-Creation-Date: 2004-03-06 14:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,13 @@ msgstr ""
 "Content-Type: text/plain; charset=KOI8-R\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
 msgstr "Хотите сделать домашние каталоги доступными для чтения всем в системе?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -43,6 +45,7 @@ msgstr ""
 "ими самими. Если вы не уверены, ответьте yes, тогда домашние каталоги будут "
 "доступны для чтения всем."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""

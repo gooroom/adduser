@@ -8,6 +8,25 @@ adduser (3.52) unstable; urgency=low
     Closes: #190631.
   * Updated Dutch translation of the Debconf templates by
     cobaco@linux.be. Closes: #215364.
+  * Fixed POT file generation, patch provided by Eugeniy Meshcheryakov
+    <eugen@univ.kiev.ua>. Closes: #233285.
+    The "-L Perl" is added to xgettext, which imposes a versioned
+    dependency on gettext >= 0.13.
+  * Updated Swedish translation of the Debconf templates by
+    Leonard Norrgard <vinsci@refactor.fi>. Closes: #230381.
+  * Fixed a typo in Spanish translation, reported by Jesus Roncero
+    <jesus@roncero.org>. Closes: #223828.
+  * Updated Danish translation by Morten Brix Pedersen <morten@wtf.dk>.
+    Closes: #216420.
+  * Added Simplified Chinese translations, both for programs and
+    Debconf templates, by Carlos Z.F. Liu <carlos_liu@yahoo.com>.
+    Closes: #230651.
+  * Added Czech translations, both for programs and Debconf templates, by
+    Miroslav Kure <kurem@upcase.inf.upol.cz>. Closes: #232062.
+  * Added Ukranian translations, both for programs and Debconf templates,
+    by Eugeniy Meshcheryakov <eugen@univ.kiev.ua>. Closes: #233552.
+  * Applied patch by Denis Barbier <barbier@debian.org> for most translation
+    related changes. Thanks a lot for the help. Closes: #236494.
 
  -- Roland Bauerschmidt <rb@debian.org>  Sun, 31 Aug 2003 14:08:39 +0200
 

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.50\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"POT-Creation-Date: 2004-03-06 14:11+0100\n"
 "PO-Revision-Date: 2003-06-19 15:31+0100\n"
 "Last-Translator: Carlos Valdivia Yague <valyag@teleline.es>\n"
 "Language-Team: Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -23,11 +23,13 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
 msgstr "¿Quiere que todo el sistema pueda leer las cuentas de usuario?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -42,6 +44,7 @@ msgstr ""
 "cuenta. Si no está seguro responda sí para activar la lectura global de las "
 "cuentas de usuario."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""

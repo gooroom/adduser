@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.50\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"POT-Creation-Date: 2004-03-06 14:11+0100\n"
 "PO-Revision-Date: 2003-06-19 07:35+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -25,11 +25,13 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
 msgstr "Voulez-vous des répertoires personnels lisibles par tous ?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -44,6 +46,7 @@ msgstr ""
 "seront lisibles que par leur propriétaire. Si vous êtes indécis, répondez "
 "« yes » pour avoir des répertoires personnels lisibles par tous."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""

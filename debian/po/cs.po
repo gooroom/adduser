@@ -11,15 +11,14 @@
 #
 #    Developers do not need to manually edit POT or PO files.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-06 14:11+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2004-02-10 14:37+0100\n"
+"Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
+"Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +27,7 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
-msgstr "Czy katalogi domowe mog± byæ przegl±dane przez wszystkich?"
+msgstr "Chcete domovské adresáøe èitelné pro v¹echny u¾ivatele v systému?"
 
 #. Type: boolean
 #. Description
@@ -39,11 +38,10 @@ msgid ""
 "home directories only readable by the  user. If you are unsure, answer yes "
 "to enable system wide readable home directories."
 msgstr ""
-"Zazwyczaj katalogi domowe mog± byæ przegl±dane przez wszystkich u¿ytkowników "
-"systemu. Je¶li chcesz zwiêkszych bezpieczeñstwo/prywatno¶æ w swoim systemie "
-"mo¿esz za¿yczyæ sobie by katalogi domowe by³y tylko do odczytu u¿ytkownika. "
-"Je¶li nie jeste¶ pewien co wybraæ, wybierz 'tak' by ustawiæ mo¿liwo¶æ "
-"przegl±dania katalogów przez wszystkich."
+"Normálnì mohou v¹ichni u¾ivatelé systému prohlí¾et domovské adresáøe "
+"ostatních u¾ivatelù. Pokud chcete zvý¹it bezpeènost/soukromí, mù¾ete "
+"nastavit, aby si domovské adresáøe mohli prohlí¾et pouze jejich vlastníci. "
+"Jestli¾e si nejste jisti, odpovìzte ano."
 
 #. Type: boolean
 #. Description
@@ -52,4 +50,4 @@ msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
 msgstr ""
-"Opcja ta zadzia³a dopiero dla nowych u¿ytkowników dodanych przez adduser."
+"Toto nastavení ovlivní pouze domovské adresáøe novì zalo¾ených u¾ivatelù."
