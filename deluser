@@ -76,7 +76,6 @@ textdomain("adduser");
 
 $verbose = 1;
 $defaults = "/etc/deluser.conf";
-$nscd = "/usr/sbin/nscd";
 
 $config{"remove_home"} = 0;
 $config{"remove_all_files"} = 0;

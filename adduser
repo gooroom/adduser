@@ -90,7 +90,6 @@ $ask_passwd = 1;		# ask for a passwd?
 $defaults = "/etc/adduser.conf";
 $nogroup_id = getgrnam("nogroup") || 65534;
 $0 =~ s+.*/++; 
-$nscd = "/usr/sbin/nscd";
 
 $config{"dshell"} = "/bin/bash";
 $config{"first_system_uid"} = 100;
