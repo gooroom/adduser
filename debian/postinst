@@ -15,10 +15,10 @@ fi
 if . /usr/share/debconf/confmodule
 then	
 	db_get adduser/homedir-changed || RET="false"
-	if [ $RET != "true" ]
+	if [ "$RET" != "true" ]
 	then
-		db_get adduser/homedir-permission
-		if [ $RET = "false" ]
+		db_get adduser/homedir-permission || RET="true"
+		if [ "$RET" = "false" ]
 		then
 			NEW_PERMISSION="0751"
 		else

@@ -1,3 +1,10 @@
+adduser (3.44) unstable; urgency=HIGH
+
+  * Quote $RET in debian/postinst. This seems to fix errors when
+    upgrading. Closes: #122606.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Wed,  5 Dec 2001 23:13:54 +0100
+
 adduser (3.43) unstable; urgency=low
 
   * get ready for the freeze
