@@ -11,8 +11,9 @@ adduser (3.57.1) unstable; urgency=low
     to Adam D. Barratt. A request e-mail to the translators asking them to
     review the changes to their translation has been sent out.
     (mh) Closes: #260265.
+  * Updated Catalan translations by Jordi Mallach <jordi@debian.org>.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 26 Jul 2004 16:34:36 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 26 Jul 2004 17:33:36 +0200
 
 adduser (3.57) unstable; urgency=low
 
