@@ -7,8 +7,10 @@ adduser (3.52.1) unstable; urgency=low
       Closes: #241508.
     * Updated Japanese debconf templates. Thanks to Kenshi Muto.
       Closes: #241805.
+    * Updated Danish debconf templates. Thanks to Claus Hindsgaul.
+      Closes: #241845.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Apr 2004 13:01:01 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Apr 2004 15:04:40 +0200
 
 adduser (3.52) unstable; urgency=low
 
