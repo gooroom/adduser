@@ -1,256 +1,254 @@
+# translation of ru.po to Russian
 # adduser.
-# Copyright (C) 2000 Free Software Foundation, Inc.
+# Copyright (C) 2000, 2004 Free Software Foundation, Inc.
 # Copyright (C) 2000 Peter Novodvorsky <nidd@debian.org>.
+# Yuri Kozlov <yuray@id.ru>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.30\n"
+"Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-06 14:47+0100\n"
-"PO-Revision-Date: 2001-02-08 19:20+0300\n"
-"Last-Translator: Peter Novodvorsky <nidd@debian.org>\n"
-"Language-Team: Debian-russian group <debian-russian@lists.debian.org>\n"
+"PO-Revision-Date: 2004-07-27 12:07+0300\n"
+"Last-Translator: Yuri Kozlov <yuray@id.ru>\n"
+"Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=KOI8-R\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
 
 #: ../adduser:125 ../deluser:99
 msgid "No options allowed after names.\n"
-msgstr "Нельзя указывать параметры после имён.\n"
+msgstr "п²п╣п╩я▄п╥я▐ я┐п╨п╟п╥я▀п╡п╟я┌я▄ п©п╟я─п╟п╪п╣я┌я─я▀ п©п╬я│п╩п╣ п╦п╪я▒п╫.\n"
 
 #: ../adduser:144
 msgid "--ingroup requires an argument.\n"
-msgstr "Для опции --ingroup требуется агрумент.\n"
+msgstr "п■п╩я▐ п╬п©я├п╦п╦ --ingroup я┌я─п╣п╠я┐п╣я┌я│я▐ п╟пЁя─я┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:147
 msgid "--home requires an argument.\n"
-msgstr "Для опции --home требуется аргумент.\n"
+msgstr "п■п╩я▐ п╬п©я├п╦п╦ --home я┌я─п╣п╠я┐п╣я┌я│я▐ п╟я─пЁя┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:149
 msgid "Warning: The home dir you specified already exists.\n"
-msgstr "Предупреждение: Заданный вами домашний каталог уже существует.\n"
+msgstr "п÷я─п╣п╢я┐п©я─п╣п╤п╢п╣п╫п╦п╣: п≈п╟п╢п╟п╫п╫я▀п╧ п╡п╟п╪п╦ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:151
 msgid "The home dir must be an absolute path.\n"
-msgstr "Домашний каталог должен задаваться в абсолютном виде.\n"
+msgstr "п■п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ п╢п╬п╩п╤п╣п╫ п╥п╟п╢п╟п╡п╟я┌я▄я│я▐ п╡ п╡п╦п╢п╣ п╟п╠я│п╬п╩я▌я┌п╫п╬пЁп╬ п©я┐я┌п╦.\n"
 
 #: ../adduser:154
-#, fuzzy
 msgid "--gecos requires an argument.\n"
-msgstr "Для опции --conf требуется аргумент.\n"
+msgstr "п■п╩я▐ п╬п©я├п╦п╦ --gecos я┌я─п╣п╠я┐п╣я┌я│я▐ п╟я─пЁя┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:157
-#, fuzzy
 msgid "--shell requires an argument.\n"
-msgstr "Для опции --home требуется аргумент.\n"
+msgstr "п■п╩я▐ п╬п©я├п╦п╦ --shell я┌я─п╣п╠я┐п╣я┌я│я▐ п╟я─пЁя┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:166
 msgid "--uid requires a numeric argument.\n"
-msgstr "Для опции --uid требуется числовой аргумент.\n"
+msgstr "п■п╩я▐ п╬п©я├п╦п╦ --uid я┌я─п╣п╠я┐п╣я┌я│я▐ я┤п╦я│п╩п╬п╡п╬п╧ п╟я─пЁя┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:169
-#, fuzzy
 msgid "--firstuid requires a numeric argument.\n"
-msgstr "Для опции --uid требуется числовой аргумент.\n"
+msgstr "п■п╩я▐ п╬п©я├п╦п╦ --firstuid я┌я─п╣п╠я┐п╣я┌я│я▐ я┤п╦я│п╩п╬п╡п╬п╧ п╟я─пЁя┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:172
-#, fuzzy
 msgid "--lastuid requires a numeric argument.\n"
-msgstr "Для опции --uid требуется числовой аргумент.\n"
+msgstr "п■п╩я▐ п╬п©я├п╦п╦ --lastuid я┌я─п╣п╠я┐п╣я┌я│я▐ я┤п╦я│п╩п╬п╡п╬п╧ п╟я─пЁя┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:175
 msgid "--gid requires a numeric argument.\n"
-msgstr "Для опции --gid требуется числовой аргумент.\n"
+msgstr "п■п╩я▐ п╬п©я├п╦п╦ --gid я┌я─п╣п╠я┐п╣я┌я│я▐ я┤п╦я│п╩п╬п╡п╬п╧ п╟я─пЁя┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:178 ../deluser:115
 msgid "--conf requires an argument.\n"
-msgstr "Для опции --conf требуется аргумент.\n"
+msgstr "п■п╩я▐ п╬п©я├п╦п╦ --conf я┌я─п╣п╠я┐п╣я┌я│я▐ п╟я─пЁя┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:180 ../deluser:117
 #, perl-format
 msgid "`%s' does not exist.\n"
-msgstr "`%s' не существует.\n"
+msgstr "`%s' п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:187 ../deluser:126
 #, perl-format
 msgid "Unknown argument `%s'.\n"
-msgstr "`%s' -- неизвестный аргумент.\n"
+msgstr "`%s' -- п╫п╣п╦п╥п╡п╣я│я┌п╫я▀п╧ п╟я─пЁя┐п╪п╣п╫я┌.\n"
 
 #: ../adduser:193
 msgid "Only root may add a user or group to the system.\n"
-msgstr "Только root может добавлять пользователей и группы в систему.\n"
+msgstr "п╒п╬п╩я▄п╨п╬ root п╪п╬п╤п╣я┌ п╢п╬п╠п╟п╡п╩я▐я┌я▄ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ п╦ пЁя─я┐п©п©я▀ п╡ я│п╦я│я┌п╣п╪я┐.\n"
 
 #: ../adduser:198
-#, fuzzy
 msgid "Enter a groupname to add: "
-msgstr "Имя учетной записи: "
+msgstr "п▓п╡п╣п╢п╦я┌п╣ п╫п╟п╥п╡п╟п╫п╦п╣ пЁя─я┐п©п©я▀: "
 
 #: ../adduser:202
 msgid "Enter a username to add: "
-msgstr "Имя учетной записи: "
+msgstr "п▓п╡п╣п╢п╦я┌п╣ п╦п╪я▐ я┐я┤я▒я┌п╫п╬п╧ п╥п╟п©п╦я│п╦: "
 
 #: ../adduser:207
 msgid "I need a name to add.\n"
-msgstr "Необходимо ввести имя учетной записи.\n"
+msgstr "п²п╣п╬п╠я┘п╬п╢п╦п╪п╬ п╡п╡п╣я│я┌п╦ п╦п╪я▐ я┐я┤я▒я┌п╫п╬п╧ п╥п╟п©п╦я│п╦.\n"
 
 #: ../adduser:208 ../deluser:156
 msgid "No more than two names.\n"
-msgstr "Нельзя задавать более двух имен.\n"
+msgstr "п²п╣п╩я▄п╥я▐ п╥п╟п╢п╟п╡п╟я┌я▄ п╠п╬п╩п╣п╣ п╢п╡я┐я┘ п╦п╪п╣п╫.\n"
 
 #: ../adduser:210 ../deluser:159
 msgid "Specify only one name in this mode.\n"
-msgstr "В этом режиме указывается только одно имя.\n"
+msgstr "п▓ я█я┌п╬п╪ я─п╣п╤п╦п╪п╣ я┐п╨п╟п╥я▀п╡п╟п╣я┌я│я▐ я┌п╬п╩я▄п╨п╬ п╬п╢п╫п╬ п╦п╪я▐.\n"
 
 #: ../adduser:231
 msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
-msgstr "Опции --group, --ingroup и -gid являются взаимоисключающими.\n"
+msgstr "п·п©я├п╦п╦ --group, --ingroup п╦ -gid я▐п╡п╩я▐я▌я┌я│я▐ п╡п╥п╟п╦п╪п╬п╦я│п╨п╩я▌я┤п╟я▌я┴п╦п╪п╦.\n"
 
 #: ../adduser:267 ../adduser:297 ../adduser:603
 #, perl-format
 msgid "The group `%s' already exists.\n"
-msgstr "Группа `%s' уже существует.\n"
+msgstr "п⌠я─я┐п©п©п╟ `%s' я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:269 ../adduser:299
 #, perl-format
 msgid "The GID %s is already in use.\n"
-msgstr "GID `%s' уже используется.\n"
+msgstr "GID `%s' я┐п╤п╣ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐.\n"
 
 #: ../adduser:277 ../adduser:307
 msgid "No GID is available in the range "
-msgstr "Нет свободного GID в границах "
+msgstr "п²п╣я┌ я│п╡п╬п╠п╬п╢п╫п╬пЁп╬ GID п╡ п╢п╦п╟п©п╟п╥п╬п╫п╣"
 
 #: ../adduser:280 ../adduser:310
 #, perl-format
 msgid "The group `%s' was not created.\n"
-msgstr "Группа `%s' не создана.\n"
+msgstr "п⌠я─я┐п©п©п╟ `%s' п╫п╣ я│п╬п╥п╢п╟п╫п╟.\n"
 
 #: ../adduser:284 ../adduser:314
 #, perl-format
 msgid "Adding group %s (%s)...\n"
-msgstr "Добавляется группа %s (%s)...\n"
+msgstr "п■п╬п╠п╟п╡п╩я▐п╣я┌я│я▐ пЁя─я┐п©п©п╟ %s (%s)...\n"
 
 #: ../adduser:288 ../adduser:318 ../adduser:349
 msgid "Done.\n"
-msgstr "Готово.\n"
+msgstr "п⌠п╬я┌п╬п╡п╬.\n"
 
 #: ../adduser:327
 #, perl-format
 msgid "The user `%s' does not exist.\n"
-msgstr "Пользователь `%s' не существует.\n"
+msgstr "п÷п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s' п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:329 ../adduser:609
 #, perl-format
 msgid "The group `%s' does not exist.\n"
-msgstr "Группа `%s' не существует.\n"
+msgstr "п⌠я─я┐п©п©п╟ `%s' п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:332
 #, perl-format
 msgid "The user `%s' is already a member of `%s'.\n"
-msgstr "Пользователь `%s' уже является членом группы %s.\n"
+msgstr "п÷п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s' я┐п╤п╣ я▐п╡п╩я▐п╣я┌я│я▐ я┤п╩п╣п╫п╬п╪ пЁя─я┐п©п©я▀ `%s'.\n"
 
 #: ../adduser:337
 #, perl-format
 msgid "Adding user `%s' to group `%s'...\n"
-msgstr "Добавляется пользователь %s в группу %s...\n"
+msgstr "п■п╬п╠п╟п╡п╩я▐п╣я┌я│я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s' п╡ пЁя─я┐п©п©я┐ `%s'...\n"
 
 #: ../adduser:364
-#, fuzzy, perl-format
+#, perl-format
 msgid "User %s does already exist. Exiting...\n"
-msgstr "Группа `%s' уже существует.\n"
+msgstr "п÷п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s' я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌. п≈п╟п╡п╣я─я┬п╣п╫п╦п╣ я─п╟п╠п╬я┌я▀...\n"
 
 #: ../adduser:370
 #, perl-format
 msgid "Adding system user `%s'...\n"
-msgstr "Добавляется системный пользователь %s...\n"
+msgstr "п■п╬п╠п╟п╡п╩я▐п╣я┌я│я▐ я│п╦я│я┌п╣п╪п╫я▀п╧ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s'...\n"
 
 #: ../adduser:377 ../adduser:464
 msgid "No UID/GID pair is available in the range "
-msgstr "Нет свободной пары UID/GID в границе "
+msgstr "п²п╣я┌ я│п╡п╬п╠п╬п╢п╫п╬п╧ п©п╟я─я▀ UID/GID п╡ п╢п╦п╟п©п╟п╥п╬п╫п╣"
 
 #: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
 #, perl-format
 msgid "The user `%s' was not created.\n"
-msgstr "Пользователь `%s' не создан.\n"
+msgstr "п÷п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s' п╫п╣ я│п╬п╥п╢п╟п╫.\n"
 
 #: ../adduser:390 ../adduser:477
 msgid "No UID is available in the range "
-msgstr "Нет UID в границе "
+msgstr "п²п╣я┌ я│п╡п╬п╠п╬п╢п╫п╬пЁп╬ UID п╡ п╢п╦п╟п©п╟п╥п╬п╫п╣"
 
 #: ../adduser:397 ../adduser:403 ../adduser:484 ../adduser:490
 msgid "Internal error"
-msgstr "Внутренняя ошибка"
+msgstr "п▓п╫я┐я┌я─п╣п╫п╫я▐я▐ п╬я┬п╦п╠п╨п╟"
 
 #: ../adduser:408 ../adduser:495
 #, perl-format
 msgid "Adding new group %s (%s).\n"
-msgstr "Добавляется новая группа %s (%s).\n"
+msgstr "п■п╬п╠п╟п╡п╩я▐п╣я┌я│я▐ п╫п╬п╡п╟я▐ пЁя─я┐п©п©п╟ %s (%s).\n"
 
 #: ../adduser:414 ../adduser:501
 #, perl-format
 msgid "Adding new user %s (%s) with group %s.\n"
-msgstr "Добавляется новый пользователь %s (%s) с группой %s.\n"
+msgstr "п■п╬п╠п╟п╡п╩я▐п╣я┌я│я▐ п╫п╬п╡я▀п╧ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ %s (%s) я│ пЁя─я┐п©п©п╬п╧ %s.\n"
 
 #: ../adduser:428
 msgid "Not creating home directory.\n"
-msgstr "Не удалось создать домашний каталог.\n"
+msgstr "п²п╣ я┐п╢п╟п╩п╬я│я▄ я│п╬п╥п╢п╟я┌я▄ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ.\n"
 
 #: ../adduser:430
 #, perl-format
 msgid "Home directory `%s' already exists.\n"
-msgstr "Домашний каталог %s уже существует.\n"
+msgstr "п■п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ `%s' я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:432 ../adduser:517
 #, perl-format
 msgid "Creating home directory `%s'.\n"
-msgstr "Создаётся домашний каталог %s.\n"
+msgstr "п║п╬п╥п╢п╟я▒я┌я│я▐ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ `%s'.\n"
 
 #: ../adduser:457
 #, perl-format
 msgid "Adding user `%s'...\n"
-msgstr "Добавляется пользователь %s...\n"
+msgstr "п■п╬п╠п╟п╡п╩я▐п╣я┌я│я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s'...\n"
 
 #: ../adduser:511
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
-msgstr "Домашний каталог %s уже существует. Не удалось копирование из %s\n"
+msgstr "п■п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ `%s' я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌. п²п╣ я┐п╢п╟п╩п╬я│я▄ п╨п╬п©п╦я─п╬п╡п╟п╫п╦п╣ п╦п╥ `%s'\n"
 
 #: ../adduser:527
-#, fuzzy, perl-format
+#, perl-format
 msgid "Copying files from `%s'\n"
-msgstr "Копируются файлы из &s\n"
+msgstr "п п╬п©п╦я─я┐я▌я┌я│я▐ я└п╟п╧п╩я▀ п╦п╥ `%s'\n"
 
 #: ../adduser:553
 msgid "Is the information correct? [y/N] "
-msgstr "Эти сведения верны? [y/N] "
+msgstr "п╜я┌п╦ я│п╡п╣п╢п╣п╫п╦я▐ п╡п╣я─п╫я▀? [y/N] "
 
 #: ../adduser:555
 msgid "y"
-msgstr ""
+msgstr "y"
 
 #: ../adduser:560
 #, perl-format
 msgid "Setting quota from `%s'.\n"
-msgstr "Устанавливается квота от %s.\n"
+msgstr "пёя│я┌п╟п╫п╟п╡п╩п╦п╡п╟п╣я┌я│я▐ п╨п╡п╬я┌п╟ п╬я┌ `%s'.\n"
 
 #: ../adduser:599
-#, fuzzy, perl-format
+#, perl-format
 msgid "The user `%s' already exists.\n"
-msgstr "Группа `%s' уже существует.\n"
+msgstr "п÷п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s' я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:600
-#, fuzzy, perl-format
+#, perl-format
 msgid "The UID `%s' already exists.\n"
-msgstr "Группа `%s' уже существует.\n"
+msgstr "UID `%s' я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:605
-#, fuzzy, perl-format
+#, perl-format
 msgid "The GID `%s' already exists.\n"
-msgstr "Группа `%s' уже существует.\n"
+msgstr "GID `%s' я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:611
-#, fuzzy, perl-format
+#, perl-format
 msgid "The GID %s does not exist.\n"
-msgstr "Пользователь `%s' не существует.\n"
+msgstr "GID `%s' п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.\n"
 
 #: ../adduser:656
 msgid ""
@@ -259,6 +257,10 @@ msgid ""
 "compatibility with Samba machine accounts also $ is supported at the\n"
 "end of the username\n"
 msgstr ""
+"п▓п╬ п╦п╥п╠п╣п╤п╟п╫п╦п╣ п©я─п╬п╠п╩п╣п╪, п╦п╪я▐ я┐я┤я▒я┌п╫п╬п╧ п╥п╟п©п╦я│п╦ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╢п╬п╩п╤п╫п╬ я│п╬я│я┌п╬я▐я┌я▄ п╦п╥ п╠я┐п╨п╡\n"
+"п╦п╩п╦ я│п╦п╪п╡п╬п╩п╟ п©п╬п╢я┤я▒я─п╨п╦п╡п╟п╫п╦я▐ п©п╬я│п╩п╣ п╠я┐п╨п╡, я├п╦я└я─, я│п╦п╪п╡п╬п╩п╬п╡ п©п╬п╢я┤я▒я─п╨п╦п╡п╟п╫п╦я▐ п╦ я┌п╦я─п╣.\n"
+"п╒п╟п╨п╤п╣, п╡ я├п╣п╩я▐я┘ я│п╬п╡п╪п╣я│я┌п╦п╪п╬я│я┌п╦ я│ я┐я┤я▒я┌п╫я▀п╪п╦ п╥п╟п©п╦я│я▐п╪п╦ Samba п╡ п╨п╬п╫п╣я├ п╦п╪п╣п╫п╦\n"
+"п╪п╬п╤п╫п╬ п╢п╬п©п╦я│я▀п╡п╟я┌я▄ п╥п╫п╟п╨ $\n"
 
 #: ../adduser:665
 msgid ""
@@ -266,30 +268,33 @@ msgid ""
 "followed by lower case letters and numbers.  Use the `--force-badname'\n"
 "option to allow underscores, and uppercase.\n"
 msgstr ""
+"п≤п╪я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╢п╬п╩п╤п╫п╬ п╫п╟я┤п╦п╫п╟я┌я▄я│я▐ я│п╬ я│я┌я─п╬я┤п╫п╬п╧ п╠я┐п╨п╡я▀,\n"
+"п╥п╟я┌п╣п╪ я│я┌я─п╬я┤п╫я▀п╣ п╠я┐п╨п╡я▀ п╦ я├п╦я└я─я▀. п╖я┌п╬п╠я▀ п╪п╬п╤п╫п╬ п╠я▀п╩п╬ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ я│п╦п╪п╡п╬п╩я▀\n"
+"п©п╬п╢я┤я▒я─п╨п╦п╡п╟п╫п╦я▐ п╦ п©я─п╬п©п╦я│п╫я▀п╣ п╠я┐п╨п╡я▀ я┐п╨п╟п╤п╦я┌п╣ п╬п©я├п╦я▌ `--force-badname'.\n"
 
 #: ../adduser:670
 msgid "Allowing use of questionable username.\n"
-msgstr ""
+msgstr "п═п╟п╥я─п╣я┬п╣п╫п╬ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣ я│п╬п╪п╫п╦я┌п╣п╩я▄п╫я▀я┘ п╦п╪я▒п╫ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧.\n"
 
 #: ../adduser:681
-#, fuzzy, perl-format
+#, perl-format
 msgid "Selecting from %s %s (%s).\n"
-msgstr "Устанавливается квота от %s.\n"
+msgstr "п▓я▀п╠п╬я─ п╦п╥ %s %s (%s).\n"
 
 #: ../adduser:746
-#, fuzzy, perl-format
+#, perl-format
 msgid "Removing directory `%s'\n"
-msgstr "Создаётся домашний каталог %s.\n"
+msgstr "пёп╢п╟п╩я▐п╣я┌я│я▐ п╨п╟я┌п╟п╩п╬пЁ `%s'.\n"
 
 #: ../adduser:750
-#, fuzzy, perl-format
+#, perl-format
 msgid "Removing user `%s'.\n"
-msgstr "Удаляется пользователь %s...\n"
+msgstr "пёп╢п╟п╩я▐п╣я┌я│я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s'.\n"
 
 #: ../adduser:754
-#, fuzzy, perl-format
+#, perl-format
 msgid "Removing group `%s'.\n"
-msgstr "Удаляется группа %s...\n"
+msgstr "пёп╢п╟п╩я▐п╣я┌я│я▐ пЁя─я┐п©п©п╟ `%s'.\n"
 
 #: ../adduser:787
 #, perl-format
@@ -320,6 +325,31 @@ msgid ""
 "Other options are [--quiet] [--force-badname] [--help] [--version] [--conf\n"
 "FILE].\n"
 msgstr ""
+"adduser [--home п п░п╒п░п⌡п·п⌠] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup п⌠п═пёп÷п÷п░ | --gid ID]\n"
+"[--disabled-password] [--disabled-login] п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄\n"
+"   п║п╬п╥п╢п╟п╫п╦п╣ п╬п╠я▀я┤п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐\n"
+"\n"
+"adduser --system [--home п п░п╒п░п⌡п·п⌠] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+"[--gecos GECOS] [--group | --ingroup п⌠п═пёп÷п÷п░ | --gid ID] [--disabled-"
+"password]\n"
+"[--disabled-login] п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄\n"
+"   п║п╬п╥п╢п╟п╫п╦п╣ я│п╦я│я┌п╣п╪п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐\n"
+"\n"
+"adduser --group [--gid ID] пЁя─я┐п©п©п╟\n"
+"addgroup [--gid ID] пЁя─я┐п©п©п╟\n"
+"   п║п╬п╥п╢п╟п╫п╦п╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄я│п╨п╬п╧ пЁя─я┐п©п©я▀\n"
+"\n"
+"adduser --group --system [--gid ID] пЁя─я┐п©п©п╟\n"
+"addgroup --system [--gid ID] пЁя─я┐п©п©п╟\n"
+"   п║п╬п╥п╢п╟п╫п╦п╣ я│п╦я│я┌п╣п╪п╫п╬п╧ пЁя─я┐п©п©я▀\n"
+"\n"
+"adduser п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ пЁя─я┐п©п©п╟\n"
+"   п■п╬п╠п╟п╡п╩п╣п╫п╦п╣ я│я┐я┴п╣я│я┌п╡я┐я▌я┴п╣пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╡ я│я┐я┴п╣я│я┌п╡я┐я▌я┴я┐я▌ пЁя─я┐п©п©я┐\n"
+"\n"
+"п⌠п╩п╬п╠п╟п╩я▄п╫п╟я▐ п╨п╬п╫я└п╦пЁя┐я─п╟я├п╦я▐ п╫п╟я┘п╬п╢п╦я┌я│я▐ п╡ я└п╟п╧п╩п╣ %s.\n"
+"п■я─я┐пЁп╦п╣ п╬п©я├п╦п╦: [--quiet] [--force-badname] [--help] [--version] [--conf\n"
+"п╓п░п≥п⌡].\n"
 
 #: ../deluser:140
 msgid ""
@@ -328,101 +358,94 @@ msgid ""
 "you need to install the `perl-modules' package. To accomplish that, run\n"
 "apt-get install perl-modules\n"
 msgstr ""
+"п╖я┌п╬п╠я▀ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╬п©я├п╦п╦ --remove-home, --remove-all-files п╦ --backup,\n"
+"п╡п╟п╪ я┌я─п╣п╠yп╣я┌я│я▐ я┐я│я┌п╟п╫п╬п╡п╦я┌я▄ п©п╟п╨п╣я┌ `perl-modules'. п■п╩я▐ я█я┌п╬пЁп╬ п╡я▀п©п╬п╩п╫п╦я┌п╣:\n"
+"apt-get install perl-modules\n"
 
 #: ../deluser:143
 msgid "Only root may remove a user or group from the system.\n"
 msgstr ""
-"Только пользователь root имеет право удалять пользователей и группы из "
-"системы.\n"
+"п╒п╬п╩я▄п╨п╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ root п╦п╪п╣п╣я┌ п©я─п╟п╡п╬ я┐п╢п╟п╩я▐я┌я▄ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ п╦п╩п╦ пЁя─я┐п©п©я▀ п╦п╥ "
+"я│п╦я│я┌п╣п╪я▀.\n"
 
 #: ../deluser:147
 msgid "Enter a groupname to remove: "
-msgstr "Введите имя группы, которую вы хотите удалить: "
+msgstr "п▓п╡п╣п╢п╦я┌п╣ п╦п╪я▐ пЁя─я┐п©п©я▀, п╨п╬я┌п╬я─я┐я▌ п╡я▀ я┘п╬я┌п╦я┌п╣ я┐п╢п╟п╩п╦я┌я▄: "
 
 #: ../deluser:149
 msgid "Enter a username to remove: "
-msgstr "Введите имя пользователя, которого вы хотите удалить: "
+msgstr "п▓п╡п╣п╢п╦я┌п╣ п╦п╪я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐, п╨п╬я┌п╬я─п╬пЁп╬ п╡я▀ я┘п╬я┌п╦я┌п╣ я┐п╢п╟п╩п╦я┌я▄: "
 
 #: ../deluser:155
 msgid "I need a name to remove.\n"
-msgstr "Для удаления требуется имя.\n"
+msgstr "п■п╩я▐ я┐п╢п╟п╩п╣п╫п╦я▐ я┌я─п╣п╠я┐п╣я┌я│я▐ п╦п╪я▐.\n"
 
 #: ../deluser:208
-#, fuzzy
 msgid "Looking for files to backup/remove...\n"
-msgstr "Идет поиск файлов для сохранения/удаления...\n"
+msgstr "п≤п╢п╣я┌ п©п╬п╦я│п╨ я└п╟п╧п╩п╬п╡ п╢п╩я▐ я│п╬я┘я─п╟п╫п╣п╫п╦я▐/я┐п╢п╟п╩п╣п╫п╦я▐...\n"
 
 #: ../deluser:236
 msgid "Backuping files to be removed...\n"
-msgstr "Идет сохранение файлов, которые будут уничтожены...\n"
+msgstr "п≤п╢п╣я┌ я│п╬я┘я─п╟п╫п╣п╫п╦п╣ я└п╟п╧п╩п╬п╡, п╨п╬я┌п╬я─я▀п╣ п╠я┐п╢я┐я┌ я┐п╫п╦я┤я┌п╬п╤п╣п╫я▀...\n"
 
 #: ../deluser:246
 msgid "Removing files...\n"
-msgstr "Идет удаление файлов...\n"
+msgstr "п≤п╢п╣я┌ я┐п╢п╟п╩п╣п╫п╦п╣ я└п╟п╧п╩п╬п╡...\n"
 
 #: ../deluser:254
 #, perl-format
 msgid "Removing user `%s'...\n"
-msgstr "Удаляется пользователь %s...\n"
+msgstr "пёп╢п╟п╩я▐п╣я┌я│я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s'...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
 msgid "done.\n"
-msgstr "готово.\n"
+msgstr "пЁп╬я┌п╬п╡п╬.\n"
 
 #: ../deluser:269
 #, perl-format
 msgid "There are users with `%s' as their primary group!\n"
-msgstr "Существуют пользователи, использующие `%s' как первичную группу!\n"
+msgstr "п║я┐я┴п╣я│я┌п╡я┐я▌я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╦, п╦я│п©п╬п╩я▄п╥я┐я▌я┴п╦п╣ `%s' п╨п╟п╨ п©п╣я─п╡п╦я┤п╫я┐я▌ пЁя─я┐п©п©я┐!\n"
 
 #: ../deluser:272
 #, perl-format
 msgid "Removing group `%s'...\n"
-msgstr "Удаляется группа %s...\n"
+msgstr "пёп╢п╟п╩я▐п╣я┌я│я▐ пЁя─я┐п©п©п╟ `%s'...\n"
 
 #: ../deluser:287
 msgid "You may not remove the user from his/her primary group.\n"
-msgstr "Вы не можете удалять пользователя из его/ее первичной группы.\n"
+msgstr "п▓я▀ п╫п╣ п╪п╬п╤п╣я┌п╣ я┐п╢п╟п╩п╦я┌я▄ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╦п╥ п╣пЁп╬/п╣п╣ п©п╣я─п╡п╦я┤п╫п╬п╧ пЁя─я┐п©п©я▀.\n"
 
 #: ../deluser:301
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
-msgstr "%s не является членом группы %s.\n"
+msgstr "`%s' п╫п╣ я▐п╡п╩я▐п╣я┌я│я▐ я┤п╩п╣п╫п╬п╪ пЁя─я┐п©п©я▀ `%s'.\n"
 
 #: ../deluser:304
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
-msgstr "Удаляется пользователь %s из группы %s...\n"
+msgstr "пёп╢п╟п╩я▐п╣я┌я│я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ `%s' п╦п╥ пЁя─я┐п©п©я▀ `%s'...\n"
 
 #: ../deluser:315 ../deluser:334
 msgid "removing user and groups from the system. Version:"
-msgstr "удаление пользователей и групп из системы. Версия:"
+msgstr "я┐п╢п╟п╩п╣п╫п╦п╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ п╦ пЁя─я┐п©п© п╦п╥ я│п╦я│я┌п╣п╪я▀. п▓п╣я─я│п╦я▐:"
 
 #: ../deluser:359
 #, perl-format
 msgid "Global configuration is in the file %s.\n"
-msgstr "Глобальная конфигурация находится в файле %s.\n"
+msgstr "п⌠п╩п╬п╠п╟п╩я▄п╫п╟я▐ п╨п╬п╫я└п╦пЁя┐я─п╟я├п╦я▐ п╫п╟я┘п╬п╢п╦я┌я│я▐ п╡ я└п╟п╧п╩п╣ %s.\n"
 
 #: ../AdduserCommon.pm:78
 #, perl-format
 msgid "%s: %s doesn't exist.  Using defaults.\n"
-msgstr "%s: %s не существует. Используются значения по умолчанию.\n"
+msgstr "%s: %s п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌. п≤я│п©п╬п╩я▄п╥я┐я▌я┌я│я▐ п╥п╫п╟я┤п╣п╫п╦я▐ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌.\n"
 
 #: ../AdduserCommon.pm:88
 #, perl-format
 msgid "Couldn't parse %s:%s.\n"
-msgstr "Невозможно разобрать %s:%s.\n"
+msgstr "п²п╣п╡п╬п╥п╪п╬п╤п╫п╬ я─п╟п╥п╬п╠я─п╟я┌я▄ %s:%s.\n"
 
 #: ../AdduserCommon.pm:93
 #, perl-format
 msgid "Unknown variable `%s' at %s:%s.\n"
-msgstr "Неизвестная переменная `%s' в %s:%s.\n"
+msgstr "п²п╣п╦п╥п╡п╣я│я┌п╫п╟я▐ п©п╣я─п╣п╪п╣п╫п╫п╟я▐ `%s' п╡ %s:%s.\n"
 
-#, fuzzy
-#~ msgid "Adding new group %s (%d).\n"
-#~ msgstr "Добавляется новая группа %s (%s).\n"
-
-#~ msgid "Adding new group $new_name ($new_gid).\n"
-#~ msgstr "Добавляется новая группа $new_name ($new_gid).\n"
-
-#~ msgid "@_"
-#~ msgstr "@_"
