@@ -17,8 +17,10 @@ adduser (3.60) unstable; urgency=low
     Egaña. (mh) Closes: #279659.
   * Add new adduser.local examples directory by John Zaitseff. (mh)
     Closes: #273010.
+  * Add Italian program translation. Thanks to Luca Monducci. (mh)
+    Closes: #271142.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 13:48:15 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 13:51:00 +0100
 
 adduser (3.59) unstable; urgency=low
 
