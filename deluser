@@ -40,7 +40,7 @@ $version = VERSION;
 #
 #  delgroup group
 #  deluser --group group
-#     remove a system group from the system
+#     remove a group from the system
 #     example: deluser --group students
 #     $action = "delgroup"
 #
@@ -403,7 +403,7 @@ sub usage {
 
 delgroup group
 deluser --group group
-  remove a system group from the system
+  remove a group from the system
   example: deluser --group students
 
 deluser user group

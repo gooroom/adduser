@@ -45,8 +45,10 @@ adduser (3.52) unstable; urgency=low
     * adapt deluser's systemcall() to honor --debug
     * add --only-if-empty switch to delgroup. Adapt man page.
       Closes: #239579
+    * delgroup will of course delete non-system groups, contrary to
+      comments and docs. Fix comments and docs
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 13:10:47 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 13:17:30 +0100
 
 adduser (3.51) unstable; urgency=low
 
