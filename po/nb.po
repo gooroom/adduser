@@ -1,24 +1,3 @@
-Package: adduser
-Version: 3.50
-Severity: normal
-Tags: patch
-
-Based on the danish (da.po) translation.
-
--- System Information:
-Debian Release: testing/unstable
-Architecture: i386
-Kernel: Linux sabbath 2.4.20 #7 SMP tor feb 27 13:30:29 CET 2003 i686
-Locale: LANG=no_NO.UTF-8, LC_CTYPE=ISO_8859_1 (ignored: LC_ALL set)
-
-Versions of packages adduser depends on:
-ii  debconf                       1.2.35     Debian configuration management sy
-ii  passwd                        1:4.0.3-8  Change and administer password and
-ii  perl-base                     5.8.0-17   The Pathologically Eclectic Rubbis
-
--- debconf information excluded
-
-<-znip->
 # adduser
 # Copyright (C) 2001 Free Software Foundation, Inc.
 # Morten Brix Pedersen <morten@wtf.dk>, 2001
