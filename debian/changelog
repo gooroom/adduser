@@ -24,8 +24,10 @@ adduser (3.60) unstable; urgency=low
     configuration, deluser will not zap any important system directories
     any more. Thanks to Ernst Kloppenburg and Klaus Ethgen. (mh)
     Closes: #293559, #271829
+  * deluser will now stop deleting at a mount point. Thanks to Andreas
+    Schmidt. (mh) Closes: #231809
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 14:52:35 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 14:18:53 +0000
 
 adduser (3.59) unstable; urgency=low
 

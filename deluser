@@ -268,12 +268,29 @@ if($action eq "deluser") {
 	dief (_("passwd home dir `%s' does not match command line home dir, aborting.\n"),$pw_homedir,$config{"home"});
     } elsif($config{"remove_home"} || $config{"remove_all_files"}) {
 	s_print(_("Looking for files to backup/remove...\n"));
+	my @mountpoints;
+	open(MOUNT, "mount |")
+		|| die ("fork for parse mount points: $!\n");
+        while (<MOUNT>) {
+		chomp;
+	        my @temparray = split;
+	        push @mountpoints,$temparray[2];
+        }
+	close(MOUNT) or die ("can't close mount pipe: $!\n");
 	my(@files,@dirs);
 	if($config{"remove_home"} && ! $config{"remove_all_files"}) {
 	  sub home_match {
-	    foreach $re ( split ' ', $config{"no_del_paths"} ) {
+	    foreach my $mount (@mountpoints) {
+	      if( $File::Find::name eq $mount ) {
+		s_print(_("Not backing up/removing $File::Find::name, it is a mount point.\n"));
+		$File::Find::prune=1;
+		return;
+	      }
+	    }
+	    foreach my $re ( split ' ', $config{"no_del_paths"} ) {
 	      if( $File::Find::name =~ qr/$re/ ) {
 		s_print(_("Not backing up/removing $File::Find::name, it matches $re.\n"));
+		$File::Find::prune=1;
 		return;
 	      }
 	    }
