@@ -1,3 +1,13 @@
+adduser (3.28) unstable; urgency=low
+
+  * deluser: Fixed tar -I problem. Now the files are first 'tar'ed and
+    then compressed with bzip2 or gzip.
+  * deluser: Homedirectory is now backup probably using File::Find::find
+  * adduser: Introduced the options --firstuid and --lastuid similar to
+    the patch in BTS. Closes: #81352.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sun,  7 Jan 2001 13:15:07 -0600
+
 adduser (3.27) unstable; urgency=low
 
   * Fixed nscd variable scope problem: $nscd, holding the path to the

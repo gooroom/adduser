@@ -84,21 +84,6 @@ $config{"remove_home"} = 0;
 $config{"remove_all_files"} = 0;
 $config{"backup"} = 0;
 
-if(-x "/usr/bin/bzip2")
-{
-    $z_ext = ".bz2";
-    $z_tar = "I";
-}
-elsif(-x "/bin/gzip")
-{
-    $z_ext = ".gz";
-    $z_tar = "z";
-}
-else
-{
-    $z_ext = $z_tar = "";
-}
-
 $action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
 
 while($arg = shift(@ARGV))
@@ -242,10 +227,19 @@ if($action eq "deluser")
 	my(@files,@dirs);
 	if($config{"remove_home"} && ! $config{"remove_all_files"})
 	{
-	    push(@files, $pw_homedir)
-		if(-e $pw_homedir);
-	    push(@files, "/var/mail/$user")
-		if(-e "/var/mail/$user");
+	    #push(@files, $pw_homedir)
+	#	if(-e $pw_homedir);
+	 #   push(@files, "/var/mail/$user")
+	#	if(-e "/var/mail/$user");
+	  sub home_match {
+	    push(@files, $File::Find::name) 
+	      if(-f $File::Find::name);
+	    push(@dirs, $File::Find::name)
+	      if(-d $File::Find::name);
+	  }
+	  File::Find::find({wanted => \&home_match, untaint => 1, no_chdir => 1}, $pw_homedir);
+	  push(@files, "/var/mail/$user")
+	    if(-e "/var/mail/$user");
 	}
 	else
 	{
@@ -265,7 +259,12 @@ if($action eq "deluser")
 	if($config{"backup"})
 	{
 	    s_print(_("Backuping files to be removed...\n"));
-	    systemcall("/bin/tar", "c$z_tar", "-f", "$user.tar$z_ext", "--", @files);
+	    systemcall("/bin/tar", "-cf", "$user.tar", "--", @files);
+	    if(-e "/usr/bin/bzip2") {
+	    	systemcall("/usr/bin/bzip2", "$user.tar");
+	    } elsif(-e "/bin/gzip") {
+	    	systemcall("/bin/gzip", "$user.tar");
+	    }
 	}
 
 	if(@files || @dirs)

@@ -30,8 +30,9 @@
 ####################
 # the program can be called as:
 #
-#  adduser [--home DIR] [--uid ID] [--ingroup GROUP | --gid ID]
-#  [--disabled-password] [--gecos GECOS] [--no-create-home] user
+#  adduser [--home DIR] [--uid ID] [--firstuid ID] [--lastuid ID]
+#  [--ingroup GROUP | --gid ID] [--disabled-password] [--gecos GECOS]
+#  [--no-create-home] user
 #      add a normal user to the system
 #      example: adduser fred
 #      $action = "adduser"
@@ -143,6 +144,12 @@ while (defined($arg = shift(@ARGV))) {
     } elsif ($arg eq "--uid") {
 	die "$0: ",_("--uid requires a numeric argument.\n")
 	    if (!defined ($new_uid = shift(@ARGV)) || $new_uid !~ /^\-?\d+$/);
+    } elsif ($arg eq "--firstuid") {
+	die "$0: ",_("--firstuid requires a numeric argument.\n")
+	    if (!defined ($new_firstuid = shift(@ARGV)) || $new_firstuid !~ /^\-?\d+$/);
+    } elsif ($arg eq "--lastuid") {
+	die "$0: ",_("--lastuid requires a numeric argument.\n")
+	    if (!defined ($new_lastuid = shift(@ARGV)) || $new_lastuid !~ /^\-?\d+$/);
     } elsif ($arg eq "--gid") {
 	die "$0: ",_("--gid requires a numeric argument.\n")
 	    if (!defined ($new_gid = shift(@ARGV)) || $new_gid !~ /^\-?\d+$/);
@@ -387,15 +394,17 @@ elsif ($action eq "adduser") {
 	else { $new_gid = $config{"users_gid"}; }
     }
     &check_user_group();
+    $first_uid = $new_firstuid || $config{"first_uid"};
+    $last_uid = $new_lastuid || $config{"last_uid"};
     printf _("Adding user %s...\n"),$new_name if $verbose;
 
     if (!defined($new_uid) && $make_group_also) {
-	$new_uid = &first_avail_id($config{"first_uid"},
-				   $config{"last_uid"},
+	$new_uid = &first_avail_id($first_uid,
+				   $last_uid,
 				   &get_current_uids, &get_current_gids);
         if ($new_uid == -1) {
             print STDERR "$0: ",_("No UID/GID pair is available in the range "),
-            "$config{\"first_uid\"} - $config{\"last_uid\"}\n",
+            "$first_uid - $last_uid\n",
             "(FIRST_UID - LAST_UID).  ";
             dief(_("User `%s' not created.\n"),$new_name);
         }
@@ -712,8 +721,9 @@ General Public License, /usr/share/common-licenses/GPL, for more details.
 
 sub usage {
     printf _(
-"adduser [--home DIR] [--no-create-home] [--uid ID] [--gecos GECOS]
-[--ingroup GROUP | --gid ID] [--disabled-password] user
+"adduser [--home DIR] [--no-create-home] [--uid ID] [--firstuid ID]
+[--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]
+[--disabled-password] user
    Add a normal user
 
 adduser --system [--home DIR] [--no-create-home] [--uid ID] [--gecos GECOS]
