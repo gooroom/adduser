@@ -359,6 +359,7 @@ elsif ($action eq "addusertogroup") {
     #&systemcall('usermod', '-G',
 		#join(",", get_users_groups($existing_user), $existing_group), 
 		#$existing_user);
+    # FIXME - if the group contains a non-existing user, gpasswd will fail
     &systemcall('/usr/bin/gpasswd', '-M',
 		join(',', get_group_members($existing_group), $existing_user),
 		$existing_group);
