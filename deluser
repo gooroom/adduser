@@ -399,12 +399,18 @@ sub usage {
 
   --remove-home             remove the users home directory and mail spool
   --remove-all-files        remove all files owned by user
+  --home <dir>              remove home only if /etc/passwd home dir
+                            matches directory given here
   --backup                  backup files before removing
+  --system                  only remove if system user
 
 delgroup group
 deluser --group group
   remove a group from the system
   example: deluser --group students
+
+  --system                  only remove if system group
+  --only-if-empty           only remove if no members left
 
 deluser user group
   remove the user from a group
