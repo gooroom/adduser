@@ -688,14 +688,19 @@ sub copy_to_dir {
     my($fromdir, $file, $todir, $newu, $newg, $sgiddir) = @_;
 
     if (-l "$fromdir/$file") {
+	my $target=readlink("$fromdir/$file") or &cleanup("readlink: $!\n");
 	my $curgid="$)";
 	my $curuid="$>";
+	my $error="";
 	$)="$newg";
 	$>="$newu";
-	symlink(readlink("$fromdir/$file"), "$todir/$file")
-	    || &cleanup("symlink: $!\n");
+	symlink("$target", "$todir/$file");
+	$error="$!";
         $>="$curuid";
         $)="$curgid";
+	if( "$error" ne "" ) {
+	    &cleanup("symlink: $!\n");
+	}
 	return;
     }
     elsif (-f "$fromdir/$file") {
