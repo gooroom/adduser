@@ -45,6 +45,7 @@ binary-indep:	checkroot build
 	install -m644 deluser.conf debian/tmp/etc
 	cp -r examples debian/tmp/usr/share/doc/adduser
 	chmod -R 644 debian/tmp/usr/share/doc/adduser/examples
+	find debian/tmp/usr/share/doc/adduser/examples -type d -print0 | xargs --null chmod 755
 	chown -R root:root debian/tmp/usr/share/doc/adduser/examples
 	install -m644 adduser.conf debian/tmp/usr/share/adduser
 	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
