@@ -225,8 +225,8 @@ msgid "Copying files from %s\n"
 msgstr "%s에서 파일 복사\n"
 
 #: ../adduser:553
-msgid "Is the information correct? [y/n] "
-msgstr "이 정보가 맞습니까? [y/n] "
+msgid "Is the information correct? [y/N] "
+msgstr "이 정보가 맞습니까? [y/N] "
 
 #: ../adduser:555
 msgid "y"

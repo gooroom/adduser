@@ -220,8 +220,8 @@ msgid "Copying files from %s\n"
 msgstr "Копируются файлы из &s\n"
 
 #: ../adduser:553
-msgid "Is the information correct? [y/n] "
-msgstr "Эти сведения верны? [y/n] "
+msgid "Is the information correct? [y/N] "
+msgstr "Эти сведения верны? [y/N] "
 
 #: ../adduser:555
 msgid "y"

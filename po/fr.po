@@ -220,8 +220,8 @@ msgid "Copying files from %s\n"
 msgstr "Copie des fichiers depuis %s\n"
 
 #: ../adduser:553
-msgid "Is the information correct? [y/n] "
-msgstr "Ces informations sont-elles correctes ? [y/n] "
+msgid "Is the information correct? [y/N] "
+msgstr "Ces informations sont-elles correctes ? [y/N] "
 
 #: ../adduser:555
 #, fuzzy

@@ -215,8 +215,8 @@ msgid "Copying files from %s\n"
 msgstr "Kopiëren bestanden van %s\n"
 
 #: ../adduser:553
-msgid "Is the information correct? [y/n] "
-msgstr "Is deze informatie correct? [y/n] "
+msgid "Is the information correct? [y/N] "
+msgstr "Is deze informatie correct? [y/N] "
 
 #: ../adduser:555
 msgid "y"

@@ -220,8 +220,8 @@ msgid "Copying files from %s\n"
 msgstr "S'estan copiant els fitxers des de %s\n"
 
 #: ../adduser:553
-msgid "Is the information correct? [y/n] "
-msgstr "És aquesta informació correcta? [s/n] "
+msgid "Is the information correct? [y/N] "
+msgstr "És aquesta informació correcta? [s/N] "
 
 #: ../adduser:555
 msgid "y"

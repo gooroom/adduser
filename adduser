@@ -555,7 +555,7 @@ elsif ($action eq "adduser") {
     else {
 	for (;;) {
 	    &systemcall('/usr/bin/chfn', $new_name);
-	    print _("Is the information correct? [y/n] ");
+	    print _("Is the information correct? [y/N] ");
 	    chop ($answer=<STDIN>);
 	    last if ($answer eq _("y"));
 	}
