@@ -146,8 +146,6 @@ while (defined($arg = shift(@ARGV))) {
     } elsif ($arg eq "--home") {
 	die "$0: ",_("--home requires an argument.\n")
 	    if (!defined($special_home = shift(@ARGV)));
-	print "$0: ",_("Warning: The home dir you specified already exists.\n")
-	    if (-d $special_home && $verbose);
 	die "$0: ",_("The home dir must be an absolute path.\n")
 	    if ($special_home !~ m+^/+ );
     } elsif ($arg eq "--gecos") {
@@ -191,6 +189,13 @@ while (defined($arg = shift(@ARGV))) {
 }
 
 die "$0: ",_("Only root may add a user or group to the system.\n") if ($> != 0);
+
+if (defined($special_home) && $verbose) {
+    print "$0: ",_("Warning: The home dir you specified already exists.\n")
+      if (!defined($no_create_home) && -d $special_home);
+    print "$0: ",_("Warning: The home dir you specified does not exist.\n")
+      if (defined($no_create_home) && ! -d $special_home);
+}
 
 if (@names == 0) {
     if($found_group_opt || $action eq "addgroup" || $action eq "addsysgroup")

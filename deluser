@@ -260,7 +260,8 @@ if($action eq "deluser") {
 	    push(@dirs, $File::Find::name)
 	      if(-d $File::Find::name);
 	  }
-	  File::Find::find({wanted => \&home_match, untaint => 1, no_chdir => 1}, $pw_homedir);
+	  File::Find::find({wanted => \&home_match, untaint => 1, no_chdir => 1}, $pw_homedir)
+	    if(-d "$pw_homedir");
 	  push(@files, "/var/mail/$user")
 	    if(-e "/var/mail/$user");
 	} else {
