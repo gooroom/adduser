@@ -3,8 +3,10 @@ adduser (3.63.0) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * Updated Norwegian Bokmal debconf templates and program translations.
     Thanks to Hans Fredrik Nordhaug. (mh) Closes: #298834
+  * Re-generate adduser.pot, fix gettext bugs in deluser. Thanks to
+    Hans Fredrik Nordhaug. (mh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 10 Mar 2005 11:36:22 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 18 Mar 2005 16:28:42 +0100
 
 adduser (3.63) unstable; urgency=low
 

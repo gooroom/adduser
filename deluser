@@ -282,14 +282,14 @@ if($action eq "deluser") {
 	  sub home_match {
 	    foreach my $mount (@mountpoints) {
 	      if( $File::Find::name eq $mount ) {
-		s_print(_("Not backing up/removing $File::Find::name, it is a mount point.\n"));
+		s_print(_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
 		$File::Find::prune=1;
 		return;
 	      }
 	    }
 	    foreach my $re ( split ' ', $config{"no_del_paths"} ) {
 	      if( $File::Find::name =~ qr/$re/ ) {
-		s_print(_("Not backing up/removing $File::Find::name, it matches $re.\n"));
+		s_print(_("Not backing up/removing `%s', it matches %s.\n"),$File::Find::name,$re);
 		$File::Find::prune=1;
 		return;
 	      }
@@ -438,7 +438,7 @@ General Public License, /usr/share/common-licenses/GPL, for more details.\n");
 sub usage {
     printf("deluser: %s $version\n\n",_("removing user and groups from the system. Version:"));
 
-    print("deluser user
+    printf(_("deluser user
   remove a normal user from the system
   example: deluser mike
 
@@ -467,7 +467,7 @@ general options:
   --quiet | -q      don't give process information to stdout
   --help | -h       usage message
   --version | -v    version number and copyright
-  --conf | -c FILE  use FILE instead of $defaults\n\n");
+  --conf | -c FILE  use FILE instead of %s\n\n"),$defaults);
 
     printf(_("Global configuration is in the file %s.\n"), $defaults);    
 }
