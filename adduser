@@ -687,8 +687,14 @@ sub copy_to_dir {
     my($fromdir, $file, $todir, $newu, $newg, $sgiddir) = @_;
 
     if (-l "$fromdir/$file") {
+	my $curgid="$)";
+	my $curuid="$>";
+	$)="$newg";
+	$>="$newu";
 	symlink(readlink("$fromdir/$file"), "$todir/$file")
 	    || &cleanup("symlink: $!\n");
+        $>="$curuid";
+        $)="$curgid";
 	return;
     }
     elsif (-f "$fromdir/$file") {
