@@ -1,10 +1,6 @@
 TODO for adduser
 ----------------
 
-Development of adduser 4.0 which is a complete rewrite in C and Shell happens
-at the moment in a private CVS Repository and if this is demanded I'll move it
-to cvs.d.o or somewhere else where more people have access.
-
 For adduser 3.x there is to do:
  o Make adduser and deluser use strict and taint mode
 

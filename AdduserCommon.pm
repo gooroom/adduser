@@ -13,26 +13,32 @@ use vars qw(@EXPORT $VAR1);
 @EXPORT = qw(invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf);
 
 sub invalidate_nscd {
+    # Check if we need to do make -C /var/yp for NIS
+    my $nisconfig;
+    if(-f "/etc/default/nis") {
+        $nisconfig = "/etc/default/nis";
+    } elsif(-f "/etc/init.d/nis") {
+        $nisconfig = "/etc/init.d/nis";
+    }
+    if(defined($nisconfig) && -f "/var/yp/Makefile" &&
+        -x "/usr/bin/rpcinfo" && grep(/ypserv/, qx{/usr/bin/rpcinfo -p})) {
+	open(NISCONFIG, "<$nisconfig");
+	if(grep(/^NISSERVER=master/, <NISSERVER>)) {
+            system("make", "-C", "/var/yp");
+	}
+	close(NISCONFIG);
+    }
+ 
+    # Check if we need to invalidate the NSCD cache
     my $nscd;
-    if(-e "/var/yp/Makefile")
-      {
-	    system ("make", "-C", "/var/yp");
-      }
-    if(-e "/usr/sbin/nscd")
-      {
+    if(-e "/usr/sbin/nscd") {
         $nscd = "/usr/sbin/nscd";
-      }
-    elsif(-e "/usr/bin/nscd")
-      {
+    } elsif(-e "/usr/bin/nscd") {
         $nscd = "/usr/bin/nscd";
-      }
-    else
-      {
-        return(0); # nscd is not installed
-      }
+    }
     my $nscdpid = "/var/run/nscd.pid";
     # this function replaces startnscd and stopnscd (closes: #54726)
-    if(-e $nscdpid)
+    if(defined($nscd) && -f $nscdpid)
       {
 	    my $table = shift;
 	    if ($table)

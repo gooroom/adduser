@@ -1,3 +1,18 @@
+adduser (3.37) unstable; urgency=medium
+
+  * -h now does the same as --help. Closes: #98789.
+  * make -C /var/yp is only called if adduser is run on a NIS server.
+    Thanks to Herbert Xu and Miquel van Smoorenburg for their helpful
+    tips on how to check this most reliable. Currently this is done
+    everytime invalidate_nscd() is called which probably doesn't
+    improve the performance a lot. :-/ I couldn't figure out if there
+    are static variable (like in the C function scope), and using a
+    global variable is not optimal either. We have too much of that old
+    cruft anyway which should be cleaned up. Should be improved later.
+    Closes: #97981.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sun, 27 May 2001 20:34:00 -0500
+
 adduser (3.36) unstable; urgency=medium
 
   * The "I hope it resolves NIS issues" release
