@@ -28,3 +28,6 @@ Description: Add and remove users and groups
  and mail spool or all files on the system owned by him.
  .
  Optionally a custom script can be executed after each of the commands.
+ .
+ Adduser is maintained on http://alioth.debian.org/projects/adduser/.
+ There is also a development mailing list hosted there.

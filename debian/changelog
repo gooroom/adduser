@@ -58,8 +58,9 @@ adduser (3.52) unstable; urgency=low
       po files. Thanks to Justin B Rye. Closes: #238807.
     * Add turkish po-debconf translation. Thanks to Recai Oktas.
       Closes: #239140.
+    * Include alioth link and mailing list to package description.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 13:40:19 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 14:40:02 +0100
 
 adduser (3.51) unstable; urgency=low
 
