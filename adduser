@@ -726,7 +726,7 @@ sub copy_to_dir {
 # is name ok?
 sub checkname {
     my ($name) = @_;
-    if ($name !~ /^[-\.A-Za-z0-9]*\$?$/) {
+    if ($name !~ /^[-_\.A-Za-z0-9]*\$?$/) {
 	print STDERR
 "$0: ",_("To avoid problems, the username should consist of
 letters, digits, underscores, periods and dashes. For compatibility with
