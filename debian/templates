@@ -41,12 +41,15 @@ Description-es: ©Quiere que todo el sistema pueda leer las cuentas de usuario?
  puede querer que sus cuentas sСlo puedan ser leМdas por el dueЯo de la
  cuenta. Si no estА seguro responda sМ para activar la lectura global de las
  cuentas de usuario.
-Description-ru: Хотите ли вы, чтобы система имела домашние каталоги, доступные
- для чтения всем?  Обычно домашние каталоги могут просматриваться всеми
- пользователями системы. В целях повышения безопасности и конфиденциальности
- системы, вы можете захотеть, чтобы домашний каталог пользователя был читаем
- только им одним. Если вы не уверены, ответьте yes, тогда
- домашние каталоги будут доступны для чтения всем.
+Description-ru: Хотите сделать домашние каталоги доступными для чтения всем в системе?
+ Обычно домашние каталоги могут просматриваться всеми пользователями системы.
+ В целях повышения безопасности/конфиденциальности в вашей системы, вам вероятно
+ захочется, чтобы домашние каталоги пользователей был читаемы только ими самими.
+ Если вы не уверены, ответьте yes, тогда домашние каталоги будут доступны для
+ чтения всем.
+ .
+ Это относится только к домашним каталогам пользователей, которые позже будут
+ добавляться программой adduser.
 Description-nl: Wilt u wereldwijd leesbare home directories?
  Normaal kunnen alle home directories door alle gebruikers op uw systeem
  gelezen worden, ze zijn dan wereldwijd leesbaar. Indien u de beveiliging

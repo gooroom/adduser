@@ -421,8 +421,8 @@ elsif ($action eq "adduser") {
 	$ingroup_name = $new_name;
     }
     elsif (!defined($new_uid) && !$make_group_also) {
-	$new_uid = &first_avail_id($config{"first_uid"},
-				   $config{"last_uid"},
+	$new_uid = &first_avail_id($first_uid,
+				   $last_uid,
 				   &get_current_uids);
 	if ($new_uid == -1) {
             print STDERR "$0: ",_("No UID is available in the range "),

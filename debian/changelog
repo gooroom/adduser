@@ -1,3 +1,18 @@
+adduser (3.43) unstable; urgency=low
+
+  * get ready for the freeze
+  * Fixed malformated line in the description and rephrased some parts.
+    Closes: #114932. Also changed 'gecos' to 'GECOS field' as discussed
+    on -devel.
+  * Updated adduser.8 that dashes in usernames are valid without
+    --force-badname as well. Closes: #116118
+  * Made --firstuid and --lastuid work without usergroups as well. Oops.
+    Closes: #118720.
+  * Updated Russion Debconf template. Closes: #112651.
+  * Changed Build-Depends to Build-Depends-Indep.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Thu, 29 Nov 2001 14:25:33 +0100
+
 adduser (3.42) unstable; urgency=low
 
   * If --no-create-home is specified, adduser doesn't warn about an
