@@ -1,3 +1,9 @@
+adduser (3.19) unstable; urgency=low
+
+  * Fixed path of nscd. Closes: #71011 
+
+ -- Roland Bauerschmidt <rb@debian.org>  Wed,  6 Sep 2000 18:35:49 -0500
+
 adduser (3.18) unstable; urgency=low
 
   * checks if nscd is running before trying to invalidate the cache,

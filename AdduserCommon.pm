@@ -13,7 +13,7 @@ use vars qw(@EXPORT $VAR1);
 @EXPORT = qw(invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf);
 
 sub invalidate_nscd {
-    my $nscd = "/usr/bin/nscd";
+    my $nscd = "/usr/sbin/nscd";
     my $nscdpid = "/var/run/nscd.pid";
     # this function replaces startnscd and stopnscd (closes: #54726)
     if(-e $nscdpid)
