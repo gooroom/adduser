@@ -404,18 +404,6 @@ msgstr "Utilisateur à supprimer : "
 msgid "I need a name to remove.\n"
 msgstr "Un nom à supprimer doit être indiqué.\n"
 
-#: ../deluser:204
-#: ../deluser:281
-#, perl-format
-msgid "The user `%s' does not exist.\n"
-msgstr "« %s » n'existe pas.\n"
-
-#: ../deluser:265
-#: ../deluser:284
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "« %s » n'existe pas.\n"
-
 #: ../deluser:208
 msgid "Looking for files to backup/remove...\n"
 msgstr "Recherche de fichiers à sauvegarder ou supprimer...\n"

@@ -347,16 +347,6 @@ msgstr "Введите имя пользователя, которого вы хотите удалить: "
 msgid "I need a name to remove.\n"
 msgstr "Для удаления требуется имя.\n"
 
-#: ../deluser:204 ../deluser:281
-#, perl-format
-msgid "The user `%s' does not exist.\n"
-msgstr "`%s' не существует.\n"
-
-#: ../deluser:265 ../deluser:284
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "`%s' не существует.\n"
-
 #: ../deluser:208
 #, fuzzy
 msgid "Looking for files to backup/remove...\n"

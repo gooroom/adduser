@@ -365,16 +365,6 @@ msgstr "削除するユーザ名を入力して下さい: "
 msgid "I need a name to remove.\n"
 msgstr "削除する名前が必要です。\n"
 
-#: ../deluser:204 ../deluser:281
-#, perl-format
-msgid "The user `%s' does not exist.\n"
-msgstr "`%s' が存在しません。\n"
-
-#: ../deluser:265 ../deluser:284
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "`%s' が存在しません。\n"
-
 #: ../deluser:208
 msgid "Looking for files to backup/remove...\n"
 msgstr "バックアップ/削除するファイルを探しています...\n"

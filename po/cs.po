@@ -343,16 +343,6 @@ msgstr "Zadejte jméno odstraòovavého u¾ivatele: "
 msgid "I need a name to remove.\n"
 msgstr "Potøebuji jméno pro odstranìní.\n"
 
-#: ../deluser:204 ../deluser:281
-#, perl-format
-msgid "The user `%s' does not exist.\n"
-msgstr "'%s' neexistuje.\n"
-
-#: ../deluser:265 ../deluser:284
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "'%s' neexistuje.\n"
-
 #: ../deluser:208
 msgid "Looking for files to backup/remove...\n"
 msgstr "Hledám soubory pro zálohu/odstranìní...\n"

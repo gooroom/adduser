@@ -349,16 +349,6 @@ msgstr "Introduïu el nom de l'usuari a eliminar: "
 msgid "I need a name to remove.\n"
 msgstr "Es necessita un nom a eliminar.\n"
 
-#: ../deluser:204 ../deluser:281
-#, perl-format
-msgid "The user `%s' does not exist.\n"
-msgstr "«%s» no existeix.\n"
-
-#: ../deluser:265 ../deluser:284
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "«%s» no existeix.\n"
-
 #: ../deluser:208
 msgid "Looking for files to backup/remove...\n"
 msgstr "S'estan cercant fitxers a desar/eliminar...\n"

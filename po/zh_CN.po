@@ -344,16 +344,6 @@ msgstr "请输入要删除的用户名："
 msgid "I need a name to remove.\n"
 msgstr "我需要欲删除用户的名字。\n"
 
-#: ../deluser:204 ../deluser:281
-#, perl-format
-msgid "The user `%s' does not exist.\n"
-msgstr "“%s” 不存在。\n"
-
-#: ../deluser:265 ../deluser:284
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "“%s” 不存在。\n"
-
 #: ../deluser:208
 msgid "Looking for files to backup/remove...\n"
 msgstr "正在寻找要备份或删除的文件...\n"

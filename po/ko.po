@@ -354,16 +354,6 @@ msgstr "추가할 사용자명을 입력하세요: "
 msgid "I need a name to remove.\n"
 msgstr "추가할 이름이 필요합니다.\n"
 
-#: ../deluser:204 ../deluser:281
-#, fuzzy, perl-format
-msgid "The user `%s' does not exist.\n"
-msgstr "`%s'이(가) 없습니다.\n"
-
-#: ../deluser:265 ../deluser:284
-#, fuzzy, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "`%s'이(가) 없습니다.\n"
-
 #: ../deluser:208
 msgid "Looking for files to backup/remove...\n"
 msgstr ""
