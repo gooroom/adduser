@@ -60,8 +60,11 @@ adduser (3.52) unstable; urgency=low
       Closes: #239140.
     * Include alioth link and mailing list to package description.
     * add --backup-to parameter to deluser. Closes: #138618.
+    * Include updated Swedish translation of debconf template. Thanks
+      to André Dahlqvist. Closes: #238923.
+    * recode changelog to utf-8.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 18:36:25 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 18:49:03 +0100
 
 adduser (3.51) unstable; urgency=low
 
@@ -478,7 +481,7 @@ adduser (3.13) unstable; urgency=low
   * Added Brazilian translation for adduser (closes: #53912), thanks to
     Cesar Eduardo Barros <cesarb@web4u.com.br>
   * Added Spanish translation for adduser and deluser (closes: #44902),
-    thanks to Nicol�s Lichtmaier <nick@debian.org>
+    thanks to Nicolás Lichtmaier <nick@debian.org>
   * Added Korean translation for adduser (closes: #46836), thanks to
     Changwoo Ryu <cwryu@adam.kaist.ac.kr>
   * Worked patch from #52048 into adduser (closes: #52048)
