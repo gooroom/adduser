@@ -63,7 +63,7 @@ msgstr "--conf benötigt ein Argument.\n"
 
 #: ../adduser:180 ../deluser:117
 #, perl-format
-msgid "`%s' doesn't exist.\n"
+msgid "`%s' does not exist.\n"
 msgstr "»%s« existiert nicht.\n"
 
 #: ../adduser:187 ../deluser:126
@@ -96,7 +96,7 @@ msgid "Specify only one name in this mode.\n"
 msgstr "Geben Sie nur einen Namen in diesem Modus an.\n"
 
 #: ../adduser:231
-msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
+msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
 msgstr ""
 "Die Optionen --group, --ingroup und --gid schließen sich gegenseitig aus.\n"
 
@@ -107,7 +107,7 @@ msgstr "Die Gruppe »%s« existiert bereits.\n"
 
 #: ../adduser:269 ../adduser:299
 #, perl-format
-msgid "The GID `%s' is already in use.\n"
+msgid "The GID %s is already in use.\n"
 msgstr "Die GID »%s« ist bereits in Benutzung.\n"
 
 #: ../adduser:277 ../adduser:307
@@ -116,7 +116,7 @@ msgstr "Es ist keine GID verfügbar im Bereich "
 
 #: ../adduser:280 ../adduser:310
 #, perl-format
-msgid "Group `%s' not created.\n"
+msgid "The group `%s' was not created.\n"
 msgstr "Gruppe »%s« wurde nicht angelegt.\n"
 
 #: ../adduser:284 ../adduser:314
@@ -130,22 +130,22 @@ msgstr "Fertig.\n"
 
 #: ../adduser:327
 #, perl-format
-msgid "The user `%s' doesn't exist.\n"
+msgid "The user `%s' does not exist.\n"
 msgstr "Der Benutzer »%s« existiert nicht.\n"
 
 #: ../adduser:329 ../adduser:609
 #, perl-format
-msgid "The group `%s' doesn't exist.\n"
+msgid "The group `%s' does not exist.\n"
 msgstr "Die Gruppe »%s« existiert nicht.\n"
 
 #: ../adduser:332
 #, perl-format
-msgid "The user `%s' is already a member of %s.\n"
+msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "Der Benutzer »%s« ist bereits ein Mitglied der Gruppe %s.\n"
 
 #: ../adduser:337
 #, perl-format
-msgid "Adding user %s to group %s...\n"
+msgid "Adding user `%s' to group `%s'...\n"
 msgstr "Füge Benutzer %s in Gruppe %s hinzu...\n"
 
 #: ../adduser:364
@@ -155,7 +155,7 @@ msgstr "Benutzer »%s« existiert bereits. Beende...\n"
 
 #: ../adduser:370
 #, perl-format
-msgid "Adding system user %s...\n"
+msgid "Adding system user `%s'...\n"
 msgstr "Lege Systembenutzer %s an...\n"
 
 #: ../adduser:377 ../adduser:464
@@ -164,7 +164,7 @@ msgstr "Kein UID/GID Paar ist verfügbar im Bereich "
 
 #: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
 #, perl-format
-msgid "User `%s' not created.\n"
+msgid "The user `%s' was not created.\n"
 msgstr "Benutzer »%s« wurde nicht angelegt.\n"
 
 #: ../adduser:390 ../adduser:477
@@ -191,27 +191,27 @@ msgstr "Erstelle kein Homeverzeichnis.\n"
 
 #: ../adduser:430
 #, perl-format
-msgid "Home directory %s already exists.\n"
+msgid "Home directory `%s' already exists.\n"
 msgstr "Homeverzeichnis %s existiert bereits.\n"
 
 #: ../adduser:432 ../adduser:517
 #, perl-format
-msgid "Creating home directory %s.\n"
+msgid "Creating home directory `%s'.\n"
 msgstr "Erstelle Homeverzeichnis %s.\n"
 
 #: ../adduser:457
 #, perl-format
-msgid "Adding user %s...\n"
+msgid "Adding user `%s'...\n"
 msgstr "Lege Benutzer %s an...\n"
 
 #: ../adduser:511
 #, perl-format
-msgid "Home directory %s already exists.  Not copying from %s\n"
+msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "Homeverzeichnis %s existiert bereits. Kopiere keine Dateien aus %s\n"
 
 #: ../adduser:527
 #, perl-format
-msgid "Copying files from %s\n"
+msgid "Copying files from `%s'\n"
 msgstr "Kopiere Dateien aus %s\n"
 
 #: ../adduser:553
@@ -224,7 +224,7 @@ msgstr "j"
 
 #: ../adduser:560
 #, perl-format
-msgid "Setting quota from %s.\n"
+msgid "Setting quota from `%s'.\n"
 msgstr "Setze Quota vom %s.\n"
 
 #: ../adduser:599
@@ -244,7 +244,7 @@ msgstr "Die GID »%s« existiert bereits.\n"
 
 #: ../adduser:611
 #, perl-format
-msgid "The GID `%s' doesn't exist.\n"
+msgid "The GID %s does not exist.\n"
 msgstr "Die GID »%s« existiert nicht.\n"
 
 #: ../adduser:656
@@ -375,9 +375,14 @@ msgstr "Geben Sie den zu entfernenden Benutzernamen ein: "
 msgid "I need a name to remove.\n"
 msgstr "Ich benötige einen Namen, der entfernt werden soll.\n"
 
-#: ../deluser:204 ../deluser:265 ../deluser:281 ../deluser:284
+#: ../deluser:204 ../deluser:281
 #, perl-format
-msgid "`%s' does not exist.\n"
+msgid "The user `%s' does not exist.\n"
+msgstr "»%s« existiert nicht.\n"
+
+#: ../deluser:265 ../deluser:284
+#, perl-format
+msgid "The group `%s' does not exist.\n"
 msgstr "»%s« existiert nicht.\n"
 
 #: ../deluser:208
@@ -394,7 +399,7 @@ msgstr "Lösche Dateien...\n"
 
 #: ../deluser:254
 #, perl-format
-msgid "Removing user %s...\n"
+msgid "Removing user `%s'...\n"
 msgstr "Entferne Benutzer %s...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
@@ -403,12 +408,12 @@ msgstr "Fertig.\n"
 
 #: ../deluser:269
 #, perl-format
-msgid "There are users having `%s' as primary group!\n"
+msgid "There are users with `%s' as their primary group!\n"
 msgstr "Es gibt Benutzer, die »%s« als primäre Gruppe haben!\n"
 
 #: ../deluser:272
 #, perl-format
-msgid "Removing group %s...\n"
+msgid "Removing group `%s'...\n"
 msgstr "Entferne Gruppe %s...\n"
 
 #: ../deluser:287
@@ -417,12 +422,12 @@ msgstr "Sie können den Benutzer nicht aus seiner primären Gruppe entfernen.\n"
 
 #: ../deluser:301
 #, perl-format
-msgid "%s is not a member of group %s.\n"
+msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "%s ist kein Mitglied in der Gruppe %s.\n"
 
 #: ../deluser:304
 #, perl-format
-msgid "Removing user %s from group %s...\n"
+msgid "Removing user `%s' from group `%s'...\n"
 msgstr "Entferne Benutzer %s aus Gruppe %s...\n"
 
 #: ../deluser:315 ../deluser:334

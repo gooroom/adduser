@@ -64,7 +64,7 @@ msgstr "--conf vy¾aduje argument.\n"
 
 #: ../adduser:180 ../deluser:117
 #, perl-format
-msgid "`%s' doesn't exist.\n"
+msgid "`%s' does not exist.\n"
 msgstr "'%s' neexistuje.\n"
 
 #: ../adduser:187 ../deluser:126
@@ -97,7 +97,7 @@ msgid "Specify only one name in this mode.\n"
 msgstr "V tomto re¾imu mù¾ete zadat pouze jedno jméno.\n"
 
 #: ../adduser:231
-msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
+msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
 msgstr "Volby --group, --ingroup a --gid se navzájem vyluèují.\n"
 
 #: ../adduser:267 ../adduser:297 ../adduser:603
@@ -107,7 +107,7 @@ msgstr "Skupina '%s' ji¾ existuje.\n"
 
 #: ../adduser:269 ../adduser:299
 #, perl-format
-msgid "The GID `%s' is already in use.\n"
+msgid "The GID %s is already in use.\n"
 msgstr "GID '%s' je ji¾ pou¾íváno.\n"
 
 #: ../adduser:277 ../adduser:307
@@ -116,7 +116,7 @@ msgstr "Ji¾ není volné ¾ádné GID z rozsahu "
 
 #: ../adduser:280 ../adduser:310
 #, perl-format
-msgid "Group `%s' not created.\n"
+msgid "The group `%s' was not created.\n"
 msgstr "Skupina '%s' nebyla vytvoøena.\n"
 
 #: ../adduser:284 ../adduser:314
@@ -130,22 +130,22 @@ msgstr "Hotovo.\n"
 
 #: ../adduser:327
 #, perl-format
-msgid "The user `%s' doesn't exist.\n"
+msgid "The user `%s' does not exist.\n"
 msgstr "U¾ivatel '%s' neexistuje.\n"
 
 #: ../adduser:329 ../adduser:609
 #, perl-format
-msgid "The group `%s' doesn't exist.\n"
+msgid "The group `%s' does not exist.\n"
 msgstr "Skupina '%s' neexistuje.\n"
 
 #: ../adduser:332
 #, perl-format
-msgid "The user `%s' is already a member of %s.\n"
+msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "U¾ivatel '%s' je ji¾ èlenem %s.\n"
 
 #: ../adduser:337
 #, perl-format
-msgid "Adding user %s to group %s...\n"
+msgid "Adding user `%s' to group `%s'...\n"
 msgstr "Pøidávám u¾ivatele %s do skupiny %s...\n"
 
 #: ../adduser:364
@@ -155,7 +155,7 @@ msgstr "U¾ivatel %s ji¾ existuje. Konèím...\n"
 
 #: ../adduser:370
 #, perl-format
-msgid "Adding system user %s...\n"
+msgid "Adding system user `%s'...\n"
 msgstr "Pøidávám systémového u¾ivatele %s...\n"
 
 #: ../adduser:377 ../adduser:464
@@ -164,7 +164,7 @@ msgstr "Ji¾ není volný pár UID/GID z rozsahu "
 
 #: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
 #, perl-format
-msgid "User `%s' not created.\n"
+msgid "The user `%s' was not created.\n"
 msgstr "U¾ivatel '%s' nebyl vytvoøen.\n"
 
 #: ../adduser:390 ../adduser:477
@@ -191,27 +191,27 @@ msgstr "Nevytváøím domovský adresáø.\n"
 
 #: ../adduser:430
 #, perl-format
-msgid "Home directory %s already exists.\n"
+msgid "Home directory `%s' already exists.\n"
 msgstr "Domovský adresáø %s ji¾ existuje.\n"
 
 #: ../adduser:432 ../adduser:517
 #, perl-format
-msgid "Creating home directory %s.\n"
+msgid "Creating home directory `%s'.\n"
 msgstr "Vytváøím domovský adresáø %s.\n"
 
 #: ../adduser:457
 #, perl-format
-msgid "Adding user %s...\n"
+msgid "Adding user `%s'...\n"
 msgstr "Pøidávám u¾ivatele %s...\n"
 
 #: ../adduser:511
 #, perl-format
-msgid "Home directory %s already exists.  Not copying from %s\n"
+msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "Domovský adresáø %s ji¾ existuje. Nekopíruji z %s\n"
 
 #: ../adduser:527
 #, perl-format
-msgid "Copying files from %s\n"
+msgid "Copying files from `%s'\n"
 msgstr "Kopíruji soubory z %s\n"
 
 #: ../adduser:553
@@ -224,7 +224,7 @@ msgstr "a"
 
 #: ../adduser:560
 #, perl-format
-msgid "Setting quota from %s.\n"
+msgid "Setting quota from `%s'.\n"
 msgstr "Nastavuji kvótu z %s.\n"
 
 #: ../adduser:599
@@ -244,7 +244,7 @@ msgstr "Skupina '%s' ji¾ existuje.\n"
 
 #: ../adduser:611
 #, fuzzy, perl-format
-msgid "The GID `%s' doesn't exist.\n"
+msgid "The GID %s does not exist.\n"
 msgstr "U¾ivatel '%s' neexistuje.\n"
 
 #: ../adduser:656
@@ -343,9 +343,14 @@ msgstr "Zadejte jméno odstraòovavého u¾ivatele: "
 msgid "I need a name to remove.\n"
 msgstr "Potøebuji jméno pro odstranìní.\n"
 
-#: ../deluser:204 ../deluser:265 ../deluser:281 ../deluser:284
+#: ../deluser:204 ../deluser:281
 #, perl-format
-msgid "`%s' does not exist.\n"
+msgid "The user `%s' does not exist.\n"
+msgstr "'%s' neexistuje.\n"
+
+#: ../deluser:265 ../deluser:284
+#, perl-format
+msgid "The group `%s' does not exist.\n"
 msgstr "'%s' neexistuje.\n"
 
 #: ../deluser:208
@@ -362,7 +367,7 @@ msgstr "Odstraòuji soubory...\n"
 
 #: ../deluser:254
 #, perl-format
-msgid "Removing user %s...\n"
+msgid "Removing user `%s'...\n"
 msgstr "Odstraòuji u¾ivatele %s...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
@@ -371,12 +376,12 @@ msgstr "hotovo.\n"
 
 #: ../deluser:269
 #, perl-format
-msgid "There are users having `%s' as primary group!\n"
+msgid "There are users with `%s' as their primary group!\n"
 msgstr "Existují u¾ivatelé, kteøí mají nastavenu skupinu '%s' jako primární!\n"
 
 #: ../deluser:272
 #, perl-format
-msgid "Removing group %s...\n"
+msgid "Removing group `%s'...\n"
 msgstr "Odstraòuji skupinu %s...\n"
 
 #: ../deluser:287
@@ -385,12 +390,12 @@ msgstr "Nemù¾ete odstranit u¾ivatele z jeho primární skupiny.\n"
 
 #: ../deluser:301
 #, perl-format
-msgid "%s is not a member of group %s.\n"
+msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "%s není èlenem skupiny %s.\n"
 
 #: ../deluser:304
 #, perl-format
-msgid "Removing user %s from group %s...\n"
+msgid "Removing user `%s' from group `%s'...\n"
 msgstr "Odstraòuji u¾ivatele %s ze skupiny %s...\n"
 
 #: ../deluser:315 ../deluser:334

@@ -66,7 +66,7 @@ msgstr "--conf requereix un argument.\n"
 
 #: ../adduser:180 ../deluser:117
 #, perl-format
-msgid "`%s' doesn't exist.\n"
+msgid "`%s' does not exist.\n"
 msgstr "«%s» no existeix.\n"
 
 #: ../adduser:187 ../deluser:126
@@ -99,7 +99,7 @@ msgid "Specify only one name in this mode.\n"
 msgstr "Especifiqueu només un nom en aquest mode.\n"
 
 #: ../adduser:231
-msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
+msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
 msgstr "Les opcions --group, --ingroup i --gid són mútuament exclusives.\n"
 
 #: ../adduser:267 ../adduser:297 ../adduser:603
@@ -109,7 +109,7 @@ msgstr "El grup «%s» ja existeix.\n"
 
 #: ../adduser:269 ../adduser:299
 #, perl-format
-msgid "The GID `%s' is already in use.\n"
+msgid "The GID %s is already in use.\n"
 msgstr "El GID «%s» ja està en ús.\n"
 
 #: ../adduser:277 ../adduser:307
@@ -118,7 +118,7 @@ msgstr "No hi ha cap GID disponible en el rang "
 
 #: ../adduser:280 ../adduser:310
 #, perl-format
-msgid "Group `%s' not created.\n"
+msgid "The group `%s' was not created.\n"
 msgstr "No s'ha creat el grup «%s».\n"
 
 #: ../adduser:284 ../adduser:314
@@ -132,22 +132,22 @@ msgstr "Fet.\n"
 
 #: ../adduser:327
 #, perl-format
-msgid "The user `%s' doesn't exist.\n"
+msgid "The user `%s' does not exist.\n"
 msgstr "L'usuari «%s» no existeix.\n"
 
 #: ../adduser:329 ../adduser:609
 #, perl-format
-msgid "The group `%s' doesn't exist.\n"
+msgid "The group `%s' does not exist.\n"
 msgstr "El grup «%s» no existeix.\n"
 
 #: ../adduser:332
 #, perl-format
-msgid "The user `%s' is already a member of %s.\n"
+msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "L'usuari «%s» ja és membre de %s.\n"
 
 #: ../adduser:337
 #, perl-format
-msgid "Adding user %s to group %s...\n"
+msgid "Adding user `%s' to group `%s'...\n"
 msgstr "S'està afegint l'usuari %s al grup %s...\n"
 
 #: ../adduser:364
@@ -157,7 +157,7 @@ msgstr "L'usuari %s ja existeix. S'està eixint...\n"
 
 #: ../adduser:370
 #, perl-format
-msgid "Adding system user %s...\n"
+msgid "Adding system user `%s'...\n"
 msgstr "S'està afegint l'usuari del sistema %s...\n"
 
 #: ../adduser:377 ../adduser:464
@@ -166,7 +166,7 @@ msgstr "No hi ha cap parella UID/GID disponible en el rang "
 
 #: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
 #, perl-format
-msgid "User `%s' not created.\n"
+msgid "The user `%s' was not created.\n"
 msgstr "L'usuari «%s» no s'ha creat.\n"
 
 #: ../adduser:390 ../adduser:477
@@ -196,27 +196,27 @@ msgstr "No es crearà el directori personal.\n"
 
 #: ../adduser:430
 #, perl-format
-msgid "Home directory %s already exists.\n"
+msgid "Home directory `%s' already exists.\n"
 msgstr "El directori personal %s ja existeix.\n"
 
 #: ../adduser:432 ../adduser:517
 #, perl-format
-msgid "Creating home directory %s.\n"
+msgid "Creating home directory `%s'.\n"
 msgstr "S'està creant el directori personal %s.\n"
 
 #: ../adduser:457
 #, perl-format
-msgid "Adding user %s...\n"
+msgid "Adding user `%s'...\n"
 msgstr "S'està afegint l'usuari %s...\n"
 
 #: ../adduser:511
 #, perl-format
-msgid "Home directory %s already exists.  Not copying from %s\n"
+msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "El directori personal %s ja existeix. No es copiarà des de %s\n"
 
 #: ../adduser:527
 #, perl-format
-msgid "Copying files from %s\n"
+msgid "Copying files from `%s'\n"
 msgstr "S'estan copiant els fitxers des de %s\n"
 
 #: ../adduser:553
@@ -229,7 +229,7 @@ msgstr "s"
 
 #: ../adduser:560
 #, perl-format
-msgid "Setting quota from %s.\n"
+msgid "Setting quota from `%s'.\n"
 msgstr "S'està establint la quota des de %s.\n"
 
 #: ../adduser:599
@@ -249,7 +249,7 @@ msgstr "El grup «%s» ja existeix.\n"
 
 #: ../adduser:611
 #, fuzzy, perl-format
-msgid "The GID `%s' doesn't exist.\n"
+msgid "The GID %s does not exist.\n"
 msgstr "L'usuari «%s» no existeix.\n"
 
 #: ../adduser:656
@@ -349,9 +349,14 @@ msgstr "Introduïu el nom de l'usuari a eliminar: "
 msgid "I need a name to remove.\n"
 msgstr "Es necessita un nom a eliminar.\n"
 
-#: ../deluser:204 ../deluser:265 ../deluser:281 ../deluser:284
+#: ../deluser:204 ../deluser:281
 #, perl-format
-msgid "`%s' does not exist.\n"
+msgid "The user `%s' does not exist.\n"
+msgstr "«%s» no existeix.\n"
+
+#: ../deluser:265 ../deluser:284
+#, perl-format
+msgid "The group `%s' does not exist.\n"
 msgstr "«%s» no existeix.\n"
 
 #: ../deluser:208
@@ -368,7 +373,7 @@ msgstr "S'estan eliminant els fitxers...\n"
 
 #: ../deluser:254
 #, perl-format
-msgid "Removing user %s...\n"
+msgid "Removing user `%s'...\n"
 msgstr "S'està eliminant l'usuari %s...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
@@ -377,12 +382,12 @@ msgstr "fet.\n"
 
 #: ../deluser:269
 #, perl-format
-msgid "There are users having `%s' as primary group!\n"
+msgid "There are users with `%s' as their primary group!\n"
 msgstr "Hi ha usuaris amb «%s» com el grup primari!\n"
 
 #: ../deluser:272
 #, perl-format
-msgid "Removing group %s...\n"
+msgid "Removing group `%s'...\n"
 msgstr "S'està eliminant el grup %s...\n"
 
 #: ../deluser:287
@@ -391,12 +396,12 @@ msgstr "No podeu eliminar a l'usuari del seu grup primari.\n"
 
 #: ../deluser:301
 #, perl-format
-msgid "%s is not a member of group %s.\n"
+msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "%s no és membre del grup %s.\n"
 
 #: ../deluser:304
 #, perl-format
-msgid "Removing user %s from group %s...\n"
+msgid "Removing user `%s' from group `%s'...\n"
 msgstr "S'està eliminant l'usuari %s del grup %s...\n"
 
 #: ../deluser:315 ../deluser:334

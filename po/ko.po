@@ -69,7 +69,7 @@ msgstr "--conf는 인자가 필요합니다.\n"
 
 #: ../adduser:180 ../deluser:117
 #, perl-format
-msgid "`%s' doesn't exist.\n"
+msgid "`%s' does not exist.\n"
 msgstr "`%s'이(가) 없습니다.\n"
 
 #: ../adduser:187 ../deluser:126
@@ -103,7 +103,7 @@ msgid "Specify only one name in this mode.\n"
 msgstr "이 경우에는 한 개의 이름만 지정할 수 있습니다.\n"
 
 #: ../adduser:231
-msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
+msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
 msgstr ""
 "--group, --ingroup, 그리고 --gid 옵션은 한 번에 한 개만 쓸 수 있습니다.\n"
 
@@ -114,7 +114,7 @@ msgstr "`%s' 그룹은 이미 존재합니다.\n"
 
 #: ../adduser:269 ../adduser:299
 #, perl-format
-msgid "The GID `%s' is already in use.\n"
+msgid "The GID %s is already in use.\n"
 msgstr "`%s' GID는 이미 사용중입니다.\n"
 
 # (FIXME) 이렇게 쓰면 안 되지..
@@ -124,7 +124,7 @@ msgstr "범위 내에 쓸 수 있는 GID가 없습니다 "
 
 #: ../adduser:280 ../adduser:310
 #, perl-format
-msgid "Group `%s' not created.\n"
+msgid "The group `%s' was not created.\n"
 msgstr "`%s' 그룹이 만들어지지 않았습니다.\n"
 
 #: ../adduser:284 ../adduser:314
@@ -138,22 +138,22 @@ msgstr "완료.\n"
 
 #: ../adduser:327
 #, perl-format
-msgid "The user `%s' doesn't exist.\n"
+msgid "The user `%s' does not exist.\n"
 msgstr "`%s' 사용자가 없습니다.\n"
 
 #: ../adduser:329 ../adduser:609
 #, perl-format
-msgid "The group `%s' doesn't exist.\n"
+msgid "The group `%s' does not exist.\n"
 msgstr "`%s' 그룹이 없습니다.\n"
 
 #: ../adduser:332
 #, perl-format
-msgid "The user `%s' is already a member of %s.\n"
+msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "`%s' 사용자는 이미 %s의 일원입니다.\n"
 
 #: ../adduser:337
 #, perl-format
-msgid "Adding user %s to group %s...\n"
+msgid "Adding user `%s' to group `%s'...\n"
 msgstr "%s 사용자를 %s 그룹에 추가...\n"
 
 #: ../adduser:364
@@ -163,7 +163,7 @@ msgstr "`%s' 그룹은 이미 존재합니다.\n"
 
 #: ../adduser:370
 #, perl-format
-msgid "Adding system user %s...\n"
+msgid "Adding system user `%s'...\n"
 msgstr "시스템 사용자 %s 추가...\n"
 
 # (FIXME) 이렇게 쓰면 안 되지..
@@ -173,7 +173,7 @@ msgstr "범위 내에 쓸 수 있는 UID/GID 쌍이 없습니다 "
 
 #: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
 #, perl-format
-msgid "User `%s' not created.\n"
+msgid "The user `%s' was not created.\n"
 msgstr "`%s' 사용자가 만들어지지 않았습니다.\n"
 
 # (FIXME) 이렇게 쓰면 안 되지..
@@ -201,27 +201,27 @@ msgstr "홈 디렉토리를 만들지 않습니다.\n"
 
 #: ../adduser:430
 #, perl-format
-msgid "Home directory %s already exists.\n"
+msgid "Home directory `%s' already exists.\n"
 msgstr "홈 디렉토리 %s이(가) 이미 존재합니다.\n"
 
 #: ../adduser:432 ../adduser:517
 #, perl-format
-msgid "Creating home directory %s.\n"
+msgid "Creating home directory `%s'.\n"
 msgstr "홈 디렉토리 %s 을(를) 만듭니다.\n"
 
 #: ../adduser:457
 #, perl-format
-msgid "Adding user %s...\n"
+msgid "Adding user `%s'...\n"
 msgstr "사용자 %s 추가...\n"
 
 #: ../adduser:511
 #, perl-format
-msgid "Home directory %s already exists.  Not copying from %s\n"
+msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "홈 디렉토리 %s이(가) 이미 존재합니다.  %s에서 복사하지 않습니다\n"
 
 #: ../adduser:527
 #, perl-format
-msgid "Copying files from %s\n"
+msgid "Copying files from `%s'\n"
 msgstr "%s에서 파일 복사\n"
 
 #: ../adduser:553
@@ -234,7 +234,7 @@ msgstr ""
 
 #: ../adduser:560
 #, perl-format
-msgid "Setting quota from %s.\n"
+msgid "Setting quota from `%s'.\n"
 msgstr "%s에서 디스크 제한을 설정합니다.\n"
 
 #: ../adduser:599
@@ -254,7 +254,7 @@ msgstr "`%s' 그룹은 이미 존재합니다.\n"
 
 #: ../adduser:611
 #, fuzzy, perl-format
-msgid "The GID `%s' doesn't exist.\n"
+msgid "The GID %s does not exist.\n"
 msgstr "`%s' 사용자가 없습니다.\n"
 
 #: ../adduser:656
@@ -354,9 +354,14 @@ msgstr "추가할 사용자명을 입력하세요: "
 msgid "I need a name to remove.\n"
 msgstr "추가할 이름이 필요합니다.\n"
 
-#: ../deluser:204 ../deluser:265 ../deluser:281 ../deluser:284
+#: ../deluser:204 ../deluser:281
 #, fuzzy, perl-format
-msgid "`%s' does not exist.\n"
+msgid "The user `%s' does not exist.\n"
+msgstr "`%s'이(가) 없습니다.\n"
+
+#: ../deluser:265 ../deluser:284
+#, fuzzy, perl-format
+msgid "The group `%s' does not exist.\n"
 msgstr "`%s'이(가) 없습니다.\n"
 
 #: ../deluser:208
@@ -374,7 +379,7 @@ msgstr "사용자 %s 추가...\n"
 
 #: ../deluser:254
 #, fuzzy, perl-format
-msgid "Removing user %s...\n"
+msgid "Removing user `%s'...\n"
 msgstr "사용자 %s 추가...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
@@ -384,12 +389,12 @@ msgstr "완료.\n"
 
 #: ../deluser:269
 #, perl-format
-msgid "There are users having `%s' as primary group!\n"
+msgid "There are users with `%s' as their primary group!\n"
 msgstr ""
 
 #: ../deluser:272
 #, fuzzy, perl-format
-msgid "Removing group %s...\n"
+msgid "Removing group `%s'...\n"
 msgstr "그룹 %s (%s) 추가...\n"
 
 #: ../deluser:287
@@ -398,12 +403,12 @@ msgstr ""
 
 #: ../deluser:301
 #, fuzzy, perl-format
-msgid "%s is not a member of group %s.\n"
+msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "`%s' 사용자는 이미 %s의 일원입니다.\n"
 
 #: ../deluser:304
 #, fuzzy, perl-format
-msgid "Removing user %s from group %s...\n"
+msgid "Removing user `%s' from group `%s'...\n"
 msgstr "%s 사용자를 %s 그룹에 추가...\n"
 
 #: ../deluser:315 ../deluser:334

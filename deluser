@@ -147,7 +147,7 @@ while($arg = shift(@ARGV))
     } elsif($arg eq "--conf" || $arg eq "-c") {
         die "$0: ",_("--conf requires an argument.\n")
             if (!($defaults = shift(@ARGV)));
-        dief (_("`%s' doesn't exist.\n"),$defaults)
+        dief (_("`%s' does not exist.\n"),$defaults)
             if (! -f $defaults);
     } elsif($arg eq "--system") {
        $pconfig{"system"} = 1;
@@ -250,21 +250,21 @@ if($action eq "deluser") {
 	if( ($dummy1,$dummy2,$uid) = getpwnam($user) ) {
 	    if ( ($uid < $config{"first_system_uid"} ||
 		$uid > $config{"last_system_uid" } ) ) {
-		printf (_("User %s is not a system account... Exiting.\n"), $user) if $verbose;
+		printf (_("The user `%s' is not a system account... Exiting.\n"), $user) if $verbose;
 		exit 0;
 	    }
         } else {
-	    printf (_("User %s does not exist, but --system is given... Exiting.\n"), $user) if $verbose;
+	    printf (_("The user `%s' does not exist, but --system was given... Exiting.\n"), $user) if $verbose;
 	    exit 0;
 	}
     }
     
     unless(exist_user($user)) {
-	dief (_("`%s' does not exist.\n"),$user);
+	dief (_("The user `%s' does not exist.\n"),$user);
     }
 
     if($config{"remove_home"} && ($config{"home"} ne "") && ($config{"home"} ne $pw_homedir)) {
-	dief (_("passwd home dir %s' does not match command line home dir, aborting.\n"),$pw_homedir,$config{"home"});
+	dief (_("passwd home dir `%s' does not match command line home dir, aborting.\n"),$pw_homedir,$config{"home"});
     } elsif($config{"remove_home"} || $config{"remove_all_files"}) {
 	s_print(_("Looking for files to backup/remove...\n"));
 	my(@files,@dirs);
@@ -318,7 +318,7 @@ if($action eq "deluser") {
 	}
     }
 
-    s_printf(_("Removing user %s...\n"),$user);
+    s_printf(_("Removing user `%s'...\n"),$user);
     systemcall("/usr/sbin/userdel", $user);
     &invalidate_nscd();
 
@@ -329,7 +329,7 @@ if($action eq "deluser") {
 } elsif($action eq "delgroup") {
     &invalidate_nscd();
     unless(exist_group($group)) {
-	dief (_("`%s' does not exist.\n"),$group);
+	dief (_("The group `%s' does not exist.\n"),$group);
     }
     my($dummy,$gid,$members);
     if( !(($dummy, $dummy, $gid, $members ) = getgrnam($group)) ) {
@@ -338,19 +338,19 @@ if($action eq "deluser") {
     if( $config{"system"} && 
 	($gid < $config{"first_system_gid"} ||
 	 $gid > $config{"last_system_gid" } )) {
-        printf (_("Group %s is not a system group... Exiting.\n"), $group) if $verbose;
+        printf (_("The group `%s' is not a system group... Exiting.\n"), $group) if $verbose;
 	exit 0;
     }
     if( $config{"only-if-empty"} && $members ne "") {
-	dief (_("`%s' is not empty!\n"),$group);
+	dief (_("The group `%s' is not empty!\n"),$group);
     }
     
     # This needs to be fixed - we need use getpwent here.
     if(system("grep", "-q", "^.*:.*:.*:$gr_gid:.*:.*:.*\$", "/etc/passwd") == 0) {
-	dief (_("There are users having `%s' as primary group!\n"),$group);
+	dief (_("There are users with `%s' as their primary group!\n"),$group);
     }
 
-    s_printf(_("Removing group %s...\n"),$group);
+    s_printf(_("Removing group `%s'...\n"),$group);
     systemcall("/usr/sbin/groupdel",$group);
     &invalidate_nscd();
     s_print(_("done.\n"));
@@ -359,10 +359,10 @@ elsif($action eq "deluserfromgroup")
 {
     &invalidate_nscd();
     unless(exist_user($user)) {
-	dief (_("`%s' does not exist.\n"),$user);
+	dief (_("The user `%s' does not exist.\n"),$user);
     }
     unless(exist_group($group)) {
-	dief (_("`%s' does not exist.\n"),$group);
+	dief (_("The group `%s' does not exist.\n"),$group);
     }
     if($maingroup eq $group) {
 	die "$0: ",_("You may not remove the user from his/her primary group.\n");
@@ -379,10 +379,10 @@ elsif($action eq "deluserfromgroup")
     }
 
     unless($ismember) {
-	dief(_("%s is not a member of group %s.\n"),$user,$group);
+	dief(_("The user `%s' is not a member of group `%s'.\n"),$user,$group);
     }
 
-    s_printf(_("Removing user %s from group %s...\n"),$user,$group);
+    s_printf(_("Removing user `%s' from group `%s'...\n"),$user,$group);
     #systemcall("usermod","-G", join(",",@groups), $user );
     systemcall('/usr/bin/gpasswd','-M', join(',',@members), $group);
     &invalidate_nscd();

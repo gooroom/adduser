@@ -64,7 +64,7 @@ msgstr "--conf verwacht een argument.\n"
 
 #: ../adduser:180 ../deluser:117
 #, perl-format
-msgid "`%s' doesn't exist.\n"
+msgid "`%s' does not exist.\n"
 msgstr "`%s' bestaat niet.\n"
 
 #: ../adduser:187 ../deluser:126
@@ -97,7 +97,7 @@ msgid "Specify only one name in this mode.\n"
 msgstr "Specifieer slechts één naam in deze modus.\n"
 
 #: ../adduser:231
-msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
+msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
 msgstr "--group, --ingroup, en --gid opties zijn onverenigbaar.\n"
 
 #: ../adduser:267 ../adduser:297 ../adduser:603
@@ -107,7 +107,7 @@ msgstr "De group `%s' bestaat reeds.\n"
 
 #: ../adduser:269 ../adduser:299
 #, fuzzy, perl-format
-msgid "The GID `%s' is already in use.\n"
+msgid "The GID %s is already in use.\n"
 msgstr "De GID `%d' is reeds in gebruik.\n"
 
 #: ../adduser:277 ../adduser:307
@@ -116,7 +116,7 @@ msgstr "Geen GID is beschikbaar in het bereik "
 
 #: ../adduser:280 ../adduser:310
 #, perl-format
-msgid "Group `%s' not created.\n"
+msgid "The group `%s' was not created.\n"
 msgstr "Groep `%s' niet aangemaakt.\n"
 
 #: ../adduser:284 ../adduser:314
@@ -130,22 +130,22 @@ msgstr "Klaar.\n"
 
 #: ../adduser:327
 #, perl-format
-msgid "The user `%s' doesn't exist.\n"
+msgid "The user `%s' does not exist.\n"
 msgstr "De gebruiker `%s' bestaat niet.\n"
 
 #: ../adduser:329 ../adduser:609
 #, perl-format
-msgid "The group `%s' doesn't exist.\n"
+msgid "The group `%s' does not exist.\n"
 msgstr "De groep `%s' bestaat niet.\n"
 
 #: ../adduser:332
 #, perl-format
-msgid "The user `%s' is already a member of %s.\n"
+msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "De gebruiker `%s' is reeds lid van %s.\n"
 
 #: ../adduser:337
 #, perl-format
-msgid "Adding user %s to group %s...\n"
+msgid "Adding user `%s' to group `%s'...\n"
 msgstr "Toevoegen gebruiker %s aan groep %s...\n"
 
 #: ../adduser:364
@@ -155,7 +155,7 @@ msgstr "De group `%s' bestaat reeds.\n"
 
 #: ../adduser:370
 #, perl-format
-msgid "Adding system user %s...\n"
+msgid "Adding system user `%s'...\n"
 msgstr "Toevoegen systeemgebruiker %s...\n"
 
 #: ../adduser:377 ../adduser:464
@@ -164,7 +164,7 @@ msgstr "Geen UID/GID paar is beschikbaar in het bereik "
 
 #: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
 #, perl-format
-msgid "User `%s' not created.\n"
+msgid "The user `%s' was not created.\n"
 msgstr "Gebruiker `%s' niet aangemaakt.\n"
 
 #: ../adduser:390 ../adduser:477
@@ -191,27 +191,27 @@ msgstr "Geen aanmaak home directory.\n"
 
 #: ../adduser:430
 #, perl-format
-msgid "Home directory %s already exists.\n"
+msgid "Home directory `%s' already exists.\n"
 msgstr "Home directory %s bestaat reeds.\n"
 
 #: ../adduser:432 ../adduser:517
 #, perl-format
-msgid "Creating home directory %s.\n"
+msgid "Creating home directory `%s'.\n"
 msgstr "Aanmaken home directory %s.\n"
 
 #: ../adduser:457
 #, perl-format
-msgid "Adding user %s...\n"
+msgid "Adding user `%s'...\n"
 msgstr "Toevoegen gebruiker %s...\n"
 
 #: ../adduser:511
 #, perl-format
-msgid "Home directory %s already exists.  Not copying from %s\n"
+msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "Home directory %s bestaat reeds.  Wordt niet gekopieerd van %s\n"
 
 #: ../adduser:527
 #, perl-format
-msgid "Copying files from %s\n"
+msgid "Copying files from `%s'\n"
 msgstr "Kopiëren bestanden van %s\n"
 
 #: ../adduser:553
@@ -224,7 +224,7 @@ msgstr ""
 
 #: ../adduser:560
 #, perl-format
-msgid "Setting quota from %s.\n"
+msgid "Setting quota from `%s'.\n"
 msgstr "Instellen quota van %s.\n"
 
 #: ../adduser:599
@@ -244,7 +244,7 @@ msgstr "De group `%s' bestaat reeds.\n"
 
 #: ../adduser:611
 #, fuzzy, perl-format
-msgid "The GID `%s' doesn't exist.\n"
+msgid "The GID %s does not exist.\n"
 msgstr "De gebruiker `%s' bestaat niet.\n"
 
 #: ../adduser:656
@@ -340,9 +340,14 @@ msgstr "Geef een gebruikersnaam om te verwijderen: "
 msgid "I need a name to remove.\n"
 msgstr "Ik heb een naam nodig om te verwijderen.\n"
 
-#: ../deluser:204 ../deluser:265 ../deluser:281 ../deluser:284
+#: ../deluser:204 ../deluser:281
 #, perl-format
-msgid "`%s' does not exist.\n"
+msgid "The user `%s' does not exist.\n"
+msgstr "`%s' bestaan niet.\n"
+
+#: ../deluser:265 ../deluser:284
+#, perl-format
+msgid "The group `%s' does not exist.\n"
 msgstr "`%s' bestaan niet.\n"
 
 #: ../deluser:208
@@ -359,7 +364,7 @@ msgstr "Verwijderen bestanden...\n"
 
 #: ../deluser:254
 #, perl-format
-msgid "Removing user %s...\n"
+msgid "Removing user `%s'...\n"
 msgstr "Verwijderen gebruiker %s...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
@@ -368,12 +373,12 @@ msgstr "klaar.\n"
 
 #: ../deluser:269
 #, perl-format
-msgid "There are users having `%s' as primary group!\n"
+msgid "There are users with `%s' as their primary group!\n"
 msgstr "Er zijn gebruikers met `%s' als primaire groep!\n"
 
 #: ../deluser:272
 #, perl-format
-msgid "Removing group %s...\n"
+msgid "Removing group `%s'...\n"
 msgstr "Verwijderen groep %s...\n"
 
 #: ../deluser:287
@@ -382,12 +387,12 @@ msgstr "Je mag deze gebruiker niet verwijderen van zijn/haar primaire groep.\n"
 
 #: ../deluser:301
 #, perl-format
-msgid "%s is not a member of group %s.\n"
+msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "%s is geen lid van groep %s.\n"
 
 #: ../deluser:304
 #, perl-format
-msgid "Removing user %s from group %s...\n"
+msgid "Removing user `%s' from group `%s'...\n"
 msgstr "Verwijderen gebruiker %s van groep %s...\n"
 
 #: ../deluser:315 ../deluser:334

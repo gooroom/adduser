@@ -65,7 +65,7 @@ msgstr "--conf 需要一个参数。\n"
 
 #: ../adduser:180 ../deluser:117
 #, perl-format
-msgid "`%s' doesn't exist.\n"
+msgid "`%s' does not exist.\n"
 msgstr "“%s” 不存在。\n"
 
 #: ../adduser:187 ../deluser:126
@@ -98,7 +98,7 @@ msgid "Specify only one name in this mode.\n"
 msgstr "这个模式下只能指定一个名字。\n"
 
 #: ../adduser:231
-msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
+msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
 msgstr "--group，--ingroup，和 --gid 选项是不能同时使用的。\n"
 
 #: ../adduser:267 ../adduser:297 ../adduser:603
@@ -108,7 +108,7 @@ msgstr "“%s”组已经存在。\n"
 
 #: ../adduser:269 ../adduser:299
 #, perl-format
-msgid "The GID `%s' is already in use.\n"
+msgid "The GID %s is already in use.\n"
 msgstr "GID “%s”已经被使用。\n"
 
 #: ../adduser:277 ../adduser:307
@@ -117,7 +117,7 @@ msgstr "GID 不能使用这个范围里的数字。 "
 
 #: ../adduser:280 ../adduser:310
 #, perl-format
-msgid "Group `%s' not created.\n"
+msgid "The group `%s' was not created.\n"
 msgstr "“%s”组没有被创建。\n"
 
 #: ../adduser:284 ../adduser:314
@@ -131,22 +131,22 @@ msgstr "完成。\n"
 
 #: ../adduser:327
 #, perl-format
-msgid "The user `%s' doesn't exist.\n"
+msgid "The user `%s' does not exist.\n"
 msgstr "用户“%s”不存在。\n"
 
 #: ../adduser:329 ../adduser:609
 #, perl-format
-msgid "The group `%s' doesn't exist.\n"
+msgid "The group `%s' does not exist.\n"
 msgstr "“%s”组不存在。\n"
 
 #: ../adduser:332
 #, perl-format
-msgid "The user `%s' is already a member of %s.\n"
+msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "用户“%s”属于 %s 组。\n"
 
 #: ../adduser:337
 #, perl-format
-msgid "Adding user %s to group %s...\n"
+msgid "Adding user `%s' to group `%s'...\n"
 msgstr "正在添加用户 %s 到 %s 组...\n"
 
 #: ../adduser:364
@@ -156,7 +156,7 @@ msgstr "用户 %s 已经存在。退出...\n"
 
 #: ../adduser:370
 #, perl-format
-msgid "Adding system user %s...\n"
+msgid "Adding system user `%s'...\n"
 msgstr "正在添加系统用户 %s...\n"
 
 #: ../adduser:377 ../adduser:464
@@ -165,7 +165,7 @@ msgstr "UID/GID 不能使用这个范围里的数字。 "
 
 #: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
 #, perl-format
-msgid "User `%s' not created.\n"
+msgid "The user `%s' was not created.\n"
 msgstr "用户“%s”没有被创建。\n"
 
 #: ../adduser:390 ../adduser:477
@@ -192,27 +192,27 @@ msgstr "无法创建主目录。\n"
 
 #: ../adduser:430
 #, perl-format
-msgid "Home directory %s already exists.\n"
+msgid "Home directory `%s' already exists.\n"
 msgstr "主目录 %s 已经存在。\n"
 
 #: ../adduser:432 ../adduser:517
 #, perl-format
-msgid "Creating home directory %s.\n"
+msgid "Creating home directory `%s'.\n"
 msgstr "正在创建主目录 %s。\n"
 
 #: ../adduser:457
 #, perl-format
-msgid "Adding user %s...\n"
+msgid "Adding user `%s'...\n"
 msgstr "正在添加用户 %s...\n"
 
 #: ../adduser:511
 #, perl-format
-msgid "Home directory %s already exists.  Not copying from %s\n"
+msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "主目录 %s 已经存在。没有从 %s 复制文件过来。\n"
 
 #: ../adduser:527
 #, perl-format
-msgid "Copying files from %s\n"
+msgid "Copying files from `%s'\n"
 msgstr "正在从 %s 复制文件\n"
 
 #: ../adduser:553
@@ -225,7 +225,7 @@ msgstr "y"
 
 #: ../adduser:560
 #, perl-format
-msgid "Setting quota from %s.\n"
+msgid "Setting quota from `%s'.\n"
 msgstr "正在从 %s 设置磁盘限额(quota)。\n"
 
 #: ../adduser:599
@@ -245,7 +245,7 @@ msgstr "“%s”组已经存在。\n"
 
 #: ../adduser:611
 #, fuzzy, perl-format
-msgid "The GID `%s' doesn't exist.\n"
+msgid "The GID %s does not exist.\n"
 msgstr "用户“%s”不存在。\n"
 
 #: ../adduser:656
@@ -344,9 +344,14 @@ msgstr "请输入要删除的用户名："
 msgid "I need a name to remove.\n"
 msgstr "我需要欲删除用户的名字。\n"
 
-#: ../deluser:204 ../deluser:265 ../deluser:281 ../deluser:284
+#: ../deluser:204 ../deluser:281
 #, perl-format
-msgid "`%s' does not exist.\n"
+msgid "The user `%s' does not exist.\n"
+msgstr "“%s” 不存在。\n"
+
+#: ../deluser:265 ../deluser:284
+#, perl-format
+msgid "The group `%s' does not exist.\n"
 msgstr "“%s” 不存在。\n"
 
 #: ../deluser:208
@@ -363,7 +368,7 @@ msgstr "正在删除文件...\n"
 
 #: ../deluser:254
 #, perl-format
-msgid "Removing user %s...\n"
+msgid "Removing user `%s'...\n"
 msgstr "正在删除用户 %s...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
@@ -372,12 +377,12 @@ msgstr "完成。\n"
 
 #: ../deluser:269
 #, perl-format
-msgid "There are users having `%s' as primary group!\n"
+msgid "There are users with `%s' as their primary group!\n"
 msgstr "有些用户以“%s”为主要组！\n"
 
 #: ../deluser:272
 #, perl-format
-msgid "Removing group %s...\n"
+msgid "Removing group `%s'...\n"
 msgstr "正在删除组 %s...\n"
 
 #: ../deluser:287
@@ -386,12 +391,12 @@ msgstr "您不应该将用户从他/她的主要组中删除。\n"
 
 #: ../deluser:301
 #, perl-format
-msgid "%s is not a member of group %s.\n"
+msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "“%s 不是 %s 组中的成员。\n"
 
 #: ../deluser:304
 #, perl-format
-msgid "Removing user %s from group %s...\n"
+msgid "Removing user `%s' from group `%s'...\n"
 msgstr "正在将用户 %s 从 %s 组中删除...\n"
 
 #: ../deluser:315 ../deluser:334
