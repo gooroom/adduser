@@ -1,3 +1,12 @@
+adduser (3.48) unstable; urgency=low
+
+  * Applied patch from Dagfinn Ilmari to honor --system when adding groups.
+    Closes: #149765.
+  * Use full paths of shadow tools. Closes: #154799.
+  * Fixed bad entry in debian/templates.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Fri, 30 Aug 2002 21:55:43 +0200
+
 adduser (3.47) woody-proposed-updates unstable; urgency=medium
 
   * Really added Japanese debconf-templates. Sorry for that. Closes: #137291.

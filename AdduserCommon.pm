@@ -93,7 +93,7 @@ sub read_config {
 	    warnf(_("Unknown variable `%s' at %s:%s.\n"),$var,$conf_file,$.);
 	    next;
 	}
-		
+
 	$val =~ s/^"(.*)"$/$1/;
 	$val =~ s/^'(.*)'$/$1/;
 

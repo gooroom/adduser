@@ -252,7 +252,7 @@ if($action eq "deluser") {
     }
 
     s_printf(_("Removing user %s...\n"),$user);
-    systemcall("userdel", $user);
+    systemcall("/usr/sbin/userdel", $user);
     &invalidate_nscd();
 
     systemcall('/usr/local/sbin/deluser.local', $user, $pw_uid,
@@ -270,7 +270,7 @@ if($action eq "deluser") {
     }
 
     s_printf(_("Removing group %s...\n"),$group);
-    systemcall("groupdel",$group);
+    systemcall("/usr/sbin/groupdel",$group);
     &invalidate_nscd();
     s_print(_("done.\n"));
 }
@@ -303,7 +303,7 @@ elsif($action eq "deluserfromgroup")
 
     s_printf(_("Removing user %s from group %s...\n"),$user,$group);
     #systemcall("usermod","-G", join(",",@groups), $user );
-    systemcall('gpasswd','-M', join(',',@members), $group);
+    systemcall('/usr/bin/gpasswd','-M', join(',',@members), $group);
     &invalidate_nscd();
     s_print(_("done.\n"));
 }

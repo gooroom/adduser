@@ -39,9 +39,15 @@
 #
 #  adduser --group [--gid ID] group
 #  addgroup [--gid ID] group
-#      add a system group
-#      example: addgroup --quiet www-data
+#      add a user group
+#      example: addgroup powerusers
 #      $action = "addgroup"
+#
+#  adduser --group --system [--gid GID] group
+#  addgroup --system [--gid GID] group
+#      add a system group
+#      example: addgroup --system --quiet www-data
+#      $action = "addsysgroup"
 #
 #  adduser --system [--home DIR] [--shell SHELL] [--uid ID] [--group |
 #  --ingroup GROUP | --gid ID] [--disabled-password] [--disabled-login]
@@ -99,6 +105,10 @@ $config{"first_system_uid"} = 100;
 $config{"last_system_uid"} = 999;
 $config{"first_uid"} = 1000;
 $config{"last_uid"} = 29999;
+$config{"first_system_gid"} = 100;
+$config{"last_system_gid"} = 999;
+$config{"first_gid"} = 1000;
+$config{"last_gid"} = 29999;
 $config{"dhome"} = "/home";
 $config{"skel"} = "/etc/skel";
 $config{"usergroups"} = "yes";
@@ -112,7 +122,7 @@ $config{"setgid_home"} = "no";
 $action = $0 eq "addgroup" ? "addgroup" : "adduser";
 
 while (defined($arg = shift(@ARGV))) {
-    die "$0: ",_("No options allowed after names.\n") 
+    die "$0: ",_("No options allowed after names.\n")
 	if (defined($names[0]) && $arg =~ /^--/);
     if ($arg eq "--quiet") {
 	$verbose = 0;
@@ -125,7 +135,9 @@ while (defined($arg = shift(@ARGV))) {
 	&version();
 	exit 0;
     } elsif ($arg eq "--system") {
+	$found_sys_opt = 1;
 	$action = "addsysuser" if ($action eq "adduser");
+	$action = "addsysgroup" if ($action eq "addgroup");
     } elsif ($arg eq "--group") {
 	$found_group_opt = 1;
     } elsif ($arg eq "--ingroup") {
@@ -181,7 +193,7 @@ while (defined($arg = shift(@ARGV))) {
 die "$0: ",_("Only root may add a user or group to the system.\n") if ($> != 0);
 
 if (@names == 0) {
-    if($found_group_opt || $action eq "addgroup")
+    if($found_group_opt || $action eq "addgroup" || $action eq "addsysgroup")
       {
 	  print _("Enter a groupname to add: ");
       }
@@ -209,6 +221,9 @@ if ($found_group_opt) {
     if ($action eq "addsysuser") {
 	$make_group_also = 1;
     }
+    elsif ($found_sys_opt) {
+	$action = "addsysgroup";
+    }
     else {
 	$action = "addgroup";
     }
@@ -229,6 +244,9 @@ die "$0: ",_("--group, --ingroup, and --gid options are mutually exclusive.\n") 
 # $action = "addgroup"
 #    $new_name                - the name of the new group
 #    $new_gid                 - optional override
+# $action = "addsysgroup"
+#    $new_name                - the name of the new group
+#    $new_gid                 - optional override
 # $action = "addsysuser"
 #    $new_name                - the name of the new user
 #    $make_group_also | $ingroup_name | $new_gid | 0  - which group
@@ -242,6 +260,36 @@ die "$0: ",_("--group, --ingroup, and --gid options are mutually exclusive.\n") 
 &checkname($new_name) if defined $new_name;
 $SIG{'INT'} = $SIG{'QUIT'} = $SIG{'HUP'} = 'handler';
 
+#################
+## addsysgroup ##
+#################
+if ($action eq "addsysgroup") {
+    dief (_("The group `%s' already exists.\n"),$new_name)
+	if (defined getgrnam($new_name));
+    dief (_("The GID `%s' is already in use.\n"),$new_gid)
+	if (defined($new_gid) && defined(getgrgid($new_gid)));
+    if (!defined($new_gid)) {
+        $new_gid = &first_avail_id($config{"first_system_gid"},
+				   $config{"last_system_gid"},
+				   &get_current_gids);
+
+        if ($new_gid == -1) {
+            print STDERR "$0: ",_("No GID is available in the range "),
+            "$config{\"first_system_gid\"} - $config{\"last_system_gid\"}\n",
+            "(FIRST_SYS_GID - LAST_SYS_GID).  ";
+            dief (_("Group `%s' not created.\n"),$new_name);
+        }
+    }
+
+    printf (_("Adding group %s (%s)...\n"),$new_name,$new_gid) if $verbose;
+    &invalidate_nscd("group");
+    &systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
+    &invalidate_nscd("group");
+    print _("Done.\n") if $verbose;
+    exit 0;
+}
+
+
 ##############
 ## addgroup ##
 ##############
@@ -251,21 +299,21 @@ if ($action eq "addgroup") {
     dief (_("The GID `%s' is already in use.\n"),$new_gid)
 	if (defined($new_gid) && defined(getgrgid($new_gid)));
     if (!defined($new_gid)) {
-        $new_gid = &first_avail_id($config{"first_system_uid"},
-				   $config{"last_system_uid"},
+        $new_gid = &first_avail_id($config{"first_gid"},
+				   $config{"last_gid"},
 				   &get_current_gids);
-        
+
         if ($new_gid == -1) {
             print STDERR "$0: ",_("No GID is available in the range "),
-            "$config{\"first_system_uid\"} - $config{\"last_system_uid\"}\n",
-            "(FIRST_SYS_UID - LAST_SYS_UID).  ";
+            "$config{\"first_gid\"} - $config{\"last_gid\"}\n",
+            "(FIRST_GID - LAST_GID).  ";
             dief (_("Group `%s' not created.\n"),$new_name);
         }
     }
 
     printf (_("Adding group %s (%s)...\n"),$new_name,$new_gid) if $verbose;
     &invalidate_nscd("group");
-    &systemcall('groupadd', '-g', $new_gid, $new_name);
+    &systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
     &invalidate_nscd("group");
     print _("Done.\n") if $verbose;
     exit 0;
@@ -293,7 +341,7 @@ elsif ($action eq "addusertogroup") {
     #&systemcall('usermod', '-G',
 		#join(",", get_users_groups($existing_user), $existing_group), 
 		#$existing_user);
-    &systemcall('gpasswd', '-M',
+    &systemcall('/usr/bin/gpasswd', '-M',
 		join(',', get_group_members($existing_group), $existing_user),
 		$existing_group);
     #&systemcall('gpasswd', '-a',$existing_user,$existing_group);
@@ -354,12 +402,12 @@ elsif ($action eq "addsysuser") {
 	elsif ($make_group_also){ $new_gid=$new_uid; $ingroup_name=$new_name; }
 	else { die _("Internal error"); }
     }
-    
+
     &invalidate_nscd();
     if ($make_group_also) {
 	print _("Adding new group $new_name ($new_gid).\n") if $verbose;
 	$undogroup = $new_name;
-	&systemcall('groupadd', '-g', $new_gid, $new_name);
+	&systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
 	&invalidate_nscd("group");
     }
 
@@ -368,7 +416,7 @@ elsif ($action eq "addsysuser") {
     $home_dir = $special_home || &homedir($new_name, $ingroup_name);
 	$shell = $special_shell || '/bin/false';
     $undouser = $new_name;
-    &systemcall('useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
+    &systemcall('/usr/sbin/useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$shell, '-u', $new_uid, $new_name);
     &invalidate_nscd();
 
@@ -446,7 +494,7 @@ elsif ($action eq "adduser") {
     if ($make_group_also) {
 	printf _("Adding new group %s (%s).\n"),$new_name,$new_gid if $verbose;
 	$undogroup = $new_name;
-	&systemcall('groupadd', '-g', $new_gid, $new_name);
+	&systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
 	&invalidate_nscd();
     }
 
@@ -455,7 +503,7 @@ elsif ($action eq "adduser") {
     $home_dir = $special_home || &homedir($new_name, $ingroup_name);
 	$shell = $special_shell || $config{"dshell"};
     $undouser = $new_name;
-    &systemcall('useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
+    &systemcall('/usr/sbin/useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$shell, '-u', $new_uid, $new_name);
     &invalidate_nscd();
 
@@ -489,10 +537,10 @@ elsif ($action eq "adduser") {
     }
 
     if ($ask_passwd) {
-	&systemcall('passwd', $new_name);
+	&systemcall('/usr/bin/passwd', $new_name);
     } else {
 	if(!$disabled_login) {
-	    &systemcall('usermod', '-p', '*', $new_name);
+	    &systemcall('/usr/sbin/usermod', '-p', '*', $new_name);
 	}
     }
 
@@ -501,7 +549,7 @@ elsif ($action eq "adduser") {
     }
     else {
 	for (;;) {
-	    &systemcall('chfn', $new_name);
+	    &systemcall('/usr/bin/chfn', $new_name);
 	    print _("Is the information correct? [y/n] ");
 	    chop ($answer=<STDIN>);
 	    last if ($answer eq _("y"));
@@ -510,7 +558,7 @@ elsif ($action eq "adduser") {
 
     if ($config{"quotauser"}) {
 	printf _("Setting quota from %s.\n"),$config{quotauser};
-	&systemcall('edquota', '-p', $config{quotauser}, $new_name);
+	&systemcall('/usr/sbin/edquota', '-p', $config{quotauser}, $new_name);
     }
 
     &systemcall('/usr/local/sbin/adduser.local', $new_name, $new_uid,
@@ -668,17 +716,17 @@ sub ch_gecos {
 	  my($gecos_name,$gecos_room,$gecos_work,$gecos_home,$gecos_other)
 	    = split(/,/,$gecos);
 
-	  &systemcall('chfn', '-f', $gecos_name, '-r', $gecos_room, $new_name);
-	  &systemcall('chfn','-w',$gecos_work,$new_name)
+	  &systemcall('/usr/bin/chfn', '-f', $gecos_name, '-r', $gecos_room, $new_name);
+	  &systemcall('/usr/bin/chfn','-w',$gecos_work,$new_name)
 	    if(defined($gecos_work));
-	  &systemcall('chfn','-h',$gecos_home,$new_name)
+	  &systemcall('/usr/bin/chfn','-h',$gecos_home,$new_name)
 	    if(defined($gecos_home));
-	  &systemcall('chfn','-o',$gecos_other,$new_name)
+	  &systemcall('/usr/bin/chfn','-o',$gecos_other,$new_name)
 	    if(defined($gecos_other));
       }
     else
       {
-	  &systemcall('chfn', '-f', $gecos, $new_name);
+	  &systemcall('/usr/bin/chfn', '-f', $gecos, $new_name);
       }
 }
 
