@@ -9,8 +9,9 @@ adduser (3.60) unstable; urgency=low
     Shaul Karl. (mh) Closes: #286227.
   * create /etc/skel symlinks with proper uid/gid. Thanks to Deepak
     Goel. (mh) Closes: #268402.
+  * Apply manpage patch from Nicolas François. Thanks. (mh) Closes: #278937.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 11:43:55 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 13:16:35 +0100
 
 adduser (3.59) unstable; urgency=low
 

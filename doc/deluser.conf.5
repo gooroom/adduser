@@ -19,7 +19,7 @@ and
 Each option takes the form
 .IR option " = " value .
 Double or single quotes are allowed around the value.  Comment lines
-must have a pound sign (#) in the first line.
+must have a pound sign (#) at the beginning of the line.
 
 deluser(8) and delgroup(8) also read /etc/adduser.conf.
 
@@ -33,7 +33,7 @@ Value may be 0 or 1.
 Removes all files on the system owned by the user to be removed.
 If this option is activated
 .B REMOVE_HOME
-as no effect. Values may be 0 or 1.
+has no effect. Values may be 0 or 1.
 .TP
 \fBBACKUP\fP
 If
