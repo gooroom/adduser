@@ -536,7 +536,7 @@ elsif ($action eq "adduser") {
 		chop;
 		next if ($_ eq ".");
 		&copy_to_dir($config{"skel"}, $_, $home_dir, $new_uid,
-			     $new_gid, $make_group_also);
+			     $new_gid, ($config{"setgid_home"} eq "yes"));
 	    }
 	}
     }

@@ -63,8 +63,10 @@ adduser (3.52) unstable; urgency=low
     * Include updated Swedish translation of debconf template. Thanks
       to André Dahlqvist. Closes: #238923.
     * recode changelog to utf-8.
+    * honor setgid_home for directories in /etc/skel. Thanks to Jeff
+      Tranter. Closes: #158370.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 18:49:03 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 19:29:23 +0100
 
 adduser (3.51) unstable; urgency=low
 
