@@ -104,7 +104,7 @@ $config{"users_gid"} = "100";
 $config{"grouphomes"} = "no";
 $config{"letterhomes"} = "no";
 $config{"quotauser"} = "";
-$config{"dir_mode"} = 0755;
+$config{"dir_mode"} = "0755";
 $config{"setgid_home"} = "no";
 
 $action = $0 eq "addgroup" ? "addgroup" : "adduser";
@@ -280,6 +280,7 @@ elsif ($action eq "addusertogroup") {
     &systemcall('gpasswd', '-M',
 		join(',', get_group_members($existing_group), $existing_user),
 		$existing_group);
+    #&systemcall('gpasswd', '-a',$existing_user,$existing_group);
     &invalidate_nscd();
     print _("Done.\n") if $verbose;
     exit 0;
@@ -721,6 +722,16 @@ Global configuration is in the file %s.
 Other options are [--quiet] [--force-badname] [--help] [--version] [--conf
 FILE].
 "),$defaults;
+}
+
+sub systemcall {
+    my $c = join(' ', @_);
+    print "$c\n" if $debugging;
+    if (system(@_)) {
+	&cleanup("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
+	  if ($?>>8);
+	&cleanup("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
+    }
 }
 
 sub get_dir_mode

@@ -10,32 +10,27 @@ use vars qw(@EXPORT $VAR1);
 #                     Ian A. Murdock <imurdock@gnu.ai.mit.edu>
 #
 
-@EXPORT = qw(system_call invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf);
-
-sub systemcall {
-    my $c = join(' ', @_);
-    print "$c\n" if $debugging;
-    if (system(@_)) {
-	&cleanup("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
-	  if ($?>>8);
-	&cleanup("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
-    }
-}
+@EXPORT = qw(invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf);
 
 sub invalidate_nscd {
     # this function replaces startnscd and stopnscd (closes: #54726)
-    return unless (-e $nscd);
-    my $table = shift;
-    if ($table)
+    if(-e $nscd)
       {
-	  systemcall ($nscd, "-i", $table);
+	my $table = shift;
+	if ($table)
+	  {
+	    systemcall ($nscd, "-i", $table);
+	  }
+	else
+	  {
+	    # otherwise we invalidate passwd and group table
+	    systemcall ($nscd, "-i", "passwd");
+	    systemcall ($nscd, "-i", "group");
+	  }
       }
-    else
-      {
-	  # otherwise we invalidate passwd and group table
-	  systemcall ($nscd, "-i", "passwd");
-	  systemcall ($nscd, "-i", "group");
-      }
+#    if(-e "/var/yp/Makefile")
+#      {
+#      }
 }
 
 sub _ {
@@ -123,3 +118,7 @@ sub s_printf
     printf(@_)
 	if($verbose);
 }
+
+# Local Variables:
+# mode:cperl
+# End:

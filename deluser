@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 
 # deluser -- a utility to remove users from the system
 # delgroup -- a utilty to remove groups from the system
@@ -196,16 +196,22 @@ else
 }
 
 if($user)
-{
-    ($pw_name,$pw_passwd,$pw_uid,$pw_gid,$pw_quota,$pw_comment,
-     $pw_gecos,$pw_homedir,$pw_shell,$pw_expire) = getpwnam($user);
-
-    $maingroup = getgrgid($pw_gid);
-}
+  {
+    #($pw_name,$pw_passwd,$pw_uid,$pw_gid,$pw_quota,$pw_comment,
+    # $pw_gecos,$pw_homedir,$pw_shell,$pw_expire) = getpwnam($user);
+    my @passwd = getpwnam($user);
+    $pw_uid = $passwd[2];
+    $pw_gid = $passwd[3];
+    $pw_homedir = $passwd[7];
+    
+    $maingroup = $pw_gid ? getgrgid($pw_gid) : "";
+  }
 if($group)
-{
-    ($gr_name,$gr_passwd,$gr_gid,$gr_members) = getgrnam($group);
-}
+  {
+    #($gr_name,$gr_passwd,$gr_gid,$gr_members) = getgrnam($group);
+    my @group = getgrnam($group);
+    $gr_gid = $group[2];
+  }
 
 # arguments are processed:
 #
@@ -391,15 +397,24 @@ general options:
 sub exist_user
 {
     my $exist_user = shift;
-    return(getpwnam($exist_user) ne "");
+    return(defined getpwnam($exist_user));
 }
 
 sub exist_group
 {
     my $exist_group = shift;
-    return(getgrnam($exist_group) ne "");
+    return(defined getgrnam($exist_group));
 }
 
+sub systemcall {
+    my $c = join(' ', @_);
+    #print "$c\n" if $debugging;
+    if (system(@_)) {
+        die("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
+	  if ($?>>8);
+	die("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
+    }
+}
 
 
 

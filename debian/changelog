@@ -1,3 +1,14 @@
+adduser (3.15) unstable; urgency=low
+
+  * deluser: perl is executed with -w now
+  * system_call moved back from AdduserCommon.pm to adduser and deluser
+    - system_call in adduser runs cleanup() on errors.
+    - system_call in deluser dies on errors directly.
+  * adduser: fixed the problem that adduser creates home with totally
+    wrong permissions if adduser.conf is old (closes: #66583)
+
+ -- Roland Bauerschmidt <rb@debian.org>  Fri, 16 Jun 2000 18:06:18 +0200
+
 adduser (3.14) unstable; urgency=low
 
   * adduser has a better handling for nscd now. Instead of simply
