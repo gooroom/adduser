@@ -64,11 +64,14 @@ $version = VERSION;
 $ENV{"PATH"} = "/sbin:/bin:/usr/sbin:/usr/bin";
 
 use warnings;
-
 BEGIN {
     eval 'use File::Find';
     if ($@) {
         $NO_FILE_FIND = 1;
+    }
+    eval 'use File::Temp';
+    if ($@) {
+        $NO_FILE_TEMP = 1;
     }
 }
 
@@ -177,7 +180,7 @@ foreach(keys(%pconfig)) {
 }
 
 if (($config{remove_home} || $config{remove_all_files} || $config{backup}) &&
-	defined($NO_FILE_FIND)) {
+    (defined($NO_FILE_FIND) || defined($NO_FILE_TEMP))) {
     die _("In order to use the --remove-home, --remove-all-files, and --backup features,\nyou need to install the `perl-modules' package. To accomplish that, run\napt-get install perl-modules\n");
 }
 
@@ -287,7 +290,12 @@ if($action eq "deluser") {
 
 	if($config{"backup"}) {
 	    s_print(_("Backing up files to be removed to ". $config{"backup_to"}. " ...\n"));
-	    systemcall("/bin/tar", "-cf", $config{"backup_to"}. "/$user.tar", "--", @files);
+	    $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
+	    $filesfilename = $filesfile->filename;
+	    print $filesfile join("\n",@files);
+	    $filesfile->close();
+	    systemcall("/bin/tar", "-cf", $config{"backup_to"}. "/$user.tar", "--files-from", $filesfilename);
+	    unlink($filesfilename);
 	    if(-e "/usr/bin/bzip2") {
 	    	systemcall("/usr/bin/bzip2", $config{"backup_to"}. "/$user.tar");
 	    } elsif(-e "/bin/gzip") {

@@ -65,8 +65,10 @@ adduser (3.52) unstable; urgency=low
     * recode changelog to utf-8.
     * honor setgid_home for directories in /etc/skel. Thanks to Jeff
       Tranter. Closes: #158370.
+    * use temporary file for backup file list. Thanks to Christoph
+      Ulrich Scholler. Closes: #230364. Closes: #230360.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 19:29:23 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 20:02:33 +0100
 
 adduser (3.51) unstable; urgency=low
 
