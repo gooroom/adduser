@@ -104,6 +104,12 @@ activate it here.
 \fBQUOTAUSER\fP
 If set to a nonempty value, new users will have quotas copied from
 that user.  The default is empty.
+.TP
+\fBUSER_REGEX\fB
+User names are checked against this regular expression. If the name
+doesn't match this regexp, user creation is refused unless
+--force-badname is set. With --force-badname set, only weak checks are
+performed. The default is the most conservative ^[a-z][-a-z0-9]*\$.
 .SH FILES
 .I /etc/adduser.conf
 .SH SEE ALSO

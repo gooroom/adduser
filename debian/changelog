@@ -1,8 +1,10 @@
 adduser (3.61) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * make username verification regexp configurable. (mh)
+    Closes: #283110, #287535
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 14:35:45 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon,  7 Feb 2005 17:57:56 +0000
 
 adduser (3.60) experimental; urgency=low
 

@@ -118,6 +118,7 @@ $config{"letterhomes"} = "no";
 $config{"quotauser"} = "";
 $config{"dir_mode"} = "0755";
 $config{"setgid_home"} = "no";
+$config{"name_regex"} = "^[a-z][-a-z0-9]*\$";
 
 $action = $0 eq "addgroup" ? "addgroup" : "adduser";
 
@@ -725,23 +726,24 @@ sub copy_to_dir {
 # is name ok?
 sub checkname {
     my ($name) = @_;
-    if ($allow_badname && $name !~ /^[A-Za-z_][-_A-Za-z0-9]*\$?$/) {
+    if ($name !~ /^[-\.A-Za-z0-9]*\$?$/) {
 	print STDERR
-"$0: ",_("To avoid problems, the username should consist of a letter or
-underscore followed by letters, digits, underscores, and dashes. For
-compatibility with Samba machine accounts \$ is also supported at the
-end of the username\n");
+"$0: ",_("To avoid problems, the username should consist of
+letters, digits, underscores, periods and dashes. For compatibility with
+Samba machine accounts \$ is also supported at the end of the username\n");
 	exit 1;
     }
-    elsif ($name !~ /^[a-z][a-z0-9\-]*$/) {
-	if (!$allow_badname) {
-	    print STDERR
-"$0: ",_("Please enter a username consisting of a lower case letter
-followed by lower case letters and numbers.  Use the `--force-badname'
-option to allow underscores, and uppercase.\n");
-	    exit 1;
-	}
+    if ($name !~ qr/$config{"name_regex"}/) {
+      if ($allow_badname) {
 	print _("Allowing use of questionable username.\n") if ($verbose);
+      }
+      else {
+        print STDERR
+"$0: ",_("Please enter a username matching the regular expression configured
+via the name_regex configuration variable.  Use the `--force-badname'
+option to relax this check or reconfigure name_regex.\n");
+        exit 1;
+      }
     }
 }
 

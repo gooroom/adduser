@@ -181,14 +181,12 @@ Like \-\-disabled-login, but logins are still possible for example through
 SSH RSA keys, but not using password authentification.
 .TP
 .B \-\-force\-badname
-By default, user and group names are required to consist of a
-lowercase letter followed by zero or more lowercase letters or numbers. Dashes
-in user and group names are accepted as well.
-This option forces
+By default, user and group names are checked against a configurable
+regular expression. This option forces
 .B adduser
 and 
 .B addgroup
-to be more lenient.
+to apply only a weak check for validity of the name.
 .TP
 .B \-\-gecos GECOS
 Set the gecos field for the new entry generated.  adduser will not ask
