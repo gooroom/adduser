@@ -8,8 +8,10 @@ adduser (3.63.0) UNRELEASED; urgency=low
   * Now handles /etc/skel correctly even if it is not readable for a
     normal user. Thanks to Chapko Dimitrij. (mh) Closes: #299489
   * Zap program synopsis comments from the beginning.
+  * Fix $ error in adduser.conf.5. Thanks to Kevin Ryde.
+    (mh) Closes: #300641
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 18 Mar 2005 16:55:47 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 21 Mar 2005 07:14:59 +0100
 
 adduser (3.63) unstable; urgency=low
 
