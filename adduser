@@ -312,7 +312,7 @@ elsif ($action eq "addsysuser") {
 	 $tuser[2] <= $config{"last_system_uid"} ) ||
 	(defined($new_uid) && $tuser[2] == $new_uid)
        )) {
-        printf ("User %s does already exist. Exiting...") if $verbose;
+        printf (_("User %s does already exist. Exiting...\n"), $new_name) if $verbose;
 	exit 0;
     }
     $new_gid = $nogroup_id
@@ -375,10 +375,10 @@ elsif ($action eq "addsysuser") {
 	&ch_gecos($new_gecos);
     }
 
-    if (-e $home_dir) {
+    if ($no_create_home) {
+	print _("Not creating home directory.\n") if $verbose;
+    } elsif (-e $home_dir) {
 	printf _("Home directory %s already exists.\n"),$home_dir if $verbose;
-    } elsif ($no_create_home) {
-	print _("Not creating home directory.\n") if $verbose
     } else {
 	printf _("Creating home directory %s.\n"),$home_dir if $verbose;
 	$undohome = $home_dir;
@@ -460,7 +460,7 @@ elsif ($action eq "adduser") {
 
     if (-e $home_dir) {
 	printf _("Home directory %s already exists.  Not copying from %s\n"),
-        $home_dir,$config{skel} if $verbose;
+        $home_dir,$config{skel} if $verbose && !$no_create_home;
     } elsif ($no_create_home) {
 	print "Not creating $home_dir.\n" if $verbose;
     }
@@ -503,7 +503,7 @@ elsif ($action eq "adduser") {
 	    &systemcall('chfn', $new_name);
 	    print _("Is the information correct? [y/n] ");
 	    chop ($answer=<STDIN>);
-	    last if ($answer =~ /^y/i);
+	    last if ($answer eq _("y"));
 	}
     }
 

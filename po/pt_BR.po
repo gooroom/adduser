@@ -214,6 +214,10 @@ msgstr "Copiando arquivos de %s\n"
 msgid "Is the information correct? [y/n] "
 msgstr "A informação está correta? [s/n] "
 
+#: ../adduser:465
+msgid "y"
+msgstr "s"
+
 #: ../adduser:470
 #, c-format
 msgid "Setting quota from %s.\n"

@@ -1,6 +1,6 @@
 Source: adduser
 Section: base
-Priority: standard
+Priority: important
 Maintainer: Roland Bauerschmidt <rb@debian.org>
 Standards-Version: 3.5.5.0
 Build-Depends: gettext

@@ -1,3 +1,20 @@
+adduser (3.42) unstable; urgency=low
+
+  * If --no-create-home is specified, adduser doesn't warn about an
+    existing home directory anymore.
+  * Also fixed some stupid mistake so that the verbose information that
+    a system user already exists is printed probably. Closes: #112477.
+  * Fixed broken reference to /usr/share/common-licenses/GPL in
+    debian/copyright.
+  * Removed emacs stuff from debian/changelog.
+  * It should possible to translate [y/n] now. Updated
+    Brazilian/Portuguese and German translations for this. Closes: #108919.
+  * Added Dutch translation of the .po file. Closes: #111305.
+  * Updated debian/control to represent the change in the overrides file
+    from priority standard to important.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Mon, 17 Sep 2001 15:15:02 +0200
+
 adduser (3.41) unstable; urgency=low
 
   * Home directories should be removed properly now. Before @dirs is
@@ -557,8 +574,3 @@ Mon Oct 23 22:16:19 1995  Sven Rudolph  <sr1@inf.tu-dresden.de>
                       8 characters (Bug#1241)
 
 	* adduser.pl: now copies everything below /etc/skel (Bug#1542)
-
-Local variables:
-mode: debian-changelog
-add-log-mailing-address: "rb@debian.org"
-End:
