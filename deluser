@@ -44,7 +44,8 @@ $version = VERSION;
 #     example: deluser --group students
 #     $action = "delgroup"
 #
-#     --system                 only remove is system group
+#     --system			only remove if system group
+#     --only-if-empty		only removes group if no members left
 #
 #  deluser user group
 #     remove the user from a group
@@ -93,6 +94,8 @@ textdomain("adduser");
 $verbose = 1;
 $defaults = "/etc/deluser.conf";
 
+$config{"system"} = 0;
+$config{"only-if-empty"} = 0;
 $config{"remove_home"} = 0;
 $config{"home"} = "";
 $config{"remove_all_files"} = 0;
@@ -142,6 +145,8 @@ while($arg = shift(@ARGV))
             if (! -f $defaults);
     } elsif($arg eq "--system") {
        $pconfig{"system"} = 1;
+    } elsif($arg eq "--only-if-empty") {
+       $pconfig{"only-if-empty"} = 1;
     } elsif($arg eq "--home") {
 	die "$0: ",_("--home requires an argument.\n")
 	  if (!($pconfig{"home"} = shift(@ARGV)));
@@ -305,14 +310,20 @@ if($action eq "deluser") {
     unless(exist_group($group)) {
 	dief (_("`%s' does not exist.\n"),$group);
     }
-    my($dummy1,$dummy2,$gid);
-    if( $config{"system"} && 
-       (($dummy1,$dummy2,$gid) = getgrnam($group)) &&
-       ($gid < $config{"first_system_gid"} ||
-        $gid > $config{"last_system_gid" } )) {
-        printf (_("Group %s is not a system group... Exiting.\n"), $group) if $verbose;
-       exit 0;
+    my($dummy,$gid,$members);
+    if( !(($dummy, $dummy, $gid, $members ) = getgrnam($group)) ) {
+	dief (_("getgrnam `%s' failed. This shouldn't happen.\n"), $group);
     }
+    if( $config{"system"} && 
+	($gid < $config{"first_system_gid"} ||
+	 $gid > $config{"last_system_gid" } )) {
+        printf (_("Group %s is not a system group... Exiting.\n"), $group) if $verbose;
+	exit 0;
+    }
+    if( $config{"only-if-empty"} && $members ne "") {
+	dief (_("`%s' is not empty!\n"),$group);
+    }
+    
     # This need to be fixed
     if(system("grep", "-q", "^.*:.*:.*:$gr_gid:.*:.*:.*\$", "/etc/passwd") == 0) {
 	dief (_("There are users having `%s' as primary group!\n"),$group);

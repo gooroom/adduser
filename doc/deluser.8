@@ -14,7 +14,7 @@ deluser, delgroup \- remove a user or group from the system
 .PP
 .BR deluser " \-\-group [options] group"
 .br
-.BR delgroup " [options] group"
+.BR delgroup " [options] [\-\-only-if-empty] group"
 .PP
 .BR deluser " [options] user group"
 .SS COMMON OPTIONS
@@ -86,6 +86,10 @@ is called, a system group will be removed.
 
 Warning: If any users have the group to be removed as primary group
 the group cannot be removed.
+
+If the option
+.B \-\-only-if-empty
+is given, the group won't be removed if it has any members left.
 
 .SS "Remove an user from a specific group"
 If called with two non-option arguments,
