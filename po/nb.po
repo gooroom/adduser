@@ -1,0 +1,343 @@
+Package: adduser
+Version: 3.50
+Severity: normal
+Tags: patch
+
+Based on the danish (da.po) translation.
+
+-- System Information:
+Debian Release: testing/unstable
+Architecture: i386
+Kernel: Linux sabbath 2.4.20 #7 SMP tor feb 27 13:30:29 CET 2003 i686
+Locale: LANG=no_NO.UTF-8, LC_CTYPE=ISO_8859_1 (ignored: LC_ALL set)
+
+Versions of packages adduser depends on:
+ii  debconf                       1.2.35     Debian configuration management sy
+ii  passwd                        1:4.0.3-8  Change and administer password and
+ii  perl-base                     5.8.0-17   The Pathologically Eclectic Rubbis
+
+-- debconf information excluded
+
+<-znip->
+# adduser
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Morten Brix Pedersen <morten@wtf.dk>, 2001
+# Geir Helland, <debian@marked.no>, 2003
+msgid ""
+msgstr ""
+"Project-Id-Version: adduser 3.42\n"
+"POT-Creation-Date: 2001-09-17 15:06+0200\n"
+"PO-Revision-Date: 2003-06-11 05:26+0200\n"
+"Last-Translator: Geir Helland, <debian@marked.no>\n"
+"Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../adduser:114 ../deluser:91
+msgid "No options allowed after names.\n"
+msgstr "Ingen opsjoner tillatt etter navn.\n"
+
+#: ../adduser:131
+msgid "--ingroup requires an argument.\n"
+msgstr "--ingroup krever et argument.\n"
+
+#: ../adduser:134
+msgid "--home requires an argument.\n"
+msgstr "--home krever et argument.\n"
+
+#: ../adduser:136
+msgid "Warning: The home dir you specified already exists.\n"
+msgstr "Advarsel: Hjemmekatalogen du spesifiserte eksisterer allerede.\n"
+
+#: ../adduser:138
+msgid "The home dir must be an absolute path.\n"
+msgstr "Hjemmekatalogen må være en absolutt sti.\n"
+
+#: ../adduser:141
+msgid "--gecos requires an argument.\n"
+msgstr "--gecos krever et argument.\n"
+
+#: ../adduser:144
+msgid "--shell requires an argument.\n"
+msgstr "--shell krever et argument.\n"
+
+#: ../adduser:153
+msgid "--uid requires a numeric argument.\n"
+msgstr "--uid krever et numerisk argument.\n"
+
+#: ../adduser:156
+msgid "--firstuid requires a numeric argument.\n"
+msgstr "--firstuid krever et numerisk argument.\n"
+
+#: ../adduser:159
+msgid "--lastuid requires a numeric argument.\n"
+msgstr "--lastuid krever et numerisk argument.\n"
+
+#: ../adduser:162
+msgid "--gid requires a numeric argument.\n"
+msgstr "--gid krever et numerisk argument.\n"
+
+#: ../adduser:165 ../deluser:107
+msgid "--conf requires an argument.\n"
+msgstr "--conf krever et argument.\n"
+
+#: ../adduser:167 ../deluser:109
+#, c-format
+msgid "`%s' doesn't exist.\n"
+msgstr "`%s' eksisterer ikke.\n"
+
+#: ../adduser:174 ../deluser:118
+#, c-format
+msgid "Unknown argument `%s'.\n"
+msgstr "Ukjent argument `%s'.\n"
+
+#: ../adduser:180
+msgid "Only root may add a user or group to the system.\n"
+msgstr "Kun root får opprette nye brukere eller grupper på systemet.\n"
+
+#: ../adduser:185
+msgid "Enter a groupname to add: "
+msgstr "Skriv inn gruppenavn som skal opprettes: "
+
+#: ../adduser:189
+msgid "Enter a username to add: "
+msgstr "Skriv inn brukernavn som skal opprettes: "
+
+#: ../adduser:194
+msgid "I need a name to add.\n"
+msgstr "Jeg trenger et navn på brukeren som skal opprettes.\n"
+
+#: ../adduser:195 ../deluser:143
+msgid "No more than two names.\n"
+msgstr "Ikke mere end to navn.\n"
+
+#: ../adduser:197 ../deluser:146
+msgid "Specify only one name in this mode.\n"
+msgstr "Angi kun ett navn i dette modus.\n"
+
+#: ../adduser:215
+msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
+msgstr "--group, --ingroup, og --gid opsjonene er gjensidig ekskluderende.\n"
+
+#: ../adduser:248
+#, c-format
+msgid "The group `%s' already exists.\n"
+msgstr "Gruppen `%s' eksisterer allerede.\n"
+
+#: ../adduser:250
+#, c-format
+msgid "The GID `%s' is already in use.\n"
+msgstr "GIDen `%s' er allerede i bruk.\n"
+
+#: ../adduser:258
+msgid "No GID is available in the range "
+msgstr "Intet GID er ledig i utvalget "
+
+#: ../adduser:261
+#, c-format
+msgid "Group `%s' not created.\n"
+msgstr "Gruppe `%s' ikke opprettet.\n"
+
+#: ../adduser:265
+#, c-format
+msgid "Adding group %s (%s)...\n"
+msgstr "Oppretter gruppe %s (%s)...\n"
+
+#: ../adduser:269 ../adduser:300
+msgid "Done.\n"
+msgstr "Ferdig.\n"
+
+#: ../adduser:278
+#, c-format
+msgid "The user `%s' doesn't exist.\n"
+msgstr "Brukeren `%s' eksisterer ikke.\n"
+
+#: ../adduser:280
+#, c-format
+msgid "The group `%s' doesn't exist.\n"
+msgstr "Gruppen `%s' eksisterer ikke.\n"
+
+#: ../adduser:283
+#, c-format
+msgid "The user `%s' is already a member of %s.\n"
+msgstr "Brukeren `%s' er allerede et medlem av %s.\n"
+
+#: ../adduser:288
+#, c-format
+msgid "Adding user %s to group %s...\n"
+msgstr "Legger til bruker %s in Gruppe %s...\n"
+
+#: ../adduser:315
+msgid "User %s does already exist. Exiting...\n"
+msgstr "Bruker `%s' eksisterer allerede. Avslutter...\n"
+
+#: ../adduser:321
+#, c-format
+msgid "Adding system user %s...\n"
+msgstr "Oppretter systembruker %s...\n"
+
+#: ../adduser:328 ../adduser:415
+msgid "No UID/GID pair is available in the range "
+msgstr "Intet UID/GID par er ledig i utvalget "
+
+#: ../adduser:331 ../adduser:344 ../adduser:418 ../adduser:431
+#, c-format
+msgid "User `%s' not created.\n"
+msgstr "Bruker `%s' ikke tilføjet.\n"
+
+#: ../adduser:341 ../adduser:428
+msgid "No UID is available in the range "
+msgstr "Intet UID ledig i utvalget "
+
+#: ../adduser:348 ../adduser:354 ../adduser:435 ../adduser:441
+msgid "Internal error"
+msgstr "Intern feil"
+
+#: ../adduser:359
+msgid "Adding new group $new_name ($new_gid).\n"
+msgstr "Oppretter ny gruppe $new_name ($new_gid).\n"
+
+#: ../adduser:365 ../adduser:452
+#, c-format
+msgid "Adding new user %s (%s) with group %s.\n"
+msgstr "Oppretter ny bruker %s (%s) med gruppe %s.\n"
+
+#: ../adduser:379
+msgid "Not creating home directory.\n"
+msgstr "Oppretter ikke hjemmekatalog.\n"
+
+#: ../adduser:381
+#, c-format
+msgid "Home directory %s already exists.\n"
+msgstr "Hjemmekatalog %s eksisterer allerede.\n"
+
+#: ../adduser:383 ../adduser:468
+#, c-format
+msgid "Creating home directory %s.\n"
+msgstr "Oppretter hjemmekatalog %s.\n"
+
+#: ../adduser:408
+#, c-format
+msgid "Adding user %s...\n"
+msgstr "Oppretter bruker %s...\n"
+
+#: ../adduser:446
+#, c-format
+msgid "Adding new group %s (%s).\n"
+msgstr "Oppretter ny gruppe %s (%s).\n"
+
+#: ../adduser:462
+#, c-format
+msgid "Home directory %s already exists.  Not copying from %s\n"
+msgstr "Hjemmekatalog %s eksisterer allerede. Kopierer ikke fra %s\n"
+
+#: ../adduser:478
+#, c-format
+msgid "Copying files from %s\n"
+msgstr "Kopierer filene fra %s\n"
+
+#: ../adduser:504
+msgid "Is the information correct? [y/n] "
+msgstr "Er informationen korrekt? [j/n] "
+
+#: ../adduser:506
+msgid "y"
+msgstr "j"
+
+#: ../adduser:511
+#, c-format
+msgid "Setting quota from %s.\n"
+msgstr "Setter kvote fra %s.\n"
+
+#: ../deluser:130
+msgid "Only root may remove a user or group from the system.\n"
+msgstr "Kun root får fjerne en bruker eller gruppe fra systemet.\n"
+
+#: ../deluser:134
+msgid "Enter a groupname to remove: "
+msgstr "Skriv inn gruppenavn som skal fjernes: "
+
+#: ../deluser:136
+msgid "Enter a username to remove: "
+msgstr "Skriv inn brukernavn som skal fjernes: "
+
+#: ../deluser:142
+msgid "I need a name to remove.\n"
+msgstr "Jeg trenger navnet på brukeren som skal fjernes.\n"
+
+#: ../deluser:191 ../deluser:251 ../deluser:267 ../deluser:270
+#, c-format
+msgid "`%s' does not exist.\n"
+msgstr "`%s' eksisterer ikke.\n"
+
+#: ../deluser:195
+msgid "Looking for files to backup/remove...\n"
+msgstr "Kikker etter filer som skal sikkerhetskopieres / fjernes...\n"
+
+#: ../deluser:222
+msgid "Backuping files to be removed...\n"
+msgstr "Sikkerhetsopierer filer som skal fjernes...\n"
+
+#: ../deluser:232
+msgid "Removing files...\n"
+msgstr "Fjerner filer...\n"
+
+#: ../deluser:240
+#, c-format
+msgid "Removing user %s...\n"
+msgstr "Fjerner bruker %s...\n"
+
+#: ../deluser:247 ../deluser:261 ../deluser:294
+msgid "done.\n"
+msgstr "Ferdig.\n"
+
+#: ../deluser:255
+#, c-format
+msgid "There are users having `%s' as primary group!\n"
+msgstr "Det finnes brukere med %s som primær gruppe!\n"
+
+#: ../deluser:258
+#, c-format
+msgid "Removing group %s...\n"
+msgstr "Fjerner gruppe %s...\n"
+
+#: ../deluser:273
+msgid "You may not remove the user from his/her primary group.\n"
+msgstr "Du får ikke fjerne en bruker fra han/hennes primære gruppe.\n"
+
+#: ../deluser:287
+#, c-format
+msgid "%s is not a member of group %s.\n"
+msgstr "%s er ikke medlem av gruppen %s.\n"
+
+#: ../deluser:290
+#, c-format
+msgid "Removing user %s from group %s...\n"
+msgstr "Fjerner bruker %s fra gruppe %s...\n"
+
+#: ../deluser:301 ../deluser:320
+msgid "removing user and groups from the system. Version:"
+msgstr "fjerner bruker og grupper fra systemet. Version:"
+
+#: ../deluser:345
+#, c-format
+msgid "Global configuration is in the file %s.\n"
+msgstr "Den globale konfigurations fil er i %s.\n"
+
+#: ../AdduserCommon.pm:78
+#, c-format
+msgid "%s: %s doesn't exist.  Using defaults.\n"
+msgstr "%s: %s eksisterer ikke. Bruker standard.\n"
+
+#: ../AdduserCommon.pm:88
+#, c-format
+msgid "Couldn't parse %s:%s.\n"
+msgstr "Kunne ikke tolke %s:%s\n"
+
+#: ../AdduserCommon.pm:93
+#, c-format
+msgid "Unknown variable `%s' at %s:%s.\n"
+msgstr "Ukjent variabel `%s' på %s:%s.\n"
+
+

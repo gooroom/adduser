@@ -1,0 +1,133 @@
+.\" Someone tell emacs that this is an -*- nroff -*- source file.
+.\" Copyright 1997, 1998, 1999 Guy Maor.
+.\" Adduser and this manpage are copyright 1995 by Ted Hajek,
+.\" With much borrowing from the original adduser copyright 1994 by
+.\" Ian Murdock.
+.\" 
+.\" This is free software; see the GNU General Public License version
+.\" 2 or later for copying conditions.  There is NO warranty.
+
+.\" (c) 2003 Software in the Public Interest
+.\" Esta traducción ha sido realizada por Rubén Porras Campo <nahoo@inicia.es>
+.\" Está basada en la página de manual original:
+.\" versión 1.1 del CVS de
+.\" /cvs/debian-doc/manpages/english/adduser/deluser.8
+
+.TH DELUSER 8 "Versión VERSION" "Debian GNU/Linux"
+.SH NOMBRE
+deluser, delgroup \- elimina un usuario o grupo del sistema
+.SH SINOPSIS
+.BR deluser " [opciones] [\-\-remove-home] [--remove-all-files] [\-\-backup] usuario"
+.PP
+.BR deluser " \-\-group [opciones] grupo"
+.br
+.BR delgroup " [opciones] grupo"
+.PP
+.BR deluser " [opciones] usuario grupo"
+.SS OPCIONES COMUNES
+.br
+[\-\-quiet] [\-\-help] [\-\-version] [\-\-conf FICHERO]
+.SH DESCRIPCIÓN
+.PP
+.BR deluser " y " delgroup
+elimina usuarios y grupos del sistema de acuerdo a las opciones en línea de
+órdenes y a la configuración en
+.IR /etc/deluser.conf .
+Proporcionan una interfaz más amigable para los programas
+.BR userdel " y " groupdel
+, como opción se puede eliminar el directorio personal o incluso todos los
+ficheros del sistema pertenecientes al usuario, ejecutar un script
+personalizado, y otras características.
+.BR deluser " y " delgroup
+pueden ejecutarse de tres maneras:
+.SS "Eliminar un usuario normal"
+Si se invoca con un argumento que no es ninguna opción y sin las opciones
+.BR \-\-group ", " deluser
+eliminará un usuario normal.
+
+Por  omisión,
+.B deluser
+eliminará el usuario, pero no su directorio personal ni su directorio de correo
+(n.t. mail spool) o cualquier otro fichero del sistema perteneciente al usuario.
+El directorio personal puede eliminarse con la opción
+.B \-\-remove-home
+, el resto de los ficheros pertenecientes al usuario pueden eliminarse con la
+opción
+.B \-\-remove-all-files.
+Dese cuenta que si activa ambas opciones
+.B \-\-remove-home
+no tiene ningún efecto porque
+.B \-\-remove-all-files
+es una opción más general.
+
+Si quiere hacer una copia de seguridad de todos los ficheros antes de
+eliminarlos use la opción
+.B \-\-backup
+que creará un fichero nombreusuario.tar(.gz|.bz2) en su directorio de trabajo
+actual. Ambas opciones, la de eliminación y la de copias de seguridad pueden
+especificarse como predeterminadas en el fichero /etc/deluser.conf. Consulte
+.B deluser.conf(5)
+para más detalles.
+
+Si existe el fichero
+.B /usr/local/sbin/deluser.local
+, este se ejecutará después de eliminar la cuenta de usuario de forma que se
+pueda realizar algún ajuste local. Los argumentos que se pasan a
+.B deluser.local
+son:
+.br
+nombreusuario uid gid directorio-personal
+
+.SS "Eliminar un grupo del sistema"
+Si se invoca
+.BR deluser " con la opción " \-\-group " , o se invoca" delgroup
+, se eliminará un grupo local.
+
+Aviso: Si cualquier usuario tiene como grupo primario al grupo que se va a
+eliminar, éste no puede ser eliminado.
+
+.SS "Eliminar un usuario de un grupo específico"
+Si se invoca con dos argumentos que no sean opciones,
+.B deluser
+eliminará el usuario del grupo especificado.
+.SH OPCIONES
+.TP
+.B \-\-conf FICHERO
+Usar FICHERO en vez de
+.IR /etc/deluser.conf .
+.TP
+.B \-\-group
+Elimina un grupo. La opción predeterminada si se invoca como
+.IR delgroup .
+.TP
+.B \-\-help
+Muestra unas instrucciones breves.
+.TP
+.B \-\-quiet
+Elimina los mensajes de error.
+.TP
+.B \-\-version
+Muestra información acerca de la versión y copyright.
+.SH FICHEROS
+/etc/deluser.conf
+.SH "VÉASE TAMBIÉN"
+deluser.conf(5), adduser(8), userdel(8), groupdel(8)
+
+.SH COPYRIGHT
+Copyright (C) 2000 Roland Bauerschmidt.
+Esta página del manual y el programa deluser se basan en adduser, el cual es:
+.br
+Copyright (C) 1997, 1998, 1999 Guy Maor.
+.br
+Copyright (C) 1995 Ted Hajek, con un gran aportación del
+.B adduser
+original de Debian
+.br
+Copyright (C) 1994 Ian Murdock.
+.B adduser
+es software libre; lea la Licencia Pública General de GNU versión 2 o posterior
+para las condiciones de copia.
+.I No
+hay garantía.
+.SH TRADUCTOR
+Traducción de Rubén Porras Campo <debian-l10n-spanish@lists.debian.org>

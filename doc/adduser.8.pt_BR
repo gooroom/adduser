@@ -1,0 +1,250 @@
+.\" Someone tell emacs that this is an -*- nroff -*- source file.
+.\" Copyright 1997, 1998, 1999 Guy Maor.
+.\" Adduser and this manpage are copyright 1995 by Ted Hajek,
+.\" With much borrowing from the original adduser copyright 1994 by
+.\" Ian Murdock.
+.\" 
+.\" This is free software; see the GNU General Public License version
+.\" 2 or later for copying conditions.  There is NO warranty.
+.TH ADDUSER 8 "Version VERSION" "Debian GNU/Linux"
+.SH NOME
+adduser, addgroup \- adiciona um usuário ou grupo ao sistema
+.SH RESUMO
+.BR adduser " [options] [\-\-home DIR] [\-\-shell SHELL] [--no-create-home] [\-\-uid ID] [\-\-firstuid ID] [\-\-lastuid ID] [\-\-ingroup GROUP | \-\-gid ID] [--disabled-password] [--disabled-login] [--gecos GECOS] usuário"
+.PP
+.BR adduser " \-\-system [options] [\-\-home DIR] [\-\-shell SHELL] [--no-create-home] [\-\-uid ID] [\-\-group | \-\-ingroup GROUP | \-\-gid ID] [--disabled-password] [--disabled-login] [--gecos GECOS] usuário"
+.PP
+.BR adduser " \-\-group [options] [--gid ID] grupo"
+.br
+.BR addgroup " [options] [--gid ID] grupo"
+.PP
+.BR adduser " [options] usuário grupo"
+.SS OPÇÕES COMUNS
+.br
+[\-\-quiet] [\-\-force-badname] [\-\-help] [\-\-version] [\-\-conf FILE]
+.SH DESCRIÇÃO
+.PP
+.BR adduser " e " addgroup
+adicionam usuários e grupos ao sistema de acordo com as opções de linha de 
+comando e informações de configuração no
+.IR /etc/adduser.conf .
+Eles são uns front ends amigáveis para os programas
+.BR useradd " e " groupadd
+, escolhendo os valores UID e GID que estão de acordo com a política do Debian
+, criando um diretório home com um modelo de configuração, rodando um script 
+customizado, e outras características.
+.BR adduser " e " addgroup
+podem rodar em um dos quatro modos:
+.SS "Adicionar um usuário normal"
+Se chamado com um argumento que não seja opção e sem as opções
+.BR \-\-system " ou " \-\-group ", " adduser
+irá adicionar um usuário normal.
+
+.B adduser
+irá escolher o primeiro UID disponível no limite especificado para usuários normais no arquivo de configuração. O UID pode ser sobrescrito com a opção
+.B \-\-uid.
+
+O limite especificado no arquivo de configuração pode ser sobrescrito com as 
+opções
+.B \-\-firstuid
+e
+.B \-\-lastuid.
+
+Por padrão, para cada usuário no Debian GNU/Linux é dado um grupo
+correspondente com o mesmo nome e id. Usersgroups permite que diretórios
+com acesso de escrita ao grupo sejam facilmente mantidos colocando os
+usuários apropriados no novo grupo, configurando o bit set-group-ID no
+diretório, e assegurando que todos os usuários usam uma umask de 002. Se esta
+opção for desligada configurando o 
+.B USERGROUPS
+para
+.IR no ,
+todos os GIDs dos usuários serão alterados para
+.BR USERS_GID .
+Grupos de usuários também podem ser sobrescritos a partir da linha de comando 
+com as opções
+.BR \-\-gid " ou " \-\-ingroup
+para configurar o grupo por id ou nome, respectivamente.
+
+.B adduser
+irá criar um diretório home sujeito a
+.BR DHOME ", " GROUPHOMES ", e " LETTERHOMES .
+O diretório home pode ser sobrescrito a partir da linha de comando com a 
+opção
+.B \-\-home
+, e a shell com a opção
+.B \-\-shell
+ . O bit set-group-ID do diretório home é configurado se
+.B USERGROUPS
+estiver
+.I yes
+então qualquer arquivo criado no diretório home do usuário 
+terá o grupo correto.
+
+.B adduser
+irá copiar arquivos do
+.B SKEL
+para o diretório home e perguntar informações do finger (gecos) e 
+uma senha. O gecos também pode ser configurado com a opção
+.B \-\-gecos
+ .  Com a opção
+.B \-\-disabled-login
+, a conta será criada mas é desativada até que uma senha seja 
+definida. A opção
+.B \-\-disabled-password
+não configura uma senha, mas login ainda é possível, por exemplo através 
+de chaves SSH RSA.
+
+Se o arquivo
+.B /usr/local/sbin/adduser.local
+existe, ele será executado após a conta do usuário ser 
+configurada para fazer qualquer configuração local. Os argumentos
+passados para o
+.B adduser.local
+são:
+.br
+usuário uid gid diretório-home
+.SS "Adicionar um usuário do sistema"
+Se chamado com um argumento que não seja opção e a opção
+.BR \-\-system ", " adduser
+irá adicionar um usuário do sistema. Se um usuário com um uid no intervalo 
+do sistema (ou se o uid é especificado, com isso) realmente existir, adduser
+irá sair.
+
+.B adduser
+irá escolher o primeiro UID disponível no intervalo especificado para os
+usuários do sistema no arquivo de configuração. O UID pode ser sobrescrito
+com a opção
+.B \-\-uid.
+
+Por padrão, usuários do sistema são colocados no grupo
+.B nogroup.
+Para colocar o novo usuário do sistema em um grupo existente, use a 
+opção 
+.BR \-\-gid " ou " \-\-ingroup
+ . Para colocar o novo usuário do sistema em um novo grupo com 
+o mesmo ID, use a opção
+.B \-\-group.
+
+Um diretório home é criado pelas mesmas regras de um usuário normal.
+O novo usuário do sistema irá ter a shell
+.I /bin/false
+(ao menos que seja sobrescrito com a opção
+.B \-\-shell
+), e a senha desativada. Os arquivos de configuração do modelo usado
+não são copiados.
+.SS "Adicionar um grupo do sistema"
+Se 
+.BR adduser " é chamado com a opção " \-\-group ", ou " addgroup
+é chamado, um grupo do sistema será adicionado.
+
+O GID será escolhido a partir do intervalo especificado para os UIDs do 
+sistema no arquivo de configuração. O GID pode ser sobrescrito com a opção
+.B \-\-gid.
+
+O grupo é criado sem nenhum usuário.
+.SS "Adicionar um usuário existente a um grupo existente"
+Se chamado com dois argumentos que não sejam opções,
+.B adduser
+irá adicionar um usuário existente a um grupo existente.
+.SH OPÇÕES
+.TP
+.B \-\-conf ARQUIVO
+Use ARQUIVO em vez de
+.IR /etc/adduser.conf .
+.TP
+.B \-\-disabled-login
+Não executa o passwd para configurar a senha. O usuário não será capaz de 
+usar sua conta até que a senha seja definida.
+.TP
+.B \-\-disabled-password
+Como \-\-disabled-login, mas logins ainda são possíveis, por exemplo
+através das chaves SSH RSA, mas não usa autenticação por senhas.
+.TP
+.B \-\-force\-badname
+Por padrão, nomes de grupos e usuário devem ser todo em minúsculo seguido
+por nenhuma ou mais letras ou números. Hífens no nome do usuário também são
+aceitos.
+Esta opção força 
+.B adduser
+e 
+.B addgroup
+a serem menos rigorosos.
+.TP
+.B \-\-gecos GECOS
+Altera o campo gecos para a nova entrada gerada. adduser não irá perguntar
+pelas informação relacionadas ao finger se esta opção for usada.
+.TP
+.B \-\-gid ID
+Quando está criando um grupo, está opção faz com que o novo groupid 
+seja o número dado. Quando criando um usuário, esta opção irá colocar 
+este usuário ao grupo.
+.TP
+.B \-\-group
+Quando combinado com 
+.BR \-\-system ,
+um grupo com o mesmo nome e ID do sistema é criado.
+Se não estiver combinado com
+.BR \-\-system ,
+um grupo com o nome dado é criado. Esta é a ação padrão se o 
+programa for chamado como
+.BR addgroup .
+.TP
+.B \-\-help
+Mostra informações de uso.
+.TP
+.B \-\-home DIR
+Use DIR como o diretório home do usuário, em vez do padrão especificado
+no arquivo de configuração. Se o diretório não existir, ele será criado
+e os arquivos modelo são copiados.
+.TP
+.B \-\-shell SHELL
+Use SHELL como a login shell do usuário, em vez do padrão especificado
+no arquivo de configuração.
+.TP
+.B \-\-ingroup GRUOP
+Adiciona um novo usuário ao grupo GRUOP em vez do usergroup ou um grupo padrão
+definido pelo USERS_GID no arquivo adduser.conf
+.TP
+.B \-\-no-create-home
+Não cria o diretório home, mesmo se ele não existir.
+.TP
+.B \-\-quiet
+Anula as mensagens de progresso.
+.TP
+.B \-\-system
+Cria um usuário do sistema.
+.TP
+.B \-\-uid ID
+Força o novo userid a ser o número dado. adduser orá falhar se o userid já
+tiver sido dado.
+.TP
+.B \-\-firstuid ID
+Sobrescreve o primeiro uid do intervalo de uid escolhido.
+.TP
+.B \-\-lastuid ID
+Sobrescreve o último uid do intervalo de uid escolhido.
+.TP
+.B \-\-version
+Mostra a versão e informações de copyright
+.SH ARQUIVOS
+/etc/adduser.conf
+.SH "VEJA TAMBÉM"
+adduser.conf(5), deluser(8), useradd(8), groupadd(8)
+
+.SH COPYRIGHT
+Copyright (C) 1997, 1998, 1999 Guy Maor.
+.br
+Copyright (C) 1995 Ted Hajek, com bastante negociação emprestado do
+.B adduser
+original do Debian
+.br
+Copyright (C) 1994 Ian Murdock.
+.B adduser
+é software livre; veja a Licença Pública Geral
+GNU versão 2 ou posteriores para condições de cópia. Não
+existe
+.I nenhuma
+garantia.
+.SH "TRADUÇÃO"
+Philipe Gaspar (philipegaspar@terra.com.br), 2003.

@@ -1,0 +1,57 @@
+.\" Hey, Emacs!  This is an -*- nroff -*- source file.
+.\" Adduser and this manpage are copyright 1995 by Ted Hajek
+.\"
+.\" This is free software; see the GNU General Public Lisence version 2
+.\" or later for copying conditions.  There is NO warranty.
+
+.\" (c) 2003 Software in the Public Interest
+.\" Esta traducción ha sido realizada por Rubén Porras Campo <nahoo@inicia.es>
+.\" Está basada en la página de manual original:
+.\" versión 1.1 del CVS de
+.\" /cvs/debian-doc/manpages/english/adduser/deluser.conf.5
+
+.TH "deluser.conf" 5 "Versión VERSION" "Debian GNU/Linux"
+.SH NOMBRE
+/etc/deluser.conf \- fichero de configuración para 
+.B deluser(8) 
+y
+.BR delgroup(8) .
+.SH DESCRIPCIÓN
+El fichero 
+.I /etc/deluser.conf
+contiene las preferencias de los programas
+.B deluser(8) 
+y
+.BR delgroup(8) .
+Cada opción tiene la forma
+.IR opción " = " valor .
+Se permiten comillas simples o dobles al rededor del valor. Los comentarios
+deben comenzar con el signo #.
+
+Las opciones de configuración válidas son:
+.TP
+\fBREMOVE_HOME\fP
+Determina si se elimina el directorio personal y de correo (n.t. mail spool) del
+usuario. Puede valer 1 o 0.
+.TP
+\fBREMOVE_ALL_FILES\fP
+Elimina todos los ficheros del sistema pertenecientes al usuario eliminado. Si
+la opción está activada
+.B REMOVE_HOME
+no tiene efecto. Puede valer 1 o 0.
+.TP
+\fBBACKUP\fP
+So
+.B REMOVE_HOME
+o
+.B REMOVE_ALL_FILES
+está activado se salvan todos los ficheros antes de eliminarlos. La copia de
+seguridad creada será nombreusuario.tar(.gz|.bz2) en el directorio de trabajo
+actual. Se elige el mejor método de compresión disponible. Puede valer 1 o 0.
+.SH FICHEROS
+.I /etc/deluser.conf
+.SH VÉASE TAMBIÉN
+deluser(8)
+.SH TRADUCTOR
+Traducción de Rubén Porras Campo <debian-l10n-spanish@lists.debian.org>
+

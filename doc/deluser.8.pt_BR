@@ -1,0 +1,132 @@
+.\" Someone tell emacs that this is an -*- nroff -*- source file.
+.\" Copyright 1997, 1998, 1999 Guy Maor.
+.\" Adduser and this manpage are copyright 1995 by Ted Hajek,
+.\" With much borrowing from the original adduser copyright 1994 by
+.\" Ian Murdock.
+.\" 
+.\" This is free software; see the GNU General Public License version
+.\" 2 or later for copying conditions.  There is NO warranty.
+.TH DELUSER 8 "Version VERSION" "Debian GNU/Linux"
+.SH NAME
+deluser, delgroup \- remove um usuário ou grupo do sistema
+.SH RESUMO
+.BR deluser " [options] [\-\-remove-home] [--remove-all-files] [\-\-backup] usuário"
+.PP
+.BR deluser " \-\-group [options] grupo"
+.br
+.BR delgroup " [options] grupo"
+.PP
+.BR deluser " [options] usuário grupo"
+.SS OPÇÕES COMUNS
+.br
+[\-\-quiet] [\-\-help] [\-\-version] [\-\-conf FILE]
+.SH DESCRIÇÃO
+.PP
+.BR deluser " e " delgroup
+remove usuários e grupos do sistema de acordo com as opções de linha de
+comando e informações de configuração no
+.IR /etc/deluser.conf .
+Eles são uns front ends amigáveis para os programas
+.BR userdel " e " groupdel
+, removendo o diretório home como opção ou mesmo todos os arquivos do sitema 
+pertencentes ao usuário a ser removido, rodando script customizável, e outras
+características.
+.BR deluser " e " delgroup
+podem rodar em um dos três modos:
+.SS "Remover um usuário normal"
+Se chamado com um argumento que não seja opção e sem as opções
+.BR " \-\-group ", " deluser
+irá remover um usuário normal.
+
+Por padrão,
+.B deluser
+irá remover o usuário sem remover o diretório home, o spool de mail ou 
+qualquer outro arquivo no sistema pertencente ao usuário. A remoção do 
+diretório home e spool de mail podem ser obtidas usando a opção
+.B \-\-remove-home
+e a remoção de todos arquivos no sistema pertencentes ao usuário com a 
+opção 
+.B \-\-remove-all-files
+Note que se você ativar as ambas opções 
+.B \-\-remove-home
+não terá efeito porque todos os arquivos incluindo o diretório home e o spool de mail
+já serão removidos com a opção
+.B \-\-remove-all-files
+
+Se você quiser fazer um backup de todos os arquivos antes de apagá-los, basta adicionar 
+a opção 
+.B \-\-backup
+que irá criar um arquivo chamado username.tar(.gz|.bz2) no diretório atual. Ambas 
+as opções de backup e de remoção podem ser ativadas por padrão no arquivo de 
+configuração /etc/deluser.conf. Veja o manual
+.B deluser.conf(5)
+para mais detalhes.
+
+Se o arquivo
+.B /usr/local/sbin/deluser.local
+existe, ele será executado após a conta do usuário ser removida
+para fazer qualquer configuração local. Os argumentos
+passados para
+.B deluser.local
+são:
+.br
+usuário uid gid diretório-home
+
+.SS "Remover um grupo do sistema"
+Se
+.BR deluser " for chamado com a opção " \-\-group ", ou " delgroup
+for chamado, um grupo do sistema será removido.
+
+Atenção: Se existir algum usuário com o grupo sendo grupo primário este
+grupo não será removido.
+
+.SS "Remover um usuário de um grupo específico"
+Se chamado com dois arugmentos que não são opçãos,
+.B deluser
+irá remover um usuário de um grupo específico.
+.SH OPÇÕES
+.TP
+.B \-\-conf ARQUIVO
+Use ARQUIVO em vez de
+.IR /etc/deluser.conf .
+.TP
+.B \-\-group
+Remove um grupo. Está é a ação padrão se o programa for chamado como
+.IR delgroup .
+.TP
+.B \-\-help
+Mostra informações de uso.
+.TP
+.B \-\-quiet
+Anula as mensagens de progresso.
+.TP
+.B \-\-version
+Mostra a versão e as informações de copyright.
+.SH ARQUIVOS
+/etc/deluser.conf
+.SH "VEJA TAMBÉM"
+deluser.conf(5), adduser(8), userdel(8), groupdel(8)
+
+.SH COPYRIGHT
+Copyright (C) 2000 Roland Bauerschmidt.
+This manpage and the deluser program is based on adduser which is:
+.br
+Copyright (C) 1997, 1998, 1999 Guy Maor.
+.br
+Copyright (C) 1995 Ted Hajek, com bastante negociação emprestado do
+.B adduser
+original do Debian
+.br
+Copyright (C) 1994 Ian Murdock.
+.B deluser
+é software livre; veha a Licença Pública Geral
+GNU versão 2 ou posteriores par condições de cópia. Não
+existe
+.I nenhuma
+garantia.
+.SH "TRADUÇÃO"
+Philipe Gaspar (philipegaspar@terra.com.br), 2003.
+
+
+
+

@@ -2,6 +2,13 @@ adduser (3.51) unstable; urgency=low
 
   * Switched to po-debconf. Thanks to Christian Perrier
     <bubulle@debian.org> for the patch! Closes: #198021.
+  * Include the Norwegian (bokmaal) translation by Geir Helland
+    <debian@marked.no>. Closes: #196981.
+  * Include the Brazilian Portuguese translations of the
+    manpages by Philipe Gaspar <philipegaspar@terra.com.br>.
+    Closes: #194375.
+  * Include the Spanish manpages by Ruben Porras
+    <nahoo82@telefonica.net>. Closes: #195437.
 
  -- Roland Bauerschmidt <rb@debian.org>  Sat, 21 Jun 2003 14:06:59 +0200
 
