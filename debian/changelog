@@ -1,3 +1,9 @@
+adduser (3.22) unstable; urgency=low
+
+  * Depends on perl-5.005-base instead of perl-base. Closes: #75679. 
+
+ -- Roland Bauerschmidt <rb@debian.org>  Thu, 26 Oct 2000 19:20:37 -0500
+
 adduser (3.21) unstable; urgency=low
 
   * NSCD problems fixed. Adduser didn't invalidate the nscd group
