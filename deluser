@@ -420,7 +420,7 @@ sub exist_group {
 
 sub systemcall {
     my $c = join(' ', @_);
-    #print "$c\n" if $debugging;
+    print "$c\n" if $verbose==2;
     if (system(@_)) {
         die("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
 	  if ($?>>8);
