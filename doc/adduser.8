@@ -108,7 +108,7 @@ If called with one non-option argument and the
 .BR \-\-system " option, " adduser
 will add a system user. If an user with an uid in the system range (or
 if the uid is specified, with that) does already exist, adduser will
-exist silently.
+exit silently.
 
 .B adduser
 will choose the first available UID from the range specified for
@@ -221,10 +221,10 @@ Force the new userid to be the given number.  adduser will fail if the userid
 is already taken.
 .TP
 .B \-\-firstuid ID
-Override the first uid in the range from that the uid is chosen.
+Override the first uid in the range that the uid is chosen from.
 .TP
 .B \-\-lastuid ID
-Override the last uid in the range from that the uid is chosen.
+Override the last uid in the range that the uid is chosen from.
 .TP
 .B \-\-version
 Display version and copyright information.

@@ -1,8 +1,21 @@
+adduser (3.47) woody-proposed-updates unstable; urgency=medium
+
+  * Really added Japanese debconf-templates. Sorry for that. Closes: #137291.
+  * deluser: eval for File::Find to catch errors if perl-modules isn't
+    installed. Closes: #136291.
+  * Updated German po file.
+  * Switched to use warnings; (rather than perl -w).
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sun, 24 Mar 2002 17:11:53 +0100
+
 adduser (3.46) woody-proposed-updates unstable; urgency=low
 
   * generate md5sums.
+  * Corrected typo in adduser.8. Closes: #135444.
+  * Updated Japanese po-file. Closes: #137291, #137390.
+  * Fixed wording in adduser.8. Closes: #130252. 
 
- -- Roland Bauerschmidt <rb@debian.org>  Fri,  8 Feb 2002 13:17:39 +0100
+ -- Roland Bauerschmidt <rb@debian.org>  Fri, 22 Mar 2002 15:06:15 +0100
 
 adduser (3.45) woody-proposed-updates unstable; urgency=HIGH
 

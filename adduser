@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 #
 # adduser VERSION
 #
@@ -64,6 +64,7 @@
 #      --conf FILE      use FILE instead of /etc/adduser.conf
 ############
 
+use warnings;
 use Debian::AdduserCommon;
 
 BEGIN {
