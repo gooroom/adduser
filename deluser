@@ -24,42 +24,9 @@ $version = "VERSION";
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-# the program can be called as:
-#
-#  deluser user
-#     remove a normal user from the system
-#     example: deluser mike
-#     $action = "deluser"
-#
-#     --remove-home             remove the users home directory and mail spool
-#     --remove-all-files        remove all files owned by user
-#     --home <dir>		remove home only if /etc/passwd home dir
-#                               matches directory given here
-#     --backup			backup files before removing.
-#     --backup-to <dir>         target directory for the backups.
-#                               Default is the current directory.
-#     --system                  only remove if system user
-#
-#  delgroup group
-#  deluser --group group
-#     remove a group from the system
-#     example: deluser --group students
-#     $action = "delgroup"
-#
-#     --system			only remove if system group
-#     --only-if-empty		only removes group if no members left
-#
-#  deluser user group
-#     remove the user from a group
-#     example: deluser mike students
-#     $action = "deluserfromgroup"
-#
-#  general options:
-#
-#     --quiet | -q      don't give process information to stdout
-#     --help | -h       usage message
-#     --version | -v    version number and copyright
-#     --conf | -c FILE  use FILE instead of /etc/deluser.conf
+####################
+# See the usage subroutine for explanation about how the program can be called
+####################
 
 $ENV{"PATH"} = "/sbin:/bin:/usr/sbin:/usr/bin";
 

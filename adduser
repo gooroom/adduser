@@ -28,47 +28,8 @@
 #
 #
 ####################
-# the program can be called as:
-#
-#  adduser [--home DIR] [--shell SHELL] [--uid ID] [--firstuid ID]
-#  [--lastuid ID] [--ingroup GROUP | --gid ID] [--disabled-password]
-#  [--disabled-login] [--gecos GECOS] [--no-create-home] user
-#      add a normal user to the system
-#      example: adduser fred
-#      $action = "adduser"
-#
-#  adduser --group [--gid ID] group
-#  addgroup [--gid ID] group
-#      add a user group
-#      example: addgroup powerusers
-#      $action = "addgroup"
-#
-#  adduser --group --system [--gid GID] group
-#  addgroup --system [--gid GID] group
-#      add a system group
-#      example: addgroup --system --quiet www-data
-#      $action = "addsysgroup"
-#
-#  adduser --system [--home DIR] [--shell SHELL] [--uid ID] [--group |
-#  --ingroup GROUP | --gid ID] [--disabled-password] [--disabled-login]
-#  [--gecos GECOS] [--no-create-home] user
-#      add a system user.  Create a like-named, like-id'd group with
-#      --group, add to an existing group with --ingroup or --gid.  Add
-#      to "nogroup" with neither.
-#      example: adduser --system --home /home/gopher-data --group gopher
-#      $action = "addsysuser"
-#
-#  adduser user group
-#      add the existing user to an existing group.
-#      $action = "addusertogroup"
-#
-#  all commands take the following options:
-#      --quiet          don't give progress information on STDOUT
-#      --force-badname  disable checking of names for funny characters
-#      --help           usage message
-#      --version        version number and copyright
-#      --conf FILE      use FILE instead of /etc/adduser.conf
-############
+# See the usage subroutine for explanation about how the program can be called
+####################
 
 use warnings;
 use Debian::AdduserCommon;
