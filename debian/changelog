@@ -11,12 +11,14 @@ adduser (3.52.1) unstable; urgency=low
       Closes: #241845.
     * Updated Ukrainian debconf templates. Thanks to Eugeniy
       Meshcheryakov. Closes: #241851.
+    * Updated Danish translations. Thanks to Morten Brix Pedersen.
+      Closes: #243078.
 
   * Roland Bauerschmidt:
-    * Updated French translations. Tranks to Christian Perrier.
+    * Updated French translations. Thanks to Christian Perrier.
       Closes: #242773.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Apr 2004 15:19:04 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 11 Apr 2004 13:37:35 +0200
 
 adduser (3.52) unstable; urgency=low
 
