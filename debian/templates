@@ -29,3 +29,15 @@ Description-sv: Vill du att hemmakataloger ska vara lДsbara fЖr hela systemet?
  Жka sДkerheten/avskildheten i ditt system sЕ kan det vara en bra idИ att
  endast gЖra hemmakataloger lДsbara av anvДndaren sjДlv. Om du Дr osДker,
  svara ja fЖr att gЖra hemmakatalogerna lДsbara fЖr hela systemet.
+Description-es: ©Quiere que todo el sistema pueda leer las cuentas de usuario?
+ Normalmente las cuentas de usuario pueden ser vistas por cualquier usuario
+ del sistema. Si quiere incrementar la seguridad/privacidad de su sistema
+ puede querer que sus cuentas sСlo puedan ser leМdas por el dueЯo de la
+ cuenta. Si no estА seguro responda sМ para activar la lectura global de las
+ cuentas de usuario.
+Description-ru: Хотите ли вы, чтобы система имела домашние каталоги, доступные
+ для чтения всем?  Обычно домашние каталоги могут просматриваться всеми
+ пользователями системы. В целях повышения безопасности и конфиденциальности
+ системы, вы можете захотеть, чтобы домашний каталог пользователя был читаем
+ только им одним. Если вы не уверены, ответьте yes, тогда
+ домашние каталоги будут доступны для чтения всем.

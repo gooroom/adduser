@@ -1,8 +1,20 @@
+adduser (3.31) unstable; urgency=low
+
+  * Fixed typo in deluser.8. Closes: #85830.
+  * Updated Russian translation of po file, added translation of Debconf
+    templates, and translated manpages from Yuri Kozlov
+    <y_kozlov@chat.ru>.
+  * Updated French translations of po file. Closes: #85758.
+  * Added Spanish translation of Debconf templates. Closes: #84412.
+  * Removed lintian overrides file.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Thu, 15 Feb 2001 19:33:35 -0600
+
 adduser (3.30) unstable; urgency=low
 
-  * Added French translation of Debconf template. Closes: #83253.
-  * Added Norwegian translation of Debconf template. Closes: #83351.
-  * Added Swedish translation of Debconf template. Closes: #83367.
+  * Added French translation of Debconf templates. Closes: #83253.
+  * Added Norwegian translation of Debconf templates. Closes: #83351.
+  * Added Swedish translation of Debconf templates. Closes: #83367.
 
  -- Roland Bauerschmidt <rb@debian.org>  Wed, 24 Jan 2001 16:57:06 -0600
 

@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.15\n"
+"Project-Id-Version: adduser 3.30\n"
 "POT-Creation-Date: 2000-07-26 16:41+0400\n"
-"PO-Revision-Date: 2000-07-26 21:22+0400\n"
+"PO-Revision-Date: 2001-02-08 19:20+0300\n"
 "Last-Translator: Peter Novodvorsky <petya@logic.ru>\n"
 "Language-Team: Debian-russian group <debian-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,35 +15,35 @@ msgstr ""
 
 #: ../adduser:113 ../deluser:104
 msgid "No options allowed after names.\n"
-msgstr "Не позволено вводить опций после имен.\n"
+msgstr "Нельзя указывать параметры после имён.\n"
 
 #: ../adduser:130
 msgid "--ingroup requires an argument.\n"
-msgstr "Опции --ingroup требуется агрумент.\n"
+msgstr "Для --ingroup требуется агрумент.\n"
 
 #: ../adduser:133
 msgid "--home requires an argument.\n"
-msgstr "Опции --home требуется аргумент.\n"
+msgstr "Для --home требуется аргумент.\n"
 
 #: ../adduser:135
 msgid "Warning: The home dir you specified already exists.\n"
-msgstr "Внимание: домашняя директория, которую вы указали, уже существует.\n"
+msgstr "Предупреждение: Заданный вами домашний каталог уже существует.\n"
 
 #: ../adduser:137
 msgid "The home dir must be an absolute path.\n"
-msgstr "Домашняя директория должна даваться в абсолютном виде.\n"
+msgstr "Домашний каталог должен задаваться в абсолютном виде.\n"
 
 #: ../adduser:144
 msgid "--uid requires a numeric argument.\n"
-msgstr "Опции --uid требуется численный аргумент.\n"
+msgstr "Для --uid требуется числовой аргумент.\n"
 
 #: ../adduser:147
 msgid "--gid requires a numeric argument.\n"
-msgstr "Опции --gid требуется численный аргумент.\n"
+msgstr "Для --gid требуется числовой аргумент.\n"
 
 #: ../adduser:150 ../deluser:127
 msgid "--conf requires an argument.\n"
-msgstr "Опции --conf требуется аргумент.\n"
+msgstr "Для --conf требуется аргумент.\n"
 
 #: ../adduser:152 ../deluser:129
 #, c-format
@@ -59,29 +59,25 @@ msgstr "`&s' -- неизвестный аргумент.\n"
 msgid "Only root may add a user or group to the system.\n"
 msgstr "Только root может добавлять пользователей и группы в систему.\n"
 
-#: ../adduser:170
-msgid "Enter a groupname to add: "
-msgstr "Введите группу, чтобы добавить: "
-
 #: ../adduser:174
 msgid "Enter a username to add: "
 msgstr "Введите имя пользователя, чтобы добавить: "
 
 #: ../adduser:179
 msgid "I need a name to add.\n"
-msgstr "Необходимо добваить имя.\n"
+msgstr "Необходимо имя для добавления.\n"
 
 #: ../adduser:180 ../deluser:176
 msgid "No more than two names.\n"
-msgstr "Нельзя больше двух имен.\n"
+msgstr "Нельзя задавать более двух имен.\n"
 
 #: ../adduser:182 ../deluser:180
 msgid "Specify only one name in this mode.\n"
-msgstr "В этом режиме укажите только одно имя.\n"
+msgstr "В этом режиме указывается только одно имя.\n"
 
 #: ../adduser:200
 msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
-msgstr "Опции --group, --ingroup и -gid взаимно исключительны.\n"
+msgstr "Опции --group, --ingroup и -gid являются взаимоисключающими.\n"
 
 #: ../adduser:233
 #, c-format
@@ -129,7 +125,7 @@ msgstr "Пользователь `%s' уже является членом группы %s.\n"
 #: ../adduser:273
 #, c-format
 msgid "Adding user %s to group %s...\n"
-msgstr "Пользователь %s добавляется в группу %s...\n"
+msgstr "Добавляется пользователь %s в группу %s...\n"
 
 #: ../adduser:297
 #, c-format
@@ -138,7 +134,7 @@ msgstr "Добавляется системный пользователь %s...\n"
 
 #: ../adduser:304 ../adduser:387
 msgid "No UID/GID pair is available in the range "
-msgstr "Нет пары UID/GID в границе "
+msgstr "Нет свободной пары UID/GID в границе "
 
 #: ../adduser:307 ../adduser:320 ../adduser:390 ../adduser:403
 #, c-format
@@ -169,12 +165,12 @@ msgstr "Домашний каталог %s уже существует.\n"
 
 #: ../adduser:355
 msgid "Not creating home directory.\n"
-msgstr "Не создается домашний каталог.\n"
+msgstr "Не удалось создать домашний каталог.\n"
 
 #: ../adduser:357 ../adduser:439
 #, c-format
 msgid "Creating home directory %s.\n"
-msgstr "Создается домашняя %s.\n"
+msgstr "Создаётся домашний каталог %s.\n"
 
 #: ../adduser:380
 #, c-format
@@ -189,7 +185,7 @@ msgstr "Добавляется новая группа %s (%s).\n"
 #: ../adduser:433
 #, c-format
 msgid "Home directory %s already exists.  Not copying from %s\n"
-msgstr "Домашний каталог %s уже существует. Не копируется из %s\n"
+msgstr "Домашний каталог %s уже существует. Не удалось копирование из %s\n"
 
 #: ../adduser:449
 #, c-format
@@ -203,7 +199,7 @@ msgstr "Эти сведения верны? [y/n] "
 #: ../adduser:478
 #, c-format
 msgid "Setting quota from %s.\n"
-msgstr "Делается квота от %s.\n"
+msgstr "Устанавливается квота от %s.\n"
 
 #: ../deluser:160
 msgid "Only root may remove a user or group from the system.\n"
