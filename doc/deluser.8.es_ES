@@ -10,29 +10,31 @@
 .\" (c) 2003 Software in the Public Interest
 .\" Esta traducción ha sido realizada por Rubén Porras Campo <nahoo@inicia.es>
 .\" Está basada en la página de manual original:
-.\" versión 1.1 del CVS de
+.\" versión 1.1 (+ adduser-3.52) del CVS de
 .\" /cvs/debian-doc/manpages/english/adduser/deluser.8
 
 .TH DELUSER 8 "Versión VERSION" "Debian GNU/Linux"
 .SH NOMBRE
 deluser, delgroup \- elimina un usuario o grupo del sistema
 .SH SINOPSIS
-.BR deluser " [opciones] [\-\-remove-home] [--remove-all-files] [\-\-backup] usuario"
+.BR deluser " [opciones] [\-\-remove-home] [--home DIR] [--remove-all-files] [\-\-backup] [\-\-backup-to] usuario"
 .PP
 .BR deluser " \-\-group [opciones] grupo"
 .br
-.BR delgroup " [opciones] grupo"
+.BR delgroup " [opciones] [\-\-only-if-empty] grupo"
 .PP
 .BR deluser " [opciones] usuario grupo"
 .SS OPCIONES COMUNES
 .br
-[\-\-quiet] [\-\-help] [\-\-version] [\-\-conf FICHERO]
+[\-\-quiet] [\-\-system] [[\-\-help] [\-\-version] [\-\-conf FICHERO]
 .SH DESCRIPCIÓN
 .PP
 .BR deluser " y " delgroup
 elimina usuarios y grupos del sistema de acuerdo a las opciones en línea de
 órdenes y a la configuración en
-.IR /etc/deluser.conf .
+.IR /etc/deluser.conf
+y
+.IR /etc/adduser.conf .
 Proporcionan una interfaz más amigable para los programas
 .BR userdel " y " groupdel
 , como opción se puede eliminar el directorio personal o incluso todos los
@@ -49,12 +51,18 @@ Por  omisión,
 .B deluser
 eliminará el usuario, pero no su directorio personal ni su directorio de correo
 (n.t. mail spool) o cualquier otro fichero del sistema perteneciente al usuario.
-El directorio personal puede eliminarse con la opción
-.B \-\-remove-home
-, el resto de los ficheros pertenecientes al usuario pueden eliminarse con la
-opción
-.B \-\-remove-all-files.
-Dese cuenta que si activa ambas opciones
+El directorio personal y el de correo pueden eliminarse con la opción
+.B \-\-remove-home .
+Si se usa la opción
+.B \-\-home
+, deluser sólo eliminará el usuario si el directorio dado a la opción
+.B \-\-home
+coincide con el directorio personal real del usuario.
+
+La opción
+.B \-\-remove-all-files
+elimina todos los ficheros pertenecientes al usuario en el sistema. Dese cuenta
+que si activa ambas opciones
 .B \-\-remove-home
 no tiene ningún efecto porque
 .B \-\-remove-all-files
@@ -63,9 +71,12 @@ es una opción más general.
 Si quiere hacer una copia de seguridad de todos los ficheros antes de
 eliminarlos use la opción
 .B \-\-backup
-que creará un fichero nombreusuario.tar(.gz|.bz2) en su directorio de trabajo
-actual. Ambas opciones, la de eliminación y la de copias de seguridad pueden
-especificarse como predeterminadas en el fichero /etc/deluser.conf. Consulte
+que creará un fichero nombreusuario.tar(.gz|.bz2) en el directorio especificado
+por la opción
+.B \-\-backup-to
+(el directorio de trabajo actual de forma predeterminada). Ambas opciones, la de
+eliminación y la de copias de seguridad pueden especificarse como
+predeterminadas en el fichero /etc/deluser.conf. Consulte
 .B deluser.conf(5)
 para más detalles.
 
@@ -78,13 +89,17 @@ son:
 .br
 nombreusuario uid gid directorio-personal
 
-.SS "Eliminar un grupo del sistema"
+.SS "Eliminar un grupo"
 Si se invoca
 .BR deluser " con la opción " \-\-group " , o se invoca" delgroup
-, se eliminará un grupo local.
+, se eliminará un grupo.
 
 Aviso: Si cualquier usuario tiene como grupo primario al grupo que se va a
 eliminar, éste no puede ser eliminado.
+
+Si se usa la opción
+.B \-\-only-if-empty
+, el grupo no se elimina en caso de que todavía tenga algún miembro.
 
 .SS "Eliminar un usuario de un grupo específico"
 Si se invoca con dos argumentos que no sean opciones,
@@ -106,6 +121,13 @@ Muestra unas instrucciones breves.
 .B \-\-quiet
 Elimina los mensajes de error.
 .TP
+.B \-\-system
+Sólo elimina si el usuario/grupo es un usuario/grupo del sistema. Esto evita
+borrar accidentalmente usuarios/grupos que no sean del sistema. Además, si el
+usuario no existe, no se devuelve ningún valor de error. Esta opción está
+principalmente para su uso en los scripts de desarrollador de paquetes de
+Debian.
+.TP
 .B \-\-version
 Muestra información acerca de la versión y copyright.
 .SH FICHEROS
@@ -114,7 +136,8 @@ Muestra información acerca de la versión y copyright.
 deluser.conf(5), adduser(8), userdel(8), groupdel(8)
 
 .SH COPYRIGHT
-Copyright (C) 2000 Roland Bauerschmidt.
+Copyright (C) 2000 Roland Bauerschmidt. Modificaciones (C) 2004
+Marc Haber.
 Esta página del manual y el programa deluser se basan en adduser, el cual es:
 .br
 Copyright (C) 1997, 1998, 1999 Guy Maor.

@@ -10,7 +10,7 @@
 .\" (c) 2003 Software in the Public Interest
 .\" Esta traducción ha sido realizada por Rubén Porras Campo <nahoo@inicia.es>
 .\" Está basada en la página de manual original:
-.\" versión 1.2 del CVS de
+.\" versión 1.2 (+ adduser-3.52) del CVS de
 .\" /cvs/debian-doc/manpages/english/adduser/adduser.8
 
 .TH ADDUSER 8 "Versión VERSION" "Debian GNU/Linux"
@@ -115,7 +115,8 @@ posible hacer ajustes locales. Los argumentos que se pasan a
 .B adduser.local
 son:
 .br
-usuario uid gid directorio-personal
+usuario uid gid directorio-personal, y las variables de entorno DEBUG y VERBOSE
+se establecerán de acuerdo con la configuración del programa maestro.
 .SS "Añadir un usuario normal"
 Si se invoca con un argumento que no es ninguna opción y la opción
 .BR \-\-system ", " adduser
@@ -155,9 +156,10 @@ fichero de configuración. El GID puede modificarse con la opción
 El grupo se creará sin usuarios.
 .SS "Añadir un grupo del sistema"
 Si se invoca
-.BR adduser " con la opciones " \-\-group " y
-.BR \-\-system ", o " addgroup " respectivamente, se añadirá un grupo del
-sistema.
+.BR adduser
+con la opción
+.BR \-\-system
+se añadirá un grupo del sistema.
 
 Se elegirá un GID dentro del rango especificado en el fichero de configuración
 para los UID de usuario. El GID puede especificarse con la opción
@@ -251,7 +253,8 @@ Muestra la versión e información acerca del copyright.
 adduser.conf(5), deluser(8), useradd(8), groupadd(8)
 
 .SH COPYRIGHT
-Copyright (C) 1997, 1998, 1999 Guy Maor.
+Copyright (C) 1997, 1998, 1999 Guy Maor. Modificaciones de Roland
+Bauerschmidt y Marc Haber.
 .br
 Copyright (C) 1995 Ted Hajek, con un gran aportación del
 .B adduser

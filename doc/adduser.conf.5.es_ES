@@ -7,15 +7,19 @@
 .\" (c) 2003 Software in the Public Interest
 .\" Esta traducción ha sido realizada por Rubén Porras Campo <nahoo@inicia.es>
 .\" Está basada en la página de manual original:
-.\" versión 1.1 del CVS de
+.\" versión 1.2 (+ adduser-3.52) del CVS de
 .\" /cvs/debian-doc/manpages/english/adduser/adduser.conf.5
 
 .TH "adduser.conf" 5 "Versión VERSION" "Debian GNU/Linux"
 .SH NOMBRE
 /etc/adduser.conf \- fichero de configuración para
-.B adduser(8) 
-y
-.BR addgroup(8) .
+.B adduser(8)
+,
+.B addgroup(8)
+,
+.B deluser(8)
+,
+.BR delgroup(8) .
 .SH DESCRIPCIÓN
 El fichero 
 .I /etc/adduser.conf
@@ -110,7 +114,7 @@ lo contrario. De todas formas, todavía puede activarlo aquí.
 .SH FICHEROS
 .I /etc/adduser.conf
 .SH VÉASE TAMBIÉN
-adduser(8)
+adduser(8), addgroup(8), deluser(8), delgroup(8)
 .SH TRADUCTOR
 Traducción de Rubén Porras Campo <debian-l10n-spanish@lists.debian.org>
 
