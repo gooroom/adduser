@@ -17,12 +17,14 @@ adduser (3.52.1) unstable; urgency=low
       Margaritis. Closes: #243555.
     * Updated Danish translations. Thanks to Morten Brix Pedersen.
       Closes: #243078.
+    * Updated German translations. Thanks to Florian Ernst. Closes:
+      #244091.
 
   * Roland Bauerschmidt:
     * Updated French translations. Thanks to Christian Perrier.
       Closes: #242773.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 19 Apr 2004 21:29:00 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 19 Apr 2004 21:38:17 +0200
 
 adduser (3.52) unstable; urgency=low
 
