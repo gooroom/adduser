@@ -1,0 +1,21 @@
+Template: adduser/homedir-permission
+Type: boolean
+Default: true
+Description: Do you want system wide readable home directories?
+ Normally, home directories can be viewed by all users on the system. If
+ you want to increase the security/privacy on your system, you might want
+ your home directories only readable by the  user. If you are unsure,
+ answer yes to enable system wide readable home directories.
+ .
+ This will only affect home directories of users added with the adduser
+ program later.
+Description-fr: Voulez-vous des répertoires personnels lisibles par tous ?
+ Les répertoires personnels sont habituellement lisibles par tous les
+ utilisateurs du système. Si vous voulez rendre votre système plus
+ sûr ou plus confidentiel, vous pouvez décider que les répertoires
+ personnels ne seront lisibles que par leur propriétaire. Si vous êtes
+ indécis, répondez « yes » pour avoir des répertoires personnels
+ lisibles par tous.
+ .
+ Cela ne concerne que les répertoires personnels des utilisateurs
+ qui seront ajoutés avec la commande adduser.

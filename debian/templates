@@ -19,12 +19,16 @@ Description-de: Möchten Sie System-weit lesbare Heimatverzeichnisse?
  .
  Dies hat nur einen Effekt für Benutzer, die mit dem Programm adduser
  später hinzugefügt werden.
-Description-fr: Voulez vous des répertoires personnels lisibles par tous ?
- Usuellement, les répertoires personnels sont lisibles par tous les utilisateurs
- du système. Si vous voulez rendre votre système plus sur/privé, vous
- pouvez choisir que les répertoires personnels ne soient lisibles que par leur
- propriétaire. Si vous n'êtes pas sur, répondez oui pour avoir des
- répertoires personnels lisibles par tous.
+Description-fr: Voulez-vous des répertoires personnels lisibles par tous ?
+ Les répertoires personnels sont habituellement lisibles par tous les
+ utilisateurs du système. Si vous voulez rendre votre système plus
+ sûr ou plus confidentiel, vous pouvez décider que les répertoires
+ personnels ne seront lisibles que par leur propriétaire. Si vous êtes
+ indécis, répondez « yes » pour avoir des répertoires personnels
+ lisibles par tous.
+ .
+ Cela ne concerne que les répertoires personnels des utilisateurs
+ qui seront ajoutés avec la commande adduser.
 Description-no: Ønsker du globalt lesbare hjemmekataloger?
  Normalt kan innholdet i hjemmekatalogene sees av alle brukerne på systemet.
  Hvis du ønsker økt sikkerhet/konfidensialitet på systemet ditt, kan det være

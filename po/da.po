@@ -1,334 +1,319 @@
-# adduser.
-# Copyright (C) 2000 Free Software Foundation, Inc.
-# Copyright (C) 2000 Peter Novodvorsky <nidd@debian.org>.
+# adduser
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Morten Brix Pedersen <morten@wtf.dk>, 2001
 #
-
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.30\n"
-"POT-Creation-Date: 2001-11-25 19:49+0300\n"
-"PO-Revision-Date: 2001-02-08 19:20+0300\n"
-"Last-Translator: Peter Novodvorsky <nidd@debian.org>\n"
-"Language-Team: Debian-russian group <debian-russian@lists.debian.org>\n"
+"Project-Id-Version: adduser 3.42\n"
+"POT-Creation-Date: 2001-09-17 15:06+0200\n"
+"PO-Revision-Date: 2001-07-29 15:44+0200\n"
+"Last-Translator: Morten Brix Pedersen <morten@wtf.dk>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=KOI8-R\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../adduser:114 ../deluser:91
 msgid "No options allowed after names.\n"
-msgstr "Нельзя указывать параметры после имён.\n"
+msgstr "Ingen tilvalgsmuligheder tilladt efter navne.\n"
 
 #: ../adduser:131
 msgid "--ingroup requires an argument.\n"
-msgstr "Для опции --ingroup требуется агрумент.\n"
+msgstr "--ingroup krФver et argument.\n"
 
 #: ../adduser:134
 msgid "--home requires an argument.\n"
-msgstr "Для опции --home требуется аргумент.\n"
+msgstr "--home krФver et argument.\n"
 
 #: ../adduser:136
 msgid "Warning: The home dir you specified already exists.\n"
-msgstr "Предупреждение: Заданный вами домашний каталог уже существует.\n"
+msgstr "Advarsel: Det hjemmekatalog du specificerede eksisterer allerede.\n"
 
 #: ../adduser:138
 msgid "The home dir must be an absolute path.\n"
-msgstr "Домашний каталог должен задаваться в абсолютном виде.\n"
+msgstr "Hjemmekataloget skal vФre en absolut sti.\n"
 
 #: ../adduser:141
-#, fuzzy
 msgid "--gecos requires an argument.\n"
-msgstr "Для опции --conf требуется аргумент.\n"
+msgstr "--gecos krФver et argument.\n"
 
 #: ../adduser:144
-#, fuzzy
 msgid "--shell requires an argument.\n"
-msgstr "Для опции --home требуется аргумент.\n"
+msgstr "--shell krФver et argument.\n"
 
 #: ../adduser:153
 msgid "--uid requires a numeric argument.\n"
-msgstr "Для опции --uid требуется числовой аргумент.\n"
+msgstr "--uid krФver et numerisk argument.\n"
 
 #: ../adduser:156
-#, fuzzy
 msgid "--firstuid requires a numeric argument.\n"
-msgstr "Для опции --uid требуется числовой аргумент.\n"
+msgstr "--firstuid krФver et numerisk argument.\n"
 
 #: ../adduser:159
-#, fuzzy
 msgid "--lastuid requires a numeric argument.\n"
-msgstr "Для опции --uid требуется числовой аргумент.\n"
+msgstr "--lastuid krФver et numerisk argument.\n"
 
 #: ../adduser:162
 msgid "--gid requires a numeric argument.\n"
-msgstr "Для опции --gid требуется числовой аргумент.\n"
+msgstr "--gid krФver et numerisk argument.\n"
 
 #: ../adduser:165 ../deluser:107
 msgid "--conf requires an argument.\n"
-msgstr "Для опции --conf требуется аргумент.\n"
+msgstr "--conf krФver et argument.\n"
 
 #: ../adduser:167 ../deluser:109
 #, c-format
 msgid "`%s' doesn't exist.\n"
-msgstr "`%s' не существует.\n"
+msgstr "`%s' eksisterer ikke.\n"
 
 #: ../adduser:174 ../deluser:118
 #, c-format
 msgid "Unknown argument `%s'.\n"
-msgstr "`%s' -- неизвестный аргумент.\n"
+msgstr "Ukendt argument `%s'.\n"
 
 #: ../adduser:180
 msgid "Only root may add a user or group to the system.\n"
-msgstr "Только root может добавлять пользователей и группы в систему.\n"
+msgstr "Kun root mЕ tilfЬje en bruger eller gruppe til systemet.\n"
 
 #: ../adduser:185
-#, fuzzy
 msgid "Enter a groupname to add: "
-msgstr "Имя учетной записи: "
+msgstr "Indtast gruppenavn der skal tilfЬjes: "
 
 #: ../adduser:189
 msgid "Enter a username to add: "
-msgstr "Имя учетной записи: "
+msgstr "Indtast brugernavn der skal tilfЬjes: "
 
 #: ../adduser:194
 msgid "I need a name to add.\n"
-msgstr "Необходимо ввести имя учетной записи.\n"
+msgstr "Jeg har brug for et navn at tilfЬje.\n"
 
 #: ../adduser:195 ../deluser:143
 msgid "No more than two names.\n"
-msgstr "Нельзя задавать более двух имен.\n"
+msgstr "Ikke mere end to navne.\n"
 
 #: ../adduser:197 ../deluser:146
 msgid "Specify only one name in this mode.\n"
-msgstr "В этом режиме указывается только одно имя.\n"
+msgstr "Specificer kun et navn i denne mode.\n"
 
 #: ../adduser:215
 msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
-msgstr "Опции --group, --ingroup и -gid являются взаимоисключающими.\n"
+msgstr ""
 
 #: ../adduser:248
 #, c-format
 msgid "The group `%s' already exists.\n"
-msgstr "Группа `%s' уже существует.\n"
+msgstr "Gruppen `%s' eksisterer allerede.\n"
 
 #: ../adduser:250
 #, c-format
 msgid "The GID `%s' is already in use.\n"
-msgstr "GID `%s' уже используется.\n"
+msgstr "GID'et `%s' er allerede i brug.\n"
 
 #: ../adduser:258
 msgid "No GID is available in the range "
-msgstr "Нет свободного GID в границах "
+msgstr "Intet GID er ledigt i omfanget "
 
 #: ../adduser:261
 #, c-format
 msgid "Group `%s' not created.\n"
-msgstr "Группа `%s' не создана.\n"
+msgstr "Gruppe `%s' ikke tilfЬjet.\n"
 
 #: ../adduser:265
 #, c-format
 msgid "Adding group %s (%s)...\n"
-msgstr "Добавляется группа %s (%s)...\n"
+msgstr "TIlfЬjer gruppe %s (%s)...\n"
 
 #: ../adduser:269 ../adduser:300
 msgid "Done.\n"
-msgstr "Готово.\n"
+msgstr "FФrdig.\n"
 
 #: ../adduser:278
 #, c-format
 msgid "The user `%s' doesn't exist.\n"
-msgstr "Пользователь `%s' не существует.\n"
+msgstr "Brugeren `%s' eksisterer ikke.\n"
 
 #: ../adduser:280
 #, c-format
 msgid "The group `%s' doesn't exist.\n"
-msgstr "Группа `%s' не существует.\n"
+msgstr "Gruppen `%s' eksisterer ikke.\n"
 
 #: ../adduser:283
 #, c-format
 msgid "The user `%s' is already a member of %s.\n"
-msgstr "Пользователь `%s' уже является членом группы %s.\n"
+msgstr "Brugeren `%s' er allerede et medlem af %s.\n"
 
 #: ../adduser:288
 #, c-format
 msgid "Adding user %s to group %s...\n"
-msgstr "Добавляется пользователь %s в группу %s...\n"
+msgstr "FЭge Benutzer %s in Gruppe %s hinzu...\n"
 
 #: ../adduser:315
-#, fuzzy, c-format
 msgid "User %s does already exist. Exiting...\n"
-msgstr "Группа `%s' уже существует.\n"
+msgstr "Bruger `%s' eksisterer allerede. Afslutter...\n"
 
 #: ../adduser:321
 #, c-format
 msgid "Adding system user %s...\n"
-msgstr "Добавляется системный пользователь %s...\n"
+msgstr "TilfЬjer system bruger %s...\n"
 
 #: ../adduser:328 ../adduser:415
 msgid "No UID/GID pair is available in the range "
-msgstr "Нет свободной пары UID/GID в границе "
+msgstr "Intet UID/GID par er ledigt i omfanget "
 
 #: ../adduser:331 ../adduser:344 ../adduser:418 ../adduser:431
 #, c-format
 msgid "User `%s' not created.\n"
-msgstr "Пользователь `%s' не создан.\n"
+msgstr "Bruger `%s' ikke tilfЬjet.\n"
 
 #: ../adduser:341 ../adduser:428
 msgid "No UID is available in the range "
-msgstr "Нет UID в границе "
+msgstr "Intet UID leidgt i omfanget "
 
 #: ../adduser:348 ../adduser:354 ../adduser:435 ../adduser:441
 msgid "Internal error"
-msgstr "Внутренняя ошибка"
+msgstr "Intern fejl"
 
 #: ../adduser:359
 msgid "Adding new group $new_name ($new_gid).\n"
-msgstr "Добавляется новая группа $new_name ($new_gid).\n"
+msgstr "TilfЬjer ny gruppe $new_name ($new_gid).\n"
 
 #: ../adduser:365 ../adduser:452
 #, c-format
 msgid "Adding new user %s (%s) with group %s.\n"
-msgstr "Добавляется новый пользователь %s (%s) с группой %s.\n"
+msgstr "TilfЬjer ny bruger %s (%s) med gruppe %s.\n"
 
 #: ../adduser:379
 msgid "Not creating home directory.\n"
-msgstr "Не удалось создать домашний каталог.\n"
+msgstr "Opretter ikke hjemmemappe.\n"
 
 #: ../adduser:381
 #, c-format
 msgid "Home directory %s already exists.\n"
-msgstr "Домашний каталог %s уже существует.\n"
+msgstr "Hjemmemappe %s eksisterer allerede.\n"
 
 #: ../adduser:383 ../adduser:468
 #, c-format
 msgid "Creating home directory %s.\n"
-msgstr "Создаётся домашний каталог %s.\n"
+msgstr "Opretter hjemmemappe %s.\n"
 
 #: ../adduser:408
 #, c-format
 msgid "Adding user %s...\n"
-msgstr "Добавляется пользователь %s...\n"
+msgstr "TilfЬjer bruger %s...\n"
 
 #: ../adduser:446
 #, c-format
 msgid "Adding new group %s (%s).\n"
-msgstr "Добавляется новая группа %s (%s).\n"
+msgstr "TilfЬjer ny gruppe %s (%s).\n"
 
 #: ../adduser:462
 #, c-format
 msgid "Home directory %s already exists.  Not copying from %s\n"
-msgstr "Домашний каталог %s уже существует. Не удалось копирование из %s\n"
+msgstr "Hjemme mappe %s eksisterer allerede. Kopierer ikke fra %s\n"
 
 #: ../adduser:478
 #, c-format
 msgid "Copying files from %s\n"
-msgstr "Копируются файлы из &s\n"
+msgstr "Kopierer filerne fra %s\n"
 
 #: ../adduser:504
 msgid "Is the information correct? [y/n] "
-msgstr "Эти сведения верны? [y/n] "
+msgstr "Er informationerne korrekte? [j/n] "
 
 #: ../adduser:506
 msgid "y"
-msgstr ""
+msgstr "j"
 
 #: ../adduser:511
 #, c-format
 msgid "Setting quota from %s.\n"
-msgstr "Устанавливается квота от %s.\n"
+msgstr "SФtter kvota fra %s.\n"
 
 #: ../deluser:130
 msgid "Only root may remove a user or group from the system.\n"
-msgstr ""
-"Только пользователь root имеет право удалять пользователей и группы из "
-"системы.\n"
+msgstr "Kun root mЕ fjerne en bruger eller gruppe fra systemet.\n"
 
 #: ../deluser:134
 msgid "Enter a groupname to remove: "
-msgstr "Введите имя группы, которую вы хотите удалить: "
+msgstr "Indtast gruppenavn der skal fjernes: "
 
 #: ../deluser:136
 msgid "Enter a username to remove: "
-msgstr "Введите имя пользователя, которого вы хотите удалить: "
+msgstr "Indtast brugernavn der skal fjernes: "
 
 #: ../deluser:142
 msgid "I need a name to remove.\n"
-msgstr "Для удаления требуется имя.\n"
+msgstr "Jeg har brug for et navn at fjerne.\n"
 
 #: ../deluser:191 ../deluser:251 ../deluser:267 ../deluser:270
 #, c-format
 msgid "`%s' does not exist.\n"
-msgstr "`%s' не существует.\n"
+msgstr "`%s' eksisterer ikke.\n"
 
 #: ../deluser:195
-#, fuzzy
 msgid "Looking for files to backup/remove...\n"
-msgstr "Идет поиск файлов для сохранения/удаления...\n"
+msgstr "Kigger efter filer til at backup/fjerne...\n"
 
 #: ../deluser:222
 msgid "Backuping files to be removed...\n"
-msgstr "Идет сохранение файлов, которые будут уничтожены...\n"
+msgstr "Backer filer op til at blive fjernet...\n"
 
 #: ../deluser:232
 msgid "Removing files...\n"
-msgstr "Идет удаление файлов...\n"
+msgstr "Fjerner filer...\n"
 
 #: ../deluser:240
 #, c-format
 msgid "Removing user %s...\n"
-msgstr "Удаляется пользователь %s...\n"
+msgstr "Fjerner bruger %s...\n"
 
 #: ../deluser:247 ../deluser:261 ../deluser:294
 msgid "done.\n"
-msgstr "готово.\n"
+msgstr "FФrdig.\n"
 
 #: ../deluser:255
 #, c-format
 msgid "There are users having `%s' as primary group!\n"
-msgstr "Существуют пользователи, использующие `%s' как первичную группу!\n"
+msgstr "Der er brugere der har %s som primФr gruppe!\n"
 
 #: ../deluser:258
 #, c-format
 msgid "Removing group %s...\n"
-msgstr "Удаляется группа %s...\n"
+msgstr "Fjerner gruppe %s...\n"
 
 #: ../deluser:273
 msgid "You may not remove the user from his/her primary group.\n"
-msgstr "Вы не можете удалять пользователя из его/ее первичной группы.\n"
+msgstr "Du mЕ ikke fjerne en bruger fra han/hendes primФre gruppe.\n"
 
 #: ../deluser:287
 #, c-format
 msgid "%s is not a member of group %s.\n"
-msgstr "%s не является членом группы %s.\n"
+msgstr "%s er ikke et medlem af gruppen %s.\n"
 
 #: ../deluser:290
 #, c-format
 msgid "Removing user %s from group %s...\n"
-msgstr "Удаляется пользователь %s из группы %s...\n"
+msgstr "Fjerner bruger %s fra gruppe %s...\n"
 
 #: ../deluser:301 ../deluser:320
 msgid "removing user and groups from the system. Version:"
-msgstr "удаление пользователей и групп из системы. Версия:"
+msgstr "fjerner bruger og grupper fra systemet. Version:"
 
 #: ../deluser:345
 #, c-format
 msgid "Global configuration is in the file %s.\n"
-msgstr "Глобальная конфигурация находится в файле %s.\n"
-
-#: ../AdduserCommon.pm:58
-msgid "@_"
-msgstr "@_"
+msgstr "Den globale konfigurations fil er i %s.\n"
 
 #: ../AdduserCommon.pm:78
 #, c-format
 msgid "%s: %s doesn't exist.  Using defaults.\n"
-msgstr "%s: %s не существует. Используются значения по умолчанию.\n"
+msgstr "%s: %s eksisterer ikke. Bruger standard.\n"
 
 #: ../AdduserCommon.pm:88
 #, c-format
 msgid "Couldn't parse %s:%s.\n"
-msgstr "Невозможно разобрать %s:%s.\n"
+msgstr "Kunne ikke fortolke %s:%s\n"
 
 #: ../AdduserCommon.pm:93
 #, c-format
 msgid "Unknown variable `%s' at %s:%s.\n"
-msgstr "Неизвестная переменная `%s' в %s:%s.\n"
+msgstr "Ukendt variabel `%s' pЕ %s:%s.\n"

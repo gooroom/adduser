@@ -1,3 +1,15 @@
+adduser (3.49) unstable; urgency=low
+
+  * Updated Standards-Version.
+  * Don't create /usr/doc symlink.
+  * Added Danish translation of the po file. Closes: #122670.
+  * Updated French translation of the Debconf template. Closes: #132381.
+  * Updated Russion translation of the po file. Closes: #121098.
+  * Added Catalan translation of the po file. Closes: #171800.
+  * Added French translation of adduser.conf manpage. Closes: #166084.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Tue, 24 Dec 2002 11:46:46 +0100
+
 adduser (3.48) unstable; urgency=low
 
   * Applied patch from Dagfinn Ilmari to honor --system when adding groups.

@@ -1,0 +1,341 @@
+# Catalan messages for adduser.
+# Copyright (C) 2002 Software in the Public Interest, Inc. and others.
+# This file is distributed under the same license as the adduser package.
+# Jordi Mallach <jordi@debian.org>, 2002.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: adduser 3.48\n"
+"POT-Creation-Date: 2002-12-05 01:11+0100\n"
+"PO-Revision-Date: 2002-12-05 01:43+0100\n"
+"Last-Translator: Jordi Mallach <jordi@debian.org>\n"
+"Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../adduser:125 ../deluser:99
+msgid "No options allowed after names.\n"
+msgstr "71 translated messages.\n"
+
+# "L'opció --foo requereix"? jm
+#: ../adduser:144
+msgid "--ingroup requires an argument.\n"
+msgstr "--ingroup requereix un argument.\n"
+
+#: ../adduser:147
+msgid "--home requires an argument.\n"
+msgstr "--home requereix un argument.\n"
+
+#: ../adduser:149
+msgid "Warning: The home dir you specified already exists.\n"
+msgstr "Avís: el directori personal que heu especificat ja existeix.\n"
+
+#: ../adduser:151
+msgid "The home dir must be an absolute path.\n"
+msgstr "El directori personal ha de ser una ruta absoluta.\n"
+
+#: ../adduser:154
+msgid "--gecos requires an argument.\n"
+msgstr "--gecos requereix un argument.\n"
+
+#: ../adduser:157
+msgid "--shell requires an argument.\n"
+msgstr "--shell requereix un argument.\n"
+
+#: ../adduser:166
+msgid "--uid requires a numeric argument.\n"
+msgstr "--uid requereix un argument numèric.\n"
+
+#: ../adduser:169
+msgid "--firstuid requires a numeric argument.\n"
+msgstr "--firstuid requereix un argument numèric.\n"
+
+#: ../adduser:172
+msgid "--lastuid requires a numeric argument.\n"
+msgstr "--lastuid requereix un argument numèric.\n"
+
+#: ../adduser:175
+msgid "--gid requires a numeric argument.\n"
+msgstr "--gid requereix un argument numèric.\n"
+
+#: ../adduser:178 ../deluser:115
+msgid "--conf requires an argument.\n"
+msgstr "--conf requereix un argument.\n"
+
+#: ../adduser:180 ../deluser:117
+#, c-format
+msgid "`%s' doesn't exist.\n"
+msgstr "«%s» no existeix.\n"
+
+#: ../adduser:187 ../deluser:126
+#, c-format
+msgid "Unknown argument `%s'.\n"
+msgstr "L'argument «%s» és desconegut.\n"
+
+#: ../adduser:193
+msgid "Only root may add a user or group to the system.\n"
+msgstr "Només el superusuari pot afegir un usuari o grup al sistema.\n"
+
+#: ../adduser:198
+msgid "Enter a groupname to add: "
+msgstr "Introduïu un nom de grup a afegir: "
+
+#: ../adduser:202
+msgid "Enter a username to add: "
+msgstr "Introduïu un nom d'usuari a afegir: "
+
+#: ../adduser:207
+msgid "I need a name to add.\n"
+msgstr "Es necessita un nom a afegir.\n"
+
+#: ../adduser:208 ../deluser:156
+msgid "No more than two names.\n"
+msgstr "No es poden especificar més de dos noms.\n"
+
+#: ../adduser:210 ../deluser:159
+msgid "Specify only one name in this mode.\n"
+msgstr "Especifiqueu només un nom en aquest mode.\n"
+
+#: ../adduser:231
+msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
+msgstr "Les opcions --group, --ingroup i --gid són mútuament exclusives.\n"
+
+#: ../adduser:267 ../adduser:297
+#, c-format
+msgid "The group `%s' already exists.\n"
+msgstr "El grup «%s» ja existeix.\n"
+
+#: ../adduser:269 ../adduser:299
+#, c-format
+msgid "The GID `%s' is already in use.\n"
+msgstr "El GID «%s» ja està en ús.\n"
+
+#: ../adduser:277 ../adduser:307
+msgid "No GID is available in the range "
+msgstr "No hi ha cap GID disponible en el rang "
+
+#: ../adduser:280 ../adduser:310
+#, c-format
+msgid "Group `%s' not created.\n"
+msgstr "No s'ha creat el grup «%s».\n"
+
+#: ../adduser:284 ../adduser:314
+#, c-format
+msgid "Adding group %s (%s)...\n"
+msgstr "S'està afegint el grup %s (%s)...\n"
+
+#: ../adduser:288 ../adduser:318 ../adduser:349
+msgid "Done.\n"
+msgstr "Fet.\n"
+
+#: ../adduser:327
+#, c-format
+msgid "The user `%s' doesn't exist.\n"
+msgstr "L'usuari «%s» no existeix.\n"
+
+#: ../adduser:329
+#, c-format
+msgid "The group `%s' doesn't exist.\n"
+msgstr "El grup «%s» no existeix.\n"
+
+#: ../adduser:332
+#, c-format
+msgid "The user `%s' is already a member of %s.\n"
+msgstr "L'usuari «%s» ja és membre de %s.\n"
+
+#: ../adduser:337
+#, c-format
+msgid "Adding user %s to group %s...\n"
+msgstr "S'està afegint l'usuari %s al grup %s...\n"
+
+#: ../adduser:364
+#, c-format
+msgid "User %s does already exist. Exiting...\n"
+msgstr "L'usuari %s ja existeix. S'està eixint...\n"
+
+#: ../adduser:370
+#, c-format
+msgid "Adding system user %s...\n"
+msgstr "S'està afegint l'usuari del sistema %s...\n"
+
+#: ../adduser:377 ../adduser:464
+msgid "No UID/GID pair is available in the range "
+msgstr "No hi ha cap parella UID/GID disponible en el rang "
+
+#: ../adduser:380 ../adduser:393 ../adduser:467 ../adduser:480
+#, c-format
+msgid "User `%s' not created.\n"
+msgstr "L'usuari «%s» no s'ha creat.\n"
+
+#: ../adduser:390 ../adduser:477
+msgid "No UID is available in the range "
+msgstr "No hi ha cap UID disponible en el rang "
+
+# Jo Tarzan, tú Jane? jm (dedicat a ivb :)
+# Bah, ho canvie... jm
+#: ../adduser:397 ../adduser:403 ../adduser:484 ../adduser:490
+msgid "Internal error"
+msgstr "S'ha produït un error intern"
+
+#: ../adduser:408
+msgid "Adding new group $new_name ($new_gid).\n"
+msgstr "S'està afegint el nou grup $new_name ($new_gid).\n"
+
+#: ../adduser:414 ../adduser:501
+#, c-format
+msgid "Adding new user %s (%s) with group %s.\n"
+msgstr "S'està afegint el nou usuari %s (%s) amb grup %s.\n"
+
+# "No s'ha creat"? jm
+#: ../adduser:428
+msgid "Not creating home directory.\n"
+msgstr "No es crearà el directori personal.\n"
+
+#: ../adduser:430
+#, c-format
+msgid "Home directory %s already exists.\n"
+msgstr "El directori personal %s ja existeix.\n"
+
+#: ../adduser:432 ../adduser:517
+#, c-format
+msgid "Creating home directory %s.\n"
+msgstr "S'està creant el directori personal %s.\n"
+
+#: ../adduser:457
+#, c-format
+msgid "Adding user %s...\n"
+msgstr "S'està afegint l'usuari %s...\n"
+
+#: ../adduser:495
+#, c-format
+msgid "Adding new group %s (%s).\n"
+msgstr "S'està afegint el nou grup %s (%s).\n"
+
+#: ../adduser:511
+#, c-format
+msgid "Home directory %s already exists.  Not copying from %s\n"
+msgstr "El directori personal %s ja existeix. No es copiarà des de %s\n"
+
+#: ../adduser:527
+#, c-format
+msgid "Copying files from %s\n"
+msgstr "S'estan copiant els fitxers des de %s\n"
+
+#: ../adduser:553
+msgid "Is the information correct? [y/n] "
+msgstr "És aquesta informació correcta? [s/n] "
+
+#: ../adduser:555
+msgid "y"
+msgstr "s"
+
+#: ../adduser:560
+#, c-format
+msgid "Setting quota from %s.\n"
+msgstr "S'està establint la quota des de %s.\n"
+
+#: ../deluser:140
+msgid ""
+"In order to use the --remove-home, --remove-all-files, and --backup "
+"features,\n"
+"you need to install the `perl-modules' package. To accomplish that, run\n"
+"apt-get install perl-modules\n"
+msgstr ""
+"Per a utilitzar les funcionalitats --remove-home, --remove-all-files i --backup\n"
+"teniu que instal·lar el paquet «perl-modules». Per a fer açò, executeu\n"
+"apt-get install perl-modules\n"
+
+#: ../deluser:143
+msgid "Only root may remove a user or group from the system.\n"
+msgstr "Només el superusuari pot eliminar un usuari o grup del sistema.\n"
+
+#: ../deluser:147
+msgid "Enter a groupname to remove: "
+msgstr "Introduïu el nom del grup a eliminar: "
+
+#: ../deluser:149
+msgid "Enter a username to remove: "
+msgstr "Introduïu el nom de l'usuari a eliminar: "
+
+#: ../deluser:155
+msgid "I need a name to remove.\n"
+msgstr "Es necessita un nom a eliminar.\n"
+
+#: ../deluser:204 ../deluser:265 ../deluser:281 ../deluser:284
+#, c-format
+msgid "`%s' does not exist.\n"
+msgstr "«%s» no existeix.\n"
+
+#: ../deluser:208
+msgid "Looking for files to backup/remove...\n"
+msgstr "S'estan cercant fitxers a desar/eliminar...\n"
+
+#: ../deluser:236
+msgid "Backuping files to be removed...\n"
+msgstr "S'està fent una còpia de seguretat dels fitxers a eliminar...\n"
+
+#: ../deluser:246
+msgid "Removing files...\n"
+msgstr "S'estan eliminant els fitxers...\n"
+
+#: ../deluser:254
+#, c-format
+msgid "Removing user %s...\n"
+msgstr "S'està eliminant l'usuari %s...\n"
+
+#: ../deluser:261 ../deluser:275 ../deluser:308
+msgid "done.\n"
+msgstr "fet.\n"
+
+#: ../deluser:269
+#, c-format
+msgid "There are users having `%s' as primary group!\n"
+msgstr "Hi ha usuaris amb «%s» com el grup primari!\n"
+
+#: ../deluser:272
+#, c-format
+msgid "Removing group %s...\n"
+msgstr "S'està eliminant el grup %s...\n"
+
+#: ../deluser:287
+msgid "You may not remove the user from his/her primary group.\n"
+msgstr "No podeu eliminar a l'usuari del seu grup primari.\n"
+
+#: ../deluser:301
+#, c-format
+msgid "%s is not a member of group %s.\n"
+msgstr "%s no és membre del grup %s.\n"
+
+#: ../deluser:304
+#, c-format
+msgid "Removing user %s from group %s...\n"
+msgstr "S'està eliminant l'usuari %s del grup %s...\n"
+
+#: ../deluser:315 ../deluser:334
+msgid "removing user and groups from the system. Version:"
+msgstr "elimina usuaris i grups del sistema. Versió:"
+
+#: ../deluser:359
+#, c-format
+msgid "Global configuration is in the file %s.\n"
+msgstr "La configuració global està en el fitxer %s.\n"
+
+#: ../AdduserCommon.pm:58
+msgid "@_"
+msgstr "@_"
+
+#: ../AdduserCommon.pm:78
+#, c-format
+msgid "%s: %s doesn't exist.  Using defaults.\n"
+msgstr "%s: %s no existeix. S'utilitzaran els valors per defecte.\n"
+
+#: ../AdduserCommon.pm:88
+#, c-format
+msgid "Couldn't parse %s:%s.\n"
+msgstr "No s'ha pogut analitzar %s:%s.\n"
+
+#: ../AdduserCommon.pm:93
+#, c-format
+msgid "Unknown variable `%s' at %s:%s.\n"
+msgstr "La variable «%s» en %s:%s és desconeguda.\n"

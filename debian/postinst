@@ -1,11 +1,5 @@
 #!/bin/sh -e
 
-if [ "$1" = "configure" ]; then
-	if [ -d /usr/doc -a ! -e /usr/doc/adduser -a -d /usr/share/doc/adduser ]; then
-		ln -sf ../share/doc/adduser /usr/doc/adduser
-	fi
-fi
-
 # create an initial adduser configfile if it does not exist yet
 if [ ! -e "/etc/adduser.conf" ]; then
 	cp /usr/share/doc/adduser/examples/adduser.conf /etc/adduser.conf
