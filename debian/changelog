@@ -1,3 +1,12 @@
+adduser (3.27) unstable; urgency=low
+
+  * Fixed nscd variable scope problem: $nscd, holding the path to the
+    nscd binary was defined 'my' inside an if-construct.
+  * Type in manpage deluser.8 fixed and some a sentence on how the
+    compression method is chosen in deluser added to deluser.conf.5
+
+ -- Roland Bauerschmidt <rb@debian.org>  Wed, 20 Dec 2000 23:57:17 -0600
+
 adduser (3.26) unstable; urgency=low
 
   * deluser: when using remove_all_files and backup, deluser does not
@@ -381,4 +390,5 @@ Mon Oct 23 22:16:19 1995  Sven Rudolph  <sr1@inf.tu-dresden.de>
 
 Local variables:
 mode: debian-changelog
+add-log-mailing-address: "rb@debian.org"
 End:

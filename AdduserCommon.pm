@@ -13,13 +13,14 @@ use vars qw(@EXPORT $VAR1);
 @EXPORT = qw(invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf);
 
 sub invalidate_nscd {
+    my $nscd;
     if(-e "/usr/sbin/nscd")
       {
-        my $nscd = "/usr/sbin/nscd";
+        $nscd = "/usr/sbin/nscd";
       }
     elsif(-e "/usr/bin/nscd")
       {
-        my $nscd = "/usr/bin/nscd";
+        $nscd = "/usr/bin/nscd";
       }
     else
       {
