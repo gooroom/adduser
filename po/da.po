@@ -1,13 +1,13 @@
 # adduser
 # Copyright (C) 2001 Free Software Foundation, Inc.
-# Morten Brix Pedersen <morten@wtf.dk>, 2001
+# Morten Brix Pedersen <morten@wtf.dk>, 2001-2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.52\n"
+"Project-Id-Version: adduser 3.58\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-06 14:47+0100\n"
-"PO-Revision-Date: 2004-04-10 20:50+0200\n"
+"PO-Revision-Date: 2004-07-30 16:52+0200\n"
 "Last-Translator: Morten Brix Pedersen <morten@wtf.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr "Gruppen `%s' eksisterer allerede.\n"
 #: ../adduser:269 ../adduser:299
 #, perl-format
 msgid "The GID %s is already in use.\n"
-msgstr "GID'et `%s' er allerede i brug.\n"
+msgstr "GID'et %s er allerede i brug.\n"
 
 #: ../adduser:277 ../adduser:307
 msgid "No GID is available in the range "
@@ -122,7 +122,7 @@ msgstr "Gruppe `%s' ikke tilføjet.\n"
 #: ../adduser:284 ../adduser:314
 #, perl-format
 msgid "Adding group %s (%s)...\n"
-msgstr "TIlføjer gruppe %s (%s)...\n"
+msgstr "Tilføjer gruppe %s (%s)...\n"
 
 #: ../adduser:288 ../adduser:318 ../adduser:349
 msgid "Done.\n"
@@ -141,12 +141,12 @@ msgstr "Gruppen `%s' eksisterer ikke.\n"
 #: ../adduser:332
 #, perl-format
 msgid "The user `%s' is already a member of `%s'.\n"
-msgstr "Brugeren `%s' er allerede et medlem af %s.\n"
+msgstr "Brugeren `%s' er allerede et medlem af `%s'.\n"
 
 #: ../adduser:337
 #, perl-format
 msgid "Adding user `%s' to group `%s'...\n"
-msgstr "Füge Benutzer %s in Gruppe %s hinzu...\n"
+msgstr "Tilføjer bruger `%s' til gruppen `%s'...\n"
 
 #: ../adduser:364
 #, perl-format
@@ -156,7 +156,7 @@ msgstr "Bruger `%s' eksisterer allerede. Afslutter...\n"
 #: ../adduser:370
 #, perl-format
 msgid "Adding system user `%s'...\n"
-msgstr "Tilføjer system bruger %s...\n"
+msgstr "Tilføjer system bruger `%s'...\n"
 
 #: ../adduser:377 ../adduser:464
 msgid "No UID/GID pair is available in the range "
@@ -197,22 +197,22 @@ msgstr "Hjemmemappe %s eksisterer allerede.\n"
 #: ../adduser:432 ../adduser:517
 #, perl-format
 msgid "Creating home directory `%s'.\n"
-msgstr "Opretter hjemmemappe %s.\n"
+msgstr "Opretter hjemmemappe `%s'.\n"
 
 #: ../adduser:457
 #, perl-format
 msgid "Adding user `%s'...\n"
-msgstr "Tilføjer bruger %s...\n"
+msgstr "Tilføjer bruger `%s'...\n"
 
 #: ../adduser:511
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
-msgstr "Hjemme mappe %s eksisterer allerede. Kopierer ikke fra %s\n"
+msgstr "Hjemmemappe `%s' eksisterer allerede. Kopierer ikke fra `%s'\n"
 
 #: ../adduser:527
 #, perl-format
 msgid "Copying files from `%s'\n"
-msgstr "Kopierer filerne fra %s\n"
+msgstr "Kopierer filerne fra `%s'\n"
 
 #: ../adduser:553
 msgid "Is the information correct? [y/N] "
@@ -225,7 +225,7 @@ msgstr "j"
 #: ../adduser:560
 #, perl-format
 msgid "Setting quota from `%s'.\n"
-msgstr "Sætter kvota fra %s.\n"
+msgstr "Sætter kvota fra `%s'.\n"
 
 #: ../adduser:599
 #, perl-format
@@ -245,7 +245,7 @@ msgstr "GID `%s' eksisterer allerede.\n"
 #: ../adduser:611
 #, perl-format
 msgid "The GID %s does not exist.\n"
-msgstr "BID `%s' eksisterer ikke.\n"
+msgstr "GID %s eksisterer ikke.\n"
 
 #: ../adduser:656
 msgid ""
@@ -391,7 +391,7 @@ msgstr "Fjerner filer...\n"
 #: ../deluser:254
 #, perl-format
 msgid "Removing user `%s'...\n"
-msgstr "Fjerner bruger %s...\n"
+msgstr "Fjerner bruger `%s'...\n"
 
 #: ../deluser:261 ../deluser:275 ../deluser:308
 msgid "done.\n"
@@ -400,12 +400,12 @@ msgstr "Færdig.\n"
 #: ../deluser:269
 #, perl-format
 msgid "There are users with `%s' as their primary group!\n"
-msgstr "Der er brugere der har %s som primær gruppe!\n"
+msgstr "Der er brugere med `%s' som deres primær gruppe!\n"
 
 #: ../deluser:272
 #, perl-format
 msgid "Removing group `%s'...\n"
-msgstr "Fjerner gruppe %s...\n"
+msgstr "Fjerner gruppe `%s'...\n"
 
 #: ../deluser:287
 msgid "You may not remove the user from his/her primary group.\n"
@@ -414,12 +414,12 @@ msgstr "Du må ikke fjerne en bruger fra han/hendes primære gruppe.\n"
 #: ../deluser:301
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
-msgstr "%s er ikke et medlem af gruppen %s.\n"
+msgstr "Brugeren `%s' er ikke et medlem af gruppen `%s'.\n"
 
 #: ../deluser:304
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
-msgstr "Fjerner bruger %s fra gruppe %s...\n"
+msgstr "Fjerner bruger `%s' fra gruppe `%s'...\n"
 
 #: ../deluser:315 ../deluser:334
 msgid "removing user and groups from the system. Version:"
