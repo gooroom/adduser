@@ -17,7 +17,7 @@
 .SH NOMBRE
 deluser, delgroup \- elimina un usuario o grupo del sistema
 .SH SINOPSIS
-.BR deluser " [opciones] [\-\-remove-home] [--home DIR] [--remove-all-files] [\-\-backup] [\-\-backup-to] usuario"
+.BR deluser " [opciones] [\-\-remove-home] [\-\-home DIR] [\-\-remove-all-files] [\-\-backup] [\-\-backup-to] usuario"
 .PP
 .BR deluser " \-\-group [opciones] grupo"
 .br

@@ -17,17 +17,17 @@
 .SH NOMBRE
 adduser, addgroup \- añade un usuario o grupo al sistema
 .SH SINOPSIS
-.BR adduser " [opciones] [\-\-home DIR] [\-\-shell SHELL] [--no-create-home] [\-\-uid ID] [\-\-firstuid ID] [\-\-lastuid ID] [\-\-ingroup GRUPO | \-\-gid ID] [--disabled-password] [--disabled-login] [--gecos GECOS] usuario"
+.BR adduser " [opciones] [\-\-home DIR] [\-\-shell SHELL] [\-\-no-create-home] [\-\-uid ID] [\-\-firstuid ID] [\-\-lastuid ID] [\-\-ingroup GRUPO | \-\-gid ID] [\-\-disabled-password] [\-\-disabled-login] [\-\-gecos GECOS] usuario"
 .PP
-.BR adduser " \-\-system [opciones] [\-\-home DIR] [\-\-shell SHELL] [--no-create-home] [\-\-uid ID] [\-\-group | \-\-ingroup GRUPO | \-\-gid ID] [--disabled-password] [--disabled-login] [--gecos GECOS] usuario"
+.BR adduser " \-\-system [opciones] [\-\-home DIR] [\-\-shell SHELL] [\-\-no-create-home] [\-\-uid ID] [\-\-group | \-\-ingroup GRUPO | \-\-gid ID] [\-\-disabled-password] [\-\-disabled-login] [\-\-gecos GECOS] usuario"
 .PP
-.BR adduser " \-\-group [opciones] [--gid ID] grupo"
+.BR adduser " \-\-group [opciones] [\-\-gid ID] grupo"
 .br
-.BR addgroup " [opciones] [--gid ID] grupo"
+.BR addgroup " [opciones] [\-\-gid ID] grupo"
 .PP
-.BR adduser " \-\-group \-\-system [opciones] [--gid ID] grupo"
+.BR adduser " \-\-group \-\-system [opciones] [\-\-gid ID] grupo"
 .br
-.BR addgroup " \-\-system [opciones] [--gid ID] grupo"
+.BR addgroup " \-\-system [opciones] [\-\-gid ID] grupo"
 .PP
 .BR adduser " [opciones] usuario grupo"
 .SS OPCIONES COMUNES

@@ -175,7 +175,7 @@ while (defined($arg = shift(@ARGV))) {
     } elsif ($arg eq "--conf") {
 	die "$0: ",_("--conf requires an argument.\n")
 	    if (!defined($defaults = shift(@ARGV)));
-	dief (_("`%s' doesn't exist.\n",$defaults))
+	dief (_("`%s' does not exist.\n",$defaults))
 	    if (! -f $defaults);
     } elsif ($arg eq "--no-create-home") {
 	$no_create_home = 1;
