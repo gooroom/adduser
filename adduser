@@ -5,7 +5,7 @@
 # adduser: a utility to add users to the system
 # addgroup: a utility to add groups to the system
 
-# Copyright (C) 1997 Guy Maor <maor@debian.org>
+# Copyright (C) 1997, 1998, 1999 Guy Maor <maor@debian.org>
 # Copyright (C) 1995 Ted Hajek <tedhajek@boombox.micro.umn.edu>
 #                     Ian A. Murdock <imurdock@gnu.ai.mit.edu>
 # General scheme of the program adapted by the original debian 'adduser'
@@ -30,7 +30,7 @@
 # the program can be called as:
 #
 #  adduser [--home DIR] [--uid ID] [--ingroup GROUP | --gid ID]
-#  [--disabled-password] [--gecos GECOS] user
+#  [--disabled-password] [--gecos GECOS] [--no-create-home] user
 #      add a normal user to the system
 #      example: adduser fred
 #      $action = "adduser"
@@ -42,7 +42,7 @@
 #      $action = "addgroup"
 #
 #  adduser --system [--home DIR] [--uid ID] [--group | --ingroup GROUP
-#  | --gid ID] [--disabled-password] [--gecos GECOS] user
+#  | --gid ID] [--disabled-password] [--gecos GECOS] [--no-create-home] user
 #      add a system user.  Create a like-named, like-id'd group with
 #      --group, add to an existing group with --ingroup or --gid.  Add
 #      to "nogroup" with neither.
@@ -61,6 +61,25 @@
 #      --conf FILE      use FILE instead of /etc/adduser.conf
 ############
 
+BEGIN {
+    eval 'use Locale::gettext';
+    if ($@) {
+	*gettext = sub { shift };
+	*textdomain = sub { "" };
+	*LC_MESSAGES = sub { 5 };
+    }
+    eval {
+	require POSIX;
+	import POSIX qw(setlocale);
+    };
+    if ($@) {
+	*setlocale = sub { 1 };
+    }
+}
+
+setlocale(LC_MESSAGES, "");
+textdomain("adduser");
+
 $verbose = 1;			# should we be verbose?
 $allow_badname = 0;		# should we allow bad names?
 $ask_passwd = 1;		# ask for a passwd?
@@ -68,6 +87,7 @@ $ask_passwd = 1;		# ask for a passwd?
 $defaults = "/etc/adduser.conf";
 $nogroup_id = getgrnam("nogroup") || 65534;
 $0 =~ s+.*/++; 
+$nscdinit = "/etc/init.d/nscd";
 
 $config{"dshell"} = "/bin/bash";
 $config{"first_system_uid"} = 100;
@@ -85,7 +105,7 @@ $config{"quotauser"} = "";
 $action = $0 eq "addgroup" ? "addgroup" : "adduser";
 
 while ($arg = shift(@ARGV)) {
-    die "$0: No options allowed after names.\n" 
+    die "$0: ",_("No options allowed after names.\n") 
 	if ($names[0] && $arg =~ /^--/);
     if ($arg eq "--quiet") {
 	$verbose = 0;
@@ -98,49 +118,56 @@ while ($arg = shift(@ARGV)) {
 	&version();
 	exit 0;
     } elsif ($arg eq "--system") {
-	$action = "addsysuser";
+	$action = "addsysuser" if ($action eq "adduser");
     } elsif ($arg eq "--group") {
 	$found_group_opt = 1;
     } elsif ($arg eq "--ingroup") {
-	die "$0: --ingroup requires an argument.\n"
+	die "$0: ",_("--ingroup requires an argument.\n")
 	    if (!($ingroup_name = shift(@ARGV)));
     } elsif ($arg eq "--home") {
-	die "$0: --home requires an argument.\n"
+	die "$0: ",_("--home requires an argument.\n")
 	    if (!($special_home = shift(@ARGV)));
-	print "$0: Warning: The home dir you specified already exists.\n"
+	print "$0: ",_("Warning: The home dir you specified already exists.\n")
 	    if (-d $special_home && $verbose);
-	die "$0: The home dir must be an absolute path.\n"
+	die "$0: ",_("The home dir must be an absolute path.\n")
 	    if ($special_home !~ m+^/+ );
     } elsif ($arg eq "--gecos") {
 	$new_gecos = shift(@ARGV);
     } elsif ($arg eq "--disabled-password") {
 	$ask_passwd = 0;
     } elsif ($arg eq "--uid") {
-	die "$0: --uid requires a numeric argument.\n"
-	    if (!($new_uid = shift(@ARGV)) || $new_uid !~ /^\d+$/);
+	die "$0: ",_("--uid requires a numeric argument.\n")
+	    if (!($new_uid = shift(@ARGV)) || $new_uid !~ /^\-?\d+$/);
     } elsif ($arg eq "--gid") {
-	die "$0: --gid requires a numeric argument.\n"
-	    if (!($new_gid = shift(@ARGV)) || $new_gid !~ /^\d+$/);
+	die "$0: ",_("--gid requires a numeric argument.\n")
+	    if (!($new_gid = shift(@ARGV)) || $new_gid !~ /^\-?\d+$/);
     } elsif ($arg eq "--conf") {
-	die "$0: --conf requires an argument.\n"
+	die "$0: ",_("--conf requires an argument.\n")
 	    if (!($defaults = shift(@ARGV)));
-	die "$0: `$defaults' doesn't exist.\n"
+	dief (_("`%s' doesn't exist.\n",$defaults))
 	    if (! -f $defaults);
+    } elsif ($arg eq "--no-create-home") {
+	$no_create_home = 1;
     } elsif ($arg eq "--debug") {
 	$debugging = 1;
     } elsif ($arg =~ /^--/) {	# bad argument!
-	die "$0: Unknown argument `$arg'.\n";
+	dief (_("Unknown argument `%s'.\n"),$arg);
     } else {			# it's a username
 	push (@names, $arg);
     }
 }
 
-die "$0: Only root may add a user or group to the system.\n" if ($> != 0);
+die "$0: ",_("Only root may add a user or group to the system.\n") if ($> != 0);
 
-die "$0: I need a name to add.\n" if (@names == 0);
-die "$0: No more than two names.\n" if (@names > 2);
+if (@names == 0) {
+    print _("Enter a username to add: ");
+    chop($answer=<STDIN>);
+    push(@names, $answer);
+}
+die "$0: ",_("I need a name to add.\n") if (length($names[0]) == 0);
+die "$0: ",_("No more than two names.\n") if (@names > 2);
 if (@names == 2) {	# must be addusertogroup
-    die "$0: Specify only one name in this mode.\n"
+    die "$0: ",_("Specify only one name in this mode.\n")
 	if ($action eq "addsysuser" || $found_group_opt);
     $action = "addusertogroup";
     $existing_user = shift (@names);
@@ -158,7 +185,7 @@ if ($found_group_opt) {
 	$action = "addgroup";
     }
 }
-die "$0: --group, --ingroup, and --gid options are mutually exclusive.\n" if
+die "$0: ",_("--group, --ingroup, and --gid options are mutually exclusive.\n") if
     ($action ne "addgroup" &&
      defined($found_group_opt) +defined($ingroup_name) +defined($new_gid) > 1);
 
@@ -191,23 +218,28 @@ $SIG{'INT'} = $SIG{'QUIT'} = $SIG{'HUP'} = 'handler';
 ## addgroup ##
 ##############
 if ($action eq "addgroup") {
-    die "$0: The group `$new_name' already exists.\n"
+    dief (_("The group `%s' already exists.\n"),$new_name)
 	if (getgrnam($new_name));
-    die "$0: The GID `$new_gid' is already in use.\n"
+    dief (_("The GID `%s' is already in use.\n"),$new_gid)
 	if (defined($new_gid) && getgrgid($new_gid));
     if (!defined($new_gid)) {
         $new_gid = &first_avail_id($config{"first_system_uid"},
 				   $config{"last_system_uid"},
 				   &get_current_gids);
-	die "$0: No GID is available in the range ",
-	"$config{\"first_system_uid\"} - $config{\"last_system_uid\"}\n",
-	"(FIRST_SYS_UID - LAST_SYS_UID).  ",
-	"Group `$new_name' not created.\n" if ($new_gid == -1);
+        
+        if ($new_gid == -1) {
+            print STDERR "$0: ",_("No GID is available in the range "),
+            "$config{\"first_system_uid\"} - $config{\"last_system_uid\"}\n",
+            "(FIRST_SYS_UID - LAST_SYS_UID).  ";
+            dief (_("Group `%s' not created.\n"),$new_name);
+        }
     }
 
-    print "Adding group $new_name ($new_gid)...\n" if $verbose;
+    printf (_("Adding group %s (%s)...\n"),$new_name,$new_gid) if $verbose;
+    &stopnscd();
     &systemcall('groupadd', '-g', $new_gid, $new_name);
-    print "Done.\n" if $verbose;
+    &startnscd();
+    print _("Done.\n") if $verbose;
     exit 0;
 }
 
@@ -216,22 +248,25 @@ if ($action eq "addgroup") {
 ## addusertogroup ##
 ####################
 elsif ($action eq "addusertogroup") {
-    die "$0: The user `$existing_user' doesn't exist.\n"
+    dief (_("The user `%s' doesn't exist.\n"),$existing_user)
 	if (!getpwnam($existing_user));
-    die "$0: The group `$existing_group' doesn't exist.\n"
+    dief (_("The group `%s' doesn't exist.\n"),$existing_group)
 	if (!getgrnam($existing_group));
     if (&user_is_member($existing_user, $existing_group)) {
-	print "The user `$existing_user' is already a member of ",
-	"`$existing_group'.\n" if $verbose;
+	printf _("The user `%s' is already a member of %s.\n"),
+                $existing_user,$existing_group if $verbose;
 	exit 0;			# not really an error
     }
 
-    print "Adding user $existing_user to group $existing_group...\n"
+    printf _("Adding user %s to group %s...\n"),$existing_user,$existing_group
 	if $verbose;
+    &stopnscd();
+    # FIXME - the next line has a race condition.
     &systemcall('usermod', '-G',
 		join(",", get_users_groups($existing_user), $existing_group), 
 		$existing_user);
-    print "Done.\n" if $verbose;
+    &startnscd();
+    print _("Done.\n") if $verbose;
     exit 0;
 }
 
@@ -243,56 +278,64 @@ elsif ($action eq "addsysuser") {
     $new_gid = $nogroup_id
 	if (!$ingroup_name && !defined($new_gid) && !$make_group_also);
     &check_user_group();
-    print "Adding system user $new_name...\n" if $verbose;
+    printf (_("Adding system user %s...\n"),$new_name) if $verbose;
 
     if (!defined($new_uid) && $make_group_also) {
 	$new_uid = &first_avail_id($config{"first_system_uid"},
 				   $config{"last_system_uid"},
 				   &get_current_uids, &get_current_gids);
-	die "$0: No UID/GID pair is available in the range ",
-	"$config{\"first_system_uid\"} - $config{\"last_system_uid\"}\n",
-	"(FIRST_SYS_UID - LAST_SYS_UID).  ",
-	"User `$new_name' not created.\n" if ($new_uid == -1);
-	$new_gid = $new_uid;
+        if ($new_uid == -1) {
+            print STDERR "$0: ",_("No UID/GID pair is available in the range "),
+            "$config{\"first_system_uid\"} - $config{\"last_system_uid\"}\n",
+            "(FIRST_SYS_UID - LAST_SYS_UID).  ";
+            dief (_("User `%s' not created.\n"),$new_name);
+        }
+        $new_gid = $new_uid;
 	$ingroup_name = $new_name;
     }
     elsif (!defined($new_uid) && !$make_group_also) {
 	$new_uid = &first_avail_id($config{"first_system_uid"},
 				   $config{"last_system_uid"},
 				   &get_current_uids);
-	die "$0: No UID is available in the range ",
-	"$config{\"first_system_uid\"} - $config{\"last_system_uid\"}\n",
-	"(FIRST_SYS_UID - LAST_SYS_UID).  ",
-	"User `$new_name' not created.\n" if ($new_uid == -1);
-	if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
+        if ($new_uid == -1) {
+            print STDERR "$0: ",_("No UID is available in the range "),
+            "$config{\"first_system_uid\"} - $config{\"last_system_uid\"}\n",
+            "(FIRST_SYS_UID - LAST_SYS_UID).  ";
+            &dief (_("User `%s' not created.\n"),$new_name);
+        }
+        if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
 	elsif ($ingroup_name) { $new_gid = getgrnam($ingroup_name); }
-	else { die "Internal error"; }
+	else { die _("Internal error"); }
     }
     else {
 	if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
 	elsif ($ingroup_name) { $new_gid = getgrnam($ingroup_name); }
 	elsif ($make_group_also){ $new_gid=$new_uid; $ingroup_name=$new_name; }
-	else { die "Internal error"; }
+	else { die _("Internal error"); }
     }
     
+    &stopnscd();
     if ($make_group_also) {
-	print "Adding new group $new_name ($new_gid).\n" if $verbose;
+	print _("Adding new group $new_name ($new_gid).\n") if $verbose;
 	$undogroup = $new_name;
 	&systemcall('groupadd', '-g', $new_gid, $new_name);
     }
 
-    print "Adding new user $new_name ($new_uid) with group $ingroup_name.\n"
+    printf _("Adding new user %s (%s) with group %s.\n"),$new_name,$new_uid,$ingroup_name
 	if $verbose;
     $home_dir = $special_home || &homedir($new_name, $ingroup_name);
     $undouser = $new_name;
     &systemcall('useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		'/bin/false', '-u', $new_uid, $new_name);
+    &startnscd();
     &systemcall('chfn', '-f', $new_gecos, $new_name) if ($new_gecos);
 
-    if (-d $home_dir) {
-	print "Home directory $home_dir already exists.\n" if $verbose;
+    if (-e $home_dir) {
+	printf _("Home directory %s already exists.\n"),$home_dir if $verbose;
+    } elsif ($no_create_home) {
+	print _("Not creating home directory.\n") if $verbose
     } else {
-	print "Creating home directory $home_dir.\n" if $verbose;
+	printf _("Creating home directory %s.\n"),$home_dir if $verbose;
 	$undohome = $home_dir;
 	&mktree($home_dir) || &cleanup("Couldn't create $home_dir: $!.\n");
 	chown($new_uid, $new_gid, $home_dir)
@@ -315,16 +358,18 @@ elsif ($action eq "adduser") {
 	else { $new_gid = $config{"users_gid"}; }
     }
     &check_user_group();
-    print "Adding user $new_name...\n" if $verbose;
+    printf _("Adding user %s...\n"),$new_name if $verbose;
 
     if (!defined($new_uid) && $make_group_also) {
 	$new_uid = &first_avail_id($config{"first_uid"},
 				   $config{"last_uid"},
 				   &get_current_uids, &get_current_gids);
-	die "$0: No UID/GID pair is available in the range ",
-	"$config{\"first_uid\"} - $config{\"last_uid\"}\n",
-	"(FIRST_UID - LAST_UID).  ",
-	"User `$new_name' not created.\n" if ($new_uid == -1);
+        if ($new_uid == -1) {
+            print STDERR "$0: ",_("No UID/GID pair is available in the range "),
+            "$config{\"first_uid\"} - $config{\"last_uid\"}\n",
+            "(FIRST_UID - LAST_UID).  ";
+            dief(_("User `%s' not created.\n"),$new_name);
+        }
 	$new_gid = $new_uid;
 	$ingroup_name = $new_name;
     }
@@ -332,40 +377,46 @@ elsif ($action eq "adduser") {
 	$new_uid = &first_avail_id($config{"first_uid"},
 				   $config{"last_uid"},
 				   &get_current_uids);
-	die "$0: No UID is available in the range ",
-	"$config{\"first_uid\"} - $config{\"last_uid\"}\n",
-	"(FIRST_UID - LAST_UID).  ",
-	"User `$new_name' not created.\n" if ($new_uid == -1);
+	if ($new_uid == -1) {
+            print STDERR "$0: ",_("No UID is available in the range "),
+            "$config{\"first_uid\"} - $config{\"last_uid\"}\n",
+            "(FIRST_UID - LAST_UID).  ";
+            dief(_("User `%s' not created.\n"),$new_name);
+        }
 	if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
 	elsif ($ingroup_name) { $new_gid = getgrnam($ingroup_name); }
-	else { die "Internal error"; }
+	else { die _("Internal error"); }
     }
     else {
 	if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
 	elsif ($ingroup_name) { $new_gid = getgrnam($ingroup_name); }
 	elsif ($make_group_also){ $new_gid=$new_uid; $ingroup_name=$new_name; }
-	else { die "Internal error"; }
+	else { die _("Internal error"); }
     }
 
+    &stopnscd();
     if ($make_group_also) {
-	print "Adding new group $new_name ($new_gid).\n" if $verbose;
+	printf _("Adding new group %s (%s).\n"),$new_name,$new_gid if $verbose;
 	$undogroup = $new_name;
 	&systemcall('groupadd', '-g', $new_gid, $new_name);
     }
 
-    print "Adding new user $new_name ($new_uid) with group $ingroup_name.\n"
+    printf _("Adding new user %s (%s) with group %s.\n"),$new_name,$new_uid,$ingroup_name
 	if $verbose;
     $home_dir = $special_home || &homedir($new_name, $ingroup_name);
     $undouser = $new_name;
     &systemcall('useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$config{dshell}, '-u', $new_uid, $new_name);
+    &startnscd();
 
-    if (-d $home_dir) {
-	print "Home directory $home_dir already exists.  Not copying from",
-	" $config{skel}\n" if $verbose;
+    if (-e $home_dir) {
+	printf _("Home directory %s already exists.  Not copying from %s\n"),
+        $home_dir,$config{skel} if $verbose;
+    } elsif ($no_create_home) {
+	print "Not creating $home_dir.\n" if $verbose;
     }
     else {
-	print "Creating home directory $home_dir.\n" if $verbose;
+	printf _("Creating home directory %s.\n"),$home_dir if $verbose;
 	$undohome = $home_dir;
 	&mktree($home_dir) || &cleanup("Couldn't create $home_dir: $!.\n");
 	chown($new_uid, $new_gid, $home_dir)
@@ -375,7 +426,7 @@ elsif ($action eq "adduser") {
 	    &cleanup("chmod $dir_mode $home_dir: $!\n");
 
 	if ($config{"skel"}) {
-	    print "Copying files from $config{skel}\n" if $verbose;
+	    printf _("Copying files from %s\n"),$config{skel} if $verbose;
 	    open(FIND, "cd $config{skel}; find .  -print |")
 		|| &cleanup("fork for find: $!\n");
 	    while (<FIND>) {
@@ -397,14 +448,14 @@ elsif ($action eq "adduser") {
     else {
 	for (;;) {
 	    &systemcall('chfn', $new_name);
-	    print "Is the information correct? [y/n] ";
+	    print _("Is the information correct? [y/n] ");
 	    chop ($answer=<STDIN>);
 	    last if ($answer =~ /^y/i);
 	}
     }
 
     if ($config{"quotauser"}) {
-	print "Setting quota from $config{quotauser}.\n";
+	printf _("Setting quota from %s.\n"),$config{quotauser};
 	&systemcall('edquota', '-p', $config{quotauser}, $new_name);
     }
 
@@ -443,19 +494,19 @@ sub mktree {
 
 
 sub check_user_group() {
-    die "$0: The user `$new_name' already exists.\n" if (getpwnam($new_name));
-    die "$0: The UID `$new_uid' already exists.\n"
+    dief(_("The user `%s\' already exists.\n"),$new_name) if (getpwnam($new_name));
+    dief(_("The UID `%s' already exists.\n"),$new_uid)
 	if (defined($new_uid) && getpwuid($new_uid));
     if ($make_group_also) {
-	die "$0: The group `$new_name' already exists.\n"
+	dief(_("The group `%s' already exists.\n"),$new_name)
 	    if (getgrnam($new_name));
-	die "$0: The GID `$new_uid' already exists.\n"
+	dief(_("The GID `%s' already exists.\n"),$new_uid)
 	    if (defined($new_uid) && getgrgid($new_uid));
     }
     else {
-	die "$0: The group `$ingroup_name' doesn't exist.\n"
+	dief(_("The group `%s' doesn't exist.\n"),$ingroup_name)
 	    if ($ingroup_name && !getgrnam($ingroup_name));
-	die "$0: The GID `$new_gid' doesn't exist.\n"
+	dief(_("The GID `%s' doesn't exist.\n"),$new_gid)
 	    if (defined($new_gid) && !getgrgid($new_gid));
     }
 }
@@ -468,6 +519,7 @@ sub copy_to_dir {
     if (-l "$fromdir/$file") {
 	symlink(readlink("$fromdir/$file"), "$todir/$file")
 	    || &cleanup("symlink: $!\n");
+	return;
     }
     elsif (-f "$fromdir/$file") {
 	open (FILE, "$fromdir/$file") || &cleanup("open $fromdir/$file: $!");
@@ -499,19 +551,19 @@ sub checkname {
     my ($name) = @_;
     if ($allow_badname && $name !~ /^[A-Za-z_][-_A-Za-z0-9]*$/) {
 	print STDERR
-"$0: To avoid problems, the username should consist of a letter or
-underscore followed by letters, digits, underscores, and dashes.\n";
+"$0: ",_("To avoid problems, the username should consist of a letter or
+underscore followed by letters, digits, underscores, and dashes.\n");
 	exit 1;
     }
     elsif ($name !~ /^[a-z][a-z0-9]*$/) {
 	if (!$allow_badname) {
 	    print STDERR
-"$0: Please enter a username consisting of a lower case letter
+"$0: ",_("Please enter a username consisting of a lower case letter
 followed by lower case letters and numbers.  Use the `--force-badname'
-option to allow underscores, dashes, and uppercase.\n";
+option to allow underscores, dashes, and uppercase.\n");
 	    exit 1;
 	}
-	print "Allowing use of questionable username.\n" if ($verbose);
+	print _("Allowing use of questionable username.\n") if ($verbose);
     }
 }
 
@@ -522,7 +574,7 @@ option to allow underscores, dashes, and uppercase.\n";
 sub first_avail_id {
     my ($min, $max, @ids) = @_;
     @ids = sort {$a <=> $b} @ids;
-    print "Selecting from $min $max (" . join(",",@ids) . ").\n" if $debugging;
+    printf _("Selecting from %s %s (%s).\n"),$min,$max,join(",",@ids) if $debugging;
     
     while ($min <= $max) {
 	return $min if ($min <  $ids[0] || @ids==0);
@@ -588,22 +640,22 @@ sub read_config {
     my ($var, $lcvar, $val);
 
     if (! -f $conf_file) {
-	print "$0: $conf_file doesn't exist.  Using defaults.\n" if $verbose;
+	printf _("%s: %s doesn't exist.  Using defaults.\n"),$0,$conf_file if $verbose;
 	return;
     }
 
-    open (CONF, $conf_file) || die "$0: $conf_file: $!\n";
+    open (CONF, $conf_file) || dief("%s: %s\n",$conf_file,$!);
     while (<CONF>) {
 	chomp;
 	next if /^#/ || /^\s*$/;
 
 	if ((($var, $val) = /^\s*(\S+)\s*=\s*(.*)/) != 2) {
-	    warn "$0: Couldn't parse $conf_file:$..\n";
+	    warnf(_("Couldn't parse %s:%s.\n"),$conf_file,$.);
 	    next;
 	}
 	$lcvar = lc $var;
 	if (!defined($config{$lcvar})) {
-	    warn "$0: Unknown variable `$var' at $conf_file:$..\n";
+	    warnf(_("Unknown variable `%s' at %s:%s.\n"),$var,$conf_file,$.);
 	    next;
 	}
 		
@@ -620,25 +672,42 @@ sub read_config {
 sub systemcall {
     my $c = join(' ', @_);
     print "$c\n" if $debugging;
-    system(@_) && &cleanup("$0: `$c' returned error code $?.  Aborting.\n");
+    if (system(@_)) {
+	&cleanup("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
+	  if ($?>>8);
+	&cleanup("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
+    }
 }
 
 
 sub cleanup {
     print "@{_}Cleaning up.\n";
     if ($undohome) {
-	print "Removing directory `$undohome'\n";
+	printf _("Removing directory `%s'\n"),$undohome;
 	system('rm', '-rf', $undohome);
     }
     if ($undouser) {
-	print "Removing user `$undouser'.\n";
+	printf _("Removing user `%s'.\n"),$undouser;
 	system('userdel', $undouser);
     }
     if ($undogroup) {
-	print "Removing group `$undogroup'.\n";
+	printf _("Removing group `%s'.\n"),$undogroup;
 	system('groupdel', $undogroup);
     }
+    &startnscd() if $undonscd;
     exit 1;
+}
+
+
+sub stopnscd {
+    $undonscd = 1;
+    systemcall($nscdinit, "stop") if (-f $nscdinit);
+}
+
+
+sub startnscd {
+    systemcall($nscdinit, "start") if (-f $nscdinit);
+    $undonscd = 0;
 }
 
 
@@ -650,7 +719,7 @@ sub handler {
 
 sub version {
     print "$0: add a user or group to the system.  Version VERSION
-Copyright (C) 1997 Guy Maor <maor\@debian.org>
+Copyright (C) 1997, 1998, 1999 Guy Maor <maor\@debian.org>
 Copyright (C) 1995 Ian Murdock <imurdock\@gnu.ai.mit.edu>,
                    Ted Hajek <tedhajek\@boombox.micro.umn.edu>, 
     
@@ -666,14 +735,15 @@ General Public License, /usr/doc/copyright/GPL, for more details.
 ";
 }
 
-
 sub usage {
-    print "adduser [--home DIR] [--uid ID] [--ingroup GROUP | --gid ID]
-[--disabled-password] [--gecos GECOS] user
+    printf _(
+"adduser [--home DIR] [--no-create-home] [--uid ID] [--gecos GECOS]
+[--ingroup GROUP | --gid ID] [--disabled-password] user
    Add a normal user
 
-adduser --system [--home DIR] [--uid ID] [--group | --ingroup GROUP |
---gid ID] [--disabled-password] [--gecos GECOS] user
+adduser --system [--home DIR] [--no-create-home] [--uid ID] [--gecos GECOS]
+[--group | --ingroup GROUP | --gid ID] [--disabled-password]
+user
    Add a system user
 
 adduser --group [--gid ID] group
@@ -683,8 +753,31 @@ addgroup [--gid ID] group
 adduser user group
    Add an existing user to an existing group
 
-Global configuration is in the file $defaults.
+Global configuration is in the file %s.
 Other options are [--quiet] [--force-badname] [--help] [--version] [--conf
 FILE].
-";
+"),$defaults;
 }
+
+
+sub _ {
+    return gettext("@_");
+}
+
+
+sub dief {
+    my ($form,@argu)=@_;
+    printf STDERR "$0: $form",@argu;
+    exit 1;
+}
+
+sub warnf {
+    my ($form,@argu)=@_;
+    printf STDERR "$0: $form",@argu;
+}
+
+
+# Local Variables:
+# mode:cperl
+# cperl-indent-level:4
+# End:

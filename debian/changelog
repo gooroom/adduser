@@ -1,3 +1,39 @@
+adduser (3.11.1) unstable; urgency=low
+
+  * NMU for bugsquash, pre potato freeze
+  * eval for POSIX to catch errors
+  * /usr/doc -> /usr/share/doc
+
+ -- Ben Collins <bcollins@debian.org>  Sat, 30 Oct 1999 20:54:32 -0400
+
+adduser (3.11) unstable; urgency=low
+
+  * fix behavior when Locale::gettext is unavailable.
+  * start & stop nscd, closes: #40918, #36607.
+
+ -- Guy Maor <maor@debian.org>  Sun, 29 Aug 1999 17:37:17 -0700
+
+adduser (3.10) unstable; urgency=low
+
+  * Test for home dir existence with -e, closes: #43364.
+  * Make "addgroup --system" behave as "adduser --group", closes: #43345.
+  * In manpage, explain difference between adduser,addgroup and
+    useradd,groupadd, closes: #22820.
+
+ -- Guy Maor <maor@debian.org>  Sun, 29 Aug 1999 11:07:18 -0700
+
+adduser (3.9) unstable; urgency=low
+
+  * Don't chmod symlinks, closes: #26850, #40250.
+  * Allow negative uids, gids (for Hurd), closes: #39679.
+  * --no-create-home option, closes: #39679.
+  * I18N, thanks to Akira Yoshiyama <yosshy@debian.or.jp> and
+    Raphael Hertzog <rhertzog@hrnet.fr>, closes: #33680.
+  * Don't depend on perl-base, closes: #42543.
+  * Be interactive, closes: #43012, #40671.
+
+ -- Guy Maor <maor@debian.org>  Thu, 26 Aug 1999 21:39:59 -0700
+
 adduser (3.8) unstable; urgency=low
 
   * Depend on perl-base instead of perl (16008).

@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 1999-08-24 22:14-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Akira Yoshiyama <yosshy@debian.or.jp>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-2022-JP\n"
+"Content-Transfer-Encoding: EUC-JP\n"
+
+#: ../adduser:101
+msgid "No options allowed after names.\n"
+msgstr "名前の後にオプションを付けられません。\n"
+
+#: ../adduser:118
+msgid "--ingroup requires an argument.\n"
+msgstr "--ingroup には引数が必要です。\n"
+
+#: ../adduser:121
+msgid "--home requires an argument.\n"
+msgstr "--home には引数が必要です。\n"
+
+#: ../adduser:123
+msgid "Warning: The home dir you specified already exists.\n"
+msgstr "警告: 指定されたユーザのホームディレクトリが存在しています。\n"
+
+#: ../adduser:125
+msgid "The home dir must be an absolute path.\n"
+msgstr "ホームディレクトリは絶対パスでなければなりません。\n"
+
+#: ../adduser:132
+msgid "--uid requires a numeric argument.\n"
+msgstr "--uid には数字の引数が必要です。\n"
+
+#: ../adduser:135
+msgid "--gid requires a numeric argument.\n"
+msgstr "--gid には数字の引数が必要です。\n"
+
+#: ../adduser:138
+msgid "--conf requires an argument.\n"
+msgstr "--conf には引数が必要です。\n"
+
+#: ../adduser:140
+#, c-format
+msgid "`%s' doesn't exist.\n"
+msgstr "`%s' が存在しません。\n"
+
+#: ../adduser:147
+#, c-format
+msgid "Unknown argument `%s'.\n"
+msgstr "`%s' は不明な引数です。\n"
+
+#: ../adduser:153
+msgid "Only root may add a user or group to the system.\n"
+msgstr "root だけがシステムにユーザまたはグループを追加できます。\n"
+
+#: ../adduser:156
+#, fuzzy
+msgid "Enter a username to add: "
+msgstr "追加する名前が必要です。\n"
+
+#: ../adduser:160
+msgid "I need a name to add.\n"
+msgstr "追加する名前が必要です。\n"
+
+#: ../adduser:161
+msgid "No more than two names.\n"
+msgstr "２つ以上の名前は指定できません。\n"
+
+#: ../adduser:163
+msgid "Specify only one name in this mode.\n"
+msgstr "このモードでは１つだけ名前を指定して下さい。\n"
+
+#: ../adduser:181
+msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
+msgstr "--group, --ingroup, --gid オプションは同時に複数指定できません。\n"
+
+#: ../adduser:214
+#, c-format
+msgid "The group `%s' already exists.\n"
+msgstr "グループ `%s' は既に存在しています。\n"
+
+#: ../adduser:216
+#, c-format
+msgid "The GID `%s' is already in use.\n"
+msgstr "グループ ID `%s' は既に使用されています。\n"
+
+#: ../adduser:224
+msgid "No GID is available in the range "
+msgstr "この範囲では利用できる GID がありません :"
+
+#: ../adduser:227
+#, c-format
+msgid "Group `%s' not created.\n"
+msgstr "`%s' グループは作成されませんでした。\n"
+
+#: ../adduser:231
+#, c-format
+msgid "Adding group %s (%s)...\n"
+msgstr "グループ %s (%s) を追加しています…\n"
+
+#: ../adduser:233 ../adduser:257
+msgid "Done.\n"
+msgstr "終了。\n"
+
+#: ../adduser:242
+#, c-format
+msgid "The user `%s' doesn't exist.\n"
+msgstr "ユーザ `%s' は存在しません。\n"
+
+#: ../adduser:244
+#, c-format
+msgid "The group `%s' doesn't exist.\n"
+msgstr "グループ `%s' が存在しません。\n"
+
+#: ../adduser:247
+#, c-format
+msgid "The user `%s' is already a member of %s.\n"
+msgstr "ユーザ `%s' は既にグループ `%s' のメンバーです。\n"
+
+#: ../adduser:252
+#, c-format
+msgid "Adding user %s to group %s...\n"
+msgstr "%s を %s に追加しています...\n"
+
+#: ../adduser:269
+#, c-format
+msgid "Adding system user %s...\n"
+msgstr "システムユーザ %s を追加しています...\n"
+
+#: ../adduser:276 ../adduser:354
+msgid "No UID/GID pair is available in the range "
+msgstr "次の範囲で利用可能な UID/GID のペアがありません :"
+
+#: ../adduser:279 ../adduser:292 ../adduser:357 ../adduser:370
+#, c-format
+msgid "User `%s' not created.\n"
+msgstr "ユーザ `%s' は作成されませんでした。\n"
+
+#: ../adduser:289 ../adduser:367
+msgid "No UID is available in the range "
+msgstr "次の範囲に利用可能な UID がありません :"
+
+#: ../adduser:296 ../adduser:302 ../adduser:374 ../adduser:380
+msgid "Internal error"
+msgstr "内部エラー"
+
+#: ../adduser:306
+#, fuzzy
+msgid "Adding new group $new_name ($new_gid).\n"
+msgstr "新しいグループ %s (%s) を追加しています。\n"
+
+#: ../adduser:311 ../adduser:389
+#, c-format
+msgid "Adding new user %s (%s) with group %s.\n"
+msgstr "グループ %s に新しいユーザ %s (%s) を追加しています。\n"
+
+#: ../adduser:320
+#, c-format
+msgid "Home directory %s already exists.\n"
+msgstr "ホームディレクトリ %s は既に存在します。\n"
+
+#: ../adduser:322
+#, fuzzy
+msgid "Not creating home directory.\n"
+msgstr "ホームディレクトリ %s を作成しています。\n"
+
+#: ../adduser:324 ../adduser:403
+#, c-format
+msgid "Creating home directory %s.\n"
+msgstr "ホームディレクトリ %s を作成しています。\n"
+
+#: ../adduser:347
+#, c-format
+msgid "Adding user %s...\n"
+msgstr "ユーザ %s を追加しています…\n"
+
+#: ../adduser:384
+#, c-format
+msgid "Adding new group %s (%s).\n"
+msgstr "新しいグループ %s (%s) を追加しています。\n"
+
+#: ../adduser:397
+#, c-format
+msgid "Home directory %s already exists.  Not copying from %s\n"
+msgstr "ホームディレクトリ %s は既に存在します。次からのコピーをしません :\n"
+
+#: ../adduser:413
+#, c-format
+msgid "Copying files from %s\n"
+msgstr "%s からファイルをコピーしています\n"
+
+#: ../adduser:435
+msgid "Is the information correct? [y/n] "
+msgstr "以上で正しいですか？ [y/n] "
+
+#: ../adduser:442
+#, c-format
+msgid "Setting quota from %s.\n"
+msgstr "%s から quota を設定しています。\n"
+
+#~ msgid "%s: %s doesn't exist.  Using defaults.\n"
+#~ msgstr "%s: %s が存在しません。デフォルトを使用します。\n"
+
+#~ msgid "Allowing use of questionable username.\n"
+#~ msgstr "不審なユーザ名の使用を許可しています。\n"
+
+#~ msgid "Couldn't parse %s:%s.\n"
+#~ msgstr "%s を分析できません:%s.\n"
+
+#~ msgid ""
+#~ "Please enter a username consisting of a lower case letter\n"
+#~ "followed by lower case letters and numbers.  Use the `--force-badname'\n"
+#~ "option to allow underscores, dashes, and uppercase.\n"
+#~ msgstr ""
+#~ "英小文字から始まる英小文字または数字で構成されたユーザ名を入力し\n"
+#~ "て下さい。下線(_)、ダッシュ(')、英大文字を許可したい場合は \n"
+#~ "`--force-badname' オプションを使用して下さい。\n"
+
+#~ msgid "Removing directory `%s'"
+#~ msgstr "ディレクトリ `%s' を削除しています。"
+
+#~ msgid "Removing group `%s'.\n"
+#~ msgstr "グループ `%s' を削除しています。\n"
+
+#~ msgid "Removing user `%s'.\n"
+#~ msgstr "ユーザ `%s' を削除しています。\n"
+
+#~ msgid "Selecting from %s %s (%s).\n"
+#~ msgstr "%s %s (%s) の範囲で選択しています \n"
+
+#~ msgid "The GID `%s' already exists.\n"
+#~ msgstr "グループ ID `%s' は既に存在しています。\n"
+
+#~ msgid "The GID `%s' doesn't exist.\n"
+#~ msgstr "グループ ID `%s' が存在しません。\n"
+
+#~ msgid "The UID `%s' already exists.\n"
+#~ msgstr "ユーザ ID `%s' は既に存在しています。\n"
+
+#~ msgid "The user `%s' already exists.\n"
+#~ msgstr "ユーザ `%s' は既に存在しています。\n"
+
+#~ msgid ""
+#~ "To avoid problems, the username should consist of a letter or\n"
+#~ "underscore followed by letters, digits, underscores, and dashes.\n"
+#~ msgstr ""
+#~ "問題を避ける為に、ユーザ名はアルファベットか、下線(_)から始まる\n"
+#~ "アルファベット、数字、下線(_)、ダッシュ(')で構成して下さい。\n"
+
+#~ msgid "Unknown variable `%s' at %s:%s.\n"
+#~ msgstr "不明な変数 `%s' が %s にあります:%s.\n"
+
+#~ msgid ""
+#~ "adduser [--home DIR] [--uid ID] [--ingroup GROUP | --gid ID]\n"
+#~ "[--disabled-password] [--gecos GECOS] user\n"
+#~ "   Add a normal user\n"
+#~ "\n"
+#~ "adduser --system [--home DIR] [--uid ID] [--group | --ingroup GROUP |\n"
+#~ "--gid ID] [--disabled-password] [--gecos GECOS] user\n"
+#~ "   Add a system user\n"
+#~ "\n"
+#~ "adduser --group [--gid ID] group\n"
+#~ "addgroup [--gid ID] group\n"
+#~ "   Add a system group\n"
+#~ "\n"
+#~ "adduser user group\n"
+#~ "   Add an existing user to an existing group\n"
+#~ "\n"
+#~ "Global configuration is in the file %s.\n"
+#~ "Other options are [--quiet] [--force-badname] [--help] [--version] [--conf\n"
+#~ "FILE].\n"
+#~ msgstr ""
+#~ "adduser [--home DIR] [--uid ID] [--ingroup GROUP | --gid ID]\n"
+#~ "[--disabled-password] [--gecos GECOS] <ユーザ名>\n"
+#~ "   一般ユーザの追加\n"
+#~ "\n"
+#~ "adduser --system [--home DIR] [--uid ID] [--group | --ingroup GROUP |\n"
+#~ "--gid ID] [--disabled-password] [--gecos GECOS] <ユーザ名>\n"
+#~ "   システムユーザの追加\n"
+#~ "\n"
+#~ "adduser --group [--gid ID] <グループ名>\n"
+#~ "addgroup [--gid ID] <グループ名>\n"
+#~ "   システムグループの追加\n"
+#~ "\n"
+#~ "adduser <ユーザ名> <グループ名>\n"
+#~ "   既存のユーザを既存のグループに追加\n"
+#~ "\n"
+#~ "全般の設定は %s ファイルにあります。他のオプションは [--quiet]\n"
+#~ "[--force-badname] [--help] [--version] [--conf FILE] です。\n"
+#~ "\n"
