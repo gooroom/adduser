@@ -5,8 +5,10 @@ adduser (3.52.1) unstable; urgency=low
     * Updated Spanish man pages. Thanks to Ruben Porras. Closes: #241087.
     * Updated Frensh debconf templates. Thanks to Christian Perrier.
       Closes: #241508.
+    * Updated Japanese debconf templates. Thanks to Kenshi Muto.
+      Closes: #241805.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Apr 2004 12:59:08 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Apr 2004 13:01:01 +0200
 
 adduser (3.52) unstable; urgency=low
 
