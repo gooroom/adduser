@@ -6,6 +6,8 @@ adduser (3.52) unstable; urgency=low
     Closes: #207944.
   * Updated Catalan translations by Jordi Mallach <jordi@debian.org>
     Closes: #190631.
+  * Updated Dutch translation of the Debconf templates by
+    cobaco@linux.be. Closes: #215364.
 
  -- Roland Bauerschmidt <rb@debian.org>  Sun, 31 Aug 2003 14:08:39 +0200
 

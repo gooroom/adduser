@@ -11,15 +11,14 @@
 #
 #    Developers do not need to manually edit POT or PO files.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-06-21 14:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2003-09-30 16:46+0100\n"
+"Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
+"Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,22 +26,21 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
-msgstr "Wilt u wereldwijd leesbare home directories?"
+msgstr "Wilt u door iedereen leesbare thuismappen?"
 
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
 "home directories only readable by the  user. If you are unsure, answer yes "
 "to enable system wide readable home directories."
 msgstr ""
-"Normaal kunnen alle home directories door alle gebruikers op uw systeem "
-"gelezen worden, ze zijn dan wereldwijd leesbaar. Indien u de beveiliging of "
-"privacy op uw systeem wilt verhogen, kunt u overwegen om de home directories "
-"alleen leesbaar te maken voor de gebruiker zelf. Indien u niet zeker bent, "
-"antwoord dan ja op het wereldwijd leesbaar maken van home directories."
+"Normaal kunnen alle gebruikers alle thuismappen lezen. Teneinde de "
+"beveiliging van en privacy op uw systeem te verhogen, kunt u overwegen om "
+"een gebruiker zijn thuismap enkel voor die gebruiker zelf leesbaar te "
+"maken. Indien u twijfelt kunt u best de thuismappen voor iedereen leesbaar "
+"maken."
 
 #. Description
 #: ../templates:4
@@ -50,3 +48,5 @@ msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
 msgstr ""
+"Dit is enkel van toepassing op de thuismappen van nieuwe gebruikers die u "
+"via het 'adduser'-commando aanmaakt."
