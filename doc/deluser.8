@@ -117,7 +117,8 @@ Suppress progress messages.
 .TP
 .B \-\-system
 Only delete if user/group is a system user/group. This avoids
-accidentally deleting non-system user/groups. This option is mainly
+accidentally deleting non-system user/groups. Additionally, if the
+user does not exist, no error value is returned. This option is mainly
 for use in Debian package maintainer scripts.
 .TP
 .B \-\-version

@@ -244,17 +244,23 @@ if($group) {
 
 if($action eq "deluser") {
     &invalidate_nscd();
-    unless(exist_user($user)) {
-	dief (_("`%s' does not exist.\n"),$user);
-    }
     
     my($dummy1,$dummy2,$uid);
-    if( $config{"system"} && 
-       (($dummy1,$dummy2,$uid) = getpwnam($user)) &&
-       ($uid < $config{"first_system_uid"} ||
-        $uid > $config{"last_system_uid" } ) ) {
-        printf (_("User %s is not a system account... Exiting.\n"), $user) if $verbose;
-       exit 0;
+    if( $config{"system"} ) {
+	if( ($dummy1,$dummy2,$uid) = getpwnam($user) ) {
+	    if ( ($uid < $config{"first_system_uid"} ||
+		$uid > $config{"last_system_uid" } ) ) {
+		printf (_("User %s is not a system account... Exiting.\n"), $user) if $verbose;
+		exit 0;
+	    }
+        } else {
+	    printf (_("User %s does not exist, but --system is given... Exiting.\n"), $user) if $verbose;
+	    exit 0;
+	}
+    }
+    
+    unless(exist_user($user)) {
+	dief (_("`%s' does not exist.\n"),$user);
     }
 
     if($config{"remove_home"} && ($config{"home"} ne "") && ($config{"home"} ne $pw_homedir)) {
