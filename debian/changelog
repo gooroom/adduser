@@ -29,6 +29,7 @@ adduser (3.52) unstable; urgency=low
     * Applied patch by Denis Barbier <barbier@debian.org> for most translation
       related changes. Thanks a lot for the help. Closes: #236494.
   * Marc Haber:
+    * add myself to Uploaders: and debian/copyright.
     * modify changelog to see who did which change.
     * fix adduser.8 to correctly document adduser --system --group.
       Renamed translated adduser.8 man pages after discussion on
@@ -39,7 +40,7 @@ adduser (3.52) unstable; urgency=low
       created as system user/group already exists as non-system.
       Thanks to Henrique de Moraes Holschuh. Closes: #143738.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 12:14:25 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 12:20:11 +0100
 
 adduser (3.51) unstable; urgency=low
 

@@ -2,6 +2,7 @@ Source: adduser
 Section: base
 Priority: important
 Maintainer: Roland Bauerschmidt <rb@debian.org>
+Uploaders: Marc Haber <mh+debian-packages@zugschlus.de>
 Standards-Version: 3.5.8
 Build-Depends-Indep: gettext (>= 0.13), po-debconf
 

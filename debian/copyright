@@ -10,6 +10,10 @@ rewrote most of it.
 Since May 20 2000, it is maintained by Roland Bauerschmidt
 <rb@debian.org>.
 
+Since March 24 2004, it is still maintained by Roland Bauerschmidt
+<rb@debian.org>, and co-maintained by Marc Haber
+<mh+debian-packages@zugschlus.de>
+
 deluser is Copyright (C) 2000 Roland Bauerschmidt <rb@debian.org>
 and based on the source code of adduser.
 
