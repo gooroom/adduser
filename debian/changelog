@@ -28,6 +28,7 @@ adduser (3.52) unstable; urgency=low
       by Eugeniy Meshcheryakov <eugen@univ.kiev.ua>. Closes: #233552.
     * Applied patch by Denis Barbier <barbier@debian.org> for most translation
       related changes. Thanks a lot for the help. Closes: #236494.
+      
   * Marc Haber:
     * add myself to Uploaders: and debian/copyright.
     * modify changelog to see who did which change.
@@ -71,7 +72,7 @@ adduser (3.52) unstable; urgency=low
       to Karl M. Hegbloom. Closes: #240103. Closes: #156013.
     * Standards-Version: 3.6.1
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 27 Mar 2004 15:50:40 +0100
+ -- Roland Bauerschmidt <rb@debian.org>  Sun, 28 Mar 2004 17:57:26 +0200
 
 adduser (3.51) unstable; urgency=low
 
