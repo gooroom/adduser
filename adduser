@@ -225,7 +225,7 @@ else {
 if ($found_group_opt) {
     if ($action eq "addsysuser") {
 	$make_group_also = 1;
-	$found_group_opt = 0; # --system --group --ingroup is allowed!
+	undef $found_group_opt; # --system --group --ingroup is allowed!
     }
     elsif ($found_sys_opt) {
 	$action = "addsysgroup";
