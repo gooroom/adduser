@@ -1,7 +1,7 @@
 **************************************************************************
 *                                                                        *
-*                   ADDUSER Local System Additions v4.3                  *
-*                 Copyright (C) 1999-2001, John Zaitseff                 *
+*                   ADDUSER Local System Additions v4.6                  *
+*                 Copyright (C) 1999-2004, John Zaitseff                 *
 *                                                                        *
 **************************************************************************
 
@@ -17,11 +17,11 @@ skeleton "index.html" file  into the proper location, add  the user to the
 "ftp" and "www" groups and  so on.  All, naturally, without forgetting any
 vital step!
 
-The adduser.local  program automates all  this for you.  By  modifying the
-program's configuration file, /etc/adduser.local.conf, to match your local
-requirements, this  program can automatically add a  user to supplementary
-groups, create directories  and symbolic links and copy  skeleton files to
-the newly-created directories.
+The adduser.local  program automates much  of this for you.   By modifying
+the program's  configuration file, /etc/adduser.local.conf,  to match your
+local  requirements,  this  program   can  automatically  add  a  user  to
+supplementary  groups,  create directories  and  symbolic  links and  copy
+skeleton files to the newly-created directories.
 
 Note that once you install this program (and edit the configuration file),
 you will never  need to directly run adduser.local:  the Debian adduser(8)
@@ -69,7 +69,7 @@ the following actions are performed by this program:
   - the  file "/etc/skel.other/index.html"  is copied  to  this directory,
     owned by the user "john" and with group owner "www".
 
-For more details, just read through the sample configuration file!
+For more details, just read through the sample configuration file.
 
 
 INSTALLATION
@@ -81,6 +81,7 @@ these steps as root:
 1. Copy the actual program to the correct location:
 
        # cp ./adduser.local /usr/local/sbin
+       # chmod 755 /usr/local/sbin/adduser.local
 
 2. Copy the configuration file to the correct location:
 
@@ -98,7 +99,7 @@ these steps as root:
        # mkdir /etc/skel.other
        # cp ./examples/skel.other/index.html /etc/skel.other
 
-5. You are finished!
+5. You are finished.
 
 The main reason  you have to install this program manually  is so that you
 do not forget to do Step 3, the most important one!
@@ -128,10 +129,10 @@ Your  comments,  suggestions,  corrections  and  enhancements  are  always
 welcome!  Please send these to:
 
 Postal:   John Zaitseff,
-          4 McCabe Close,
-          Menai, NSW, 2234,
+          Unit 6, 116 Woodburn Road,
+          Berala, NSW, 2141,
           Australia.
 
 E-mail:   J.Zaitseff@zap.org.au
-Web:      http://www.zap.org.au/software/adduser.local/
-FTP:      ftp://ftp.zap.org.au/pub/adduser.local/adduser.local.tar.gz
+Web:      http://www.zap.org.au/software/utils/adduser.local/
+FTP:      ftp://ftp.zap.org.au/pub/utils/adduser.local/adduser.local.tar.gz

@@ -21,6 +21,9 @@ adduser is Copyright (C) 1997, 1998, 1999 Guy Maor <maor@debian.org>.
 adduser is Copyright (C) 1995 Ted Hajek <tedhajek@boombox.micro.umn.edu>
 with portions Copyright (C) 1994 Debian Association, Inc.
 
+The examples directory has been contributed by John Zaitseff, and is
+GPL V2 as well.
+
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or

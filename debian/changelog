@@ -14,9 +14,11 @@ adduser (3.60) unstable; urgency=low
   * Fix adduser manpage: Adding an already-existing system user issues
     a warning. The manpage claims adduser will exit silently. (mh)
   * Add Basque program and debconf translation. Thanks to Piarres Beobide
-    Egaña. (mh) Closes: #279659.
+    EgaÃ±a. (mh) Closes: #279659.
+  * Add new adduser.local examples directory by John Zaitseff. (mh)
+    Closes: #273010.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 13:41:54 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 13:48:15 +0100
 
 adduser (3.59) unstable; urgency=low
 
