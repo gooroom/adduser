@@ -41,3 +41,16 @@ Description-ru: Хотите ли вы, чтобы система имела домашние каталоги, доступные
  системы, вы можете захотеть, чтобы домашний каталог пользователя был читаем
  только им одним. Если вы не уверены, ответьте yes, тогда
  домашние каталоги будут доступны для чтения всем.
+Description-nl: Wilt u wereldwijd leesbare home directories?
+ Normaal kunnen alle home directories door alle gebruikers op uw systeem
+ gelezen worden, ze zijn dan wereldwijd leesbaar. Indien u de beveiliging
+ of privacy op uw systeem wilt verhogen, kunt u overwegen om de home
+ directories alleen leesbaar te maken voor de gebruiker zelf. Indien u
+ niet zeker bent, antwoord dan ja op het wereldwijd leesbaar maken van
+ home directories.
+Description-pt_BR: VocЙ quer ter seus diretСrios 'home' visМveis por todos?
+ Normalmente, diretСrios home podem ser vistos por todos os usuАrios do
+ sistema. Se vocЙ quer aumentar a seguranГa/privacidade no seu sistema,
+ vocЙ pode querer seu diretСrio home visМvel apenas para o usuАrio. Se vocЙ
+ nЦo tem certeza, responda sim para habilitar diretСrios home visМveis
+ por qualquer pessoa.

@@ -1,3 +1,14 @@
+adduser (3.33) unstable; urgency=low
+
+  * Added Dutch translation of Debconf templates. Closes: #83535.
+  * Added Brazilian-Portuguese translation of Debconf templates.
+    Closes: #89441.
+  * Removed doc/Makefile which shouldn't have been there. Argh.
+  * Added some code to build the manpage hierarchive including
+    localised manpages automatically.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Wed, 21 Mar 2001 19:14:49 -0600
+
 adduser (3.32) unstable; urgency=low
 
   * Moved AdduserCommon.pm to /usr/share/perl5/Debian/.
