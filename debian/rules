@@ -16,8 +16,7 @@ clean:
 binary-indep:	checkroot build
 	$(checkdir)
 	-rm -rf debian/tmp
-	install -d debian/tmp/{DEBIAN,etc,usr/{sbin,lib/perl5/,share/{doc/adduser,man/man{5,8},lintian/overrides}}}
-	install -m644 *.conf debian/tmp/etc
+	install -d debian/tmp/{DEBIAN,etc,usr/{sbin,lib/perl5/,share/{doc/adduser/examples,man/man{5,8},lintian/overrides}}}
 	sed -e s/VERSION/$(version)/g adduser > debian/tmp/usr/sbin/adduser
 	sed -e s/VERSION/$(version)/g deluser > debian/tmp/usr/sbin/deluser
 	sed -e s/VERSION/$(version)/g AdduserCommon.pm > debian/tmp/usr/lib/perl5/AdduserCommon.pm
@@ -40,6 +39,8 @@ binary-indep:	checkroot build
 	install -m644 TODO debian/tmp/usr/share/doc/adduser/
 	install -m644 debian/changelog debian/tmp/usr/share/doc/adduser/
 	find debian/tmp/usr/share/{doc,man} -type f | xargs gzip -9f
+	install -m644 deluser.conf debian/tmp/etc
+	install -m644 adduser.conf debian/tmp/usr/share/doc/adduser/examples
 	install -m644 debian/override.Lintian debian/tmp/usr/share/lintian/overrides/adduser
 	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
 	install -m644 debian/{conffiles,templates} debian/tmp/DEBIAN

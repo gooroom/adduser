@@ -101,7 +101,9 @@ username uid gid home-directory
 .SS "Add a system user"
 If called with one non-option argument and the
 .BR \-\-system " option, " adduser
-will add a system user.
+will add a system user. If an user with an uid in the system range (or
+if the uid is specified, with that) does already exist, adduser will
+exist silently.
 
 .B adduser
 will choose the first available UID from the range specified for
@@ -123,10 +125,6 @@ A home directory is created by the same rules as for normal users.
 The new system user will have the shell
 .I /bin/false
 and have a disabled password.  Skeletal configuration files are not copied.
-If
-.B adduser
-created the home directory and a new group for the system user, it will set
-the set-group-ID bit on the directory.
 .SS "Add a system group"
 If 
 .BR adduser " is called with the " \-\-group " option, or " addgroup
