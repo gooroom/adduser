@@ -73,8 +73,8 @@ be dynamically allocated. Default to
 \fBUSERGROUPS\fP
 If this is set to
 .IR yes ,
-then each created user will be given their own group to use and their
-home directories will be g+s.  If this is
+then each created user will be given their own group to use.  If this
+is
 .IR no ,
 then each created user will be placed in the group whose GID is
 \fBUSERS_GID\fP (see below).  The default is
@@ -86,10 +86,6 @@ If \fBUSERGROUPS\fP is
 then \fBUSERS_GID\fP is the GID given to all newly-created users.  The
 default value is
 .IR 100 .
-.TP
-\fBQUOTAUSER\fP
-If set to a nonempty value, new users will have quotas copied from
-that user.  The default is empty.
 .TP
 \fBDIR_MODE\fP
 If set to a valid value (e.g. 0755 or 755), directories created will have
@@ -104,6 +100,10 @@ then home directories for users with their own group (
 versions << 3.13. Unfortunately it has some bad side effects, so we no
 longer do this per default. If you want it nevertheless you can still
 activate it here.
+.TP
+\fBQUOTAUSER\fP
+If set to a nonempty value, new users will have quotas copied from
+that user.  The default is empty.
 .SH FILES
 .I /etc/adduser.conf
 .SH SEE ALSO
