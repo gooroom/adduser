@@ -5,8 +5,10 @@ adduser (3.57.1) unstable; urgency=low
     (mh) Closes: #259000.
   * Applied patch for German debconf translation by Florian Ernst.
     (rb) Closes: #261236.
+  * Applied patch for Dutch debconf translation by cobaco.
+    (mh) Closes: #261338.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 22 Jul 2004 21:20:48 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 26 Jul 2004 16:16:14 +0200
 
 adduser (3.57) unstable; urgency=low
 
