@@ -7,7 +7,7 @@ Build-Depends: gettext
 
 Package: adduser
 Architecture: all
-Depends: perl5, passwd (>=961025), debconf
+Depends: perl, passwd (>=961025), debconf
 Suggests: liblocale-gettext-perl
 Description: Add and remove users and groups to resp. from the system.
  This package includes the adduser and deluser commands for creating

@@ -56,7 +56,7 @@ $version = VERSION;
 $ENV{"PATH"} = "/sbin:/bin:/usr/sbin:/usr/bin";
 
 use File::Find;
-use AdduserCommon;
+use Debian::AdduserCommon;
 
 BEGIN {
     eval 'use Locale::gettext';

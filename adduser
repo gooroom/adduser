@@ -63,7 +63,7 @@
 #      --conf FILE      use FILE instead of /etc/adduser.conf
 ############
 
-use AdduserCommon;
+use Debian::AdduserCommon;
 
 BEGIN {
     eval 'use Locale::gettext';

@@ -1,3 +1,10 @@
+adduser (3.32) unstable; urgency=low
+
+  * Moved AdduserCommon.pm to /usr/share/perl5/Debian/.
+  * Depends on perl instead of perl5 due to Perl changes. 
+
+ -- Roland Bauerschmidt <rb@debian.org>  Thu, 15 Feb 2001 20:17:56 -0600
+
 adduser (3.31) unstable; urgency=low
 
   * Fixed typo in deluser.8. Closes: #85830.
