@@ -106,7 +106,8 @@ up in order to do any local setup.  The arguments passed to
 .B adduser.local
 are:
 .br
-username uid gid home-directory
+username uid gid home-directory, and the environment variables DEBUG
+and VERBOSE will be set according to the settings in the master program.
 .SS "Add a system user"
 If called with one non-option argument and the
 .BR \-\-system " option, " adduser

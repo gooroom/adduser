@@ -237,6 +237,14 @@ die "$0: ",_("--group, --ingroup, and --gid options are mutually exclusive.\n") 
     ($action ne "addgroup" &&
      defined($found_group_opt) +defined($ingroup_name) +defined($new_gid) > 1);
 
+if( $verbose ) {
+    $ENV{"VERBOSE"}="1"
+}
+
+if( $debugging ) {
+    $ENV{"DEBUG"}="1"
+}
+
 
 #####
 # OK, we've processed the arguments.  $action equals one of the following,
