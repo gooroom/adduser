@@ -2,12 +2,15 @@ adduser (3.56.1) unstable; urgency=low
 
   * NOT YET RELEASED
   * Roland Bauerschmidt:
-    * Updated Spanish Debconf translations. Thanks to Carlos Valdivia 
-      Yagüe <valyag@dat.etsit.upm.es>. Closes: #251321.
+    * Updated Spanish Debconf translations. Thanks to Carlos Valdivia
+      YagÃ¼e <valyag@dat.etsit.upm.es>. Closes: #251321.
     * Updated Czech Debconf translations. Thanks to Miroslav Kure
       <kurem@upcase.inf.upol.cz>. Closes: #251677.
+  * Marc Haber:
+    * Remove XSI:isms from debian/config. Thanks to David Weinehall.
+      Closes: #254776.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 27 May 2004 22:08:52 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 20 Jun 2004 10:08:22 +0200
 
 adduser (3.56) unstable; urgency=low
 
