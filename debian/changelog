@@ -1,6 +1,5 @@
-adduser (3.60) unstable; urgency=low
+adduser (3.60) experimental; urgency=low
 
-  * NOT YET RELEASED!
   * adduser.conf manpage fixes. Thanks to Siward de Groot. (mh)
     Closes: #268841.
   * adduser manpage fixes. Thanks to Siward de Groot. (mh)
@@ -27,7 +26,7 @@ adduser (3.60) unstable; urgency=low
   * deluser will now stop deleting at a mount point. Thanks to Andreas
     Schmidt. (mh) Closes: #231809
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 14:18:53 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  5 Feb 2005 14:22:20 +0000
 
 adduser (3.59) unstable; urgency=low
 
