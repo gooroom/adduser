@@ -8,6 +8,7 @@
 # Copyright (C) 1997, 1998, 1999 Guy Maor <maor@debian.org>
 # Copyright (C) 1995 Ted Hajek <tedhajek@boombox.micro.umn.edu>
 #                     Ian A. Murdock <imurdock@gnu.ai.mit.edu>
+# Bugfixes and other improvements Roland Bauerschmidt <rb@debian.org>
 # General scheme of the program adapted by the original debian 'adduser'
 #  program by Ian A. Murdock <imurdock@gnu.ai.mit.edu>.
 #
@@ -61,6 +62,8 @@
 #      --conf FILE      use FILE instead of /etc/adduser.conf
 ############
 
+use AdduserCommon;
+
 BEGIN {
     eval 'use Locale::gettext';
     if ($@) {
@@ -87,7 +90,7 @@ $ask_passwd = 1;		# ask for a passwd?
 $defaults = "/etc/adduser.conf";
 $nogroup_id = getgrnam("nogroup") || 65534;
 $0 =~ s+.*/++; 
-$nscdinit = "/etc/init.d/nscd";
+$nscd = "/usr/sbin/nscd";
 
 $config{"dshell"} = "/bin/bash";
 $config{"first_system_uid"} = 100;
@@ -245,9 +248,9 @@ if ($action eq "addgroup") {
     }
 
     printf (_("Adding group %s (%s)...\n"),$new_name,$new_gid) if $verbose;
-    &stopnscd();
+    &invalidate_nscd("group");
     &systemcall('groupadd', '-g', $new_gid, $new_name);
-    &startnscd();
+    &invalidate_nscd("group");
     print _("Done.\n") if $verbose;
     exit 0;
 }
@@ -260,7 +263,7 @@ elsif ($action eq "addusertogroup") {
     dief (_("The user `%s' doesn't exist.\n"),$existing_user)
 	if (!defined getpwnam($existing_user));
     dief (_("The group `%s' doesn't exist.\n"),$existing_group)
-	if (!getgrnam($existing_group));
+	if (!defined getgrnam($existing_group));
     if (&user_is_member($existing_user, $existing_group)) {
 	printf _("The user `%s' is already a member of %s.\n"),
                 $existing_user,$existing_group if $verbose;
@@ -269,12 +272,15 @@ elsif ($action eq "addusertogroup") {
 
     printf _("Adding user %s to group %s...\n"),$existing_user,$existing_group
 	if $verbose;
-    &stopnscd();
+    &invalidate_nscd();
     # FIXME - the next line has a race condition.
-    &systemcall('usermod', '-G',
-		join(",", get_users_groups($existing_user), $existing_group), 
-		$existing_user);
-    &startnscd();
+    #&systemcall('usermod', '-G',
+		#join(",", get_users_groups($existing_user), $existing_group), 
+		#$existing_user);
+    &systemcall('gpasswd', '-M',
+		join(',', get_group_members($existing_group), $existing_user),
+		$existing_group);
+    &invalidate_nscd();
     print _("Done.\n") if $verbose;
     exit 0;
 }
@@ -323,7 +329,7 @@ elsif ($action eq "addsysuser") {
 	else { die _("Internal error"); }
     }
     
-    &stopnscd();
+    &invalidate_nscd();
     if ($make_group_also) {
 	print _("Adding new group $new_name ($new_gid).\n") if $verbose;
 	$undogroup = $new_name;
@@ -336,7 +342,7 @@ elsif ($action eq "addsysuser") {
     $undouser = $new_name;
     &systemcall('useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		'/bin/false', '-u', $new_uid, $new_name);
-    &startnscd();
+    &invalidate_nscd();
 
     if($new_gecos) {
 	&ch_gecos($new_gecos);
@@ -406,11 +412,12 @@ elsif ($action eq "adduser") {
 	else { die _("Internal error"); }
     }
 
-    &stopnscd();
+    &invalidate_nscd();
     if ($make_group_also) {
 	printf _("Adding new group %s (%s).\n"),$new_name,$new_gid if $verbose;
 	$undogroup = $new_name;
 	&systemcall('groupadd', '-g', $new_gid, $new_name);
+	&invalidate_nscd();
     }
 
     printf _("Adding new user %s (%s) with group %s.\n"),$new_name,$new_uid,$ingroup_name
@@ -419,7 +426,7 @@ elsif ($action eq "adduser") {
     $undouser = $new_name;
     &systemcall('useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$config{dshell}, '-u', $new_uid, $new_name);
-    &startnscd();
+    &invalidate_nscd();
 
     if (-e $home_dir) {
 	printf _("Home directory %s already exists.  Not copying from %s\n"),
@@ -619,24 +626,6 @@ sub get_current_uids {
     @uids;
 }
 
-
-# return a user's groups
-sub get_users_groups {
-    my($user) = @_;
-    my($name,$members,@groups);
-    setgrent;
-    while (($name,$members) = (getgrent)[0,3]) {
-	for (split(/ /, $members)) {
-	    if ($user eq $_) {
-		push @groups, $name;
-		last;
-	    }
-	}
-    }
-    endgrent;
-    @groups;
-}
-
 sub ch_gecos {
     my $gecos = shift;
     if($gecos =~ /,/)
@@ -668,52 +657,6 @@ sub user_is_member {
 }
 
 
-# parse the configuration file
-sub read_config {
-    my ($conf_file) = @_;
-    my ($var, $lcvar, $val);
-
-    if (! -f $conf_file) {
-	printf _("%s: %s doesn't exist.  Using defaults.\n"),$0,$conf_file if $verbose;
-	return;
-    }
-
-    open (CONF, $conf_file) || dief("%s: %s\n",$conf_file,$!);
-    while (<CONF>) {
-	chomp;
-	next if /^#/ || /^\s*$/;
-
-	if ((($var, $val) = /^\s*(\S+)\s*=\s*(.*)/) != 2) {
-	    warnf(_("Couldn't parse %s:%s.\n"),$conf_file,$.);
-	    next;
-	}
-	$lcvar = lc $var;
-	if (!defined($config{$lcvar})) {
-	    warnf(_("Unknown variable `%s' at %s:%s.\n"),$var,$conf_file,$.);
-	    next;
-	}
-		
-	$val =~ s/^"(.*)"$/$1/;
-	$val =~ s/^'(.*)'$/$1/;
-
-	$config{$lcvar} = $val;
-    }
-
-    close CONF || die "$!";
-}
-
-
-sub systemcall {
-    my $c = join(' ', @_);
-    print "$c\n" if $debugging;
-    if (system(@_)) {
-	&cleanup("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
-	  if ($?>>8);
-	&cleanup("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
-    }
-}
-
-
 sub cleanup {
     print "@{_}Cleaning up.\n";
     if ($undohome) {
@@ -728,22 +671,9 @@ sub cleanup {
 	printf _("Removing group `%s'.\n"),$undogroup;
 	system('groupdel', $undogroup);
     }
-    &startnscd() if $undonscd;
+    # do we need to invalidate the nscd cache here, too?
     exit 1;
 }
-
-
-sub stopnscd {
-    $undonscd = 1;
-    systemcall($nscdinit, "stop") if (-f $nscdinit);
-}
-
-
-sub startnscd {
-    systemcall($nscdinit, "start") if (-f $nscdinit);
-    $undonscd = 0;
-}
-
 
 sub handler {
     my($sig) = @_;
@@ -791,23 +721,6 @@ Global configuration is in the file %s.
 Other options are [--quiet] [--force-badname] [--help] [--version] [--conf
 FILE].
 "),$defaults;
-}
-
-
-sub _ {
-    return gettext("@_");
-}
-
-
-sub dief {
-    my ($form,@argu)=@_;
-    printf STDERR "$0: $form",@argu;
-    exit 1;
-}
-
-sub warnf {
-    my ($form,@argu)=@_;
-    printf STDERR "$0: $form",@argu;
 }
 
 sub get_dir_mode

@@ -16,10 +16,11 @@ clean:
 binary-indep:	checkroot build
 	$(checkdir)
 	-rm -rf debian/tmp
-	install -d debian/tmp/{DEBIAN,etc,usr/{sbin,share/doc/adduser,/share/man/man{5,8}}}
+	install -d debian/tmp/{DEBIAN,etc,usr/{sbin,lib/perl5/,share/doc/adduser,/share/man/man{5,8}}}
 	install -m644 *.conf debian/tmp/etc
 	sed -e s/VERSION/$(version)/g adduser > debian/tmp/usr/sbin/adduser
 	sed -e s/VERSION/$(version)/g deluser > debian/tmp/usr/sbin/deluser
+	sed -e s/VERSION/$(version)/g AdduserCommon.pm > debian/tmp/usr/lib/perl5/AdduserCommon.pm
 	chmod 755 debian/tmp/usr/sbin/*
 	ln -s adduser debian/tmp/usr/sbin/addgroup
 	ln -s deluser debian/tmp/usr/sbin/delgroup

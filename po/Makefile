@@ -19,7 +19,7 @@ POX = $(addsuffix .pox,$(LANG))
 all: $(MO)
 update: $(POX)
 
-adduser.pot: ../adduser ../deluser
+adduser.pot: ../adduser ../deluser ../AdduserCommon.pm
 	$(XGETTEXT) -k_ -o $@ $?
 
 install: $(MO)

@@ -1,9 +1,10 @@
 #!/usr/bin/perl
 
 # deluser -- a utility to remove users from the system
+# delgroup -- a utilty to remove groups from the system
 $version = VERSION;
 
-# Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>
+# Copyright (C) 2000 Roland Bauerschmidt <rb@debian.org>
 # Based on 'adduser' as pattern by
 #     Guy Maor <maor@debian.org>
 #     Ted Hajek <tedhajek@boombox.micro.umn.edu>
@@ -52,6 +53,8 @@ $version = VERSION;
 #     --version | -v    version number and copyright
 #     --conf | -c FILE  use FILE instead of /etc/deluser.conf      
 
+use AdduserCommon;
+
 BEGIN {
     eval 'use Locale::gettext';
     if ($@) {
@@ -73,6 +76,7 @@ textdomain("adduser");
 
 $verbose = 1;
 $defaults = "/etc/deluser.conf";
+$nscd = "/usr/sbin/nscd";
 
 $config{"remove_home"} = 0;
 $config{"remove_all_files"} = 0;
@@ -218,6 +222,7 @@ if($group)
 
 if($action eq "deluser")
 {
+    &invalidate_nscd();
     unless(exist_user($user))
     {
 	dief (_("`%s' does not exist.\n"),$user);
@@ -253,7 +258,8 @@ if($action eq "deluser")
     }
 
     s_printf(_("Removing user %s...\n"),$user);
-    systemcall("userdel $user");
+    systemcall("userdel", $user);
+    &invalidate_nscd();
 
     systemcall('/usr/local/sbin/deluser.local', $user, $pw_uid,
                 $pw_gid, $pw_homedir) if (-x "/usr/local/sbin/deluser.local");
@@ -262,6 +268,7 @@ if($action eq "deluser")
 }
 elsif($action eq "delgroup")
 {
+    &invalidate_nscd();
     unless(exist_group($group))
     {
 	dief (_("`%s' does not exist.\n"),$group);
@@ -273,10 +280,12 @@ elsif($action eq "delgroup")
 
     s_printf(_("Removing group %s...\n"),$group);
     systemcall("groupdel",$group);
+    &invalidate_nscd();
     s_print(_("done.\n"));
 }
 elsif($action eq "deluserfromgroup")
 {
+    &invalidate_nscd();
     unless(exist_user($user))
     {
 	dief (_("`%s' does not exist.\n"),$user);
@@ -290,27 +299,39 @@ elsif($action eq "deluserfromgroup")
 	die "$0: ",_("You may not remove the user from his/her primary group.\n");
     }
 
-    chomp(my $groups = `groups $user`);
-    $groups =~ s/.*: *$maingroup //;
-    my @groups = split(/ /,$groups);
-    my $ingroup = 0;
+    #my @groups = get_users_groups($user);
+    #my $ingroup = 0;
 
-    for($i = 0; $i <= $#groups; $i++)
-    {
-	if($groups[$i] eq $group)
-	{
-	    $ingroup = 1;
-	    splice(@groups,$i,1);
-	}
-    }
+    #for($i = 0; $i <= $#groups; $i++)
+    #{
+	#if($groups[$i] eq $group)
+	#{
+	    #$ingroup = 1;
+	    #splice(@groups,$i,1);
+	#}
+    #}
 
-    unless($ingroup)
+    my @members = get_group_members($group);
+    my $ismember = 0;
+
+    for($i = 0; $i <= $#members; $i++)
+      {
+	if($members[$i] eq $user)
+	  {
+	    $ismember = 1;
+	    splice(@members,$i,1);
+	  }
+      }
+
+    unless($ismember)
     {
 	dief(_("%s is not a member of group %s.\n"),$user,$group);
     }
 
     s_printf(_("Removing user %s from group %s...\n"),$user,$group);
-    systemcall("usermod","-G", join(",",@groups), "$user" );
+    #systemcall("usermod","-G", join(",",@groups), $user );
+    systemcall('gpasswd','-M', join(',',@members), $group);
+    &invalidate_nscd();
     s_print(_("done.\n"));
 }
 
@@ -379,79 +400,6 @@ sub exist_group
     return(getgrnam($exist_group) ne "");
 }
 
-sub read_config
-{
-    my ($conf_file) = @_;
-    my ($var, $lcvar, $val);
-    
-    if (! -f $conf_file) {
-        printf _("%s: %s doesn't exist.  Using defaults.\n"),$0,$conf_file if $verbose;
-        return;
-    }
-
-    open (CONF, $conf_file) || dief("%s: %s\n",$conf_file,$!);
-    while (<CONF>) {
-        chomp;
-        next if /^#/ || /^\s*$/;
-
-        if ((($var, $val) = /^\s*(\S+)\s*=\s*(.*)/) != 2) {
-            warnf(_("Couldn't parse %s:%s.\n"),$conf_file,$.);
-            next;
-        }
-        $lcvar = lc $var;
-        if (!defined($config{$lcvar})) {
-            warnf(_("Unknown variable `%s' at %s:%s.\n"),$var,$conf_file,$.);
-            next;
-        }
-
-        $val =~ s/^"(.*)"$/$1/;
-        $val =~ s/^'(.*)'$/$1/;
-
-        $config{$lcvar} = $val;
-    }
-
-    close CONF || die "$!";
-}
-
-sub systemcall
-{
-    my $c = join(' ', @_);
-    print "$c\n" if $debugging;
-    if (system(@_)) {
-        die("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
-	    if ($?>>8);
-        die("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
-    }
-}
-
-sub _
-{
-    return gettext("@_");
-}
-
-sub dief
-{
-    my ($form,@argu)=@_;
-    printf STDERR "$0: $form",@argu;
-    exit 1;
-}
-
-sub warnf {
-    my ($form,@argu)=@_;
-    printf STDERR "$0: $form",@argu;
-}
-
-sub s_print
-{
-    print join(" ",@_)
-	if($verbose);
-}
-
-sub s_printf
-{
-    printf(@_)
-	if($verbose);
-}
 
 
 

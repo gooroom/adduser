@@ -1,3 +1,19 @@
+adduser (3.14) unstable; urgency=low
+
+  * adduser has a better handling for nscd now. Instead of simply
+    stopping nscd before changes and starting it again after changes,
+    adduser invalidates the caches before and after changes now.
+    (closes: #54726)
+  * deluser invalidates nscd caches after changes, too.
+  * new Portugese/Brazilian translation for adduser and deluser by
+    Cesar Eduardo Barros <cesarb@nitnet.com.br>
+  * adding and removing users to/from a group is now done with gpasswd
+    instead of usermod. This prevents adduser and deluser from not
+    adding "NISed" users to a group (closes: #57573)
+  * functions used in both adduser and deluser moved to AdduserCommon.pm
+  
+ -- Roland Bauerschmidt <rb@debian.org>  Tue,  6 Jun 2000 12:24:46 +0200
+
 adduser (3.13) unstable; urgency=low
 
   * Merged seperate .po-files for adduser and deluser into one
