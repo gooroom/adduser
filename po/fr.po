@@ -296,7 +296,7 @@ msgid ""
 msgstr ""
 "Veuillez choisir un nom composé d'une lettre minuscule suivie\n"
 "de lettres minusucules ou de chiffres. L'option « --force-badname »\n"
-"permet d'utiliser le caractère « _ » et des majuscules."
+"permet d'utiliser le caractère « _ » et des majuscules.\n"
 
 #: ../adduser:670
 msgid "Allowing use of questionable username.\n"
