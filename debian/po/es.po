@@ -1,0 +1,52 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: adduser 3.50\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"PO-Revision-Date: 2003-06-19 15:31+0100\n"
+"Last-Translator: Carlos Valdivia Yague <valyag@teleline.es>\n"
+"Language-Team: Spanish <debian-l10n-spanish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../templates:4
+msgid "Do you want system wide readable home directories?"
+msgstr "¿Quiere que todo el sistema pueda leer las cuentas de usuario?"
+
+#. Description
+#: ../templates:4
+msgid ""
+"Normally, home directories can be viewed by all users on the system. If you "
+"want to increase the security/privacy on your system, you might want your "
+"home directories only readable by the  user. If you are unsure, answer yes "
+"to enable system wide readable home directories."
+msgstr ""
+"Normalmente las cuentas de usuario pueden ser vistas por cualquier usuario "
+"del sistema. Si quiere incrementar la seguridad/privacidad de su sistema "
+"puede querer que sus cuentas sólo puedan ser leídas por el dueño de la "
+"cuenta. Si no está seguro responda sí para activar la lectura global de las "
+"cuentas de usuario."
+
+#. Description
+#: ../templates:4
+msgid ""
+"This will only affect home directories of users added with the adduser "
+"program later."
+msgstr ""
+"Esto sólo afectará a las cuentas de los usuarios que añada con el programa "
+"adduser a partir de ahora."

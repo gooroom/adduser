@@ -1,0 +1,52 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../templates:4
+msgid "Do you want system wide readable home directories?"
+msgstr "홈 디렉토리를 시스템 전체에서 읽을 수 있도록 할까요?"
+
+#. Description
+#: ../templates:4
+msgid ""
+"Normally, home directories can be viewed by all users on the system. If you "
+"want to increase the security/privacy on your system, you might want your "
+"home directories only readable by the  user. If you are unsure, answer yes "
+"to enable system wide readable home directories."
+msgstr ""
+"보통, 홈 디렉토리는 시스템의 모든 사용자가 볼 수 있습니다. 만약 시스템의 보"
+"안/사생활 보호를 증가시키길 원한다면, 홈 디렉토리를 그 사용자만 볼 수 있도록 "
+"하기를 원할 것입니다. 확실하지 않다면, 예로 대답해서 시스템 전체에서 홈 디렉"
+"토리를 읽을 수 있게 하세요."
+
+#. Description
+#: ../templates:4
+msgid ""
+"This will only affect home directories of users added with the adduser "
+"program later."
+msgstr ""
+"이것은 다음에 adduser 프로그램으로 추가된 사용자의 홈 디렉토리에만 영향을 줄 "
+"것입니다."

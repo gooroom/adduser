@@ -1,0 +1,52 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../templates:4
+msgid "Do you want system wide readable home directories?"
+msgstr "Czy katalogi domowe mog± byæ przegl±dane przez wszystkich?"
+
+#. Description
+#: ../templates:4
+msgid ""
+"Normally, home directories can be viewed by all users on the system. If you "
+"want to increase the security/privacy on your system, you might want your "
+"home directories only readable by the  user. If you are unsure, answer yes "
+"to enable system wide readable home directories."
+msgstr ""
+"Zazwyczaj katalogi domowe mog± byæ przegl±dane przez wszystkich u¿ytkowników "
+"systemu. Je¶li chcesz zwiêkszych bezpieczeñstwo/prywatno¶æ w swoim systemie "
+"mo¿esz za¿yczyæ sobie by katalogi domowe by³y tylko do odczytu u¿ytkownika. "
+"Je¶li nie jeste¶ pewien co wybraæ, wybierz 'tak' by ustawiæ mo¿liwo¶æ "
+"przegl±dania katalogów przez wszystkich."
+
+#. Description
+#: ../templates:4
+msgid ""
+"This will only affect home directories of users added with the adduser "
+"program later."
+msgstr ""
+"Opcja ta zadzia³a dopiero dla nowych u¿ytkowników dodanych przez adduser."

@@ -1,0 +1,45 @@
+# Catalan translation of adduser templates.
+# Copyright (C) 2002 Software in the Public Interest, Inc. and others.
+# This file is distributed under the same license as the adduser package.
+# Jordi Mallach <jordi@debian.org>, 2002.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: adduser 3.48\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"PO-Revision-Date: 2002-12-05 02:35+0100\n"
+"Last-Translator: Jordi Mallach <jordi@debian.org>\n"
+"Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../templates:4
+msgid "Do you want system wide readable home directories?"
+msgstr "Voleu que els directoris personals siguen llegibles per tothom?"
+
+#. Description
+#: ../templates:4
+#, fuzzy
+msgid ""
+"Normally, home directories can be viewed by all users on the system. If you "
+"want to increase the security/privacy on your system, you might want your "
+"home directories only readable by the  user. If you are unsure, answer yes "
+"to enable system wide readable home directories."
+msgstr ""
+"Normalment, els directoris personals poden ser llegits per tots els usuaris "
+"del sistema. Si voleu incrementar la seguretat/privacitat del sistema, podeu "
+"crear els directoris personals amb lectura només per a l'usuari. Si esteu "
+"insegur, contesteu «sí» per a habilitar els directoris personals llegibles "
+"per tothom."
+
+#. Description
+#: ../templates:4
+msgid ""
+"This will only affect home directories of users added with the adduser "
+"program later."
+msgstr ""
+"Aquesta opció només afecta a directoris d'usuari afegits més tard amb el "
+"programa adduser."

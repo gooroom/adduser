@@ -1,0 +1,51 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-06-21 14:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../templates:4
+msgid "Do you want system wide readable home directories?"
+msgstr "Vrei ca directoarele din /home sã fie vizibile tuturor?"
+
+#. Description
+#: ../templates:4
+#, fuzzy
+msgid ""
+"Normally, home directories can be viewed by all users on the system. If you "
+"want to increase the security/privacy on your system, you might want your "
+"home directories only readable by the  user. If you are unsure, answer yes "
+"to enable system wide readable home directories."
+msgstr ""
+"În mod normal, oricine poate vedea directoarele celorlalþi utilizatori. Dacã "
+"vrei sã mãreºti securitatea/secretizarea în sistem, poþi face ca fiecare "
+"utilizator sã nu vadã conþinutul directoarelor celorlalþi utilizatori. Dacã "
+"nu eºti sigur, rãspunde afirmativ."
+
+#. Description
+#: ../templates:4
+msgid ""
+"This will only affect home directories of users added with the adduser "
+"program later."
+msgstr ""
