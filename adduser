@@ -476,7 +476,7 @@ elsif ($action eq "adduser") {
 
 	if ($config{"skel"}) {
 	    printf _("Copying files from %s\n"),$config{skel} if $verbose;
-	    open(FIND, "cd $config{skel}; find .  -print |")
+	    open(FIND, "cd $config{skel}; find .  ! -name '*.dpkg-*' -print |")
 		|| &cleanup("fork for find: $!\n");
 	    while (<FIND>) {
 		chop;

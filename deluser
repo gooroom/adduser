@@ -231,9 +231,8 @@ if($action eq "deluser") {
 	if(@files || @dirs) {
 	    s_print(_("Removing files...\n"));
 	    unlink(@files) if(@files);
-	    foreach(@dirs) {
-	      rmdir($_);
-	      d_printf("rmdir(%s)\n", $_);
+	    foreach(reverse(sort(@dirs))) {
+		rmdir($_);
 	    }
 	}
     }

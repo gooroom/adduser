@@ -1,3 +1,17 @@
+adduser (3.41) unstable; urgency=low
+
+  * Home directories should be removed properly now. Before @dirs is
+    processed, it is first sorted in reverse order to ensure and
+    sub directories are process before their parent directories.
+    Closes: #102929.
+  * Don't copy *.dpkg-* files from skel. Closes: #105453.
+  * Fixed Polish Debconf templates file. Closes: #107764.
+  * There won't be much more new development except bugfixes in the
+    current adduser version since I'm working on a rewrite with a more
+    flexible design.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sat, 11 Aug 2001 11:08:14 +0200
+
 adduser (3.40) unstable; urgency=low
 
   * Added Polish translation of Debconf templates files and .po file.
