@@ -1,3 +1,10 @@
+adduser (3.26) unstable; urgency=low
+
+  * deluser: when using remove_all_files and backup, deluser does not
+    backup directories anymore. Closes: #79791.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sun, 17 Dec 2000 01:20:08 -0600
+
 adduser (3.25) unstable; urgency=high
 
   * adduser: checks for nscd in /usr/bin/nscd and /usr/sbin/nscd.

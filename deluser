@@ -265,7 +265,7 @@ if($action eq "deluser")
 	if($config{"backup"})
 	{
 	    s_print(_("Backuping files to be removed...\n"));
-	    systemcall("/bin/tar", "c$z_tar", "-f", "$user.tar$z_ext", "--", @dirs, @files);
+	    systemcall("/bin/tar", "c$z_tar", "-f", "$user.tar$z_ext", "--", @files);
 	}
 
 	if(@files || @dirs)
