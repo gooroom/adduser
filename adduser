@@ -136,7 +136,8 @@ while (defined($arg = shift(@ARGV))) {
 	die "$0: ",_("The home dir must be an absolute path.\n")
 	    if ($special_home !~ m+^/+ );
     } elsif ($arg eq "--gecos") {
-	$new_gecos = shift(@ARGV);
+	die "$0: ",_("--gecos requires an argument.\n")
+	    if (!defined($new_gecos = shift(@ARGV)));
     } elsif ($arg eq "--disabled-password") {
 	$ask_passwd = 0;
     } elsif ($arg eq "--uid") {
@@ -345,7 +346,7 @@ elsif ($action eq "addsysuser") {
 		'/bin/false', '-u', $new_uid, $new_name);
     &invalidate_nscd();
 
-    if($new_gecos) {
+    if(defined($new_gecos)) {
 	&ch_gecos($new_gecos);
     }
 
@@ -462,7 +463,7 @@ elsif ($action eq "adduser") {
 	&systemcall('passwd', $new_name);
     }
 
-    if ($new_gecos) {
+    if (defined($new_gecos)) {
 	&ch_gecos($new_gecos);
     }
     else {

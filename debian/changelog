@@ -1,3 +1,11 @@
+adduser (3.23) unstable; urgency=low
+
+  * Downgraded priority to standard.
+  * Integrated patch from Matt Kraai <kraai@alumni.carnegiemellon.edu>.
+    Closes: #75915
+
+ -- Roland Bauerschmidt <rb@debian.org>  Fri,  3 Nov 2000 18:07:29 -0600
+
 adduser (3.22) unstable; urgency=low
 
   * Depends on perl-5.005-base instead of perl-base. Closes: #75679. 
