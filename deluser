@@ -33,6 +33,8 @@ $version = VERSION;
 #
 #     --remove-home             remove the users home directory and mail spool
 #     --remove-all-files        remove all files owned by user
+#     --home <dir>		remove home only if /etc/passwd home dir
+#                               matches directory given here
 #     --backup                  backup files before removing
 #     --system                  only remove if system user
 #
@@ -92,6 +94,7 @@ $verbose = 1;
 $defaults = "/etc/deluser.conf";
 
 $config{"remove_home"} = 0;
+$config{"home"} = "";
 $config{"remove_all_files"} = 0;
 $config{"backup"} = 0;
 $config{"dshell"} = "/bin/bash";
@@ -139,6 +142,9 @@ while($arg = shift(@ARGV))
             if (! -f $defaults);
     } elsif($arg eq "--system") {
        $pconfig{"system"} = 1;
+    } elsif($arg eq "--home") {
+	die "$0: ",_("--home requires an argument.\n")
+	  if (!($pconfig{"home"} = shift(@ARGV)));
     } elsif($arg eq "--remove-home") {
 	$pconfig{"remove_home"} = 1;
     } elsif($arg eq "--remove-all-files") {
@@ -237,7 +243,9 @@ if($action eq "deluser") {
        exit 0;
     }
 
-    if($config{"remove_home"} || $config{"remove_all_files"}) {
+    if($config{"remove_home"} && ($config{"home"} ne "") && ($config{"home"} ne $pw_homedir)) {
+	dief (_("passwd home dir %s' does not match command line home dir, aborting.\n"),$pw_homedir,$config{"home"});
+    } elsif($config{"remove_home"} || $config{"remove_all_files"}) {
 	s_print(_("Looking for files to backup/remove...\n"));
 	my(@files,@dirs);
 	if($config{"remove_home"} && ! $config{"remove_all_files"}) {

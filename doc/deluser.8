@@ -10,7 +10,7 @@
 .SH NAME
 deluser, delgroup \- remove a user or group from the system
 .SH SYNOPSIS
-.BR deluser " [options] [\-\-remove-home] [--remove-all-files] [\-\-backup] user"
+.BR deluser " [options] [\-\-remove-home] [--home DIR] [--remove-all-files] [\-\-backup] user"
 .PP
 .BR deluser " \-\-group [options] group"
 .br
@@ -45,9 +45,17 @@ will remove the user without removing the home directory, the mail spool  or
 any other files on the system owned by the user. Removing the home directory
 and mail spool can be archieved using the
 .B \-\-remove-home
-option and removing all files on the system owned by the user by the
+option. If the
+.B \-\-home
+option is given, deluser will only remove the user if the
+directory given to the 
+.B \-\-home
+option matches the user's real home directory.
+
+The 
 .B \-\-remove-all-files
-option. Note that if you activate both options
+option removes all files on the system owned by the user. Note that if
+you activate both options
 .B \-\-remove-home
 will have no effect because all files including the home directory and mail
 spool are already covered by the
@@ -129,7 +137,3 @@ is free software; see the GNU General Public Licence version 2 or
 later for copying conditions.  There is
 .I no
 warranty.
-
-
-
-

@@ -41,8 +41,9 @@ adduser (3.52) unstable; urgency=low
       Thanks to Henrique de Moraes Holschuh. Closes: #143738.
     * add --system option to deluser. Adapt man pages. Rename
       translated man pages. Closes: #239261.
+    * add --home option to deluser. Adapt man page. Closes: #239376
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 12:29:08 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 12:41:34 +0100
 
 adduser (3.51) unstable; urgency=low
 
