@@ -1,3 +1,10 @@
+adduser (3.20) unstable; urgency=low
+
+  * does not depend on perl5 anymore but on perl-base and suggests
+    liblocale-gettext-perl. Closes: #72226.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sat, 23 Sep 2000 03:38:07 -0500
+
 adduser (3.19) unstable; urgency=low
 
   * Fixed path of nscd. Closes: #71011 
