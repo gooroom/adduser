@@ -192,7 +192,7 @@ msgstr "Copie des fichiers depuis %s\n"
 
 #: ../adduser:435
 msgid "Is the information correct? [y/n] "
-msgstr "Ces informations sont-elles correctes ? [o/n] "
+msgstr "Ces informations sont-elles correctes ? [y/n] "
 
 #: ../adduser:442
 #, c-format

@@ -11,12 +11,19 @@ build:
 clean:
 	$(checkdir)
 	$(MAKE) -C po $@
-	-rm -rf build *~ debian/tmp debian/{*~,files*,substvars}
+	-rm -rf build *~ debian/tmp debian/*~ debian/files* debian/substvars
 
 binary-indep:	checkroot build
 	$(checkdir)
 	-rm -rf debian/tmp
-	install -d debian/tmp/{DEBIAN,etc,usr/{sbin,share/{doc/adduser/examples,perl5/Debian,man/{,ru_RU/}man{5,8}}}}
+	#install -d debian/tmp/{DEBIAN,etc,usr/{sbin,share/{doc/adduser/examples,perl5/Debian,man/{,ru_RU/}man{5,8}}}}
+	install -d debian/tmp/DEBIAN debian/tmp/etc debian/tmp/usr/sbin \
+		debian/tmp/usr/share/doc/adduser/examples \
+		debian/tmp/usr/share/perl5/Debian \
+		debian/tmp/usr/share/man/man5 \
+		debian/tmp/usr/share/man/man8 \
+		debian/tmp/usr/share/man/ru_RU/man5 \
+		debian/tmp/usr/share/man/ru_RU/man8
 	sed -e s/VERSION/$(version)/g adduser > debian/tmp/usr/sbin/adduser
 	sed -e s/VERSION/$(version)/g deluser > debian/tmp/usr/sbin/deluser
 	sed -e s/VERSION/$(version)/g AdduserCommon.pm > debian/tmp/usr/share/perl5/Debian/AdduserCommon.pm
@@ -32,8 +39,8 @@ binary-indep:	checkroot build
 	install -m644 deluser.conf debian/tmp/etc
 	install -m644 adduser.conf debian/tmp/usr/share/doc/adduser/examples
 	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
-	install -m644 debian/{conffiles,templates} debian/tmp/DEBIAN
-	install -m755 debian/{postinst,prerm,config} debian/tmp/DEBIAN
+	install -m644 debian/conffiles debian/templates debian/tmp/DEBIAN
+	install -m755 debian/postinst debian/prerm debian/config debian/tmp/DEBIAN
 	$(MAKE) -C po DESTDIR=`pwd`/debian/tmp install 
 	dpkg-gencontrol -isp
 	dpkg --build debian/tmp ..

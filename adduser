@@ -30,9 +30,9 @@
 ####################
 # the program can be called as:
 #
-#  adduser [--home DIR] [--uid ID] [--firstuid ID] [--lastuid ID]
-#  [--ingroup GROUP | --gid ID] [--disabled-password] [--gecos GECOS]
-#  [--no-create-home] user
+#  adduser [--home DIR] [--shell SHELL] [--uid ID] [--firstuid ID]
+#  [--lastuid ID] [--ingroup GROUP | --gid ID] [--disabled-password]
+#  [--disabled-login] [--gecos GECOS] [--no-create-home] user
 #      add a normal user to the system
 #      example: adduser fred
 #      $action = "adduser"
@@ -43,8 +43,9 @@
 #      example: addgroup --quiet www-data
 #      $action = "addgroup"
 #
-#  adduser --system [--home DIR] [--uid ID] [--group | --ingroup GROUP
-#  | --gid ID] [--disabled-password] [--gecos GECOS] [--no-create-home] user
+#  adduser --system [--home DIR] [--shell SHELL] [--uid ID] [--group |
+#  --ingroup GROUP | --gid ID] [--disabled-password] [--gecos GECOS]
+#  [--no-create-home] user
 #      add a system user.  Create a like-named, like-id'd group with
 #      --group, add to an existing group with --ingroup or --gid.  Add
 #      to "nogroup" with neither.
@@ -139,8 +140,15 @@ while (defined($arg = shift(@ARGV))) {
     } elsif ($arg eq "--gecos") {
 	die "$0: ",_("--gecos requires an argument.\n")
 	    if (!defined($new_gecos = shift(@ARGV)));
+	} elsif ($arg eq "--shell") {
+	die "$0: ",_("--shell requires an argument.\n")
+		if (!defined($special_shell = shift(@ARGV)));
     } elsif ($arg eq "--disabled-password") {
 	$ask_passwd = 0;
+	$disabled_login = 0;
+	} elsif ($arg eq "--disabled-login") {
+	$ask_passwd = 0;
+	$disabled_login = 1;
     } elsif ($arg eq "--uid") {
 	die "$0: ",_("--uid requires a numeric argument.\n")
 	    if (!defined ($new_uid = shift(@ARGV)) || $new_uid !~ /^\-?\d+$/);
@@ -357,9 +365,10 @@ elsif ($action eq "addsysuser") {
     printf _("Adding new user %s (%s) with group %s.\n"),$new_name,$new_uid,$ingroup_name
 	if $verbose;
     $home_dir = $special_home || &homedir($new_name, $ingroup_name);
+	$shell = $special_shell || '/bin/false';
     $undouser = $new_name;
     &systemcall('useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
-		'/bin/false', '-u', $new_uid, $new_name);
+		$shell, '-u', $new_uid, $new_name);
     &invalidate_nscd();
 
     if(defined($new_gecos)) {
@@ -443,9 +452,10 @@ elsif ($action eq "adduser") {
     printf _("Adding new user %s (%s) with group %s.\n"),$new_name,$new_uid,$ingroup_name
 	if $verbose;
     $home_dir = $special_home || &homedir($new_name, $ingroup_name);
+	$shell = $special_shell || $config{"dshell"};
     $undouser = $new_name;
     &systemcall('useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
-		$config{dshell}, '-u', $new_uid, $new_name);
+		$shell, '-u', $new_uid, $new_name);
     &invalidate_nscd();
 
     if (-e $home_dir) {
@@ -479,6 +489,10 @@ elsif ($action eq "adduser") {
 
     if ($ask_passwd) {
 	&systemcall('passwd', $new_name);
+    } else {
+	if(!$disabled_login) {
+	    &systemcall('usermod', '-p', '*', $new_name);
+	}
     }
 
     if (defined($new_gecos)) {

@@ -6,6 +6,9 @@ Description: Do you want system wide readable home directories?
  you want to increase the security/privacy on your system, you might want
  your home directories only readable by the  user. If you are unsure,
  answer yes to enable system wide readable home directories.
+ .
+ This will only affect home directories of users added with the adduser
+ program later.
 Description-de: Möchten Sie System-weit lesbare Heimatverzeichnisse?
  Normalerweise können die Heimatverzeichnisse der Benutzer von allen anderen
  Benutzern auf dem Rechner gelesen werden. Wenn Sie die
@@ -13,6 +16,9 @@ Description-de: Möchten Sie System-weit lesbare Heimatverzeichnisse?
  dass die Heimatverzeichnisse nicht von allen Benutzern gelesen werden
  können. Wenn Sie sich nicht sicher sind, sollten Sie System-weit lesbare
  Heimatverzeichnisse aktivieren.
+ .
+ Dies hat nur einen Effekt für Benutzer, die mit dem Programm adduser
+ später hinzugefügt werden.
 Description-fr: Voulez vous des répertoires personnels lisibles par tous ?
  Usuellement, les répertoires personnels sont lisibles par tous les utilisateurs
  du système. Si vous voulez rendre votre système plus sur/privé, vous
@@ -54,3 +60,9 @@ Description-pt_BR: Você quer ter seus diretórios 'home' visíveis por todos?
  você pode querer seu diretório home visível apenas para o usuário. Se você
  não tem certeza, responda sim para habilitar diretórios home visíveis
  por qualquer pessoa.
+Description-ro: Vrei ca directoarele din /home sã fie vizibile tuturor?
+ În mod normal, oricine poate vedea directoarele celorlalþi utilizatori.
+ Dacã vrei sã mãreºti securitatea/secretizarea în sistem, poþi face 
+ ca fiecare utilizator sã nu vadã conþinutul directoarelor celorlalþi
+ utilizatori. Dacã nu eºti sigur, rãspunde afirmativ.
+

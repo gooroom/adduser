@@ -10,9 +10,9 @@
 .SH NAME
 adduser, addgroup \- add a user or group to the system
 .SH SYNOPSIS
-.BR adduser " [options] [\-\-home DIR] [--no-create-home] [\-\-uid ID] [\-\-firstuid ID] [\-\-lastuid ID] [\-\-ingroup GROUP | \-\-gid ID] [--disabled-password] [--gecos GECOS] user"
+.BR adduser " [options] [\-\-home DIR] [\-\-shell SHELL] [--no-create-home] [\-\-uid ID] [\-\-firstuid ID] [\-\-lastuid ID] [\-\-ingroup GROUP | \-\-gid ID] [--disabled-password] [--disabled-login] [--gecos GECOS] user"
 .PP
-.BR adduser " \-\-system [options] [\-\-home DIR] [--no-create-home] [\-\-uid ID] [\-\-group | \-\-ingroup GROUP | \-\-gid ID] [--disabled-password] [--gecos GECOS] user"
+.BR adduser " \-\-system [options] [\-\-home DIR] [\-\-shell SHELL] [--no-create-home] [\-\-uid ID] [\-\-group | \-\-ingroup GROUP | \-\-gid ID] [--disabled-password] [--disabled-login] [--gecos GECOS] user"
 .PP
 .BR adduser " \-\-group [options] [--gid ID] group"
 .br
@@ -72,7 +72,9 @@ will create a home directory subject to
 .BR DHOME ", " GROUPHOMES ", and " LETTERHOMES .
 The home directory can be overridden from the command line with the
 .B \-\-home
-option.  The home directory's set-group-ID bit is set if
+option, and the shell with the
+.B \-\-shell
+option. The home directory's set-group-ID bit is set if
 .B USERGROUPS
 is
 .I yes
@@ -86,9 +88,12 @@ into the home directory and prompt for finger (gecos) information and
 a password.  The gecos may also be set with the
 .B \-\-gecos
 option.  With the
-.B \-\-disabled-password
+.B \-\-disabled-login
 option, the account will be created but will be disabled until a
-password is set.
+password is set. The
+.B \-\-disabled-password
+option will not set a password, but login are still possible for example
+through SSH RSA keys.
 
 If the file
 .B /usr/local/sbin/adduser.local
@@ -124,7 +129,10 @@ option.
 A home directory is created by the same rules as for normal users.
 The new system user will have the shell
 .I /bin/false
-and have a disabled password.  Skeletal configuration files are not copied.
+(unless overridden with the
+.B \-\-shell
+option), and have a disabled password.  Skeletal configuration files
+are not copied.
 .SS "Add a system group"
 If 
 .BR adduser " is called with the " \-\-group " option, or " addgroup
@@ -146,9 +154,13 @@ will add an existing user to an existing group.
 Use FILE instead of
 .IR /etc/adduser.conf .
 .TP
-.B \-\-disabled-password
+.B \-\-disabled-login
 Do not run passwd to set the password.  The user won't be able to use
 her account until the password is set.
+.TP
+.B \-\-disabled-password
+Like \-\-disabled-login, but logins are still possible for example through
+SSH RSA keys, but not using password authentification.
 .TP
 .B \-\-force\-badname
 2By default, user and group names are required to consist of a
@@ -185,6 +197,10 @@ Display brief instructions.
 Use DIR as the user's home directory, rather than the default specified by the
 configuration file.  If the directory does not exist, it is created
 and skeleton files are copied.
+.TP
+.B \-\-shell SHELL
+Use SHELL as the user's login shell, rather than the default specified by the
+configuration file.
 .TP
 .B \-\-ingroup GROUP
 Add the new user to GROUP instead of a usergroup or the default group

@@ -1,3 +1,25 @@
+adduser (3.34) unstable; urgency=low
+
+  * Temporary fix for French translation to display [y/n] instead of
+    [o/n] when asking if chfn information is correct since the yes
+    thing is hard-coded at the moment. At the moment the best solution
+    I can think of would be having a "yes" and "no" in the .po files
+    and grabbing the first letter to generate [o/n] for French e.g.
+    Closes: #87596.
+  * Added Romanian translation of Debconf translates. Closes: #93601.
+  * Added a sentence to Debconf template homedir-permission that it
+    only affects users added later, and syncronised the German template
+    for this change. Closes: #88292.
+  * Adduser now understands --shell to override the login shell specified
+    in the configuration file. adduser.8 is updated, too.
+  * Added new options --disabled-login which does what
+    --disabled-password previously did. --disabled-password not sets the
+    password to '*' in the shadow file and thus logins via SSH RSA keys
+    e.g. are still possible. Closes: #77817.
+  * Got rid of bashism in debian/rules 
+
+ -- Roland Bauerschmidt <rb@debian.org>  Thu,  3 May 2001 19:39:18 -0500
+
 adduser (3.33) unstable; urgency=low
 
   * Added Dutch translation of Debconf templates. Closes: #83535.
