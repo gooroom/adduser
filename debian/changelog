@@ -1,3 +1,9 @@
+adduser (3.63) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 17 Feb 2005 06:38:22 +0000
+
 adduser (3.62) unstable; urgency=low
 
   * Updated Ukrainian program translation. Thanks to
