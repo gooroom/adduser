@@ -82,4 +82,12 @@ Description-da: Ønsker du globalt læsbare hjemmekataloger?
  .
  Dette vil kun få indflydelse på hjemmekataloger der efterfølgende
  bliver tilføjet med programmet adduser.
-
+Description-pl: Czy katalogi domowe mog± byæ przegl±dane przez wszystkich?
+ Zazwyczaj, katalogi domowe mog± byæ przegl±dane przez wszystkich u¿ytkowników
+ systemu. Je¶li chcesz zwiêkszych bezpieczêñstwo/prywatno¶æ w swoim systemie,
+ mo¿esz za¿yczyæ sobie, by katalogi domowe by³y tylko do odczytu u¿ytkownika.
+ Je¶li nie jeste¶ pewien co wybraæ, wybierz 'tak' by ustawiæ mo¿liwo¶æ
+ przegl±dania katalogów przez wszystkich.
+ .
+ Opcja ta, zadzia³a dopiero, dla nowych u¿ytkowników dodanych przez adduser.
+  

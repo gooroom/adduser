@@ -1,3 +1,12 @@
+adduser (3.40) unstable; urgency=low
+
+  * Added Polish translation of Debconf templates files and .po file.
+    Closes: #103037, #103305.
+  * #102929 is unfortunately not fixed yet. I'll work on that when I'm
+    back from vacation.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Thu, 12 Jul 2001 15:15:39 +0200
+
 adduser (3.39) unstable; urgency=medium
 
   * Last upload was rejected because of broken dpkg-dev, and since

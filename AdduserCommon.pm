@@ -140,6 +140,12 @@ sub s_printf
 	if($verbose);
 }
 
+sub d_printf
+{
+    printf(@_)
+    	if((defined($verbose) && $verbose > 1) || (defined($debugging) && $debugging == 1));
+}
+
 # Local Variables:
 # mode:cperl
 # End:
