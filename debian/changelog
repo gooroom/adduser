@@ -1,3 +1,12 @@
+adduser (3.50) unstable; urgency=low
+
+  * Move /usr/share/doc/adduser/examples/adduser.conf to
+    /usr/share/adduser/adduser.conf. Closes: #189758, #167696.
+  * Fixed documentation as regards creating system resp. user
+    groups. Closes: #168913.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sun, 20 Apr 2003 15:01:47 +0200
+
 adduser (3.49) unstable; urgency=low
 
   * Updated Standards-Version.

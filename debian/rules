@@ -18,6 +18,7 @@ binary-indep:	checkroot build
 	-rm -rf debian/tmp
 	#install -d debian/tmp/{DEBIAN,etc,usr/{sbin,share/{doc/adduser/examples,perl5/Debian,man/{,ru_RU/}man{5,8}}}}
 	install -d debian/tmp/DEBIAN debian/tmp/etc debian/tmp/usr/sbin \
+		debian/tmp/usr/share/adduser \
 		debian/tmp/usr/share/doc/adduser/examples \
 		debian/tmp/usr/share/perl5/Debian \
 		debian/tmp/usr/share/man/man5 \
@@ -38,7 +39,8 @@ binary-indep:	checkroot build
 	install -m644 debian/changelog debian/tmp/usr/share/doc/adduser/
 	find debian/tmp/usr/share/doc -type f | xargs gzip -9f
 	install -m644 deluser.conf debian/tmp/etc
-	install -m644 adduser.conf examples/* debian/tmp/usr/share/doc/adduser/examples
+	install -m644 examples/* debian/tmp/usr/share/doc/adduser/examples
+	install -m644 adduser.conf debian/tmp/usr/share/adduser
 	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
 	install -m644 debian/conffiles debian/templates debian/tmp/DEBIAN
 	install -m755 debian/postinst debian/postrm debian/config debian/tmp/DEBIAN

@@ -2,7 +2,7 @@
 
 # create an initial adduser configfile if it does not exist yet
 if [ ! -e "/etc/adduser.conf" ]; then
-	cp /usr/share/doc/adduser/examples/adduser.conf /etc/adduser.conf
+	cp /usr/share/adduser/adduser.conf /etc/adduser.conf
 fi
 
 # modify adduser.conf

@@ -796,6 +796,10 @@ adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
 
 adduser --group [--gid ID] group
 addgroup [--gid ID] group
+   Add a user group
+
+adduser --group --system [--gid ID] group
+addgroup --system [--gid ID] group
    Add a system group
 
 adduser user group
