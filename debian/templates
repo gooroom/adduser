@@ -13,3 +13,19 @@ Description-de: Möchten Sie System-weit lesbare Heimatverzeichnisse?
  dass die Heimatverzeichnisse nicht von allen Benutzern gelesen werden
  können. Wenn Sie sich nicht sicher sind, sollten Sie System-weit lesbare
  Heimatverzeichnisse aktivieren.
+Description-fr: Voulez vous des répertoires personnels lisibles par tous ?
+ Usuellement, les répertoires personnels sont lisibles par tous les utilisateurs
+ du système. Si vous voulez rendre votre système plus sur/privé, vous
+ pouvez choisir que les répertoires personnels ne soient lisibles que par leur
+ propriétaire. Si vous n'êtes pas sur, répondez oui pour avoir des
+ répertoires personnels lisibles par tous.
+Description-no: Ønsker du globalt lesbare hjemmekataloger?
+ Normalt kan innholdet i hjemmekatalogene sees av alle brukerne på systemet.
+ Hvis du ønsker økt sikkerhet/konfidensialitet på systemet ditt, kan det være
+ ønskelig at hjemmekatalogene bare er lesbare av eieren. Hvis du er usikker,
+ svar ja for å ha globalt lesbare hjemmekataloger.
+Description-sv: Vill du att hemmakataloger ska vara läsbara för hela systemet?
+ Normalt kan hemmakataloger läsas av alla användare på systemet. Om du vill
+ öka säkerheten/avskildheten i ditt system så kan det vara en bra idé att
+ endast göra hemmakataloger läsbara av användaren själv. Om du är osäker,
+ svara ja för att göra hemmakatalogerna läsbara för hela systemet.
