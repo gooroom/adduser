@@ -264,6 +264,11 @@ $SIG{'INT'} = $SIG{'QUIT'} = $SIG{'HUP'} = 'handler';
 ## addsysgroup ##
 #################
 if ($action eq "addsysgroup") {
+    # Check if requested group already exists and we can exit safely
+    if (existing_group_ok($new_name, $new_gid)) {
+	printf (_("Group %s does already exist as a system group. Exiting...\n"), $new_name) if $verbose;
+	exit 0;
+    }
     dief (_("The group `%s' already exists.\n"),$new_name)
 	if (defined getgrnam($new_name));
     dief (_("The GID `%s' is already in use.\n"),$new_gid)
@@ -355,18 +360,13 @@ elsif ($action eq "addusertogroup") {
 ## addsysuser ##
 ################
 elsif ($action eq "addsysuser") {
-    # Check if requested user already exists and we can exit safely
-    if ((@tuser = getpwnam($new_name)) && (
-	(!defined($new_uid) && $tuser[2] >= $config{"first_system_uid"} &&
-	 $tuser[2] <= $config{"last_system_uid"} ) ||
-	(defined($new_uid) && $tuser[2] == $new_uid)
-       )) {
-        printf (_("User %s does already exist. Exiting...\n"), $new_name) if $verbose;
+    if (existing_user_ok($new_name, $new_uid)) {
+	printf (_("User %s does already exist as a system user. Exiting...\n"), $new_name) if $verbose;
 	exit 0;
     }
     $new_gid = $nogroup_id
 	if (!$ingroup_name && !defined($new_gid) && !$make_group_also);
-    &check_user_group();
+    check_user_group(1);
     printf (_("Adding system user %s...\n"),$new_name) if $verbose;
 
     if (!defined($new_uid) && $make_group_also) {
@@ -404,8 +404,8 @@ elsif ($action eq "addsysuser") {
     }
 
     &invalidate_nscd();
-    if ($make_group_also) {
-	printf _("Adding new group %s (%s).\n"),$new_name,$new_gid if $verbose;
+    # if we reach this point, and the group does already exist, we can use it.
+    if ($make_group_also && !getgrnam($new_name)) {printf _("Adding new group %s (%s).\n"),$new_name,$new_gid if $verbose;
 	$undogroup = $new_name;
 	&systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
 	&invalidate_nscd("group");
@@ -451,7 +451,7 @@ elsif ($action eq "adduser") {
 	if ($config{"usergroups"} eq "yes") { $make_group_also = 1; }
 	else { $new_gid = $config{"users_gid"}; }
     }
-    &check_user_group();
+    check_user_group(0);
     $first_uid = $new_firstuid || $config{"first_uid"};
     $last_uid = $new_lastuid || $config{"last_uid"};
     printf _("Adding user %s...\n"),$new_name if $verbose;
@@ -594,16 +594,70 @@ sub mktree {
     1;
 }
 
+sub existing_user_ok {
+    # returns 1 if
+    #  - the user doesn't exist or
+    #     - a system user is to be created
+    #     - the account already exists as a system user and
+    #     - if an explicit UID is given, that UID matches the existing user.
+    my($new_name,$new_uid) = @_;
+    my ($dummy1,$dummy2,$uid);
+    if (($dummy1,$dummy2,$uid) = getpwnam($new_name)) {
+	if( defined($new_uid) && $uid == $new_uid ) {
+	    ##+#print "uid";
+	    return 1;
+	}
+	if( $uid >= $config{"first_system_uid"} &&
+	    $uid <= $config{"last_system_uid" } ) {
+		##+#print "range";
+		return 1;
+	}
+    } else {
+	return 0;
+    }
+}
 
-sub check_user_group() {
-    dief(_("The user `%s\' already exists.\n"),$new_name) if(defined getpwnam($new_name));
-    dief(_("The UID `%s' already exists.\n"),$new_uid)
-	if (defined($new_uid) && getpwuid($new_uid));
+sub existing_group_ok {
+    # returns 1 if
+    #  - the group doesn't exist or
+    #     - a system group is to be created
+    #     - the group already exists as a system group and
+    #     - if an explicit GID is given, that GID matches the existing group.
+    my($new_name,$new_gid) = @_;
+    my ($dummy1,$dummy2,$gid);
+    if (($dummy1,$dummy2,$gid) = getgrnam($new_name)) {
+	if( defined($new_gid) && $gid == $new_gid ) {
+	    return 1;
+	}
+	if( $gid >= $config{"first_system_gid"} &&
+	    $gid <= $config{"last_system_gid" } ) {
+		return 1;
+	}
+    } else {
+	return 0;
+    }
+}
+
+sub check_user_group {
+    my ($system) = @_;
+    if( !$system || !existing_user_ok($new_name, $new_uid) ) {
+	if( defined getpwnam($new_name) ) {
+	    if( $system ) {
+		dief(_("The user %s\' already exists, and is not a system user.\n"),$new_name);
+	    } else {
+		dief(_("The user %s\' already exists.\n"),$new_name);
+	    }
+	}
+	dief(_("The UID %s' already exists.\n"),$new_uid)
+	  if (defined($new_uid) && getpwuid($new_uid));
+    }
     if ($make_group_also) {
-	dief(_("The group `%s' already exists.\n"),$new_name)
-	    if (defined getgrnam($new_name));
-	dief(_("The GID `%s' already exists.\n"),$new_uid)
-	    if (defined($new_uid) && defined(getgrgid($new_uid)));
+	if( !$system || !existing_group_ok($new_name, $new_uid) ) {
+	    dief(_("The group %s' already exists.\n"),$new_name)
+	      if (defined getgrnam($new_name));
+	    dief(_("The GID %s' already exists.\n"),$new_uid)
+	      if (defined($new_uid) && defined(getgrgid($new_uid)));
+	}
     }
     else {
 	dief(_("The group `%s' doesn't exist.\n"),$ingroup_name)

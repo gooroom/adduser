@@ -33,8 +33,13 @@ adduser (3.52) unstable; urgency=low
     * fix adduser.8 to correctly document adduser --system --group.
       Renamed translated adduser.8 man pages after discussion on
       #debian-devel. Closes: #239236. Closes: #219438.
+    * addgroup --system does no longer fail if system group already
+      exists. Closes: #239238.
+    * adduser now gives clearer error messages when user/group to be
+      created as system user/group already exists as non-system.
+      Thanks to Henrique de Moraes Holschuh. Closes: #143738.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 11:39:58 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 12:14:25 +0100
 
 adduser (3.51) unstable; urgency=low
 
