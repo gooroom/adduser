@@ -1,3 +1,16 @@
+adduser (3.8) unstable; urgency=low
+
+  * Depend on perl-base instead of perl (16008).
+  * Allow single letter names (16200).
+
+ -- Guy Maor <maor@ece.utexas.edu>  Sun, 11 Jan 1998 02:11:25 -0800
+
+adduser (3.7) unstable; urgency=low
+
+  * Add --conf option.
+
+ -- Guy Maor <maor@ece.utexas.edu>  Sat, 23 Aug 1997 13:52:25 -0500
+
 adduser (3.6) stable unstable; urgency=high
 
   * Fixed adduser --system. (#11627)

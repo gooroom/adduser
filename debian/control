@@ -6,7 +6,7 @@ Standards-Version: 2.1.1.0
 
 Package: adduser
 Architecture: all
-Depends: perl, passwd (>=961025)
+Depends: perl-base, passwd (>=961025)
 Description: Add users and groups to the system.
  Adduser can create new users and groups and add existing users to
  existing groups.
