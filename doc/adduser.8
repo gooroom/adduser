@@ -32,8 +32,9 @@ adduser, addgroup \- add a user or group to the system
 add users and groups to the system according to command line options
 and configuration information in
 .IR /etc/adduser.conf .
-They are friendlier front ends to the
-.BR useradd " and " groupadd
+They are friendlier front ends to the low level tools like 
+.BR useradd,
+.BR groupadd " and " usermod
 programs, choosing Debian policy conformant UID and GID values, creating a
 home directory with skeletal configuration, running a custom script, and
 other features.
@@ -248,7 +249,7 @@ Display version and copyright information.
 .SH FILES
 /etc/adduser.conf
 .SH "SEE ALSO"
-adduser.conf(5), deluser(8), useradd(8), groupadd(8)
+adduser.conf(5), deluser(8), useradd(8), groupadd(8), usermod(8)
 
 .SH COPYRIGHT
 Copyright (C) 1997, 1998, 1999 Guy Maor. Modifications by Roland
