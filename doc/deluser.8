@@ -10,7 +10,7 @@
 .SH NAME
 deluser, delgroup \- remove a user or group from the system
 .SH SYNOPSIS
-.BR deluser " [options] [\-\-remove-home] [--home DIR] [--remove-all-files] [\-\-backup] user"
+.BR deluser " [options] [\-\-remove-home] [--home DIR] [--remove-all-files] [\-\-backup] [\-\-backup-to] user"
 .PP
 .BR deluser " \-\-group [options] group"
 .br
@@ -64,9 +64,12 @@ option.
 
 If you want to backup all files before deleting them you can activate the
 .B \-\-backup
-option which will create a file username.tar(.gz|.bz2) in your current
-working directory. Both the remove and backup options can also be activated
-for default in the configuration file /etc/deluser.conf. See
+option which will create a file username.tar(.gz|.bz2) in the
+directory specified by the
+.B \-\-backup-to
+option (defaulting to the current working directory). Both the remove
+and backup options can also be activated for default in the configuration
+file /etc/deluser.conf. See
 .B deluser.conf(5)
 for details.
 

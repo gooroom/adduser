@@ -35,7 +35,9 @@ $version = VERSION;
 #     --remove-all-files        remove all files owned by user
 #     --home <dir>		remove home only if /etc/passwd home dir
 #                               matches directory given here
-#     --backup                  backup files before removing
+#     --backup			backup files before removing.
+#     --backup-to <dir>         target directory for the backups.
+#                               Default is the current directory.
 #     --system                  only remove if system user
 #
 #  delgroup group
@@ -100,6 +102,7 @@ $config{"remove_home"} = 0;
 $config{"home"} = "";
 $config{"remove_all_files"} = 0;
 $config{"backup"} = 0;
+$config{"backup_to"} = ".";
 $config{"dshell"} = "/bin/bash";
 $config{"first_system_uid"} = 100;
 $config{"last_system_uid"} = 999;
@@ -156,6 +159,9 @@ while($arg = shift(@ARGV))
 	$pconfig{"remove_all_files"} = 1;
     } elsif($arg eq "--backup") {
 	$pconfig{"backup"} = 1;
+    } elsif($arg eq "--backup-to") {
+	die "$0: ",_("--backup-to requires an argument.\n")
+	  if (!($pconfig{"backup_to"} = shift(@ARGV)));
     } elsif($arg =~ /^--/ || $arg =~ /^-/) {
 	dief (_("Unknown argument `%s'.\n"),$arg);
     } else {
@@ -280,12 +286,12 @@ if($action eq "deluser") {
 	}
 
 	if($config{"backup"}) {
-	    s_print(_("Backuping files to be removed...\n"));
-	    systemcall("/bin/tar", "-cf", "$user.tar", "--", @files);
+	    s_print(_("Backing up files to be removed to ". $config{"backup_to"}. " ...\n"));
+	    systemcall("/bin/tar", "-cf", $config{"backup_to"}. "/$user.tar", "--", @files);
 	    if(-e "/usr/bin/bzip2") {
-	    	systemcall("/usr/bin/bzip2", "$user.tar");
+	    	systemcall("/usr/bin/bzip2", $config{"backup_to"}. "/$user.tar");
 	    } elsif(-e "/bin/gzip") {
-	    	systemcall("/bin/gzip", "$user.tar");
+	    	systemcall("/bin/gzip", "--best", $config{"backup_to"}. "/$user.tar");
 	    }
 	}
 
@@ -402,7 +408,9 @@ sub usage {
   --remove-all-files        remove all files owned by user
   --home <dir>              remove home only if /etc/passwd home dir
                             matches directory given here
-  --backup                  backup files before removing
+  --backup		    backup files before removing.
+  --backup-to <dir>         target directory for the backups.
+                            Default is the current directory.
   --system                  only remove if system user
 
 delgroup group

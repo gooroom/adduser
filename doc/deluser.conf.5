@@ -41,9 +41,19 @@ If
 or
 .B REMOVE_ALL_FILES
 is activated all files are backuped before they are removed. The backup
-file that is created is username.tar(.gz|.bz2) in the current working
-directory. The compression method is choosed to the best that is availible.
+file that is created defaults to username.tar(.gz|.bz2) in the
+directory spefied by the
+.B BACKUP_TO
+option. The compression method is chosen to the best that is available.
 Values may be 0 or 1.
+.TP
+\fBBACKUP_TO\fP
+If
+.B BACKUP
+is activated,
+.B BACKUP_TO
+specifies the directory the backup is written to. Default is the
+current directory.
 .SH FILES
 .I /etc/deluser.conf
 .SH SEE ALSO
