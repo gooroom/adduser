@@ -3,6 +3,8 @@ adduser (3.57.1) unstable; urgency=low
   * NOT YET RELEASED
   * fix inconsistent hyphenation in man pages. Thanks to Clint Adams.
     (mh) Closes: #259000.
+  * Applied patch for German debconf translation by Florian Ernst.
+    (rb) Closes: #261236.
 
  -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 22 Jul 2004 21:20:48 +0200
 

@@ -33,7 +33,6 @@ msgstr "Möchten Sie systemweit lesbare Heimatverzeichnisse?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
@@ -54,5 +53,5 @@ msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
 msgstr ""
-"Dies hat nur einen Effekt für Benutzer, die mit dem Programm adduser später "
+"Dies hat nur Auswirkungen auf Benutzer, die mit dem Programm adduser später "
 "hinzugefügt werden."
