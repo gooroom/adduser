@@ -1,3 +1,9 @@
+adduser (3.17) unstable; urgency=low
+
+  * Fixed Build-Depends. Closes: #70067 
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sun, 27 Aug 2000 19:03:13 -0500
+
 adduser (3.16) unstable; urgency=low
 
   * Included Russian translation from Peter Novodvorsky <petya@logic.ru>
