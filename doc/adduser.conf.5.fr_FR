@@ -14,8 +14,12 @@ Le fichier
 .I /etc/adduser.conf
 contient les valeurs par défaut pour les programmes
 .B adduser(8) 
-et 
-.BR addgroup(8) .
+, 
+.B addgroup(8) 
+,
+.B deluser(8)
+et
+.BR delgroup(8) .
 Chaque option est de la forme
 .IR option " = " valeur .
 Les simples ou doubles guillemets sont autorisés autour de la valeur. Les lignes
@@ -106,7 +110,7 @@ pouvez l'activer ici.
 .SH FICHIER
 .I /etc/adduser.conf
 .SH VOIR AUSSI
-adduser(8)
+adduser(8), addgroup(8), deluser(8), delgroup(8)
 .SH TRADUCTION
 Christophe Sauthier (christophe@sauthier.com), 2002.
 
