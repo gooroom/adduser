@@ -3,8 +3,10 @@ adduser (3.62) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * Updated Ukrainian program translation. Thanks to
     Eugeniy Meshcheryakov. (mh) Closes: #294244.
+  * Updated Catalan program translation. Thanks to Orestes Mas.
+    (mh) Closes: #295340.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue,  8 Feb 2005 21:21:47 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 16 Feb 2005 21:27:15 +0100
 
 adduser (3.61) experimental; urgency=low
 
