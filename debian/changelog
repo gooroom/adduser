@@ -1,3 +1,11 @@
+adduser (3.45) woody-proposed-updates unstable; urgency=HIGH
+
+  * Uploading to woody-proposed-updates as since version 3.42 some
+    fixes were made I really want to get have in woody. They are quite
+    unlikely to break stuff.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Sat, 15 Dec 2001 15:46:15 +0100
+
 adduser (3.44) unstable; urgency=HIGH
 
   * Quote $RET in debian/postinst. This seems to fix errors when
