@@ -14,6 +14,10 @@ use vars qw(@EXPORT $VAR1);
 
 sub invalidate_nscd {
     my $nscd;
+    if(-e "/var/yp/Makefile")
+      {
+	    system ("make", "-C", "/var/yp");
+      }
     if(-e "/usr/sbin/nscd")
       {
         $nscd = "/usr/sbin/nscd";
@@ -30,21 +34,18 @@ sub invalidate_nscd {
     # this function replaces startnscd and stopnscd (closes: #54726)
     if(-e $nscdpid)
       {
-	my $table = shift;
-	if ($table)
-	  {
-	    system ($nscd, "-i", $table);
-	  }
-	else
-	  {
-	    # otherwise we invalidate passwd and group table
-	    system ($nscd, "-i", "passwd");
-	    system ($nscd, "-i", "group");
-	  }
+	    my $table = shift;
+	    if ($table)
+	      {
+	        system ($nscd, "-i", $table);
+	      }
+	    else
+	      {
+	        # otherwise we invalidate passwd and group table
+	        system ($nscd, "-i", "passwd");
+	        system ($nscd, "-i", "group");
+	      }
       }
-#    if(-e "/var/yp/Makefile")
-#      {
-#      }
 }
 
 sub _ {

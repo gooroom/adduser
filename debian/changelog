@@ -1,3 +1,13 @@
+adduser (3.36) unstable; urgency=medium
+
+  * The "I hope it resolves NIS issues" release
+  * make -C /var/yp is called when invalidating nscd cache. Thanks to
+    Juergen Fischer for testing. Closes: #22412
+  * Included example adduser.local script from John Zaitseff.
+    Closes: #94245
+
+ -- Roland Bauerschmidt <rb@debian.org>  Wed,  9 May 2001 16:28:02 -0500
+
 adduser (3.35) unstable; urgency=low
 
   * Removed unnecessary dependency on perl since perl-base should be

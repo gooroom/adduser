@@ -37,7 +37,7 @@ binary-indep:	checkroot build
 	install -m644 debian/changelog debian/tmp/usr/share/doc/adduser/
 	find debian/tmp/usr/share/doc -type f | xargs gzip -9f
 	install -m644 deluser.conf debian/tmp/etc
-	install -m644 adduser.conf debian/tmp/usr/share/doc/adduser/examples
+	install -m644 adduser.conf examples/* debian/tmp/usr/share/doc/adduser/examples
 	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
 	install -m644 debian/conffiles debian/templates debian/tmp/DEBIAN
 	install -m755 debian/postinst debian/prerm debian/config debian/tmp/DEBIAN
