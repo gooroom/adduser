@@ -28,7 +28,7 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
-msgstr "Möchten Sie System-weit lesbare Heimatverzeichnisse?"
+msgstr "Möchten Sie systemweit lesbare Heimatverzeichnisse?"
 
 #. Type: boolean
 #. Description
@@ -36,14 +36,14 @@ msgstr "Möchten Sie System-weit lesbare Heimatverzeichnisse?"
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the  user. If you are unsure, answer yes "
-"to enable system wide readable home directories."
+"home directories only readable by the  user. If you are unsure, "
+"enable system wide readable home directories."
 msgstr ""
 "Normalerweise können die Heimatverzeichnisse der Benutzer von allen anderen "
 "Benutzern auf dem Rechner gelesen werden. Wenn Sie die Sicherheit/"
 "Privatsphäre erhöhen möchten, dann ist es eventuell sinnvoll, dass die "
 "Heimatverzeichnisse nicht von allen Benutzern gelesen werden können. Wenn "
-"Sie sich nicht sicher sind, sollten Sie System-weit lesbare "
+"Sie sich nicht sicher sind, sollten Sie systemweit lesbare "
 "Heimatverzeichnisse aktivieren."
 
 #. Type: boolean

@@ -51,8 +51,11 @@ adduser (3.52) unstable; urgency=low
       Halls. Closes: #141016.
     * deluser: Check for existing $pw_homedir before find to avoid
       warning if home dir not present.
+    * fix debconf UI reference in templates. Thanks to Joey Hess.
+      Closes: #215025.
+    * fix german debconf template.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 13:27:03 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 25 Mar 2004 13:32:19 +0100
 
 adduser (3.51) unstable; urgency=low
 

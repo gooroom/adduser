@@ -4,8 +4,8 @@ Default: true
 _Description: Do you want system wide readable home directories?
  Normally, home directories can be viewed by all users on the system. If
  you want to increase the security/privacy on your system, you might want
- your home directories only readable by the  user. If you are unsure,
- answer yes to enable system wide readable home directories.
+ your home directories only readable by the user. If you are unsure,
+ enable system wide readable home directories.
  .
  This will only affect home directories of users added with the adduser
  program later.
