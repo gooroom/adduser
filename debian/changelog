@@ -2,9 +2,11 @@ adduser (3.52.1) unstable; urgency=low
 
   * version number not to be released
   * Marc Haber:
-    * Updated Spanish man pages. Thanks to Ruben Porras. Closes: 241087.
+    * Updated Spanish man pages. Thanks to Ruben Porras. Closes: #241087.
+    * Updated Frensh debconf templates. Thanks to Christian Perrier.
+      Closes: #241508.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Apr 2004 12:55:49 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Apr 2004 12:59:08 +0200
 
 adduser (3.52) unstable; urgency=low
 
