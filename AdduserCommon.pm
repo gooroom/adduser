@@ -23,7 +23,7 @@ sub invalidate_nscd {
     if(defined($nisconfig) && -f "/var/yp/Makefile" &&
         -x "/usr/bin/rpcinfo" && grep(/ypserv/, qx{/usr/bin/rpcinfo -p})) {
 	open(NISCONFIG, "<$nisconfig");
-	if(grep(/^NISSERVER=master/, <NISSERVER>)) {
+	if(grep(/^NISSERVER=master/, <NISCONFIG>)) {
             system("make", "-C", "/var/yp");
 	}
 	close(NISCONFIG);

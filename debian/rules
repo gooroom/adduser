@@ -40,7 +40,7 @@ binary-indep:	checkroot build
 	install -m644 adduser.conf examples/* debian/tmp/usr/share/doc/adduser/examples
 	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
 	install -m644 debian/conffiles debian/templates debian/tmp/DEBIAN
-	install -m755 debian/postinst debian/prerm debian/config debian/tmp/DEBIAN
+	install -m755 debian/postinst debian/prerm debian/postrm debian/config debian/tmp/DEBIAN
 	$(MAKE) -C po DESTDIR=`pwd`/debian/tmp install 
 	dpkg-gencontrol -isp
 	dpkg --build debian/tmp ..

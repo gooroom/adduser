@@ -1,13 +1,14 @@
 # Korean messages for Debian adduser
 # Copyright (C) 1999 Changwoo Ryu
 # Changwoo Ryu <cwryu@adam.kaist.ac.kr>, 1999.
+# Updated, Eungkyu Song <eungkyu@sparcs.org>, 2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.11\n"
+"Project-Id-Version: adduser 3.37\n"
 "POT-Creation-Date: 1999-10-07 11:38+0900\n"
-"PO-Revision-Date: 1999-10-07 11:38+0900\n"
-"Last-Translator: Changwoo Ryu <cwryu@adam.kaist.ac.kr>\n"
+"PO-Revision-Date: 2001-06-13 07:00+0900\n"
+"Last-Translator: Eungkyu Song <eungkyu@sparcs.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=EUC-KR\n"
@@ -27,11 +28,11 @@ msgstr "--home은 인자가 필요합니다.\n"
 
 #: ../adduser:125
 msgid "Warning: The home dir you specified already exists.\n"
-msgstr "경고: 지정한 홈 자료방이 이미 존재합니다.\n"
+msgstr "경고: 지정한 홈 디렉토리가 이미 존재합니다.\n"
 
 #: ../adduser:127
 msgid "The home dir must be an absolute path.\n"
-msgstr "홈 자료방은 절대 경로를 써야 합니다.\n"
+msgstr "홈 디렉토리는 절대 경로를 써야 합니다.\n"
 
 #: ../adduser:134
 msgid "--uid requires a numeric argument.\n"
@@ -77,12 +78,13 @@ msgstr "이 경우에는 한 개의 이름만 지정할 수 있습니다.\n"
 
 #: ../adduser:183
 msgid "--group, --ingroup, and --gid options are mutually exclusive.\n"
-msgstr "--group, --ingroup, 그리고 --gid 옵션은 한 번에 한 개만 쓸 수 있습니다.\n"
+msgstr ""
+"--group, --ingroup, 그리고 --gid 옵션은 한 번에 한 개만 쓸 수 있습니다.\n"
 
 #: ../adduser:216
 #, c-format
 msgid "The group `%s' already exists.\n"
-msgstr "`%s' 그룹은 벌써 존재합니다.\n"
+msgstr "`%s' 그룹은 이미 존재합니다.\n"
 
 #: ../adduser:218
 #, c-format
@@ -136,7 +138,7 @@ msgstr "시스템 사용자 %s 추가...\n"
 # (FIXME) 이렇게 쓰면 안 되지..
 #: ../adduser:283 ../adduser:363
 msgid "No UID/GID pair is available in the range "
-msgstr "범위 내에 쓸 수 있는 UID/GID가 없습니다 "
+msgstr "범위 내에 쓸 수 있는 UID/GID 쌍이 없습니다 "
 
 #: ../adduser:286 ../adduser:299 ../adduser:366 ../adduser:379
 #, c-format
@@ -150,30 +152,30 @@ msgstr "범위 내에 쓸 수 있는 UID가 없습니다 "
 
 #: ../adduser:303 ../adduser:309 ../adduser:383 ../adduser:389
 msgid "Internal error"
-msgstr "내부 문제 발생"
+msgstr "내부 오류"
 
 #: ../adduser:314
 msgid "Adding new group $new_name ($new_gid).\n"
-msgstr "새 그룹 $new_name ($new_gid) 추가합니다.\n"
+msgstr "새 그룹 $new_name ($new_gid) 을(를) 추가합니다.\n"
 
 #: ../adduser:319 ../adduser:399
 #, c-format
 msgid "Adding new user %s (%s) with group %s.\n"
-msgstr "새로운 사용자 %s (%s) 를(을) 그룹 %s로(으로) 추가합니다.\n"
+msgstr "새로운 사용자 %s (%s) 을(를) 그룹 %s로(으로) 추가합니다.\n"
 
 #: ../adduser:329
 #, c-format
 msgid "Home directory %s already exists.\n"
-msgstr "홈 자료방 %s이(가) 이미 존재합니다.\n"
+msgstr "홈 디렉토리 %s이(가) 이미 존재합니다.\n"
 
 #: ../adduser:331
 msgid "Not creating home directory.\n"
-msgstr "홈 자료방을 만들지 않습니다.\n"
+msgstr "홈 디렉토리를 만들지 않습니다.\n"
 
 #: ../adduser:333 ../adduser:414
 #, c-format
 msgid "Creating home directory %s.\n"
-msgstr "홈 자료방 %s 만듭니다.\n"
+msgstr "홈 디렉토리 %s 을(를) 만듭니다.\n"
 
 #: ../adduser:356
 #, c-format
@@ -188,7 +190,7 @@ msgstr "새 그룹 %s (%s) 추가.\n"
 #: ../adduser:408
 #, c-format
 msgid "Home directory %s already exists.  Not copying from %s\n"
-msgstr "홈 자료방 %s이(가) 이미 존재합니다.  %s에서 복사하지 않습니다\n"
+msgstr "홈 디렉토리 %s이(가) 이미 존재합니다.  %s에서 복사하지 않습니다\n"
 
 #: ../adduser:424
 #, c-format

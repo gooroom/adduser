@@ -1,3 +1,28 @@
+adduser (3.39) unstable; urgency=medium
+
+  * Last upload was rejected because of broken dpkg-dev, and since
+    I don't have my key here at LSM, this package is uploaded by
+    Martin Michlmayr...
+  * Debconf stuff and /etc/adduser.conf is purged in postrm if the
+    package is purged. Closes: #101811.
+  * Fixed typo (NISERVER instead of NISCONFIG) in AdduserCommon.pm.
+    Closes: #101900.
+  * adduser.conf is only modified if the value entered through debconf
+    actually changed from the current value in adduser.conf.
+    Closes: #101027.
+  * Added Danisch translation of Debconf templates file.
+    Closes: #100285.
+  * Fixed typo in adduser.8. Closes: #103085.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Tue,  3 Jul 2001 14:06:47 +0200
+
+adduser (3.38) unstable; urgency=low
+
+  * Added Korean translation of Debconf templates files and updated
+    .po file. Closes: #100648.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Thu, 14 Jun 2001 11:02:53 +0200
+
 adduser (3.37) unstable; urgency=medium
 
   * -h now does the same as --help. Closes: #98789.

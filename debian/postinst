@@ -27,10 +27,13 @@ then
 
 		if grep -q '^DIR_MODE=' /etc/adduser.conf
 		then
-			mv /etc/adduser.conf /etc/adduser.conf.dpkg-save
-			cat /etc/adduser.conf.dpkg-save | \
-			sed -e "s/^DIR_MODE=.*$/DIR_MODE=$NEW_PERMISSION/" > \
-			/etc/adduser.conf
+			OLD_PERMISSION=$(cat /etc/adduser.conf|sed -ne 's/^DIR_MODE=\([0-9]*\).*$/\1/p')
+			if [ "$OLD_PERMISSION" != "$NEW_PERMISSION" ]; then
+				mv /etc/adduser.conf /etc/adduser.conf.dpkg-save
+				cat /etc/adduser.conf.dpkg-save | \
+				sed -e "s/^DIR_MODE=.*$/DIR_MODE=$NEW_PERMISSION/" > \
+				/etc/adduser.conf
+			fi
 		else
 			cp /etc/adduser.conf /etc/adduser.conf.dpkg-save
 			echo "DIR_MODE=$NEW_PERMISSION" >> /etc/adduser.conf

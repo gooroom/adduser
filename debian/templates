@@ -65,4 +65,21 @@ Description-ro: Vrei ca directoarele din /home sã fie vizibile tuturor?
  Dacã vrei sã mãreºti securitatea/secretizarea în sistem, poşi face 
  ca fiecare utilizator sã nu vadã conşinutul directoarelor celorlalşi
  utilizatori. Dacã nu eºti sigur, rãspunde afirmativ.
+Description-ko: È¨ µğ·ºÅä¸®¸¦ ½Ã½ºÅÛ ÀüÃ¼¿¡¼­ ÀĞÀ» ¼ö ÀÖµµ·Ï ÇÒ±î¿ä?
+ º¸Åë, È¨ µğ·ºÅä¸®´Â ½Ã½ºÅÛÀÇ ¸ğµç »ç¿ëÀÚ°¡ º¼ ¼ö ÀÖ½À´Ï´Ù. ¸¸¾à ½Ã½ºÅÛÀÇ
+ º¸¾È/»ç»ıÈ° º¸È£¸¦ Áõ°¡½ÃÅ°±æ ¿øÇÑ´Ù¸é, È¨ µğ·ºÅä¸®¸¦ ±× »ç¿ëÀÚ¸¸ º¼ ¼ö
+ ÀÖµµ·Ï ÇÏ±â¸¦ ¿øÇÒ °ÍÀÔ´Ï´Ù. È®½ÇÇÏÁö ¾Ê´Ù¸é, ¿¹·Î ´ë´äÇØ¼­ ½Ã½ºÅÛ ÀüÃ¼¿¡¼­
+ È¨ µğ·ºÅä¸®¸¦ ÀĞÀ» ¼ö ÀÖ°Ô ÇÏ¼¼¿ä.
+ .
+ ÀÌ°ÍÀº ´ÙÀ½¿¡ adduser ÇÁ·Î±×·¥À¸·Î Ãß°¡µÈ »ç¿ëÀÚÀÇ È¨ µğ·ºÅä¸®¿¡¸¸ ¿µÇâÀ»
+ ÁÙ °ÍÀÔ´Ï´Ù.
+Description-da: Ønsker du globalt læsbare hjemmekataloger?
+ Normalt kan indholdet af en brugers hjemmekatalog læses af alle
+ brugere på systemet. For at øge systemets sikkerhed/brugernes
+ privatliv kan det være ønskværdigt, at give hver bruger sin egen
+ gruppe, således at indholdet at en brugers hjemmekatalog ikke kan ses
+ af andre end brugeren selv.
+ .
+ Dette vil kun få indflydelse på hjemmekataloger der efterfølgende
+ bliver tilføjet med programmet adduser.
 
