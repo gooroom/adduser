@@ -256,11 +256,11 @@ msgstr "El GID «%s» no existeix.\n"
 msgid ""
 "To avoid problems, the username should consist of\n"
 "letters, digits, underscores, periods and dashes. For compatibility with\n"
-"Samba machine accounts \$ is also supported at the end of the username\n"
+"Samba machine accounts $ is also supported at the end of the username\n"
 msgstr ""
 "Per evitar problemes, el nom d'usuari hauria de constar de\n"
 "lletres, dígits, subratllats, punts i guionets. Per compatibilitat\n"
-"amb els comptes de Samba, també es permet el signe «\$» al final del nom\n"
+"amb els comptes de Samba, també es permet el signe «$» al final del nom\n"
 "de l'usuari\n"
 
 #: ../adduser:665
