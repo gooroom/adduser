@@ -1,3 +1,12 @@
+adduser (3.24) unstable; urgency=low
+
+  * Depends on perl5 now. Yeah, finally we can do that. Closes: #76850
+  * Added Debconf interface to configure the standard homedir
+    permissions
+  * Arghh. Priority finally changed to standard.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Mon, 13 Nov 2000 21:49:01 -0600
+
 adduser (3.23) unstable; urgency=low
 
   * Downgraded priority to standard.

@@ -16,7 +16,7 @@ clean:
 binary-indep:	checkroot build
 	$(checkdir)
 	-rm -rf debian/tmp
-	install -d debian/tmp/{DEBIAN,etc,usr/{sbin,lib/perl5/,share/doc/adduser,/share/man/man{5,8}}}
+	install -d debian/tmp/{DEBIAN,etc,usr/{sbin,lib/perl5/,share/{doc/adduser,man/man{5,8},lintian/overrides}}}
 	install -m644 *.conf debian/tmp/etc
 	sed -e s/VERSION/$(version)/g adduser > debian/tmp/usr/sbin/adduser
 	sed -e s/VERSION/$(version)/g deluser > debian/tmp/usr/sbin/deluser
@@ -40,9 +40,10 @@ binary-indep:	checkroot build
 	install -m644 TODO debian/tmp/usr/share/doc/adduser/
 	install -m644 debian/changelog debian/tmp/usr/share/doc/adduser/
 	find debian/tmp/usr/share/{doc,man} -type f | xargs gzip -9f
-	install -m644 debian/{copyright,override.Lintian} debian/tmp/usr/share/doc/adduser/ 
-	install -m644 debian/conffiles debian/tmp/DEBIAN
-	install -m755 debian/{postinst,prerm} debian/tmp/DEBIAN
+	install -m644 debian/override.Lintian debian/tmp/usr/share/lintian/overrides/adduser
+	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
+	install -m644 debian/{conffiles,templates} debian/tmp/DEBIAN
+	install -m755 debian/{postinst,prerm,config} debian/tmp/DEBIAN
 	$(MAKE) -C po DESTDIR=`pwd`/debian/tmp install 
 	dpkg-gencontrol -isp
 	dpkg --build debian/tmp ..

@@ -1,0 +1,9 @@
+Template: adduser/homedir-permission
+Type: boolean
+Default: true
+Description: Do you want world-wide readable home directories?
+ Normally, home directories can be viewed by all users on the system, thus
+ they are world-wide readable. If you want to increase the security/privacy
+ on your system, you might want your home directories only readable by the
+ user. If you are unsure, answer yes to enable world-wide readable home
+ directories.
