@@ -1,14 +1,16 @@
 adduser (3.59) unstable; urgency=low
 
   * NOT YET RELEASED
-  * Updated Danish program translation. Thanks to Morten Brix Pedersen.
-    Closes: #262336.
-  * Updated Czech program translation. Thanks to Miroslav Kure.
+  * Updated Danish program translation. Thanks to Morten Brix
+    Pedersen. (mh) Closes: #262336.
+  * Updated Czech program translation. Thanks to Miroslav Kure. (mh)
     Closes: #261860.
   * Updated Russian program and debconf translation. Thanks to Yuri
-    Kozlov.
+    Kozlov. (mh)
+  * Updated Ukrainian program and debconf translation. Thanks to
+    Eugeniy Meshcheryakov. (mh) Closes: #261635.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 30 Jul 2004 20:10:06 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 30 Jul 2004 20:12:35 +0200
 
 adduser (3.58) unstable; urgency=low
 

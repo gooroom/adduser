@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: adduser-templates_uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-26 14:05+0100\n"
-"PO-Revision-Date: 2004-04-03 15:40+0300\n"
+"PO-Revision-Date: 2004-07-27 11:35+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
 #. Description
@@ -40,10 +41,10 @@ msgid ""
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
 msgstr ""
-"Звичайно, домашні директорії можуть проглядати всі користувачі в системі. З "
-"метою підвищення безпечності/конфіденційності в вашій системі, ви можливо "
+"Звичайно, домашні директорії можуть переглядати всі користувачі в системі. З "
+"метою підвищення безпечності/конфіденційності в вашій системі, ви, можливо, "
 "захочете зробити, щоб директорії користувачів могли читати лише вони самі. "
-"Якщо ви не впевнені, зробіть домашні директорії відкритими для читання всім."
+"Якщо ви не впевнені, зробіть домашні директорії доступними на читання всім."
 
 #. Type: boolean
 #. Description
