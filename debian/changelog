@@ -1,3 +1,13 @@
+adduser (3.21) unstable; urgency=low
+
+  * NSCD problems fixed. Adduser didn't invalidate the nscd group
+    cache after adding the group for a system user.
+    Closes: #68907, #70020, #65643
+  * TODO now indicates that the development of /new/ features 
+    happens in the adduser 4 tree now.
+
+ -- Roland Bauerschmidt <rb@debian.org>  Wed, 25 Oct 2000 19:55:54 -0500
+
 adduser (3.20) unstable; urgency=low
 
   * does not depend on perl5 anymore but on perl-base and suggests

@@ -1,20 +1,8 @@
 TODO for adduser
 ----------------
 
-currently the following items are on my wishlist:
+Development of adduser 4.0 which is a complete rewrite in C and Shell happens
+at the moment in a private CVS Repository and if this is demanded I'll move it
+to cvs.d.o or somewhere else where more people have access.
 
- * fixing the bugs that are currently assigned to adduser (this has the
-   highest priority and will happen before anything else)
-   
- * clean up the code (might happen step by step while working on the other
-   tasks)
-
- * more translations (need help from others here ;) if you would like to
-   help me here just translate the .po-file and fill a wishlist bug or
-   send it directly via private mail to me; note: please use the latest
-   version from unstable for this)
-
- * add a interactive frontend for creating and removing users
-   (console-based using libterm-stool-perl)
-
- -- Roland Bauerschmidt <rb@debian.org>, Mon Jun 05 21:42:48 CEST 2000
+ -- Roland Bauerschmidt <rb@debian.org>, Wed Oct 25 19:54:31 CDT 2000

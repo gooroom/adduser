@@ -40,7 +40,7 @@ binary-indep:	checkroot build
 	install -m644 TODO debian/tmp/usr/share/doc/adduser/
 	install -m644 debian/changelog debian/tmp/usr/share/doc/adduser/
 	find debian/tmp/usr/share/{doc,man} -type f | xargs gzip -9f
-	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
+	install -m644 debian/{copyright,override.Lintian} debian/tmp/usr/share/doc/adduser/ 
 	install -m644 debian/conffiles debian/tmp/DEBIAN
 	install -m755 debian/{postinst,prerm} debian/tmp/DEBIAN
 	$(MAKE) -C po DESTDIR=`pwd`/debian/tmp install 

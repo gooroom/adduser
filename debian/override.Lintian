@@ -1,0 +1,2 @@
+adduser: perl-script-needs-dependency "perl5|perl5-thread|perl-5.004|perl-5.005|perl-5.005-thread" ./usr/sbin/adduser require POSIX
+adduser: perl-script-needs-dependency "perl5|perl5-thread|perl-5.004|perl-5.005|perl-5.005-thread" ./usr/sbin/deluser require POSIX

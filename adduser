@@ -334,6 +334,7 @@ elsif ($action eq "addsysuser") {
 	print _("Adding new group $new_name ($new_gid).\n") if $verbose;
 	$undogroup = $new_name;
 	&systemcall('groupadd', '-g', $new_gid, $new_name);
+	&invalidate_nscd("group");
     }
 
     printf _("Adding new user %s (%s) with group %s.\n"),$new_name,$new_uid,$ingroup_name
