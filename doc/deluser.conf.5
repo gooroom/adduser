@@ -54,6 +54,13 @@ is activated,
 .B BACKUP_TO
 specifies the directory the backup is written to. Default is the
 current directory.
+.TP
+\fBNO_DEL_PATHS\fP
+A list of regular expressions, space separated. All files to be
+deleted in course of deleting home directories or deleting files owned
+by the user to be deleted are checked against each of these regular
+expressions. If a match is detected, the file is not deleted. Defaults
+to a list of system directories, leaving only /home.
 .SH FILES
 .I /etc/deluser.conf
 .SH SEE ALSO

@@ -124,6 +124,7 @@ $config{"letterhomes"} = "no";
 $config{"quotauser"} = "";
 $config{"dir_mode"} = "0755";
 $config{"setgid_home"} = "no";
+$config{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bin/.* ^/boot/.* ^/dev/.* ^/lib/.* ^/proc/.* ^/root/.* ^/sbin/.* ^/tmp/.* ^/sys/.* ^/srv/.* ^/opt/.* ^/initrd/.* ^/usr/.* ^/var/.*";
 
 $action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
 
@@ -270,6 +271,12 @@ if($action eq "deluser") {
 	my(@files,@dirs);
 	if($config{"remove_home"} && ! $config{"remove_all_files"}) {
 	  sub home_match {
+	    foreach $re ( split ' ', $config{"no_del_paths"} ) {
+	      if( $File::Find::name =~ qr/$re/ ) {
+		s_print(_("Not backing up/removing $File::Find::name, it matches $re.\n"));
+		return;
+	      }
+	    }
 	    push(@files, $File::Find::name) 
 	      if(-f $File::Find::name);
 	    push(@dirs, $File::Find::name)
