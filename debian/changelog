@@ -1,8 +1,11 @@
-adduser (3.55.1) unstable; urgency=low
+adduser (3.56) unstable; urgency=low
 
-  * NOT YET RELEASED.
+  * Marc Haber:
+    * Applied patch against pt_BR debconf template translation. Thanks
+      to Adnre Luis Lopes <andrelop@debian.org>. Closes: #251280.
+  * The "Alle Guten Dinge sind Drei" release.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 27 May 2004 19:26:01 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 27 May 2004 20:02:59 +0000
 
 adduser (3.55) unstable; urgency=low
 
