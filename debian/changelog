@@ -9,8 +9,10 @@ adduser (3.52.1) unstable; urgency=low
       Closes: #241805.
     * Updated Danish debconf templates. Thanks to Claus Hindsgaul.
       Closes: #241845.
+    * Updated Ukrainian debconf templates. Thanks to Eugeniy
+      Meshcheryakov. Closes: #241851.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Apr 2004 15:04:40 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Apr 2004 15:19:04 +0200
 
 adduser (3.52) unstable; urgency=low
 

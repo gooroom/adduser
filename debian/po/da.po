@@ -39,11 +39,11 @@ msgid ""
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
 msgstr ""
-"Normalt kan indholdet af brugernes hjemmemapper læses af samtlige brugere "
-"på systemet. For at øge systemets sikkerhed/brugernes privatliv kan det "
-"være ønskværdigt at give hver bruger sin egen gruppe, således at indholdet "
-"af en brugers hjemmemappe ikke kan ses af andre end brugeren selv. Hvis "
-"du er usikker, så aktivér globalt læsbare hjemmemapper."
+"Normalt kan indholdet af brugernes hjemmemapper læses af samtlige brugere på "
+"systemet. For at øge systemets sikkerhed/brugernes privatliv kan det være "
+"ønskværdigt at give hver bruger sin egen gruppe, således at indholdet af en "
+"brugers hjemmemappe ikke kan ses af andre end brugeren selv. Hvis du er "
+"usikker, så aktivér globalt læsbare hjemmemapper."
 
 #. Type: boolean
 #. Description
@@ -54,4 +54,3 @@ msgid ""
 msgstr ""
 "Dette vil kun få indflydelse på hjemmemapper der efterfølgende bliver "
 "tilføjet med programmet adduser."
-
