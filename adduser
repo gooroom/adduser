@@ -56,6 +56,7 @@ textdomain("adduser");
 $verbose = 1;			# should we be verbose?
 $allow_badname = 0;		# should we allow bad names?
 $ask_passwd = 1;		# ask for a passwd?
+$disabled_login = 0;		# leave the new account disabled?
 
 $defaults = "/etc/adduser.conf";
 $nogroup_id = getgrnam("nogroup") || 65534;
@@ -118,8 +119,7 @@ while (defined($arg = shift(@ARGV))) {
 		if (!defined($special_shell = shift(@ARGV)));
     } elsif ($arg eq "--disabled-password") {
 	$ask_passwd = 0;
-	$disabled_login = 0;
-	} elsif ($arg eq "--disabled-login") {
+    } elsif ($arg eq "--disabled-login") {
 	$ask_passwd = 0;
 	$disabled_login = 1;
     } elsif ($arg eq "--uid") {
@@ -511,6 +511,8 @@ elsif ($action eq "adduser") {
 	    }
 	}
     }
+
+    # useradd without -p has left the account disabled (password string is '!')
 
     if ($ask_passwd) {
 	&systemcall('/usr/bin/passwd', $new_name);
