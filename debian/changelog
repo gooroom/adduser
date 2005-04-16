@@ -1,6 +1,7 @@
 adduser (3.63.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * TODO: Test #302837 fix
   * Updated Norwegian Bokmal debconf templates and program translations.
     Thanks to Hans Fredrik Nordhaug. (mh) Closes: #298834
   * Re-generate adduser.pot, fix gettext bugs in deluser. Thanks to
