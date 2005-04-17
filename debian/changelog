@@ -15,8 +15,10 @@ adduser (3.63.0) UNRELEASED; urgency=low
     (mh) Closes: #303854
   * Fix broken --disabled-login --disabled-password handling. Thanks
     to Tokka Hastrup. (mh) Closes: #302837
+  * Use chage to override login.defs PASS_MAX_DAYS for system accounts.
+    Thanks to Gerhard Schrenk. (mh) Closes: #298883
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 16 Apr 2005 15:36:07 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 17 Apr 2005 18:34:41 +0200
 
 adduser (3.63) unstable; urgency=low
 

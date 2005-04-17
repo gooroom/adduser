@@ -394,6 +394,7 @@ elsif ($action eq "addsysuser") {
     $undouser = $new_name;
     &systemcall('/usr/sbin/useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$shell, '-u', $new_uid, $new_name);
+    &systemcall('/usr/bin/chage', '-M', '99999', $new_name);
     &invalidate_nscd();
 
     if(defined($new_gecos)) {
