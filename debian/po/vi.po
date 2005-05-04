@@ -1,0 +1,40 @@
+# Vietnamese Translation for adduser.
+# Copyright © 2005 Free Software Foundation, Inc.
+# Clytie Siddall <clytie@riverland.net.au>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: adduser 3.63\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-26 14:05+0100\n"
+"PO-Revision-Date: 2005-05-04 15:28+0930\n"
+"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Do you want system wide readable home directories?"
+msgstr "Bạn có muốn có thể đọc thư mục chính trong toàn bộ hệ thống không?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"Normally, home directories can be viewed by all users on the system. If you "
+"want to increase the security/privacy on your system, you might want your "
+"home directories only readable by the user. If you are unsure, enable system "
+"wide readable home directories."
+msgstr "Bình thường, mọi người dùng trong hệ thống có thể đọc các thư mục chính (home) của người dùng khác. Nếu bạn muốn tăng bảo mật / sự riêng tư lên trong hệ thống bạn, có lẽ muốn cho phép chỉ người dùng sở hữu thư mục chính ấy có thể đọc nó. (Nếu bạn chưa chắc, hãy hiệu lực mọi người trên hệ thống có thể đọc thư mục ấy.)"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"This will only affect home directories of users added with the adduser "
+"program later."
+msgstr "Hành động này sẽ chỉ áp dụng vào thư mục chính của người dùng được thêm dùng chương trình adduser sau này."

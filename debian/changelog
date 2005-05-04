@@ -13,12 +13,14 @@ adduser (3.63.0) UNRELEASED; urgency=low
     (mh) Closes: #300641
   * Add Finnish debconf templates. Thanks to Matti Pöllä.
     (mh) Closes: #303854
+  * Add Vietnamese debconf templates. Thanks to Clytie Siddall.
+    (mh) Closes: #307599
   * Fix broken --disabled-login --disabled-password handling. Thanks
     to Tokka Hastrup. (mh) Closes: #302837
   * Use chage to override login.defs PASS_MAX_DAYS for system accounts.
     Thanks to Gerhard Schrenk. (mh) Closes: #298883
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 17 Apr 2005 18:34:41 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed,  4 May 2005 08:20:43 +0200
 
 adduser (3.63) unstable; urgency=low
 
