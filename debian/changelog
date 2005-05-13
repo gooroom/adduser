@@ -19,8 +19,10 @@ adduser (3.63.0) UNRELEASED; urgency=low
     to Tokka Hastrup. (mh) Closes: #302837
   * Use chage to override login.defs PASS_MAX_DAYS for system accounts.
     Thanks to Gerhard Schrenk. (mh) Closes: #298883
+  * fix misdocumentation of system user password status.
+    Thanks to Shaul Karl. (mh) Closes: #308881
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed,  4 May 2005 08:20:43 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 13 May 2005 07:42:44 +0200
 
 adduser (3.63) unstable; urgency=low
 
