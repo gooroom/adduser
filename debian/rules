@@ -5,7 +5,7 @@ version = $(shell dpkg-parsechangelog | awk '/^Version/{print $$2}')
 
 build:
 	$(checkdir)
-	$(MAKE) -C po all
+	$(MAKE) -C po all adduser.pot
 	touch build
 
 clean:

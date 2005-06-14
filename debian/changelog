@@ -21,8 +21,11 @@ adduser (3.63.0) UNRELEASED; urgency=low
     Thanks to Gerhard Schrenk. (mh) Closes: #298883
   * fix misdocumentation of system user password status.
     Thanks to Shaul Karl. (mh) Closes: #308881
+  * add ubuntu patch to generate pot file during package build, and
+    fix two s_print/s_printf invocations in deluser.
+    Thanks to Martin Pitt. (mh) Closes: #313517
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 13 May 2005 07:42:44 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 14 Jun 2005 09:26:32 +0200
 
 adduser (3.63) unstable; urgency=low
 

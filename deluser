@@ -249,14 +249,14 @@ if($action eq "deluser") {
 	  sub home_match {
 	    foreach my $mount (@mountpoints) {
 	      if( $File::Find::name eq $mount ) {
-		s_print(_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
+		s_printf(_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
 		$File::Find::prune=1;
 		return;
 	      }
 	    }
 	    foreach my $re ( split ' ', $config{"no_del_paths"} ) {
 	      if( $File::Find::name =~ qr/$re/ ) {
-		s_print(_("Not backing up/removing `%s', it matches %s.\n"),$File::Find::name,$re);
+		s_printf(_("Not backing up/removing `%s', it matches %s.\n"),$File::Find::name,$re);
 		$File::Find::prune=1;
 		return;
 	      }
