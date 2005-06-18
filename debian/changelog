@@ -1,7 +1,7 @@
-adduser (3.63.0) UNRELEASED; urgency=low
+adduser (3.64) unreleased; urgency=low
 
-  * NOT RELEASED YET
-  * TODO: Test #302837 fix
+  * The "bring the svn changes to unstable while not having time to
+    address the other valid bug reports" release.
   * Updated Norwegian Bokmal debconf templates and program translations.
     Thanks to Hans Fredrik Nordhaug. (mh) Closes: #298834
   * Re-generate adduser.pot, fix gettext bugs in deluser. Thanks to
@@ -25,7 +25,7 @@ adduser (3.63.0) UNRELEASED; urgency=low
     fix two s_print/s_printf invocations in deluser.
     Thanks to Martin Pitt. (mh) Closes: #313517
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 14 Jun 2005 09:26:32 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 18 Jun 2005 17:09:56 +0000
 
 adduser (3.63) unstable; urgency=low
 
