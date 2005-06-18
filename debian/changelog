@@ -1,7 +1,8 @@
-adduser (3.64) unreleased; urgency=low
+adduser (3.64) unstable; urgency=low
 
   * The "bring the svn changes to unstable while not having time to
     address the other valid bug reports" release.
+  * try Priority: - to avoid override disparities
   * Updated Norwegian Bokmal debconf templates and program translations.
     Thanks to Hans Fredrik Nordhaug. (mh) Closes: #298834
   * Re-generate adduser.pot, fix gettext bugs in deluser. Thanks to
