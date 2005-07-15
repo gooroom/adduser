@@ -394,7 +394,16 @@ elsif ($action eq "addsysuser") {
     $undouser = $new_name;
     &systemcall('/usr/sbin/useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$shell, '-u', $new_uid, $new_name);
-    &systemcall('/usr/bin/chage', '-M', '99999', $new_name);
+    print "/usr/bin/chage -M 99999 $new_name\n" if $debugging;
+    if (system('/usr/bin/chage', '-M', '99999', $new_name)) {
+	if( ($?>>8) ne 3 ) {
+	    &cleanup("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
+	      if ($?>>8);
+	    &cleanup("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
+	} else {
+	    print _("chage failed with return code 3, shadow not enabled, password aging cannot be set. Continuing.");
+	}
+    }
     &invalidate_nscd();
 
     if(defined($new_gecos)) {

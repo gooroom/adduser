@@ -120,11 +120,33 @@ sub get_users_groups {
     @groups;
 }
 
+# return a user's groups
+sub get_users_groups {
+    my($user) = @_;
+    my($name,$members,@groups);
+    setgrent;
+    while (($name,$members) = (getgrent)[0,3]) {
+	for (split(/ /, $members)) {
+	    if ($user eq $_) {
+		push @groups, $name;
+		last;
+	    }
+	}
+    }
+    endgrent;
+    @groups;
+}
+
 # return a group's members
 sub get_group_members
   {
       my $group = shift;
-      my $members = (getgrnam($group))[3];
+      my @members;
+      foreach (split(/ /, (getgrnam($group))[3])) {
+	  if( getpwnam($_) ) {
+	      push @members, $_;
+	  }
+      }
       return split(/ /, $members);
   }
 

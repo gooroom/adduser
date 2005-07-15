@@ -1,3 +1,17 @@
+adduser (3.65) unstable; urgency=low
+
+  * do not abort if chage returns exit code 3. This is an indication
+    that password aging cannot be set due to shadow not being enabled.
+    Closes: #316089, #317944.
+  * get_group_members now filters out non-existent users.
+    Closes: #284688, #315071, #315250
+  * Use getpwent to determine whether a to-be-deleted group is primary
+    group for users to enhance compatibility with non-/etc/passwd
+    backends. Closes: #308175
+  * Standards-Version: 3.6.2 (no changes needed)
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 15 Jul 2005 18:03:40 +0000
+
 adduser (3.64) unstable; urgency=low
 
   * The "bring the svn changes to unstable while not having time to

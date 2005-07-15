@@ -337,9 +337,13 @@ if($action eq "deluser") {
     }
     
     # This needs to be fixed - we need use getpwent here.
-    if(system("grep", "-q", "^.*:.*:.*:$gr_gid:.*:.*:.*\$", "/etc/passwd") == 0) {
-	dief (_("There are users with `%s' as their primary group!\n"),$group);
+    setpwent;
+    while (($name,$primgrp) = (getgrent)[0,3]) {
+	if( $primgrp = $gr_gid ) {
+	    dief (_("There are users with `%s' as their primary group!\n"),$group);
+	}
     }
+    endpwent;
 
     s_printf(_("Removing group `%s'...\n"),$group);
     systemcall("/usr/sbin/groupdel",$group);
