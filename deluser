@@ -336,11 +336,10 @@ if($action eq "deluser") {
 	dief (_("The group `%s' is not empty!\n"),$group);
     }
     
-    # This needs to be fixed - we need use getpwent here.
     setpwent;
-    while (($name,$primgrp) = (getgrent)[0,3]) {
-	if( $primgrp = $gr_gid ) {
-	    dief (_("There are users with `%s' as their primary group!\n"),$group);
+    while (($acctname,$primgrp) = (getpwent)[0,3]) {
+	if( $primgrp eq $gr_gid ) {
+	    dief (_("`%s' still has `%s' as their primary group!\n"),$acctname,$group);
 	}
     }
     endpwent;
