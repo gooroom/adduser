@@ -397,11 +397,11 @@ elsif ($action eq "addsysuser") {
     print "/usr/bin/chage -M 99999 $new_name\n" if $debugging;
     if (system('/usr/bin/chage', '-M', '99999', $new_name)) {
 	if( ($?>>8) ne 3 ) {
-	    &cleanup("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
+	    &cleanup("$0: `/usr/bin/chage -M 99999 $new_name' returned error code " . ($?>>8) . ".  Aborting.\n")
 	      if ($?>>8);
-	    &cleanup("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
+	    &cleanup("$0: `/usr/bin/chage -M 99999 $new_name' exited from signal " . ($?&255) . ".  Aborting.\n");
 	} else {
-	    print _("chage failed with return code 3, shadow not enabled, password aging cannot be set. Continuing.");
+	    print _("chage failed with return code 3, shadow not enabled, password aging cannot be set. Continuing.\n");
 	}
     }
     &invalidate_nscd();

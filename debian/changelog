@@ -4,8 +4,10 @@ adduser (3.65.0) UNRELEASED; urgency=low
   * Fix adduser user group. Thanks to Klaus Ethgen. Closes: #318951
   * Fix primary group check which was broken due to wrong function name.
     Thanks to Bastian Kleineidam. Closes: #319043
+  * Fix broken error message on chage non-zero exit code. Thanks to
+    Brian Nelson. Closes: #316089
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 19 Jul 2005 14:55:27 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 20 Jul 2005 06:07:10 +0000
 
 adduser (3.65) unstable; urgency=low
 
