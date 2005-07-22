@@ -147,7 +147,7 @@ sub get_group_members
 	      push @members, $_;
 	  }
       }
-      return split(/ /, $members);
+      return @members;
   }
 
 sub s_print

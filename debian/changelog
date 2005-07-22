@@ -6,8 +6,10 @@ adduser (3.65.0) UNRELEASED; urgency=low
     Thanks to Bastian Kleineidam. Closes: #319043
   * Fix broken error message on chage non-zero exit code. Thanks to
     Brian Nelson. Closes: #316089
+  * have get_group_members return a list when callers expect a list.
+    Thanks to Lukasz Czyczylo.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 20 Jul 2005 06:07:10 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 22 Jul 2005 16:24:00 +0000
 
 adduser (3.65) unstable; urgency=low
 
