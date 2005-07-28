@@ -20,6 +20,7 @@ binary-indep:	checkroot build
 	install -d debian/tmp/DEBIAN debian/tmp/etc debian/tmp/usr/sbin \
 		debian/tmp/usr/share/adduser \
 		debian/tmp/usr/share/doc/adduser/examples \
+		debian/tmp/usr/share/lintian/overrides \
 		debian/tmp/usr/share/perl5/Debian \
 		debian/tmp/usr/share/man/man5 \
 		debian/tmp/usr/share/man/man8 \
@@ -41,6 +42,7 @@ binary-indep:	checkroot build
 
 	install -m644 TODO debian/tmp/usr/share/doc/adduser/
 	install -m644 debian/changelog debian/tmp/usr/share/doc/adduser/
+	install -m644 debian/lintian/overrides/adduser debian/tmp/usr/share/lintian/overrides
 	find debian/tmp/usr/share/doc -type f | xargs gzip -9f
 	install -m644 deluser.conf debian/tmp/etc
 	cp -r examples debian/tmp/usr/share/doc/adduser
