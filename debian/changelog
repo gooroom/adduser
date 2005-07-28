@@ -7,8 +7,10 @@ adduser (3.66) unstable; urgency=low
     Brian Nelson. Closes: #316089
   * have get_group_members return a list when callers expect a list.
     Thanks to Lukasz Czyczylo.
+  * add lintian override: adduser does not need to depend on adduser
+    to use adduser in maintainer scripts.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 28 Jul 2005 05:27:47 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 28 Jul 2005 05:34:56 +0000
 
 adduser (3.65) unstable; urgency=low
 
