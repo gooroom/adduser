@@ -1,8 +1,10 @@
 adduser (3.66.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * Add Arabic (ar) debconf translation. Thanks to Mohammed Adnène
+    Trojette. (mh) Closes: #320756
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 28 Jul 2005 05:48:24 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu,  4 Aug 2005 12:14:51 +0200
 
 adduser (3.66) unstable; urgency=low
 
