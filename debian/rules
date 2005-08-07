@@ -6,11 +6,15 @@ version = $(shell dpkg-parsechangelog | awk '/^Version/{print $$2}')
 build:
 	$(checkdir)
 	$(MAKE) -C po all adduser.pot
+	# generate man pages
+	cd doc/po4a && po4a po4a.conf
 	touch build
 
 clean:
 	$(checkdir)
 	$(MAKE) -C po $@
+	# remove generated man pages
+	rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.fr
 	-rm -rf build *~ debian/tmp debian/*~ debian/files* debian/substvars
 
 binary-indep:	checkroot build
@@ -26,7 +30,8 @@ binary-indep:	checkroot build
 		debian/tmp/usr/share/man/man8 \
 		debian/tmp/usr/share/man/ru_RU/man5 \
 		debian/tmp/usr/share/man/ru_RU/man8 \
-		debian/tmp/usr/share/man/fr_FR/man5 \
+		debian/tmp/usr/share/man/fr/man5 \
+		debian/tmp/usr/share/man/fr/man8 \
 		debian/tmp/usr/share/man/pt_BR/man5 \
 		debian/tmp/usr/share/man/pt_BR/man8 \
 		debian/tmp/usr/share/man/es_ES/man5 \

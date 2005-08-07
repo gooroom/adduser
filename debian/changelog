@@ -3,8 +3,10 @@ adduser (3.66.0) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * Add Arabic (ar) debconf translation. Thanks to Mohammed Adnène
     Trojette. (mh) Closes: #320756
+  * Update French (fr) manpages, introduce po4a to generate translated
+    manpages. Thanks to Nicolas François. Closes: #321614
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu,  4 Aug 2005 12:14:51 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun,  7 Aug 2005 06:47:29 +0000
 
 adduser (3.66) unstable; urgency=low
 
