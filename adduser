@@ -289,7 +289,7 @@ if ($action eq "addgroup") {
 ####################
 ## addusertogroup ##
 ####################
-elsif ($action eq "addusertogroup") {
+if ($action eq "addusertogroup") {
     dief (_("The user `%s' does not exist.\n"),$existing_user)
 	if (!defined getpwnam($existing_user));
     dief (_("The group `%s' does not exist.\n"),$existing_group)
@@ -321,7 +321,7 @@ elsif ($action eq "addusertogroup") {
 ################
 ## addsysuser ##
 ################
-elsif ($action eq "addsysuser") {
+if ($action eq "addsysuser") {
     if (existing_user_ok($new_name, $new_uid)) {
 	printf (_("The user `%s' already exists as a system user. Exiting...\n"), $new_name) if $verbose;
 	exit 0;
@@ -418,9 +418,9 @@ elsif ($action eq "addsysuser") {
 #############
 ## adduser ##
 #############
-elsif ($action eq "adduser") {
+if ($action eq "adduser") {
     if (!$ingroup_name && !defined($new_gid)) {
-	if ($config{"usergroups"} eq "yes") { $make_group_also = 1; }
+	if ($config{"usergroups"} =~  /yes/i) { $make_group_also = 1; }
 	else { $new_gid = $config{"users_gid"}; }
     }
     check_user_group(0);
@@ -503,7 +503,7 @@ elsif ($action eq "adduser") {
 		chop;
 		next if ($_ eq ".");
 		&copy_to_dir($config{"skel"}, $_, $home_dir, $new_uid,
-			     $new_gid, ($config{"setgid_home"} eq "yes"));
+			     $new_gid, ($config{"setgid_home"} =~ /yes/i));
 	    }
 	}
     }
@@ -541,6 +541,10 @@ elsif ($action eq "adduser") {
     exit 0;
 }
 
+#
+# we never go here
+#
+
 
 # calculate home directory
 sub homedir {
@@ -548,6 +552,7 @@ sub homedir {
     $dir .= '/' . $_[1] if ($config{"grouphomes"} =~ /yes/i);
     $dir .= '/' . substr($_[0],0,1) if ($config{"letterhomes"} =~ /yes/i);
     $dir .= '/' . $_[0];
+    return $dir;
 }
 
 
@@ -565,15 +570,14 @@ sub mktree {
 	$done .= '/' . shift(@path);
 	-d $done || mkdir($done, $default_dir_mode) || return 0;
     }
-    1;
+    return 1;
 }
 
+# returns 0 if the the user doesn't exist or
+# returns 1 if
+#     - the account already exists as a system user or
+#     - if an explicit UID is given, that UID matches the existing user.
 sub existing_user_ok {
-    # returns 1 if
-    #  - the user doesn't exist or
-    #     - a system user is to be created
-    #     - the account already exists as a system user and
-    #     - if an explicit UID is given, that UID matches the existing user.
     my($new_name,$new_uid) = @_;
     my ($dummy1,$dummy2,$uid);
     if (($dummy1,$dummy2,$uid) = getpwnam($new_name)) {
@@ -591,12 +595,11 @@ sub existing_user_ok {
     }
 }
 
+# returns 0 if the group doesn't exist or
+# returns 1 if 
+#     - the group already exists as a system group or
+#     - if an explicit GID is given, that GID matches the existing group.
 sub existing_group_ok {
-    # returns 1 if
-    #  - the group doesn't exist or
-    #     - a system group is to be created
-    #     - the group already exists as a system group and
-    #     - if an explicit GID is given, that GID matches the existing group.
     my($new_name,$new_gid) = @_;
     my ($dummy1,$dummy2,$gid);
     if (($dummy1,$dummy2,$gid) = getgrnam($new_name)) {
@@ -726,7 +729,7 @@ sub first_avail_id {
 	$min++      if ($min == $ids[0]);
     }
 
-    -1;				# nothing available
+    return -1;			# nothing available
 }
 
 
@@ -736,7 +739,7 @@ sub get_current_gids {
     setgrent;
     push @gids, $gid while defined($gid = (getgrent)[2]);
     endgrent;
-    @gids;
+    return @gids;
 }
 
 
@@ -746,7 +749,7 @@ sub get_current_uids {
     setpwent;
     push @uids, $uid while defined($uid = (getpwent)[2]);
     endpwent;
-    @uids;
+    return @uids;
 }
 
 sub ch_gecos {
@@ -776,7 +779,7 @@ sub user_is_member {
     for (split(/ /, (getgrnam($group))[3])) {
 	return 1 if ($user eq $_);
     }
-    0;
+    return 0;
 }
 
 
@@ -864,7 +867,7 @@ sub get_dir_mode
   {
       my $setgid = shift;
       # no longer make home directories setgid per default (closes: #64806)
-      $setgid = 0 unless $config{"setgid_home"} eq "yes";
+      $setgid = 0 unless $config{"setgid_home"} =~  /yes/i;
 
       my $dir_mode = $config{"dir_mode"};
       if(!defined($dir_mode) || ! ($dir_mode =~ /[0-7]{3}/ ||
