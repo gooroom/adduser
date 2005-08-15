@@ -33,6 +33,7 @@
 
 use warnings;
 use Debian::AdduserCommon;
+use Getopt::Long;
 
 BEGIN {
     eval 'use Locale::gettext';
@@ -55,7 +56,7 @@ textdomain("adduser");
 
 $verbose = 1;			# should we be verbose?
 $allow_badname = 0;		# should we allow bad names?
-$ask_passwd = 1;		# ask for a passwd?
+$ask_passwd = 1;		# ask for a passwd? 
 $disabled_login = 0;		# leave the new account disabled?
 
 $defaults = "/etc/adduser.conf";
@@ -84,73 +85,56 @@ $config{"name_regex"} = "^[a-z][-a-z0-9]*\$";
 
 $action = $0 eq "addgroup" ? "addgroup" : "adduser";
 
+die "$0: ",_("Only root may add a user or group to the system.\n") if ($> != 0);
+
+# Parse options, sanity checks
+GetOptions ("quiet" => sub { $verbose = 0 },
+            "force-badname" => \$allow_badname,
+	    "help|h" => sub { &usage(); exit 0 },
+	    "version" => sub { &version(); exit 0 },
+	    "system" => \$found_sys_opt,
+	    "group" => \$found_group_opt,
+	    "ingroup=s" => \$ingroup_name,
+	    "home=s" => \$special_home,
+	    "gecos=s" => \$new_gecos,
+	    "shell=s" => \$special_shell,
+	    "disabled_password" => sub { $ask_passwd = 0 },
+	    "disabled_login" => sub { $disabled_login = 1; $ask_passwd = 0 },
+	    "uid=i" => \$new_uid,
+	    "firstuid=i" => \$new_firstuid,
+	    "lastuid=i" => \$new_lastuid,
+	    "gid=i" => \$new_gid,
+	    "conf=s" => \$defaults,
+	    "no-create-home" => \$no_create_home,
+	    "debug" => \$debugging );
+
+
+# check for unknown parameters
+# all other parameters are names
+
 while (defined($arg = shift(@ARGV))) {
-    die "$0: ",_("No options allowed after names.\n")
-	if (defined($names[0]) && $arg =~ /^--/);
-    if ($arg eq "--quiet") {
-	$verbose = 0;
-    } elsif ($arg eq "--force-badname") {
-	$allow_badname = 1;
-    } elsif ($arg eq "--help" || $arg eq "-h") {
-	&usage();
-	exit 0;
-    } elsif ($arg eq "--version") {
-	&version();
-	exit 0;
-    } elsif ($arg eq "--system") {
-	$found_sys_opt = 1;
-	$action = "addsysuser" if ($action eq "adduser");
-	$action = "addsysgroup" if ($action eq "addgroup");
-    } elsif ($arg eq "--group") {
-	$found_group_opt = 1;
-    } elsif ($arg eq "--ingroup") {
-	die "$0: ",_("--ingroup requires an argument.\n")
-	    if (!defined($ingroup_name = shift(@ARGV)));
-    } elsif ($arg eq "--home") {
-	die "$0: ",_("--home requires an argument.\n")
-	    if (!defined($special_home = shift(@ARGV)));
-	die "$0: ",_("The home dir must be an absolute path.\n")
-	    if ($special_home !~ m+^/+ );
-    } elsif ($arg eq "--gecos") {
-	die "$0: ",_("--gecos requires an argument.\n")
-	    if (!defined($new_gecos = shift(@ARGV)));
-	} elsif ($arg eq "--shell") {
-	die "$0: ",_("--shell requires an argument.\n")
-		if (!defined($special_shell = shift(@ARGV)));
-    } elsif ($arg eq "--disabled-password") {
-	$ask_passwd = 0;
-    } elsif ($arg eq "--disabled-login") {
-	$ask_passwd = 0;
-	$disabled_login = 1;
-    } elsif ($arg eq "--uid") {
-	die "$0: ",_("--uid requires a numeric argument.\n")
-	    if (!defined ($new_uid = shift(@ARGV)) || $new_uid !~ /^\-?\d+$/);
-    } elsif ($arg eq "--firstuid") {
-	die "$0: ",_("--firstuid requires a numeric argument.\n")
-	    if (!defined ($new_firstuid = shift(@ARGV)) || $new_firstuid !~ /^\-?\d+$/);
-    } elsif ($arg eq "--lastuid") {
-	die "$0: ",_("--lastuid requires a numeric argument.\n")
-	    if (!defined ($new_lastuid = shift(@ARGV)) || $new_lastuid !~ /^\-?\d+$/);
-    } elsif ($arg eq "--gid") {
-	die "$0: ",_("--gid requires a numeric argument.\n")
-	    if (!defined ($new_gid = shift(@ARGV)) || $new_gid !~ /^\-?\d+$/);
-    } elsif ($arg eq "--conf") {
-	die "$0: ",_("--conf requires an argument.\n")
-	    if (!defined($defaults = shift(@ARGV)));
-	dief (_("`%s' does not exist.\n",$defaults))
-	    if (! -f $defaults);
-    } elsif ($arg eq "--no-create-home") {
-	$no_create_home = 1;
-    } elsif ($arg eq "--debug") {
-	$debugging = 1;
-    } elsif ($arg =~ /^--/) {	# bad argument!
-	dief (_("Unknown argument `%s'.\n"),$arg);
+  if (defined($names[0]) && $arg =~ /^--/) {
+      die "$0: ",_("No options allowed after names.\n")
     } else {			# it's a username
 	push (@names, $arg);
     }
 }
+	    
+if ((defined($special_home)) && ($special_home !~ m+^/+ )) {
+  die "$0: ",_("The home dir must be an absolute path.\n")
+}
+	   
+if (defined($found_sys_opt)) {
+  $action = "addsysuser" if ($action eq "adduser");
+  $action = "addsysgroup" if ($action eq "addgroup");
+}
 
-die "$0: ",_("Only root may add a user or group to the system.\n") if ($> != 0);
+
+if (defined($defaults)) {
+  die (_("`%s' does not exist.\n",$defaults))
+    if (! -f $defaults);
+}
+
 
 if (defined($special_home) && $verbose) {
     print "$0: ",_("Warning: The home dir you specified already exists.\n")
@@ -171,8 +155,10 @@ if (@names == 0) {
     chomp($answer=<STDIN>);
     push(@names, $answer);
 }
+
 die "$0: ",_("I need a name to add.\n") if (length($names[0]) == 0);
 die "$0: ",_("No more than two names.\n") if (@names > 2);
+
 if (@names == 2) {	# must be addusertogroup
     die "$0: ",_("Specify only one name in this mode.\n")
 	if ($action eq "addsysuser" || $found_group_opt);
