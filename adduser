@@ -83,9 +83,7 @@ $config{"dir_mode"} = "0755";
 $config{"setgid_home"} = "no";
 $config{"name_regex"} = "^[a-z][-a-z0-9]*\$";
 
-$action = $0 eq "addgroup" ? "addgroup" : "adduser";
 
-die "$0: ",_("Only root may add a user or group to the system.\n") if ($> != 0);
 
 # Parse options, sanity checks
 GetOptions ("quiet" => sub { $verbose = 0 },
@@ -108,9 +106,22 @@ GetOptions ("quiet" => sub { $verbose = 0 },
 	    "no-create-home" => \$no_create_home,
 	    "debug" => \$debugging );
 
+# everyone can issue "--help" and "--version", but only root can go on
+die "$0: ",_("Only root may add a user or group to the system.\n") if ($> != 0);
 
-# check for unknown parameters
-# all other parameters are names
+
+$action = $0 eq "addgroup" ? "addgroup" : "adduser";
+if (defined($found_sys_opt)) {
+  $action = "addsysuser" if ($action eq "adduser");
+  $action = "addsysgroup" if ($action eq "addgroup");
+}
+
+
+
+############################
+# checks related to @names #
+############################
+
 
 while (defined($arg = shift(@ARGV))) {
   if (defined($names[0]) && $arg =~ /^--/) {
@@ -119,30 +130,10 @@ while (defined($arg = shift(@ARGV))) {
 	push (@names, $arg);
     }
 }
+
+die "$0: ",_("I need a name to add.\n") if (length($names[0]) == 0);
+die "$0: ",_("No more than two names.\n") if (@names > 2);
 	    
-if ((defined($special_home)) && ($special_home !~ m+^/+ )) {
-  die "$0: ",_("The home dir must be an absolute path.\n")
-}
-	   
-if (defined($found_sys_opt)) {
-  $action = "addsysuser" if ($action eq "adduser");
-  $action = "addsysgroup" if ($action eq "addgroup");
-}
-
-
-if (defined($defaults)) {
-  die (_("`%s' does not exist.\n",$defaults))
-    if (! -f $defaults);
-}
-
-
-if (defined($special_home) && $verbose) {
-    print "$0: ",_("Warning: The home dir you specified already exists.\n")
-      if (!defined($no_create_home) && -d $special_home);
-    print "$0: ",_("Warning: The home dir you specified does not exist.\n")
-      if (defined($no_create_home) && ! -d $special_home);
-}
-
 if (@names == 0) {
     if($found_group_opt || $action eq "addgroup" || $action eq "addsysgroup")
       {
@@ -156,9 +147,6 @@ if (@names == 0) {
     push(@names, $answer);
 }
 
-die "$0: ",_("I need a name to add.\n") if (length($names[0]) == 0);
-die "$0: ",_("No more than two names.\n") if (@names > 2);
-
 if (@names == 2) {	# must be addusertogroup
     die "$0: ",_("Specify only one name in this mode.\n")
 	if ($action eq "addsysuser" || $found_group_opt);
@@ -169,6 +157,33 @@ if (@names == 2) {	# must be addusertogroup
 else {
     $new_name = shift (@names);
 }
+
+###################################
+# check for consistent parameters #
+###################################
+
+die "$0: ",_("The --group, --ingroup, and --gid options are mutually exclusive.\n") if
+    ($action ne "addgroup" &&
+     defined($found_group_opt) +defined($ingroup_name) +defined($new_gid) > 1);
+
+
+if ((defined($special_home)) && ($special_home !~ m+^/+ )) {
+  die "$0: ",_("The home dir must be an absolute path.\n")
+}
+	   
+if (defined($defaults)) {
+  die (_("`%s' does not exist.\n",$defaults))
+    if (! -f $defaults);
+}
+
+
+if (defined($special_home) && $verbose) {
+    print "$0: ",_("Warning: The home dir you specified already exists.\n")
+      if (!defined($no_create_home) && -d $special_home);
+    print "$0: ",_("Warning: The home dir you specified does not exist.\n")
+      if (defined($no_create_home) && ! -d $special_home);
+}
+
 
 if ($found_group_opt) {
     if ($action eq "addsysuser") {
@@ -181,9 +196,6 @@ if ($found_group_opt) {
 	$action = "addgroup";
     }
 }
-die "$0: ",_("The --group, --ingroup, and --gid options are mutually exclusive.\n") if
-    ($action ne "addgroup" &&
-     defined($found_group_opt) +defined($ingroup_name) +defined($new_gid) > 1);
 
 if( $verbose ) {
     $ENV{"VERBOSE"}="1"

@@ -8,8 +8,11 @@ adduser (3.67.0) UNRELEASED; urgency=low
     - relaxed checking of configuration ("yes" is checked case
       insensitively now)
     - explicit return values
+  * Third patch from Jörg Hoh:
+    - reorder command line checks and make them more consistent
+    - add more comments
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 15 Aug 2005 21:12:07 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 15 Aug 2005 21:54:16 +0200
 
 adduser (3.67) unstable; urgency=low
 
