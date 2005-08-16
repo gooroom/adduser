@@ -1,22 +1,22 @@
 adduser (3.68.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
-  * Patches by Jörg Hoh:
+  * make clear in 3.68 changelog that Jörg's patches were against adduser
+  * deluser patches by Jörg Hoh:
     - use GetOpt instead of manual option parsing
     - restructure plausibility checks
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 16 Aug 2005 08:23:11 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 16 Aug 2005 08:25:29 +0200
 
 adduser (3.68) experimental; urgency=low
 
-  * Apply patch by Jörg Hoh to replace manual option parsing by
-    getopt and restructure plausibility checks.
-  * Apply one more patch by Jörg Hoh:
+  * adduser patches by Jörg Hoh:
+    - use GetOpt instead of manual option parsing
+    - restructure plausibility checks
     - Comment update
     - relaxed checking of configuration ("yes" is checked case
       insensitively now)
     - explicit return values
-  * Third patch from Jörg Hoh:
     - reorder command line checks and make them more consistent
     - add more comments
 
