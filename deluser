@@ -31,6 +31,9 @@ $version = "VERSION";
 $ENV{"PATH"} = "/sbin:/bin:/usr/sbin:/usr/bin";
 
 use warnings;
+use Getopt::Long;
+use Debian::AdduserCommon;
+
 BEGIN {
     eval 'use File::Find';
     if ($@) {
@@ -42,7 +45,6 @@ BEGIN {
     }
 }
 
-use Debian::AdduserCommon;
 
 BEGIN {
     eval 'use Locale::gettext';
@@ -64,10 +66,9 @@ setlocale(LC_MESSAGES, "");
 textdomain("adduser");
 
 $verbose = 1;
-$defaults = "/etc/deluser.conf";
 
 $config{"system"} = 0;
-$config{"only-if-empty"} = 0;
+$config{"only_if_empty"} = 0;
 $config{"remove_home"} = 0;
 $config{"home"} = "";
 $config{"remove_all_files"} = 0;
@@ -95,65 +96,37 @@ $config{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bi
 
 $action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
 
-while($arg = shift(@ARGV))
-{
-    die "$0: ",_("No options allowed after names.\n")
-	if ($names[0] && $arg =~ /^--/);
+GetOptions ("quiet|q" => sub {$verbose = 0; },
+            "debug" => sub {$verbose = 2; },
+	    "version|v" => sub {version(); exit 0; },
+	    "help|h" => sub { usage(); exit 0;},
+	    "group" => sub { $action = "delgroup";},
+	    "conf=s" => $defaults,
+	    "system" => $pconfig{"system"},
+	    "only-if-empty" => $pconfig{"only_if_empty"},
+	    "home=s" => $pconfig{"home"},
+	    "remove-home" => $pconfig{"remove_home"},
+	    "remove-all-files" => $pconfig{"remote_all_files"},
+	    "backup" => $pconfig{"backup"},
+	    "backup-to" => $pconfig{"backup-to"}
+	  );
 
-    if($arg eq "--quiet" || $arg eq "-q") {
-	$verbose = 0;
-    } elsif($arg eq "--debug") {
-        $verbose = 2;
-    } elsif($arg eq "--version" || $arg eq "-v") {
-	version();
-	exit 0;
-    } elsif($arg eq "--help" || $arg eq "-h") {
-	usage();
-	exit 0;
-    } elsif($arg eq "--group" || $arg eq "-g") {
-	$action = "delgroup";
-    } elsif($arg eq "--conf" || $arg eq "-c") {
-        die "$0: ",_("--conf requires an argument.\n")
-            if (!($defaults = shift(@ARGV)));
-        dief (_("`%s' does not exist.\n"),$defaults)
-            if (! -f $defaults);
-    } elsif($arg eq "--system") {
-       $pconfig{"system"} = 1;
-    } elsif($arg eq "--only-if-empty") {
-       $pconfig{"only-if-empty"} = 1;
-    } elsif($arg eq "--home") {
-	die "$0: ",_("--home requires an argument.\n")
-	  if (!($pconfig{"home"} = shift(@ARGV)));
-    } elsif($arg eq "--remove-home") {
-	$pconfig{"remove_home"} = 1;
-    } elsif($arg eq "--remove-all-files") {
-	$pconfig{"remove_all_files"} = 1;
-    } elsif($arg eq "--backup") {
-	$pconfig{"backup"} = 1;
-    } elsif($arg eq "--backup-to") {
-	die "$0: ",_("--backup-to requires an argument.\n")
-	  if (!($pconfig{"backup_to"} = shift(@ARGV)));
-    } elsif($arg =~ /^--/ || $arg =~ /^-/) {
-	dief (_("Unknown argument `%s'.\n"),$arg);
-    } else {
-	push @names, $arg;
+die "$0: ",_("Only root may remove a user or group from the system.\n") if ($> != 0);
+
+if (!defined($defaults)) {  $defaults = "/etc/deluser.conf"; }
+
+######################
+# handling of @names #
+######################
+
+while (defined($arg = shift(@ARGV))) {
+  if (defined($names[0]) && $arg =~ /^--/) {
+      die "$0: ",_("No options allowed after names.\n")
+    } else {			# it's a username
+	push (@names, $arg);
     }
 }
 
-# read configfile and override with commandline arguments
-read_config($defaults);
-read_config("/etc/adduser.conf");
-foreach(keys(%pconfig)) {
-    $config{$_} = $pconfig{$_};
-}
-
-if (($config{remove_home} || $config{remove_all_files} || $config{backup}) &&
-    (defined($NO_FILE_FIND) || defined($NO_FILE_TEMP))) {
-    die _("In order to use the --remove-home, --remove-all-files, and --backup features,\nyou need to install the `perl-modules' package. To accomplish that, run\napt-get install perl-modules\n");
-}
-
-die "$0: ",_("Only root may remove a user or group from the system.\n") if ($> != 0);
- 
 if(@names == 0) {
     if($action eq "delgroup") {
 	print _("Enter a groupname to remove: ");
@@ -180,6 +153,29 @@ if(@names == 2) {      # must be addusertogroup
 	$user = shift(@names);
     }
 }
+
+
+dief (_("`%s' does not exist.\n"),$defaults)
+    if (! -f $defaults);
+
+
+##########################################################
+# read configfile and override with commandline arguments
+##########################################################
+
+read_config($defaults);
+read_config("/etc/adduser.conf");
+foreach(keys(%pconfig)) {
+    $config{$_} = $pconfig{$_};
+}
+
+if (($config{remove_home} || $config{remove_all_files} || $config{backup}) &&
+    (defined($NO_FILE_FIND) || defined($NO_FILE_TEMP))) {
+    die _("In order to use the --remove-home, --remove-all-files, and --backup features,\nyou need to install the `perl-modules' package. To accomplish that, run\napt-get install perl-modules\n");
+}
+
+ 
+
 
 if($user) {
     #($pw_name,$pw_passwd,$pw_uid,$pw_gid,$pw_quota,$pw_comment,
@@ -332,7 +328,7 @@ if($action eq "deluser") {
         printf (_("The group `%s' is not a system group... Exiting.\n"), $group) if $verbose;
 	exit 0;
     }
-    if( $config{"only-if-empty"} && $members ne "") {
+    if( $config{"only_if_empty"} && $members ne "") {
 	dief (_("The group `%s' is not empty!\n"),$group);
     }
     

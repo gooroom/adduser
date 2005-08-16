@@ -1,8 +1,11 @@
 adduser (3.68.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * Patches by Jörg Hoh:
+    - use GetOpt instead of manual option parsing
+    - restructure plausibility checks
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 15 Aug 2005 20:18:28 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 16 Aug 2005 08:23:11 +0200
 
 adduser (3.68) experimental; urgency=low
 
