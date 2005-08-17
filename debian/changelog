@@ -5,10 +5,11 @@ adduser (3.68.0) UNRELEASED; urgency=low
   * deluser patches by Jörg Hoh:
     - use GetOpt instead of manual option parsing
     - restructure plausibility checks
+    - introduce "use strict"
   * make adduser.conf.5 NAME_REGEX consistent with the code. Thanks to
     Christoph Ulrich Scholler. Closes: #323395.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 16 Aug 2005 15:25:03 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 17 Aug 2005 12:57:00 +0200
 
 adduser (3.68) experimental; urgency=low
 

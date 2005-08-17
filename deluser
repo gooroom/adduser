@@ -2,7 +2,7 @@
 
 # deluser -- a utility to remove users from the system
 # delgroup -- a utilty to remove groups from the system
-$version = "VERSION";
+my $version = "VERSION";
 
 # Copyright (C) 2000 Roland Bauerschmidt <rb@debian.org>
 # Based on 'adduser' as pattern by
@@ -31,17 +31,20 @@ $version = "VERSION";
 $ENV{"PATH"} = "/sbin:/bin:/usr/sbin:/usr/bin";
 
 use warnings;
+use strict;
 use Getopt::Long;
 use Debian::AdduserCommon;
+
+my $install_more_packages = 0;
 
 BEGIN {
     eval 'use File::Find';
     if ($@) {
-        $NO_FILE_FIND = 1;
+      $install_more_packages = 1;
     }
     eval 'use File::Temp';
     if ($@) {
-        $NO_FILE_TEMP = 1;
+      $install_more_packages = 1;
     }
 }
 
@@ -65,8 +68,7 @@ BEGIN {
 setlocale(LC_MESSAGES, "");
 textdomain("adduser");
 
-$verbose = 1;
-
+my %config;
 $config{"system"} = 0;
 $config{"only_if_empty"} = 0;
 $config{"remove_home"} = 0;
@@ -94,7 +96,10 @@ $config{"dir_mode"} = "0755";
 $config{"setgid_home"} = "no";
 $config{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bin/.* ^/boot/.* ^/dev/.* ^/lib/.* ^/proc/.* ^/root/.* ^/sbin/.* ^/tmp/.* ^/sys/.* ^/srv/.* ^/opt/.* ^/initrd/.* ^/usr/.* ^/var/.*";
 
-$action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
+my $action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
+my $verbose = 1;
+my %pconfig;
+my $defaults;
 
 GetOptions ("quiet|q" => sub {$verbose = 0; },
             "debug" => sub {$verbose = 2; },
@@ -108,18 +113,21 @@ GetOptions ("quiet|q" => sub {$verbose = 0; },
 	    "remove-home" => $pconfig{"remove_home"},
 	    "remove-all-files" => $pconfig{"remote_all_files"},
 	    "backup" => $pconfig{"backup"},
-	    "backup-to" => $pconfig{"backup-to"}
+	    "backup-to" => $pconfig{"backup_to"}
 	  );
 
 die "$0: ",_("Only root may remove a user or group from the system.\n") if ($> != 0);
 
 if (!defined($defaults)) {  $defaults = "/etc/deluser.conf"; }
 
+my @names = ();
+my ($user,$group);
+
 ######################
 # handling of @names #
 ######################
 
-while (defined($arg = shift(@ARGV))) {
+while (defined(my $arg = shift(@ARGV))) {
   if (defined($names[0]) && $arg =~ /^--/) {
       die "$0: ",_("No options allowed after names.\n")
     } else {			# it's a username
@@ -134,7 +142,7 @@ if(@names == 0) {
 	print _("Enter a username to remove: ");
     }
 
-    chomp($answer=<STDIN>);
+    chomp(my $answer=<STDIN>);
     push(@names, $answer);
 }
 die "$0: ",_("I need a name to remove.\n") if (length($names[0]) == 0);
@@ -154,6 +162,7 @@ if(@names == 2) {      # must be addusertogroup
     }
 }
 
+undef(@names);
 
 dief (_("`%s' does not exist.\n"),$defaults)
     if (! -f $defaults);
@@ -168,14 +177,14 @@ read_config("/etc/adduser.conf");
 foreach(keys(%pconfig)) {
     $config{$_} = $pconfig{$_};
 }
+undef (%pconfig);
 
-if (($config{remove_home} || $config{remove_all_files} || $config{backup}) &&
-    (defined($NO_FILE_FIND) || defined($NO_FILE_TEMP))) {
+if (($config{remove_home} || $config{remove_all_files} || $config{backup}) && ($install_more_packages)) {
     die _("In order to use the --remove-home, --remove-all-files, and --backup features,\nyou need to install the `perl-modules' package. To accomplish that, run\napt-get install perl-modules\n");
 }
 
  
-
+my ($pw_uid, $pw_gid, $pw_homedir, $gr_gid, $maingroup);
 
 if($user) {
     #($pw_name,$pw_passwd,$pw_uid,$pw_gid,$pw_quota,$pw_comment,
@@ -283,8 +292,8 @@ if($action eq "deluser") {
 
 	if($config{"backup"}) {
 	    s_print(_("Backing up files to be removed to ". $config{"backup_to"}. " ...\n"));
-	    $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
-	    $filesfilename = $filesfile->filename;
+	    my $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
+	    my $filesfilename = $filesfile->filename;
 	    print $filesfile join("\n",@files);
 	    $filesfile->close();
 	    systemcall("/bin/tar", "-cf", $config{"backup_to"}. "/$user.tar", "--files-from", $filesfilename);
@@ -313,7 +322,11 @@ if($action eq "deluser") {
                 $pw_gid, $pw_homedir) if (-x "/usr/local/sbin/deluser.local");
 
     s_print(_("done.\n"));
-} elsif($action eq "delgroup") {
+    exit 0;
+}
+
+    
+if($action eq "delgroup") {
     &invalidate_nscd();
     unless(exist_group($group)) {
 	dief (_("The group `%s' does not exist.\n"),$group);
@@ -333,7 +346,7 @@ if($action eq "deluser") {
     }
     
     setpwent;
-    while (($acctname,$primgrp) = (getpwent)[0,3]) {
+    while ((my $acctname,my $primgrp) = (getpwent)[0,3]) {
 	if( $primgrp eq $gr_gid ) {
 	    dief (_("`%s' still has `%s' as their primary group!\n"),$acctname,$group);
 	}
@@ -344,8 +357,11 @@ if($action eq "deluser") {
     systemcall("/usr/sbin/groupdel",$group);
     &invalidate_nscd();
     s_print(_("done.\n"));
+    exit 0;
 }
-elsif($action eq "deluserfromgroup")
+
+
+if($action eq "deluserfromgroup")
 {
     &invalidate_nscd();
     unless(exist_user($user)) {
@@ -361,7 +377,7 @@ elsif($action eq "deluserfromgroup")
     my @members = get_group_members($group);
     my $ismember = 0;
 
-    for($i = 0; $i <= $#members; $i++) {
+    for(my $i = 0; $i <= $#members; $i++) {
 	if($members[$i] eq $user) {
 	    $ismember = 1;
 	    splice(@members,$i,1);
