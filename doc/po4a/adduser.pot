@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2005-08-15 20:14+0000\n"
+"POT-Creation-Date: 2005-08-23 15:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -366,7 +366,7 @@ msgstr ""
 # type: TP
 #: ../adduser.conf.5:107
 #, no-wrap
-msgid "B<USER_REGEX>"
+msgid "B<NAME_REGEX>"
 msgstr ""
 
 # type: Plain text

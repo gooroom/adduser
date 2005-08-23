@@ -434,8 +434,8 @@ msgstr ""
 # type: TP
 #: ../adduser.conf.5:107
 #, no-wrap
-msgid "B<USER_REGEX>"
-msgstr "B<USER_REGEX>"
+msgid "B<NAME_REGEX>"
+msgstr "B<NAME_REGEX>"
 
 # type: Plain text
 #: ../adduser.conf.5:113
