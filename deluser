@@ -95,6 +95,7 @@ $config{"quotauser"} = "";
 $config{"dir_mode"} = "0755";
 $config{"setgid_home"} = "no";
 $config{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bin/.* ^/boot/.* ^/dev/.* ^/lib/.* ^/proc/.* ^/root/.* ^/sbin/.* ^/tmp/.* ^/sys/.* ^/srv/.* ^/opt/.* ^/initrd/.* ^/usr/.* ^/var/.*";
+$config{"name_regex"} = "^[a-z][-a-z0-9]*\$";
 
 my $action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
 my $verbose = 1;

@@ -8,8 +8,10 @@ adduser (3.68.0) UNRELEASED; urgency=low
     - introduce "use strict"
   * make adduser.conf.5 NAME_REGEX consistent with the code. Thanks to
     Christoph Ulrich Scholler. Closes: #323395.
+  * show deluser that name_regex is a valid configuration directive.
+    Thanks to Christoph Ulrich Scholler. Closes: #324699.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 17 Aug 2005 12:57:00 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 23 Aug 2005 15:52:50 +0000
 
 adduser (3.68) experimental; urgency=low
 
