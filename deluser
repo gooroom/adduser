@@ -465,13 +465,4 @@ sub exist_group {
     return(defined getgrnam($exist_group));
 }
 
-sub systemcall {
-    my $c = join(' ', @_);
-    print "$c\n" if $verbose==2;
-    if (system(@_)) {
-        die("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
-	  if ($?>>8);
-	die("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
-    }
-}
 

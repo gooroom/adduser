@@ -10,7 +10,7 @@ use vars qw(@EXPORT $VAR1);
 #                     Ian A. Murdock <imurdock@gnu.ai.mit.edu>
 #
 
-@EXPORT = qw(invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf);
+@EXPORT = qw(invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf systemcall);
 
 sub invalidate_nscd {
     # Check if we need to do make -C /var/yp for NIS
@@ -166,6 +166,16 @@ sub d_printf
 {
     printf(@_)
     	if((defined($verbose) && $verbose > 1) || (defined($debugging) && $debugging == 1));
+}
+
+sub systemcall {
+    my $c = join(' ', @_);
+    print "$c\n" if $verbose==2;
+    if (system(@_)) {
+        die("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
+          if ($?>>8);
+        die("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
+    }
 }
 
 # Local Variables:

@@ -865,16 +865,6 @@ FILE].
 "),$defaults;
 }
 
-sub systemcall {
-    my $c = join(' ', @_);
-    print "$c\n" if $debugging;
-    if (system(@_)) {
-	&cleanup("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
-	  if ($?>>8);
-	&cleanup("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
-    }
-}
-
 sub get_dir_mode
   {
       my $setgid = shift;

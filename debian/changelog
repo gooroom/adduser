@@ -2,16 +2,17 @@ adduser (3.68.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
   * make clear in 3.68 changelog that Jörg's patches were against adduser
-  * deluser patches by Jörg Hoh:
-    - use GetOpt instead of manual option parsing
-    - restructure plausibility checks
-    - introduce "use strict"
+  * patches by Jörg Hoh:
+    - move common code to AdduserCommon.pm
+    - deluser: use GetOpt instead of manual option parsing
+    - deluser: restructure plausibility checks
+    - deluser: introduce "use strict"
   * make adduser.conf.5 NAME_REGEX consistent with the code. Thanks to
     Christoph Ulrich Scholler. Closes: #323395.
   * show deluser that name_regex is a valid configuration directive.
     Thanks to Christoph Ulrich Scholler. Closes: #324699.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 23 Aug 2005 15:52:50 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue,  6 Sep 2005 17:46:02 +0200
 
 adduser (3.68) experimental; urgency=low
 
