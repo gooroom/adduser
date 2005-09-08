@@ -17,8 +17,9 @@ adduser (3.69) experimental; urgency=low
     Christoph Ulrich Scholler. Closes: #323395.
   * show deluser that name_regex is a valid configuration directive.
     Thanks to Christoph Ulrich Scholler. Closes: #324699.
+  * put new FSF street address in debian/copyright
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu,  8 Sep 2005 17:16:11 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu,  8 Sep 2005 17:18:18 +0000
 
 adduser (3.68) experimental; urgency=low
 
