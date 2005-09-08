@@ -1,6 +1,5 @@
-adduser (3.68.0) UNRELEASED; urgency=low
+adduser (3.69) experimental; urgency=low
 
-  * NOT RELEASED YET
   * the "please no more bugs from users of shadowless systems"
     release. (mh) Closes: #327144
   * versioned depends on passwd >> 1:4.0.12 because of the changed
@@ -19,7 +18,7 @@ adduser (3.68.0) UNRELEASED; urgency=low
   * show deluser that name_regex is a valid configuration directive.
     Thanks to Christoph Ulrich Scholler. Closes: #324699.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu,  8 Sep 2005 17:12:13 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu,  8 Sep 2005 17:16:11 +0000
 
 adduser (3.68) experimental; urgency=low
 
