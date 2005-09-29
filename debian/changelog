@@ -1,8 +1,10 @@
 adduser (3.69.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * Update Swedish (sv)debconf translation. Thanks to Daniel Nylander
+    and André Dahlqvist. (mh) Closes: #330258
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu,  8 Sep 2005 17:22:21 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 29 Sep 2005 10:24:31 +0000
 
 adduser (3.69) experimental; urgency=low
 
