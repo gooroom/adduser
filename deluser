@@ -61,45 +61,16 @@ BEGIN {
         import POSIX qw(setlocale);
     };
     if ($@) {
-        *setlocale = sub { 1 };
+        *setlocale = sub { return 1 };
     }
 }
 
 setlocale(LC_MESSAGES, "");
 textdomain("adduser");
 
-my %config;
-$config{"system"} = 0;
-$config{"only_if_empty"} = 0;
-$config{"remove_home"} = 0;
-$config{"home"} = "";
-$config{"remove_all_files"} = 0;
-$config{"backup"} = 0;
-$config{"backup_to"} = ".";
-$config{"dshell"} = "/bin/bash";
-$config{"first_system_uid"} = 100;
-$config{"last_system_uid"} = 999;
-$config{"first_uid"} = 1000;
-$config{"last_uid"} = 29999;
-$config{"first_system_gid"} = 100;
-$config{"last_system_gid"} = 999;
-$config{"first_gid"} = 1000;
-$config{"last_gid"} = 29999;
-$config{"dhome"} = "/home";
-$config{"skel"} = "/etc/skel";
-$config{"usergroups"} = "yes";
-$config{"users_gid"} = "100";
-$config{"grouphomes"} = "no";
-$config{"letterhomes"} = "no";
-$config{"quotauser"} = "";
-$config{"dir_mode"} = "0755";
-$config{"setgid_home"} = "no";
-$config{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bin/.* ^/boot/.* ^/dev/.* ^/lib/.* ^/proc/.* ^/root/.* ^/sbin/.* ^/tmp/.* ^/sys/.* ^/srv/.* ^/opt/.* ^/initrd/.* ^/usr/.* ^/var/.*";
-$config{"name_regex"} = "^[a-z][-a-z0-9]*\$";
-
 my $action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
 my $verbose = 1;
-my %pconfig;
+my (%pconfig, %config); # parameter config, general config
 my $defaults;
 
 GetOptions ("quiet|q" => sub {$verbose = 0; },
@@ -142,7 +113,6 @@ if(@names == 0) {
     } else {
 	print _("Enter a username to remove: ");
     }
-
     chomp(my $answer=<STDIN>);
     push(@names, $answer);
 }
@@ -170,18 +140,26 @@ dief (_("`%s' does not exist.\n"),$defaults)
 
 
 ##########################################################
-# read configfile and override with commandline arguments
+# (1) preseed the config
+# (2) read the default /etc/adduser.conf configuration.
+# (3) read the default /etc/deluser.conf configuration.
+# (4) process commmand line settings
+# last match wins
 ##########################################################
 
-read_config($defaults);
-read_config("/etc/adduser.conf");
+my %config = preseed_config ("/etc/adduser.conf");
+read_config($default,%config);
+
 foreach(keys(%pconfig)) {
     $config{$_} = $pconfig{$_};
 }
 undef (%pconfig);
 
+
 if (($config{remove_home} || $config{remove_all_files} || $config{backup}) && ($install_more_packages)) {
-    die _("In order to use the --remove-home, --remove-all-files, and --backup features,\nyou need to install the `perl-modules' package. To accomplish that, run\napt-get install perl-modules\n");
+    die _("In order to use the --remove-home, --remove-all-files, and --backup features,\n
+    you need to install the `perl-modules' package. To accomplish that, run\n
+    apt-get install perl-modules\n");
 }
 
  
@@ -220,6 +198,10 @@ if($action eq "deluser") {
     &invalidate_nscd();
     
     my($dummy1,$dummy2,$uid);
+
+    # Don't allow a non-system user to be deleted when --system is given
+    # Also, "user does not exist" is only a warning with --system, but an
+    # error without --system.
     if( $config{"system"} ) {
 	if( ($dummy1,$dummy2,$uid) = getpwnam($user) ) {
 	    if ( ($uid < $config{"first_system_uid"} ||
@@ -238,81 +220,89 @@ if($action eq "deluser") {
     }
 
     if($config{"remove_home"} && ($config{"home"} ne "") && ($config{"home"} ne $pw_homedir)) {
-	dief (_("passwd home dir `%s' does not match command line home dir, aborting.\n"),$pw_homedir,$config{"home"});
-    } elsif($config{"remove_home"} || $config{"remove_all_files"}) {
-	s_print(_("Looking for files to backup/remove...\n"));
-	my @mountpoints;
-	open(MOUNT, "mount |")
-		|| die ("fork for parse mount points: $!\n");
-        while (<MOUNT>) {
-		chomp;
-	        my @temparray = split;
-	        push @mountpoints,$temparray[2];
-        }
-	close(MOUNT) or die ("can't close mount pipe: $!\n");
-	my(@files,@dirs);
-	if($config{"remove_home"} && ! $config{"remove_all_files"}) {
-	  sub home_match {
-	    foreach my $mount (@mountpoints) {
-	      if( $File::Find::name eq $mount ) {
-		s_printf(_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
-		$File::Find::prune=1;
-		return;
-	      }
-	    }
-	    foreach my $re ( split ' ', $config{"no_del_paths"} ) {
-	      if( $File::Find::name =~ qr/$re/ ) {
-		s_printf(_("Not backing up/removing `%s', it matches %s.\n"),$File::Find::name,$re);
-		$File::Find::prune=1;
-		return;
-	      }
-	    }
-	    push(@files, $File::Find::name) 
-	      if(-f $File::Find::name);
-	    push(@dirs, $File::Find::name)
-	      if(-d $File::Find::name);
-	  }
-	  File::Find::find({wanted => \&home_match, untaint => 1, no_chdir => 1}, $pw_homedir)
-	    if(-d "$pw_homedir");
-	  push(@files, "/var/mail/$user")
-	    if(-e "/var/mail/$user");
-	} else {
-	  sub find_match {
-	    no warnings;
-	    my ($dev,$ino,$mode,$nlink,$uid,$gid);
-	    (($dev,$ino,$mode,$nlink,$uid,$gid) = lstat($_)) &&
-	      ($uid == $pw_uid) &&
-		(
-		 ($File::Find::name =~ /^\/proc\// && ($File::Find::prune = 1)) ||
-		 (-f $File::Find::name && push(@files, $File::Find::name)) ||
-		 (-d $File::Find::name && push(@dirs, $File::Find::name))
-		);
-	  }
-	  File::Find::find({wanted => \&find_match, untaint => 1, no_chdir => 1}, '/');
-	}
+	dief (_("passwd home dir `%s' does not match command line home dir, aborting.\n"),
+	$pw_homedir,$config{"home"});
+    } 
 
-	if($config{"backup"}) {
-	    s_print(_("Backing up files to be removed to ". $config{"backup_to"}. " ...\n"));
-	    my $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
-	    my $filesfilename = $filesfile->filename;
-	    print $filesfile join("\n",@files);
-	    $filesfile->close();
-	    systemcall("/bin/tar", "-cf", $config{"backup_to"}. "/$user.tar", "--files-from", $filesfilename);
-	    unlink($filesfilename);
-	    if(-e "/usr/bin/bzip2") {
-	    	systemcall("/usr/bin/bzip2", $config{"backup_to"}. "/$user.tar");
-	    } elsif(-e "/bin/gzip") {
-	    	systemcall("/bin/gzip", "--best", $config{"backup_to"}. "/$user.tar");
-	    }
-	}
 
-	if(@files || @dirs) {
-	    s_print(_("Removing files...\n"));
-	    unlink(@files) if(@files);
-	    foreach(reverse(sort(@dirs))) {
-		rmdir($_);
+    if($config{"remove_home"} || $config{"remove_all_files"}) {
+      s_print(_("Looking for files to backup/remove...\n"));
+      my @mountpoints;
+      open(MOUNT, "mount |")
+	      || die ("fork for parse mount points: $!\n");
+      while (<MOUNT>) {
+	      chomp;
+	      my @temparray = split;
+	      push @mountpoints,$temparray[2];
+      }
+      close(MOUNT) or die ("can't close mount pipe: $!\n");
+      my(@files,@dirs);
+      if($config{"remove_home"} && ! $config{"remove_all_files"}) {
+
+	sub home_match {
+	  foreach my $mount (@mountpoints) {
+	    if( $File::Find::name eq $mount ) {
+	      s_printf(_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
+	      $File::Find::prune=1;
+	      return;
 	    }
-	}
+	  }
+	  foreach my $re ( split ' ', $config{"no_del_paths"} ) {
+	    if( $File::Find::name =~ qr/$re/ ) {
+	      s_printf(_("Not backing up/removing `%s', it matches %s.\n"),$File::Find::name,$re);
+	      $File::Find::prune=1;
+	      return;
+	    }
+	  }
+	  push(@files, $File::Find::name) 
+	    if(-f $File::Find::name);
+	  push(@dirs, $File::Find::name)
+	    if(-d $File::Find::name);
+	} # sub home_match
+	
+	File::Find::find({wanted => \&home_match, untaint => 1, no_chdir => 1}, $pw_homedir)
+	  if(-d "$pw_homedir");
+	push(@files, "/var/mail/$user")
+	  if(-e "/var/mail/$user");
+      } else {
+	
+	sub find_match {
+	  no warnings;
+	  my ($dev,$ino,$mode,$nlink,$uid,$gid);
+	  (($dev,$ino,$mode,$nlink,$uid,$gid) = lstat($_)) &&
+	    ($uid == $pw_uid) &&
+	      (
+		($File::Find::name =~ /^\/proc\// && ($File::Find::prune = 1)) ||
+		(-f $File::Find::name && push(@files, $File::Find::name)) ||
+		(-d $File::Find::name && push(@dirs, $File::Find::name))
+	      );
+	} # sub find_match
+	
+	File::Find::find({wanted => \&find_match, untaint => 1, no_chdir => 1}, '/');
+      }
+
+      if($config{"backup"}) {
+	  s_print(_("Backing up files to be removed to ". $config{"backup_to"}. " ...\n"));
+	  my $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
+	  my $filesfilename = $filesfile->filename;
+	  print $filesfile join("\n",@files);
+	  $filesfile->close();
+	  systemcall("/bin/tar", "-cf", $config{"backup_to"}. "/$user.tar", "--files-from", $filesfilename);
+	  unlink($filesfilename);
+	  if(-e "/usr/bin/bzip2") {
+	      systemcall("/usr/bin/bzip2", $config{"backup_to"}. "/$user.tar");
+	  } elsif(-e "/bin/gzip") {
+	      systemcall("/bin/gzip", "--best", $config{"backup_to"}. "/$user.tar");
+	  }
+      }
+
+      if(@files || @dirs) {
+	  s_print(_("Removing files...\n"));
+	  unlink(@files) if(@files);
+	  foreach(reverse(sort(@dirs))) {
+	      rmdir($_);
+	  }
+      }
     }
 
     s_printf(_("Removing user `%s'...\n"),$user);

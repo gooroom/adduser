@@ -70,8 +70,11 @@ sub warnf {
 }
 
 # parse the configuration file
+# parameters:
+#  -- filename of the configuration file
+#  -- a hash for the configuration data
 sub read_config {
-    my ($conf_file) = @_;
+    my ($conf_file, %config) = @_;
     my ($var, $lcvar, $val);
 
     if (! -f $conf_file) {
@@ -176,6 +179,43 @@ sub systemcall {
           if ($?>>8);
         die("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
     }
+}
+
+# preseed the configuration variables 
+# then read the config file /etc/adduser and overwrite the data hardcoded here
+sub preseed_config {
+  my $default_configuration = $1;
+  my %config;
+  $config{"system"} = 0;
+  $config{"only_if_empty"} = 0;
+  $config{"remove_home"} = 0;
+  $config{"home"} = "";
+  $config{"remove_all_files"} = 0;
+  $config{"backup"} = 0;
+  $config{"backup_to"} = ".";
+  $config{"dshell"} = "/bin/bash";
+  $config{"first_system_uid"} = 100;
+  $config{"last_system_uid"} = 999;
+  $config{"first_uid"} = 1000;
+  $config{"last_uid"} = 29999;
+  $config{"first_system_gid"} = 100;
+  $config{"last_system_gid"} = 999;
+  $config{"first_gid"} = 1000;
+  $config{"last_gid"} = 29999;
+  $config{"dhome"} = "/home";
+  $config{"skel"} = "/etc/skel";
+  $config{"usergroups"} = "yes";
+  $config{"users_gid"} = "100";
+  $config{"grouphomes"} = "no";
+  $config{"letterhomes"} = "no";
+  $config{"quotauser"} = "";
+  $config{"dir_mode"} = "0755";
+  $config{"setgid_home"} = "no";
+  $config{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bin/.* ^/boot/.* ^/dev/.* ^/lib/.* ^/proc/.* ^/root/.* ^/sbin/.* ^/tmp/.* ^/sys/.* ^/srv/.* ^/opt/.* ^/initrd/.* ^/usr/.* ^/var/.*";
+  $config{"name_regex"} = "^[a-z][-a-z0-9]*\$";
+
+  read_config($default_configuration,%config);
+  return %config;
 }
 
 # Local Variables:

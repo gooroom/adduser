@@ -47,42 +47,22 @@ BEGIN {
 	import POSIX qw(setlocale);
     };
     if ($@) {
-	*setlocale = sub { 1 };
+	*setlocale = sub { return 1 };
     }
 }
 
 setlocale(LC_MESSAGES, "");
 textdomain("adduser");
 
-$verbose = 1;			# should we be verbose?
-$allow_badname = 0;		# should we allow bad names?
-$ask_passwd = 1;		# ask for a passwd? 
-$disabled_login = 0;		# leave the new account disabled?
+my $verbose = 1;		# should we be verbose?
+my $allow_badname = 0;		# should we allow bad names?
+my $ask_passwd = 1;		# ask for a passwd? 
+my $disabled_login = 0;		# leave the new account disabled?
+my %config;			# configuration hash
 
-$defaults = "/etc/adduser.conf";
-$nogroup_id = getgrnam("nogroup") || 65534;
+my $defaults = "/etc/adduser.conf";
+my $nogroup_id = getgrnam("nogroup") || 65534;
 $0 =~ s+.*/++; 
-
-$config{"dshell"} = "/bin/bash";
-$config{"first_system_uid"} = 100;
-$config{"last_system_uid"} = 999;
-$config{"first_uid"} = 1000;
-$config{"last_uid"} = 29999;
-$config{"first_system_gid"} = 100;
-$config{"last_system_gid"} = 999;
-$config{"first_gid"} = 1000;
-$config{"last_gid"} = 29999;
-$config{"dhome"} = "/home";
-$config{"skel"} = "/etc/skel";
-$config{"usergroups"} = "yes";
-$config{"users_gid"} = "100";
-$config{"grouphomes"} = "no";
-$config{"letterhomes"} = "no";
-$config{"quotauser"} = "";
-$config{"dir_mode"} = "0755";
-$config{"setgid_home"} = "no";
-$config{"name_regex"} = "^[a-z][-a-z0-9]*\$";
-
 
 
 # Parse options, sanity checks
@@ -110,7 +90,8 @@ GetOptions ("quiet" => sub { $verbose = 0 },
 die "$0: ",_("Only root may add a user or group to the system.\n") if ($> != 0);
 
 
-$action = $0 eq "addgroup" ? "addgroup" : "adduser";
+# detect the right mode
+my $action = $0 eq "addgroup" ? "addgroup" : "adduser";
 if (defined($found_sys_opt)) {
   $action = "addsysuser" if ($action eq "adduser");
   $action = "addsysgroup" if ($action eq "addgroup");
@@ -205,6 +186,11 @@ if( $debugging ) {
     $ENV{"DEBUG"}="1"
 }
 
+# preseed configuration data and then read /etc/adduser.conf
+%config = preseed_config($defaults);
+
+&checkname($new_name) if defined $new_name;
+$SIG{'INT'} = $SIG{'QUIT'} = $SIG{'HUP'} = 'handler';
 
 #####
 # OK, we've processed the arguments.  $action equals one of the following,
@@ -229,9 +215,6 @@ if( $debugging ) {
 #    $existing_group          - the group to add her to
 #####
 
-&read_config($defaults);
-&checkname($new_name) if defined $new_name;
-$SIG{'INT'} = $SIG{'QUIT'} = $SIG{'HUP'} = 'handler';
 
 #################
 ## addsysgroup ##
@@ -244,7 +227,7 @@ if ($action eq "addsysgroup") {
     }
     dief (_("The group `%s' already exists.\n"),$new_name)
 	if (defined getgrnam($new_name));
-    dief (_("The GID %s is already in use.\n"),$new_gid)
+    dief (_("The GID `%s' is already in use.\n"),$new_gid)
 	if (defined($new_gid) && defined(getgrgid($new_gid)));
     if (!defined($new_gid)) {
         $new_gid = &first_avail_id($config{"first_system_gid"},
@@ -253,8 +236,8 @@ if ($action eq "addsysgroup") {
 
         if ($new_gid == -1) {
             print STDERR "$0: ",_("No GID is available in the range "),
-            "$config{\"first_system_gid\"} - $config{\"last_system_gid\"}\n",
-            "(FIRST_SYS_GID - LAST_SYS_GID).  ";
+            $config{"first_system_gid"}, " - ", $config{"last_system_gid"},
+            " (FIRST_SYS_GID - LAST_SYS_GID).\n";
             dief (_("The group `%s' was not created.\n"),$new_name);
         }
     }
@@ -274,7 +257,7 @@ if ($action eq "addsysgroup") {
 if ($action eq "addgroup") {
     dief (_("The group `%s' already exists.\n"),$new_name)
 	if (defined getgrnam($new_name));
-    dief (_("The GID %s is already in use.\n"),$new_gid)
+    dief (_("The GID `%s' is already in use.\n"),$new_gid)
 	if (defined($new_gid) && defined(getgrgid($new_gid)));
     if (!defined($new_gid)) {
         $new_gid = &first_avail_id($config{"first_gid"},
@@ -283,8 +266,8 @@ if ($action eq "addgroup") {
 
         if ($new_gid == -1) {
             print STDERR "$0: ",_("No GID is available in the range "),
-            "$config{\"first_gid\"} - $config{\"last_gid\"}\n",
-            "(FIRST_GID - LAST_GID).  ";
+            $config{"first_gid"}," - ", $config{"last_gid"},
+            " (FIRST_GID - LAST_GID).\n";
             dief (_("The group `%s' was not created.\n"),$new_name);
         }
     }
@@ -349,8 +332,8 @@ if ($action eq "addsysuser") {
 				   &get_current_uids, &get_current_gids);
         if ($new_uid == -1) {
             print STDERR "$0: ",_("No UID/GID pair is available in the range "),
-            "$config{\"first_system_uid\"} - $config{\"last_system_uid\"}\n",
-            "(FIRST_SYS_UID - LAST_SYS_UID).  ";
+            $config{"first_system_uid"}, " - ", $config{"last_system_uid"},
+            " (FIRST_SYS_UID - LAST_SYS_UID).\n";
             dief (_("The user `%s' was not created.\n"),$new_name);
         }
         $new_gid = $new_uid;
@@ -362,8 +345,8 @@ if ($action eq "addsysuser") {
 				   &get_current_uids);
         if ($new_uid == -1) {
             print STDERR "$0: ",_("No UID is available in the range "),
-            "$config{\"first_system_uid\"} - $config{\"last_system_uid\"}\n",
-            "(FIRST_SYS_UID - LAST_SYS_UID).  ";
+            $config{"first_system_uid"}," - ", $config{"last_system_uid"},
+            "(FIRST_SYS_UID - LAST_SYS_UID).\n";
             &dief (_("The user `%s' was not created.\n"),$new_name);
         }
         if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
@@ -459,8 +442,8 @@ if ($action eq "adduser") {
 				   &get_current_uids);
 	if ($new_uid == -1) {
             print STDERR "$0: ",_("No UID is available in the range "),
-            "$config{\"first_uid\"} - $config{\"last_uid\"}\n",
-            "(FIRST_UID - LAST_UID).  ";
+            $config{"first_uid"}, " - ", $config{"last_uid"},
+            "(FIRST_UID - LAST_UID).\n";
             dief(_("The user `%s' was not created.\n"),$new_name);
         }
 	if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
@@ -476,7 +459,7 @@ if ($action eq "adduser") {
 
     &invalidate_nscd();
     if ($make_group_also) {
-	printf _("Adding new group `%s' (%s).\n"),$new_name,$new_gid if $verbose;
+	printf (_("Adding new group `%s' (%s).\n"),$new_name,$new_gid) if $verbose;
 	$undogroup = $new_name;
 	&systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
 	&invalidate_nscd();
@@ -492,13 +475,13 @@ if ($action eq "adduser") {
     &invalidate_nscd();
 
     if (-e $home_dir) {
-	printf _("The home directory `%s' already exists.  Not copying from `%s'\n"),
-        $home_dir,$config{skel} if $verbose && !$no_create_home;
+	printf (_("The home directory `%s' already exists.  Not copying from `%s'\n"),
+        $home_dir,$config{skel}) if $verbose && !$no_create_home;
     } elsif ($no_create_home) {
 	print "Not creating $home_dir.\n" if $verbose;
     }
     else {
-	printf _("Creating home directory `%s'.\n"),$home_dir if $verbose;
+	printf (_("Creating home directory `%s'.\n"),$home_dir) if $verbose;
 	$undohome = $home_dir;
 	&mktree($home_dir) || &cleanup("Couldn't create $home_dir: $!.\n");
 	chown($new_uid, $new_gid, $home_dir)
@@ -508,7 +491,7 @@ if ($action eq "adduser") {
 	    &cleanup("chmod $dir_mode $home_dir: $!\n");
 
 	if ($config{"skel"}) {
-	    printf _("Copying files from `%s'\n"),$config{skel} if $verbose;
+	    printf (_("Copying files from `%s'\n"),$config{skel}) if $verbose;
 	    open(FIND, "cd $config{skel}; find .  ! -name '*.dpkg-*' -print |")
 		|| &cleanup("fork for find: $!\n");
 	    while (<FIND>) {
