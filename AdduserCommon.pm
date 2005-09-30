@@ -78,11 +78,11 @@ sub read_config {
     my ($var, $lcvar, $val);
 
     if (! -f $conf_file) {
-	printf _("%s: %s doesn't exist.  Using defaults.\n"),$0,$conf_file if $verbose;
+	printf (_("%s: %s doesn't exist.  Using defaults.\n"),$0,$conf_file) if $verbose;
 	return;
     }
 
-    open (CONF, $conf_file) || dief("%s: %s\n",$conf_file,$!);
+    open (CONF, $conf_file) || dief ("%s: %s\n",$conf_file,$!);
     while (<CONF>) {
 	chomp;
 	next if /^#/ || /^\s*$/;
@@ -161,23 +161,23 @@ sub s_print
 
 sub s_printf
 {
-    printf(@_)
+    printf (@_)
 	if($verbose);
 }
 
 sub d_printf
 {
-    printf(@_)
+    printf (@_)
     	if((defined($verbose) && $verbose > 1) || (defined($debugging) && $debugging == 1));
 }
 
 sub systemcall {
     my $c = join(' ', @_);
-    print "$c\n" if $verbose==2;
+    print ("$c\n") if $verbose==2;
     if (system(@_)) {
-        die("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
+        die ("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
           if ($?>>8);
-        die("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
+        die ("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
     }
 }
 

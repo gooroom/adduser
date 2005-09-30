@@ -88,7 +88,7 @@ GetOptions ("quiet|q" => sub {$verbose = 0; },
 	    "backup-to" => $pconfig{"backup_to"}
 	  );
 
-die "$0: ",_("Only root may remove a user or group from the system.\n") if ($> != 0);
+die ("$0: ",_("Only root may remove a user or group from the system.\n")) if ($> != 0);
 
 if (!defined($defaults)) {  $defaults = "/etc/deluser.conf"; }
 
@@ -101,7 +101,7 @@ my ($user,$group);
 
 while (defined(my $arg = shift(@ARGV))) {
   if (defined($names[0]) && $arg =~ /^--/) {
-      die "$0: ",_("No options allowed after names.\n")
+      die ("$0: ",_("No options allowed after names.\n"));
     } else {			# it's a username
 	push (@names, $arg);
     }
@@ -109,18 +109,18 @@ while (defined(my $arg = shift(@ARGV))) {
 
 if(@names == 0) {
     if($action eq "delgroup") {
-	print _("Enter a groupname to remove: ");
+	print (_("Enter a group name to remove: "));
     } else {
-	print _("Enter a username to remove: ");
+	print (_("Enter a user name to remove: "));
     }
     chomp(my $answer=<STDIN>);
     push(@names, $answer);
 }
-die "$0: ",_("I need a name to remove.\n") if (length($names[0]) == 0);
-die "$0: ",_("No more than two names.\n") if (@names > 2);
+die ("$0: ",_("No name to remove given.\n")) if (length($names[0]) == 0);
+die ("$0: ",_("No more than two names.\n")) if (@names > 2);
 
 if(@names == 2) {      # must be addusertogroup
-    die "$0: ",_("Specify only one name in this mode.\n")
+    die ("$0: ",_("Specify only one name in this mode.\n"))
         if ($action eq "delgroup");
     $action = "deluserfromgroup";
     $user = shift(@names);
@@ -157,9 +157,9 @@ undef (%pconfig);
 
 
 if (($config{remove_home} || $config{remove_all_files} || $config{backup}) && ($install_more_packages)) {
-    die _("In order to use the --remove-home, --remove-all-files, and --backup features,\n
+    die (_("In order to use the --remove-home, --remove-all-files, and --backup features,\n
     you need to install the `perl-modules' package. To accomplish that, run\n
-    apt-get install perl-modules\n");
+    apt-get install perl-modules\n"));
 }
 
  
@@ -226,30 +226,30 @@ if($action eq "deluser") {
 
 
     if($config{"remove_home"} || $config{"remove_all_files"}) {
-      s_print(_("Looking for files to backup/remove...\n"));
+      s_print (_("Looking for files to backup/remove...\n"));
       my @mountpoints;
       open(MOUNT, "mount |")
-	      || die ("fork for parse mount points: $!\n");
+	      || die (_("fork for parse mount points failed: $!\n"));
       while (<MOUNT>) {
 	      chomp;
 	      my @temparray = split;
 	      push @mountpoints,$temparray[2];
       }
-      close(MOUNT) or die ("can't close mount pipe: $!\n");
+      close(MOUNT) or die (_("can't close mount pipe: $!\n";
       my(@files,@dirs);
       if($config{"remove_home"} && ! $config{"remove_all_files"}) {
 
 	sub home_match {
 	  foreach my $mount (@mountpoints) {
 	    if( $File::Find::name eq $mount ) {
-	      s_printf(_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
+	      s_printf (_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
 	      $File::Find::prune=1;
 	      return;
 	    }
 	  }
 	  foreach my $re ( split ' ', $config{"no_del_paths"} ) {
 	    if( $File::Find::name =~ qr/$re/ ) {
-	      s_printf(_("Not backing up/removing `%s', it matches %s.\n"),$File::Find::name,$re);
+	      s_printf (_("Not backing up/removing `%s', it matches %s.\n"),$File::Find::name,$re);
 	      $File::Find::prune=1;
 	      return;
 	    }
@@ -282,7 +282,7 @@ if($action eq "deluser") {
       }
 
       if($config{"backup"}) {
-	  s_print(_("Backing up files to be removed to ". $config{"backup_to"}. " ...\n"));
+	  s_print (_("Backing up files to be removed to ". $config{"backup_to"}. " ...\n"));
 	  my $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
 	  my $filesfilename = $filesfile->filename;
 	  print $filesfile join("\n",@files);
@@ -297,7 +297,7 @@ if($action eq "deluser") {
       }
 
       if(@files || @dirs) {
-	  s_print(_("Removing files...\n"));
+	  s_print (_("Removing files...\n"));
 	  unlink(@files) if(@files);
 	  foreach(reverse(sort(@dirs))) {
 	      rmdir($_);
@@ -305,14 +305,14 @@ if($action eq "deluser") {
       }
     }
 
-    s_printf(_("Removing user `%s'...\n"),$user);
+    s_printf (_("Removing user `%s'...\n"),$user);
     systemcall("/usr/sbin/userdel", $user);
     &invalidate_nscd();
 
     systemcall('/usr/local/sbin/deluser.local', $user, $pw_uid,
                 $pw_gid, $pw_homedir) if (-x "/usr/local/sbin/deluser.local");
 
-    s_print(_("done.\n"));
+    s_print (_("done.\n"));
     exit 0;
 }
 
@@ -344,10 +344,10 @@ if($action eq "delgroup") {
     }
     endpwent;
 
-    s_printf(_("Removing group `%s'...\n"),$group);
+    s_printf (_("Removing group `%s'...\n"),$group);
     systemcall("/usr/sbin/groupdel",$group);
     &invalidate_nscd();
-    s_print(_("done.\n"));
+    s_print (_("done.\n"));
     exit 0;
 }
 
@@ -362,7 +362,7 @@ if($action eq "deluserfromgroup")
 	dief (_("The group `%s' does not exist.\n"),$group);
     }
     if($maingroup eq $group) {
-	die "$0: ",_("You may not remove the user from his/her primary group.\n");
+	die ("$0: ",_("You may not remove the user from his/her primary group.\n"));
     }
 
     my @members = get_group_members($group);
@@ -376,28 +376,28 @@ if($action eq "deluserfromgroup")
     }
 
     unless($ismember) {
-	dief(_("The user `%s' is not a member of group `%s'.\n"),$user,$group);
+	dief (_("The user `%s' is not a member of group `%s'.\n"),$user,$group);
     }
 
-    s_printf(_("Removing user `%s' from group `%s'...\n"),$user,$group);
+    s_printf (_("Removing user `%s' from group `%s'...\n"),$user,$group);
     #systemcall("usermod","-G", join(",",@groups), $user );
     systemcall('/usr/bin/gpasswd','-M', join(',',@members), $group);
     &invalidate_nscd();
-    s_print(_("done.\n"));
+    s_print (_("done.\n"));
 }
 
 
 ######
 
 sub version {
-    printf("deluser: %s $version\n\n",_("removing user and groups from the system. Version:"));
+    printf (_("deluser: %s $version\n\n",_("removing user and groups from the system. Version:")));
 
-    print("Copyright (C) 2000 Roland Bauerschmidt <roland\@copyleft.de>\n\n");
+    print (_("Copyright (C) 2000 Roland Bauerschmidt <roland\@copyleft.de>\n\n"));
 
-    print("deluser is based on adduser by Guy Maor <maor\@debian.org>, Ian Murdock\n",
-	  "<imurdock\@gnu.ai.mit.edu> and Ted Hajek <tedhajek\@boombox.micro.umn.edu>\n");
+    print (_("deluser is based on adduser by Guy Maor <maor\@debian.org>, Ian Murdock\n",
+	  "<imurdock\@gnu.ai.mit.edu> and Ted Hajek <tedhajek\@boombox.micro.umn.edu>\n"));
 
-    print("\nThis program is free software; you can redistribute it and/or modify
+    print (_("\nThis program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or (at
 your option) any later version.
@@ -405,13 +405,13 @@ your option) any later version.
 This program is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-General Public License, /usr/share/common-licenses/GPL, for more details.\n");
+General Public License, /usr/share/common-licenses/GPL, for more details.\n"));
 }
 
 sub usage {
-    printf("deluser: %s $version\n\n",_("removing user and groups from the system. Version:"));
+    printf (_("deluser: %s $version\n\n",_("removing user and groups from the system. Version:")));
 
-    printf(_("deluser user
+    printf (_("deluser user
   remove a normal user from the system
   example: deluser mike
 
@@ -440,9 +440,9 @@ general options:
   --quiet | -q      don't give process information to stdout
   --help | -h       usage message
   --version | -v    version number and copyright
-  --conf | -c FILE  use FILE instead of %s\n\n"),$defaults);
+  --conf | -c FILE  use FILE instead of %s\n\n"),$defaults));
 
-    printf(_("Global configuration is in the file %s.\n"), $defaults);    
+    printf (_("Global configuration is in the file %s.\n"), $defaults);    
 }
 
 sub exist_user {
