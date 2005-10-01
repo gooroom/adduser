@@ -9,8 +9,11 @@ adduser (3.69.0) UNRELEASED; urgency=low
     - put creation of home directory in a function
   * Streamlining of print(f)/die(f) statements regarding quoting,
     parenthesis and spaces. (mh/jh)
+  * Clarify error message if system group to be added does already
+    exist as a non-system group.
+    Thanks to Peter Eisentraut. (mh) Closes: #326192
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  1 Oct 2005 14:02:21 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  1 Oct 2005 18:16:25 +0000
 
 adduser (3.69) experimental; urgency=low
 

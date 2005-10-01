@@ -226,7 +226,7 @@ if ($action eq "addsysgroup") {
 	printf (_("The group `%s' already exists as a system group. Exiting...\n"), $new_name) if $verbose;
 	exit 0;
     }
-    dief (_("The group `%s' already exists.\n"),$new_name)
+    dief (_("The group `%s' already exists and is not a system group.\n"),$new_name)
 	if (defined getgrnam($new_name));
     dief (_("The GID `%s' is already in use.\n"),$new_gid)
 	if (defined($new_gid) && defined(getgrgid($new_gid)));
