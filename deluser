@@ -70,7 +70,8 @@ textdomain("adduser");
 
 my $action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
 my $verbose = 1;
-my (%pconfig, %config); # parameter config, general config
+my %pconfig = ();
+my %config = (); 
 my $defaults;
 
 GetOptions ("quiet|q" => sub {$verbose = 0; },
@@ -79,13 +80,13 @@ GetOptions ("quiet|q" => sub {$verbose = 0; },
 	    "help|h" => sub { usage(); exit 0;},
 	    "group" => sub { $action = "delgroup";},
 	    "conf=s" => $defaults,
-	    "system" => $pconfig{"system"},
-	    "only-if-empty" => $pconfig{"only_if_empty"},
-	    "home=s" => $pconfig{"home"},
-	    "remove-home" => $pconfig{"remove_home"},
-	    "remove-all-files" => $pconfig{"remote_all_files"},
-	    "backup" => $pconfig{"backup"},
-	    "backup-to" => $pconfig{"backup_to"}
+	    "system" => \$pconfig{"system"},
+	    "only-if-empty" => \$pconfig{"only_if_empty"},
+	    "home=s" => \$pconfig{"home"},
+	    "remove-home" => \$pconfig{"remove_home"},
+	    "remove-all-files" => \$pconfig{"remote_all_files"},
+	    "backup" => \$pconfig{"backup"},
+	    "backup-to" => \$pconfig{"backup_to"}
 	  );
 
 die ("$0: ",_("Only root may remove a user or group from the system.\n")) if ($> != 0);
@@ -219,7 +220,7 @@ if($action eq "deluser") {
 	dief (_("The user `%s' does not exist.\n"),$user);
     }
 
-    if($config{"remove_home"} && ($config{"home"} ne "") && ($config{"home"} ne $pw_homedir)) {
+    if($config{"remove_home"} && $config{"home"} && ($config{"home"} ne "") && ($config{"home"} ne $pw_homedir)) {
 	dief (_("passwd home dir `%s' does not match command line home dir, aborting.\n"),
 	$pw_homedir,$config{"home"});
     } 
@@ -267,7 +268,6 @@ if($action eq "deluser") {
       } else {
 	
 	sub find_match {
-	  no warnings;
 	  my ($dev,$ino,$mode,$nlink,$uid,$gid);
 	  (($dev,$ino,$mode,$nlink,$uid,$gid) = lstat($_)) &&
 	    ($uid == $pw_uid) &&
