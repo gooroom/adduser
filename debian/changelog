@@ -6,10 +6,11 @@ adduser (3.69.0) UNRELEASED; urgency=low
   * patches by Jörg Hoh:
     - move common code regarding parameter and config file parsing to
       AdduserCommon.pm
+    - put creation of home directory in a function
   * Streamlining of print(f)/die(f) statements regarding quoting,
-    parenthesis and spaces. (mh)
+    parenthesis and spaces. (mh/jh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 30 Sep 2005 19:16:53 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  1 Oct 2005 14:02:21 +0200
 
 adduser (3.69) experimental; urgency=low
 

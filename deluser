@@ -147,8 +147,8 @@ dief (_("`%s' does not exist.\n"),$defaults)
 # last match wins
 ##########################################################
 
-my %config = preseed_config ("/etc/adduser.conf");
-read_config($default,%config);
+%config = preseed_config ("/etc/adduser.conf");
+read_config($defaults,%config);
 
 foreach(keys(%pconfig)) {
     $config{$_} = $pconfig{$_};
@@ -229,13 +229,13 @@ if($action eq "deluser") {
       s_print (_("Looking for files to backup/remove...\n"));
       my @mountpoints;
       open(MOUNT, "mount |")
-	      || die (_("fork for parse mount points failed: $!\n"));
+	      || die (_("fork for parse mount points failed: %s\n", $!));
       while (<MOUNT>) {
 	      chomp;
 	      my @temparray = split;
 	      push @mountpoints,$temparray[2];
       }
-      close(MOUNT) or die (_("can't close mount pipe: $!\n";
+      close(MOUNT) or die (_("can't close mount pipe: %s\n",$!));
       my(@files,@dirs);
       if($config{"remove_home"} && ! $config{"remove_all_files"}) {
 
@@ -390,14 +390,15 @@ if($action eq "deluserfromgroup")
 ######
 
 sub version {
-    printf (_("deluser: %s $version\n\n",_("removing user and groups from the system. Version:")));
+    printf (_("deluser: (version: %s)\n\n", $version));
+    printf (_("removing user and groups from the system. "));
 
-    print (_("Copyright (C) 2000 Roland Bauerschmidt <roland\@copyleft.de>\n\n"));
+    printf _("Copyright (C) 2000 Roland Bauerschmidt <roland\@copyleft.de>\n\n");
 
-    print (_("deluser is based on adduser by Guy Maor <maor\@debian.org>, Ian Murdock\n",
-	  "<imurdock\@gnu.ai.mit.edu> and Ted Hajek <tedhajek\@boombox.micro.umn.edu>\n"));
+    printf _("deluser is based on adduser by Guy Maor <maor\@debian.org>, Ian Murdock\n",
+	  "<imurdock\@gnu.ai.mit.edu> and Ted Hajek <tedhajek\@boombox.micro.umn.edu>\n");
 
-    print (_("\nThis program is free software; you can redistribute it and/or modify
+    printf _("\nThis program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or (at
 your option) any later version.
@@ -405,13 +406,14 @@ your option) any later version.
 This program is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-General Public License, /usr/share/common-licenses/GPL, for more details.\n"));
+General Public License, /usr/share/common-licenses/GPL, for more details.\n");
 }
 
 sub usage {
-    printf (_("deluser: %s $version\n\n",_("removing user and groups from the system. Version:")));
+    printf (_("deluser: (version %s)\n\n", $version));
+    printf _("removing user and groups from the system. Version:");
 
-    printf (_("deluser user
+    printf _("deluser user
   remove a normal user from the system
   example: deluser mike
 
@@ -440,7 +442,7 @@ general options:
   --quiet | -q      don't give process information to stdout
   --help | -h       usage message
   --version | -v    version number and copyright
-  --conf | -c FILE  use FILE instead of %s\n\n"),$defaults));
+  --conf | -c FILE  use FILE instead of %s\n\n"),$defaults;
 
     printf (_("Global configuration is in the file %s.\n"), $defaults);    
 }
