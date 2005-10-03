@@ -1,6 +1,6 @@
-adduser (3.69.0) UNRELEASED; urgency=low
+adduser (3.70) experimental; urgency=low
 
-  * NOT RELEASED YET
+  * The "Long Live Jörg" Release. Thanks for your tremendous help!
   * Update Swedish (sv)debconf translation. Thanks to Daniel Nylander
     and André Dahlqvist. (mh) Closes: #330258
   * patches by Jörg Hoh:
@@ -15,12 +15,12 @@ adduser (3.69.0) UNRELEASED; urgency=low
   * Move package from base to admin to clear up override disparity. (mh)
   * patch po/Makefile to be nicer to translators.
     Thanks to Thomas Huriaux. (mh) Closes: #331392
-  * Don't mess with nscd's pid file any more, just invalidate caches if 
+  * Don't mess with nscd's pid file any more, just invalidate caches if
     nscd binary is found. It will fail silently if nscd is installed but
     not running. Thanks to Antti Salmela, Peter Eisentraut and Bastian
     Blank. (mh) Closes: #327804
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon,  3 Oct 2005 17:15:59 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon,  3 Oct 2005 19:14:15 +0000
 
 adduser (3.69) experimental; urgency=low
 
