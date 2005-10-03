@@ -13,8 +13,10 @@ adduser (3.69.0) UNRELEASED; urgency=low
     exist as a non-system group.
     Thanks to Peter Eisentraut. (mh) Closes: #326192
   * Move package from base to admin to clear up override disparity. (mh)
+  * patch po/Makefile to be nicer to translators.
+    Thanks to Thomas Huriaux. (mh) Closes: #331392
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun,  2 Oct 2005 11:37:02 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon,  3 Oct 2005 10:50:44 +0200
 
 adduser (3.69) experimental; urgency=low
 
