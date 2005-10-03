@@ -36,9 +36,8 @@ sub invalidate_nscd {
     } elsif(-e "/usr/bin/nscd") {
         $nscd = "/usr/bin/nscd";
     }
-    my $nscdpid = "/var/run/nscd.pid";
     # this function replaces startnscd and stopnscd (closes: #54726)
-    if(defined($nscd) && -f $nscdpid)
+    if(defined($nscd) && -x $nscd)
       {
 	    my $table = shift;
 	    if ($table)
@@ -55,7 +54,7 @@ sub invalidate_nscd {
 }
 
 sub _ {
-    return gettext(@_);
+    return gettext( join "", @_);
 }
 
 sub dief {

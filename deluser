@@ -241,6 +241,9 @@ if($action eq "deluser") {
       if($config{"remove_home"} && ! $config{"remove_all_files"}) {
 
 	sub home_match {
+
+	  # according to the manpage
+	  no warnings "File::Find";
 	  foreach my $mount (@mountpoints) {
 	    if( $File::Find::name eq $mount ) {
 	      s_printf (_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
