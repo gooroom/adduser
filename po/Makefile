@@ -23,7 +23,7 @@ update: adduser.pot
 adduser.pot: ../adduser ../deluser ../AdduserCommon.pm
 	$(XGETTEXT) -L Perl -k_ -o $@ $?
 
-install: $(MO)
+install: all
 	for i in $(MO) ; do \
 	  t=$(DESTDIR)/$(LOCALEDIR)/`basename $$i .mo`/LC_MESSAGES ;\
 	  install -d $$t ;\
