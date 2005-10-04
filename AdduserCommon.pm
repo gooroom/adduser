@@ -37,6 +37,9 @@ sub invalidate_nscd {
         $nscd = "/usr/bin/nscd";
     }
     # this function replaces startnscd and stopnscd (closes: #54726)
+    # We are ignoring any error messages given by nscd here since we
+    # cannot expect the nscd maintainer and upstream to document their
+    # interfaces. See #330929.
     if(defined($nscd) && -x $nscd)
       {
 	    my $table = shift;
