@@ -76,8 +76,8 @@ GetOptions ("quiet" => sub { $verbose = 0 },
 	    "home=s" => \$special_home,
 	    "gecos=s" => \$new_gecos,
 	    "shell=s" => \$special_shell,
-	    "disabled_password" => sub { $ask_passwd = 0 },
-	    "disabled_login" => sub { $disabled_login = 1; $ask_passwd = 0 },
+	    "disabled-passwd" => sub { $ask_passwd = 0 },
+	    "disabled-login" => sub { $disabled_login = 1; $ask_passwd = 0 },
 	    "uid=i" => \$new_uid,
 	    "firstuid=i" => \$new_firstuid,
 	    "lastuid=i" => \$new_lastuid,
@@ -517,7 +517,7 @@ sub homedir {
 #       if 0  -> don't copy the skeleton data
 #       if 1  -> copy the files in /etc/skel to the newly created home directory
 sub create_homedir {
-  my $copy_skeleton = $1;
+  my ($copy_skeleton) = @_;
 
   if ($no_create_home) {
       print "Not creating $home_dir.\n" if $verbose;

@@ -4,8 +4,10 @@ adduser (3.70.0) UNRELEASED; urgency=low
   * Another small patch to po/Makefile to ease translation. Thanks,
     again, to Thomas Huriaux.
   * Allow delgroup user group. Thanks to Dan Jacobson. (mh) Closes: #176362
+  * Fix --disabled-passwd and --disabled-login. (mh) Closes: #332815
+  * Change create_homedir parameter processing. (jh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  8 Oct 2005 19:20:46 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  8 Oct 2005 20:34:41 +0200
 
 adduser (3.70) experimental; urgency=low
 
