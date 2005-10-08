@@ -120,9 +120,7 @@ if(@names == 0) {
 die ("$0: ",_("No name to remove given.\n")) if (length($names[0]) == 0);
 die ("$0: ",_("No more than two names.\n")) if (@names > 2);
 
-if(@names == 2) {      # must be addusertogroup
-    die ("$0: ",_("Specify only one name in this mode.\n"))
-        if ($action eq "delgroup");
+if(@names == 2) {      # must be deluserfromgroup
     $action = "deluserfromgroup";
     $user = shift(@names);
     $group = shift(@names);
