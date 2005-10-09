@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the adduser package.
 # Luca Monducci <luca.mo@tiscali.it>, 2004.
 # 
-#: ../AdduserCommon.pm:57
+#: ../AdduserCommon.pm:60
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.59\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-03 19:12+0000\n"
+"POT-Creation-Date: 2005-10-09 12:49+0200\n"
 "PO-Revision-Date: 2004-09-11 10:51+0100\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <debian-l10n-debian@lists.debian.org>\n"
@@ -40,7 +40,7 @@ msgstr "Nome del gruppo da aggiungere: "
 msgid "Enter a username to add: "
 msgstr "Nome dell'utente da aggiungere: "
 
-#: ../adduser:132 ../deluser:124
+#: ../adduser:132
 msgid "Specify only one name in this mode.\n"
 msgstr "Indicare solo un nome in questa modalità.\n"
 
@@ -52,7 +52,7 @@ msgstr "Le opzioni --group, --ingroup e --gid sono mutuamente esclusive.\n"
 msgid "The home dir must be an absolute path.\n"
 msgstr "La home directory deve essere un percorso assoluto.\n"
 
-#: ../adduser:157 ../deluser:139
+#: ../adduser:157 ../deluser:137
 #, perl-format
 msgid "`%s' does not exist.\n"
 msgstr "«%s» non esiste.\n"
@@ -104,12 +104,12 @@ msgstr "Fatto.\n"
 msgid "The group `%s' already exists.\n"
 msgstr "Il gruppo «%s» esiste già.\n"
 
-#: ../adduser:289 ../deluser:220 ../deluser:362
+#: ../adduser:289 ../deluser:218 ../deluser:360
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "L'utente «%s» non esiste.\n"
 
-#: ../adduser:291 ../adduser:639 ../deluser:326 ../deluser:365
+#: ../adduser:291 ../adduser:639 ../deluser:324 ../deluser:363
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Il gruppo «%s» non esiste.\n"
@@ -347,7 +347,7 @@ msgstr "Nome utente da cancellare: "
 msgid "No name to remove given.\n"
 msgstr "È necessario indicare un nome da cancellare.\n"
 
-#: ../deluser:161
+#: ../deluser:159
 #, fuzzy
 msgid ""
 "In order to use the --remove-home, --remove-all-files, and --backup "
@@ -361,126 +361,126 @@ msgstr ""
 "e --backup è necessario installare il pacchetto «perl-modules», per farlo,\n"
 "eseguire apt-get install perl-modules\n"
 
-#: ../deluser:210
+#: ../deluser:208
 #, fuzzy, perl-format
 msgid "The user `%s' is not a system account... Exiting.\n"
 msgstr "L'utente «%s» non fa più parte del gruppo «%s».\n"
 
-#: ../deluser:214
+#: ../deluser:212
 #, fuzzy, perl-format
 msgid "The user `%s' does not exist, but --system was given... Exiting.\n"
 msgstr "L'utente «%s» non esiste.\n"
 
-#: ../deluser:224
+#: ../deluser:222
 #, perl-format
 msgid "passwd home dir `%s' does not match command line home dir, aborting.\n"
 msgstr ""
 
-#: ../deluser:230
+#: ../deluser:228
 msgid "Looking for files to backup/remove...\n"
 msgstr "Ricerca dei file da salvaguardare/cancellare...\n"
 
-#: ../deluser:233
+#: ../deluser:231
 #, perl-format
 msgid "fork for parse mount points failed: %s\n"
 msgstr ""
 
-#: ../deluser:239
+#: ../deluser:237
 #, perl-format
 msgid "can't close mount pipe: %s\n"
 msgstr ""
 
-#: ../deluser:249
+#: ../deluser:247
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
 msgstr ""
 
-#: ../deluser:256
+#: ../deluser:254
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
 msgstr ""
 
-#: ../deluser:288
+#: ../deluser:286
 #, fuzzy
 msgid "Backing up files to be removed to "
 msgstr "Backup dei file da cancellare...\n"
 
-#: ../deluser:303
+#: ../deluser:301
 msgid "Removing files...\n"
 msgstr "Cancellazione dei file...\n"
 
-#: ../deluser:311
+#: ../deluser:309
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "Cancellazione dell'utente «%s»...\n"
 
-#: ../deluser:318 ../deluser:353 ../deluser:389
+#: ../deluser:316 ../deluser:351 ../deluser:387
 msgid "done.\n"
 msgstr "fatto.\n"
 
-#: ../deluser:330
+#: ../deluser:328
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr ""
 
-#: ../deluser:335
+#: ../deluser:333
 #, fuzzy, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "Il gruppo «%s» non esiste.\n"
 
-#: ../deluser:339
+#: ../deluser:337
 #, fuzzy, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "Il gruppo «%s» non esiste.\n"
 
-#: ../deluser:345
+#: ../deluser:343
 #, fuzzy, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "Esistono degli utenti con «%s» come gruppo primario!\n"
 
-#: ../deluser:350
+#: ../deluser:348
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "Cancellazione del gruppo «%s»...\n"
 
-#: ../deluser:368
+#: ../deluser:366
 msgid "You may not remove the user from his/her primary group.\n"
 msgstr "Non si può rimuovere l'utente dal proprio gruppo primario.\n"
 
-#: ../deluser:382
+#: ../deluser:380
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "L'utente «%s» non fa più parte del gruppo «%s».\n"
 
-#: ../deluser:385
+#: ../deluser:383
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "Cancellazione dell'utente «%s» dal gruppo «%s»...\n"
 
-#: ../deluser:396
+#: ../deluser:394
 #, perl-format
 msgid ""
 "deluser: (version: %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:397
+#: ../deluser:395
 #, fuzzy
 msgid "removing user and groups from the system. "
 msgstr "cancellazione di utenti e gruppi dal sistema. Versione:"
 
-#: ../deluser:399
+#: ../deluser:397
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 msgstr ""
 
-#: ../deluser:401
+#: ../deluser:399
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 msgstr ""
 
-#: ../deluser:404
+#: ../deluser:402
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -494,18 +494,18 @@ msgid ""
 "General Public License, /usr/share/common-licenses/GPL, for more details.\n"
 msgstr ""
 
-#: ../deluser:416
+#: ../deluser:414
 #, perl-format
 msgid ""
 "deluser: (version %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:417
+#: ../deluser:415
 msgid "removing user and groups from the system. Version:"
 msgstr "cancellazione di utenti e gruppi dal sistema. Versione:"
 
-#: ../deluser:419
+#: ../deluser:417
 #, perl-format
 msgid ""
 "deluser user\n"
@@ -541,22 +541,22 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../deluser:450
+#: ../deluser:448
 #, perl-format
 msgid "Global configuration is in the file %s.\n"
 msgstr "La configurazione globale si trova nel file %s.\n"
 
-#: ../AdduserCommon.pm:80
+#: ../AdduserCommon.pm:83
 #, perl-format
 msgid "%s: %s doesn't exist.  Using defaults.\n"
 msgstr "%s: %s non esiste. Uso dei valori predefiniti.\n"
 
-#: ../AdduserCommon.pm:90
+#: ../AdduserCommon.pm:93
 #, perl-format
 msgid "Couldn't parse %s:%s.\n"
 msgstr "Impossibile analizzare %s:%s.\n"
 
-#: ../AdduserCommon.pm:95
+#: ../AdduserCommon.pm:98
 #, perl-format
 msgid "Unknown variable `%s' at %s:%s.\n"
 msgstr "Variabile «%s» sconosciuta a %s:%s.\n"

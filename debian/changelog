@@ -1,8 +1,9 @@
 adduser (3.71.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * add adduser.pot to SVN
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  8 Oct 2005 18:47:00 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun,  9 Oct 2005 11:31:10 +0000
 
 adduser (3.71) experimental; urgency=low
 

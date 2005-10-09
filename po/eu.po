@@ -1,12 +1,12 @@
 # Spanish translation of adduser and deluser
 # Piarres Beobide Egaña <pi@beobide.net>, 2004.
 #
-#: ../AdduserCommon.pm:57
+#: ../AdduserCommon.pm:60
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-03 19:12+0000\n"
+"POT-Creation-Date: 2005-10-09 12:49+0200\n"
 "PO-Revision-Date: 2004-11-04 14:14+0100\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
@@ -41,7 +41,7 @@ msgstr "Idatzi gehitu behar den taldearen izena: "
 msgid "Enter a username to add: "
 msgstr "Idatzi gehitu behar den erabiltzailearen izena: "
 
-#: ../adduser:132 ../deluser:124
+#: ../adduser:132
 msgid "Specify only one name in this mode.\n"
 msgstr "Ezarri izen bat bakarrik modu honetan.\n"
 
@@ -53,7 +53,7 @@ msgstr "group, --ingroup, eta --gid aukerak ezin dira batera erabili.\n"
 msgid "The home dir must be an absolute path.\n"
 msgstr "'home' bide (path) absolutu bat izan behar da.\n"
 
-#: ../adduser:157 ../deluser:139
+#: ../adduser:157 ../deluser:137
 #, perl-format
 msgid "`%s' does not exist.\n"
 msgstr "`%s' ez dago.\n"
@@ -105,12 +105,12 @@ msgstr "Eginda.\n"
 msgid "The group `%s' already exists.\n"
 msgstr "`%s' taldea badago dagoeneko.\n"
 
-#: ../adduser:289 ../deluser:220 ../deluser:362
+#: ../adduser:289 ../deluser:218 ../deluser:360
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "`%s' erabiltzailea ez dago.\n"
 
-#: ../adduser:291 ../adduser:639 ../deluser:326 ../deluser:365
+#: ../adduser:291 ../adduser:639 ../deluser:324 ../deluser:363
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "`%s' taldea ez dago.\n"
@@ -350,7 +350,7 @@ msgstr "Idatzi ezabatu behar den erabiltzaile izena: "
 msgid "No name to remove given.\n"
 msgstr "Ezabatzeko izen bat behar dut.\n"
 
-#: ../deluser:161
+#: ../deluser:159
 #, fuzzy
 msgid ""
 "In order to use the --remove-home, --remove-all-files, and --backup "
@@ -364,126 +364,126 @@ msgstr ""
 "`perl-modules' paketea instalatu behar duzu. Hau lortzeko, abiarazi:\n"
 "apt-get install perl-modules\n"
 
-#: ../deluser:210
+#: ../deluser:208
 #, fuzzy, perl-format
 msgid "The user `%s' is not a system account... Exiting.\n"
 msgstr "`%s' erabiltzailea ez da `%s' taldeko partaide.\n"
 
-#: ../deluser:214
+#: ../deluser:212
 #, fuzzy, perl-format
 msgid "The user `%s' does not exist, but --system was given... Exiting.\n"
 msgstr "`%s' erabiltzailea ez dago.\n"
 
-#: ../deluser:224
+#: ../deluser:222
 #, perl-format
 msgid "passwd home dir `%s' does not match command line home dir, aborting.\n"
 msgstr ""
 
-#: ../deluser:230
+#: ../deluser:228
 msgid "Looking for files to backup/remove...\n"
 msgstr "Babeskopia/ezabatzeko fitxategiak arakatzen...\n"
 
-#: ../deluser:233
+#: ../deluser:231
 #, perl-format
 msgid "fork for parse mount points failed: %s\n"
 msgstr ""
 
-#: ../deluser:239
+#: ../deluser:237
 #, perl-format
 msgid "can't close mount pipe: %s\n"
 msgstr ""
 
-#: ../deluser:249
+#: ../deluser:247
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
 msgstr ""
 
-#: ../deluser:256
+#: ../deluser:254
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
 msgstr ""
 
-#: ../deluser:288
+#: ../deluser:286
 #, fuzzy
 msgid "Backing up files to be removed to "
 msgstr "Ezabatuko diren fitxategien babes-kopia egiten...\n"
 
-#: ../deluser:303
+#: ../deluser:301
 msgid "Removing files...\n"
 msgstr "Fitxategiak ezabatzen...\n"
 
-#: ../deluser:311
+#: ../deluser:309
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "`%s' erabiltzailea ezabatzen...\n"
 
-#: ../deluser:318 ../deluser:353 ../deluser:389
+#: ../deluser:316 ../deluser:351 ../deluser:387
 msgid "done.\n"
 msgstr "eginda.\n"
 
-#: ../deluser:330
+#: ../deluser:328
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr ""
 
-#: ../deluser:335
+#: ../deluser:333
 #, fuzzy, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "`%s' taldea ez dago.\n"
 
-#: ../deluser:339
+#: ../deluser:337
 #, fuzzy, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "`%s' taldea ez dago.\n"
 
-#: ../deluser:345
+#: ../deluser:343
 #, fuzzy, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "`%s' talde primario bezala duten erabiltzaileak daude!\n"
 
-#: ../deluser:350
+#: ../deluser:348
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "`%s' taldea ezabatzen...\n"
 
-#: ../deluser:368
+#: ../deluser:366
 msgid "You may not remove the user from his/her primary group.\n"
 msgstr "Ezin duzu erabiltzailea bere talde primariotik ezabatu.\n"
 
-#: ../deluser:382
+#: ../deluser:380
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "`%s' erabiltzailea ez da `%s' taldeko partaide.\n"
 
-#: ../deluser:385
+#: ../deluser:383
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "`%s' erabiltzailea `%s' taldetik ezabatzen...\n"
 
-#: ../deluser:396
+#: ../deluser:394
 #, perl-format
 msgid ""
 "deluser: (version: %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:397
+#: ../deluser:395
 #, fuzzy
 msgid "removing user and groups from the system. "
 msgstr "Sistematik erabiltzail eta taldeak ezabatzen. Bertsioa:"
 
-#: ../deluser:399
+#: ../deluser:397
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 msgstr ""
 
-#: ../deluser:401
+#: ../deluser:399
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 msgstr ""
 
-#: ../deluser:404
+#: ../deluser:402
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -497,18 +497,18 @@ msgid ""
 "General Public License, /usr/share/common-licenses/GPL, for more details.\n"
 msgstr ""
 
-#: ../deluser:416
+#: ../deluser:414
 #, perl-format
 msgid ""
 "deluser: (version %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:417
+#: ../deluser:415
 msgid "removing user and groups from the system. Version:"
 msgstr "Sistematik erabiltzail eta taldeak ezabatzen. Bertsioa:"
 
-#: ../deluser:419
+#: ../deluser:417
 #, perl-format
 msgid ""
 "deluser user\n"
@@ -544,22 +544,22 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../deluser:450
+#: ../deluser:448
 #, perl-format
 msgid "Global configuration is in the file %s.\n"
 msgstr "Konfigurazio orokorra %s fitxategian dago.\n"
 
-#: ../AdduserCommon.pm:80
+#: ../AdduserCommon.pm:83
 #, perl-format
 msgid "%s: %s doesn't exist.  Using defaults.\n"
 msgstr "%s: %s ez dago.  lehenespenak erabiltzen.\n"
 
-#: ../AdduserCommon.pm:90
+#: ../AdduserCommon.pm:93
 #, perl-format
 msgid "Couldn't parse %s:%s.\n"
 msgstr "Ezin da %s analizatu: %s.\n"
 
-#: ../AdduserCommon.pm:95
+#: ../AdduserCommon.pm:98
 #, perl-format
 msgid "Unknown variable `%s' at %s:%s.\n"
 msgstr "`%s' aldagai ezezaguna %s-en:%s.\n"

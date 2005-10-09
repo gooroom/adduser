@@ -3,12 +3,12 @@
 # Morten Brix Pedersen <morten@wtf.dk>, 2001
 # Geir Helland, <debian@marked.no>, 2003
 # Hans Fredrik Nordhaug <hans@nordhaug.priv.no>. 2005
-#: ../AdduserCommon.pm:57
+#: ../AdduserCommon.pm:60
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.63\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-03 19:12+0000\n"
+"POT-Creation-Date: 2005-10-09 12:49+0200\n"
 "PO-Revision-Date: 2005-03-10 15:10+0100\n"
 "Last-Translator: Hans Fredrik Nordhaug <hans@nordhaug.priv.no>\n"
 "Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
@@ -40,7 +40,7 @@ msgstr "Skriv inn gruppenavn som skal opprettes: "
 msgid "Enter a username to add: "
 msgstr "Skriv inn brukernavn som skal opprettes: "
 
-#: ../adduser:132 ../deluser:124
+#: ../adduser:132
 msgid "Specify only one name in this mode.\n"
 msgstr "Angi kun ett navn i dette modus.\n"
 
@@ -52,7 +52,7 @@ msgstr "--group, --ingroup, og --gid opsjonene er gjensidig ekskluderende.\n"
 msgid "The home dir must be an absolute path.\n"
 msgstr "Hjemmekatalogen må være en absolutt sti.\n"
 
-#: ../adduser:157 ../deluser:139
+#: ../adduser:157 ../deluser:137
 #, perl-format
 msgid "`%s' does not exist.\n"
 msgstr "«%s» eksisterer ikke.\n"
@@ -103,12 +103,12 @@ msgstr "Ferdig.\n"
 msgid "The group `%s' already exists.\n"
 msgstr "Gruppen «%s» eksisterer allerede.\n"
 
-#: ../adduser:289 ../deluser:220 ../deluser:362
+#: ../adduser:289 ../deluser:218 ../deluser:360
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "Brukeren «%s» eksisterer ikke.\n"
 
-#: ../adduser:291 ../adduser:639 ../deluser:326 ../deluser:365
+#: ../adduser:291 ../adduser:639 ../deluser:324 ../deluser:363
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Gruppen «%s» eksisterer ikke.\n"
@@ -345,7 +345,7 @@ msgstr "Skriv inn brukernavn som skal fjernes: "
 msgid "No name to remove given.\n"
 msgstr "Jeg trenger navnet på brukeren som skal fjernes.\n"
 
-#: ../deluser:161
+#: ../deluser:159
 #, fuzzy
 msgid ""
 "In order to use the --remove-home, --remove-all-files, and --backup "
@@ -359,132 +359,132 @@ msgstr ""
 "må du installere «perl-modules»-packken. For å gjøre det, kjør\n"
 "«apt-get install perl-modules».\n"
 
-#: ../deluser:210
+#: ../deluser:208
 #, perl-format
 msgid "The user `%s' is not a system account... Exiting.\n"
 msgstr "Brukeren «%s» er ikke en systemkonto... Avslutter.\n"
 
-#: ../deluser:214
+#: ../deluser:212
 #, perl-format
 msgid "The user `%s' does not exist, but --system was given... Exiting.\n"
 msgstr ""
 "Brukeren «%s» eksisterer ikke, men --system ble oppgitt... Avslutter.\n"
 
-#: ../deluser:224
+#: ../deluser:222
 #, perl-format
 msgid "passwd home dir `%s' does not match command line home dir, aborting.\n"
 msgstr ""
 "passwd-hjemmekatalog «%s» samsvarer ikke med kommandolinje hjemmekatalog, "
 "avbryter.\n"
 
-#: ../deluser:230
+#: ../deluser:228
 msgid "Looking for files to backup/remove...\n"
 msgstr "Kikker etter filer som skal sikkerhetskopieres / fjernes...\n"
 
-#: ../deluser:233
+#: ../deluser:231
 #, perl-format
 msgid "fork for parse mount points failed: %s\n"
 msgstr ""
 
-#: ../deluser:239
+#: ../deluser:237
 #, perl-format
 msgid "can't close mount pipe: %s\n"
 msgstr ""
 
-#: ../deluser:249
+#: ../deluser:247
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
 msgstr ""
 "Ingen sikkerhetskopiering eller sletting av «%s» siden det er et "
 "monteringspunkt.\n"
 
-#: ../deluser:256
+#: ../deluser:254
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
 msgstr ""
 "Ingen sikkerhetskopiering eller sletting av «%s» siden det samsvarer med %"
 "s.\n"
 
-#: ../deluser:288
+#: ../deluser:286
 msgid "Backing up files to be removed to "
 msgstr "Sikkerhetsopierer filer som skal fjernes til "
 
-#: ../deluser:303
+#: ../deluser:301
 msgid "Removing files...\n"
 msgstr "Fjerner filer...\n"
 
-#: ../deluser:311
+#: ../deluser:309
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "Fjerner bruker «%s»...\n"
 
-#: ../deluser:318 ../deluser:353 ../deluser:389
+#: ../deluser:316 ../deluser:351 ../deluser:387
 msgid "done.\n"
 msgstr "Ferdig.\n"
 
-#: ../deluser:330
+#: ../deluser:328
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr "getgrnam «%s» feilet. Dette skal ikke skje.\n"
 
-#: ../deluser:335
+#: ../deluser:333
 #, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "Gruppen «%s» er ikke en systemgruppe... Avslutter.\n"
 
-#: ../deluser:339
+#: ../deluser:337
 #, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "Gruppen «%s» er ikke tom!\n"
 
-#: ../deluser:345
+#: ../deluser:343
 #, fuzzy, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "Det finnes brukere med «%s» som primær gruppe!\n"
 
-#: ../deluser:350
+#: ../deluser:348
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "Fjerner gruppe «%s»...\n"
 
-#: ../deluser:368
+#: ../deluser:366
 msgid "You may not remove the user from his/her primary group.\n"
 msgstr "Du får ikke fjerne en bruker fra han/hennes primære gruppe.\n"
 
-#: ../deluser:382
+#: ../deluser:380
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "Brukeren «%s» er ikke medlem av gruppen «%s».\n"
 
-#: ../deluser:385
+#: ../deluser:383
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "Fjerner bruker «%s» fra gruppe «%s»...\n"
 
-#: ../deluser:396
+#: ../deluser:394
 #, perl-format
 msgid ""
 "deluser: (version: %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:397
+#: ../deluser:395
 #, fuzzy
 msgid "removing user and groups from the system. "
 msgstr "fjerner bruker og grupper fra systemet. Version:"
 
-#: ../deluser:399
+#: ../deluser:397
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 msgstr ""
 
-#: ../deluser:401
+#: ../deluser:399
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 msgstr ""
 
-#: ../deluser:404
+#: ../deluser:402
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -498,18 +498,18 @@ msgid ""
 "General Public License, /usr/share/common-licenses/GPL, for more details.\n"
 msgstr ""
 
-#: ../deluser:416
+#: ../deluser:414
 #, perl-format
 msgid ""
 "deluser: (version %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:417
+#: ../deluser:415
 msgid "removing user and groups from the system. Version:"
 msgstr "fjerner bruker og grupper fra systemet. Version:"
 
-#: ../deluser:419
+#: ../deluser:417
 #, perl-format
 msgid ""
 "deluser user\n"
@@ -577,22 +577,22 @@ msgstr ""
 "  --conf | -c FIL   bruk FIL i steden for %s\n"
 "\n"
 
-#: ../deluser:450
+#: ../deluser:448
 #, perl-format
 msgid "Global configuration is in the file %s.\n"
 msgstr "Den globale konfigurasjonsfilen er i %s.\n"
 
-#: ../AdduserCommon.pm:80
+#: ../AdduserCommon.pm:83
 #, perl-format
 msgid "%s: %s doesn't exist.  Using defaults.\n"
 msgstr "%s: %s eksisterer ikke. Bruker standard.\n"
 
-#: ../AdduserCommon.pm:90
+#: ../AdduserCommon.pm:93
 #, perl-format
 msgid "Couldn't parse %s:%s.\n"
 msgstr "Kunne ikke tolke %s:%s\n"
 
-#: ../AdduserCommon.pm:95
+#: ../AdduserCommon.pm:98
 #, perl-format
 msgid "Unknown variable `%s' at %s:%s.\n"
 msgstr "Ukjent variabel «%s» på %s:%s.\n"
