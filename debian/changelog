@@ -4,8 +4,9 @@ adduser (3.71.0) UNRELEASED; urgency=low
   * add adduser.pot to SVN
   * Update French (fr) program translation.
     Thanks to Christian Perrier. (mh) Closes: #330258
+  * ##+# FIXME - changelog entry from hohjg about the test suite status
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 12 Oct 2005 11:56:33 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 12 Oct 2005 11:58:13 +0200
 
 adduser (3.71) experimental; urgency=low
 
