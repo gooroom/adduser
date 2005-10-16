@@ -26,10 +26,15 @@ test_DoesFileExist "/home/$USER/$testfile"
 
 CMD="deluser --remove-home $USER "
 echo "  Checking $CMD" 
-$CMD #>/dev/null 2>&1
+result=`$CMD 2>/dev/null`
+
+if [ ! `echo $result | grep perl-modules` ]; then
+  echo "  Disabling check for removed homedir, because File::Find is not present"
+else
+  test_checkNoHomeDir /home/$USER
+fi
 
 test_doesUserNotExist $USER
-test_checkNoHomeDir /home/$USER
   
 
 

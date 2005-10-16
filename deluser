@@ -35,7 +35,7 @@ use strict;
 use Getopt::Long;
 use Debian::AdduserCommon;
 
-my $install_more_packages = 0;
+my $install_more_packages ;
 
 BEGIN {
     eval 'use File::Find';
@@ -154,7 +154,6 @@ foreach(keys(%pconfig)) {
 }
 undef (%pconfig);
 
-
 if (($config{remove_home} || $config{remove_all_files} || $config{backup}) && ($install_more_packages)) {
     die (_("In order to use the --remove-home, --remove-all-files, and --backup features,\n
     you need to install the `perl-modules' package. To accomplish that, run\n
@@ -241,7 +240,7 @@ if($action eq "deluser") {
 	sub home_match {
 
 	  # according to the manpage
-	  no warnings "File::Find";
+	  # no warnings "File::Find";
 	  foreach my $mount (@mountpoints) {
 	    if( $File::Find::name eq $mount ) {
 	      s_printf (_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
