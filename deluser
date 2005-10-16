@@ -42,6 +42,7 @@ BEGIN {
     if ($@) {
       $install_more_packages = 1;
     }
+    no warnings "File::Find";
     eval 'use File::Temp';
     if ($@) {
       $install_more_packages = 1;
@@ -118,7 +119,7 @@ if(@names == 0) {
     push(@names, $answer);
 }
 die ("$0: ",_("No name to remove given.\n")) if (length($names[0]) == 0);
-die ("$0: ",_("No more than two names.\n")) if (@names > 2);
+/die ("$0: ",_("No more than two names.\n")) if (@names > 2);
 
 if(@names == 2) {      # must be deluserfromgroup
     $action = "deluserfromgroup";
@@ -240,7 +241,6 @@ if($action eq "deluser") {
 	sub home_match {
 
 	  # according to the manpage
-	  # no warnings "File::Find";
 	  foreach my $mount (@mountpoints) {
 	    if( $File::Find::name eq $mount ) {
 	      s_printf (_("Not backing up/removing `%s', it is a mount point.\n"),$File::Find::name);
