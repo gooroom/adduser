@@ -10,6 +10,9 @@ testfile="foo'bar"
 
 touch /etc/skel/$testfile
 
+mkdir -p /etc/skel/.gnome
+(cd /etc/skel/.gnome && touch "'>ente")
+
 $CMD > /dev/null 2>&1
 
 # expect:
@@ -23,6 +26,7 @@ test_doesGroupExist $USER
 test_checkHomeDir /home/$USER
 
 test_DoesFileExist "/home/$USER/$testfile"
+test_DoesFileExist "/home/$USER/.gnome/'>ente"
 
 CMD="deluser --remove-home $USER "
 echo "  Checking $CMD" 
