@@ -32,7 +32,7 @@ CMD="deluser --remove-home $USER "
 echo "  Checking $CMD" 
 result=`$CMD 2>&1`
 
-if echo $result | grep -q -v perl-modules ; then
+if echo $result | grep -q perl-modules ; then
   echo "  Disabling check for removed homedir, because File::Find is not present"
 else
   test_checkNoHomeDir /home/$USER

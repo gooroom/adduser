@@ -42,7 +42,7 @@ BEGIN {
     if ($@) {
       $install_more_packages = 1;
     }
-    no warnings "File::Find";
+    #no warnings "File::Find";
     eval 'use File::Temp';
     if ($@) {
       $install_more_packages = 1;
