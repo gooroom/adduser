@@ -5,8 +5,10 @@ adduser (3.71.0) UNRELEASED; urgency=low
   * Update French (fr) program translation.
     Thanks to Christian Perrier. (mh) Closes: #330258
   * Created some shell scripts which are trying to act as a testsuite (jh)
+  * correct wrong "user UID" for system groups in manpage, reference
+    Debian Policy 9.2.2. Thanks to Faheem Mitha. (mh) Closes: #334315
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 12 Oct 2005 11:58:13 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 17 Oct 2005 17:36:48 +0200
 
 adduser (3.71) experimental; urgency=low
 
