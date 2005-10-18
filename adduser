@@ -1,9 +1,8 @@
 #!/usr/bin/perl
-#
-# adduser VERSION
-#
+
 # adduser: a utility to add users to the system
 # addgroup: a utility to add groups to the system
+my $version = "VERSION";
 
 # Copyright (C) 1997, 1998, 1999 Guy Maor <maor@debian.org>
 # Copyright (C) 1995 Ted Hajek <tedhajek@boombox.micro.umn.edu>
