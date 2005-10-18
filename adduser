@@ -53,7 +53,7 @@ BEGIN {
 setlocale(LC_MESSAGES, "");
 textdomain("adduser");
 
-$verbose = 1;			# should we be verbose?
+our $verbose = 1;		# should we be verbose?
 my $allow_badname = 0;		# should we allow bad names?
 my $ask_passwd = 1;		# ask for a passwd? 
 my $disabled_login = 0;		# leave the new account disabled?
