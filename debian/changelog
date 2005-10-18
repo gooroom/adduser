@@ -7,8 +7,12 @@ adduser (3.71.0) UNRELEASED; urgency=low
   * Created some shell scripts which are trying to act as a testsuite (jh)
   * correct wrong "user UID" for system groups in manpage, reference
     Debian Policy 9.2.2. Thanks to Faheem Mitha. (mh) Closes: #334315
+  * fix $verbose handling. (mh)
+  * global rename _ to gtx to un-break File::Find. (mh)
+  * internal change to config hash handling. (mh)
+  * remove double definition of get_users_groups. (mh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 17 Oct 2005 17:36:48 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Oct 2005 14:25:26 +0000
 
 adduser (3.71) experimental; urgency=low
 
