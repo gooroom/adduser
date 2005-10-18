@@ -82,22 +82,22 @@ sub read_config {
     my ($var, $lcvar, $val);
 
     if (! -f $conf_file) {
-	printf (_("%s: %s doesn't exist.  Using defaults.\n"),$0,$conf_file) if $verbose;
+	printf (_("%s: `%s' doesn't exist.  Using defaults.\n"),$0,$conf_file) if $verbose;
 	return;
     }
 
-    open (CONF, $conf_file) || dief ("%s: %s\n",$conf_file,$!);
+    open (CONF, $conf_file) || dief ("%s: `%s'\n",$conf_file,$!);
     while (<CONF>) {
 	chomp;
 	next if /^#/ || /^\s*$/;
 
 	if ((($var, $val) = /^\s*(\S+)\s*=\s*(.*)/) != 2) {
-	    warnf(_("Couldn't parse %s:%s.\n"),$conf_file,$.);
+	    warnf(_("Couldn't parse `%s':%s.\n"),$conf_file,$.);
 	    next;
 	}
 	$lcvar = lc $var;
 	if (!defined($config{$lcvar})) {
-	    warnf(_("Unknown variable `%s' at %s:%s.\n"),$var,$conf_file,$.);
+	    warnf(_("Unknown variable `%s' at `%s':%s.\n"),$var,$conf_file,$.);
 	    next;
 	}
 
