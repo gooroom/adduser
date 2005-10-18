@@ -2,6 +2,11 @@
 
 FAILED=0
 
+if [ "$(id -u)" != "0" ]; then
+  echo "root needed"
+  exit 1
+fi
+
 echo "Starting test suite"
 for i in ./suite*.sh ; do
   sh $i
