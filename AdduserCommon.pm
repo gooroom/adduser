@@ -10,7 +10,7 @@ use vars qw(@EXPORT $VAR1);
 #                     Ian A. Murdock <imurdock@gnu.ai.mit.edu>
 #
 
-@EXPORT = qw(invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf systemcall);
+@EXPORT = qw(invalidate_nscd gtx dief warnf read_config get_users_groups get_group_members s_print s_printf systemcall);
 
 sub invalidate_nscd {
     # Check if we need to do make -C /var/yp for NIS
@@ -56,7 +56,7 @@ sub invalidate_nscd {
       }
 }
 
-sub _ {
+sub gtx {
     return gettext( join "", @_);
 }
 
@@ -76,11 +76,11 @@ sub warnf {
 #  -- filename of the configuration file
 #  -- a hash for the configuration data
 sub read_config {
-    my ($conf_file, %config) = @_;
+    my ($conf_file, $configref) = @_;
     my ($var, $lcvar, $val);
 
     if (! -f $conf_file) {
-	printf (_("%s: `%s' doesn't exist.  Using defaults.\n"),$0,$conf_file) if $verbose;
+	printf gtx("%s: `%s' doesn't exist.  Using defaults.\n"),$0,$conf_file if $verbose;
 	return;
     }
 
@@ -90,39 +90,22 @@ sub read_config {
 	next if /^#/ || /^\s*$/;
 
 	if ((($var, $val) = /^\s*(\S+)\s*=\s*(.*)/) != 2) {
-	    warnf(_("Couldn't parse `%s':%s.\n"),$conf_file,$.);
+	    warnf gtx("Couldn't parse `%s':%s.\n"),$conf_file,$.;
 	    next;
 	}
 	$lcvar = lc $var;
-	if (!defined($config{$lcvar})) {
-	    warnf(_("Unknown variable `%s' at `%s':%s.\n"),$var,$conf_file,$.);
+	if (!defined($configref->{$lcvar})) {
+	    warnf gtx("Unknown variable `%s' at `%s':%s.\n"),$var,$conf_file,$.;
 	    next;
 	}
 
 	$val =~ s/^"(.*)"$/$1/;
 	$val =~ s/^'(.*)'$/$1/;
 
-	$config{$lcvar} = $val;
+	$configref->{$lcvar} = $val;
     }
 
     close CONF || die "$!";
-}
-
-# return a user's groups
-sub get_users_groups {
-    my($user) = @_;
-    my($name,$members,@groups);
-    setgrent;
-    while (($name,$members) = (getgrent)[0,3]) {
-	for (split(/ /, $members)) {
-	    if ($user eq $_) {
-		push @groups, $name;
-		last;
-	    }
-	}
-    }
-    endgrent;
-    @groups;
 }
 
 # return a user's groups
@@ -163,13 +146,13 @@ sub s_print
 
 sub s_printf
 {
-    printf (@_)
+    printf @_
 	if($verbose);
 }
 
 sub d_printf
 {
-    printf (@_)
+    printf @_
     	if((defined($verbose) && $verbose > 1) || (defined($debugging) && $debugging == 1));
 }
 
@@ -186,38 +169,38 @@ sub systemcall {
 # preseed the configuration variables 
 # then read the config file /etc/adduser and overwrite the data hardcoded here
 sub preseed_config {
-  my $default_configuration = $1;
-  my %config;
-  $config{"system"} = 0;
-  $config{"only_if_empty"} = 0;
-  $config{"remove_home"} = 0;
-  $config{"home"} = "";
-  $config{"remove_all_files"} = 0;
-  $config{"backup"} = 0;
-  $config{"backup_to"} = ".";
-  $config{"dshell"} = "/bin/bash";
-  $config{"first_system_uid"} = 100;
-  $config{"last_system_uid"} = 999;
-  $config{"first_uid"} = 1000;
-  $config{"last_uid"} = 29999;
-  $config{"first_system_gid"} = 100;
-  $config{"last_system_gid"} = 999;
-  $config{"first_gid"} = 1000;
-  $config{"last_gid"} = 29999;
-  $config{"dhome"} = "/home";
-  $config{"skel"} = "/etc/skel";
-  $config{"usergroups"} = "yes";
-  $config{"users_gid"} = "100";
-  $config{"grouphomes"} = "no";
-  $config{"letterhomes"} = "no";
-  $config{"quotauser"} = "";
-  $config{"dir_mode"} = "0755";
-  $config{"setgid_home"} = "no";
-  $config{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bin/.* ^/boot/.* ^/dev/.* ^/lib/.* ^/proc/.* ^/root/.* ^/sbin/.* ^/tmp/.* ^/sys/.* ^/srv/.* ^/opt/.* ^/initrd/.* ^/usr/.* ^/var/.*";
-  $config{"name_regex"} = "^[a-z][-a-z0-9]*\$";
+  my ($conflistref, $configref) = @_;
+  $configref->{"system"} = 0;
+  $configref->{"only_if_empty"} = 0;
+  $configref->{"remove_home"} = 0;
+  $configref->{"home"} = "";
+  $configref->{"remove_all_files"} = 0;
+  $configref->{"backup"} = 0;
+  $configref->{"backup_to"} = ".";
+  $configref->{"dshell"} = "/bin/bash";
+  $configref->{"first_system_uid"} = 100;
+  $configref->{"last_system_uid"} = 999;
+  $configref->{"first_uid"} = 1000;
+  $configref->{"last_uid"} = 29999;
+  $configref->{"first_system_gid"} = 100;
+  $configref->{"last_system_gid"} = 999;
+  $configref->{"first_gid"} = 1000;
+  $configref->{"last_gid"} = 29999;
+  $configref->{"dhome"} = "/home";
+  $configref->{"skel"} = "/etc/skel";
+  $configref->{"usergroups"} = "yes";
+  $configref->{"users_gid"} = "100";
+  $configref->{"grouphomes"} = "no";
+  $configref->{"letterhomes"} = "no";
+  $configref->{"quotauser"} = "";
+  $configref->{"dir_mode"} = "0755";
+  $configref->{"setgid_home"} = "no";
+  $configref->{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bin/.* ^/boot/.* ^/dev/.* ^/lib/.* ^/proc/.* ^/root/.* ^/sbin/.* ^/tmp/.* ^/sys/.* ^/srv/.* ^/opt/.* ^/initrd/.* ^/usr/.* ^/var/.*";
+  $configref->{"name_regex"} = "^[a-z][-a-z0-9]*\$";
 
-  read_config($default_configuration,%config);
-  return %config;
+  foreach( @$conflistref ) {
+      read_config($_,$configref);
+  }
 }
 
 # Local Variables:
