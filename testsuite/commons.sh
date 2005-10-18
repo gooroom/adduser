@@ -1,7 +1,7 @@
 #!/bin/bash
 
 userid_file="./userid"
-user_prefix="testsuite"
+user_prefix="autsuite"
 
 
 
