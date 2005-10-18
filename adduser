@@ -285,8 +285,8 @@ if ($action eq "addusertogroup") {
     dief (gtx("The group `%s' does not exist.\n"),$existing_group)
 	if (!defined getgrnam($existing_group));
     if (&user_is_member($existing_user, $existing_group)) {
-	printf gtx("The user `%s' is already a member of `%s'.\n",
-                $existing_user,$existing_group) if $verbose;
+	printf gtx("The user `%s' is already a member of `%s'.\n"),
+                $existing_user,$existing_group if $verbose;
 	exit 0;			# not really an error
     }
 

@@ -11,8 +11,9 @@ adduser (3.71.0) UNRELEASED; urgency=low
   * global rename _ to gtx to un-break File::Find. (mh)
   * internal change to config hash handling. (mh)
   * remove double definition of get_users_groups. (mh)
+  * fix error message in addusertogroup. (mh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Oct 2005 14:25:26 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Oct 2005 14:36:16 +0000
 
 adduser (3.71) experimental; urgency=low
 
