@@ -10,6 +10,8 @@ use vars qw(@EXPORT $VAR1);
 #                     Ian A. Murdock <imurdock@gnu.ai.mit.edu>
 #
 
+package Adduser;
+
 @EXPORT = qw(invalidate_nscd _ dief warnf read_config get_users_groups get_group_members s_print s_printf systemcall);
 
 sub invalidate_nscd {

@@ -28,6 +28,8 @@ my $version = "VERSION";
 # See the usage subroutine for explanation about how the program can be called
 ####################
 
+package Adduser;
+
 $ENV{"PATH"} = "/sbin:/bin:/usr/sbin:/usr/bin";
 
 use warnings;
@@ -70,7 +72,7 @@ setlocale(LC_MESSAGES, "");
 textdomain("adduser");
 
 my $action = $0 =~ /delgroup$/ ? "delgroup" : "deluser";
-my $verbose = 1;
+$verbose = 1;
 my %pconfig = ();
 my %config = (); 
 my $defaults;
