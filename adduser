@@ -30,8 +30,6 @@ my $version = "VERSION";
 # See the usage subroutine for explanation about how the program can be called
 ####################
 
-package Adduser;
-
 use warnings;
 use Debian::AdduserCommon;
 use Getopt::Long;

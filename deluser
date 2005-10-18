@@ -28,8 +28,6 @@ my $version = "VERSION";
 # See the usage subroutine for explanation about how the program can be called
 ####################
 
-package Adduser;
-
 $ENV{"PATH"} = "/sbin:/bin:/usr/sbin:/usr/bin";
 
 use warnings;
