@@ -1,3 +1,9 @@
+adduser (3.73.0) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 19 Oct 2005 16:53:49 +0000
+
 adduser (3.73) unstable; urgency=low
 
   * make adduser consistent with documentation again. The option is
