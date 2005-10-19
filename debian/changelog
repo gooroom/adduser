@@ -1,8 +1,10 @@
 adduser (3.73.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * Update German (de) debconf translation.
+    Thanks to Daniel Knabl. (mh) Closes: #326136
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 19 Oct 2005 16:53:49 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 19 Oct 2005 19:02:30 +0200
 
 adduser (3.73) unstable; urgency=low
 
