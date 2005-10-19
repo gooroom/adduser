@@ -1,11 +1,10 @@
-adduser (3.72.0) UNRELEASED; urgency=low
+adduser (3.73) unstable; urgency=low
 
-  * NOT RELEASED YET
   * make adduser consistent with documentation again. The option is
     --disabled-password, not --disabled-passwd or --disabled_password.
     Thanks to Colin Watson. (mh) Closes: #332815
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 19 Oct 2005 13:08:18 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 19 Oct 2005 16:47:13 +0000
 
 adduser (3.72) unstable; urgency=low
 
