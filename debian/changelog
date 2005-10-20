@@ -1,11 +1,10 @@
-adduser (3.73.0) UNRELEASED; urgency=low
+adduser (3.74) unstable; urgency=low
 
-  * NOT RELEASED YET
   * Update German (de) debconf translation.
     Thanks to Daniel Knabl. (mh) Closes: #326136
   * Fix wrong bug number in 3.72 changelog regarding #333384.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 19 Oct 2005 19:55:04 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 20 Oct 2005 16:03:59 +0000
 
 adduser (3.73) unstable; urgency=low
 
