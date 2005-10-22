@@ -1,4 +1,4 @@
-XGETTEXT = xgettext
+XGETTEXT = xgettext -c
 MSGFMT = msgfmt
 MSGMERGE = msgmerge
 
