@@ -33,7 +33,6 @@ my $version = "VERSION";
 use warnings;
 use Debian::AdduserCommon;
 use Getopt::Long;
-use I18N::Langinfo qw(langinfo YESEXPR);
 
 BEGIN {
     eval 'use Locale::gettext';
@@ -49,10 +48,19 @@ BEGIN {
     if ($@) {
 	*setlocale = sub { return 1 };
     }
+    eval {
+	require I18N::Langinfo;
+	import I18N::Langinfo qw(langinfo YESEXPR);
+    };
+    if ($@) {
+	*langinfo = sub { "^[yY]" };
+	*YESEXPR = sub { 1 };
+    }
 }
 
 setlocale(LC_MESSAGES, "");
 textdomain("adduser");
+my $yesexpr = langinfo(YESEXPR());
 
 our $verbose = 1;		# should we be verbose?
 my $allow_badname = 0;		# should we allow bad names?
@@ -113,8 +121,9 @@ while (defined($arg = shift(@ARGV))) {
     }
 }
 
-die ("$0: ",gtx("I need a name to add.\n")) if (length($names[0]) == 0);
-die ("$0: ",gtx("No more than two names.\n")) if (@names > 2);
+if (length($names[0]) == 0 || @names > 2) {
+    die ("$0: ",gtx("Only one or two names allowed.\n"));
+}
 	    
 if (@names == 0) {
     if($found_group_opt || $action eq "addgroup" || $action eq "addsysgroup")
@@ -231,9 +240,8 @@ if ($action eq "addsysgroup") {
 				   &get_current_gids);
 
         if ($new_gid == -1) {
-            print STDERR ("$0: ",gtx("No GID is available in the range "),
-            $config{"first_system_gid"}, " - ", $config{"last_system_gid"},
-            " (FIRST_SYS_GID - LAST_SYS_GID).\n");
+	    print STDERR "$0: ";
+	    printf STDERR gtx("No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"),$config{"first_system_gid"},$config{"last_system_gid"};
             dief (gtx("The group `%s' was not created.\n"),$new_name);
         }
     }
@@ -261,9 +269,8 @@ if ($action eq "addgroup") {
 				   &get_current_gids);
 
         if ($new_gid == -1) {
-            print STDERR ("$0: ",gtx("No GID is available in the range "),
-            $config{"first_gid"}," - ", $config{"last_gid"},
-            " (FIRST_GID - LAST_GID).\n");
+	    print STDERR "$0: ";
+	    printf STDERR gtx("No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"),$config{"first_gid"},$config{"last_gid"};
             dief (gtx("The group `%s' was not created.\n"),$new_name);
         }
     }
@@ -327,9 +334,8 @@ if ($action eq "addsysuser") {
 				   $config{"last_system_uid"},
 				   &get_current_uids, &get_current_gids);
         if ($new_uid == -1) {
-            print STDERR ("$0: ",gtx("No UID/GID pair is available in the range "),
-            $config{"first_system_uid"}, " - ", $config{"last_system_uid"},
-            " (FIRST_SYS_UID - LAST_SYS_UID).\n");
+	    print STDERR "$0: ";
+	    printf STDERR gtx("No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"),$config{"first_system_uid"},$config{"last_system_uid"};
             dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
         $new_gid = $new_uid;
@@ -340,10 +346,9 @@ if ($action eq "addsysuser") {
 				   $config{"last_system_uid"},
 				   &get_current_uids);
         if ($new_uid == -1) {
-            print STDERR ("$0: ",gtx("No UID is available in the range "),
-            $config{"first_system_uid"}," - ", $config{"last_system_uid"},
-            "(FIRST_SYS_UID - LAST_SYS_UID).\n");
-            dief (gtx("The user `%s' was not created.\n"),$new_name);
+	    print STDERR "$0: ";
+	    printf STDERR gtx("No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"),$config{"first_system_uid"},$config{"last_system_uid"};
+	    dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
         if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
 	elsif ($ingroup_name) { $new_gid = getgrnam($ingroup_name); }
@@ -412,10 +417,9 @@ if ($action eq "adduser") {
 				   $last_uid,
 				   &get_current_uids, &get_current_gids);
         if ($new_uid == -1) {
-            print STDERR ("$0: ",gtx("No UID/GID pair is available in the range "),
-            "$first_uid - $last_uid\n",
-            "(FIRST_UID - LAST_UID).  ");
-            dief (gtx("The user `%s' was not created.\n"),$new_name);
+	    print STDERR "$0: ";
+            printf STDERR gtx("No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"),$first_uid,$last_uid;
+	    dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
 	$new_gid = $new_uid;
 	$ingroup_name = $new_name;
@@ -425,9 +429,8 @@ if ($action eq "adduser") {
 				   $last_uid,
 				   &get_current_uids);
 	if ($new_uid == -1) {
-            print STDERR ("$0: ",gtx("No UID is available in the range "),
-            $config{"first_uid"}, " - ", $config{"last_uid"},
-            "(FIRST_UID - LAST_UID).\n");
+	    print STDERR "$0: ";
+	    printf STDERR gtx("No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"),$config{"first_uid"},$config{"last_uid"};
             dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
 	if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
@@ -519,7 +522,7 @@ sub create_homedir {
   my ($copy_skeleton) = @_;
 
   if ($no_create_home) {
-      print gtx("Not creating $home_dir.\n") if $verbose;
+      printf gtx("Not creating home directory `%s'.\n", $home_dir if $verbose;
   }
   elsif (-e $home_dir) {
       printf gtx("The home directory `%s' already exists.  Not copying from `%s'\n"),
@@ -528,7 +531,7 @@ sub create_homedir {
       my $home_uid = $homedir_stat[4];
       my $home_gid = $homedir_stat[5];
       if (($home_uid != $new_uid) || ($home_gid != $new_gid)) {
-          warnf gtx("Warning: that home directory does not belong to user you're just creating\n");
+          warnf gtx("Warning: that home directory does not belong to the user you are currently creating\n");
       }
       undef @homedir_stat; undef $home_uid; undef $home_gid;
   }

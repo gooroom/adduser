@@ -123,8 +123,10 @@ if(@names == 0) {
     chomp(my $answer=<STDIN>);
     push(@names, $answer);
 }
-die ("$0: ",gtx("No name to remove given.\n")) if (length($names[0]) == 0);
-die ("$0: ",gtx("No more than two names.\n")) if (@names > 2);
+
+if (length($names[0]) == 0 || @names > 2) {
+    die ("$0: ",gtx("Only one or two names allowed.\n"));
+}
 
 if(@names == 2) {      # must be deluserfromgroup
     $action = "deluserfromgroup";
@@ -157,9 +159,9 @@ foreach(keys(%pconfig)) {
 undef (%pconfig);
 
 if (($config{remove_home} || $config{remove_all_files} || $config{backup}) && ($install_more_packages)) {
-    die (gtx("In order to use the --remove-home, --remove-all-files, and --backup features,\n
-    you need to install the `perl-modules' package. To accomplish that, run\n
-    apt-get install perl-modules\n"));
+    die (gtx("In order to use the --remove-home, --remove-all-files, and --backup features,
+you need to install the `perl-modules' package. To accomplish that, run
+apt-get install perl-modules\n"));
 }
 
  
@@ -282,7 +284,7 @@ if($action eq "deluser") {
       }
 
       if($config{"backup"}) {
-	  s_print (gtx("Backing up files to be removed to ". $config{"backup_to"}. " ...\n"));
+	  s_printf (gtx("Backing up files to be removed to %s ...\n"),$config{"backup_to"});
 	  my $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
 	  my $filesfilename = $filesfile->filename;
 	  print $filesfile join("\n",@files);
@@ -362,7 +364,7 @@ if($action eq "deluserfromgroup")
 	dief (gtx("The group `%s' does not exist.\n"),$group);
     }
     if($maingroup eq $group) {
-	die ("$0: ",gtx("You may not remove the user from his/her primary group.\n"));
+	die ("$0: ",gtx("You may not remove the account from its primary group.\n"));
     }
 
     my @members = get_group_members($group);
