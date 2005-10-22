@@ -522,7 +522,7 @@ sub create_homedir {
   my ($copy_skeleton) = @_;
 
   if ($no_create_home) {
-      printf gtx("Not creating home directory `%s'.\n", $home_dir if $verbose;
+      printf gtx("Not creating home directory `%s'.\n"), $home_dir if $verbose;
   }
   elsif (-e $home_dir) {
       printf gtx("The home directory `%s' already exists.  Not copying from `%s'\n"),
