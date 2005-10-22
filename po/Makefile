@@ -21,7 +21,7 @@ update: adduser.pot
 	done;
 
 adduser.pot: ../adduser ../deluser ../AdduserCommon.pm
-	$(XGETTEXT) -L Perl -k_ -o $@ $?
+	$(XGETTEXT) -L Perl -kgtx -o $@ $?
 
 install: all
 	for i in $(MO) ; do \
