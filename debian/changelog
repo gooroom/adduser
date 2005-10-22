@@ -1,6 +1,5 @@
-adduser (3.74.0) UNRELEASED; urgency=low
+adduser (3.75) experimental; urgency=low
 
-  * NOT RELEASED YET
   * apply patch from Thomas Huriaux to re-work manpage generation:
     * remove doc/*.es_ES
     * remove doc/outdated/
@@ -17,7 +16,7 @@ adduser (3.74.0) UNRELEASED; urgency=low
     (mh) This hopefully solves #224301.
   * Minor string changes. (mh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 22 Oct 2005 18:54:13 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 22 Oct 2005 19:02:52 +0000
 
 adduser (3.74) unstable; urgency=low
 
