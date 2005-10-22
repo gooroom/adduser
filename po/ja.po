@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.45\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-09 12:49+0200\n"
+"POT-Creation-Date: 2005-10-22 20:08+0000\n"
 "PO-Revision-Date: 2002-03-08 16:20+0900\n"
 "Last-Translator: Tomohiro KUBOTA <kubota@debian.org>\n"
 "Language-Team: Japanese <debian-doc@debian.or.jp>\n"
@@ -15,147 +15,152 @@ msgstr ""
 "Content-Type: text/plain; charset=EUC-JP\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../adduser:90
+#. everyone can issue "--help" and "--version", but only root can go on
+#: ../adduser:98
 msgid "Only root may add a user or group to the system.\n"
 msgstr "root だけがシステムにユーザまたはグループを追加できます。\n"
 
-#: ../adduser:109 ../deluser:105
+#: ../adduser:118 ../deluser:111
 msgid "No options allowed after names.\n"
 msgstr "名前の後にオプションを付けられません。\n"
 
-#: ../adduser:115
-msgid "I need a name to add.\n"
-msgstr "追加する名前が必要です。\n"
+#: ../adduser:125 ../deluser:128
+msgid "Only one or two names allowed.\n"
+msgstr ""
 
-#: ../adduser:116 ../deluser:121
-msgid "No more than two names.\n"
-msgstr "２つ以上の名前は指定できません。\n"
-
-#: ../adduser:121
+#: ../adduser:131
 msgid "Enter a groupname to add: "
 msgstr "追加するグループ名を入力して下さい: "
 
-#: ../adduser:125
+#: ../adduser:135
 msgid "Enter a username to add: "
 msgstr "追加するユーザ名を入力して下さい: "
 
-#: ../adduser:132
+#. must be addusertogroup
+#: ../adduser:142
 msgid "Specify only one name in this mode.\n"
 msgstr "このモードでは１つだけ名前を指定して下さい。\n"
 
-#: ../adduser:148
+#: ../adduser:158
 msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
 msgstr "--group, --ingroup, --gid オプションは同時に複数指定できません。\n"
 
-#: ../adduser:153
+#: ../adduser:163
 msgid "The home dir must be an absolute path.\n"
 msgstr "ホームディレクトリは絶対パスでなければなりません。\n"
 
-#: ../adduser:157 ../deluser:137
-#, perl-format
-msgid "`%s' does not exist.\n"
-msgstr "`%s' が存在しません。\n"
-
-#: ../adduser:163
+#: ../adduser:167
 msgid "Warning: The home dir you specified already exists.\n"
 msgstr "警告: 指定されたユーザのホームディレクトリが存在しています。\n"
 
-#: ../adduser:165
+#: ../adduser:169
 #, fuzzy
 msgid "Warning: The home dir you specified does not exist.\n"
 msgstr "警告: 指定されたユーザのホームディレクトリが存在しています。\n"
 
-#: ../adduser:226
+#: ../adduser:230
 #, fuzzy, perl-format
 msgid "The group `%s' already exists as a system group. Exiting...\n"
 msgstr "グループ `%s' は既に存在しています。\n"
 
-#: ../adduser:229
+#: ../adduser:233
 #, fuzzy, perl-format
 msgid "The group `%s' already exists and is not a system group.\n"
 msgstr "グループ `%s' は既に存在しています。\n"
 
-#: ../adduser:231 ../adduser:261
+#: ../adduser:235 ../adduser:264
 #, fuzzy, perl-format
 msgid "The GID `%s' is already in use.\n"
 msgstr "グループ ID `%s' は既に使用されています。\n"
 
-#: ../adduser:239 ../adduser:269
-msgid "No GID is available in the range "
+#: ../adduser:244
+#, fuzzy, perl-format
+msgid ""
+"No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
 msgstr "この範囲では利用できる GID がありません :"
 
-#: ../adduser:242 ../adduser:272
+#: ../adduser:245 ../adduser:274
 #, perl-format
 msgid "The group `%s' was not created.\n"
 msgstr "`%s' グループは作成されませんでした。\n"
 
-#: ../adduser:246 ../adduser:276
+#: ../adduser:249 ../adduser:278
 #, fuzzy, perl-format
 msgid "Adding group `%s' (%s)...\n"
 msgstr "グループ %s (%s) を追加しています…\n"
 
-#: ../adduser:250 ../adduser:280 ../adduser:312
+#: ../adduser:253 ../adduser:282 ../adduser:314
 msgid "Done.\n"
 msgstr "終了。\n"
 
-#: ../adduser:259 ../adduser:632
+#: ../adduser:262 ../adduser:634
 #, perl-format
 msgid "The group `%s' already exists.\n"
 msgstr "グループ `%s' は既に存在しています。\n"
 
-#: ../adduser:289 ../deluser:218 ../deluser:360
+#: ../adduser:273
+#, fuzzy, perl-format
+msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
+msgstr "この範囲では利用できる GID がありません :"
+
+#: ../adduser:291 ../deluser:221 ../deluser:361
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "ユーザ `%s' は存在しません。\n"
 
-#: ../adduser:291 ../adduser:639 ../deluser:324 ../deluser:363
+#: ../adduser:293 ../adduser:641 ../deluser:325 ../deluser:364
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "グループ `%s' が存在しません。\n"
 
-#: ../adduser:294
+#: ../adduser:296
 #, perl-format
 msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "ユーザ `%s' は既にグループ `%s' のメンバーです。\n"
 
-#: ../adduser:299
+#: ../adduser:301
 #, perl-format
 msgid "Adding user `%s' to group `%s'...\n"
 msgstr "%s を %s に追加しています...\n"
 
-#: ../adduser:322
+#: ../adduser:324
 #, fuzzy, perl-format
 msgid "The user `%s' already exists as a system user. Exiting...\n"
 msgstr "グループ `%s' は既に存在しています。\n"
 
-#: ../adduser:328
+#: ../adduser:330
 #, perl-format
 msgid "Adding system user `%s'...\n"
 msgstr "システムユーザ %s を追加しています...\n"
 
-#: ../adduser:335 ../adduser:420
-msgid "No UID/GID pair is available in the range "
+#: ../adduser:338
+#, fuzzy, perl-format
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
+"LAST_SYS_UID).\n"
 msgstr "次の範囲で利用可能な UID/GID のペアがありません :"
 
-#: ../adduser:338 ../adduser:351 ../adduser:423 ../adduser:436
+#: ../adduser:339 ../adduser:351 ../adduser:422 ../adduser:434
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "ユーザ `%s' は作成されませんでした。\n"
 
-#: ../adduser:348 ../adduser:433
-msgid "No UID is available in the range "
+#: ../adduser:350
+#, fuzzy, perl-format
+msgid ""
+"No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 msgstr "次の範囲に利用可能な UID がありません :"
 
-#: ../adduser:355 ../adduser:361 ../adduser:440 ../adduser:446
+#: ../adduser:355 ../adduser:361 ../adduser:438 ../adduser:444
 msgid "Internal error"
 msgstr "内部エラー"
 
-#: ../adduser:367 ../adduser:451
+#: ../adduser:367 ../adduser:449
 #, fuzzy, perl-format
 msgid "Adding new group `%s' (%s).\n"
 msgstr "新しいグループ %s (%s) を追加しています。\n"
 
-#: ../adduser:373 ../adduser:457
+#: ../adduser:373 ../adduser:455
 #, fuzzy, perl-format
 msgid "Adding new user `%s' (%s) with group `%s'.\n"
 msgstr "グループ %s に新しいユーザ %s (%s) を追加しています。\n"
@@ -171,65 +176,81 @@ msgstr ""
 msgid "Adding user `%s'...\n"
 msgstr "ユーザ %s を追加しています…\n"
 
-#: ../adduser:483
+#: ../adduser:421
+#, fuzzy, perl-format
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr "次の範囲で利用可能な UID/GID のペアがありません :"
+
+#: ../adduser:433
+#, fuzzy, perl-format
+msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr "次の範囲に利用可能な UID がありません :"
+
+#. Translators: [y/N] has to be replaced by values defined in your
+#. locale.  You can see by running "locale yesexpr" which regular
+#. expression will be checked to find positive answer.
+#: ../adduser:485
 msgid "Is the information correct? [y/N] "
 msgstr "以上で正しいですか？ [y/N] "
 
-#: ../adduser:485
-msgid "y"
-msgstr "y"
-
-#: ../adduser:490
+#: ../adduser:492
 #, perl-format
 msgid "Setting quota from `%s'.\n"
 msgstr "%s から quota を設定しています。\n"
 
-#: ../adduser:526
+#: ../adduser:525
+#, fuzzy, perl-format
+msgid "Not creating home directory `%s'.\n"
+msgstr "ホームディレクトリは作成しません。\n"
+
+#: ../adduser:528
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "ホームディレクトリ %s は既に存在します。%s からのコピーをしません\n"
 
-#: ../adduser:532
+#: ../adduser:534
 msgid ""
-"Warning: that home directory does not belong to user you're just creating\n"
+"Warning: that home directory does not belong to the user you are currently "
+"creating\n"
 msgstr ""
 
-#: ../adduser:537
+#: ../adduser:539
 #, perl-format
 msgid "Creating home directory `%s'.\n"
 msgstr "ホームディレクトリ %s を作成しています。\n"
 
-#: ../adduser:547
+#: ../adduser:549
 #, perl-format
 msgid "Copying files from `%s'\n"
 msgstr "%s からファイルをコピーしています\n"
 
-#: ../adduser:622
+#: ../adduser:624
 #, fuzzy, perl-format
 msgid "The user `%s' already exists, and is not a system user.\n"
 msgstr "グループ `%s' は既に存在しています。\n"
 
-#: ../adduser:624
+#: ../adduser:626
 #, fuzzy, perl-format
 msgid "The user `%s' already exists.\n"
 msgstr "グループ `%s' は既に存在しています。\n"
 
-#: ../adduser:627
+#: ../adduser:629
 #, fuzzy, perl-format
 msgid "The UID %s is already in use.\n"
 msgstr "グループ ID `%s' は既に使用されています。\n"
 
-#: ../adduser:634
+#: ../adduser:636
 #, perl-format
 msgid "The GID %s is already in use.\n"
 msgstr "グループ ID `%s' は既に使用されています。\n"
 
-#: ../adduser:641
+#: ../adduser:643
 #, perl-format
 msgid "The GID %s does not exist.\n"
 msgstr "グループ ID `%s' が存在しません。\n"
 
-#: ../adduser:697
+#: ../adduser:699
 #, fuzzy
 msgid ""
 "To avoid problems, the username should consist of\n"
@@ -239,39 +260,39 @@ msgstr ""
 "問題を避ける為に、ユーザ名はアルファベットか、下線(_)から始まる\n"
 "アルファベット、数字、下線(_)、ダッシュ(')で構成して下さい。\n"
 
-#: ../adduser:704
+#: ../adduser:706
 msgid "Allowing use of questionable username.\n"
 msgstr "不審なユーザ名の使用を許可しています。\n"
 
-#: ../adduser:708
+#: ../adduser:710
 msgid ""
 "Please enter a username matching the regular expression configured\n"
 "via the name_regex configuration variable.  Use the `--force-badname'\n"
 "option to relax this check or reconfigure name_regex.\n"
 msgstr ""
 
-#: ../adduser:723
+#: ../adduser:725
 #, perl-format
 msgid "Selecting from %s %s (%s).\n"
 msgstr "%s %s (%s) の範囲で選択しています \n"
 
-#: ../adduser:788
+#: ../adduser:790
 #, fuzzy, perl-format
 msgid "Removing directory `%s'\n"
 msgstr "ディレクトリ `%s' を削除しています。"
 
-#: ../adduser:792
+#: ../adduser:794
 #, fuzzy, perl-format
 msgid "Removing user `%s'.\n"
 msgstr "ユーザ `%s' を削除しています。\n"
 
-#: ../adduser:796
+#: ../adduser:798
 #, fuzzy, perl-format
 msgid "Removing group `%s'.\n"
 msgstr "グループ `%s' を削除しています。\n"
 
-#: ../adduser:829
-#, fuzzy, perl-format
+#: ../adduser:831
+#, fuzzy
 msgid ""
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
 "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"
@@ -294,7 +315,6 @@ msgid ""
 "adduser user group\n"
 "   Add an existing user to an existing group\n"
 "\n"
-"Global configuration is in the file %s.\n"
 "Other options are [--quiet] [--force-badname] [--help] [--version] [--conf\n"
 "FILE].\n"
 msgstr ""
@@ -317,156 +337,150 @@ msgstr ""
 "[--force-badname] [--help] [--version] [--conf FILE] です。\n"
 "\n"
 
-#: ../deluser:92
+#: ../deluser:94
 msgid "Only root may remove a user or group from the system.\n"
 msgstr "root だけがシステムからユーザまたはグループを削除できます。\n"
 
-#: ../deluser:113
+#: ../deluser:119
 #, fuzzy
 msgid "Enter a group name to remove: "
 msgstr "削除するグループ名を入力して下さい: "
 
-#: ../deluser:115
+#: ../deluser:121
 #, fuzzy
 msgid "Enter a user name to remove: "
 msgstr "削除するユーザ名を入力して下さい: "
 
-#: ../deluser:120
-#, fuzzy
-msgid "No name to remove given.\n"
-msgstr "削除する名前が必要です。\n"
-
-#: ../deluser:159
+#: ../deluser:162
 msgid ""
 "In order to use the --remove-home, --remove-all-files, and --backup "
 "features,\n"
-"\n"
-"    you need to install the `perl-modules' package. To accomplish that, run\n"
-"\n"
-"    apt-get install perl-modules\n"
+"you need to install the `perl-modules' package. To accomplish that, run\n"
+"apt-get install perl-modules\n"
 msgstr ""
 
-#: ../deluser:208
+#: ../deluser:211
 #, fuzzy, perl-format
 msgid "The user `%s' is not a system account... Exiting.\n"
 msgstr "ユーザ `%s' はグループ `%s' のメンバーではありません。\n"
 
-#: ../deluser:212
+#: ../deluser:215
 #, fuzzy, perl-format
 msgid "The user `%s' does not exist, but --system was given... Exiting.\n"
 msgstr "ユーザ `%s' は存在しません。\n"
 
-#: ../deluser:222
+#: ../deluser:225
 #, perl-format
 msgid "passwd home dir `%s' does not match command line home dir, aborting.\n"
 msgstr ""
 
-#: ../deluser:228
+#: ../deluser:231
 msgid "Looking for files to backup/remove...\n"
 msgstr "バックアップ/削除するファイルを探しています...\n"
 
-#: ../deluser:231
+#: ../deluser:234
 #, perl-format
 msgid "fork for parse mount points failed: %s\n"
 msgstr ""
 
-#: ../deluser:237
+#: ../deluser:240
 #, perl-format
 msgid "can't close mount pipe: %s\n"
 msgstr ""
 
-#: ../deluser:247
+#: ../deluser:248
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
 msgstr ""
 
-#: ../deluser:254
+#: ../deluser:255
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
 msgstr ""
 
-#: ../deluser:286
-#, fuzzy
-msgid "Backing up files to be removed to "
+#: ../deluser:287
+#, fuzzy, perl-format
+msgid "Backing up files to be removed to %s ...\n"
 msgstr "削除するファイルをバックアップしています...\n"
 
-#: ../deluser:301
+#: ../deluser:302
 msgid "Removing files...\n"
 msgstr "ファイルを削除しています...\n"
 
-#: ../deluser:309
+#: ../deluser:310
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "ユーザ `%s' を削除しています。\n"
 
-#: ../deluser:316 ../deluser:351 ../deluser:387
+#: ../deluser:317 ../deluser:352 ../deluser:388
 msgid "done.\n"
 msgstr "終了。\n"
 
-#: ../deluser:328
+#: ../deluser:329
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr ""
 
-#: ../deluser:333
+#: ../deluser:334
 #, fuzzy, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "グループ `%s' が存在しません。\n"
 
-#: ../deluser:337
+#: ../deluser:338
 #, fuzzy, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "グループ `%s' が存在しません。\n"
 
-#: ../deluser:343
+#: ../deluser:344
 #, fuzzy, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "`%s' を第一のグループとしているユーザがいます!\n"
 
-#: ../deluser:348
+#: ../deluser:349
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "グループ `%s' を削除しています。\n"
 
-#: ../deluser:366
-msgid "You may not remove the user from his/her primary group.\n"
+#: ../deluser:367
+#, fuzzy
+msgid "You may not remove the account from its primary group.\n"
 msgstr ""
 "ユーザを、そのユーザが属する第一のグループから削除することはできません。\n"
 
-#: ../deluser:380
+#: ../deluser:381
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "ユーザ `%s' はグループ `%s' のメンバーではありません。\n"
 
-#: ../deluser:383
+#: ../deluser:384
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "ユーザ %s をグループ %s から削除しています...\n"
 
-#: ../deluser:394
+#: ../deluser:395
 #, perl-format
 msgid ""
 "deluser: (version: %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:395
+#: ../deluser:396
 #, fuzzy
 msgid "removing user and groups from the system. "
 msgstr "ユーザとグループをシステムから削除します。Version:"
 
-#: ../deluser:397
+#: ../deluser:398
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 msgstr ""
 
-#: ../deluser:399
+#: ../deluser:400
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 msgstr ""
 
-#: ../deluser:402
+#: ../deluser:403
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -480,19 +494,18 @@ msgid ""
 "General Public License, /usr/share/common-licenses/GPL, for more details.\n"
 msgstr ""
 
-#: ../deluser:414
+#: ../deluser:415
 #, perl-format
 msgid ""
 "deluser: (version %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:415
+#: ../deluser:416
 msgid "removing user and groups from the system. Version:"
 msgstr "ユーザとグループをシステムから削除します。Version:"
 
-#: ../deluser:417
-#, perl-format
+#: ../deluser:418
 msgid ""
 "deluser user\n"
 "  remove a normal user from the system\n"
@@ -523,29 +536,43 @@ msgid ""
 "  --quiet | -q      don't give process information to stdout\n"
 "  --help | -h       usage message\n"
 "  --version | -v    version number and copyright\n"
-"  --conf | -c FILE  use FILE instead of %s\n"
+"  --conf | -c FILE  use FILE as configuration file\n"
 "\n"
 msgstr ""
 
-#: ../deluser:448
-#, perl-format
-msgid "Global configuration is in the file %s.\n"
-msgstr "グローバルな設定はファイル %s に存在しています。\n"
-
 #: ../AdduserCommon.pm:83
-#, perl-format
-msgid "%s: %s doesn't exist.  Using defaults.\n"
+#, fuzzy, perl-format
+msgid "%s: `%s' doesn't exist.  Using defaults.\n"
 msgstr "%s: %s が存在しません。デフォルトを使用します。\n"
 
 #: ../AdduserCommon.pm:93
-#, perl-format
-msgid "Couldn't parse %s:%s.\n"
+#, fuzzy, perl-format
+msgid "Couldn't parse `%s':%s.\n"
 msgstr "%s を分析できません:%s.\n"
 
 #: ../AdduserCommon.pm:98
-#, perl-format
-msgid "Unknown variable `%s' at %s:%s.\n"
+#, fuzzy, perl-format
+msgid "Unknown variable `%s' at `%s':%s.\n"
 msgstr "不明な変数 `%s' が %s にあります:%s.\n"
+
+#~ msgid "I need a name to add.\n"
+#~ msgstr "追加する名前が必要です。\n"
+
+#~ msgid "No more than two names.\n"
+#~ msgstr "２つ以上の名前は指定できません。\n"
+
+#~ msgid "`%s' does not exist.\n"
+#~ msgstr "`%s' が存在しません。\n"
+
+#~ msgid "y"
+#~ msgstr "y"
+
+#, fuzzy
+#~ msgid "No name to remove given.\n"
+#~ msgstr "削除する名前が必要です。\n"
+
+#~ msgid "Global configuration is in the file %s.\n"
+#~ msgstr "グローバルな設定はファイル %s に存在しています。\n"
 
 #~ msgid "--ingroup requires an argument.\n"
 #~ msgstr "--ingroup には引数が必要です。\n"
@@ -579,9 +606,6 @@ msgstr "不明な変数 `%s' が %s にあります:%s.\n"
 
 #~ msgid "User %s does already exist. Exiting...\n"
 #~ msgstr "ユーザ `%s' は既に存在しています。終了します...\n"
-
-#~ msgid "Not creating home directory.\n"
-#~ msgstr "ホームディレクトリは作成しません。\n"
 
 #~ msgid "Home directory `%s' already exists.\n"
 #~ msgstr "ホームディレクトリ %s は既に存在します。\n"
