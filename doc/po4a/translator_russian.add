@@ -1,0 +1,9 @@
+PO4A-HEADER:mode=after;position=^\.SH "СМОТРИТЕ ТАКЖЕ";beginboundary=^\.SH
+.SH ПЕРЕВОД
+Юрий Козлов <y_kozlov@chat.ru>.
+.\"
+.\" thank`s to Alexey Mahotkin <alexm@hsys.msk.ru>
+.\" adduser-3.30
+.\" Суб Янв 27 15:32:40 MSK 2001
+.\" Linux User Group г.Сергиев Посад spslug.sposad.ru
+.\" HomePage http://www.chat.ru/~y_kozlov/
