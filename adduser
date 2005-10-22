@@ -33,6 +33,7 @@ my $version = "VERSION";
 use warnings;
 use Debian::AdduserCommon;
 use Getopt::Long;
+use I18N::Langinfo qw(langinfo YESEXPR);
 
 BEGIN {
     eval 'use Locale::gettext';
@@ -472,11 +473,15 @@ if ($action eq "adduser") {
 	&ch_gecos($new_gecos);
     }
     else {
+	my $yesexpr = langinfo(YESEXPR());
 	for (;;) {
 	    &systemcall('/usr/bin/chfn', $new_name);
+	    # Translators: [y/N] has to be replaced by values defined in your
+	    # locale.  You can see by running "locale yesexpr" which regular
+	    # expression will be checked to find positive answer.
 	    print (gtx("Is the information correct? [y/N] "));
 	    chop ($answer=<STDIN>);
-	    last if ($answer eq gtx("y"));
+	    last if ($answer =~ m/$yesexpr/o);
 	}
     }
 

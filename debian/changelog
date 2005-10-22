@@ -9,8 +9,11 @@ adduser (3.74.0) UNRELEASED; urgency=low
     * modify the doc/po4a.conf file.
     * adapt debian/rules
     (mh) Closes: #335196.
+  * Changes suggested by Denis Barbier
+    * use YESEXPR in the yes/no question to help with non-english
+      languages
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 22 Oct 2005 18:25:34 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 22 Oct 2005 18:28:18 +0000
 
 adduser (3.74) unstable; urgency=low
 
