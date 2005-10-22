@@ -12,7 +12,7 @@ build:
 
 clean:
 	$(checkdir)
-	$(MAKE) -C po $@
+	$(MAKE) -C po update clean
 	# remove generated man pages
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.fr
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.es
