@@ -1,7 +1,6 @@
-adduser (3.76.0) UNRELEASED; urgency=low
+adduser (3.77) unstable; urgency=low
 
   [ Marc Haber ]
-  * NOT RELEASED YET
   * call make -C po update clean in debian/rules clean.
     Thanks to Eduard Bloch. (mh)
   * invoke debconf-updatepo and po4a in clean target.
@@ -12,7 +11,7 @@ adduser (3.76.0) UNRELEASED; urgency=low
   * backup files for users have a mask of 600 and ownership is set to root
     only (Closes: #331720)
 
- -- Joerg Hoh <joerg@joerghoh.de>  Sun, 23 Oct 2005 17:48:00 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 23 Oct 2005 18:41:21 +0000
 
 adduser (3.76) experimental; urgency=low
 
