@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the adduser package.
 # Jordi Mallach <jordi@debian.org>, 2002, 2004.
 #
-#: ../AdduserCommon.pm:60
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.57\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-22 20:08+0000\n"
+"POT-Creation-Date: 2005-10-23 18:43+0000\n"
 "PO-Revision-Date: 2004-07-26 17:25+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -16,347 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. everyone can issue "--help" and "--version", but only root can go on
-#: ../adduser:98
-msgid "Only root may add a user or group to the system.\n"
-msgstr "Només el superusuari pot afegir un usuari o grup al sistema.\n"
-
-#: ../adduser:118 ../deluser:111
-msgid "No options allowed after names.\n"
-msgstr "No es permeten opcions després dels noms.\n"
-
-#: ../adduser:125 ../deluser:128
-msgid "Only one or two names allowed.\n"
-msgstr ""
-
-#: ../adduser:131
-msgid "Enter a groupname to add: "
-msgstr "Introduïu un nom de grup a afegir: "
-
-#: ../adduser:135
-msgid "Enter a username to add: "
-msgstr "Introduïu un nom d'usuari a afegir: "
-
-#. must be addusertogroup
-#: ../adduser:142
-msgid "Specify only one name in this mode.\n"
-msgstr "Especifiqueu només un nom en aquest mode.\n"
-
-#: ../adduser:158
-msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
-msgstr "Les opcions --group, --ingroup i --gid són mútuament exclusives.\n"
-
-#: ../adduser:163
-msgid "The home dir must be an absolute path.\n"
-msgstr "El directori personal ha de ser una ruta absoluta.\n"
-
-#: ../adduser:167
-msgid "Warning: The home dir you specified already exists.\n"
-msgstr "Avís: el directori personal que heu especificat ja existeix.\n"
-
-#: ../adduser:169
-#, fuzzy
-msgid "Warning: The home dir you specified does not exist.\n"
-msgstr "Avís: el directori personal que heu especificat ja existeix.\n"
-
-#: ../adduser:230
-#, fuzzy, perl-format
-msgid "The group `%s' already exists as a system group. Exiting...\n"
-msgstr "El grup «%s» ja existeix.\n"
-
-#: ../adduser:233
-#, fuzzy, perl-format
-msgid "The group `%s' already exists and is not a system group.\n"
-msgstr "El grup «%s» ja existeix.\n"
-
-#: ../adduser:235 ../adduser:264
-#, fuzzy, perl-format
-msgid "The GID `%s' is already in use.\n"
-msgstr "El GID «%s» ja està en ús.\n"
-
-#: ../adduser:244
-#, fuzzy, perl-format
-msgid ""
-"No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
-msgstr "No hi ha cap GID disponible en el rang "
-
-#: ../adduser:245 ../adduser:274
-#, perl-format
-msgid "The group `%s' was not created.\n"
-msgstr "No s'ha creat el grup «%s».\n"
-
-#: ../adduser:249 ../adduser:278
-#, fuzzy, perl-format
-msgid "Adding group `%s' (%s)...\n"
-msgstr "S'està afegint el grup %s (%s)...\n"
-
-#: ../adduser:253 ../adduser:282 ../adduser:314
-msgid "Done.\n"
-msgstr "Fet.\n"
-
-#: ../adduser:262 ../adduser:634
-#, perl-format
-msgid "The group `%s' already exists.\n"
-msgstr "El grup «%s» ja existeix.\n"
-
-#: ../adduser:273
-#, fuzzy, perl-format
-msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
-msgstr "No hi ha cap GID disponible en el rang "
-
-#: ../adduser:291 ../deluser:221 ../deluser:361
-#, perl-format
-msgid "The user `%s' does not exist.\n"
-msgstr "L'usuari «%s» no existeix.\n"
-
-#: ../adduser:293 ../adduser:641 ../deluser:325 ../deluser:364
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "El grup «%s» no existeix.\n"
-
-#: ../adduser:296
-#, perl-format
-msgid "The user `%s' is already a member of `%s'.\n"
-msgstr "L'usuari «%s» ja és membre del grup «%s».\n"
-
-#: ../adduser:301
-#, perl-format
-msgid "Adding user `%s' to group `%s'...\n"
-msgstr "S'està afegint l'usuari «%s» al grup «%s»...\n"
-
-#: ../adduser:324
-#, fuzzy, perl-format
-msgid "The user `%s' already exists as a system user. Exiting...\n"
-msgstr "L'usuari «%s» ja existeix.\n"
-
-#: ../adduser:330
-#, perl-format
-msgid "Adding system user `%s'...\n"
-msgstr "S'està afegint l'usuari del sistema «%s»...\n"
-
-#: ../adduser:338
-#, fuzzy, perl-format
-msgid ""
-"No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
-"LAST_SYS_UID).\n"
-msgstr "No hi ha cap parella UID/GID disponible en el rang "
-
-#: ../adduser:339 ../adduser:351 ../adduser:422 ../adduser:434
-#, perl-format
-msgid "The user `%s' was not created.\n"
-msgstr "L'usuari «%s» no s'ha creat.\n"
-
-#: ../adduser:350
-#, fuzzy, perl-format
-msgid ""
-"No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
-msgstr "No hi ha cap UID disponible en el rang "
-
-# Jo Tarzan, tú Jane? jm (dedicat a ivb :)
-# Bah, ho canvie... jm
-#: ../adduser:355 ../adduser:361 ../adduser:438 ../adduser:444
-msgid "Internal error"
-msgstr "S'ha produït un error intern"
-
-#: ../adduser:367 ../adduser:449
-#, fuzzy, perl-format
-msgid "Adding new group `%s' (%s).\n"
-msgstr "S'està afegint el nou grup %s (%s).\n"
-
-#: ../adduser:373 ../adduser:455
-#, fuzzy, perl-format
-msgid "Adding new user `%s' (%s) with group `%s'.\n"
-msgstr "S'està afegint el nou usuari %s (%s) amb grup %s.\n"
-
-#: ../adduser:387
-msgid ""
-"chage failed with return code 15, shadow not enabled, password aging cannot "
-"be set. Continuing.\n"
-msgstr ""
-
-#: ../adduser:413
-#, perl-format
-msgid "Adding user `%s'...\n"
-msgstr "S'està afegint l'usuari «%s»...\n"
-
-#: ../adduser:421
-#, fuzzy, perl-format
-msgid ""
-"No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-msgstr "No hi ha cap parella UID/GID disponible en el rang "
-
-#: ../adduser:433
-#, fuzzy, perl-format
-msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-msgstr "No hi ha cap UID disponible en el rang "
-
-#. Translators: [y/N] has to be replaced by values defined in your
-#. locale.  You can see by running "locale yesexpr" which regular
-#. expression will be checked to find positive answer.
-#: ../adduser:485
-msgid "Is the information correct? [y/N] "
-msgstr "És aquesta informació correcta? [s/N] "
-
-#: ../adduser:492
-#, perl-format
-msgid "Setting quota from `%s'.\n"
-msgstr "S'està establint la quota des de «%s».\n"
-
-# "No s'ha creat"? jm
-#: ../adduser:525
-#, fuzzy, perl-format
-msgid "Not creating home directory `%s'.\n"
-msgstr "No es crea el directori personal.\n"
-
-#: ../adduser:528
-#, perl-format
-msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
-msgstr "El directori personal «%s» ja existeix. No es copiarà des de «%s»\n"
-
-#: ../adduser:534
-msgid ""
-"Warning: that home directory does not belong to the user you are currently "
-"creating\n"
-msgstr ""
-
-#: ../adduser:539
-#, perl-format
-msgid "Creating home directory `%s'.\n"
-msgstr "S'està creant el directori personal «%s».\n"
-
-#: ../adduser:549
-#, perl-format
-msgid "Copying files from `%s'\n"
-msgstr "S'estan copiant els fitxers des de «%s»\n"
-
-#: ../adduser:624
-#, fuzzy, perl-format
-msgid "The user `%s' already exists, and is not a system user.\n"
-msgstr "L'usuari «%s» ja existeix.\n"
-
-#: ../adduser:626
-#, perl-format
-msgid "The user `%s' already exists.\n"
-msgstr "L'usuari «%s» ja existeix.\n"
-
-#: ../adduser:629
-#, fuzzy, perl-format
-msgid "The UID %s is already in use.\n"
-msgstr "El GID «%s» ja està en ús.\n"
-
-#: ../adduser:636
-#, perl-format
-msgid "The GID %s is already in use.\n"
-msgstr "El GID «%s» ja està en ús.\n"
-
-#: ../adduser:643
-#, perl-format
-msgid "The GID %s does not exist.\n"
-msgstr "El GID «%s» no existeix.\n"
-
-#: ../adduser:699
-msgid ""
-"To avoid problems, the username should consist of\n"
-"letters, digits, underscores, periods and dashes. For compatibility with\n"
-"Samba machine accounts $ is also supported at the end of the username\n"
-msgstr ""
-"Per evitar problemes, el nom d'usuari hauria de constar de\n"
-"lletres, dígits, subratllats, punts i guionets. Per compatibilitat\n"
-"amb els comptes de Samba, també es permet el signe «$» al final del nom\n"
-"de l'usuari\n"
-
-#: ../adduser:706
-msgid "Allowing use of questionable username.\n"
-msgstr "S'està permentent l'ús d'un nom poc fiable.\n"
-
-#: ../adduser:710
-#, fuzzy
-msgid ""
-"Please enter a username matching the regular expression configured\n"
-"via the name_regex configuration variable.  Use the `--force-badname'\n"
-"option to relax this check or reconfigure name_regex.\n"
-msgstr ""
-"Si us plau, entreu un nom d'usuari que concordi amb l'expressió\n"
-"regular especificada a la variable «name_regex». Useu l'opció «--force-"
-"badname»\n"
-"per relaxar aquesta comprovació, o redefiniu «name_regex».\n"
-
-#: ../adduser:725
-#, perl-format
-msgid "Selecting from %s %s (%s).\n"
-msgstr "S'està seleccionant des de %s %s (%s).\n"
-
-#: ../adduser:790
-#, perl-format
-msgid "Removing directory `%s'\n"
-msgstr "S'està eliminant el directori «%s»\n"
-
-#: ../adduser:794
-#, perl-format
-msgid "Removing user `%s'.\n"
-msgstr "S'està eliminant l'usuari «%s».\n"
-
-#: ../adduser:798
-#, perl-format
-msgid "Removing group `%s'.\n"
-msgstr "S'està eliminant el grup «%s».\n"
-
-#: ../adduser:831
-#, fuzzy
-msgid ""
-"adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"
-"[--disabled-password] [--disabled-login] user\n"
-"   Add a normal user\n"
-"\n"
-"adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-"[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
-"password]\n"
-"[--disabled-login] user\n"
-"   Add a system user\n"
-"\n"
-"adduser --group [--gid ID] group\n"
-"addgroup [--gid ID] group\n"
-"   Add a user group\n"
-"\n"
-"addgroup --system [--gid ID] group\n"
-"   Add a system group\n"
-"\n"
-"adduser user group\n"
-"   Add an existing user to an existing group\n"
-"\n"
-"Other options are [--quiet] [--force-badname] [--help] [--version] [--conf\n"
-"FILE].\n"
-msgstr ""
-"adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID ]\n"
-"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GRUP | --gid ID]\n"
-"[--disabled-password] [--disabled-login] usuari\n"
-"   Afegeix un usuari normal\n"
-"\n"
-"adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
-"ID ]\n"
-"[--gecos GECOS] [--group | --ingroup GRUP | --gid ID] [--disabled-password]\n"
-"[--disabled-login] usuari\n"
-"   Afegeix un usuari del sistema\n"
-"\n"
-"adduser --group [--gid ID] grup\n"
-"addgroup [--gid ID] grup\n"
-"   Afegeix un grup d'usuari\n"
-"\n"
-"adduser --group --system [--gid ID] grup\n"
-"addgroup --system [--gid ID] grup\n"
-"   Afegeix un grup del sistema\n"
-"\n"
-"adduser usuari grup\n"
-"   Afegeix un usuari existent a un grup existent\n"
-"\n"
-"La configuració global és al fitxer %s.\n"
-"Altres opcions són [--quiet] [--force-badname] [--help] [--version] [--conf "
-"FITXER].\n"
-
 #: ../deluser:94
 msgid "Only root may remove a user or group from the system.\n"
 msgstr "Només el superusuari pot eliminar un usuari o grup del sistema.\n"
+
+#: ../deluser:111
+msgid "No options allowed after names.\n"
+msgstr "No es permeten opcions després dels noms.\n"
 
 #: ../deluser:119
 #, fuzzy
@@ -367,6 +32,10 @@ msgstr "Introduïu el nom del grup a eliminar: "
 #, fuzzy
 msgid "Enter a user name to remove: "
 msgstr "Introduïu el nom de l'usuari a eliminar: "
+
+#: ../deluser:128
+msgid "Only one or two names allowed.\n"
+msgstr ""
 
 #: ../deluser:162
 #, fuzzy
@@ -389,6 +58,11 @@ msgstr "L'usuari «%s» no és membre del grup «%s».\n"
 #: ../deluser:215
 #, fuzzy, perl-format
 msgid "The user `%s' does not exist, but --system was given... Exiting.\n"
+msgstr "L'usuari «%s» no existeix.\n"
+
+#: ../deluser:221 ../deluser:365
+#, perl-format
+msgid "The user `%s' does not exist.\n"
 msgstr "L'usuari «%s» no existeix.\n"
 
 #: ../deluser:225
@@ -425,83 +99,88 @@ msgstr ""
 msgid "Backing up files to be removed to %s ...\n"
 msgstr "S'està fent una còpia de seguretat dels fitxers a eliminar...\n"
 
-#: ../deluser:302
+#: ../deluser:306
 msgid "Removing files...\n"
 msgstr "S'estan eliminant els fitxers...\n"
 
-#: ../deluser:310
+#: ../deluser:314
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "S'està eliminant l'usuari «%s»...\n"
 
-#: ../deluser:317 ../deluser:352 ../deluser:388
+#: ../deluser:321 ../deluser:356 ../deluser:392
 msgid "done.\n"
 msgstr "fet.\n"
 
-#: ../deluser:329
+#: ../deluser:329 ../deluser:368
+#, perl-format
+msgid "The group `%s' does not exist.\n"
+msgstr "El grup «%s» no existeix.\n"
+
+#: ../deluser:333
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr ""
 
-#: ../deluser:334
+#: ../deluser:338
 #, fuzzy, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "El grup «%s» no existeix.\n"
 
-#: ../deluser:338
+#: ../deluser:342
 #, fuzzy, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "El grup «%s» no existeix.\n"
 
-#: ../deluser:344
+#: ../deluser:348
 #, fuzzy, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "Hi ha usuaris amb «%s» com el grup primari!\n"
 
-#: ../deluser:349
+#: ../deluser:353
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "S'està eliminant el grup «%s»...\n"
 
-#: ../deluser:367
+#: ../deluser:371
 #, fuzzy
 msgid "You may not remove the account from its primary group.\n"
 msgstr "No podeu eliminar a l'usuari del seu grup primari.\n"
 
-#: ../deluser:381
+#: ../deluser:385
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "L'usuari «%s» no és membre del grup «%s».\n"
 
-#: ../deluser:384
+#: ../deluser:388
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "S'està eliminant l'usuari «%s» del grup «%s»...\n"
 
-#: ../deluser:395
+#: ../deluser:399
 #, perl-format
 msgid ""
 "deluser: (version: %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:396
+#: ../deluser:400
 #, fuzzy
 msgid "removing user and groups from the system. "
 msgstr "elimina usuaris i grups del sistema. Versió:"
 
-#: ../deluser:398
+#: ../deluser:402
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 msgstr ""
 
-#: ../deluser:400
+#: ../deluser:404
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 msgstr ""
 
-#: ../deluser:403
+#: ../deluser:407
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -515,18 +194,18 @@ msgid ""
 "General Public License, /usr/share/common-licenses/GPL, for more details.\n"
 msgstr ""
 
-#: ../deluser:415
+#: ../deluser:419
 #, perl-format
 msgid ""
 "deluser: (version %s)\n"
 "\n"
 msgstr ""
 
-#: ../deluser:416
+#: ../deluser:420
 msgid "removing user and groups from the system. Version:"
 msgstr "elimina usuaris i grups del sistema. Versió:"
 
-#: ../deluser:418
+#: ../deluser:422
 msgid ""
 "deluser user\n"
 "  remove a normal user from the system\n"
@@ -561,20 +240,258 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../AdduserCommon.pm:83
-#, fuzzy, perl-format
-msgid "%s: `%s' doesn't exist.  Using defaults.\n"
-msgstr "%s: %s no existeix. S'utilitzaran els valors per defecte.\n"
+#~ msgid "Only root may add a user or group to the system.\n"
+#~ msgstr "Només el superusuari pot afegir un usuari o grup al sistema.\n"
 
-#: ../AdduserCommon.pm:93
-#, fuzzy, perl-format
-msgid "Couldn't parse `%s':%s.\n"
-msgstr "No s'ha pogut analitzar %s:%s.\n"
+#~ msgid "Enter a groupname to add: "
+#~ msgstr "Introduïu un nom de grup a afegir: "
 
-#: ../AdduserCommon.pm:98
-#, fuzzy, perl-format
-msgid "Unknown variable `%s' at `%s':%s.\n"
-msgstr "La variable «%s» en %s:%s és desconeguda.\n"
+#~ msgid "Enter a username to add: "
+#~ msgstr "Introduïu un nom d'usuari a afegir: "
+
+#~ msgid "Specify only one name in this mode.\n"
+#~ msgstr "Especifiqueu només un nom en aquest mode.\n"
+
+#~ msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
+#~ msgstr "Les opcions --group, --ingroup i --gid són mútuament exclusives.\n"
+
+#~ msgid "The home dir must be an absolute path.\n"
+#~ msgstr "El directori personal ha de ser una ruta absoluta.\n"
+
+#~ msgid "Warning: The home dir you specified already exists.\n"
+#~ msgstr "Avís: el directori personal que heu especificat ja existeix.\n"
+
+#, fuzzy
+#~ msgid "Warning: The home dir you specified does not exist.\n"
+#~ msgstr "Avís: el directori personal que heu especificat ja existeix.\n"
+
+#, fuzzy
+#~ msgid "The group `%s' already exists as a system group. Exiting...\n"
+#~ msgstr "El grup «%s» ja existeix.\n"
+
+#, fuzzy
+#~ msgid "The group `%s' already exists and is not a system group.\n"
+#~ msgstr "El grup «%s» ja existeix.\n"
+
+#, fuzzy
+#~ msgid "The GID `%s' is already in use.\n"
+#~ msgstr "El GID «%s» ja està en ús.\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
+#~ msgstr "No hi ha cap GID disponible en el rang "
+
+#~ msgid "The group `%s' was not created.\n"
+#~ msgstr "No s'ha creat el grup «%s».\n"
+
+#, fuzzy
+#~ msgid "Adding group `%s' (%s)...\n"
+#~ msgstr "S'està afegint el grup %s (%s)...\n"
+
+#~ msgid "Done.\n"
+#~ msgstr "Fet.\n"
+
+#~ msgid "The group `%s' already exists.\n"
+#~ msgstr "El grup «%s» ja existeix.\n"
+
+#, fuzzy
+#~ msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
+#~ msgstr "No hi ha cap GID disponible en el rang "
+
+#~ msgid "The user `%s' is already a member of `%s'.\n"
+#~ msgstr "L'usuari «%s» ja és membre del grup «%s».\n"
+
+#~ msgid "Adding user `%s' to group `%s'...\n"
+#~ msgstr "S'està afegint l'usuari «%s» al grup «%s»...\n"
+
+#, fuzzy
+#~ msgid "The user `%s' already exists as a system user. Exiting...\n"
+#~ msgstr "L'usuari «%s» ja existeix.\n"
+
+#~ msgid "Adding system user `%s'...\n"
+#~ msgstr "S'està afegint l'usuari del sistema «%s»...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
+#~ "LAST_SYS_UID).\n"
+#~ msgstr "No hi ha cap parella UID/GID disponible en el rang "
+
+#~ msgid "The user `%s' was not created.\n"
+#~ msgstr "L'usuari «%s» no s'ha creat.\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
+#~ msgstr "No hi ha cap UID disponible en el rang "
+
+# Jo Tarzan, tú Jane? jm (dedicat a ivb :)
+# Bah, ho canvie... jm
+#~ msgid "Internal error"
+#~ msgstr "S'ha produït un error intern"
+
+#, fuzzy
+#~ msgid "Adding new group `%s' (%s).\n"
+#~ msgstr "S'està afegint el nou grup %s (%s).\n"
+
+#, fuzzy
+#~ msgid "Adding new user `%s' (%s) with group `%s'.\n"
+#~ msgstr "S'està afegint el nou usuari %s (%s) amb grup %s.\n"
+
+#~ msgid "Adding user `%s'...\n"
+#~ msgstr "S'està afegint l'usuari «%s»...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+#~ msgstr "No hi ha cap parella UID/GID disponible en el rang "
+
+#, fuzzy
+#~ msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+#~ msgstr "No hi ha cap UID disponible en el rang "
+
+#~ msgid "Is the information correct? [y/N] "
+#~ msgstr "És aquesta informació correcta? [s/N] "
+
+#~ msgid "Setting quota from `%s'.\n"
+#~ msgstr "S'està establint la quota des de «%s».\n"
+
+# "No s'ha creat"? jm
+#, fuzzy
+#~ msgid "Not creating home directory `%s'.\n"
+#~ msgstr "No es crea el directori personal.\n"
+
+#~ msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
+#~ msgstr "El directori personal «%s» ja existeix. No es copiarà des de «%s»\n"
+
+#~ msgid "Creating home directory `%s'.\n"
+#~ msgstr "S'està creant el directori personal «%s».\n"
+
+#~ msgid "Copying files from `%s'\n"
+#~ msgstr "S'estan copiant els fitxers des de «%s»\n"
+
+#, fuzzy
+#~ msgid "The user `%s' already exists, and is not a system user.\n"
+#~ msgstr "L'usuari «%s» ja existeix.\n"
+
+#~ msgid "The user `%s' already exists.\n"
+#~ msgstr "L'usuari «%s» ja existeix.\n"
+
+#, fuzzy
+#~ msgid "The UID %s is already in use.\n"
+#~ msgstr "El GID «%s» ja està en ús.\n"
+
+#~ msgid "The GID %s is already in use.\n"
+#~ msgstr "El GID «%s» ja està en ús.\n"
+
+#~ msgid "The GID %s does not exist.\n"
+#~ msgstr "El GID «%s» no existeix.\n"
+
+#~ msgid ""
+#~ "To avoid problems, the username should consist of\n"
+#~ "letters, digits, underscores, periods and dashes. For compatibility with\n"
+#~ "Samba machine accounts $ is also supported at the end of the username\n"
+#~ msgstr ""
+#~ "Per evitar problemes, el nom d'usuari hauria de constar de\n"
+#~ "lletres, dígits, subratllats, punts i guionets. Per compatibilitat\n"
+#~ "amb els comptes de Samba, també es permet el signe «$» al final del nom\n"
+#~ "de l'usuari\n"
+
+#~ msgid "Allowing use of questionable username.\n"
+#~ msgstr "S'està permentent l'ús d'un nom poc fiable.\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Please enter a username matching the regular expression configured\n"
+#~ "via the name_regex configuration variable.  Use the `--force-badname'\n"
+#~ "option to relax this check or reconfigure name_regex.\n"
+#~ msgstr ""
+#~ "Si us plau, entreu un nom d'usuari que concordi amb l'expressió\n"
+#~ "regular especificada a la variable «name_regex». Useu l'opció «--force-"
+#~ "badname»\n"
+#~ "per relaxar aquesta comprovació, o redefiniu «name_regex».\n"
+
+#~ msgid "Selecting from %s %s (%s).\n"
+#~ msgstr "S'està seleccionant des de %s %s (%s).\n"
+
+#~ msgid "Removing directory `%s'\n"
+#~ msgstr "S'està eliminant el directori «%s»\n"
+
+#~ msgid "Removing user `%s'.\n"
+#~ msgstr "S'està eliminant l'usuari «%s».\n"
+
+#~ msgid "Removing group `%s'.\n"
+#~ msgstr "S'està eliminant el grup «%s».\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid "
+#~ "ID]\n"
+#~ "[--disabled-password] [--disabled-login] user\n"
+#~ "   Add a normal user\n"
+#~ "\n"
+#~ "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
+#~ "ID]\n"
+#~ "[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
+#~ "password]\n"
+#~ "[--disabled-login] user\n"
+#~ "   Add a system user\n"
+#~ "\n"
+#~ "adduser --group [--gid ID] group\n"
+#~ "addgroup [--gid ID] group\n"
+#~ "   Add a user group\n"
+#~ "\n"
+#~ "addgroup --system [--gid ID] group\n"
+#~ "   Add a system group\n"
+#~ "\n"
+#~ "adduser user group\n"
+#~ "   Add an existing user to an existing group\n"
+#~ "\n"
+#~ "Other options are [--quiet] [--force-badname] [--help] [--version] [--"
+#~ "conf\n"
+#~ "FILE].\n"
+#~ msgstr ""
+#~ "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID ]\n"
+#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GRUP | --gid "
+#~ "ID]\n"
+#~ "[--disabled-password] [--disabled-login] usuari\n"
+#~ "   Afegeix un usuari normal\n"
+#~ "\n"
+#~ "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
+#~ "ID ]\n"
+#~ "[--gecos GECOS] [--group | --ingroup GRUP | --gid ID] [--disabled-"
+#~ "password]\n"
+#~ "[--disabled-login] usuari\n"
+#~ "   Afegeix un usuari del sistema\n"
+#~ "\n"
+#~ "adduser --group [--gid ID] grup\n"
+#~ "addgroup [--gid ID] grup\n"
+#~ "   Afegeix un grup d'usuari\n"
+#~ "\n"
+#~ "adduser --group --system [--gid ID] grup\n"
+#~ "addgroup --system [--gid ID] grup\n"
+#~ "   Afegeix un grup del sistema\n"
+#~ "\n"
+#~ "adduser usuari grup\n"
+#~ "   Afegeix un usuari existent a un grup existent\n"
+#~ "\n"
+#~ "La configuració global és al fitxer %s.\n"
+#~ "Altres opcions són [--quiet] [--force-badname] [--help] [--version] [--"
+#~ "conf FITXER].\n"
+
+#, fuzzy
+#~ msgid "%s: `%s' doesn't exist.  Using defaults.\n"
+#~ msgstr "%s: %s no existeix. S'utilitzaran els valors per defecte.\n"
+
+#, fuzzy
+#~ msgid "Couldn't parse `%s':%s.\n"
+#~ msgstr "No s'ha pogut analitzar %s:%s.\n"
+
+#, fuzzy
+#~ msgid "Unknown variable `%s' at `%s':%s.\n"
+#~ msgstr "La variable «%s» en %s:%s és desconeguda.\n"
 
 #~ msgid "I need a name to add.\n"
 #~ msgstr "Es necessita un nom a afegir.\n"

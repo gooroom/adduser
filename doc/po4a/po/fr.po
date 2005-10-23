@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
-"POT-Creation-Date: 2005-10-22 15:17+0200\n"
+"POT-Creation-Date: 2005-10-23 18:43+0000\n"
 "PO-Revision-Date: 2005-08-06 14:36+0300\n"
 "Last-Translator: Nicolas François <nicolas.francois@centraliens.net>\n"
 "Language-Team: Debian French Team <debian-l10n-french@lists.debian.org>\n"
@@ -826,10 +826,11 @@ msgstr "adduser, addgroup - ajoute un utilisateur ou un groupe au système"
 
 # type: Plain text
 #: ../adduser.8:14
+#, fuzzy
 msgid ""
-"B<adduser> [options] [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
-"ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--disabled-"
-"password] [--disabled-login] [--gecos GECOS] user"
+"B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
+"uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
+"disabled-password] [--disabled-login] [--gecos GECOS] user"
 msgstr ""
 "B<adduser> [options] [--home REP] [--shell SHELL] [--no-create-home] [--uid "
 "ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUPE | --gid ID] [--disabled-"
@@ -873,7 +874,8 @@ msgstr "B<adduser> [options] utilisateur groupe"
 
 # type: Plain text
 #: ../adduser.8:29
-msgid "[--quiet] [--force-badname] [--help] [--version] [--conf FILE]"
+#, fuzzy
+msgid "[--quiet] [--force-badname] [--help|-h] [--version] [--conf FILE]"
 msgstr "[--quiet] [--force-badname] [--help] [--version] [--conf FICHIER]"
 
 # type: Plain text

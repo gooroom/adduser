@@ -14,6 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-26 14:05+0100\n"
 "PO-Revision-Date: 2004-07-04 15:00-0500\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
@@ -24,12 +25,16 @@ msgstr ""
 
 #  Type: boolean
 #  Description
+#. Type: boolean
+#. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
 msgstr "Wilt u door iedereen leesbare thuismappen?"
 
 #  Type: boolean
 #  Description
+#. Type: boolean
+#. Description
 #: ../templates:4
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2005-10-22 15:42+0200\n"
+"POT-Creation-Date: 2005-10-23 18:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -820,9 +820,9 @@ msgstr "adduser, addgroup - добавляют пользователя или группу в систему"
 #: ../adduser.8:14
 #, fuzzy
 msgid ""
-"B<adduser> [options] [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
-"ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--disabled-"
-"password] [--disabled-login] [--gecos GECOS] user"
+"B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
+"uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
+"disabled-password] [--disabled-login] [--gecos GECOS] user"
 msgstr ""
 "B<adduser> [параметры] [--home КАТ] [--no-create-home] [--uid ID] [--"
 "firstuid ID] [--lastuid ID] [--ingroup ГРУППА | --gid ID] [--disabled-"
@@ -869,7 +869,8 @@ msgstr "B<adduser> [параметры] пользователь группа"
 
 # type: Plain text
 #: ../adduser.8:29
-msgid "[--quiet] [--force-badname] [--help] [--version] [--conf FILE]"
+#, fuzzy
+msgid "[--quiet] [--force-badname] [--help|-h] [--version] [--conf FILE]"
 msgstr "[--quiet] [--force-badname] [--help] [--version] [--conf ФАЙЛ]"
 
 # type: Plain text
