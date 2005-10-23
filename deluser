@@ -86,7 +86,7 @@ GetOptions ("quiet|q" => sub {$verbose = 0; },
 	    "only-if-empty" => \$pconfig{"only_if_empty"},
 	    "home=s" => \$pconfig{"home"},
 	    "remove-home" => \$pconfig{"remove_home"},
-	    "remove-all-files" => \$pconfig{"remote_all_files"},
+	    "remove-all-files" => \$pconfig{"remove_all_files"},
 	    "backup" => \$pconfig{"backup"},
 	    "backup-to" => \$pconfig{"backup_to"}
 	  );
@@ -154,7 +154,7 @@ undef(@names);
 preseed_config (\@defaults,\%config);
 
 foreach(keys(%pconfig)) {
-    $config{$_} = $pconfig{$_};
+    $config{$_} = $pconfig{$_} if ($pconfig{$_});
 }
 undef (%pconfig);
 
@@ -287,14 +287,18 @@ if($action eq "deluser") {
 	  s_printf (gtx("Backing up files to be removed to %s ...\n"),$config{"backup_to"});
 	  my $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
 	  my $filesfilename = $filesfile->filename;
+	  my $backup_name = $config{"backup_to"} . "/$user.tar";
+	  print "backup_name = $backup_name";
 	  print $filesfile join("\n",@files);
 	  $filesfile->close();
-	  systemcall("/bin/tar", "-cf", $config{"backup_to"}. "/$user.tar", "--files-from", $filesfilename);
+	  systemcall("/bin/tar", "-cf", $backup_name, "--files-from", $filesfilename);
+	  systemcall("chmod","600", $backup_name);
+	  systemcall("chown","root:root", $backup_name);
 	  unlink($filesfilename);
 	  if(-e "/usr/bin/bzip2") {
-	      systemcall("/usr/bin/bzip2", $config{"backup_to"}. "/$user.tar");
+	      systemcall("/usr/bin/bzip2", $backup_name);
 	  } elsif(-e "/bin/gzip") {
-	      systemcall("/bin/gzip", "--best", $config{"backup_to"}. "/$user.tar");
+	      systemcall("/bin/gzip", "--best", $backup_name);
 	  }
       }
 
