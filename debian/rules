@@ -13,6 +13,8 @@ build:
 clean:
 	$(checkdir)
 	$(MAKE) -C po update clean
+	debconf-updatepo
+	cd doc/po4a && po4a po4a.conf
 	# remove generated man pages
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.fr
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.es
