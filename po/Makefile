@@ -1,4 +1,4 @@
-XGETTEXT = xgettext -c
+XGETTEXT = xgettext
 MSGFMT = msgfmt
 MSGMERGE = msgmerge
 
@@ -12,6 +12,7 @@ LOCALEDIR = /usr/share/locale
 PO = $(wildcard *.po)
 LANG = $(basename $(PO))
 MO = $(addsuffix .mo,$(LANG))
+SOURCES = ../adduser ../deluser ../AdduserCommon.pm
 
 all: update $(MO)
 update: adduser.pot
@@ -20,8 +21,8 @@ update: adduser.pot
 	$(MSGMERGE) -U $$po adduser.pot; \
 	done;
 
-adduser.pot: ../adduser ../deluser ../AdduserCommon.pm
-	$(XGETTEXT) -L Perl -kgtx -o $@ $?
+adduser.pot: $(SOURCES)
+	$(XGETTEXT) -c -L Perl -kgtx -o $@ $(SOURCES)
 
 install: all
 	for i in $(MO) ; do \

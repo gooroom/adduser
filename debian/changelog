@@ -1,8 +1,16 @@
 adduser (3.77.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * Changes suggested by Denis Barbier
+    * po/Makefile: move -c down from xgettext definition to the actual call
+    * po/Makefile: Use a SOURCES variable. The old version caused
+      strings from deluser to be discarded.
+    * deluser: make generation of copyright message more translation
+      friendly
+    * hack gtx wrapper to not only export the first string into the
+      POT file.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 23 Oct 2005 18:51:29 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 25 Oct 2005 07:18:58 +0200
 
 adduser (3.77) unstable; urgency=low
 

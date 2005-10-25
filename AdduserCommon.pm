@@ -57,7 +57,7 @@ sub invalidate_nscd {
 }
 
 sub gtx {
-    return gettext( join "", @_);
+    return gettext( shift );
 }
 
 sub dief {
