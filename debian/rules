@@ -18,7 +18,7 @@ clean:
 	# remove generated man pages
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.fr
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.es
-	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.pt_PT
+	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.pt_BR
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.ru
 	-rm -rf build *~ debian/tmp debian/*~ debian/files* debian/substvars
 

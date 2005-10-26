@@ -14,8 +14,9 @@ adduser (3.77.0) UNRELEASED; urgency=low
   * Fix typo in deluser.conf.5, hopefully without fuzzying
     translations. Thanks to Felipe Augusto van de Wiel and to Thomas
     Huriaux. (mh)
+  * remove wrong pt_PT manpage translation. (mh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 26 Oct 2005 12:45:45 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 26 Oct 2005 12:55:59 +0000
 
 adduser (3.77) unstable; urgency=low
 

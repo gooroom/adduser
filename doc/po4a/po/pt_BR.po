@@ -7,13 +7,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-22 15:17+0200\n"
+"POT-Creation-Date: 2005-10-26 12:49+0000\n"
 "PO-Revision-Date: 2005-10-25 20:32-0200\n"
 "Last-Translator:  <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=\n"
-"Content-Transfer-Encoding: "
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 # type: TH
 #.  Hey, Emacs!  This is an -*- nroff -*- source file.
@@ -122,12 +122,13 @@ msgstr "B<BACKUP>"
 
 # type: Plain text
 #: ../deluser.conf.5:49
+#, fuzzy
 msgid ""
 "If B<REMOVE_HOME> or B<REMOVE_ALL_FILES> is activated all files are backuped "
 "before they are removed. The backup file that is created defaults to "
-"username.tar(.gz|.bz2) in the directory spefied by the B<BACKUP_TO> option. "
-"The compression method is chosen to the best that is available.  Values may "
-"be 0 or 1."
+"username.tar(.gz|.bz2) in the directory specified by the B<BACKUP_TO> "
+"option. The compression method is chosen to the best that is available.  "
+"Values may be 0 or 1."
 msgstr "Se B<REMOVE_HOME> ou B<REMOVE_ALL_FILES> estiverem ativadas é feito um backup de todos os arquivos antes de removê-los. O arquivo de backup criado é nomedousuário.tar(.gz|.bz2) no diretório especificado pela opção B<BACKUP_TO>. O método de compressão escolhido é o melhor que está disponível.  Valores podem ser 0 ou 1."
 
 # type: TP
@@ -701,10 +702,11 @@ msgstr "adduser, addgroup - adiciona um usuário ou grupo ao sistema"
 
 # type: Plain text
 #: ../adduser.8:14
+#, fuzzy
 msgid ""
-"B<adduser> [options] [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
-"ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--disabled-"
-"password] [--disabled-login] [--gecos GECOS] user"
+"B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
+"uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
+"disabled-password] [--disabled-login] [--gecos GECOS] user"
 msgstr "B<adduser> [opções] [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GRUPO | --gid ID] [--disabled-password] [--disabled-login] [--gecos GECOS] usuário"
 
 # type: Plain text
@@ -742,7 +744,8 @@ msgstr "B<adduser> [opções] usuário grupo"
 
 # type: Plain text
 #: ../adduser.8:29
-msgid "[--quiet] [--force-badname] [--help] [--version] [--conf FILE]"
+#, fuzzy
+msgid "[--quiet] [--force-badname] [--help|-h] [--version] [--conf FILE]"
 msgstr "[--quiet] [--force-badname] [--help] [--version] [--conf ARQUIVO]"
 
 # type: Plain text
