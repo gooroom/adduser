@@ -10,9 +10,9 @@ adduser (3.77.0) UNRELEASED; urgency=low
     * hack gtx wrapper to not only export the first string into the
       POT file.
   * Add Brazilian Portuguese (pt_BR) manpage translation. Thanks to
-    Felipe Augusto. (mh)
+    Felipe Augusto van de Wiel. (mh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 26 Oct 2005 07:27:55 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 26 Oct 2005 12:45:05 +0000
 
 adduser (3.77) unstable; urgency=low
 
