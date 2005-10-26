@@ -1,16 +1,11 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ADDUSER VERSION\n"
+"Project-Id-Version: adduser 3.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-26 14:30+0200\n"
-"PO-Revision-Date: 2001-07-03 12:15+0200\n"
-"Last-Translator: Krzysztof Krzy¿aniak (eloy) <eloy@debian.org>\n"
-"Language-Team: PWA <eloy@transilvania.eu.org>\n"
+"PO-Revision-Date: 2005-10-26 19:45+0200\n"
+"Last-Translator: Robert Luberda <robert@debian.org>\n"
+"Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,7 +21,7 @@ msgstr "Po nazwie nie mo¿na dodawaæ ¿adnych opcji.\n"
 
 #: ../adduser:125 ../deluser:128
 msgid "Only one or two names allowed.\n"
-msgstr ""
+msgstr "Dozwolone podanie tylko jednej lub dwóch nazw.\n"
 
 #: ../adduser:131
 msgid "Enter a groupname to add: "
@@ -47,37 +42,37 @@ msgstr "Opcje --group, --ingroup oraz --gid s± wzajemnie wykluczaj±ce siê.\n"
 
 #: ../adduser:163
 msgid "The home dir must be an absolute path.\n"
-msgstr "Katalog domowy musi byæ podany jako ¶cie¿ka bezwglêdna.\n"
+msgstr "Katalog domowy musi byæ podany jako ¶cie¿ka bezwzglêdna.\n"
 
 #: ../adduser:167
 msgid "Warning: The home dir you specified already exists.\n"
 msgstr "Ostrze¿enie: Podany katalog domowy ju¿ istnieje.\n"
 
 #: ../adduser:169
-#, fuzzy
 msgid "Warning: The home dir you specified does not exist.\n"
-msgstr "Ostrze¿enie: Podany katalog domowy ju¿ istnieje.\n"
+msgstr "Ostrze¿enie: Podany katalog domowy nie istnieje.\n"
 
 #: ../adduser:230
-#, fuzzy, perl-format
+#, perl-format
 msgid "The group `%s' already exists as a system group. Exiting...\n"
-msgstr "Grupa `%s' ju¿ istnieje.\n"
+msgstr "Grupa `%s' ju¿ istnieje jako grupa systemowa. Koñczenie...\n"
 
 #: ../adduser:233
-#, fuzzy, perl-format
+#, perl-format
 msgid "The group `%s' already exists and is not a system group.\n"
-msgstr "Grupa `%s' ju¿ istnieje.\n"
+msgstr "Grupa `%s' ju¿ istnieje i nie jest grup± systemow±.\n"
 
 #: ../adduser:235 ../adduser:264
-#, fuzzy, perl-format
+#, perl-format
 msgid "The GID `%s' is already in use.\n"
 msgstr "GID `%s' jest ju¿ u¿ywany.\n"
 
 #: ../adduser:244
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
-msgstr "Brak dostêpnego numeru GID w wybranym zakresie "
+msgstr ""
+"Brak dostêpnego numeru GID w zakresie %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
 
 #: ../adduser:245 ../adduser:274
 #, perl-format
@@ -85,9 +80,9 @@ msgid "The group `%s' was not created.\n"
 msgstr "Nie utworzono grupy `%s'.\n"
 
 #: ../adduser:249 ../adduser:278
-#, fuzzy, perl-format
+#, perl-format
 msgid "Adding group `%s' (%s)...\n"
-msgstr "Dodawanie grupy %s (%s)...\n"
+msgstr "Dodawanie grupy `%s' (%s)...\n"
 
 #: ../adduser:253 ../adduser:282 ../adduser:314
 msgid "Done.\n"
@@ -99,9 +94,9 @@ msgid "The group `%s' already exists.\n"
 msgstr "Grupa `%s' ju¿ istnieje.\n"
 
 #: ../adduser:273
-#, fuzzy, perl-format
+#, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
-msgstr "Brak dostêpnego numeru GID w wybranym zakresie "
+msgstr "Brak dostêpnego numeru GID w zakresie %d-%d (FIRST_GID - LAST_GID).\n"
 
 #: ../adduser:291 ../deluser:221 ../deluser:365
 #, perl-format
@@ -116,29 +111,30 @@ msgstr "Grupa `%s' nie istnieje.\n"
 #: ../adduser:296
 #, perl-format
 msgid "The user `%s' is already a member of `%s'.\n"
-msgstr "U¿ytkownik `%s' jest ju¿ cz³onkiem grupy %s.\n"
+msgstr "U¿ytkownik `%s' jest ju¿ cz³onkiem grupy `%s'.\n"
 
 #: ../adduser:301
 #, perl-format
 msgid "Adding user `%s' to group `%s'...\n"
-msgstr "Dodawanie u¿ytkownika %s do grupy %s...\n"
+msgstr "Dodawanie u¿ytkownika `%s' do grupy `%s'...\n"
 
 #: ../adduser:324
-#, fuzzy, perl-format
+#, perl-format
 msgid "The user `%s' already exists as a system user. Exiting...\n"
-msgstr "Grupa `%s' ju¿ istnieje.\n"
+msgstr "U¿ytkownik `%s' ju¿ istnieje jako u¿ytkownik systemowy. Koñczenie...\n"
 
 #: ../adduser:330
 #, perl-format
 msgid "Adding system user `%s'...\n"
-msgstr "Dodawanie u¿ytkownika systemowego %s...\n"
+msgstr "Dodawanie u¿ytkownika systemowego `%s'...\n"
 
 #: ../adduser:338
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
 "LAST_SYS_UID).\n"
-msgstr "Brak dostêpnego UID/GID w wybranym zakresie "
+msgstr ""
+"Brak dostêpnego UID/GID w zakresie %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 
 #: ../adduser:339 ../adduser:351 ../adduser:422 ../adduser:434
 #, perl-format
@@ -146,74 +142,76 @@ msgid "The user `%s' was not created.\n"
 msgstr "Nie utworzono u¿ytkownika `%s'.\n"
 
 #: ../adduser:350
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
-msgstr "Brak dostêpnego UID w wybranym zakresie "
+msgstr "Brak dostêpnego UID w zakresie %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 
 #: ../adduser:355 ../adduser:361 ../adduser:438 ../adduser:444
 msgid "Internal error"
-msgstr "Wewnêtrzny b³±d"
+msgstr "B³±d wewnêtrzny"
 
 #: ../adduser:367 ../adduser:449
-#, fuzzy, perl-format
+#, perl-format
 msgid "Adding new group `%s' (%s).\n"
-msgstr "Dodawanie nowej grupy %s (%s).\n"
+msgstr "Dodawanie nowej grupy `%s' (%s).\n"
 
 #: ../adduser:373 ../adduser:455
-#, fuzzy, perl-format
+#, perl-format
 msgid "Adding new user `%s' (%s) with group `%s'.\n"
-msgstr "Dodawanie nowego u¿ytkownika %s (%s) w grupie %s.\n"
+msgstr "Dodawanie nowego u¿ytkownika `%s' (%s) w grupie `%s'.\n"
 
 #: ../adduser:387
 msgid ""
 "chage failed with return code 15, shadow not enabled, password aging cannot "
 "be set. Continuing.\n"
 msgstr ""
+"Niepowodzenie chage - kod wyj¶cia 15, maskowane has³a nie s± w³±czone, nie "
+"mo¿na ustawiæ wieku has³a. Kontynuowanie.\n"
 
 #: ../adduser:413
-#, fuzzy, perl-format
+#, perl-format
 msgid "Adding user `%s'...\n"
-msgstr "Dodawanie u¿ytkownika %s (%s).\n"
+msgstr "Dodawanie u¿ytkownika `%s'....\n"
 
 #: ../adduser:421
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-msgstr "Brak dostêpnego UID/GID w wybranym zakresie "
+msgstr "Brak dostêpnego UID/GID w zakresie %d-%d (FIRST_UID - LAST_UID).\n"
 
 #: ../adduser:433
-#, fuzzy, perl-format
+#, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-msgstr "Brak dostêpnego UID w wybranym zakresie "
+msgstr "Brak dostêpnego UID w zakresie %d-%d (FIRST_UID - LAST_UID).\n"
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale yesexpr" which regular
 #. expression will be checked to find positive answer.
 #: ../adduser:485
 msgid "Is the information correct? [y/N] "
-msgstr "Czy informacja jest poprawna? [y/N] "
+msgstr "Czy informacja jest poprawna? [t/N] "
 
 #: ../adduser:492
 #, perl-format
 msgid "Setting quota from `%s'.\n"
-msgstr "Ustawianie udzia³ów dyskowych dla %s.\n"
+msgstr "Ustawianie udzia³ów dyskowych dla `%s'.\n"
 
 #: ../adduser:525
-#, fuzzy, perl-format
+#, perl-format
 msgid "Not creating home directory `%s'.\n"
-msgstr "Nie utworzono katalogu domowego.\n"
+msgstr "Nie utworzono katalogu domowego `%s'.\n"
 
 #: ../adduser:528
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
-msgstr "Katalog domowy %s ju¿ istnieje. %s nie zostanie przekopiowany.\n"
+msgstr "Katalog domowy `%s' ju¿ istnieje. `%s' nie zostanie przekopiowany.\n"
 
 #: ../adduser:534
 msgid ""
 "Warning: that home directory does not belong to the user you are currently "
 "creating\n"
-msgstr ""
+msgstr "Ostrze¿enie: ten katalog domowy nie nale¿y do tworzonego u¿ytkownika\n"
 
 #: ../adduser:539
 #, perl-format
@@ -226,19 +224,19 @@ msgid "Copying files from `%s'\n"
 msgstr "Kopiowanie plików z %s\n"
 
 #: ../adduser:624
-#, fuzzy, perl-format
+#, perl-format
 msgid "The user `%s' already exists, and is not a system user.\n"
-msgstr "Grupa `%s' ju¿ istnieje.\n"
+msgstr "U¿ytkownik `%s' ju¿ istnieje i nie jest u¿ytkownikiem systemowym.\n"
 
 #: ../adduser:626
-#, fuzzy, perl-format
+#, perl-format
 msgid "The user `%s' already exists.\n"
-msgstr "Grupa `%s' ju¿ istnieje.\n"
+msgstr "U¿ytkownik `%s' ju¿ istnieje.\n"
 
 #: ../adduser:629
-#, fuzzy, perl-format
+#, perl-format
 msgid "The UID %s is already in use.\n"
-msgstr "GID `%s' jest ju¿ u¿ywany.\n"
+msgstr "UID `%s' jest ju¿ u¿ywany.\n"
 
 #: ../adduser:636
 #, perl-format
@@ -246,9 +244,9 @@ msgid "The GID %s is already in use.\n"
 msgstr "GID `%s' jest ju¿ u¿ywany.\n"
 
 #: ../adduser:643
-#, fuzzy, perl-format
+#, perl-format
 msgid "The GID %s does not exist.\n"
-msgstr "U¿ytkownik `%s' nie istnieje.\n"
+msgstr "GID `%s' nie istnieje.\n"
 
 #: ../adduser:699
 msgid ""
@@ -256,10 +254,13 @@ msgid ""
 "letters, digits, underscores, periods and dashes. For compatibility with\n"
 "Samba machine accounts $ is also supported at the end of the username\n"
 msgstr ""
+"Aby unikn±æ problemów, nazwa u¿ytkownika powinna sk³adaæ siê tylko\n"
+"z liter, cyfr, podkre¶leñ, kropek i my¶lników. W celu zachowania zgodno¶ci\n"
+"z kontami Samby, znak $ jest tak¿e wspierany na koñcu nazwy u¿ytkownika\n"
 
 #: ../adduser:706
 msgid "Allowing use of questionable username.\n"
-msgstr ""
+msgstr "Pozwolenie na u¿ycie kiepskiej jako¶ci nazwy u¿ytkownika.\n"
 
 #: ../adduser:710
 msgid ""
@@ -267,26 +268,29 @@ msgid ""
 "via the name_regex configuration variable.  Use the `--force-badname'\n"
 "option to relax this check or reconfigure name_regex.\n"
 msgstr ""
+"Proszê wprowadziæ nazwê u¿ytkownika pasuj±c± do wyra¿enia regularnego\n"
+"ustawionego w zmiennej konfiguracji name_regex. Proszê u¿yæ opcji\n"
+"`--force-badname', aby rozlu¼niæ to sprawdzanie, lub zmieniæ name_regex.\n"
 
 #: ../adduser:725
-#, fuzzy, perl-format
+#, perl-format
 msgid "Selecting from %s %s (%s).\n"
-msgstr "Ustawianie udzia³ów dyskowych dla %s.\n"
+msgstr "Wybieranie z %s %s (%s).\n"
 
 #: ../adduser:790
-#, fuzzy, perl-format
+#, perl-format
 msgid "Removing directory `%s'\n"
-msgstr "Tworzenie katalogu domowego %s.\n"
+msgstr "Usuwanie katalogu `%s'.\n"
 
 #: ../adduser:794
-#, fuzzy, perl-format
+#, perl-format
 msgid "Removing user `%s'.\n"
-msgstr "Usuwanie u¿ytkownika %s...\n"
+msgstr "Usuwanie u¿ytkownika `%s'...\n"
 
 #: ../adduser:798
-#, fuzzy, perl-format
+#, perl-format
 msgid "Removing group `%s'.\n"
-msgstr "Usuwanie grupy %s...\n"
+msgstr "Usuwanie grupy `%s'...\n"
 
 #: ../adduser:831
 msgid ""
@@ -314,18 +318,40 @@ msgid ""
 "Other options are [--quiet] [--force-badname] [--help] [--version] [--conf\n"
 "FILE].\n"
 msgstr ""
+"adduser [--home KATALOG] [--shell POW£OKA] [--no-create-home] [--uid ID]\n"
+"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GRUPA | --gid ID]\n"
+"[--disabled-password] [--disabled-login] u¿ytkownik\n"
+"   Dodaje zwyk³ego u¿ytkownika\n"
+"\n"
+"adduser --system [--home KATALOG] [--shell POW£OKA] [--no-create-home] [--"
+"uid ID]\n"
+"[--gecos GECOS] [--group | --ingroup GRUPA | --gid ID] [--disabled-"
+"password]\n"
+"[--disabled-login] u¿ytkownik\n"
+"   Dodaje u¿ytkownika systemowego\n"
+"\n"
+"adduser --group [--gid ID] grupa\n"
+"addgroup [--gid ID] grupa\n"
+"   Dodaje zwyk³± grupê\n"
+"\n"
+"addgroup --system [--gid ID] grupa\n"
+"  Dodaje grupê systemow±\n"
+"\n"
+"adduser u¿ytkownik grupa\n"
+"   Dodaje istniej±cego u¿ytkownika do istniej±cej grupy\n"
+"\n"
+"Pozosta³e opcje to [--quiet] [--force-badname] [--help] [--version] [--conf\n"
+"PLIK].\n"
 
 #: ../deluser:94
 msgid "Only root may remove a user or group from the system.\n"
 msgstr "Tylko administrator mo¿e usun±æ u¿ytkownika lub grupê z systemu.\n"
 
 #: ../deluser:119
-#, fuzzy
 msgid "Enter a group name to remove: "
 msgstr "Wprowad¼ nazwê grupy do usuniêcia: "
 
 #: ../deluser:121
-#, fuzzy
 msgid "Enter a user name to remove: "
 msgstr "Wprowad¼ nazwê u¿ytkownika do usuniêcia: "
 
@@ -336,21 +362,26 @@ msgid ""
 "you need to install the `perl-modules' package. To accomplish that, run\n"
 "apt-get install perl-modules\n"
 msgstr ""
+"Aby u¿yæ opcji --remove-home, --remove-all-files oraz --backup,\n"
+"nale¿y zainstalowaæ pakiet \"perl-modules\". W tym celu uruchom\n"
+"apt-get install perl-modules\n"
 
 #: ../deluser:211
-#, fuzzy, perl-format
+#, perl-format
 msgid "The user `%s' is not a system account... Exiting.\n"
-msgstr "%s nie jest cz³onkiem grupy %s.\n"
+msgstr "`%s' nie kontem systemowym...Koñczenie.\n"
 
 #: ../deluser:215
-#, fuzzy, perl-format
+#, perl-format
 msgid "The user `%s' does not exist, but --system was given... Exiting.\n"
-msgstr "U¿ytkownik `%s' nie istnieje.\n"
+msgstr "U¿ytkownik `%s' nie istnieje, a podano opcjê --system... Koñczenie.\n"
 
 #: ../deluser:225
 #, perl-format
 msgid "passwd home dir `%s' does not match command line home dir, aborting.\n"
 msgstr ""
+"katalog domowy `%s' z pliku passwd nie odpowiada katalogowi podanemu\n"
+"w linii poleceñ, przerywanie dzia³ania.\n"
 
 #: ../deluser:231
 msgid "Looking for files to backup/remove...\n"
@@ -359,27 +390,27 @@ msgstr "Szukanie plików do kopii bezpieczeñstwa/usuniêcia...\n"
 #: ../deluser:234
 #, perl-format
 msgid "fork for parse mount points failed: %s\n"
-msgstr ""
+msgstr "niepowodzenie fork parsuj±cego punkty montowania: %s\n"
 
 #: ../deluser:240
 #, perl-format
 msgid "can't close mount pipe: %s\n"
-msgstr ""
+msgstr "nie mo¿na zamkn±æ potoku mount: %s\n"
 
 #: ../deluser:248
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
-msgstr ""
+msgstr "`%s' nie bêdzie archiwizowany/usuwany, gdy¿ jest punktem montowania.\n"
 
 #: ../deluser:255
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
-msgstr ""
+msgstr "`%s' nie bêdzie archiwizowany/usuwany, gdy¿ pasuje do %s.\n"
 
 #: ../deluser:287
-#, fuzzy, perl-format
+#, perl-format
 msgid "Backing up files to be removed to %s ...\n"
-msgstr "Tworzenie kopii bezpieczeñstwa usuwanych plików...\n"
+msgstr "Tworzenie kopii bezpieczeñstwa usuwanych plików %s...\n"
 
 #: ../deluser:306
 msgid "Removing files...\n"
@@ -397,42 +428,41 @@ msgstr "gotowe.\n"
 #: ../deluser:333
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
-msgstr ""
+msgstr "niepowodzenie getgrnam `%s'. Nie powinno siê to by³o zdarzyæ.\n"
 
 #: ../deluser:338
-#, fuzzy, perl-format
+#, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
-msgstr "Grupa `%s' nie istnieje.\n"
+msgstr "Grupa `%s' nie jest grup± systemow±... Koñczenie.\n"
 
 #: ../deluser:342
-#, fuzzy, perl-format
+#, perl-format
 msgid "The group `%s' is not empty!\n"
-msgstr "Grupa `%s' nie istnieje.\n"
+msgstr "Grupa `%s' nie jest pusta!\n"
 
 #: ../deluser:348
-#, fuzzy, perl-format
+#, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
-msgstr "Istniej± u¿ytkownicy, którzy posiadaj± '%s' jako grupê podstawow±!\n"
+msgstr "`%s' wci±¿ ma `%s' jako grupê podstawow±!\n"
 
 #: ../deluser:353
 #, perl-format
 msgid "Removing group `%s'...\n"
-msgstr "Usuwanie grupy %s...\n"
+msgstr "Usuwanie grupy `%s'...\n"
 
 #: ../deluser:371
-#, fuzzy
 msgid "You may not remove the account from its primary group.\n"
 msgstr "Nie mo¿na usun±æ u¿ytkownika z jego/jej podstawowej grupy.\n"
 
 #: ../deluser:385
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
-msgstr "%s nie jest cz³onkiem grupy %s.\n"
+msgstr "`%s' nie jest cz³onkiem grupy `%s'.\n"
 
 #: ../deluser:388
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
-msgstr "Usuwanie u¿ytkownika %s z grupy %s...\n"
+msgstr "Usuwanie u¿ytkownika `%s' z grupy `%s'...\n"
 
 #: ../deluser:399
 #, perl-format
@@ -440,23 +470,28 @@ msgid ""
 "deluser: (version: %s)\n"
 "\n"
 msgstr ""
+"deluser: (wersja: %s)\n"
+"\n"
 
 #: ../deluser:400
-#, fuzzy
 msgid "removing user and groups from the system. "
-msgstr "usuwanie u¿ytkownika i grupy z systemu. Wersja:"
+msgstr "usuwanie u¿ytkowników i grup z systemu."
 
 #: ../deluser:402
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 msgstr ""
+"Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
+"\n"
 
 #: ../deluser:404
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 "<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 msgstr ""
+"deluser jest oparty na adduser Guya Maora <maor@debian.org>, Iana Murdocka\n"
+"<imurdock@gnu.ai.mit.edu> i Teda Hajeka <tedhajek@boombox.micro.umn.edu>\n"
 
 #: ../deluser:407
 msgid ""
@@ -471,6 +506,16 @@ msgid ""
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n"
 "General Public License, /usr/share/common-licenses/GPL, for more details.\n"
 msgstr ""
+"\n"
+"Ten program jest darmowy; mo¿esz go redystrybuowaæ i/lub modyfikowaæ\n"
+"zgodnie z warunkami Ogólnej Licencji Publicznej GNU opublikowanej przez\n"
+"Fundacjê Wolnego Oprogramowania; na zasadach albo wersji 2 tej licencji,\n"
+"albo (wg Twojego uznania) jakiejkolwiek pó¼niejszej wersji.\n"
+"\n"
+"Ten program jest dystrybuowany w nadziei, ¿e bêdzie u¿yteczny, ale\n"
+"autorzy NIE DAJ¡ ¯ADNYCH GWARANCJI; w tym gwarancji PRZYDATNO¦CI\n"
+"DO SPRZEDA¯Y ani DO KONKRETNYCH CELÓW. Szczegó³y mo¿na znale¼æ w Ogólnej\n"
+"Licencji Publicznej GNU w pliku //usr/share/common-licenses/GPL.\n"
 
 #: ../deluser:419
 #, perl-format
@@ -478,6 +523,8 @@ msgid ""
 "deluser: (version %s)\n"
 "\n"
 msgstr ""
+"deluser: (wersja %s)\n"
+"\n"
 
 #: ../deluser:420
 msgid "removing user and groups from the system. Version:"
@@ -517,21 +564,54 @@ msgid ""
 "  --conf | -c FILE  use FILE as configuration file\n"
 "\n"
 msgstr ""
+"deluser u¿ytkownik\n"
+"  usuniêcie zwyk³ego u¿ytkownika z systemu\n"
+"  na przyk³ad: deluser mike\n"
+"\n"
+"  --remove-home             usuwa katalog domowy u¿ytkownika i jego pocztê\n"
+"  --remove-all-files        usuwa wszystkie pliki nale¿±ce do u¿ytkownika\n"
+"  --home <katalog>          usuwa katalog domowy, je¿eli katalog domowy w\n"
+"\t\t\t     /etc/passwd jest taki sam jak katalog podany\n"
+"                            jako warto¶æ tej opcji\n"
+"  --backup                  tworzy kopie zapasowe plików przed usuniêciem\n"
+"  --backup-to <katalog>     docelowy katalog kopii zapasowych\n"
+"                            Domy¶lnie jest to katalog bie¿±cy.\n"
+"  --system                  usuwa tylko, je¿eli jest to u¿ytkownik "
+"systemowy\n"
+"\n"
+"delgroup grupa\n"
+"deluser --group group\n"
+"  usuwa grupê z systemu\n"
+"  na przyk³ad: deluser --group students\n"
+"\n"
+"  --system                  usuwa tylko, je¿eli jest to grupa systemowa\n"
+"  --only-if-empty           usuwa tylko, je¿eli grupa nie ma cz³onków\n"
+"\n"
+"deluser u¿ytkownik grupa\n"
+"  usuwa u¿ytkownika z grupy\n"
+"  na przyk³ad: deluser mike students\n"
+"\n"
+"opcje ogólne:\n"
+"  --quiet | -q      nie wypisuje komunikatów na stdout\n"
+"  --help | -h       informacje o u¿yciu\n"
+"  --version | -v    wersja i prawa autorskie\n"
+"  --conf | -c PLIK  u¿ywa PLIKU jako pliku konfiguracyjnego\n"
+"\n"
 
 #: ../AdduserCommon.pm:83
-#, fuzzy, perl-format
+#, perl-format
 msgid "%s: `%s' doesn't exist.  Using defaults.\n"
-msgstr "%s: %s nie istnieje. U¿yuwanie domy¶lnych warto¶ci.\n"
+msgstr "%s: `%s' nie istnieje. U¿ywanie warto¶ci domy¶lnych.\n"
 
 #: ../AdduserCommon.pm:93
-#, fuzzy, perl-format
+#, perl-format
 msgid "Couldn't parse `%s':%s.\n"
-msgstr "Nie mo¿na parsowaæ %s:%s.\n"
+msgstr "Nie mo¿na parsowaæ `%s':%s.\n"
 
 #: ../AdduserCommon.pm:98
-#, fuzzy, perl-format
+#, perl-format
 msgid "Unknown variable `%s' at `%s':%s.\n"
-msgstr "Nieznany argument `%s'.\n"
+msgstr "Nieznana zmienna `%s' przy `%s':%s.\n"
 
 #~ msgid "I need a name to add.\n"
 #~ msgstr "Aby dodaæ u¿ytkownika potrzebna jest nazwa.\n"

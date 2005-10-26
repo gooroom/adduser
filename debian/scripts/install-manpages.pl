@@ -50,7 +50,7 @@ foreach $file (readdir(DIR)) {
 
 	printf("Installing manpage %s%s in %s...\n", $page, $language ? "(".$language.")" : "", $destfile);
 	open(IN, "<$origdir$file");
-	open(OUT, ">$destfile");
+	open(OUT, ">$destfile") or die "can't open $destfile: $!\n";
 	while(<IN>) {
 		$_ =~ s/VERSION/$version/g;
 		print OUT $_;
