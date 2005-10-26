@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-23 18:43+0000\n"
+"POT-Creation-Date: 2005-10-26 14:30+0200\n"
 "PO-Revision-Date: 2004-02-02 05:09+1300\n"
 "Last-Translator: Hiei Xu <nicky@mail.edu.cn>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -15,13 +15,309 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. everyone can issue "--help" and "--version", but only root can go on
+#: ../adduser:98
+msgid "Only root may add a user or group to the system.\n"
+msgstr "只有 root 才能将用户或组添加到系统。\n"
+
+#: ../adduser:118 ../deluser:111
+msgid "No options allowed after names.\n"
+msgstr "名字后面不允许加入选项。\n"
+
+#: ../adduser:125 ../deluser:128
+msgid "Only one or two names allowed.\n"
+msgstr ""
+
+#: ../adduser:131
+msgid "Enter a groupname to add: "
+msgstr "请输入要添加的组名："
+
+#: ../adduser:135
+msgid "Enter a username to add: "
+msgstr "请输入要添加的用户名："
+
+#. must be addusertogroup
+#: ../adduser:142
+msgid "Specify only one name in this mode.\n"
+msgstr "这个模式下只能指定一个名字。\n"
+
+#: ../adduser:158
+msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
+msgstr "--group，--ingroup，和 --gid 选项是不能同时使用的。\n"
+
+#: ../adduser:163
+msgid "The home dir must be an absolute path.\n"
+msgstr "主目录必须是一个绝对路径。\n"
+
+#: ../adduser:167
+msgid "Warning: The home dir you specified already exists.\n"
+msgstr "警告：您指定的主目录已经存在。\n"
+
+#: ../adduser:169
+#, fuzzy
+msgid "Warning: The home dir you specified does not exist.\n"
+msgstr "警告：您指定的主目录已经存在。\n"
+
+#: ../adduser:230
+#, fuzzy, perl-format
+msgid "The group `%s' already exists as a system group. Exiting...\n"
+msgstr "“%s”组已经存在。\n"
+
+#: ../adduser:233
+#, fuzzy, perl-format
+msgid "The group `%s' already exists and is not a system group.\n"
+msgstr "“%s”组已经存在。\n"
+
+#: ../adduser:235 ../adduser:264
+#, fuzzy, perl-format
+msgid "The GID `%s' is already in use.\n"
+msgstr "GID “%s”已经被使用。\n"
+
+#: ../adduser:244
+#, fuzzy, perl-format
+msgid ""
+"No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
+msgstr "GID 不能使用这个范围里的数字。 "
+
+#: ../adduser:245 ../adduser:274
+#, perl-format
+msgid "The group `%s' was not created.\n"
+msgstr "“%s”组没有被创建。\n"
+
+#: ../adduser:249 ../adduser:278
+#, fuzzy, perl-format
+msgid "Adding group `%s' (%s)...\n"
+msgstr "正在添加组 %s (%s)...\n"
+
+#: ../adduser:253 ../adduser:282 ../adduser:314
+msgid "Done.\n"
+msgstr "完成。\n"
+
+#: ../adduser:262 ../adduser:634
+#, perl-format
+msgid "The group `%s' already exists.\n"
+msgstr "“%s”组已经存在。\n"
+
+#: ../adduser:273
+#, fuzzy, perl-format
+msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
+msgstr "GID 不能使用这个范围里的数字。 "
+
+#: ../adduser:291 ../deluser:221 ../deluser:365
+#, perl-format
+msgid "The user `%s' does not exist.\n"
+msgstr "用户“%s”不存在。\n"
+
+#: ../adduser:293 ../adduser:641 ../deluser:329 ../deluser:368
+#, perl-format
+msgid "The group `%s' does not exist.\n"
+msgstr "“%s”组不存在。\n"
+
+#: ../adduser:296
+#, perl-format
+msgid "The user `%s' is already a member of `%s'.\n"
+msgstr "用户“%s”属于 %s 组。\n"
+
+#: ../adduser:301
+#, perl-format
+msgid "Adding user `%s' to group `%s'...\n"
+msgstr "正在添加用户 %s 到 %s 组...\n"
+
+#: ../adduser:324
+#, fuzzy, perl-format
+msgid "The user `%s' already exists as a system user. Exiting...\n"
+msgstr "“%s”组已经存在。\n"
+
+#: ../adduser:330
+#, perl-format
+msgid "Adding system user `%s'...\n"
+msgstr "正在添加系统用户 %s...\n"
+
+#: ../adduser:338
+#, fuzzy, perl-format
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
+"LAST_SYS_UID).\n"
+msgstr "UID/GID 不能使用这个范围里的数字。 "
+
+#: ../adduser:339 ../adduser:351 ../adduser:422 ../adduser:434
+#, perl-format
+msgid "The user `%s' was not created.\n"
+msgstr "用户“%s”没有被创建。\n"
+
+#: ../adduser:350
+#, fuzzy, perl-format
+msgid ""
+"No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
+msgstr "UID 不允许使用这个范围里的数字。 "
+
+#: ../adduser:355 ../adduser:361 ../adduser:438 ../adduser:444
+msgid "Internal error"
+msgstr "内部错误"
+
+#: ../adduser:367 ../adduser:449
+#, fuzzy, perl-format
+msgid "Adding new group `%s' (%s).\n"
+msgstr "正在添加新组 %s (%s)。\n"
+
+#: ../adduser:373 ../adduser:455
+#, fuzzy, perl-format
+msgid "Adding new user `%s' (%s) with group `%s'.\n"
+msgstr "正在添加用户 %s (%s) 到 %s 组。\n"
+
+#: ../adduser:387
+msgid ""
+"chage failed with return code 15, shadow not enabled, password aging cannot "
+"be set. Continuing.\n"
+msgstr ""
+
+#: ../adduser:413
+#, perl-format
+msgid "Adding user `%s'...\n"
+msgstr "正在添加用户 %s...\n"
+
+#: ../adduser:421
+#, fuzzy, perl-format
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr "UID/GID 不能使用这个范围里的数字。 "
+
+#: ../adduser:433
+#, fuzzy, perl-format
+msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr "UID 不允许使用这个范围里的数字。 "
+
+#. Translators: [y/N] has to be replaced by values defined in your
+#. locale.  You can see by running "locale yesexpr" which regular
+#. expression will be checked to find positive answer.
+#: ../adduser:485
+msgid "Is the information correct? [y/N] "
+msgstr "这些信息正确吗？[y/N] "
+
+#: ../adduser:492
+#, perl-format
+msgid "Setting quota from `%s'.\n"
+msgstr "正在从 %s 设置磁盘限额(quota)。\n"
+
+#: ../adduser:525
+#, fuzzy, perl-format
+msgid "Not creating home directory `%s'.\n"
+msgstr "无法创建主目录。\n"
+
+#: ../adduser:528
+#, perl-format
+msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
+msgstr "主目录 %s 已经存在。没有从 %s 复制文件过来。\n"
+
+#: ../adduser:534
+msgid ""
+"Warning: that home directory does not belong to the user you are currently "
+"creating\n"
+msgstr ""
+
+#: ../adduser:539
+#, perl-format
+msgid "Creating home directory `%s'.\n"
+msgstr "正在创建主目录 %s。\n"
+
+#: ../adduser:549
+#, perl-format
+msgid "Copying files from `%s'\n"
+msgstr "正在从 %s 复制文件\n"
+
+#: ../adduser:624
+#, fuzzy, perl-format
+msgid "The user `%s' already exists, and is not a system user.\n"
+msgstr "“%s”组已经存在。\n"
+
+#: ../adduser:626
+#, fuzzy, perl-format
+msgid "The user `%s' already exists.\n"
+msgstr "“%s”组已经存在。\n"
+
+#: ../adduser:629
+#, fuzzy, perl-format
+msgid "The UID %s is already in use.\n"
+msgstr "GID “%s”已经被使用。\n"
+
+#: ../adduser:636
+#, perl-format
+msgid "The GID %s is already in use.\n"
+msgstr "GID “%s”已经被使用。\n"
+
+#: ../adduser:643
+#, fuzzy, perl-format
+msgid "The GID %s does not exist.\n"
+msgstr "用户“%s”不存在。\n"
+
+#: ../adduser:699
+msgid ""
+"To avoid problems, the username should consist of\n"
+"letters, digits, underscores, periods and dashes. For compatibility with\n"
+"Samba machine accounts $ is also supported at the end of the username\n"
+msgstr ""
+
+#: ../adduser:706
+msgid "Allowing use of questionable username.\n"
+msgstr ""
+
+#: ../adduser:710
+msgid ""
+"Please enter a username matching the regular expression configured\n"
+"via the name_regex configuration variable.  Use the `--force-badname'\n"
+"option to relax this check or reconfigure name_regex.\n"
+msgstr ""
+
+#: ../adduser:725
+#, fuzzy, perl-format
+msgid "Selecting from %s %s (%s).\n"
+msgstr "正在从 %s 设置磁盘限额(quota)。\n"
+
+#: ../adduser:790
+#, fuzzy, perl-format
+msgid "Removing directory `%s'\n"
+msgstr "正在创建主目录 %s。\n"
+
+#: ../adduser:794
+#, fuzzy, perl-format
+msgid "Removing user `%s'.\n"
+msgstr "正在删除用户 %s...\n"
+
+#: ../adduser:798
+#, fuzzy, perl-format
+msgid "Removing group `%s'.\n"
+msgstr "正在删除组 %s...\n"
+
+#: ../adduser:831
+msgid ""
+"adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"
+"[--disabled-password] [--disabled-login] user\n"
+"   Add a normal user\n"
+"\n"
+"adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+"[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
+"password]\n"
+"[--disabled-login] user\n"
+"   Add a system user\n"
+"\n"
+"adduser --group [--gid ID] group\n"
+"addgroup [--gid ID] group\n"
+"   Add a user group\n"
+"\n"
+"addgroup --system [--gid ID] group\n"
+"   Add a system group\n"
+"\n"
+"adduser user group\n"
+"   Add an existing user to an existing group\n"
+"\n"
+"Other options are [--quiet] [--force-badname] [--help] [--version] [--conf\n"
+"FILE].\n"
+msgstr ""
+
 #: ../deluser:94
 msgid "Only root may remove a user or group from the system.\n"
 msgstr "只有 root 才能从系统中删除用户或组。\n"
-
-#: ../deluser:111
-msgid "No options allowed after names.\n"
-msgstr "名字后面不允许加入选项。\n"
 
 #: ../deluser:119
 #, fuzzy
@@ -32,10 +328,6 @@ msgstr "请输入要删除的组名："
 #, fuzzy
 msgid "Enter a user name to remove: "
 msgstr "请输入要删除的用户名："
-
-#: ../deluser:128
-msgid "Only one or two names allowed.\n"
-msgstr ""
 
 #: ../deluser:162
 #, fuzzy
@@ -57,11 +349,6 @@ msgstr "“%s 不是 %s 组中的成员。\n"
 #: ../deluser:215
 #, fuzzy, perl-format
 msgid "The user `%s' does not exist, but --system was given... Exiting.\n"
-msgstr "用户“%s”不存在。\n"
-
-#: ../deluser:221 ../deluser:365
-#, perl-format
-msgid "The user `%s' does not exist.\n"
 msgstr "用户“%s”不存在。\n"
 
 #: ../deluser:225
@@ -110,11 +397,6 @@ msgstr "正在删除用户 %s...\n"
 #: ../deluser:321 ../deluser:356 ../deluser:392
 msgid "done.\n"
 msgstr "完成。\n"
-
-#: ../deluser:329 ../deluser:368
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "“%s”组不存在。\n"
 
 #: ../deluser:333
 #, perl-format
@@ -177,6 +459,7 @@ msgstr ""
 #: ../deluser:404
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
+"<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 msgstr ""
 
 #: ../deluser:407
@@ -239,180 +522,20 @@ msgid ""
 "\n"
 msgstr ""
 
-#~ msgid "Only root may add a user or group to the system.\n"
-#~ msgstr "只有 root 才能将用户或组添加到系统。\n"
+#: ../AdduserCommon.pm:83
+#, fuzzy, perl-format
+msgid "%s: `%s' doesn't exist.  Using defaults.\n"
+msgstr "%s：%s 不存在。使用默认值。\n"
 
-#~ msgid "Enter a groupname to add: "
-#~ msgstr "请输入要添加的组名："
+#: ../AdduserCommon.pm:93
+#, fuzzy, perl-format
+msgid "Couldn't parse `%s':%s.\n"
+msgstr "无法解读 %s:%s。\n"
 
-#~ msgid "Enter a username to add: "
-#~ msgstr "请输入要添加的用户名："
-
-#~ msgid "Specify only one name in this mode.\n"
-#~ msgstr "这个模式下只能指定一个名字。\n"
-
-#~ msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
-#~ msgstr "--group，--ingroup，和 --gid 选项是不能同时使用的。\n"
-
-#~ msgid "The home dir must be an absolute path.\n"
-#~ msgstr "主目录必须是一个绝对路径。\n"
-
-#~ msgid "Warning: The home dir you specified already exists.\n"
-#~ msgstr "警告：您指定的主目录已经存在。\n"
-
-#, fuzzy
-#~ msgid "Warning: The home dir you specified does not exist.\n"
-#~ msgstr "警告：您指定的主目录已经存在。\n"
-
-#, fuzzy
-#~ msgid "The group `%s' already exists as a system group. Exiting...\n"
-#~ msgstr "“%s”组已经存在。\n"
-
-#, fuzzy
-#~ msgid "The group `%s' already exists and is not a system group.\n"
-#~ msgstr "“%s”组已经存在。\n"
-
-#, fuzzy
-#~ msgid "The GID `%s' is already in use.\n"
-#~ msgstr "GID “%s”已经被使用。\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
-#~ msgstr "GID 不能使用这个范围里的数字。 "
-
-#~ msgid "The group `%s' was not created.\n"
-#~ msgstr "“%s”组没有被创建。\n"
-
-#, fuzzy
-#~ msgid "Adding group `%s' (%s)...\n"
-#~ msgstr "正在添加组 %s (%s)...\n"
-
-#~ msgid "Done.\n"
-#~ msgstr "完成。\n"
-
-#~ msgid "The group `%s' already exists.\n"
-#~ msgstr "“%s”组已经存在。\n"
-
-#, fuzzy
-#~ msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
-#~ msgstr "GID 不能使用这个范围里的数字。 "
-
-#~ msgid "The user `%s' is already a member of `%s'.\n"
-#~ msgstr "用户“%s”属于 %s 组。\n"
-
-#~ msgid "Adding user `%s' to group `%s'...\n"
-#~ msgstr "正在添加用户 %s 到 %s 组...\n"
-
-#, fuzzy
-#~ msgid "The user `%s' already exists as a system user. Exiting...\n"
-#~ msgstr "“%s”组已经存在。\n"
-
-#~ msgid "Adding system user `%s'...\n"
-#~ msgstr "正在添加系统用户 %s...\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
-#~ "LAST_SYS_UID).\n"
-#~ msgstr "UID/GID 不能使用这个范围里的数字。 "
-
-#~ msgid "The user `%s' was not created.\n"
-#~ msgstr "用户“%s”没有被创建。\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
-#~ msgstr "UID 不允许使用这个范围里的数字。 "
-
-#~ msgid "Internal error"
-#~ msgstr "内部错误"
-
-#, fuzzy
-#~ msgid "Adding new group `%s' (%s).\n"
-#~ msgstr "正在添加新组 %s (%s)。\n"
-
-#, fuzzy
-#~ msgid "Adding new user `%s' (%s) with group `%s'.\n"
-#~ msgstr "正在添加用户 %s (%s) 到 %s 组。\n"
-
-#~ msgid "Adding user `%s'...\n"
-#~ msgstr "正在添加用户 %s...\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-#~ msgstr "UID/GID 不能使用这个范围里的数字。 "
-
-#, fuzzy
-#~ msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-#~ msgstr "UID 不允许使用这个范围里的数字。 "
-
-#~ msgid "Is the information correct? [y/N] "
-#~ msgstr "这些信息正确吗？[y/N] "
-
-#~ msgid "Setting quota from `%s'.\n"
-#~ msgstr "正在从 %s 设置磁盘限额(quota)。\n"
-
-#, fuzzy
-#~ msgid "Not creating home directory `%s'.\n"
-#~ msgstr "无法创建主目录。\n"
-
-#~ msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
-#~ msgstr "主目录 %s 已经存在。没有从 %s 复制文件过来。\n"
-
-#~ msgid "Creating home directory `%s'.\n"
-#~ msgstr "正在创建主目录 %s。\n"
-
-#~ msgid "Copying files from `%s'\n"
-#~ msgstr "正在从 %s 复制文件\n"
-
-#, fuzzy
-#~ msgid "The user `%s' already exists, and is not a system user.\n"
-#~ msgstr "“%s”组已经存在。\n"
-
-#, fuzzy
-#~ msgid "The user `%s' already exists.\n"
-#~ msgstr "“%s”组已经存在。\n"
-
-#, fuzzy
-#~ msgid "The UID %s is already in use.\n"
-#~ msgstr "GID “%s”已经被使用。\n"
-
-#~ msgid "The GID %s is already in use.\n"
-#~ msgstr "GID “%s”已经被使用。\n"
-
-#, fuzzy
-#~ msgid "The GID %s does not exist.\n"
-#~ msgstr "用户“%s”不存在。\n"
-
-#, fuzzy
-#~ msgid "Selecting from %s %s (%s).\n"
-#~ msgstr "正在从 %s 设置磁盘限额(quota)。\n"
-
-#, fuzzy
-#~ msgid "Removing directory `%s'\n"
-#~ msgstr "正在创建主目录 %s。\n"
-
-#, fuzzy
-#~ msgid "Removing user `%s'.\n"
-#~ msgstr "正在删除用户 %s...\n"
-
-#, fuzzy
-#~ msgid "Removing group `%s'.\n"
-#~ msgstr "正在删除组 %s...\n"
-
-#, fuzzy
-#~ msgid "%s: `%s' doesn't exist.  Using defaults.\n"
-#~ msgstr "%s：%s 不存在。使用默认值。\n"
-
-#, fuzzy
-#~ msgid "Couldn't parse `%s':%s.\n"
-#~ msgstr "无法解读 %s:%s。\n"
-
-#, fuzzy
-#~ msgid "Unknown variable `%s' at `%s':%s.\n"
-#~ msgstr "未知变量“%s”在 %s:%s。\n"
+#: ../AdduserCommon.pm:98
+#, fuzzy, perl-format
+msgid "Unknown variable `%s' at `%s':%s.\n"
+msgstr "未知变量“%s”在 %s:%s。\n"
 
 #~ msgid "I need a name to add.\n"
 #~ msgstr "我需要被添加用户的名字。\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-23 18:43+0000\n"
+"POT-Creation-Date: 2005-10-26 14:30+0200\n"
 "PO-Revision-Date: 2004-07-27 12:07+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@id.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -17,15 +17,345 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
 
+#. everyone can issue "--help" and "--version", but only root can go on
+#: ../adduser:98
+msgid "Only root may add a user or group to the system.\n"
+msgstr "Только root может добавлять пользователей и группы в систему.\n"
+
+#: ../adduser:118 ../deluser:111
+msgid "No options allowed after names.\n"
+msgstr "Нельзя указывать параметры после имён.\n"
+
+#: ../adduser:125 ../deluser:128
+msgid "Only one or two names allowed.\n"
+msgstr ""
+
+#: ../adduser:131
+msgid "Enter a groupname to add: "
+msgstr "Введите название группы: "
+
+#: ../adduser:135
+msgid "Enter a username to add: "
+msgstr "Введите имя учётной записи: "
+
+#. must be addusertogroup
+#: ../adduser:142
+msgid "Specify only one name in this mode.\n"
+msgstr "В этом режиме указывается только одно имя.\n"
+
+#: ../adduser:158
+msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
+msgstr "Опции --group, --ingroup и -gid являются взаимоисключающими.\n"
+
+#: ../adduser:163
+msgid "The home dir must be an absolute path.\n"
+msgstr "Домашний каталог должен задаваться в виде абсолютного пути.\n"
+
+#: ../adduser:167
+msgid "Warning: The home dir you specified already exists.\n"
+msgstr "Предупреждение: Заданный вами домашний каталог уже существует.\n"
+
+#: ../adduser:169
+#, fuzzy
+msgid "Warning: The home dir you specified does not exist.\n"
+msgstr "Предупреждение: Заданный вами домашний каталог уже существует.\n"
+
+#: ../adduser:230
+#, fuzzy, perl-format
+msgid "The group `%s' already exists as a system group. Exiting...\n"
+msgstr "Группа `%s' уже существует.\n"
+
+#: ../adduser:233
+#, fuzzy, perl-format
+msgid "The group `%s' already exists and is not a system group.\n"
+msgstr "Группа `%s' уже существует.\n"
+
+#: ../adduser:235 ../adduser:264
+#, fuzzy, perl-format
+msgid "The GID `%s' is already in use.\n"
+msgstr "GID `%s' уже используется.\n"
+
+#: ../adduser:244
+#, fuzzy, perl-format
+msgid ""
+"No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
+msgstr "Нет свободного GID в диапазоне"
+
+#: ../adduser:245 ../adduser:274
+#, perl-format
+msgid "The group `%s' was not created.\n"
+msgstr "Группа `%s' не создана.\n"
+
+#: ../adduser:249 ../adduser:278
+#, fuzzy, perl-format
+msgid "Adding group `%s' (%s)...\n"
+msgstr "Добавляется группа %s (%s)...\n"
+
+#: ../adduser:253 ../adduser:282 ../adduser:314
+msgid "Done.\n"
+msgstr "Готово.\n"
+
+#: ../adduser:262 ../adduser:634
+#, perl-format
+msgid "The group `%s' already exists.\n"
+msgstr "Группа `%s' уже существует.\n"
+
+#: ../adduser:273
+#, fuzzy, perl-format
+msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
+msgstr "Нет свободного GID в диапазоне"
+
+#: ../adduser:291 ../deluser:221 ../deluser:365
+#, perl-format
+msgid "The user `%s' does not exist.\n"
+msgstr "Пользователь `%s' не существует.\n"
+
+#: ../adduser:293 ../adduser:641 ../deluser:329 ../deluser:368
+#, perl-format
+msgid "The group `%s' does not exist.\n"
+msgstr "Группа `%s' не существует.\n"
+
+#: ../adduser:296
+#, perl-format
+msgid "The user `%s' is already a member of `%s'.\n"
+msgstr "Пользователь `%s' уже является членом группы `%s'.\n"
+
+#: ../adduser:301
+#, perl-format
+msgid "Adding user `%s' to group `%s'...\n"
+msgstr "Добавляется пользователь `%s' в группу `%s'...\n"
+
+#: ../adduser:324
+#, fuzzy, perl-format
+msgid "The user `%s' already exists as a system user. Exiting...\n"
+msgstr "Пользователь `%s' уже существует.\n"
+
+#: ../adduser:330
+#, perl-format
+msgid "Adding system user `%s'...\n"
+msgstr "Добавляется системный пользователь `%s'...\n"
+
+#: ../adduser:338
+#, fuzzy, perl-format
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
+"LAST_SYS_UID).\n"
+msgstr "Нет свободной пары UID/GID в диапазоне"
+
+#: ../adduser:339 ../adduser:351 ../adduser:422 ../adduser:434
+#, perl-format
+msgid "The user `%s' was not created.\n"
+msgstr "Пользователь `%s' не создан.\n"
+
+#: ../adduser:350
+#, fuzzy, perl-format
+msgid ""
+"No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
+msgstr "Нет свободного UID в диапазоне"
+
+#: ../adduser:355 ../adduser:361 ../adduser:438 ../adduser:444
+msgid "Internal error"
+msgstr "Внутренняя ошибка"
+
+#: ../adduser:367 ../adduser:449
+#, fuzzy, perl-format
+msgid "Adding new group `%s' (%s).\n"
+msgstr "Добавляется новая группа %s (%s).\n"
+
+#: ../adduser:373 ../adduser:455
+#, fuzzy, perl-format
+msgid "Adding new user `%s' (%s) with group `%s'.\n"
+msgstr "Добавляется новый пользователь %s (%s) с группой %s.\n"
+
+#: ../adduser:387
+msgid ""
+"chage failed with return code 15, shadow not enabled, password aging cannot "
+"be set. Continuing.\n"
+msgstr ""
+
+#: ../adduser:413
+#, perl-format
+msgid "Adding user `%s'...\n"
+msgstr "Добавляется пользователь `%s'...\n"
+
+#: ../adduser:421
+#, fuzzy, perl-format
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr "Нет свободной пары UID/GID в диапазоне"
+
+#: ../adduser:433
+#, fuzzy, perl-format
+msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr "Нет свободного UID в диапазоне"
+
+#. Translators: [y/N] has to be replaced by values defined in your
+#. locale.  You can see by running "locale yesexpr" which regular
+#. expression will be checked to find positive answer.
+#: ../adduser:485
+msgid "Is the information correct? [y/N] "
+msgstr "Эти сведения верны? [y/N] "
+
+#: ../adduser:492
+#, perl-format
+msgid "Setting quota from `%s'.\n"
+msgstr "Устанавливается квота от `%s'.\n"
+
+#: ../adduser:525
+#, fuzzy, perl-format
+msgid "Not creating home directory `%s'.\n"
+msgstr "Не удалось создать домашний каталог.\n"
+
+#: ../adduser:528
+#, perl-format
+msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
+msgstr "Домашний каталог `%s' уже существует. Не удалось копирование из `%s'\n"
+
+#: ../adduser:534
+msgid ""
+"Warning: that home directory does not belong to the user you are currently "
+"creating\n"
+msgstr ""
+
+#: ../adduser:539
+#, perl-format
+msgid "Creating home directory `%s'.\n"
+msgstr "Создаётся домашний каталог `%s'.\n"
+
+#: ../adduser:549
+#, perl-format
+msgid "Copying files from `%s'\n"
+msgstr "Копируются файлы из `%s'\n"
+
+#: ../adduser:624
+#, fuzzy, perl-format
+msgid "The user `%s' already exists, and is not a system user.\n"
+msgstr "Пользователь `%s' уже существует.\n"
+
+#: ../adduser:626
+#, perl-format
+msgid "The user `%s' already exists.\n"
+msgstr "Пользователь `%s' уже существует.\n"
+
+#: ../adduser:629
+#, fuzzy, perl-format
+msgid "The UID %s is already in use.\n"
+msgstr "GID `%s' уже используется.\n"
+
+#: ../adduser:636
+#, perl-format
+msgid "The GID %s is already in use.\n"
+msgstr "GID `%s' уже используется.\n"
+
+#: ../adduser:643
+#, perl-format
+msgid "The GID %s does not exist.\n"
+msgstr "GID `%s' не существует.\n"
+
+#: ../adduser:699
+#, fuzzy
+msgid ""
+"To avoid problems, the username should consist of\n"
+"letters, digits, underscores, periods and dashes. For compatibility with\n"
+"Samba machine accounts $ is also supported at the end of the username\n"
+msgstr ""
+"Во избежание проблем, имя учётной записи пользователя должно состоять из "
+"букв\n"
+"или символа подчёркивания после букв, цифр, символов подчёркивания и тире.\n"
+"Также, в целях совместимости с учётными записями Samba в конец имени\n"
+"можно дописывать знак $\n"
+
+#: ../adduser:706
+msgid "Allowing use of questionable username.\n"
+msgstr "Разрешено использование сомнительных имён пользователей.\n"
+
+#: ../adduser:710
+msgid ""
+"Please enter a username matching the regular expression configured\n"
+"via the name_regex configuration variable.  Use the `--force-badname'\n"
+"option to relax this check or reconfigure name_regex.\n"
+msgstr ""
+
+#: ../adduser:725
+#, perl-format
+msgid "Selecting from %s %s (%s).\n"
+msgstr "Выбор из %s %s (%s).\n"
+
+#: ../adduser:790
+#, perl-format
+msgid "Removing directory `%s'\n"
+msgstr "Удаляется каталог `%s'.\n"
+
+#: ../adduser:794
+#, perl-format
+msgid "Removing user `%s'.\n"
+msgstr "Удаляется пользователь `%s'.\n"
+
+#: ../adduser:798
+#, perl-format
+msgid "Removing group `%s'.\n"
+msgstr "Удаляется группа `%s'.\n"
+
+#: ../adduser:831
+#, fuzzy
+msgid ""
+"adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"
+"[--disabled-password] [--disabled-login] user\n"
+"   Add a normal user\n"
+"\n"
+"adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+"[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
+"password]\n"
+"[--disabled-login] user\n"
+"   Add a system user\n"
+"\n"
+"adduser --group [--gid ID] group\n"
+"addgroup [--gid ID] group\n"
+"   Add a user group\n"
+"\n"
+"addgroup --system [--gid ID] group\n"
+"   Add a system group\n"
+"\n"
+"adduser user group\n"
+"   Add an existing user to an existing group\n"
+"\n"
+"Other options are [--quiet] [--force-badname] [--help] [--version] [--conf\n"
+"FILE].\n"
+msgstr ""
+"adduser [--home КАТАЛОГ] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup ГРУППА | --gid "
+"ID]\n"
+"[--disabled-password] [--disabled-login] пользователь\n"
+"   Создание обычного пользователя\n"
+"\n"
+"adduser --system [--home КАТАЛОГ] [--shell SHELL] [--no-create-home] [--uid "
+"ID]\n"
+"[--gecos GECOS] [--group | --ingroup ГРУППА | --gid ID] [--disabled-"
+"password]\n"
+"[--disabled-login] пользователь\n"
+"   Создание системного пользователя\n"
+"\n"
+"adduser --group [--gid ID] группа\n"
+"addgroup [--gid ID] группа\n"
+"   Создание пользовательской группы\n"
+"\n"
+"adduser --group --system [--gid ID] группа\n"
+"addgroup --system [--gid ID] группа\n"
+"   Создание системной группы\n"
+"\n"
+"adduser пользователь группа\n"
+"   Добавление существующего пользователя в существующую группу\n"
+"\n"
+"Глобальная конфигурация находится в файле %s.\n"
+"Другие опции: [--quiet] [--force-badname] [--help] [--version] [--conf\n"
+"ФАЙЛ].\n"
+
 #: ../deluser:94
 msgid "Only root may remove a user or group from the system.\n"
 msgstr ""
 "Только пользователь root имеет право удалять пользователей или группы из "
 "системы.\n"
-
-#: ../deluser:111
-msgid "No options allowed after names.\n"
-msgstr "Нельзя указывать параметры после имён.\n"
 
 #: ../deluser:119
 #, fuzzy
@@ -36,10 +366,6 @@ msgstr "Введите имя группы, которую вы хотите у�
 #, fuzzy
 msgid "Enter a user name to remove: "
 msgstr "Введите имя пользователя, которого вы хотите удалить: "
-
-#: ../deluser:128
-msgid "Only one or two names allowed.\n"
-msgstr ""
 
 #: ../deluser:162
 #, fuzzy
@@ -61,11 +387,6 @@ msgstr "`%s' не является членом группы `%s'.\n"
 #: ../deluser:215
 #, fuzzy, perl-format
 msgid "The user `%s' does not exist, but --system was given... Exiting.\n"
-msgstr "Пользователь `%s' не существует.\n"
-
-#: ../deluser:221 ../deluser:365
-#, perl-format
-msgid "The user `%s' does not exist.\n"
 msgstr "Пользователь `%s' не существует.\n"
 
 #: ../deluser:225
@@ -114,11 +435,6 @@ msgstr "Удаляется пользователь `%s'...\n"
 #: ../deluser:321 ../deluser:356 ../deluser:392
 msgid "done.\n"
 msgstr "готово.\n"
-
-#: ../deluser:329 ../deluser:368
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "Группа `%s' не существует.\n"
 
 #: ../deluser:333
 #, perl-format
@@ -181,6 +497,7 @@ msgstr ""
 #: ../deluser:404
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
+"<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 msgstr ""
 
 #: ../deluser:407
@@ -243,248 +560,20 @@ msgid ""
 "\n"
 msgstr ""
 
-#~ msgid "Only root may add a user or group to the system.\n"
-#~ msgstr "Только root может добавлять пользователей и группы в систему.\n"
+#: ../AdduserCommon.pm:83
+#, fuzzy, perl-format
+msgid "%s: `%s' doesn't exist.  Using defaults.\n"
+msgstr "%s: %s не существует. Используются значения по умолчанию.\n"
 
-#~ msgid "Enter a groupname to add: "
-#~ msgstr "Введите название группы: "
+#: ../AdduserCommon.pm:93
+#, fuzzy, perl-format
+msgid "Couldn't parse `%s':%s.\n"
+msgstr "Невозможно разобрать %s:%s.\n"
 
-#~ msgid "Enter a username to add: "
-#~ msgstr "Введите имя учётной записи: "
-
-#~ msgid "Specify only one name in this mode.\n"
-#~ msgstr "В этом режиме указывается только одно имя.\n"
-
-#~ msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
-#~ msgstr "Опции --group, --ingroup и -gid являются взаимоисключающими.\n"
-
-#~ msgid "The home dir must be an absolute path.\n"
-#~ msgstr "Домашний каталог должен задаваться в виде абсолютного пути.\n"
-
-#~ msgid "Warning: The home dir you specified already exists.\n"
-#~ msgstr "Предупреждение: Заданный вами домашний каталог уже существует.\n"
-
-#, fuzzy
-#~ msgid "Warning: The home dir you specified does not exist.\n"
-#~ msgstr "Предупреждение: Заданный вами домашний каталог уже существует.\n"
-
-#, fuzzy
-#~ msgid "The group `%s' already exists as a system group. Exiting...\n"
-#~ msgstr "Группа `%s' уже существует.\n"
-
-#, fuzzy
-#~ msgid "The group `%s' already exists and is not a system group.\n"
-#~ msgstr "Группа `%s' уже существует.\n"
-
-#, fuzzy
-#~ msgid "The GID `%s' is already in use.\n"
-#~ msgstr "GID `%s' уже используется.\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
-#~ msgstr "Нет свободного GID в диапазоне"
-
-#~ msgid "The group `%s' was not created.\n"
-#~ msgstr "Группа `%s' не создана.\n"
-
-#, fuzzy
-#~ msgid "Adding group `%s' (%s)...\n"
-#~ msgstr "Добавляется группа %s (%s)...\n"
-
-#~ msgid "Done.\n"
-#~ msgstr "Готово.\n"
-
-#~ msgid "The group `%s' already exists.\n"
-#~ msgstr "Группа `%s' уже существует.\n"
-
-#, fuzzy
-#~ msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
-#~ msgstr "Нет свободного GID в диапазоне"
-
-#~ msgid "The user `%s' is already a member of `%s'.\n"
-#~ msgstr "Пользователь `%s' уже является членом группы `%s'.\n"
-
-#~ msgid "Adding user `%s' to group `%s'...\n"
-#~ msgstr "Добавляется пользователь `%s' в группу `%s'...\n"
-
-#, fuzzy
-#~ msgid "The user `%s' already exists as a system user. Exiting...\n"
-#~ msgstr "Пользователь `%s' уже существует.\n"
-
-#~ msgid "Adding system user `%s'...\n"
-#~ msgstr "Добавляется системный пользователь `%s'...\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
-#~ "LAST_SYS_UID).\n"
-#~ msgstr "Нет свободной пары UID/GID в диапазоне"
-
-#~ msgid "The user `%s' was not created.\n"
-#~ msgstr "Пользователь `%s' не создан.\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
-#~ msgstr "Нет свободного UID в диапазоне"
-
-#~ msgid "Internal error"
-#~ msgstr "Внутренняя ошибка"
-
-#, fuzzy
-#~ msgid "Adding new group `%s' (%s).\n"
-#~ msgstr "Добавляется новая группа %s (%s).\n"
-
-#, fuzzy
-#~ msgid "Adding new user `%s' (%s) with group `%s'.\n"
-#~ msgstr "Добавляется новый пользователь %s (%s) с группой %s.\n"
-
-#~ msgid "Adding user `%s'...\n"
-#~ msgstr "Добавляется пользователь `%s'...\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-#~ msgstr "Нет свободной пары UID/GID в диапазоне"
-
-#, fuzzy
-#~ msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-#~ msgstr "Нет свободного UID в диапазоне"
-
-#~ msgid "Is the information correct? [y/N] "
-#~ msgstr "Эти сведения верны? [y/N] "
-
-#~ msgid "Setting quota from `%s'.\n"
-#~ msgstr "Устанавливается квота от `%s'.\n"
-
-#, fuzzy
-#~ msgid "Not creating home directory `%s'.\n"
-#~ msgstr "Не удалось создать домашний каталог.\n"
-
-#~ msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
-#~ msgstr ""
-#~ "Домашний каталог `%s' уже существует. Не удалось копирование из `%s'\n"
-
-#~ msgid "Creating home directory `%s'.\n"
-#~ msgstr "Создаётся домашний каталог `%s'.\n"
-
-#~ msgid "Copying files from `%s'\n"
-#~ msgstr "Копируются файлы из `%s'\n"
-
-#, fuzzy
-#~ msgid "The user `%s' already exists, and is not a system user.\n"
-#~ msgstr "Пользователь `%s' уже существует.\n"
-
-#~ msgid "The user `%s' already exists.\n"
-#~ msgstr "Пользователь `%s' уже существует.\n"
-
-#, fuzzy
-#~ msgid "The UID %s is already in use.\n"
-#~ msgstr "GID `%s' уже используется.\n"
-
-#~ msgid "The GID %s is already in use.\n"
-#~ msgstr "GID `%s' уже используется.\n"
-
-#~ msgid "The GID %s does not exist.\n"
-#~ msgstr "GID `%s' не существует.\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "To avoid problems, the username should consist of\n"
-#~ "letters, digits, underscores, periods and dashes. For compatibility with\n"
-#~ "Samba machine accounts $ is also supported at the end of the username\n"
-#~ msgstr ""
-#~ "Во избежание проблем, имя учётной записи пользователя должно состоять из "
-#~ "букв\n"
-#~ "или символа подчёркивания после букв, цифр, символов подчёркивания и "
-#~ "тире.\n"
-#~ "Также, в целях совместимости с учётными записями Samba в конец имени\n"
-#~ "можно дописывать знак $\n"
-
-#~ msgid "Allowing use of questionable username.\n"
-#~ msgstr "Разрешено использование сомнительных имён пользователей.\n"
-
-#~ msgid "Selecting from %s %s (%s).\n"
-#~ msgstr "Выбор из %s %s (%s).\n"
-
-#~ msgid "Removing directory `%s'\n"
-#~ msgstr "Удаляется каталог `%s'.\n"
-
-#~ msgid "Removing user `%s'.\n"
-#~ msgstr "Удаляется пользователь `%s'.\n"
-
-#~ msgid "Removing group `%s'.\n"
-#~ msgstr "Удаляется группа `%s'.\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid "
-#~ "ID]\n"
-#~ "[--disabled-password] [--disabled-login] user\n"
-#~ "   Add a normal user\n"
-#~ "\n"
-#~ "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
-#~ "ID]\n"
-#~ "[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
-#~ "password]\n"
-#~ "[--disabled-login] user\n"
-#~ "   Add a system user\n"
-#~ "\n"
-#~ "adduser --group [--gid ID] group\n"
-#~ "addgroup [--gid ID] group\n"
-#~ "   Add a user group\n"
-#~ "\n"
-#~ "addgroup --system [--gid ID] group\n"
-#~ "   Add a system group\n"
-#~ "\n"
-#~ "adduser user group\n"
-#~ "   Add an existing user to an existing group\n"
-#~ "\n"
-#~ "Other options are [--quiet] [--force-badname] [--help] [--version] [--"
-#~ "conf\n"
-#~ "FILE].\n"
-#~ msgstr ""
-#~ "adduser [--home КАТАЛОГ] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup ГРУППА | --gid "
-#~ "ID]\n"
-#~ "[--disabled-password] [--disabled-login] пользователь\n"
-#~ "   Создание обычного пользователя\n"
-#~ "\n"
-#~ "adduser --system [--home КАТАЛОГ] [--shell SHELL] [--no-create-home] [--"
-#~ "uid ID]\n"
-#~ "[--gecos GECOS] [--group | --ingroup ГРУППА | --gid ID] [--disabled-"
-#~ "password]\n"
-#~ "[--disabled-login] пользователь\n"
-#~ "   Создание системного пользователя\n"
-#~ "\n"
-#~ "adduser --group [--gid ID] группа\n"
-#~ "addgroup [--gid ID] группа\n"
-#~ "   Создание пользовательской группы\n"
-#~ "\n"
-#~ "adduser --group --system [--gid ID] группа\n"
-#~ "addgroup --system [--gid ID] группа\n"
-#~ "   Создание системной группы\n"
-#~ "\n"
-#~ "adduser пользователь группа\n"
-#~ "   Добавление существующего пользователя в существующую группу\n"
-#~ "\n"
-#~ "Глобальная конфигурация находится в файле %s.\n"
-#~ "Другие опции: [--quiet] [--force-badname] [--help] [--version] [--conf\n"
-#~ "ФАЙЛ].\n"
-
-#, fuzzy
-#~ msgid "%s: `%s' doesn't exist.  Using defaults.\n"
-#~ msgstr "%s: %s не существует. Используются значения по умолчанию.\n"
-
-#, fuzzy
-#~ msgid "Couldn't parse `%s':%s.\n"
-#~ msgstr "Невозможно разобрать %s:%s.\n"
-
-#, fuzzy
-#~ msgid "Unknown variable `%s' at `%s':%s.\n"
-#~ msgstr "Неизвестная переменная `%s' в %s:%s.\n"
+#: ../AdduserCommon.pm:98
+#, fuzzy, perl-format
+msgid "Unknown variable `%s' at `%s':%s.\n"
+msgstr "Неизвестная переменная `%s' в %s:%s.\n"
 
 #~ msgid "I need a name to add.\n"
 #~ msgstr "Необходимо ввести имя учётной записи.\n"

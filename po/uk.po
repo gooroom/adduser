@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk_uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-23 18:43+0000\n"
+"POT-Creation-Date: 2005-10-26 14:30+0200\n"
 "PO-Revision-Date: 2005-02-08 20:26+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -21,14 +21,341 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
+#. everyone can issue "--help" and "--version", but only root can go on
+#: ../adduser:98
+msgid "Only root may add a user or group to the system.\n"
+msgstr "Тільки root може додавати користувачів або групи до системи.\n"
+
+#: ../adduser:118 ../deluser:111
+msgid "No options allowed after names.\n"
+msgstr "Не можна вказувати параметри після імен.\n"
+
+#: ../adduser:125 ../deluser:128
+msgid "Only one or two names allowed.\n"
+msgstr ""
+
+#: ../adduser:131
+msgid "Enter a groupname to add: "
+msgstr "Введіть ім'я групи: "
+
+#: ../adduser:135
+msgid "Enter a username to add: "
+msgstr "Введіть ім'я користувача: "
+
+#. must be addusertogroup
+#: ../adduser:142
+msgid "Specify only one name in this mode.\n"
+msgstr "Вкажіть тільки одне ім'я в цьому режимі.\n"
+
+#: ../adduser:158
+msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
+msgstr "Опції --group, --ingroup та --gid несумісні.\n"
+
+#: ../adduser:163
+msgid "The home dir must be an absolute path.\n"
+msgstr "До домашньої директорії повинен бути заданий абсолютний шлях.\n"
+
+#: ../adduser:167
+msgid "Warning: The home dir you specified already exists.\n"
+msgstr "Попередження: вказана вами домашня директорія вже існує.\n"
+
+#: ../adduser:169
+msgid "Warning: The home dir you specified does not exist.\n"
+msgstr "Попередження: вказана вами домашня директорія не існує.\n"
+
+#: ../adduser:230
+#, perl-format
+msgid "The group `%s' already exists as a system group. Exiting...\n"
+msgstr "Група \"%s\" вже існує як системна група. Виходимо...\n"
+
+#: ../adduser:233
+#, fuzzy, perl-format
+msgid "The group `%s' already exists and is not a system group.\n"
+msgstr "Користувач \"%s\" вже існує і не є системним користувачем.\n"
+
+#: ../adduser:235 ../adduser:264
+#, fuzzy, perl-format
+msgid "The GID `%s' is already in use.\n"
+msgstr "GID %s вже використовується.\n"
+
+#: ../adduser:244
+#, fuzzy, perl-format
+msgid ""
+"No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
+msgstr "Немає вільного GID на проміжку "
+
+#: ../adduser:245 ../adduser:274
+#, perl-format
+msgid "The group `%s' was not created.\n"
+msgstr "Група \"%s\" не була створена.\n"
+
+#: ../adduser:249 ../adduser:278
+#, perl-format
+msgid "Adding group `%s' (%s)...\n"
+msgstr "Додається група \"%s\" (%s)...\n"
+
+#: ../adduser:253 ../adduser:282 ../adduser:314
+msgid "Done.\n"
+msgstr "Завершено.\n"
+
+#: ../adduser:262 ../adduser:634
+#, perl-format
+msgid "The group `%s' already exists.\n"
+msgstr "Група \"%s\" вже існує.\n"
+
+#: ../adduser:273
+#, fuzzy, perl-format
+msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
+msgstr "Немає вільного GID на проміжку "
+
+#: ../adduser:291 ../deluser:221 ../deluser:365
+#, perl-format
+msgid "The user `%s' does not exist.\n"
+msgstr "Користувач \"%s\" не існує.\n"
+
+#: ../adduser:293 ../adduser:641 ../deluser:329 ../deluser:368
+#, perl-format
+msgid "The group `%s' does not exist.\n"
+msgstr "Група \"%s\" не існує.\n"
+
+#: ../adduser:296
+#, perl-format
+msgid "The user `%s' is already a member of `%s'.\n"
+msgstr "Користувач \"%s\" вже є членом \"%s\".\n"
+
+#: ../adduser:301
+#, perl-format
+msgid "Adding user `%s' to group `%s'...\n"
+msgstr "Додається користувач \"%s\" до групи \"%s\"...\n"
+
+#: ../adduser:324
+#, perl-format
+msgid "The user `%s' already exists as a system user. Exiting...\n"
+msgstr "Користувач \"%s\" вже існує як системний користувач. Виходимо...\n"
+
+#: ../adduser:330
+#, perl-format
+msgid "Adding system user `%s'...\n"
+msgstr "Додається системний користувач \"%s\"...\n"
+
+#: ../adduser:338
+#, fuzzy, perl-format
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
+"LAST_SYS_UID).\n"
+msgstr "Немає вільної пари UID/GID на проміжку "
+
+#: ../adduser:339 ../adduser:351 ../adduser:422 ../adduser:434
+#, perl-format
+msgid "The user `%s' was not created.\n"
+msgstr "Користувач \"%s\" не був створений.\n"
+
+#: ../adduser:350
+#, fuzzy, perl-format
+msgid ""
+"No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
+msgstr "Немає вільного UID на проміжку "
+
+#: ../adduser:355 ../adduser:361 ../adduser:438 ../adduser:444
+msgid "Internal error"
+msgstr "Внутрішня помилка"
+
+#: ../adduser:367 ../adduser:449
+#, perl-format
+msgid "Adding new group `%s' (%s).\n"
+msgstr "Додається нова група \"%s\" (%s).\n"
+
+#: ../adduser:373 ../adduser:455
+#, perl-format
+msgid "Adding new user `%s' (%s) with group `%s'.\n"
+msgstr "Додається новий користувач \"%s\" (%s) з групою \"%s\".\n"
+
+#: ../adduser:387
+msgid ""
+"chage failed with return code 15, shadow not enabled, password aging cannot "
+"be set. Continuing.\n"
+msgstr ""
+
+#: ../adduser:413
+#, perl-format
+msgid "Adding user `%s'...\n"
+msgstr "Додається користувач \"%s\"...\n"
+
+#: ../adduser:421
+#, fuzzy, perl-format
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr "Немає вільної пари UID/GID на проміжку "
+
+#: ../adduser:433
+#, fuzzy, perl-format
+msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr "Немає вільного UID на проміжку "
+
+#. Translators: [y/N] has to be replaced by values defined in your
+#. locale.  You can see by running "locale yesexpr" which regular
+#. expression will be checked to find positive answer.
+#: ../adduser:485
+msgid "Is the information correct? [y/N] "
+msgstr "Чи вірні ці дані? [y/N] "
+
+#: ../adduser:492
+#, perl-format
+msgid "Setting quota from `%s'.\n"
+msgstr "Встановлюються обмеження із \"%s\".\n"
+
+#: ../adduser:525
+#, fuzzy, perl-format
+msgid "Not creating home directory `%s'.\n"
+msgstr "Домашня директорія не створюється.\n"
+
+#: ../adduser:528
+#, perl-format
+msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
+msgstr "Домашня директорія \"%s\" вже існує. Не копіюється з \"%s\"\n"
+
+#: ../adduser:534
+msgid ""
+"Warning: that home directory does not belong to the user you are currently "
+"creating\n"
+msgstr ""
+
+#: ../adduser:539
+#, perl-format
+msgid "Creating home directory `%s'.\n"
+msgstr "Створюється домашня директорія \"%s\".\n"
+
+#: ../adduser:549
+#, perl-format
+msgid "Copying files from `%s'\n"
+msgstr "Копіюються файли з \"%s\"\n"
+
+#: ../adduser:624
+#, perl-format
+msgid "The user `%s' already exists, and is not a system user.\n"
+msgstr "Користувач \"%s\" вже існує і не є системним користувачем.\n"
+
+#: ../adduser:626
+#, perl-format
+msgid "The user `%s' already exists.\n"
+msgstr "Користувач \"%s\" вже існує.\n"
+
+#: ../adduser:629
+#, perl-format
+msgid "The UID %s is already in use.\n"
+msgstr "GID %s вже використовується.\n"
+
+#: ../adduser:636
+#, perl-format
+msgid "The GID %s is already in use.\n"
+msgstr "GID %s вже використовується.\n"
+
+#: ../adduser:643
+#, perl-format
+msgid "The GID %s does not exist.\n"
+msgstr "GID %s не існує.\n"
+
+#: ../adduser:699
+msgid ""
+"To avoid problems, the username should consist of\n"
+"letters, digits, underscores, periods and dashes. For compatibility with\n"
+"Samba machine accounts $ is also supported at the end of the username\n"
+msgstr ""
+"Щоб уникнути проблем, ім'я користувача повинно складатися з латинських\n"
+"літер, цифр, знаків підкреслювання, крапок та дефісів. Для сумісності з\n"
+"Samba, в кінці імені користувача також може знаходитись знак $\n"
+
+#: ../adduser:706
+msgid "Allowing use of questionable username.\n"
+msgstr "Дозволяється використання сумнівного імені користувача.\n"
+
+#: ../adduser:710
+#, fuzzy
+msgid ""
+"Please enter a username matching the regular expression configured\n"
+"via the name_regex configuration variable.  Use the `--force-badname'\n"
+"option to relax this check or reconfigure name_regex.\n"
+msgstr ""
+"Введіть, будь ласка, ім'я користувача що підходить під шаблон, що вказаний\n"
+"конфігураційною змінною name_regex. Використовуйте опцію --force-badname\n"
+"щоб пом'якшити цю перевірку, або встановіть name_regex.\n"
+
+#: ../adduser:725
+#, perl-format
+msgid "Selecting from %s %s (%s).\n"
+msgstr "Вибір із %s %s (%s).\n"
+
+#: ../adduser:790
+#, perl-format
+msgid "Removing directory `%s'\n"
+msgstr "Видаляється директорія \"%s\"\n"
+
+#: ../adduser:794
+#, perl-format
+msgid "Removing user `%s'.\n"
+msgstr "Видаляється користувач \"%s\".\n"
+
+#: ../adduser:798
+#, perl-format
+msgid "Removing group `%s'.\n"
+msgstr "Видаляється група \"%s\".\n"
+
+#: ../adduser:831
+#, fuzzy
+msgid ""
+"adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"
+"[--disabled-password] [--disabled-login] user\n"
+"   Add a normal user\n"
+"\n"
+"adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+"[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
+"password]\n"
+"[--disabled-login] user\n"
+"   Add a system user\n"
+"\n"
+"adduser --group [--gid ID] group\n"
+"addgroup [--gid ID] group\n"
+"   Add a user group\n"
+"\n"
+"addgroup --system [--gid ID] group\n"
+"   Add a system group\n"
+"\n"
+"adduser user group\n"
+"   Add an existing user to an existing group\n"
+"\n"
+"Other options are [--quiet] [--force-badname] [--help] [--version] [--conf\n"
+"FILE].\n"
+msgstr ""
+"adduser [--home ДИРЕКТОРІЯ] [--shell ОБОЛОНКА] [--no-create-home] [--uid "
+"ID]\n"
+"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup ГРУПА | --gid ID]\n"
+"[--disabled-password] [--disabled-login] користувач\n"
+"   Додати звичайного користувача\n"
+"\n"
+"adduser --system [--home ДИРЕКТОРІЯ] [--shell ОБОЛОНКА] [--no-create-home]\n"
+"[--uid ID] [--gecos GECOS] [--group | --ingroup ГРУПА | --gid ID]\n"
+"[--disabled-password] [--disabled-login] користувач\n"
+"   Додати системного користувача\n"
+"\n"
+"adduser --group [--gid ID] група\n"
+"addgroup [--gid ID] група\n"
+"   Додати групу користувачів\n"
+"\n"
+"addgroup --system [--gid ID] група\n"
+"   Додати системну групу\n"
+"\n"
+"adduser користувач група\n"
+"   Додати існуючого користувача до існуючої групи\n"
+"\n"
+"Глобальні налаштування знаходяться у файлі %s.\n"
+"Інші опції: [--quiet] [--force-badname] [--help] [--version] [--conf\n"
+"ФАЙЛ].\n"
+
 #: ../deluser:94
 #, fuzzy
 msgid "Only root may remove a user or group from the system.\n"
 msgstr "Тільки root може додавати користувачів або групи до системи.\n"
-
-#: ../deluser:111
-msgid "No options allowed after names.\n"
-msgstr "Не можна вказувати параметри після імен.\n"
 
 #: ../deluser:119
 #, fuzzy
@@ -39,10 +366,6 @@ msgstr "Введіть ім'я групи: "
 #, fuzzy
 msgid "Enter a user name to remove: "
 msgstr "Введіть ім'я користувача: "
-
-#: ../deluser:128
-msgid "Only one or two names allowed.\n"
-msgstr ""
 
 #: ../deluser:162
 msgid ""
@@ -61,11 +384,6 @@ msgstr "Користувач \"%s\" вже існує як системний к
 #, fuzzy, perl-format
 msgid "The user `%s' does not exist, but --system was given... Exiting.\n"
 msgstr "Користувач \"%s\" вже існує як системний користувач. Виходимо...\n"
-
-#: ../deluser:221 ../deluser:365
-#, perl-format
-msgid "The user `%s' does not exist.\n"
-msgstr "Користувач \"%s\" не існує.\n"
 
 #: ../deluser:225
 #, perl-format
@@ -115,11 +433,6 @@ msgstr "Видаляється користувач \"%s\".\n"
 #, fuzzy
 msgid "done.\n"
 msgstr "Завершено.\n"
-
-#: ../deluser:329 ../deluser:368
-#, perl-format
-msgid "The group `%s' does not exist.\n"
-msgstr "Група \"%s\" не існує.\n"
 
 #: ../deluser:333
 #, perl-format
@@ -181,6 +494,7 @@ msgstr ""
 #: ../deluser:404
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
+"<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 msgstr ""
 
 #: ../deluser:407
@@ -243,241 +557,20 @@ msgid ""
 "\n"
 msgstr ""
 
-#~ msgid "Only root may add a user or group to the system.\n"
-#~ msgstr "Тільки root може додавати користувачів або групи до системи.\n"
+#: ../AdduserCommon.pm:83
+#, fuzzy, perl-format
+msgid "%s: `%s' doesn't exist.  Using defaults.\n"
+msgstr "\"%s\" не існує.\n"
 
-#~ msgid "Enter a groupname to add: "
-#~ msgstr "Введіть ім'я групи: "
+#: ../AdduserCommon.pm:93
+#, perl-format
+msgid "Couldn't parse `%s':%s.\n"
+msgstr ""
 
-#~ msgid "Enter a username to add: "
-#~ msgstr "Введіть ім'я користувача: "
-
-#~ msgid "Specify only one name in this mode.\n"
-#~ msgstr "Вкажіть тільки одне ім'я в цьому режимі.\n"
-
-#~ msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
-#~ msgstr "Опції --group, --ingroup та --gid несумісні.\n"
-
-#~ msgid "The home dir must be an absolute path.\n"
-#~ msgstr "До домашньої директорії повинен бути заданий абсолютний шлях.\n"
-
-#~ msgid "Warning: The home dir you specified already exists.\n"
-#~ msgstr "Попередження: вказана вами домашня директорія вже існує.\n"
-
-#~ msgid "Warning: The home dir you specified does not exist.\n"
-#~ msgstr "Попередження: вказана вами домашня директорія не існує.\n"
-
-#~ msgid "The group `%s' already exists as a system group. Exiting...\n"
-#~ msgstr "Група \"%s\" вже існує як системна група. Виходимо...\n"
-
-#, fuzzy
-#~ msgid "The group `%s' already exists and is not a system group.\n"
-#~ msgstr "Користувач \"%s\" вже існує і не є системним користувачем.\n"
-
-#, fuzzy
-#~ msgid "The GID `%s' is already in use.\n"
-#~ msgstr "GID %s вже використовується.\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
-#~ msgstr "Немає вільного GID на проміжку "
-
-#~ msgid "The group `%s' was not created.\n"
-#~ msgstr "Група \"%s\" не була створена.\n"
-
-#~ msgid "Adding group `%s' (%s)...\n"
-#~ msgstr "Додається група \"%s\" (%s)...\n"
-
-#~ msgid "Done.\n"
-#~ msgstr "Завершено.\n"
-
-#~ msgid "The group `%s' already exists.\n"
-#~ msgstr "Група \"%s\" вже існує.\n"
-
-#, fuzzy
-#~ msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
-#~ msgstr "Немає вільного GID на проміжку "
-
-#~ msgid "The user `%s' is already a member of `%s'.\n"
-#~ msgstr "Користувач \"%s\" вже є членом \"%s\".\n"
-
-#~ msgid "Adding user `%s' to group `%s'...\n"
-#~ msgstr "Додається користувач \"%s\" до групи \"%s\"...\n"
-
-#~ msgid "The user `%s' already exists as a system user. Exiting...\n"
-#~ msgstr "Користувач \"%s\" вже існує як системний користувач. Виходимо...\n"
-
-#~ msgid "Adding system user `%s'...\n"
-#~ msgstr "Додається системний користувач \"%s\"...\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
-#~ "LAST_SYS_UID).\n"
-#~ msgstr "Немає вільної пари UID/GID на проміжку "
-
-#~ msgid "The user `%s' was not created.\n"
-#~ msgstr "Користувач \"%s\" не був створений.\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
-#~ msgstr "Немає вільного UID на проміжку "
-
-#~ msgid "Internal error"
-#~ msgstr "Внутрішня помилка"
-
-#~ msgid "Adding new group `%s' (%s).\n"
-#~ msgstr "Додається нова група \"%s\" (%s).\n"
-
-#~ msgid "Adding new user `%s' (%s) with group `%s'.\n"
-#~ msgstr "Додається новий користувач \"%s\" (%s) з групою \"%s\".\n"
-
-#~ msgid "Adding user `%s'...\n"
-#~ msgstr "Додається користувач \"%s\"...\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-#~ msgstr "Немає вільної пари UID/GID на проміжку "
-
-#, fuzzy
-#~ msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-#~ msgstr "Немає вільного UID на проміжку "
-
-#~ msgid "Is the information correct? [y/N] "
-#~ msgstr "Чи вірні ці дані? [y/N] "
-
-#~ msgid "Setting quota from `%s'.\n"
-#~ msgstr "Встановлюються обмеження із \"%s\".\n"
-
-#, fuzzy
-#~ msgid "Not creating home directory `%s'.\n"
-#~ msgstr "Домашня директорія не створюється.\n"
-
-#~ msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
-#~ msgstr "Домашня директорія \"%s\" вже існує. Не копіюється з \"%s\"\n"
-
-#~ msgid "Creating home directory `%s'.\n"
-#~ msgstr "Створюється домашня директорія \"%s\".\n"
-
-#~ msgid "Copying files from `%s'\n"
-#~ msgstr "Копіюються файли з \"%s\"\n"
-
-#~ msgid "The user `%s' already exists, and is not a system user.\n"
-#~ msgstr "Користувач \"%s\" вже існує і не є системним користувачем.\n"
-
-#~ msgid "The user `%s' already exists.\n"
-#~ msgstr "Користувач \"%s\" вже існує.\n"
-
-#~ msgid "The UID %s is already in use.\n"
-#~ msgstr "GID %s вже використовується.\n"
-
-#~ msgid "The GID %s is already in use.\n"
-#~ msgstr "GID %s вже використовується.\n"
-
-#~ msgid "The GID %s does not exist.\n"
-#~ msgstr "GID %s не існує.\n"
-
-#~ msgid ""
-#~ "To avoid problems, the username should consist of\n"
-#~ "letters, digits, underscores, periods and dashes. For compatibility with\n"
-#~ "Samba machine accounts $ is also supported at the end of the username\n"
-#~ msgstr ""
-#~ "Щоб уникнути проблем, ім'я користувача повинно складатися з латинських\n"
-#~ "літер, цифр, знаків підкреслювання, крапок та дефісів. Для сумісності з\n"
-#~ "Samba, в кінці імені користувача також може знаходитись знак $\n"
-
-#~ msgid "Allowing use of questionable username.\n"
-#~ msgstr "Дозволяється використання сумнівного імені користувача.\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "Please enter a username matching the regular expression configured\n"
-#~ "via the name_regex configuration variable.  Use the `--force-badname'\n"
-#~ "option to relax this check or reconfigure name_regex.\n"
-#~ msgstr ""
-#~ "Введіть, будь ласка, ім'я користувача що підходить під шаблон, що "
-#~ "вказаний\n"
-#~ "конфігураційною змінною name_regex. Використовуйте опцію --force-badname\n"
-#~ "щоб пом'якшити цю перевірку, або встановіть name_regex.\n"
-
-#~ msgid "Selecting from %s %s (%s).\n"
-#~ msgstr "Вибір із %s %s (%s).\n"
-
-#~ msgid "Removing directory `%s'\n"
-#~ msgstr "Видаляється директорія \"%s\"\n"
-
-#~ msgid "Removing user `%s'.\n"
-#~ msgstr "Видаляється користувач \"%s\".\n"
-
-#~ msgid "Removing group `%s'.\n"
-#~ msgstr "Видаляється група \"%s\".\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid "
-#~ "ID]\n"
-#~ "[--disabled-password] [--disabled-login] user\n"
-#~ "   Add a normal user\n"
-#~ "\n"
-#~ "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
-#~ "ID]\n"
-#~ "[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
-#~ "password]\n"
-#~ "[--disabled-login] user\n"
-#~ "   Add a system user\n"
-#~ "\n"
-#~ "adduser --group [--gid ID] group\n"
-#~ "addgroup [--gid ID] group\n"
-#~ "   Add a user group\n"
-#~ "\n"
-#~ "addgroup --system [--gid ID] group\n"
-#~ "   Add a system group\n"
-#~ "\n"
-#~ "adduser user group\n"
-#~ "   Add an existing user to an existing group\n"
-#~ "\n"
-#~ "Other options are [--quiet] [--force-badname] [--help] [--version] [--"
-#~ "conf\n"
-#~ "FILE].\n"
-#~ msgstr ""
-#~ "adduser [--home ДИРЕКТОРІЯ] [--shell ОБОЛОНКА] [--no-create-home] [--uid "
-#~ "ID]\n"
-#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup ГРУПА | --gid "
-#~ "ID]\n"
-#~ "[--disabled-password] [--disabled-login] користувач\n"
-#~ "   Додати звичайного користувача\n"
-#~ "\n"
-#~ "adduser --system [--home ДИРЕКТОРІЯ] [--shell ОБОЛОНКА] [--no-create-"
-#~ "home]\n"
-#~ "[--uid ID] [--gecos GECOS] [--group | --ingroup ГРУПА | --gid ID]\n"
-#~ "[--disabled-password] [--disabled-login] користувач\n"
-#~ "   Додати системного користувача\n"
-#~ "\n"
-#~ "adduser --group [--gid ID] група\n"
-#~ "addgroup [--gid ID] група\n"
-#~ "   Додати групу користувачів\n"
-#~ "\n"
-#~ "addgroup --system [--gid ID] група\n"
-#~ "   Додати системну групу\n"
-#~ "\n"
-#~ "adduser користувач група\n"
-#~ "   Додати існуючого користувача до існуючої групи\n"
-#~ "\n"
-#~ "Глобальні налаштування знаходяться у файлі %s.\n"
-#~ "Інші опції: [--quiet] [--force-badname] [--help] [--version] [--conf\n"
-#~ "ФАЙЛ].\n"
-
-#, fuzzy
-#~ msgid "%s: `%s' doesn't exist.  Using defaults.\n"
-#~ msgstr "\"%s\" не існує.\n"
-
-#, fuzzy
-#~ msgid "Unknown variable `%s' at `%s':%s.\n"
-#~ msgstr "Невідомий аргумент \"%s\".\n"
+#: ../AdduserCommon.pm:98
+#, fuzzy, perl-format
+msgid "Unknown variable `%s' at `%s':%s.\n"
+msgstr "Невідомий аргумент \"%s\".\n"
 
 #~ msgid "I need a name to add.\n"
 #~ msgstr "Потрібно ввести ім'я.\n"
