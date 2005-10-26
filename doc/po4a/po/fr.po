@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
-"POT-Creation-Date: 2005-10-23 18:43+0000\n"
+"POT-Creation-Date: 2005-10-26 12:40+0000\n"
 "PO-Revision-Date: 2005-08-06 14:36+0300\n"
 "Last-Translator: Nicolas François <nicolas.francois@centraliens.net>\n"
 "Language-Team: Debian French Team <debian-l10n-french@lists.debian.org>\n"
@@ -132,12 +132,13 @@ msgstr "B<BACKUP>"
 
 # type: Plain text
 #: ../deluser.conf.5:49
+#, fuzzy
 msgid ""
 "If B<REMOVE_HOME> or B<REMOVE_ALL_FILES> is activated all files are backuped "
 "before they are removed. The backup file that is created defaults to "
-"username.tar(.gz|.bz2) in the directory spefied by the B<BACKUP_TO> option. "
-"The compression method is chosen to the best that is available.  Values may "
-"be 0 or 1."
+"username.tar(.gz|.bz2) in the directory specified by the B<BACKUP_TO> "
+"option. The compression method is chosen to the best that is available.  "
+"Values may be 0 or 1."
 msgstr ""
 "Si B<REMOVE_HOME> ou B<REMOVE_ALL_FILES> sont activées, tous les fichiers "
 "sont sauvegardés avant d'être supprimés. Les fichiers de sauvegarde sont "
