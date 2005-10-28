@@ -132,7 +132,6 @@ msgstr "B<BACKUP>"
 
 # type: Plain text
 #: ../deluser.conf.5:49
-#, fuzzy
 msgid ""
 "If B<REMOVE_HOME> or B<REMOVE_ALL_FILES> is activated all files are backuped "
 "before they are removed. The backup file that is created defaults to "
@@ -827,15 +826,14 @@ msgstr "adduser, addgroup - ajoute un utilisateur ou un groupe au système"
 
 # type: Plain text
 #: ../adduser.8:14
-#, fuzzy
 msgid ""
 "B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
 "uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
 "disabled-password] [--disabled-login] [--gecos GECOS] user"
 msgstr ""
-"B<adduser> [options] [--home REP] [--shell SHELL] [--no-create-home] [--uid "
-"ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUPE | --gid ID] [--disabled-"
-"password] [--disabled-login] [--gecos GECOS] utilisateur"
+"B<adduser> [options] [--home REP] [--shell|-s SHELL] [--no-create-home] [--"
+"uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUPE | --gid ID] [--"
+"disabled-password] [--disabled-login] [--gecos GECOS] utilisateur"
 
 # type: Plain text
 #: ../adduser.8:16
@@ -875,9 +873,8 @@ msgstr "B<adduser> [options] utilisateur groupe"
 
 # type: Plain text
 #: ../adduser.8:29
-#, fuzzy
 msgid "[--quiet] [--force-badname] [--help|-h] [--version] [--conf FILE]"
-msgstr "[--quiet] [--force-badname] [--help] [--version] [--conf FICHIER]"
+msgstr "[--quiet] [--force-badname] [--help|-h] [--version] [--conf FICHIER]"
 
 # type: Plain text
 #: ../adduser.8:43

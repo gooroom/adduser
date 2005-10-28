@@ -11,6 +11,8 @@ adduser (3.77.0) UNRELEASED; urgency=low
       POT file.
   * Add Brazilian Portuguese (pt_BR) manpage translation. Thanks to
     Felipe Augusto van de Wiel. (mh)
+  * Update French (fr) manpage translation. Thanks to
+    Thomas Huriaux. (mh) Closes: #336200
   * Fix typo in deluser.conf.5, hopefully without fuzzying
     translations. Thanks to Felipe Augusto van de Wiel and to Thomas
     Huriaux. (mh)
@@ -25,7 +27,7 @@ adduser (3.77.0) UNRELEASED; urgency=low
       created
     * debian/rules: correct man pages location for es and ru translations.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 27 Oct 2005 00:24:14 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 28 Oct 2005 16:58:12 +0000
 
 adduser (3.77) unstable; urgency=low
 
