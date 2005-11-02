@@ -25,7 +25,7 @@ adduser, addgroup \- add a user or group to the system
 .BR adduser " [options] user group"
 .SS COMMON OPTIONS
 .br
-[\-\-quiet] [\-\-force-badname] [\-\-help|\-h] [\-\-version] [\-\-conf FILE]
+[\-\-quiet] [\-\-debug] [\-\-force-badname] [\-\-help|\-h] [\-\-version] [\-\-conf FILE]
 .SH DESCRIPTION
 .PP
 .BR adduser " and " addgroup
@@ -228,6 +228,9 @@ Do not create the home directory, even if it doesn't exist.
 .TP
 .B \-\-quiet
 Suppress progress messages.
+.TP
+.B \-\-debug
+Display a lot of messages.
 .TP
 .B \-\-system
 Create a system user.

@@ -92,7 +92,7 @@ GetOptions ("quiet" => sub { $verbose = 0 },
 	    "gid=i" => \$new_gid,
 	    "conf=s" => \$configfile,
 	    "no-create-home" => \$no_create_home,
-	    "debug" => \$debugging );
+	    "debug" => sub { $verbose = 2 } );
 
 # everyone can issue "--help" and "--version", but only root can go on
 die ("$0: ",gtx("Only root may add a user or group to the system.\n")) if ($> != 0);
@@ -183,15 +183,15 @@ if ($found_group_opt) {
     }
 }
 
-if( $verbose ) {
+if( $verbose > 1) {
+    $ENV{"DEBUG"}="1"
+}
+elsif( $verbose > 0) {
     $ENV{"VERBOSE"}="1"
 }
 
-if( $debugging ) {
-    $ENV{"DEBUG"}="1"
-}
 
-# preseed configuration data and then read /etc/adduser.conf
+# preseed configuration data and then read the config file
 preseed_config(\@defaults,\%config);
 
 &checkname($new_name) if defined $new_name;
@@ -377,8 +377,8 @@ if ($action eq "addsysuser") {
     $undouser = $new_name;
     &systemcall('/usr/sbin/useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$shell, '-u', $new_uid, $new_name);
-    print "/usr/bin/chage -M 99999 $new_name\n" if $debugging;
-    if (system('/usr/bin/chage', '-M', '99999', $new_name)) {
+    print "/usr/bin/chage -M 99999 $new_name\n" if ($verbose > 1);
+    if (&systemcall('/usr/bin/chage', '-M', '99999', $new_name)) {
 	if( ($?>>8) ne 15 ) {
 	    &cleanup("$0: `/usr/bin/chage -M 99999 $new_name' returned error code " . ($?>>8) . ".  Aborting.\n")
 	      if ($?>>8);
@@ -559,7 +559,8 @@ sub create_homedir {
   }
 }
 
-# create a directory and all leading directories
+# create a directory and all parent directories
+# we don't care about the rights and so on
 sub mktree {
     my($tree) = @_;
     my($done, @path);
@@ -691,7 +692,7 @@ sub copy_to_dir {
 }
        
 
-# is name ok?
+# check if the given name matches some sanity checks
 sub checkname {
     my ($name) = @_;
     if ($name !~ /^[-_\.A-Za-z0-9]*\$?$/) {
@@ -722,7 +723,7 @@ option to relax this check or reconfigure name_regex.\n"));
 sub first_avail_id {
     my ($min, $max, @ids) = @_;
     @ids = sort {$a <=> $b} @ids;
-    printf (gtx("Selecting from %s %s (%s).\n"),$min,$max,join(",",@ids)) if $debugging;
+    printf (gtx("Selecting from %s %s (%s).\n"),$min,$max,join(",",@ids)) if ($verbose > 1);
     
     while ($min <= $max) {
 	return $min if ($min <  $ids[0] || @ids==0);
@@ -788,15 +789,15 @@ sub cleanup {
     print ("@{_}Cleaning up.\n");
     if ($undohome) {
 	printf (gtx("Removing directory `%s'\n"),$undohome);
-	system('rm', '-rf', $undohome);
+	&systemcall('rm', '-rf', $undohome);
     }
     if ($undouser) {
 	printf (gtx("Removing user `%s'.\n"),$undouser);
-	system('userdel', $undouser);
+	&systemcall('userdel', $undouser);
     }
     if ($undogroup) {
 	printf (gtx("Removing group `%s'.\n"),$undogroup);
-	system('groupdel', $undogroup);
+	&systemcall('groupdel', $undogroup);
     }
     # do we need to invalidate the nscd cache here, too?
     exit 1;

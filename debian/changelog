@@ -1,5 +1,6 @@
 adduser (3.77.0) UNRELEASED; urgency=low
 
+  [ Marc Haber ]
   * NOT RELEASED YET
   * Changes suggested by Denis Barbier
     * po/Makefile: move -c down from xgettext definition to the actual call
@@ -31,7 +32,14 @@ adduser (3.77.0) UNRELEASED; urgency=low
       created
     * debian/rules: correct man pages location for es and ru translations.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed,  2 Nov 2005 18:06:54 +0100
+  [ Joerg Hoh ]
+  * stricter checking on variables in configuration files (inspired by
+    #130751)
+  * documented --debug in adduser.8
+  * streamlined verbosity code, replaced calls to system() with systemcall()
+    (Closes: #336841)
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Wed,  2 Nov 2005 23:10:32 +0100
 
 adduser (3.77) unstable; urgency=low
 
