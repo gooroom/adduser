@@ -1,17 +1,18 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# translation of adduser_3.77_ru4.po to Russian
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# Yuri Kozlov <kozlov.y@gmail.com>, 2005.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2005-10-26 12:40+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: adduser_3.77_ru4\n"
+"POT-Creation-Date: 2005-10-23 18:43+0000\n"
+"PO-Revision-Date: 2005-11-02 18:35+0400\n"
+"Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
+"Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=KOI8-R\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
 
 # type: TH
 #.  Hey, Emacs!  This is an -*- nroff -*- source file.
@@ -34,7 +35,7 @@ msgstr "deluser.conf"
 #: ../deluser.conf.5:6 ../adduser.conf.5:6 ../deluser.8:9 ../adduser.8:9
 #, no-wrap
 msgid "Version VERSION"
-msgstr "Версия VERSION"
+msgstr "п▓п╣я─я│п╦я▐ VERSION"
 
 # type: TH
 #.  Someone tell emacs that this is an -*- nroff -*- source file.
@@ -53,43 +54,41 @@ msgstr "Debian GNU/Linux"
 #: ../deluser.conf.5:7 ../adduser.conf.5:7 ../deluser.8:10 ../adduser.8:10
 #, no-wrap
 msgid "NAME"
-msgstr "НАЗВАНИЕ"
+msgstr "п²п░п≈п▓п░п²п≤п∙"
 
 # type: Plain text
 #: ../deluser.conf.5:12
-msgid ""
-"/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
-msgstr "/etc/deluser.conf - файл настройки для B<deluser(8)> и B<delgroup(8)>."
+msgid "/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
+msgstr "/etc/deluser.conf - я└п╟п╧п╩ п╫п╟я│я┌я─п╬п╧п╨п╦ п╢п╩я▐ B<deluser(8)> п╦ B<delgroup(8)>."
 
 # type: SH
 #: ../deluser.conf.5:12 ../adduser.conf.5:12 ../deluser.8:23 ../adduser.8:29
 #, no-wrap
 msgid "DESCRIPTION"
-msgstr "ОПИСАНИЕ"
+msgstr "п·п÷п≤п║п░п²п≤п∙"
 
 # type: Plain text
 #: ../deluser.conf.5:23
-#, fuzzy
 msgid ""
 "The file I</etc/deluser.conf> contains defaults for the programs B<deluser(8)"
 "> and B<delgroup(8)>.  Each option takes the form I<option> = I<value>.  "
 "Double or single quotes are allowed around the value.  Comment lines must "
 "have a pound sign (#) at the beginning of the line."
 msgstr ""
-"Файл I</etc/deluser.conf> содержит установки по умолчанию для программ "
-"B<deluser(8)> и B<delgroup(8)>.  Каждый параметр имеет вид I<параметр> = "
-"I<значение>.  Значение можно помещать в двойные или одинарные кавычки.  "
-"Строки комментария должны иметь знак диеза (#) в начале строки."
+"п╓п╟п╧п╩ I</etc/deluser.conf> я│п╬п╢п╣я─п╤п╦я┌ я┐я│я┌п╟п╫п╬п╡п╨п╦ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╢п╩я▐ п©я─п╬пЁя─п╟п╪п╪ "
+"B<deluser(8)> п╦ B<delgroup(8)>. п п╟п╤п╢я▀п╧ п©п╟я─п╟п╪п╣я┌я─ п╦п╪п╣п╣я┌ п╡п╦п╢ I<п©п╟я─п╟п╪п╣я┌я─> = "
+"I<п╥п╫п╟я┤п╣п╫п╦п╣>. п≈п╫п╟я┤п╣п╫п╦п╣ п╪п╬п╤п╫п╬ п©п╬п╪п╣я┴п╟я┌я▄ п╡ п╢п╡п╬п╧п╫я▀п╣ п╦п╩п╦ п╬п╢п╦п╫п╟я─п╫я▀п╣ п╨п╟п╡я▀я┤п╨п╦. "
+"п║я┌я─п╬п╨п╦ п╨п╬п╪п╪п╣п╫я┌п╟я─п╦я▐ п╢п╬п╩п╤п╫я▀ п╦п╪п╣я┌я▄ п╥п╫п╟п╨ я└я┐п╫я┌п╟ (#) п╡ п╫п╟я┤п╟п╩п╣ я│я┌я─п╬п╨п╦."
 
 # type: Plain text
 #: ../deluser.conf.5:25
 msgid "deluser(8) and delgroup(8) also read /etc/adduser.conf."
-msgstr ""
+msgstr "п п╬п╪п╟п╫п╢я▀ deluser(8) п╦ delgroup(8) я┌п╟п╨п╤п╣ я┤п╦я┌п╟я▌я┌ /etc/adduser.conf."
 
 # type: Plain text
 #: ../deluser.conf.5:27 ../adduser.conf.5:30
 msgid "The valid configuration options are:"
-msgstr "Действующие параметры настройки:"
+msgstr "п■п╣п╧я│я┌п╡я┐я▌я┴п╦п╣ п©п╟я─п╟п╪п╣я┌я─я▀ п╫п╟я│я┌я─п╬п╧п╨п╦:"
 
 # type: TP
 #: ../deluser.conf.5:27
@@ -103,8 +102,8 @@ msgid ""
 "Removes the home directory and mail spool of the user to be removed.  Value "
 "may be 0 or 1."
 msgstr ""
-"Стирать домашний каталог и почтовый буфер удаляемого пользователя.  "
-"Значениями могут быть 0 или 1."
+"п║я┌п╦я─п╟я┌я▄ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ п╦ п©п╬я┤я┌п╬п╡я▀п╧ п╠я┐я└п╣я─ я┐п╢п╟п╩я▐п╣п╪п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐. "
+"п≈п╫п╟я┤п╣п╫п╦я▐п╪п╦ п╪п╬пЁя┐я┌ п╠я▀я┌я▄ 0 п╦п╩п╦ 1."
 
 # type: TP
 #: ../deluser.conf.5:31
@@ -114,14 +113,13 @@ msgstr "B<REMOVE_ALL_FILES>"
 
 # type: Plain text
 #: ../deluser.conf.5:37
-#, fuzzy
 msgid ""
 "Removes all files on the system owned by the user to be removed.  If this "
 "option is activated B<REMOVE_HOME> has no effect. Values may be 0 or 1."
 msgstr ""
-"Стирать все файлы в системе, принадлежащие удаляемому пользователю.  Если "
-"этот параметр включён, то B<REMOVE_HOME> бесполезен. Значениями могут быть 0 "
-"или 1."
+"п║я┌п╦я─п╟я┌я▄ п╡я│п╣ я└п╟п╧п╩я▀ п╡ я│п╦я│я┌п╣п╪п╣, п©я─п╦п╫п╟п╢п╩п╣п╤п╟я┴п╦п╣ я┐п╢п╟п╩я▐п╣п╪п╬п╪я┐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▌. п∙я│п╩п╦ "
+"я█я┌п╬я┌ п©п╟я─п╟п╪п╣я┌я─ п╡п╨п╩я▌я┤я▒п╫, я┌п╬ B<REMOVE_HOME> п╠п╣я│п©п╬п╩п╣п╥п╣п╫. п≈п╫п╟я┤п╣п╫п╦я▐п╪п╦ п╪п╬пЁя┐я┌ п╠я▀я┌я▄ 0 "
+"п╦п╩п╦ 1."
 
 # type: TP
 #: ../deluser.conf.5:37
@@ -131,24 +129,23 @@ msgstr "B<BACKUP>"
 
 # type: Plain text
 #: ../deluser.conf.5:49
-#, fuzzy
 msgid ""
 "If B<REMOVE_HOME> or B<REMOVE_ALL_FILES> is activated all files are backuped "
 "before they are removed. The backup file that is created defaults to "
-"username.tar(.gz|.bz2) in the directory specified by the B<BACKUP_TO> "
-"option. The compression method is chosen to the best that is available.  "
-"Values may be 0 or 1."
+"username.tar(.gz|.bz2) in the directory spefied by the B<BACKUP_TO> option. "
+"The compression method is chosen to the best that is available.  Values may "
+"be 0 or 1."
 msgstr ""
-"Если B<REMOVE_HOME> или B<REMOVE_ALL_FILES> включены, то перед удалением "
-"делается резервная копия всех файлов.  Будет создан архивный файл с именем "
-"имя_пользователя.tar(.gz|.bz2) в текущем рабочем каталоге. Из возможных "
-"методов сжатия выбирается лучший.  Значениями могут быть 0 или 1."
+"п∙я│п╩п╦ B<REMOVE_HOME> п╦п╩п╦ B<REMOVE_ALL_FILES> п╡п╨п╩я▌я┤п╣п╫я▀, я┌п╬ п©п╣я─п╣п╢ я┐п╢п╟п╩п╣п╫п╦п╣п╪ "
+"п╢п╣п╩п╟п╣я┌я│я▐ я─п╣п╥п╣я─п╡п╫п╟я▐ п╨п╬п©п╦я▐ п╡я│п╣я┘ я└п╟п╧п╩п╬п╡. п▒я┐п╢п╣я┌ я│п╬п╥п╢п╟п╫ п╟я─я┘п╦п╡п╫я▀п╧ я└п╟п╧п╩ я│ п╦п╪п╣п╫п╣п╪ "
+"п╦п╪я▐_п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐.tar(.gz|.bz2) п╡ я┌п╣п╨я┐я┴п╣п╪ я─п╟п╠п╬я┤п╣п╪ п╨п╟я┌п╟п╩п╬пЁп╣. п≤п╥ п╡п╬п╥п╪п╬п╤п╫я▀я┘ "
+"п╪п╣я┌п╬п╢п╬п╡ я│п╤п╟я┌п╦я▐ п╡я▀п╠п╦я─п╟п╣я┌я│я▐ п╩я┐я┤я┬п╦п╧. п≈п╫п╟я┤п╣п╫п╦я▐п╪п╦ п╪п╬пЁя┐я┌ п╠я▀я┌я▄ 0 п╦п╩п╦ 1."
 
 # type: TP
 #: ../deluser.conf.5:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<BACKUP_TO>"
-msgstr "B<BACKUP>"
+msgstr "B<BACKUP_TO>"
 
 # type: Plain text
 #: ../deluser.conf.5:57
@@ -156,12 +153,14 @@ msgid ""
 "If B<BACKUP> is activated, B<BACKUP_TO> specifies the directory the backup "
 "is written to. Default is the current directory."
 msgstr ""
+"п∙я│п╩п╦ B<BACKUP> п╡п╨п╩я▌я┤я▒п╫, я┌п╬ п╡ B<BACKUP_TO> я┐п╨п╟п╥я▀п╡п╟п╣я┌я│я▐ п╨п╟я┌п╟п╩п╬пЁ, п╨я┐п╢п╟ п╠я┐п╢п╣я┌ "
+"п©я─п╬п╦п╥п╡п╬п╢п╦я┌я▄я│я▐ я─п╣п╥п╣я─п╡п╫п╬п╣ п╨п╬п©п╦я─п╬п╡п╟п╫п╦п╣. п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐ я┌п╣п╨я┐я┴п╦п╧ п╨п╟я┌п╟п╩п╬пЁ."
 
 # type: TP
 #: ../deluser.conf.5:57
 #, no-wrap
 msgid "B<NO_DEL_PATHS>"
-msgstr ""
+msgstr "B<NO_DEL_PATHS>"
 
 # type: Plain text
 #: ../deluser.conf.5:64
@@ -172,13 +171,18 @@ msgid ""
 "is detected, the file is not deleted. Defaults to a list of system "
 "directories, leaving only /home."
 msgstr ""
+"п║п©п╦я│п╬п╨ я─п╣пЁя┐п╩я▐я─п╫я▀я┘ п╡я▀я─п╟п╤п╣п╫п╦п╧ я─п╟п╥п╢п╣п╩я▒п╫п╫я▀я┘ п©я─п╬п╠п╣п╩п╟п╪п╦. п▓я│п╣ я└п╟п╧п╩я▀, п╨п╬я┌п╬я─я▀п╣ п╠я┐п╢я┐я┌ "
+"я┐п╢п╟п╩я▐я┌я▄я│я▐ п╡ я│п╩я┐я┤п╟п╣ я┐п╢п╟п╩п╣п╫п╦я▐ п╢п╬п╪п╟я┬п╫п╣пЁп╬ п╨п╟я┌п╟п╩п╬пЁп╟ п╦п╩п╦ п©я─п╦п╫п╟п╢п╩п╣п╤п╟я┴п╦п╣ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▌, я│п╫п╟я┤п╟п╩п╟ я│я─п╟п╡п╫п╦п╡п╟я▌я┌я│я▐ я│ я█я┌п╦п╪п╦ я─п╣пЁя┐п╩я▐я─п╫я▀п╪п╦ п╡я▀я─п╟п╤п╣п╫п╦я▐п╪п╦. п∙я│п╩п╦ "
+"п╬п╠п╫п╟я─я┐п╤п╦п╡п╟п╣я┌я│я▐ я│п╬п╡п©п╟п╢п╣п╫п╦п╣, я┌п╬ я└п╟п╧п╩ п╫п╣ я┐п╢п╟п╩я▐п╣я┌я│я▐. п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╡ я│п©п╦я│п╬п╨ п╡я┘п╬п╢я▐я┌ "
+"я│п╦я│я┌п╣п╪п╫я▀п╣ п╨п╟я┌п╟п╩п╬пЁп╦, п╬я│я┌п╟я▒я┌я│я▐ я┌п╬п╩я▄п╨п╬ /home."
 
 # type: SH
 #: ../deluser.conf.5:64 ../adduser.conf.5:113 ../deluser.8:126
 #: ../adduser.8:247
 #, no-wrap
 msgid "FILES"
-msgstr "ФАЙЛЫ"
+msgstr "п╓п░п≥п⌡п╚"
 
 # type: Plain text
 #: ../deluser.conf.5:66
@@ -190,12 +194,12 @@ msgstr "I</etc/deluser.conf>"
 #: ../adduser.8:249
 #, no-wrap
 msgid "SEE ALSO"
-msgstr "СМОТРИТЕ ТАКЖЕ"
+msgstr "п║п°п·п╒п═п≤п╒п∙ п╒п░п п√п∙"
 
 # type: Plain text
 #: ../deluser.conf.5:67
 msgid "deluser(8), delgroup(8), adduser.conf(5)"
-msgstr ""
+msgstr "deluser(8), delgroup(8), adduser.conf(5)"
 
 # type: TH
 #.  Hey, Emacs!  This is an -*- nroff -*- source file.
@@ -209,13 +213,11 @@ msgstr "adduser.conf"
 
 # type: Plain text
 #: ../adduser.conf.5:12
-msgid ""
-"/etc/adduser.conf - configuration file for B<adduser(8)> and B<addgroup(8)>."
-msgstr "/etc/adduser.conf - файл настройки для B<adduser(8)> и B<addgroup(8)>."
+msgid "/etc/adduser.conf - configuration file for B<adduser(8)> and B<addgroup(8)>."
+msgstr "/etc/adduser.conf -- я└п╟п╧п╩ п╫п╟я│я┌я─п╬п╧п╨п╦ п╢п╩я▐ B<adduser(8)> п╦ B<addgroup(8)>."
 
 # type: Plain text
 #: ../adduser.conf.5:28
-#, fuzzy
 msgid ""
 "The file I</etc/adduser.conf> contains defaults for the programs B<adduser(8)"
 "> , B<addgroup(8)> , B<deluser(8)> and B<delgroup(8)>.  Each line holds a "
@@ -223,10 +225,11 @@ msgid ""
 "are allowed around the value, as is whitespace around the equals sign.  "
 "Comment lines must have a hash sign (#) in the first line."
 msgstr ""
-"Файл I</etc/adduser.conf> содержит установки по умолчанию для программ "
-"B<adduser(8)> и B<addgroup(8)>.  Каждый параметр имеет вид I<параметр> = "
-"I<значение>.  Значение можно помещать в двойные или одинарные кавычки.  "
-"Строки комментария должны иметь знак диеза (#) в начале строки."
+"п╓п╟п╧п╩ I</etc/adduser.conf> я│п╬п╢п╣я─п╤п╦я┌ я┐я│я┌п╟п╫п╬п╡п╨п╦ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╢п╩я▐ п©я─п╬пЁя─п╟п╪п╪ "
+"B<adduser(8)> п╦ B<addgroup(8)>, B<deluser(8)> and B<delgroup(8)>. п п╟п╤п╢я▀п╧ "
+"п©п╟я─п╟п╪п╣я┌я─ п╦п╪п╣п╣я┌ п╡п╦п╢ I<п©п╟я─п╟п╪п╣я┌я─> = I<п╥п╫п╟я┤п╣п╫п╦п╣>. п≈п╫п╟я┤п╣п╫п╦п╣ п╪п╬п╤п╫п╬ п©п╬п╪п╣я┴п╟я┌я▄ п╡ "
+"п╢п╡п╬п╧п╫я▀п╣ п╦п╩п╦ п╬п╢п╦п╫п╟я─п╫я▀п╣ п╨п╟п╡я▀я┤п╨п╦. п║я┌я─п╬п╨п╦ п╨п╬п╪п╪п╣п╫я┌п╟я─п╦я▐ п╢п╬п╩п╤п╫я▀ п╦п╪п╣я┌я▄ п╥п╫п╟п╨ "
+"я└я┐п╫я┌п╟ (#) п╡ п╫п╟я┤п╟п╩п╣ я│я┌я─п╬п╨п╦."
 
 # type: TP
 #: ../adduser.conf.5:30
@@ -236,11 +239,10 @@ msgstr "B<DSHELL>"
 
 # type: Plain text
 #: ../adduser.conf.5:34
-msgid ""
-"The login shell to be used for all new users.  Defaults to I</bin/bash>."
+msgid "The login shell to be used for all new users.  Defaults to I</bin/bash>."
 msgstr ""
-"Регистрационный shell, который будут использовать все новые пользователи.  "
-"По умолчанию I</bin/bash>."
+"п═п╣пЁп╦я│я┌я─п╟я├п╦п╬п╫п╫я▀п╧ shell, п╨п╬я┌п╬я─я▀п╧ п╠я┐п╢я┐я┌ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╡я│п╣ п╫п╬п╡я▀п╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╦. "
+"п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ I</bin/bash>."
 
 # type: TP
 #: ../adduser.conf.5:34
@@ -254,7 +256,7 @@ msgid ""
 "The directory in which new home directories should be created.  Defaults to "
 "I</home>."
 msgstr ""
-"Каталог, в котором должны создаваться новые домашние каталоги.  По умолчанию "
+"п п╟я┌п╟п╩п╬пЁ, п╡ п╨п╬я┌п╬я─п╬п╪ п╢п╬п╩п╤п╫я▀ я│п╬п╥п╢п╟п╡п╟я┌я▄я│я▐ п╫п╬п╡я▀п╣ п╢п╬п╪п╟я┬п╫п╦п╣ п╨п╟я┌п╟п╩п╬пЁп╦. п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ "
 "I</home>."
 
 # type: TP
@@ -265,13 +267,12 @@ msgstr "B<GROUPHOMES>"
 
 # type: Plain text
 #: ../adduser.conf.5:47
-#, fuzzy
 msgid ""
 "If this is set to I<yes>, the home directories will be created as I</home/"
 "[groupname]/user>.  Defaults to I<no>."
 msgstr ""
-"Если значение равно I<yes>, то домашние каталоги будут создаваться в I</home/"
-"[имя_группы]/пользователь>.  По умолчанию I<no>."
+"п∙я│п╩п╦ п╥п╫п╟я┤п╣п╫п╦п╣ я─п╟п╡п╫п╬ I<yes>, я┌п╬ п╢п╬п╪п╟я┬п╫п╦п╣ п╨п╟я┌п╟п╩п╬пЁп╦ п╠я┐п╢я┐я┌ я│п╬п╥п╢п╟п╡п╟я┌я▄я│я▐ п╡ I</home/"
+"[п╦п╪я▐_пЁя─я┐п©п©я▀]/п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄>. п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ I<no>."
 
 # type: TP
 #: ../adduser.conf.5:47
@@ -286,9 +287,9 @@ msgid ""
 "extra directory inserted which is the first letter of the loginname.  For "
 "example: I</home/u/user>.  Defaults to I<no>."
 msgstr ""
-"Если значение равно I<yes>, то домашние каталоги будут создаваться в "
-"дополнительном каталоге, имя которого состоит из первой буквы имени "
-"пользователя.  Например: I</home/п/пользователь>.  По умолчанию I<no>."
+"п∙я│п╩п╦ п╥п╫п╟я┤п╣п╫п╦п╣ я─п╟п╡п╫п╬ I<yes>, я┌п╬ п╢п╬п╪п╟я┬п╫п╦п╣ п╨п╟я┌п╟п╩п╬пЁп╦ п╠я┐п╢я┐я┌ я│п╬п╥п╢п╟п╡п╟я┌я▄я│я▐ п╡ "
+"п╢п╬п©п╬п╩п╫п╦я┌п╣п╩я▄п╫п╬п╪ п╨п╟я┌п╟п╩п╬пЁп╣, п╦п╪я▐ п╨п╬я┌п╬я─п╬пЁп╬ я│п╬я│я┌п╬п╦я┌ п╦п╥ п©п╣я─п╡п╬п╧ п╠я┐п╨п╡я▀ п╦п╪п╣п╫п╦ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐.  п²п╟п©я─п╦п╪п╣я─: I</home/п©/п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄>.  п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ I<no>."
 
 # type: TP
 #: ../adduser.conf.5:57
@@ -302,40 +303,38 @@ msgid ""
 "The directory from which skeletal user configuration files should be "
 "copied.  Defaults to I</etc/skel>."
 msgstr ""
-"Каталог, из которого нужно копировать базовые файлы настройки пользователя.  "
-"По умолчанию I</etc/skel>."
+"п п╟я┌п╟п╩п╬пЁ, п╦п╥ п╨п╬я┌п╬я─п╬пЁп╬ п╫я┐п╤п╫п╬ п╨п╬п©п╦я─п╬п╡п╟я┌я▄ п╠п╟п╥п╬п╡я▀п╣ я└п╟п╧п╩я▀ п╫п╟я│я┌я─п╬п╧п╨п╦ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐. "
+"п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ I</etc/skel>."
 
 # type: TP
 #: ../adduser.conf.5:62
 #, no-wrap
 msgid "B<FIRST_SYSTEM_UID> and B<LAST_SYSTEM_UID>"
-msgstr "B<FIRST_SYSTEM_UID> и B<LAST_SYSTEM_UID>"
+msgstr "B<FIRST_SYSTEM_UID> п╦ B<LAST_SYSTEM_UID>"
 
 # type: Plain text
 #: ../adduser.conf.5:67
-#, fuzzy
 msgid ""
 "specify an inclusive range of UIDs from which system UIDs can be dynamically "
 "allocated. Default to I<100> - I<999>."
 msgstr ""
-"определяют границы (включительно) диапазона динамически выделяемых UID "
-"системных пользователей.  По умолчанию I<100> - I<999>."
+"п╬п©я─п╣п╢п╣п╩я▐я▌я┌ пЁя─п╟п╫п╦я├я▀ (п╡п╨п╩я▌я┤п╦я┌п╣п╩я▄п╫п╬) п╢п╦п╟п©п╟п╥п╬п╫п╟ п╢п╦п╫п╟п╪п╦я┤п╣я│п╨п╦ п╡я▀п╢п╣п╩я▐п╣п╪я▀я┘ UID "
+"я│п╦я│я┌п╣п╪п╫я▀я┘ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧. п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ I<100> - I<999>."
 
 # type: TP
 #: ../adduser.conf.5:67
 #, no-wrap
 msgid "B<FIRST_UID> and B<LAST_UID>"
-msgstr "B<FIRST_UID> и B<LAST_UID>"
+msgstr "B<FIRST_UID> п╦ B<LAST_UID>"
 
 # type: Plain text
 #: ../adduser.conf.5:72
-#, fuzzy
 msgid ""
 "specify an inclusive range of UIDs from which normal user's UIDs can be "
 "dynamically allocated. Default to I<1000> - I<29999>."
 msgstr ""
-"определяют границы (включительно) диапазона динамически выделяемых UID "
-"обычных пользователей.  По умолчанию I<1000> - I<29999>."
+"п╬п©я─п╣п╢п╣п╩я▐я▌я┌ пЁя─п╟п╫п╦я├я▀ (п╡п╨п╩я▌я┤п╦я┌п╣п╩я▄п╫п╬) п╢п╦п╟п©п╟п╥п╬п╫п╟ п╢п╦п╫п╟п╪п╦я┤п╣я│п╨п╦ п╡я▀п╢п╣п╩я▐п╣п╪я▀я┘ UID "
+"п╬п╠я▀я┤п╫я▀я┘ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧. п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ I<1000> - I<29999>."
 
 # type: TP
 #: ../adduser.conf.5:72
@@ -345,16 +344,15 @@ msgstr "B<USERGROUPS>"
 
 # type: Plain text
 #: ../adduser.conf.5:82
-#, fuzzy
 msgid ""
 "If this is set to I<yes>, then each created user will be given their own "
 "group to use.  If this is I<no>, then each created user will be placed in "
 "the group whose GID is B<USERS_GID> (see below).  The default is I<yes>."
 msgstr ""
-"Если значение равно I<yes>, то каждый создаваемый пользователь будет иметь "
-"свою собственную группу и его домашний каталог будет g+s.  Если значение "
-"равно I<no>, то каждый создаваемый пользователь будет помещён в группу, чей "
-"GID равен B<USERS_GID> (смотрите ниже).  По умолчанию I<yes>."
+"п∙я│п╩п╦ п╥п╫п╟я┤п╣п╫п╦п╣ я─п╟п╡п╫п╬ I<yes>, я┌п╬ п╨п╟п╤п╢я▀п╧ я│п╬п╥п╢п╟п╡п╟п╣п╪я▀п╧ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ п╠я┐п╢п╣я┌ п╦п╪п╣я┌я▄ "
+"я│п╡п╬я▌ я│п╬п╠я│я┌п╡п╣п╫п╫я┐я▌ пЁя─я┐п©п©я┐. п∙я│п╩п╦ п╥п╫п╟я┤п╣п╫п╦п╣ я─п╟п╡п╫п╬ I<no>, я┌п╬ п╨п╟п╤п╢я▀п╧ я│п╬п╥п╢п╟п╡п╟п╣п╪я▀п╧ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ п╠я┐п╢п╣я┌ п©п╬п╪п╣я┴я▒п╫ п╡ пЁя─я┐п©п©я┐, я┤п╣п╧ GID я─п╟п╡п╣п╫ B<USERS_GID> "
+"(я│п╪п╬я┌я─п╦я┌п╣ п╫п╦п╤п╣). п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ I<yes>."
 
 # type: TP
 #: ../adduser.conf.5:82
@@ -368,8 +366,8 @@ msgid ""
 "If B<USERGROUPS> is I<no>, then B<USERS_GID> is the GID given to all newly-"
 "created users.  The default value is I<100>."
 msgstr ""
-"Если значение B<USERGROUPS> равно I<no>, то B<USERS_GID> является GID, "
-"который даётся всем создаваемым пользователям.  По умолчанию I<100>."
+"п∙я│п╩п╦ п╥п╫п╟я┤п╣п╫п╦п╣ B<USERGROUPS> я─п╟п╡п╫п╬ I<no>, я┌п╬ B<USERS_GID> я▐п╡п╩я▐п╣я┌я│я▐ GID, "
+"п╨п╬я┌п╬я─я▀п╧ п╢п╟я▒я┌я│я▐ п╡я│п╣п╪ я│п╬п╥п╢п╟п╡п╟п╣п╪я▀п╪ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐п╪. п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ I<100>."
 
 # type: TP
 #: ../adduser.conf.5:89
@@ -383,8 +381,8 @@ msgid ""
 "If set to a valid value (e.g. 0755 or 755), directories created will have "
 "the specified permissions. Otherwise 0755 is used as default."
 msgstr ""
-"Если задано допустимое значение (например, 0755 или 755), то создаваемые "
-"каталоги будут иметь такие права. По умолчанию используется значение 0755."
+"п∙я│п╩п╦ п╥п╟п╢п╟п╫п╬ п╢п╬п©я┐я│я┌п╦п╪п╬п╣ п╥п╫п╟я┤п╣п╫п╦п╣ (п╫п╟п©я─п╦п╪п╣я─, 0755 п╦п╩п╦ 755), я┌п╬ я│п╬п╥п╢п╟п╡п╟п╣п╪я▀п╣ "
+"п╨п╟я┌п╟п╩п╬пЁп╦ п╠я┐п╢я┐я┌ п╦п╪п╣я┌я▄ я┌п╟п╨п╦п╣ п©я─п╟п╡п╟. п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐ п╥п╫п╟я┤п╣п╫п╦п╣ 0755."
 
 # type: TP
 #: ../adduser.conf.5:93
@@ -401,12 +399,12 @@ msgid ""
 "some bad side effects, so we no longer do this per default. If you want it "
 "nevertheless you can still activate it here."
 msgstr ""
-"Если значение равно I<yes>, то на домашних каталогах пользователей со своими "
-"собственными группами ( I<USERGROUPS=yes> ) будет устанавливаться setgid "
-"бит. Это делалось по умолчанию в adduser версиях E<lt>E<lt> 3.13. К "
-"сожалению, это привело к появлению побочных эффектов, и поэтому мы исключили "
-"его из действий по умолчанию. Если вы всё-таки хотите, то ещё можете "
-"включить его здесь."
+"п∙я│п╩п╦ п╥п╫п╟я┤п╣п╫п╦п╣ я─п╟п╡п╫п╬ I<yes>, я┌п╬ п╫п╟ п╢п╬п╪п╟я┬п╫п╦я┘ п╨п╟я┌п╟п╩п╬пЁп╟я┘ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ я│п╬ я│п╡п╬п╦п╪п╦ "
+"я│п╬п╠я│я┌п╡п╣п╫п╫я▀п╪п╦ пЁя─я┐п©п©п╟п╪п╦ ( I<USERGROUPS=yes> ) п╠я┐п╢п╣я┌ я┐я│я┌п╟п╫п╟п╡п╩п╦п╡п╟я┌я▄я│я▐ setgid "
+"п╠п╦я┌. п╜я┌п╬ п╢п╣п╩п╟п╩п╬я│я▄ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╡ adduser п╡п╣я─я│п╦я▐я┘ E<lt>E<lt> 3.13. п  "
+"я│п╬п╤п╟п╩п╣п╫п╦я▌, я█я┌п╬ п©я─п╦п╡п╣п╩п╬ п╨ п©п╬я▐п╡п╩п╣п╫п╦я▌ п©п╬п╠п╬я┤п╫я▀я┘ я█я└я└п╣п╨я┌п╬п╡, п╦ п©п╬я█я┌п╬п╪я┐ п╪я▀ п╦я│п╨п╩я▌я┤п╦п╩п╦ "
+"п╣пЁп╬ п╦п╥ п╢п╣п╧я│я┌п╡п╦п╧ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌. п∙я│п╩п╦ п╡я▀ п╡я│я▒-я┌п╟п╨п╦ я┘п╬я┌п╦я┌п╣, я┌п╬ п╣я┴я▒ п╪п╬п╤п╣я┌п╣ "
+"п╡п╨п╩я▌я┤п╦я┌я▄ п╣пЁп╬ п╥п╢п╣я│я▄."
 
 # type: TP
 #: ../adduser.conf.5:103
@@ -420,15 +418,15 @@ msgid ""
 "If set to a nonempty value, new users will have quotas copied from that "
 "user.  The default is empty."
 msgstr ""
-"Если задано непустое значение, то оно воспринимается как имя пользователя, и "
-"для всех новых пользователей будут скопированы квоты этого пользователя.  По "
-"умолчанию пользователь не задан."
+"п∙я│п╩п╦ п╥п╟п╢п╟п╫п╬ п╫п╣п©я┐я│я┌п╬п╣ п╥п╫п╟я┤п╣п╫п╦п╣, я┌п╬ п╬п╫п╬ п╡п╬я│п©я─п╦п╫п╦п╪п╟п╣я┌я│я▐ п╨п╟п╨ п╦п╪я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐, п╦ "
+"п╢п╩я▐ п╡я│п╣я┘ п╫п╬п╡я▀я┘ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ п╠я┐п╢я┐я┌ я│п╨п╬п©п╦я─п╬п╡п╟п╫я▀ п╨п╡п╬я┌я▀ я█я┌п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐.  п÷п╬ "
+"я┐п╪п╬п╩я┤п╟п╫п╦я▌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ п╫п╣ п╥п╟п╢п╟п╫."
 
 # type: TP
 #: ../adduser.conf.5:107
 #, no-wrap
 msgid "B<NAME_REGEX>"
-msgstr ""
+msgstr "B<NAME_REGEX>"
 
 # type: Plain text
 #: ../adduser.conf.5:113
@@ -438,6 +436,11 @@ msgid ""
 "With --force-badname set, only weak checks are performed. The default is the "
 "most conservative ^[a-z][-a-z0-9]*$."
 msgstr ""
+"п■п╟п╫п╫я▀п╪ я─п╣пЁя┐п╩я▐я─п╫я▀п╪ п╡я▀я─п╟п╤п╣п╫п╦п╣п╪ п©я─п╬п╡п╣я─я▐п╣я┌я│я▐ п╢п╬п©я┐я│я┌п╦п╪п╬я│я┌я▄ п╦п╪п╣п╫п╦ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐. п∙я│п╩п╦ "
+"п╦п╪я▐ п╫п╣ п©п╬п╢п©п╟п╢п╟п╣я┌я│я▐ п©п╬п╢ я─п╣пЁя┐п╩я▐я─п╫п╬п╣ п╡я▀я─п╟п╤п╣п╫п╦п╣п╪, я┌п╬ я┐я┤я▒я┌п╫п╟я▐ п╥п╟п©п╦я│я▄ п╫п╣ я│п╬п╥п╢п╟я▒я┌я│я▐, "
+"п╣я│п╩п╦ п╫п╣ я┐п╨п╟п╥п╟п╫ п©п╟я─п╟п╪п╣я┌я─ --force-badname is set. п║ п╥п╟п╢п╟п╫п╫я▀п╪ п©п╟я─п╟п╪п╣я┌я─п╬п╪ "
+"--force-badname п╡я▀п©п╬п╩п╫я▐п╣я┌я│я▐ я┌п╬п╩я▄п╨п╬ я│п╩п╟п╠п╟я▐ п©я─п╬п╡п╣я─п╨п╟. п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╫п╟п╦п╠п╬п╩п╣п╣ "
+"п╨п╬п╫я│п╣я─п╡п╟я┌п╦п╡п╫я▀п╪ я▐п╡п╩я▐п╣я┌я│я▐ ^[a-z][-a-z0-9]*$."
 
 # type: Plain text
 #: ../adduser.conf.5:115
@@ -446,9 +449,8 @@ msgstr "I</etc/adduser.conf>"
 
 # type: Plain text
 #: ../adduser.conf.5:117
-#, fuzzy
 msgid "adduser(8), addgroup(8), deluser(8), delgroup(8)"
-msgstr "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
+msgstr "adduser(8), addgroup(8), deluser(8), delgroup(8)"
 
 # type: TH
 #.  Someone tell emacs that this is an -*- nroff -*- source file.
@@ -466,55 +468,51 @@ msgstr "DELUSER"
 # type: Plain text
 #: ../deluser.8:12
 msgid "deluser, delgroup - remove a user or group from the system"
-msgstr "deluser, delgroup - удаляют пользователя или группу из системы"
+msgstr "deluser, delgroup - я┐п╢п╟п╩я▐я▌я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╦п╩п╦ пЁя─я┐п©п©я┐ п╦п╥ я│п╦я│я┌п╣п╪я▀"
 
 # type: SH
 #: ../deluser.8:12 ../adduser.8:12
 #, no-wrap
 msgid "SYNOPSIS"
-msgstr "СИНТАКСИС"
+msgstr "п║п≤п²п╒п░п п║п≤п║"
 
 # type: Plain text
 #: ../deluser.8:14
-#, fuzzy
 msgid ""
 "B<deluser> [options] [--remove-home] [--home DIR] [--remove-all-files] [--"
 "backup] [--backup-to] user"
 msgstr ""
-"B<deluser> [параметры] [--remove-home] [--remove-all-files] [--backup] "
-"пользователь"
+"B<deluser> [п©п╟я─п╟п╪п╣я┌я─я▀] [--remove-home] [--home п п░п╒п░п⌡п·п⌠] [--remove-all-files] "
+"[--backup] [--backup-to] п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄"
 
 # type: Plain text
 #: ../deluser.8:16
 msgid "B<deluser> --group [options] group"
-msgstr "B<deluser> --group [параметры] группа"
+msgstr "B<deluser> --group [п©п╟я─п╟п╪п╣я┌я─я▀] пЁя─я┐п©п©п╟"
 
 # type: Plain text
 #: ../deluser.8:18
-#, fuzzy
 msgid "B<delgroup> [options] [--only-if-empty] group"
-msgstr "B<delgroup> [параметры] группа"
+msgstr "B<delgroup> [п©п╟я─п╟п╪п╣я┌я─я▀] [--only-if-empty] пЁя─я┐п©п©п╟"
 
 # type: Plain text
 #: ../deluser.8:20
 msgid "B<deluser> [options] user group"
-msgstr "B<deluser> [параметры] пользователь группа"
+msgstr "B<deluser> [п©п╟я─п╟п╪п╣я┌я─я▀] п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ пЁя─я┐п©п©п╟"
 
 # type: SS
 #: ../deluser.8:20 ../adduser.8:26
 #, no-wrap
 msgid "COMMON OPTIONS"
-msgstr "ОБЩИЕ ПАРАМЕТРЫ"
+msgstr "п·п▒п╘п≤п∙ п÷п░п═п░п°п∙п╒п═п╚"
 
 # type: Plain text
 #: ../deluser.8:23
-#, fuzzy
 msgid "[--quiet] [--system] [--help] [--version] [--conf FILE]"
-msgstr "[--quiet] [--help] [--version] [--conf ФАЙЛ]"
+msgstr "[--quiet] [--system] [--help] [--version] [--conf п╓п░п≥п⌡]"
 
 # type: Plain text
 #: ../deluser.8:37
-#, fuzzy
 msgid ""
 "B<deluser> and B<delgroup> remove users and groups from the system according "
 "to command line options and configuration information in I</etc/deluser."
@@ -524,33 +522,31 @@ msgid ""
 "custom script, and other features.  B<deluser> and B<delgroup> can be run in "
 "one of three modes:"
 msgstr ""
-"B<deluser> и B<delgroup> удаляют пользователей и группы из системы, исходя "
-"из параметров, заданных в командной строке и настроечной информации из файла "
-"I</etc/deluser.conf>.  Они являются дружественными интерфейсами к программам "
-"B<userdel> и B<groupdel>, стирают домашний каталог или даже все файлы из "
-"системы, принадлежащие удаляемому пользователю, запускают определённый "
-"сценарий и обладают другими особенностями.  B<deluser> и B<delgroup> могут "
-"быть запущены в одном из трёх режимов:"
+"B<deluser> п╦ B<delgroup> я┐п╢п╟п╩я▐я▌я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ п╦ пЁя─я┐п©п©я▀ п╦п╥ я│п╦я│я┌п╣п╪я▀, п╦я│я┘п╬п╢я▐ "
+"п╦п╥ п©п╟я─п╟п╪п╣я┌я─п╬п╡, п╥п╟п╢п╟п╫п╫я▀я┘ п╡ п╨п╬п╪п╟п╫п╢п╫п╬п╧ я│я┌я─п╬п╨п╣ п╦ п╦п╫я└п╬я─п╪п╟я├п╦п╦ п╦п╥ я└п╟п╧п╩п╟ "
+"I</etc/deluser.conf>. п·п╫п╦ я▐п╡п╩я▐я▌я┌я│я▐ п╢я─я┐п╤п╣я│я┌п╡п╣п╫п╫я▀п╪п╦ п╦п╫я┌п╣я─я└п╣п╧я│п╟п╪п╦ п╨ п©я─п╬пЁя─п╟п╪п╪п╟п╪ "
+"B<userdel> п╦ B<groupdel>, я┐п╢п╟п╩я▐я▌я┌ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ п╦п╩п╦ п╢п╟п╤п╣ п╡я│п╣ я└п╟п╧п╩я▀ п╦п╥ "
+"я│п╦я│я┌п╣п╪я▀, п©я─п╦п╫п╟п╢п╩п╣п╤п╟я┴п╦п╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▌, п╥п╟п©я┐я│п╨п╟я▌я┌ п╬п©я─п╣п╢п╣п╩я▒п╫п╫я▀п╧ я│я├п╣п╫п╟я─п╦п╧ п╦ п╬п╠п╩п╟п╢п╟я▌я┌ "
+"п╢я─я┐пЁп╦п╪п╦ п╡п╬п╥п╪п╬п╤п╫п╬я│я┌я▐п╪п╦. B<deluser> п╦ B<delgroup> п╪п╬пЁя┐я┌ п╠я▀я┌я▄ п╥п╟п©я┐я┴п╣п╫я▀ п╡ п╬п╢п╫п╬п╪ "
+"п╦п╥ я┌я─я▒я┘ я─п╣п╤п╦п╪п╬п╡:"
 
 # type: SS
 #: ../deluser.8:37
 #, no-wrap
 msgid "Remove a normal user"
-msgstr "Удаление обычного пользователя"
+msgstr "пёп╢п╟п╩п╣п╫п╦п╣ п╬п╠я▀я┤п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐"
 
 # type: Plain text
 #: ../deluser.8:41
-#, fuzzy
 msgid ""
 "If called with one non-option argument and without the B< --group >option,B< "
 "deluser> will remove a normal user."
 msgstr ""
-"При запуске с одним аргументом и без параметра B<--group>, B<deluser> "
-"удаляет обычного пользователя."
+"п÷я─п╦ п╥п╟п©я┐я│п╨п╣ я│ п╬п╢п╫п╦п╪ п©п╟я─п╟п╪п╣я┌я─п╬п╪, п╫п╣ п╦п╪п╣я▌я┴п╦п╪ п╟я─пЁя┐п╪п╣п╫я┌п╬п╡ п╦ п╠п╣п╥ п©п╟я─п╟п╪п╣я┌я─п╟ "
+"B<--group>, B<deluser> я┐п╢п╟п╩я▐п╣я┌ п╬п╠я▀я┤п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐."
 
 # type: Plain text
 #: ../deluser.8:54
-#, fuzzy
 msgid ""
 "By default, B<deluser> will remove the user without removing the home "
 "directory, the mail spool or any other files on the system owned by the "
@@ -559,36 +555,28 @@ msgid ""
 "remove the user if the directory given to the B<--home> option matches the "
 "user's real home directory."
 msgstr ""
-"По умолчанию, B<deluser> удаляет пользователя без уничтожения домашнего "
-"каталога, почтового буфера или всех файлов системы, принадлежащих данному "
-"пользователю. Чтобы домашний каталог и почтовый буфер удалялся, можно "
-"указать параметр B<--remove-home>, а для удаления всех файлов системы, "
-"принадлежащих данному пользователю, можно указать параметр B<--remove-all-"
-"files>.  Заметим, что если вы укажете оба параметра, то задание B<--remove-"
-"home> окажется лишним, потому что все файлы, включая домашний каталог и "
-"почтовый буфер уже помечены на удаление параметром B<--remove-all-files>."
+"п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌, B<deluser> я┐п╢п╟п╩я▐п╣я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╠п╣п╥ я┐п╫п╦я┤я┌п╬п╤п╣п╫п╦я▐ п╢п╬п╪п╟я┬п╫п╣пЁп╬ "
+"п╨п╟я┌п╟п╩п╬пЁп╟, п©п╬я┤я┌п╬п╡п╬пЁп╬ я▐я┴п╦п╨п╟ п╦п╩п╦ п╡я│п╣я┘ я└п╟п╧п╩п╬п╡ я│п╦я│я┌п╣п╪я▀, п©я─п╦п╫п╟п╢п╩п╣п╤п╟я┴п╦я┘ п╢п╟п╫п╫п╬п╪я┐ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▌. п╖я┌п╬п╠я▀ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ п╦ п©п╬я┤я┌п╬п╡я▀п╧ я▐я┴п╦п╨ я┐п╢п╟п╩я▐п╩я│я▐, п╪п╬п╤п╫п╬ "
+"я┐п╨п╟п╥п╟я┌я▄ п©п╟я─п╟п╪п╣я┌я─ B<--remove-home>. п∙я│п╩п╦ я┐п╨п╟п╥п╟п╫ п©п╟я─п╟п╪п╣я┌я─ B<--home>, я┌п╬ "
+"deluser я┐п╢п╟п╩п╦я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╩п╦я┬я▄ п╡ я┌п╬п╪ я│п╩я┐я┤п╟п╣, п╣я│п╩п╦ п╨п╟я┌п╟п╩п╬пЁ, я┐п╨п╟п╥п╟п╫п╫я▀п╧ п©п╬я│п╩п╣ п©п╟я─п╟п╪п╣я┌я─п╟ "
+"B<--home> я│п╬п╡п©п╟п╢п╟п╣я┌ я│ я─п╣п╟п╩я▄п╫я▀п╪ п╢п╬п╪п╟я┬п╫п╦п╪ п╨п╟я┌п╟п╩п╬пЁп╬п╪ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐."
 
 # type: Plain text
 #: ../deluser.8:64
-#, fuzzy
 msgid ""
 "The B<--remove-all-files> option removes all files on the system owned by "
 "the user. Note that if you activate both options B<--remove-home> will have "
 "no effect because all files including the home directory and mail spool are "
 "already covered by the B<--remove-all-files> option."
 msgstr ""
-"По умолчанию, B<deluser> удаляет пользователя без уничтожения домашнего "
-"каталога, почтового буфера или всех файлов системы, принадлежащих данному "
-"пользователю. Чтобы домашний каталог и почтовый буфер удалялся, можно "
-"указать параметр B<--remove-home>, а для удаления всех файлов системы, "
-"принадлежащих данному пользователю, можно указать параметр B<--remove-all-"
-"files>.  Заметим, что если вы укажете оба параметра, то задание B<--remove-"
-"home> окажется лишним, потому что все файлы, включая домашний каталог и "
-"почтовый буфер уже помечены на удаление параметром B<--remove-all-files>."
+"п║ п©п╟я─п╟п╪п╣я┌я─п╬п╪ B<--remove-all-files> я┐п╢п╟п╩я▐я▌я┌я│я▐ п╡я│п╣ я└п╟п╧п╩ п╡ я│п╦я│я┌п╣п╪п╣, "
+"п©я─п╦п╫п╟п╢п╩п╣п╤п╟я┴п╦п╣ п╢п╟п╫п╫п╬п╪я┐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▌. п≈п╟п╪п╣я┌п╦п╪, я┤я┌п╬ п╡ я█я┌п╬п╪ я│п╩я┐я┤п╟п╣ я┐п╨п╟п╥я▀п╡п╟я┌я▄ "
+"п©п╟я─п╟п╪п╣я┌я─ B<--remove-home> п╫п╣п╬п╠я▐п╥п╟я┌п╣п╩я▄п╫п╬, я┌п╟п╨ п╨п╟п╨ п╡я│п╣ я└п╟п╧п╩я▀, п╡п╨п╩я▌я┤п╟я▐ п╢п╬п╪п╟я┬п╫п╦п╧ "
+"п╨п╟я┌п╟п╩п╬пЁ п╦ п©п╬я┤я┌п╬п╡я▀п╧ я▐я┴п╦п╨ я┐п╤п╣ п©п╬п╪п╣я┤п╣п╫я▀ п╫п╟ я┐п╢п╟п╩п╣п╫п╦п╣ п©п╟я─п╟п╪п╣я┌я─п╬п╪ B<--remove-all-files>."
 
 # type: Plain text
 #: ../deluser.8:75
-#, fuzzy
 msgid ""
 "If you want to backup all files before deleting them you can activate the "
 "B<--backup> option which will create a file username.tar(.gz|.bz2) in the "
@@ -597,12 +585,12 @@ msgid ""
 "for default in the configuration file /etc/deluser.conf. See B<deluser.conf"
 "(5)> for details."
 msgstr ""
-"Если вы хотите сделать резервную копию всех файлов перед их удалением, то вы "
-"можете указать параметр B<--backup>, при котором будет создан файл "
-"имя_пользователя.tar(.gz|.bz2) в текущем рабочем каталоге. Параметры "
-"удаления и резервного копирования также можно задать как действия по "
-"умолчанию в файле настройки /etc/deluser.conf. Подробней смотрите B<deluser."
-"conf(5)>."
+"п∙я│п╩п╦ п╡я▀ я┘п╬я┌п╦я┌п╣ я│п╢п╣п╩п╟я┌я▄ я─п╣п╥п╣я─п╡п╫я┐я▌ п╨п╬п©п╦я▌ п╡я│п╣я┘ я└п╟п╧п╩п╬п╡ п©п╣я─п╣п╢ п╦я┘ я┐п╢п╟п╩п╣п╫п╦п╣п╪, я┌п╬ п╡я▀ "
+"п╪п╬п╤п╣я┌п╣ я┐п╨п╟п╥п╟я┌я▄ п©п╟я─п╟п╪п╣я┌я─ B<--backup>, п©я─п╦ п╨п╬я┌п╬я─п╬п╪ п╠я┐п╢п╣я┌ я│п╬п╥п╢п╟п╫ я└п╟п╧п╩ "
+"п╦п╪я▐_п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐.tar(.gz|.bz2), п╡ п╨п╟я┌п╟п╩п╬пЁп╣, п╥п╟п╢п╟п╫п╫п╬п╪ п©п╟я─п╟п╪п╣я┌я─п╬п╪ B<--backup-to> "
+"(п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐ я┌п╣п╨я┐я┴п╦п╧ я─п╟п╠п╬я┤п╦п╧ п╨п╟я┌п╟п╩п╬пЁ). п÷п╟я─п╟п╪п╣я┌я─я▀ я┐п╢п╟п╩п╣п╫п╦я▐ п╦ "
+"я─п╣п╥п╣я─п╡п╫п╬пЁп╬ п╨п╬п©п╦я─п╬п╡п╟п╫п╦я▐ я┌п╟п╨п╤п╣ п╪п╬п╤п╫п╬ п╥п╟п╢п╟я┌я▄ п╨п╟п╨ п╢п╣п╧я│я┌п╡п╦я▐ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╡ я└п╟п╧п╩п╣ "
+"п╫п╟я│я┌я─п╬п╧п╨п╦ /etc/deluser.conf. п÷п╬п╢я─п╬п╠п╫п╣п╧ я│п╪п╬я┌я─п╦я┌п╣ B<deluser.conf(5)>."
 
 # type: Plain text
 #: ../deluser.8:82
@@ -611,30 +599,29 @@ msgid ""
 "after the user account has been removed in order to do any local setup. The "
 "arguments passed to B<deluser.local> are:"
 msgstr ""
-"Если файл B</usr/local/sbin/deluser.local> существует, то он будет выполнен "
-"после удаления учётной записи пользователя, чтобы выполнить все локальные "
-"настройки.  Аргументы передаваемые B<deluser.local>:"
+"п∙я│п╩п╦ я└п╟п╧п╩ B</usr/local/sbin/deluser.local> я│я┐я┴п╣я│я┌п╡я┐п╣я┌, я┌п╬ п╬п╫ п╠я┐п╢п╣я┌ п╡я▀п©п╬п╩п╫п╣п╫ "
+"п©п╬я│п╩п╣ я┐п╢п╟п╩п╣п╫п╦я▐ я┐я┤я▒я┌п╫п╬п╧ п╥п╟п©п╦я│п╦ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐, я┤я┌п╬п╠я▀ п╡я▀п©п╬п╩п╫п╦я┌я▄ п╡я│п╣ п╩п╬п╨п╟п╩я▄п╫я▀п╣ "
+"п╫п╟я│я┌я─п╬п╧п╨п╦.  п░я─пЁя┐п╪п╣п╫я┌я▀ п©п╣я─п╣п╢п╟п╡п╟п╣п╪я▀п╣ B<deluser.local>:"
 
 # type: Plain text
 #: ../deluser.8:84
 msgid "username uid gid home-directory"
-msgstr "имя_пользователя uid gid домашний_каталог"
+msgstr "п╦п╪я▐_п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ uid gid п╢п╬п╪п╟я┬п╫п╦п╧_п╨п╟я┌п╟п╩п╬пЁ"
 
 # type: SS
 #: ../deluser.8:85
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Remove a group"
-msgstr "Удаление системной группы"
+msgstr "пёп╢п╟п╩п╦я┌я▄ пЁя─я┐п©п©я┐"
 
 # type: Plain text
 #: ../deluser.8:89
-#, fuzzy
 msgid ""
 "If B<deluser> is called with the B<--group> option, or B<delgroup> is "
 "called, a group will be removed."
 msgstr ""
-"Если B<deluser> вызывается с параметром B<--group>, или вызывается как "
-"B<delgroup>, то удаляется системная группа."
+"п∙я│п╩п╦ B<deluser> п╡я▀п╥я▀п╡п╟п╣я┌я│я▐ я│ п©п╟я─п╟п╪п╣я┌я─п╬п╪ B<--group>, п╦п╩п╦ п╡я▀п╥я▀п╡п╟п╣я┌я│я▐ п╨п╟п╨ "
+"B<delgroup>, я┌п╬ п╡я▀п©п╬п╩п╫я▐п╣я┌я│я▐ я┐п╢п╟п╩п╣п╫п╦п╣ пЁя─я┐п©п©я▀."
 
 # type: Plain text
 #: ../deluser.8:92
@@ -642,8 +629,8 @@ msgid ""
 "Warning: If any users have the group to be removed as primary group the "
 "group cannot be removed."
 msgstr ""
-"Предупреждение: Если некоторые пользователи имеют удаляемую группу в "
-"качестве первичной, то удаления группы не произойдёт."
+"п÷я─п╣п╢я┐п©я─п╣п╤п╢п╣п╫п╦п╣: п∙я│п╩п╦ п╫п╣п╨п╬я┌п╬я─я▀п╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╦ п╦п╪п╣я▌я┌ я┐п╢п╟п╩я▐п╣п╪я┐я▌ пЁя─я┐п©п©я┐ п╡ "
+"п╨п╟я┤п╣я│я┌п╡п╣ п©п╣я─п╡п╦я┤п╫п╬п╧, я┌п╬ я┐п╢п╟п╩п╣п╫п╦я▐ пЁя─я┐п©п©я▀ п╫п╣ п©я─п╬п╦п╥п╬п╧п╢я▒я┌."
 
 # type: Plain text
 #: ../deluser.8:96
@@ -651,12 +638,14 @@ msgid ""
 "If the option B<--only-if-empty> is given, the group won't be removed if it "
 "has any members left."
 msgstr ""
+"п∙я│п╩п╦ п╥п╟п╢п╟п╫ п©п╟я─п╟п╪п╣я┌я─ B<--only-if-empty>, я┐п╢п╟п╩п╣п╫п╦п╣ пЁя─я┐п©п©я▀ п╫п╣ п©я─п╬п╦п╥п╬п╧п╢я▒я┌, п╣я│п╩п╦ "
+"п╡ п╫п╣я▒ п╡я┘п╬п╢я▐я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╦."
 
 # type: SS
 #: ../deluser.8:97
 #, no-wrap
 msgid "Remove an user from a specific group"
-msgstr "Удаление пользователя из определённой группы"
+msgstr "пёп╢п╟п╩п╣п╫п╦п╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╦п╥ п╬п©я─п╣п╢п╣п╩я▒п╫п╫п╬п╧ пЁя─я┐п©п©я▀"
 
 # type: Plain text
 #: ../deluser.8:101
@@ -664,25 +653,25 @@ msgid ""
 "If called with two non-option arguments, B<deluser> will remove an user from "
 "a specific group."
 msgstr ""
-"При запуске с двумя аргументами, без параметров, B<deluser> удаляет "
-"пользователя из определённой группы."
+"п÷я─п╦ п╥п╟п©я┐я│п╨п╣ я│ п╢п╡я┐п╪я▐ п╟я─пЁя┐п╪п╣п╫я┌п╟п╪п╦, п╠п╣п╥ п©п╟я─п╟п╪п╣я┌я─п╬п╡, B<deluser> я┐п╢п╟п╩я▐п╣я┌ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╦п╥ п╬п©я─п╣п╢п╣п╩я▒п╫п╫п╬п╧ пЁя─я┐п©п©я▀."
 
 # type: SH
 #: ../deluser.8:101 ../adduser.8:169
 #, no-wrap
 msgid "OPTIONS"
-msgstr "ПАРАМЕТРЫ"
+msgstr "п÷п░п═п░п°п∙п╒п═п╚"
 
 # type: TP
 #: ../deluser.8:102 ../adduser.8:170
 #, no-wrap
 msgid "B<--conf FILE>"
-msgstr "B<--conf ФАЙЛ>"
+msgstr "B<--conf п╓п░п≥п⌡>"
 
 # type: Plain text
 #: ../deluser.8:106
 msgid "Use FILE instead of I</etc/deluser.conf>."
-msgstr "Использовать ФАЙЛ вместо I</etc/deluser.conf>."
+msgstr "п≤я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╓п░п≥п⌡ п╡п╪п╣я│я┌п╬ I</etc/deluser.conf>."
 
 # type: TP
 #: ../deluser.8:106 ../adduser.8:199
@@ -696,8 +685,8 @@ msgid ""
 "Remove a group. This is the default action if the program is invoked as "
 "I<delgroup>."
 msgstr ""
-"Удалить группу. Это является действием по умолчанию, если программа "
-"вызывается как I<delgroup>."
+"пёп╢п╟п╩п╦я┌я▄ пЁя─я┐п©п©я┐. п╜я┌п╬ я▐п╡п╩я▐п╣я┌я│я▐ п╢п╣п╧я│я┌п╡п╦п╣п╪ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌, п╣я│п╩п╦ п©я─п╬пЁя─п╟п╪п╪п╟ "
+"п╡я▀п╥я▀п╡п╟п╣я┌я│я▐ п╨п╟п╨ I<delgroup>."
 
 # type: TP
 #: ../deluser.8:111 ../adduser.8:209
@@ -708,7 +697,7 @@ msgstr "B<--help>"
 # type: Plain text
 #: ../deluser.8:114 ../adduser.8:212
 msgid "Display brief instructions."
-msgstr "Показать краткую инструкцию."
+msgstr "п÷п╬п╨п╟п╥п╟я┌я▄ п╨я─п╟я┌п╨я┐я▌ п╦п╫я│я┌я─я┐п╨я├п╦я▌."
 
 # type: TP
 #: ../deluser.8:114 ../adduser.8:228
@@ -719,7 +708,7 @@ msgstr "B<--quiet>"
 # type: Plain text
 #: ../deluser.8:117 ../adduser.8:231
 msgid "Suppress progress messages."
-msgstr "Не выводить сообщения о ходе работы."
+msgstr "п²п╣ п╡я▀п╡п╬п╢п╦я┌я▄ я│п╬п╬п╠я┴п╣п╫п╦я▐ п╬ я┘п╬п╢п╣ я─п╟п╠п╬я┌я▀."
 
 # type: TP
 #: ../deluser.8:117 ../adduser.8:231
@@ -735,6 +724,10 @@ msgid ""
 "no error value is returned. This option is mainly for use in Debian package "
 "maintainer scripts."
 msgstr ""
+"п▓я▀п©п╬п╩п╫п╦я┌я▄ я┐п╢п╟п╩п╣п╫п╦п╣, п╣я│п╩п╦ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄/пЁя─я┐п©п©п╟ я▐п╡п╩я▐я▌я┌я│я▐ я│п╦я│я┌п╣п╪п╫я▀п╪п╦. п╜я┌п╬ п©п╬п╪п╬пЁп╟п╣я┌ "
+"п╦п╥п╠п╣п╤п╟я┌я▄ я│п╩я┐я┤п╟п╧п╫п╬пЁп╬ я┐п╢п╟п╩п╣п╫п╦я▐ п╫п╣ я│п╦я│я┌п╣п╪п╫п╬п╧ пЁя─я┐п©п©я▀/п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐. п╒п╟п╨п╤п╣, п╣я│п╩п╦ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌, я┌п╬ п╥п╫п╟я┤п╣п╫п╦п╣ п╬я┬п╦п╠п╨п╦ п╫п╣ п╡п╬п╥п╡я─п╟я┴п╟п╣я┌я│я▐. п╜я┌п╬я┌ п©п╟я─п╟п╪п╣я┌я─ "
+"я┤п╟я┴п╣ п╡я│п╣пЁп╬ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐ п╡ я│я├п╣п╫п╟я─п╦я▐я┘ я│п╬п©я─п╬п╡п╬п╤п╢п╣п╫п╦я▐ п©п╟п╨п╣я┌п╬п╡ Debian."
 
 # type: TP
 #: ../deluser.8:123 ../adduser.8:244
@@ -745,7 +738,7 @@ msgstr "B<--version>"
 # type: Plain text
 #: ../deluser.8:126 ../adduser.8:247
 msgid "Display version and copyright information."
-msgstr "Показать номер версии и информацию об авторском праве."
+msgstr "п÷п╬п╨п╟п╥п╟я┌я▄ п╫п╬п╪п╣я─ п╡п╣я─я│п╦п╦ п╦ п╦п╫я└п╬я─п╪п╟я├п╦я▌ п╬п╠ п╟п╡я┌п╬я─я│п╨п╬п╪ п©я─п╟п╡п╣."
 
 # type: Plain text
 #: ../deluser.8:128
@@ -761,17 +754,16 @@ msgstr "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
 #: ../deluser.8:131 ../adduser.8:253
 #, no-wrap
 msgid "COPYRIGHT"
-msgstr "АВТОРСКОЕ ПРАВО"
+msgstr "п░п▓п╒п·п═п║п п·п∙ п÷п═п░п▓п·"
 
 # type: Plain text
 #: ../deluser.8:135
-#, fuzzy
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber.  "
 "This manpage and the deluser program is based on adduser which is:"
 msgstr ""
-"Copyright (C) 2000 Roland Bauerschmidt.  Эта справочная страница и программа "
-"deluser основаны на adduser, где:"
+"Copyright (C) 2000 Roland Bauerschmidt. п≤п╥п╪п╣п╫п╣п╫п╦я▐ (C) 2004 Marc Haber. "
+"п╜я┌п╟ я│п©я─п╟п╡п╬я┤п╫п╟я▐ я│я┌я─п╟п╫п╦я├п╟ п╦ п©я─п╬пЁя─п╟п╪п╪п╟ deluser п╬я│п╫п╬п╡п╟п╫я▀ п╫п╟ adduser, п╨п╬я┌п╬я─п╟я▐:"
 
 # type: Plain text
 #: ../deluser.8:137
@@ -784,7 +776,7 @@ msgid ""
 "Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original "
 "Debian B<adduser>"
 msgstr ""
-"Copyright (C) 1995 Ted Hajek, с большими заимствованиями из оригинального "
+"Copyright (C) 1995 Ted Hajek, я│ п╠п╬п╩я▄я┬п╦п╪п╦ п╥п╟п╦п╪я│я┌п╡п╬п╡п╟п╫п╦я▐п╪п╦ п╦п╥ п╬я─п╦пЁп╦п╫п╟п╩я▄п╫п╬пЁп╬ "
 "Debian B<adduser>"
 
 # type: Plain text
@@ -794,9 +786,9 @@ msgid ""
 "General Public Licence version 2 or later for copying conditions.  There is "
 "I<no> warranty."
 msgstr ""
-"Copyright (C) 1994 Ian Murdock.  B<deluser> это свободное ПО; смотрите "
-"условия копирования в Универсальной Общественной Лицензии GNU версии 2 или "
-"более новой.  Не предоставляется I<никаких> гарантий."
+"Copyright (C) 1994 Ian Murdock. B<deluser> я█я┌п╬ я│п╡п╬п╠п╬п╢п╫п╬п╣ п÷п·; я│п╪п╬я┌я─п╦я┌п╣ "
+"я┐я│п╩п╬п╡п╦я▐ п╨п╬п©п╦я─п╬п╡п╟п╫п╦я▐ п╡ пёп╫п╦п╡п╣я─я│п╟п╩я▄п╫п╬п╧ п·п╠я┴п╣я│я┌п╡п╣п╫п╫п╬п╧ п⌡п╦я├п╣п╫п╥п╦п╦ GNU п╡п╣я─я│п╦п╦ 2 п╦п╩п╦ "
+"п╠п╬п╩п╣п╣ п╫п╬п╡п╬п╧. п²п╣ п©я─п╣п╢п╬я│я┌п╟п╡п╩я▐п╣я┌я│я▐ I<п╫п╦п╨п╟п╨п╦я┘> пЁп╟я─п╟п╫я┌п╦п╧."
 
 # type: TH
 #.  Someone tell emacs that this is an -*- nroff -*- source file.
@@ -814,68 +806,62 @@ msgstr "ADDUSER"
 # type: Plain text
 #: ../adduser.8:12
 msgid "adduser, addgroup - add a user or group to the system"
-msgstr "adduser, addgroup - добавляют пользователя или группу в систему"
+msgstr "adduser, addgroup - п╢п╬п╠п╟п╡п╩я▐я▌я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╦п╩п╦ пЁя─я┐п©п©я┐ п╡ я│п╦я│я┌п╣п╪я┐"
 
 # type: Plain text
 #: ../adduser.8:14
-#, fuzzy
 msgid ""
 "B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
 "uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
 "disabled-password] [--disabled-login] [--gecos GECOS] user"
 msgstr ""
-"B<adduser> [параметры] [--home КАТ] [--no-create-home] [--uid ID] [--"
-"firstuid ID] [--lastuid ID] [--ingroup ГРУППА | --gid ID] [--disabled-"
-"password] [--gecos GECOS] пользователь"
+"B<adduser> [п©п╟я─п╟п╪п╣я┌я─я▀] [--home п п░п╒] [--shell|-s п·п▒п·п⌡п·п╖п п░] [--no-create-home] "
+"[--uid ID] [--firstuid ID] [--lastuid ID] [--ingroup п⌠п═пёп÷п÷п░ | --gid ID] "
+"[--disabled-password] [--disabled-login] [--gecos GECOS] п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄"
 
 # type: Plain text
 #: ../adduser.8:16
-#, fuzzy
 msgid ""
 "B<adduser> --system [options] [--home DIR] [--shell SHELL] [--no-create-"
 "home] [--uid ID] [--group | --ingroup GROUP | --gid ID] [--disabled-"
 "password] [--disabled-login] [--gecos GECOS] user"
 msgstr ""
-"B<adduser> --system [параметры] [--home КАТ] [--no-create-home] [--uid ID] "
-"[--group | --ingroup ГРУППА | --gid ID] [--disabled-password] [--gecos "
-"GECOS] пользователь"
+"B<adduser> --system [п©п╟я─п╟п╪п╣я┌я─я▀] [--home п п░п╒] [--shell п·п▒п·п⌡п·п╖п п░] "
+"[--no-create-home] [--uid ID] [--group | --ingroup п⌠п═пёп÷п÷п░ | --gid ID] "
+"[--disabled-password] [--disabled-login] [--gecos GECOS] п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄"
 
 # type: Plain text
 #: ../adduser.8:18
 msgid "B<adduser> --group [options] [--gid ID] group"
-msgstr "B<adduser> --group [параметры] [--gid ID] группа"
+msgstr "B<adduser> --group [п©п╟я─п╟п╪п╣я┌я─я▀] [--gid ID] пЁя─я┐п©п©п╟"
 
 # type: Plain text
 #: ../adduser.8:20
 msgid "B<addgroup> [options] [--gid ID] group"
-msgstr "B<addgroup> [параметры] [--gid ID] группа"
+msgstr "B<addgroup> [п©п╟я─п╟п╪п╣я┌я─я▀] [--gid ID] пЁя─я┐п©п©п╟"
 
 # type: Plain text
 #: ../adduser.8:22
-#, fuzzy
 msgid "B<adduser> --group --system [options] [--gid ID] group"
-msgstr "B<adduser> --group [параметры] [--gid ID] группа"
+msgstr "B<adduser> --group --system [п©п╟я─п╟п╪п╣я┌я─я▀] [--gid ID] пЁя─я┐п©п©п╟"
 
 # type: Plain text
 #: ../adduser.8:24
-#, fuzzy
 msgid "B<addgroup> --system [options] [--gid ID] group"
-msgstr "B<addgroup> [параметры] [--gid ID] группа"
+msgstr "B<addgroup> --system [п©п╟я─п╟п╪п╣я┌я─я▀] [--gid ID] пЁя─я┐п©п©п╟"
 
 # type: Plain text
 #: ../adduser.8:26
 msgid "B<adduser> [options] user group"
-msgstr "B<adduser> [параметры] пользователь группа"
+msgstr "B<adduser> [п©п╟я─п╟п╪п╣я┌я─я▀] п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ пЁя─я┐п©п©п╟"
 
 # type: Plain text
 #: ../adduser.8:29
-#, fuzzy
 msgid "[--quiet] [--force-badname] [--help|-h] [--version] [--conf FILE]"
-msgstr "[--quiet] [--force-badname] [--help] [--version] [--conf ФАЙЛ]"
+msgstr "[--quiet] [--force-badname] [--help|-h] [--version] [--conf п╓п░п≥п⌡]"
 
 # type: Plain text
 #: ../adduser.8:43
-#, fuzzy
 msgid ""
 "B<adduser> and B<addgroup> add users and groups to the system according to "
 "command line options and configuration information in I</etc/adduser.conf>.  "
@@ -885,19 +871,19 @@ msgid ""
 "running a custom script, and other features.  B<adduser> and B<addgroup> can "
 "be run in one of five modes:"
 msgstr ""
-"B<adduser> и B<addgroup> добавляют пользователей и группы в систему, исходя "
-"из параметров, заданных в командной строке и настроечной информации из файла "
-"I</etc/adduser.conf>.  Они являются дружественными интерфейсами к программам "
-"B<useradd> и B<groupadd>, выбирают согласованные с политикой Debian значения "
-"UID и GID, создают домашний каталог с начальными настройками, запускают "
-"определённый сценарий, и обладают другими особенностями.  B<adduser> и "
-"B<addgroup> могут быть запущены в одном из четырёх режимов:"
+"B<adduser> п╦ B<addgroup> п╢п╬п╠п╟п╡п╩я▐я▌я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ п╦ пЁя─я┐п©п©я▀ п╡ я│п╦я│я┌п╣п╪я┐, п╦я│я┘п╬п╢я▐ "
+"п╦п╥ п©п╟я─п╟п╪п╣я┌я─п╬п╡, п╥п╟п╢п╟п╫п╫я▀я┘ п╡ п╨п╬п╪п╟п╫п╢п╫п╬п╧ я│я┌я─п╬п╨п╣ п╦ п╦п╫я└п╬я─п╪п╟я├п╦п╦ п╦п╥ я└п╟п╧п╩п╟ "
+"I</etc/adduser.conf>. п·п╫п╦ я▐п╡п╩я▐я▌я┌я│я▐ п╢я─я┐п╤п╣я│я┌п╡п╣п╫п╫я▀п╪п╦ п╦п╫я┌п╣я─я└п╣п╧я│п╟п╪п╦ п╨ п©я─п╬пЁя─п╟п╪п╪п╟п╪ "
+"B<groupadd> п╦ B<usermod>, п╡я▀п╠п╦я─п╟я▌я┌ я│п╬пЁп╩п╟я│п╬п╡п╟п╫п╫я▀п╣ я│ п©п╬п╩п╦я┌п╦п╨п╬п╧ Debian п╥п╫п╟я┤п╣п╫п╦я▐ "
+"UID п╦ GID, я│п╬п╥п╢п╟я▌я┌ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ я│ п╫п╟я┤п╟п╩я▄п╫я▀п╪п╦ п╫п╟я│я┌я─п╬п╧п╨п╟п╪п╦, п╥п╟п©я┐я│п╨п╟я▌я┌ "
+"п╬п©я─п╣п╢п╣п╩я▒п╫п╫я▀п╧ я│я├п╣п╫п╟я─п╦п╧, п╦ п╬п╠п╩п╟п╢п╟я▌я┌ п╢я─я┐пЁп╦п╪п╦ п╡п╬п╥п╪п╬п╤п╫п╬я│я┌я▐п╪п╦. B<adduser> п╦ "
+"B<addgroup> п╪п╬пЁя┐я┌ п╠я▀я┌я▄ п╥п╟п©я┐я┴п╣п╫я▀ п╡ п╬п╢п╫п╬п╪ п╦п╥ я┤п╣я┌я▀я─я▒я┘ я─п╣п╤п╦п╪п╬п╡:"
 
 # type: SS
 #: ../adduser.8:43
 #, no-wrap
 msgid "Add a normal user"
-msgstr "Добавление обычного пользователя"
+msgstr "п■п╬п╠п╟п╡п╩п╣п╫п╦п╣ п╬п╠я▀я┤п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐"
 
 # type: Plain text
 #: ../adduser.8:47
@@ -905,8 +891,8 @@ msgid ""
 "If called with one non-option argument and without the B<--system> or B<--"
 "group> options, B<adduser> will add a normal user."
 msgstr ""
-"При запуске с двумя аргументами и без параметров B<--system> или B<--group>, "
-"B<adduser> добавляет обычного пользователя."
+"п÷я─п╦ п╥п╟п©я┐я│п╨п╣ я│ п╢п╡я┐п╪я▐ п╟я─пЁя┐п╪п╣п╫я┌п╟п╪п╦ п╦ п╠п╣п╥ п©п╟я─п╟п╪п╣я┌я─п╬п╡ B<--system> п╦п╩п╦ B<--group>, "
+"B<adduser> п╢п╬п╠п╟п╡п╩я▐п╣я┌ п╬п╠я▀я┤п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐."
 
 # type: Plain text
 #: ../adduser.8:54
@@ -915,8 +901,8 @@ msgid ""
 "normal users in the configuration file.  The UID can be overridden with the "
 "B<--uid> option."
 msgstr ""
-"B<adduser> выберет первый доступный UID из диапазона обычных пользователей, "
-"заданного в файле настройки.  UID может быть изменён с помощью параметра B<--"
+"B<adduser> п╡я▀п╠п╣я─п╣я┌ п©п╣я─п╡я▀п╧ п╢п╬я│я┌я┐п©п╫я▀п╧ UID п╦п╥ п╢п╦п╟п©п╟п╥п╬п╫п╟ п╬п╠я▀я┤п╫я▀я┘ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧, "
+"п╥п╟п╢п╟п╫п╫п╬пЁп╬ п╡ я└п╟п╧п╩п╣ п╫п╟я│я┌я─п╬п╧п╨п╦.  UID п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п╦п╥п╪п╣п╫я▒п╫ я│ п©п╬п╪п╬я┴я▄я▌ п©п╟я─п╟п╪п╣я┌я─п╟ B<--"
 "uid>."
 
 # type: Plain text
@@ -925,8 +911,8 @@ msgid ""
 "The range specified in the configuration file may be overridden with the B<--"
 "firstuid> and B<--lastuid> options."
 msgstr ""
-"Диапазон, задаваемый файлом настройки, может быть изменён с помощью "
-"параметров B<--firstuid> и B<--lastuid.>"
+"п■п╦п╟п©п╟п╥п╬п╫, п╥п╟п╢п╟п╡п╟п╣п╪я▀п╧ я└п╟п╧п╩п╬п╪ п╫п╟я│я┌я─п╬п╧п╨п╦, п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п╦п╥п╪п╣п╫я▒п╫ я│ п©п╬п╪п╬я┴я▄я▌ "
+"п©п╟я─п╟п╪п╣я┌я─п╬п╡ B<--firstuid> п╦ B<--lastuid.>"
 
 # type: Plain text
 #: ../adduser.8:74
@@ -940,20 +926,19 @@ msgid ""
 "be overridden from the command line with the B<--gid> or B<--ingroup> "
 "options to set the group by id or name, respectively."
 msgstr ""
-"По умолчанию, каждый пользователь в Debian GNU/Linux входит в "
-"соответствующую группу с тем же именем и id. Объединение пользователей в "
-"группы позволяет групповую запись в каталог, что легко достигается "
-"посредством помещения соответствующих пользователей в новую группу, "
-"установкой set-group-ID бита на каталог и проверкой того, что все "
-"пользователи используют значение umask со значением 002. Если параметру "
-"B<USERGROUPS> присвоить значение I<no>, то все GID пользователей будут "
-"устанавливаться в B<USERS_GID>.  Группы пользователей также могут быть "
-"изменены из командной строки с помощью параметров B<--gid> или B<--ingroup>, "
-"которые задают группу по id или по имени соответственно."
+"п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌, п╨п╟п╤п╢я▀п╧ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ п╡ Debian GNU/Linux п╡я┘п╬п╢п╦я┌ п╡ "
+"я│п╬п╬я┌п╡п╣я┌я│я┌п╡я┐я▌я┴я┐я▌ пЁя─я┐п©п©я┐ я│ я┌п╣п╪ п╤п╣ п╦п╪п╣п╫п╣п╪ п╦ id. п·п╠я┼п╣п╢п╦п╫п╣п╫п╦п╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ п╡ "
+"пЁя─я┐п©п©я▀ п©п╬п╥п╡п╬п╩я▐п╣я┌ пЁя─я┐п©п©п╬п╡я┐я▌ п╥п╟п©п╦я│я▄ п╡ п╨п╟я┌п╟п╩п╬пЁ, я┤я┌п╬ п╩п╣пЁп╨п╬ п╢п╬я│я┌п╦пЁп╟п╣я┌я│я▐ "
+"п©п╬я│я─п╣п╢я│я┌п╡п╬п╪ п©п╬п╪п╣я┴п╣п╫п╦я▐ я│п╬п╬я┌п╡п╣я┌я│я┌п╡я┐я▌я┴п╦я┘ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ п╡ п╫п╬п╡я┐я▌ пЁя─я┐п©п©я┐, "
+"я┐я│я┌п╟п╫п╬п╡п╨п╬п╧ set-group-ID п╠п╦я┌п╟ п╫п╟ п╨п╟я┌п╟п╩п╬пЁ п╦ п©я─п╬п╡п╣я─п╨п╬п╧ я┌п╬пЁп╬, я┤я┌п╬ п╡я│п╣ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╦ п╦я│п©п╬п╩я▄п╥я┐я▌я┌ п╥п╫п╟я┤п╣п╫п╦п╣ umask я│п╬ п╥п╫п╟я┤п╣п╫п╦п╣п╪ 002. п∙я│п╩п╦ п©п╟я─п╟п╪п╣я┌я─я┐ "
+"B<USERGROUPS> п©я─п╦я│п╡п╬п╦я┌я▄ п╥п╫п╟я┤п╣п╫п╦п╣ I<no>, я┌п╬ п╡я│п╣ GID п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ п╠я┐п╢я┐я┌ "
+"я┐я│я┌п╟п╫п╟п╡п╩п╦п╡п╟я┌я▄я│я▐ п╡ B<USERS_GID>.  п⌠я─я┐п©п©я▀ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧ я┌п╟п╨п╤п╣ п╪п╬пЁя┐я┌ п╠я▀я┌я▄ "
+"п╦п╥п╪п╣п╫п╣п╫я▀ п╦п╥ п╨п╬п╪п╟п╫п╢п╫п╬п╧ я│я┌я─п╬п╨п╦ я│ п©п╬п╪п╬я┴я▄я▌ п©п╟я─п╟п╪п╣я┌я─п╬п╡ B<--gid> п╦п╩п╦ B<--ingroup>, "
+"п╨п╬я┌п╬я─я▀п╣ п╥п╟п╢п╟я▌я┌ пЁя─я┐п©п©я┐ п©п╬ id п╦п╩п╦ п©п╬ п╦п╪п╣п╫п╦ я│п╬п╬я┌п╡п╣я┌я│я┌п╡п╣п╫п╫п╬."
 
 # type: Plain text
 #: ../adduser.8:88
-#, fuzzy
 msgid ""
 "B<adduser> will create a home directory subject to B<DHOME>, B<GROUPHOMES>, "
 "and B<LETTERHOMES>.  The home directory can be overridden from the command "
@@ -962,16 +947,15 @@ msgid ""
 "that any files created in the user's home directory will have the correct "
 "group."
 msgstr ""
-"B<adduser> создаёт домашний каталог в соответствии со значениями B<DHOME>, "
-"B<GROUPHOMES>, и B<LETTERHOMES>.  Домашний каталог может быть изменён из "
-"командной строки с помощью параметра B<--home>.  Set-group-ID бит домашнего "
-"каталога устанавливается, если B<USERGROUPS> равно I<yes>, и поэтому любые "
-"файлы, создаваемые в домашнем каталоге пользователя, будут иметь правильную "
-"группу."
+"B<adduser> я│п╬п╥п╢п╟я▒я┌ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ п╡ я│п╬п╬я┌п╡п╣я┌я│я┌п╡п╦п╦ я│п╬ п╥п╫п╟я┤п╣п╫п╦я▐п╪п╦ B<DHOME>, "
+"B<GROUPHOMES> п╦ B<LETTERHOMES>. п■п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п╦п╥п╪п╣п╫я▒п╫ п╦п╥ "
+"п╨п╬п╪п╟п╫п╢п╫п╬п╧ я│я┌я─п╬п╨п╦ я│ п©п╬п╪п╬я┴я▄я▌ п©п╟я─п╟п╪п╣я┌я─п╟ B<--home>, п╟ п╬п╠п╬п╩п╬я┤п╨п╟ я│ п©п╬п╪п╬я┴я▄я▌ "
+"B<--shell>. п²п╟ п╢п╬п╪п╟я┬п╫п╣п╪ п╨п╟я┌п╟п╩п╬пЁп╣ я┐я│я┌п╟п╫п╟п╡п╩п╦п╡п╟п╣я┌я│я▐ Set-group-ID п╠п╦я┌, п╣я│п╩п╦ "
+"B<USERGROUPS> я─п╟п╡п╫п╬ I<yes>, п╦ п©п╬я█я┌п╬п╪я┐ п╩я▌п╠я▀п╣ я└п╟п╧п╩я▀, я│п╬п╥п╢п╟п╡п╟п╣п╪я▀п╣ п╡ п╢п╬п╪п╟я┬п╫п╣п╪ "
+"п╨п╟я┌п╟п╩п╬пЁп╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐, п╠я┐п╢я┐я┌ п╦п╪п╣я┌я▄ п©я─п╟п╡п╦п╩я▄п╫я┐я▌ пЁя─я┐п©п©я┐."
 
 # type: Plain text
 #: ../adduser.8:102
-#, fuzzy
 msgid ""
 "B<adduser> will copy files from B<SKEL> into the home directory and prompt "
 "for finger (gecos) information and a password.  The gecos may also be set "
@@ -980,11 +964,13 @@ msgid ""
 "B<--disabled-password> option will not set a password, but login are still "
 "possible for example through SSH RSA keys."
 msgstr ""
-"B<adduser> копирует файлы из B<SKEL> в домашний каталог, запрашивает "
-"информацию для finger (gecos) и пароль.  Gecos также может быть задан с "
-"помощью параметра B<--gecos>.  При задании параметра B<--disabled-password> "
-"создаётся учётная запись, но пока не будет определён пароль, доступ через "
-"неё останется заблокированным."
+"B<adduser> п╨п╬п©п╦я─я┐п╣я┌ я└п╟п╧п╩я▀ п╦п╥ B<SKEL> п╡ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ, п╥п╟п©я─п╟я┬п╦п╡п╟п╣я┌ "
+"п╦п╫я└п╬я─п╪п╟я├п╦я▌ п╢п╩я▐ finger (gecos) п╦ п©п╟я─п╬п╩я▄. Gecos я┌п╟п╨п╤п╣ п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п╥п╟п╢п╟п╫ я│ "
+"п©п╬п╪п╬я┴я▄я▌ п©п╟я─п╟п╪п╣я┌я─п╟ B<--gecos>. п÷я─п╦ п╥п╟п╢п╟п╫п╦п╦ п©п╟я─п╟п╪п╣я┌я─п╟ B<--disabled-login>, "
+"я│п╬п╥п╢п╟я▒я┌я│я▐ я┐я┤я▒я┌п╫п╟я▐ п╥п╟п©п╦я│я▄, п╫п╬ п©п╬п╨п╟ п╫п╣ п╠я┐п╢п╣я┌ п╬п©я─п╣п╢п╣п╩я▒п╫ п©п╟я─п╬п╩я▄, п╢п╬я│я┌я┐п© я┤п╣я─п╣п╥ "
+"п╫п╣я▒ п╬я│я┌п╟п╫п╣я┌я│я▐ п╥п╟п╠п╩п╬п╨п╦я─п╬п╡п╟п╫п╫я▀п╪. п÷я─п╦ п╥п╟п╢п╟п╫п╦п╦ п©п╟я─п╟п╪п╣я┌я─п╟ B<--disabled-password> "
+"п©п╟я─п╬п╩я▄ п╫п╣ п╫я┐п╤п╣п╫, п╫п╬ п╡я┘п╬п╢ п╡ я│п╦я│я┌п╣п╪я┐ п╡я│я▒ я─п╟п╡п╫п╬ п╡п╬п╥п╪п╬п╤п╣п╫, п╫п╟п©я─п╦п╪п╣я─ я│ п©п╬п╪п╬я┴я▄я▌ "
+"SSH RSA п╨п╩я▌я┤п╣п╧."
 
 # type: Plain text
 #: ../adduser.8:109
@@ -993,9 +979,9 @@ msgid ""
 "after the user account has been set up in order to do any local setup.  The "
 "arguments passed to B<adduser.local> are:"
 msgstr ""
-"Если файл B</usr/local/sbin/adduser.local> существует, то он будет выполнен "
-"после создания учётной записи пользователя, чтобы выполнить все локальные "
-"настройки.  Аргументы передаваемые B<adduser.local>:"
+"п∙я│п╩п╦ я└п╟п╧п╩ B</usr/local/sbin/adduser.local> я│я┐я┴п╣я│я┌п╡я┐п╣я┌, я┌п╬ п╬п╫ п╠я┐п╢п╣я┌ п╡я▀п©п╬п╩п╫п╣п╫ "
+"п©п╬я│п╩п╣ я│п╬п╥п╢п╟п╫п╦я▐ я┐я┤я▒я┌п╫п╬п╧ п╥п╟п©п╦я│п╦ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐, я┤я┌п╬п╠я▀ п╡я▀п©п╬п╩п╫п╦я┌я▄ п╡я│п╣ п╩п╬п╨п╟п╩я▄п╫я▀п╣ "
+"п╫п╟я│я┌я─п╬п╧п╨п╦. п░я─пЁя┐п╪п╣п╫я┌я▀ п©п╣я─п╣п╢п╟п╡п╟п╣п╪я▀п╣ B<adduser.local>:"
 
 # type: Plain text
 #: ../adduser.8:112
@@ -1003,24 +989,27 @@ msgid ""
 "username uid gid home-directory, and the environment variables DEBUG and "
 "VERBOSE will be set according to the settings in the master program."
 msgstr ""
+"п≤п╪я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐,uid, gid, п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ п╦ п©п╣я─п╣п╪п╣п╫п╫я▀п╣ я│я─п╣п╢я▀ DEBUG п╦"
+"VERBOSE п╠я┐п╢я┐я┌ я┐я│я┌п╟п╫п╬п╡п╩п╣п╫я▀ я│п╬пЁп╩п╟я│п╫п╬ п╫п╟я│я┌я─п╬п╧п╨п╟п╪ п╡ пЁп╩п╟п╡п╫п╬п╧ п©я─п╬пЁя─п╟п╪п╪п╣."
 
 # type: SS
 #: ../adduser.8:112
 #, no-wrap
 msgid "Add a system user"
-msgstr "Добавление системного пользователя"
+msgstr "п■п╬п╠п╟п╡п╩п╣п╫п╦п╣ я│п╦я│я┌п╣п╪п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐"
 
 # type: Plain text
 #: ../adduser.8:118
-#, fuzzy
 msgid ""
 "If called with one non-option argument and the B<--system> option, "
 "B<adduser> will add a system user. If an user with an uid in the system "
 "range (or if the uid is specified, with that) does already exist, adduser "
 "will exit with a warning."
 msgstr ""
-"При запуске с одним аргументом и параметром B<--system>, B<adduser> "
-"добавляет системного пользователя."
+"п÷я─п╦ п╥п╟п©я┐я│п╨п╣ я│ п╬п╢п╫п╦п╪ п©п╟я─п╟п╪п╣я┌я─п╬п╪ п╠п╣п╥ п╟я─пЁя┐п╪п╣п╫я┌п╬п╡ п╦ п©п╟я─п╟п╪п╣я┌я─п╬п╪ B<--system>, B<adduser> "
+"п╢п╬п╠п╟п╡п╩я▐п╣я┌ я│п╦я│я┌п╣п╪п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐. п∙я│п╩п╦ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ я│ uid п╦п╥ я│п╦я│я┌п╣п╪п╫п╬пЁп╬ п╢п╦п╟п©п╟п╥п╬п╫п╟ "
+"(п╦п╩п╦ п╣я│п╩п╦ uid я┐п╨п╟п╥п╟п╫ я┌п╟п╨п╦п╪) я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌, я┌п╬ adduser п╥п╟п╡п╣я─я┬п╟п╣я┌ я─п╟п╠п╬я┌я┐ я│ п╡я▀п╢п╟я┤п╣п╧ "
+"п©я─п╣п╢я┐п©я─п╣п╤п╢п╣п╫п╦я▐."
 
 # type: Plain text
 #: ../adduser.8:124
@@ -1029,9 +1018,9 @@ msgid ""
 "system users in the configuration file.  The UID can be overridden with the "
 "B<--uid> option."
 msgstr ""
-"B<adduser> выберет первый доступный UID из диапазона системных "
-"пользователей, заданного в файле настройки.  UID может быть изменён с "
-"помощью параметра B<--uid>."
+"B<adduser> п╡я▀п╠п╣я─п╣я┌ п©п╣я─п╡я▀п╧ п╢п╬я│я┌я┐п©п╫я▀п╧ UID п╦п╥ п╢п╦п╟п©п╟п╥п╬п╫п╟ я│п╦я│я┌п╣п╪п╫я▀я┘ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧, п╥п╟п╢п╟п╫п╫п╬пЁп╬ п╡ я└п╟п╧п╩п╣ п╫п╟я│я┌я─п╬п╧п╨п╦. UID п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п╦п╥п╪п╣п╫я▒п╫ я│ "
+"п©п╬п╪п╬я┴я▄я▌ п©п╟я─п╟п╪п╣я┌я─п╟ B<--uid>."
 
 # type: Plain text
 #: ../adduser.8:134
@@ -1041,74 +1030,70 @@ msgid ""
 "ingroup> options.  To place the new system user in a new group with the same "
 "ID, use the B<--group> option."
 msgstr ""
-"По умолчанию, системные пользователи помещаются в группу B<nogroup>.  Чтобы "
-"поместить нового системного пользователя в уже существующую группу, "
-"используйте параметры B<--gid> или B<--ingroup>.  Чтобы поместить нового "
-"системного пользователя в новую группу с тем же ID, используйте параметр B<--"
+"п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌, я│п╦я│я┌п╣п╪п╫я▀п╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╦ п©п╬п╪п╣я┴п╟я▌я┌я│я▐ п╡ пЁя─я┐п©п©я┐ B<nogroup>. п╖я┌п╬п╠я▀ "
+"п©п╬п╪п╣я│я┌п╦я┌я▄ п╫п╬п╡п╬пЁп╬ я│п╦я│я┌п╣п╪п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╡ я┐п╤п╣ я│я┐я┴п╣я│я┌п╡я┐я▌я┴я┐я▌ пЁя─я┐п©п©я┐, "
+"п╦я│п©п╬п╩я▄п╥я┐п╧я┌п╣ п©п╟я─п╟п╪п╣я┌я─я▀ B<--gid> п╦п╩п╦ B<--ingroup>. п╖я┌п╬п╠я▀ п©п╬п╪п╣я│я┌п╦я┌я▄ п╫п╬п╡п╬пЁп╬ "
+"я│п╦я│я┌п╣п╪п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╡ п╫п╬п╡я┐я▌ пЁя─я┐п©п©я┐ я│ я┌п╣п╪ п╤п╣ ID, п╦я│п©п╬п╩я▄п╥я┐п╧я┌п╣ п©п╟я─п╟п╪п╣я┌я─ B<--"
 "group>."
 
 # type: Plain text
 #: ../adduser.8:142
-#, fuzzy
 msgid ""
 "A home directory is created by the same rules as for normal users.  The new "
 "system user will have the shell I</bin/false> (unless overridden with the "
 "B<--shell> option), and have logins disabled.  Skeletal configuration files "
 "are not copied."
 msgstr ""
-"Домашний каталог создаётся по тем же правилам что и для обычных "
-"пользователей. Новый системный пользователь имеет shell I</bin/false> и "
-"заблокированный пароль.  Начальные файлы настроек не копируются.  При "
-"создании домашнего каталога и новой группы для системного пользователя, "
-"B<adduser> устанавливает на каталог set-group-ID бит."
+"п■п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ я│п╬п╥п╢п╟я▒я┌я│я▐ п©п╬ я┌п╣п╪ п╤п╣ п©я─п╟п╡п╦п╩п╟п╪ я┤я┌п╬ п╦ п╢п╩я▐ п╬п╠я▀я┤п╫я▀я┘ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧. п²п╬п╡я▀п╧ я│п╦я│я┌п╣п╪п╫я▀п╧ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ п╦п╪п╣п╣я┌ п╬п╠п╬п╩п╬я┤п╨я┐ I</bin/false> "
+"(п╣я│п╩п╦ п╫п╣ я┐п╨п╟п╥п╟п╫ п©п╟я─п╟п╪п╣я┌я─ B<--shell>) п╦ п╥п╟п╠п╩п╬п╨п╦я─п╬п╡п╟п╫п╫я▀п╧ п©п╟я─п╬п╩я▄. п²п╟я┤п╟п╩я▄п╫я▀п╣ "
+"я└п╟п╧п╩я▀ п╫п╟я│я┌я─п╬п╣п╨ п╫п╣ п╨п╬п©п╦я─я┐я▌я┌я│я▐."
 
 # type: SS
 #: ../adduser.8:142
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Add a user group"
-msgstr "Добавление системной группы"
+msgstr "п■п╬п╠п╟п╡п╩п╣п╫п╦п╣ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄я│п╨п╬п╧ пЁя─я┐п©п©я▀"
 
 # type: Plain text
 #: ../adduser.8:147
-#, fuzzy
 msgid ""
 "If B<adduser> is called with the B<--group> option and without the B<--"
 "system> option, or B<addgroup> is called respectively, a user group will be "
 "added."
 msgstr ""
-"Если B<adduser> вызывается с параметром B<--group>, или как B<addgroup>, то "
-"добавляется системная группа."
+"п∙я│п╩п╦ B<adduser> п╡я▀п╥я▀п╡п╟п╣я┌я│я▐ я│ п©п╟я─п╟п╪п╣я┌я─п╬п╪ B<--group> п╦ п╠п╣п╥ п©п╟я─п╟п╪п╣я┌я─п╟ "
+"B<--system> п╦п╩п╦ п╦п╪п╣п╣я┌ я│п╬п╬я┌п╡п╣я┌я│я┌п╡я┐я▌я┴п╣п╣ п╫п╟п╥п╡п╟п╫п╦п╣ B<addgroup>, я┌п╬ "
+"п╢п╬п╠п╟п╡п╩я▐п╣я┌я│я▐ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄я│п╨п╟я▐ пЁя─я┐п©п©п╟."
 
 # type: Plain text
 #: ../adduser.8:152
-#, fuzzy
 msgid ""
 "A GID will be chosen from the range specified for user UIDS in the "
 "configuration file.  The GID can be overridden with the B<--gid> option."
 msgstr ""
-"GID будет выбран из диапазона системных UIDS, заданного в файле настройки.  "
-"GID может быть изменён с помощью параметра B<--gid>."
+"GID п╠я┐п╢п╣я┌ п╡я▀п╠я─п╟п╫ п╦п╥ п╢п╦п╟п©п╟п╥п╬п╫п╟ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄я│п╨п╦я┘ UIDS, п╥п╟п╢п╟п╫п╫п╬пЁп╬ п╡ я└п╟п╧п╩п╣ п╫п╟я│я┌я─п╬п╧п╨п╦. "
+"GID п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п╦п╥п╪п╣п╫я▒п╫ я│ п©п╬п╪п╬я┴я▄я▌ п©п╟я─п╟п╪п╣я┌я─п╟ B<--gid>."
 
 # type: Plain text
 #: ../adduser.8:154 ../adduser.8:165
 msgid "The group is created with no users."
-msgstr "Группа создаётся без пользователей."
+msgstr "п⌠я─я┐п©п©п╟ я│п╬п╥п╢п╟я▒я┌я│я▐ п╠п╣п╥ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩п╣п╧."
 
 # type: SS
 #: ../adduser.8:154
 #, no-wrap
 msgid "Add a system group"
-msgstr "Добавление системной группы"
+msgstr "п■п╬п╠п╟п╡п╩п╣п╫п╦п╣ я│п╦я│я┌п╣п╪п╫п╬п╧ пЁя─я┐п©п©я▀"
 
 # type: Plain text
 #: ../adduser.8:158
-#, fuzzy
 msgid ""
 "If B<addgroup> is called with the B<--system> option, a system group will be "
 "added."
 msgstr ""
-"Если B<adduser> вызывается с параметром B<--group>, или как B<addgroup>, то "
-"добавляется системная группа."
+"п∙я│п╩п╦ B<addgroup> п╡я▀п╥я▀п╡п╟п╣я┌я│я▐ я│ п©п╟я─п╟п╪п╣я┌я─п╬п╪ B<--system>, я┌п╬ "
+"п╢п╬п╠п╟п╡п╩я▐п╣я┌я│я▐ я│п╦я│я┌п╣п╪п╫п╟я▐ пЁя─я┐п©п©п╟."
 
 # type: Plain text
 #: ../adduser.8:163
@@ -1116,14 +1101,14 @@ msgid ""
 "A GID will be chosen from the range specified for system UIDS in the "
 "configuration file.  The GID can be overridden with the B<--gid> option."
 msgstr ""
-"GID будет выбран из диапазона системных UIDS, заданного в файле настройки.  "
-"GID может быть изменён с помощью параметра B<--gid>."
+"GID п╠я┐п╢п╣я┌ п╡я▀п╠я─п╟п╫ п╦п╥ п╢п╦п╟п©п╟п╥п╬п╫п╟ я│п╦я│я┌п╣п╪п╫я▀я┘ UIDS, п╥п╟п╢п╟п╫п╫п╬пЁп╬ п╡ я└п╟п╧п╩п╣ п╫п╟я│я┌я─п╬п╧п╨п╦. "
+"GID п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п╦п╥п╪п╣п╫я▒п╫ я│ п©п╬п╪п╬я┴я▄я▌ п©п╟я─п╟п╪п╣я┌я─п╟ B<--gid>."
 
 # type: SS
 #: ../adduser.8:165
 #, no-wrap
 msgid "Add an existing user to an existing group"
-msgstr "Добавление существующего пользователя в существующую группу"
+msgstr "п■п╬п╠п╟п╡п╩п╣п╫п╦п╣ я│я┐я┴п╣я│я┌п╡я┐я▌я┴п╣пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╡ я│я┐я┴п╣я│я┌п╡я┐я▌я┴я┐я▌ пЁя─я┐п©п©я┐"
 
 # type: Plain text
 #: ../adduser.8:169
@@ -1131,19 +1116,19 @@ msgid ""
 "If called with two non-option arguments, B<adduser> will add an existing "
 "user to an existing group."
 msgstr ""
-"При запуске с двумя аргументами, B<adduser> добавляет существующего "
-"пользователя в существующую группу."
+"п÷я─п╦ п╥п╟п©я┐я│п╨п╣ я│ п╢п╡я┐п╪я▐ п╟я─пЁя┐п╪п╣п╫я┌п╟п╪п╦, B<adduser> п╢п╬п╠п╟п╡п╩я▐п╣я┌ я│я┐я┴п╣я│я┌п╡я┐я▌я┴п╣пЁп╬ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╡ я│я┐я┴п╣я│я┌п╡я┐я▌я┴я┐я▌ пЁя─я┐п©п©я┐."
 
 # type: Plain text
 #: ../adduser.8:174
 msgid "Use FILE instead of I</etc/adduser.conf>."
-msgstr "Использовать ФАЙЛ вместо I</etc/adduser.conf>."
+msgstr "п≤я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╓п░п≥п⌡ п╡п╪п╣я│я┌п╬ I</etc/adduser.conf>."
 
 # type: TP
 #: ../adduser.8:174
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--disabled-login>"
-msgstr "B<--disabled-password>"
+msgstr "B<--disabled-login>"
 
 # type: Plain text
 #: ../adduser.8:178
@@ -1151,8 +1136,8 @@ msgid ""
 "Do not run passwd to set the password.  The user won't be able to use her "
 "account until the password is set."
 msgstr ""
-"Не запускать passwd для задания пароля.  Пользователь не сможет использовать "
-"свою учётную запись, пока его пароль не установлен."
+"п²п╣ п╥п╟п©я┐я│п╨п╟я┌я▄ passwd п╢п╩я▐ п╥п╟п╢п╟п╫п╦я▐ п©п╟я─п╬п╩я▐. п÷п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄ п╫п╣ я│п╪п╬п╤п╣я┌ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ "
+"я│п╡п╬я▌ я┐я┤я▒я┌п╫я┐я▌ п╥п╟п©п╦я│я▄, п©п╬п╨п╟ п╣пЁп╬ п©п╟я─п╬п╩я▄ п╫п╣ я┐я│я┌п╟п╫п╬п╡п╩п╣п╫."
 
 # type: TP
 #: ../adduser.8:178
@@ -1166,6 +1151,8 @@ msgid ""
 "Like --disabled-login, but logins are still possible for example through SSH "
 "RSA keys, but not using password authentication."
 msgstr ""
+"п╒п╬ п╤п╣ я┤я┌п╬ п╦ --disabled-login, п╫п╬ п╡я┘п╬п╢ п╡ я│п╦я│я┌п╣п╪я┐ п╡п╬п╥п╪п╬п╤п╣п╫, п╫п╟п©я─п╦п╪п╣я─ я┤п╣я─п╣п╥ п╨п╩я▌я┤п╦ SSH "
+"RSA, п╫п╬ п╫п╣ п╦я│п©п╬п╩я▄п╥я┐я▌я┴п╦я┘ п©п╟я─п╬п╩я▄п╫я┐я▌ п╟я┐я┌п╣п╫я┌п╦я└п╦п╨п╟я├п╦я▌."
 
 # type: TP
 #: ../adduser.8:182
@@ -1175,15 +1162,14 @@ msgstr "B<--force-badname>"
 
 # type: Plain text
 #: ../adduser.8:190
-#, fuzzy
 msgid ""
 "By default, user and group names are checked against a configurable regular "
 "expression. This option forces B<adduser> and B<addgroup> to apply only a "
 "weak check for validity of the name."
 msgstr ""
-"По умолчанию, имена пользователя и группы должны состоять из строчной буквы, "
-"за которой могут быть строчные буквы или цифры.  Этот параметр заставляет "
-"B<adduser> и B<addgroup> быть более терпимыми."
+"п÷п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌, п╦п╪п╣п╫п╟ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╦ пЁя─я┐п©п©я▀ п©я─п╬п╡п╣я─я▐я▌я┌я│я▐ я│п╬пЁп╩п╟я│п╫п╬ п╥п╟п╢п╟п╫п╫п╬п╪я┐ "
+"я─п╣пЁя┐п╩я▐я─п╫п╬п╪я┐ п╡я▀я─п╟п╤п╣п╫п╦я▌. п╜я┌п╬я┌ п©п╟я─п╟п╪п╣я┌я─ п╥п╟я│я┌п╟п╡п╩я▐п╣я┌ B<adduser> п╦ B<addgroup> "
+"п╠я▀я┌я▄ п╠п╬п╩п╣п╣ я┌п╣я─п©п╦п╪я▀п╪п╦."
 
 # type: TP
 #: ../adduser.8:190
@@ -1197,8 +1183,8 @@ msgid ""
 "Set the gecos field for the new entry generated.  adduser will not ask for "
 "finger information if this option is given."
 msgstr ""
-"Задаёт поле gecos для новой создаваемой записи.  adduser не запрашивает "
-"информацию для finger, если указан этот параметр."
+"п≈п╟п╢п╟я▒я┌ п©п╬п╩п╣ gecos п╢п╩я▐ п╫п╬п╡п╬п╧ я│п╬п╥п╢п╟п╡п╟п╣п╪п╬п╧ п╥п╟п©п╦я│п╦. adduser п╫п╣ п╥п╟п©я─п╟я┬п╦п╡п╟п╣я┌ "
+"п╦п╫я└п╬я─п╪п╟я├п╦я▌ п╢п╩я▐ finger, п╣я│п╩п╦ я┐п╨п╟п╥п╟п╫ я█я┌п╬я┌ п©п╟я─п╟п╪п╣я┌я─."
 
 # type: TP
 #: ../adduser.8:194
@@ -1212,8 +1198,8 @@ msgid ""
 "When creating a group, this option forces the new groupid to be the given "
 "number.  When creating a user, this option will put the user in that group."
 msgstr ""
-"При создании группы этот параметр задает ее идентификатор.  При создании "
-"пользователя этот параметр помещает пользователя в группу с этим номером."
+"п÷я─п╦ я│п╬п╥п╢п╟п╫п╦п╦ пЁя─я┐п©п©я▀ я█я┌п╬я┌ п©п╟я─п╟п╪п╣я┌я─ п╥п╟п╢п╟п╣я┌ п╣п╣ п╦п╢п╣п╫я┌п╦я└п╦п╨п╟я┌п╬я─. п÷я─п╦ я│п╬п╥п╢п╟п╫п╦п╦ "
+"п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ я█я┌п╬я┌ п©п╟я─п╟п╪п╣я┌я─ п©п╬п╪п╣я┴п╟п╣я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╡ пЁя─я┐п©п©я┐ я│ я█я┌п╦п╪ п╫п╬п╪п╣я─п╬п╪."
 
 # type: Plain text
 #: ../adduser.8:209
@@ -1223,16 +1209,16 @@ msgid ""
 "given name is created.  This is the default action if the program is invoked "
 "as B<addgroup>."
 msgstr ""
-"При совместном использовании с B<--system>, создаётся группа с тем же именем "
-"и ID как и у системного пользователя.  Если же B<--system> не задана, то "
-"создаётся группа с указанным именем.  Это является действием по умолчанию, "
-"если программа вызывается как B<addgroup>."
+"п÷я─п╦ я│п╬п╡п╪п╣я│я┌п╫п╬п╪ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╦ я│ B<--system>, я│п╬п╥п╢п╟я▒я┌я│я▐ пЁя─я┐п©п©п╟ я│ я┌п╣п╪ п╤п╣ п╦п╪п╣п╫п╣п╪ "
+"п╦ ID п╨п╟п╨ п╦ я┐ я│п╦я│я┌п╣п╪п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐. п∙я│п╩п╦ п╤п╣ B<--system> п╫п╣ п╥п╟п╢п╟п╫п╟, я┌п╬ "
+"я│п╬п╥п╢п╟я▒я┌я│я▐ пЁя─я┐п©п©п╟ я│ я┐п╨п╟п╥п╟п╫п╫я▀п╪ п╦п╪п╣п╫п╣п╪. п╜я┌п╬ я▐п╡п╩я▐п╣я┌я│я▐ п╢п╣п╧я│я┌п╡п╦п╣п╪ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌, "
+"п╣я│п╩п╦ п©я─п╬пЁя─п╟п╪п╪п╟ п╡я▀п╥я▀п╡п╟п╣я┌я│я▐ п╨п╟п╨ B<addgroup>."
 
 # type: TP
 #: ../adduser.8:212
 #, no-wrap
 msgid "B<--home DIR>"
-msgstr "B<--home КАТ>"
+msgstr "B<--home п п░п╒>"
 
 # type: Plain text
 #: ../adduser.8:217
@@ -1241,32 +1227,30 @@ msgid ""
 "the configuration file.  If the directory does not exist, it is created and "
 "skeleton files are copied."
 msgstr ""
-"Использовать КАТ в качестве домашнего каталога пользователя, а не как "
-"задаётся по умолчанию в файле настроек.  Если каталог не существует, то он "
-"будет создан и будут скопированы начальные файлы настроек."
+"п≤я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п п░п╒ п╡ п╨п╟я┤п╣я│я┌п╡п╣ п╢п╬п╪п╟я┬п╫п╣пЁп╬ п╨п╟я┌п╟п╩п╬пЁп╟ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐, п╟ п╫п╣ п╨п╟п╨ "
+"п╥п╟п╢п╟я▒я┌я│я▐ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╡ я└п╟п╧п╩п╣ п╫п╟я│я┌я─п╬п╣п╨.  п∙я│п╩п╦ п╨п╟я┌п╟п╩п╬пЁ п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌, я┌п╬ п╬п╫ "
+"п╠я┐п╢п╣я┌ я│п╬п╥п╢п╟п╫ п╦ п╠я┐п╢я┐я┌ я│п╨п╬п©п╦я─п╬п╡п╟п╫я▀ п╫п╟я┤п╟п╩я▄п╫я▀п╣ я└п╟п╧п╩я▀ п╫п╟я│я┌я─п╬п╣п╨."
 
 # type: TP
 #: ../adduser.8:217
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--shell SHELL>"
-msgstr "B<--help>"
+msgstr "B<--shell п·п▒п·п⌡п·п╖п п░>"
 
 # type: Plain text
 #: ../adduser.8:221
-#, fuzzy
 msgid ""
 "Use SHELL as the user's login shell, rather than the default specified by "
 "the configuration file."
 msgstr ""
-"Использовать КАТ в качестве домашнего каталога пользователя, а не как "
-"задаётся по умолчанию в файле настроек.  Если каталог не существует, то он "
-"будет создан и будут скопированы начальные файлы настроек."
+"п≤я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п·п▒п·п⌡п·п╖п пё п╡ п╨п╟я┤п╣я│я┌п╡п╣ я─п╣пЁп╦я│я┌я─п╟я├п╦п╬п╫п╫п╬п╧ п╬п╠п╬п╩п╬я┤п╨п╦, п╟ п╫п╣ п╨п╟п╨"
+"п╥п╟п╢п╟я▒я┌я│я▐ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌ п╡ я└п╟п╧п╩п╣ п╫п╟я│я┌я─п╬п╣п╨."
 
 # type: TP
 #: ../adduser.8:221
 #, no-wrap
 msgid "B<--ingroup GROUP>"
-msgstr "B<--ingroup ГРУППА>"
+msgstr "B<--ingroup п⌠п═пёп÷п÷п░>"
 
 # type: Plain text
 #: ../adduser.8:225
@@ -1274,8 +1258,8 @@ msgid ""
 "Add the new user to GROUP instead of a usergroup or the default group "
 "defined by USERS_GID in the adduser.conf file."
 msgstr ""
-"Добавить нового пользователя в ГРУППУ, а не создавать группу с тем же именем "
-"или группу по умолчанию, определяемую USERS_GID в файле adduser.conf."
+"п■п╬п╠п╟п╡п╦я┌я▄ п╫п╬п╡п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐ п╡ п⌠п═пёп÷п÷пё, п╟ п╫п╣ я│п╬п╥п╢п╟п╡п╟я┌я▄ пЁя─я┐п©п©я┐ я│ я┌п╣п╪ п╤п╣ п╦п╪п╣п╫п╣п╪ "
+"п╦п╩п╦ пЁя─я┐п©п©я┐ п©п╬ я┐п╪п╬п╩я┤п╟п╫п╦я▌, п╬п©я─п╣п╢п╣п╩я▐п╣п╪я┐я▌ USERS_GID п╡ я└п╟п╧п╩п╣ adduser.conf."
 
 # type: TP
 #: ../adduser.8:225
@@ -1286,12 +1270,12 @@ msgstr "B<--no-create-home>"
 # type: Plain text
 #: ../adduser.8:228
 msgid "Do not create the home directory, even if it doesn't exist."
-msgstr "Не создавать домашний каталог, даже если он не существует."
+msgstr "п²п╣ я│п╬п╥п╢п╟п╡п╟я┌я▄ п╢п╬п╪п╟я┬п╫п╦п╧ п╨п╟я┌п╟п╩п╬пЁ, п╢п╟п╤п╣ п╣я│п╩п╦ п╬п╫ п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌."
 
 # type: Plain text
 #: ../adduser.8:234
 msgid "Create a system user."
-msgstr "Создать системного пользователя."
+msgstr "п║п╬п╥п╢п╟я┌я▄ я│п╦я│я┌п╣п╪п╫п╬пЁп╬ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▐."
 
 # type: TP
 #: ../adduser.8:234
@@ -1305,8 +1289,8 @@ msgid ""
 "Force the new userid to be the given number.  adduser will fail if the "
 "userid is already taken."
 msgstr ""
-"Присвоить новому userid заданный номер.  adduser завершится неудачно, если "
-"userid уже используется."
+"п÷я─п╦я│п╡п╬п╦я┌я▄ п╫п╬п╡п╬п╪я┐ userid п╥п╟п╢п╟п╫п╫я▀п╧ п╫п╬п╪п╣я─. adduser п╥п╟п╡п╣я─я┬п╦я┌я│я▐ п╫п╣я┐п╢п╟я┤п╫п╬, п╣я│п╩п╦ "
+"userid я┐п╤п╣ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐."
 
 # type: TP
 #: ../adduser.8:238
@@ -1316,9 +1300,8 @@ msgstr "B<--firstuid ID>"
 
 # type: Plain text
 #: ../adduser.8:241
-#, fuzzy
 msgid "Override the first uid in the range that the uid is chosen from."
-msgstr "Изменить первый uid диапазона, из которого выбран данный uid."
+msgstr "п≤п╥п╪п╣п╫п╦я┌я▄ п©п╣я─п╡я▀п╧ uid п╢п╦п╟п©п╟п╥п╬п╫п╟, п╦п╥ п╨п╬я┌п╬я─п╬пЁп╬ п╡я▀п╠я─п╟п╫ п╢п╟п╫п╫я▀п╧ uid."
 
 # type: TP
 #: ../adduser.8:241
@@ -1328,9 +1311,8 @@ msgstr "B<--lastuid ID>"
 
 # type: Plain text
 #: ../adduser.8:244
-#, fuzzy
 msgid "Override the last uid in the range that the uid is chosen from."
-msgstr "Изменить последний uid диапазона, из которого выбран данный uid."
+msgstr "п≤п╥п╪п╣п╫п╦я┌я▄ п©п╬я│п╩п╣п╢п╫п╦п╧ uid п╢п╦п╟п©п╟п╥п╬п╫п╟, п╦п╥ п╨п╬я┌п╬я─п╬пЁп╬ п╡я▀п╠я─п╟п╫ п╢п╟п╫п╫я▀п╧ uid."
 
 # type: Plain text
 #: ../adduser.8:249
@@ -1339,19 +1321,21 @@ msgstr "/etc/adduser.conf"
 
 # type: Plain text
 #: ../adduser.8:252
-#, fuzzy
 msgid ""
 "adduser.conf(5), deluser(8), useradd(8), groupadd(8), usermod(8), Debian "
 "Policy 9.2.2."
-msgstr "adduser.conf(5), deluser(8), useradd(8), groupadd(8)"
+msgstr ""
+"adduser.conf(5), deluser(8), useradd(8), groupadd(8), usermod(8), Debian "
+"Policy 9.2.2."
 
 # type: Plain text
 #: ../adduser.8:256
-#, fuzzy
 msgid ""
 "Copyright (C) 1997, 1998, 1999 Guy Maor. Modifications by Roland "
 "Bauerschmidt and Marc Haber."
-msgstr "Copyright (C) 1997, 1998, 1999 Guy Maor."
+msgstr ""
+"Copyright (C) 1997, 1998, 1999 Guy Maor. п≤п╥п╪п╣п╫п╣п╫п╦я▐ я│п╢п╣п╩п╟п╫я▀ Roland "
+"Bauerschmidt п╦ Marc Haber."
 
 # type: Plain text
 #: ../adduser.8:266
@@ -1360,14 +1344,7 @@ msgid ""
 "General Public Licence version 2 or later for copying conditions.  There is "
 "I<no> warranty."
 msgstr ""
-"Copyright (C) 1994 Ian Murdock.  B<adduser> это свободное ПО; смотрите "
-"условия копирования в Универсальной Общественной Лицензии GNU версии 2 или "
-"более новой.  Не предоставляется I<никаких> гарантий."
+"Copyright (C) 1994 Ian Murdock. B<adduser> я█я┌п╬ я│п╡п╬п╠п╬п╢п╫п╬п╣ п÷п·; я│п╪п╬я┌я─п╦я┌п╣ "
+"я┐я│п╩п╬п╡п╦я▐ п╨п╬п©п╦я─п╬п╡п╟п╫п╦я▐ п╡ пёп╫п╦п╡п╣я─я│п╟п╩я▄п╫п╬п╧ п·п╠я┴п╣я│я┌п╡п╣п╫п╫п╬п╧ п⌡п╦я├п╣п╫п╥п╦п╦ GNU п╡п╣я─я│п╦п╦ 2 п╦п╩п╦ "
+"п╠п╬п╩п╣п╣ п╫п╬п╡п╬п╧.  п²п╣ п©я─п╣п╢п╬я│я┌п╟п╡п╩я▐п╣я┌я│я▐ I<п╫п╦п╨п╟п╨п╦я┘> пЁп╟я─п╟п╫я┌п╦п╧."
 
-# type: Plain text
-#~ msgid "adduser(8)"
-#~ msgstr "adduser(8)"
-
-# type: Plain text
-#~ msgid "deluser(8)"
-#~ msgstr "deluser(8)"
