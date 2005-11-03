@@ -1,5 +1,7 @@
-PO4A-HEADER:mode=after;position=^\.SH "σνοτςιτε ταλφε";beginboundary=^\.SH
-.SH πεςεχοδ
-ΰÒΙΚ λΟΪΜΟΧ <y_kozlov@chat.ru>.
+PO4A-HEADER:mode=before;position=VERSION;beginboundary=^\.TH
 .\"
-.\" thanks to Yuri Kozlov <kozlov.y@gmail.com>
+.\" Russian verison:
+.\"   Alexey Mahotkin <alexm@hsys.msk.ru>, 2001
+.\"   Yuri Kozlov <kozlov.y@gmail.com>, 2005
+.\"
+
