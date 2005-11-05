@@ -107,8 +107,18 @@ up in order to do any local setup.  The arguments passed to
 .B adduser.local
 are:
 .br
-username uid gid home-directory, and the environment variables DEBUG
-and VERBOSE will be set according to the settings in the master program.
+username uid gid home-directory
+.br 
+The environment variable VERBOSE is set according to the following rule:
+.TP 
+to 0 if \-\-quiet is specified
+.TP 
+to 1 if neither \-\-quiet nor \-\-debug is specified
+.TP 
+to 2 if \-\-debug is specified
+
+(The same applies to to the variable DEBUG, but this variable is deprecated and will be removed in a later version.)
+
 .SS "Add a system user"
 If called with one non-option argument and the
 .BR \-\-system " option, " adduser
@@ -230,7 +240,7 @@ Do not create the home directory, even if it doesn't exist.
 Suppress progress messages.
 .TP
 .B \-\-debug
-Display a lot of messages.
+Be verbose, most usefull if you want to nail down a problem with adduser
 .TP
 .B \-\-system
 Create a system user.

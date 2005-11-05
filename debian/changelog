@@ -37,9 +37,10 @@ adduser (3.77.0) UNRELEASED; urgency=low
     #130751)
   * documented --debug in adduser.8
   * streamlined verbosity code, replaced calls to system() with systemcall()
-    (Closes: #336841)
+    (Closes: #336841), also changed the definition of the environment
+    variable VERBOSE; DEBUG is deprecated now (but still defined).
 
- -- Joerg Hoh <joerg@joerghoh.de>  Wed,  2 Nov 2005 23:10:32 +0100
+ -- Joerg Hoh <joerg@joerghoh.de>  Sat,  5 Nov 2005 19:25:52 +0100
 
 adduser (3.77) unstable; urgency=low
 

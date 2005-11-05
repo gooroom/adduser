@@ -121,7 +121,7 @@ while (defined($arg = shift(@ARGV))) {
     }
 }
 
-if (length($names[0]) == 0 || @names > 2) {
+if ( (! defined $names[0]) || length($names[0]) == 0 || @names > 2) {
     die ("$0: ",gtx("Only one or two names allowed.\n"));
 }
 	    
@@ -183,12 +183,9 @@ if ($found_group_opt) {
     }
 }
 
-if( $verbose > 1) {
-    $ENV{"DEBUG"}="1"
-}
-elsif( $verbose > 0) {
-    $ENV{"VERBOSE"}="1"
-}
+
+$ENV{"VERBOSE"} = $verbose;
+$ENV{"DEBUG"}   = $Verbose;
 
 
 # preseed configuration data and then read the config file
@@ -305,7 +302,6 @@ if ($action eq "addusertogroup") {
     #&systemcall('usermod', '-G',
 		#join(",", get_users_groups($existing_user), $existing_group), 
 		#$existing_user);
-    # FIXME - if the group contains a non-existing user, gpasswd will fail
     &systemcall('/usr/bin/gpasswd', '-M',
 		join(',', get_group_members($existing_group), $existing_user),
 		$existing_group);
