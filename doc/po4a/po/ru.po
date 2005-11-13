@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser_3.77_ru4\n"
-"POT-Creation-Date: 2005-11-13  0:21+0000\n"
+"POT-Creation-Date: 2005-11-13  0:31+0000\n"
 "PO-Revision-Date: 2005-11-02 18:35+0400\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -1002,26 +1002,26 @@ msgstr ""
 # type: TP
 #: ../adduser.8:113
 #, no-wrap
-msgid "to 0 if --quiet is specified"
+msgid "0 if --quiet is specified"
 msgstr ""
 
 # type: TP
 #: ../adduser.8:115
 #, no-wrap
-msgid "to 1 if neither --quiet nor --debug is specified"
+msgid "1 if neither --quiet nor --debug is specified"
 msgstr ""
 
 # type: TP
 #: ../adduser.8:117
 #, no-wrap
-msgid "to 2 if --debug is specified"
+msgid "2 if --debug is specified"
 msgstr ""
 
 # type: Plain text
 #: ../adduser.8:121
 msgid ""
-"(The same applies to to the variable DEBUG, but this variable is deprecated "
-"and will be removed in a later version.)"
+"(The same applies to the variable DEBUG, but DEBUG is deprecated and will be "
+"removed in a later version of adduser.)"
 msgstr ""
 
 # type: SS
@@ -1306,7 +1306,7 @@ msgstr "Не создавать домашний каталог, даже есл
 
 # type: Plain text
 #: ../adduser.8:241
-msgid "Suppress informational messages, only show warnings and errors"
+msgid "Suppress informational messages, only show warnings and errors."
 msgstr ""
 
 # type: TP
@@ -1318,7 +1318,7 @@ msgstr "B<--help>"
 # type: Plain text
 #: ../adduser.8:244
 msgid ""
-"Be verbose, most usefull if you want to nail down a problem with adduser"
+"Be verbose, most usefull if you want to nail down a problem with adduser."
 msgstr ""
 
 # type: Plain text
