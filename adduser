@@ -185,7 +185,7 @@ if ($found_group_opt) {
 
 
 $ENV{"VERBOSE"} = $verbose;
-$ENV{"DEBUG"}   = $Verbose;
+$ENV{"DEBUG"}   = $verbose;
 
 
 # preseed configuration data and then read the config file
