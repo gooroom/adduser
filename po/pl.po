@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-26 14:30+0200\n"
+"POT-Creation-Date: 2005-11-13 00:21+0000\n"
 "PO-Revision-Date: 2005-10-26 19:45+0200\n"
 "Last-Translator: Robert Luberda <robert@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -52,83 +52,83 @@ msgstr "Ostrze¿enie: Podany katalog domowy ju¿ istnieje.\n"
 msgid "Warning: The home dir you specified does not exist.\n"
 msgstr "Ostrze¿enie: Podany katalog domowy nie istnieje.\n"
 
-#: ../adduser:230
+#: ../adduser:227
 #, perl-format
 msgid "The group `%s' already exists as a system group. Exiting...\n"
 msgstr "Grupa `%s' ju¿ istnieje jako grupa systemowa. Koñczenie...\n"
 
-#: ../adduser:233
+#: ../adduser:230
 #, perl-format
 msgid "The group `%s' already exists and is not a system group.\n"
 msgstr "Grupa `%s' ju¿ istnieje i nie jest grup± systemow±.\n"
 
-#: ../adduser:235 ../adduser:264
+#: ../adduser:232 ../adduser:261
 #, perl-format
 msgid "The GID `%s' is already in use.\n"
 msgstr "GID `%s' jest ju¿ u¿ywany.\n"
 
-#: ../adduser:244
+#: ../adduser:241
 #, perl-format
 msgid ""
 "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
 msgstr ""
 "Brak dostêpnego numeru GID w zakresie %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
 
-#: ../adduser:245 ../adduser:274
+#: ../adduser:242 ../adduser:271
 #, perl-format
 msgid "The group `%s' was not created.\n"
 msgstr "Nie utworzono grupy `%s'.\n"
 
-#: ../adduser:249 ../adduser:278
+#: ../adduser:246 ../adduser:275
 #, perl-format
 msgid "Adding group `%s' (%s)...\n"
 msgstr "Dodawanie grupy `%s' (%s)...\n"
 
-#: ../adduser:253 ../adduser:282 ../adduser:314
+#: ../adduser:250 ../adduser:279 ../adduser:310
 msgid "Done.\n"
 msgstr "Gotowe.\n"
 
-#: ../adduser:262 ../adduser:634
+#: ../adduser:259 ../adduser:631
 #, perl-format
 msgid "The group `%s' already exists.\n"
 msgstr "Grupa `%s' ju¿ istnieje.\n"
 
-#: ../adduser:273
+#: ../adduser:270
 #, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "Brak dostêpnego numeru GID w zakresie %d-%d (FIRST_GID - LAST_GID).\n"
 
-#: ../adduser:291 ../deluser:221 ../deluser:365
+#: ../adduser:288 ../deluser:221 ../deluser:365
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "U¿ytkownik `%s' nie istnieje.\n"
 
-#: ../adduser:293 ../adduser:641 ../deluser:329 ../deluser:368
+#: ../adduser:290 ../adduser:638 ../deluser:329 ../deluser:368
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Grupa `%s' nie istnieje.\n"
 
-#: ../adduser:296
+#: ../adduser:293
 #, perl-format
 msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "U¿ytkownik `%s' jest ju¿ cz³onkiem grupy `%s'.\n"
 
-#: ../adduser:301
+#: ../adduser:298
 #, perl-format
 msgid "Adding user `%s' to group `%s'...\n"
 msgstr "Dodawanie u¿ytkownika `%s' do grupy `%s'...\n"
 
-#: ../adduser:324
+#: ../adduser:320
 #, perl-format
 msgid "The user `%s' already exists as a system user. Exiting...\n"
 msgstr "U¿ytkownik `%s' ju¿ istnieje jako u¿ytkownik systemowy. Koñczenie...\n"
 
-#: ../adduser:330
+#: ../adduser:326
 #, perl-format
 msgid "Adding system user `%s'...\n"
 msgstr "Dodawanie u¿ytkownika systemowego `%s'...\n"
 
-#: ../adduser:338
+#: ../adduser:334
 #, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
@@ -136,32 +136,32 @@ msgid ""
 msgstr ""
 "Brak dostêpnego UID/GID w zakresie %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 
-#: ../adduser:339 ../adduser:351 ../adduser:422 ../adduser:434
+#: ../adduser:335 ../adduser:347 ../adduser:418 ../adduser:430
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "Nie utworzono u¿ytkownika `%s'.\n"
 
-#: ../adduser:350
+#: ../adduser:346
 #, perl-format
 msgid ""
 "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 msgstr "Brak dostêpnego UID w zakresie %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 
-#: ../adduser:355 ../adduser:361 ../adduser:438 ../adduser:444
+#: ../adduser:351 ../adduser:357 ../adduser:434 ../adduser:440
 msgid "Internal error"
 msgstr "B³±d wewnêtrzny"
 
-#: ../adduser:367 ../adduser:449
+#: ../adduser:363 ../adduser:445
 #, perl-format
 msgid "Adding new group `%s' (%s).\n"
 msgstr "Dodawanie nowej grupy `%s' (%s).\n"
 
-#: ../adduser:373 ../adduser:455
+#: ../adduser:369 ../adduser:451
 #, perl-format
 msgid "Adding new user `%s' (%s) with group `%s'.\n"
 msgstr "Dodawanie nowego u¿ytkownika `%s' (%s) w grupie `%s'.\n"
 
-#: ../adduser:387
+#: ../adduser:383
 msgid ""
 "chage failed with return code 15, shadow not enabled, password aging cannot "
 "be set. Continuing.\n"
@@ -169,18 +169,18 @@ msgstr ""
 "Niepowodzenie chage - kod wyj¶cia 15, maskowane has³a nie s± w³±czone, nie "
 "mo¿na ustawiæ wieku has³a. Kontynuowanie.\n"
 
-#: ../adduser:413
+#: ../adduser:409
 #, perl-format
 msgid "Adding user `%s'...\n"
 msgstr "Dodawanie u¿ytkownika `%s'....\n"
 
-#: ../adduser:421
+#: ../adduser:417
 #, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Brak dostêpnego UID/GID w zakresie %d-%d (FIRST_UID - LAST_UID).\n"
 
-#: ../adduser:433
+#: ../adduser:429
 #, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Brak dostêpnego UID w zakresie %d-%d (FIRST_UID - LAST_UID).\n"
@@ -188,67 +188,67 @@ msgstr "Brak dostêpnego UID w zakresie %d-%d (FIRST_UID - LAST_UID).\n"
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale yesexpr" which regular
 #. expression will be checked to find positive answer.
-#: ../adduser:485
+#: ../adduser:481
 msgid "Is the information correct? [y/N] "
 msgstr "Czy informacja jest poprawna? [t/N] "
 
-#: ../adduser:492
+#: ../adduser:488
 #, perl-format
 msgid "Setting quota from `%s'.\n"
 msgstr "Ustawianie udzia³ów dyskowych dla `%s'.\n"
 
-#: ../adduser:525
+#: ../adduser:521
 #, perl-format
 msgid "Not creating home directory `%s'.\n"
 msgstr "Nie utworzono katalogu domowego `%s'.\n"
 
-#: ../adduser:528
+#: ../adduser:524
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "Katalog domowy `%s' ju¿ istnieje. `%s' nie zostanie przekopiowany.\n"
 
-#: ../adduser:534
+#: ../adduser:530
 msgid ""
 "Warning: that home directory does not belong to the user you are currently "
 "creating\n"
 msgstr "Ostrze¿enie: ten katalog domowy nie nale¿y do tworzonego u¿ytkownika\n"
 
-#: ../adduser:539
+#: ../adduser:535
 #, perl-format
 msgid "Creating home directory `%s'.\n"
 msgstr "Tworzenie katalogu domowego %s.\n"
 
-#: ../adduser:549
+#: ../adduser:545
 #, perl-format
 msgid "Copying files from `%s'\n"
 msgstr "Kopiowanie plików z %s\n"
 
-#: ../adduser:624
+#: ../adduser:621
 #, perl-format
 msgid "The user `%s' already exists, and is not a system user.\n"
 msgstr "U¿ytkownik `%s' ju¿ istnieje i nie jest u¿ytkownikiem systemowym.\n"
 
-#: ../adduser:626
+#: ../adduser:623
 #, perl-format
 msgid "The user `%s' already exists.\n"
 msgstr "U¿ytkownik `%s' ju¿ istnieje.\n"
 
-#: ../adduser:629
+#: ../adduser:626
 #, perl-format
 msgid "The UID %s is already in use.\n"
 msgstr "UID `%s' jest ju¿ u¿ywany.\n"
 
-#: ../adduser:636
+#: ../adduser:633
 #, perl-format
 msgid "The GID %s is already in use.\n"
 msgstr "GID `%s' jest ju¿ u¿ywany.\n"
 
-#: ../adduser:643
+#: ../adduser:640
 #, perl-format
 msgid "The GID %s does not exist.\n"
 msgstr "GID `%s' nie istnieje.\n"
 
-#: ../adduser:699
+#: ../adduser:696
 msgid ""
 "To avoid problems, the username should consist of\n"
 "letters, digits, underscores, periods and dashes. For compatibility with\n"
@@ -258,11 +258,11 @@ msgstr ""
 "z liter, cyfr, podkre¶leñ, kropek i my¶lników. W celu zachowania zgodno¶ci\n"
 "z kontami Samby, znak $ jest tak¿e wspierany na koñcu nazwy u¿ytkownika\n"
 
-#: ../adduser:706
+#: ../adduser:703
 msgid "Allowing use of questionable username.\n"
 msgstr "Pozwolenie na u¿ycie kiepskiej jako¶ci nazwy u¿ytkownika.\n"
 
-#: ../adduser:710
+#: ../adduser:707
 msgid ""
 "Please enter a username matching the regular expression configured\n"
 "via the name_regex configuration variable.  Use the `--force-badname'\n"
@@ -272,27 +272,27 @@ msgstr ""
 "ustawionego w zmiennej konfiguracji name_regex. Proszê u¿yæ opcji\n"
 "`--force-badname', aby rozlu¼niæ to sprawdzanie, lub zmieniæ name_regex.\n"
 
-#: ../adduser:725
+#: ../adduser:722
 #, perl-format
 msgid "Selecting from %s %s (%s).\n"
 msgstr "Wybieranie z %s %s (%s).\n"
 
-#: ../adduser:790
+#: ../adduser:787
 #, perl-format
 msgid "Removing directory `%s'\n"
 msgstr "Usuwanie katalogu `%s'.\n"
 
-#: ../adduser:794
+#: ../adduser:791
 #, perl-format
 msgid "Removing user `%s'.\n"
 msgstr "Usuwanie u¿ytkownika `%s'...\n"
 
-#: ../adduser:798
+#: ../adduser:795
 #, perl-format
 msgid "Removing group `%s'.\n"
 msgstr "Usuwanie grupy `%s'...\n"
 
-#: ../adduser:831
+#: ../adduser:828
 msgid ""
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
 "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"

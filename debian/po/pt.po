@@ -2,9 +2,8 @@
 #
 msgid ""
 msgstr ""
-
 "Project-Id-Version: adduser 3.77\n"
-"Report-Msgid-Bugs-To: packages@qa.debian.org\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-26 14:05+0100\n"
 "PO-Revision-Date: 2005-10-27 01:08+0100\n"
 "Last-Translator: Marco Ferra <mferra@sdf.lonestar.org>\n"
@@ -17,7 +16,8 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Do you want system wide readable home directories?"
-msgstr "Deseja que os directórios em /home possam ser lidos por qualquer utilizador?"
+msgstr ""
+"Deseja que os directórios em /home possam ser lidos por qualquer utilizador?"
 
 #. Type: boolean
 #. Description
@@ -28,10 +28,11 @@ msgid ""
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
 msgstr ""
-"É normal os directórios em /home poderem serem vistos por todos os utilizadores "
-"no sistema. Se deseja que o seu sistema fique mais seguro/privado pode tornar "
-"os directórios em /home apenas possíveis de ler pelo próprio utilizador em causa. "
-"Se está incerto do que deve fazer escolha directórios de leitura aberta."
+"É normal os directórios em /home poderem serem vistos por todos os "
+"utilizadores no sistema. Se deseja que o seu sistema fique mais seguro/"
+"privado pode tornar os directórios em /home apenas possíveis de ler pelo "
+"próprio utilizador em causa. Se está incerto do que deve fazer escolha "
+"directórios de leitura aberta."
 
 #. Type: boolean
 #. Description
