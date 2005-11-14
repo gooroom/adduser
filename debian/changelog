@@ -16,8 +16,8 @@ adduser (3.77.0) UNRELEASED; urgency=low
     Marco Ferra. (mh) Close: #336332
   * Update French (fr) manpage translation. Thanks to
     Thomas Huriaux. (mh) Closes: #336200
-  * Update Russian (ru) manpage translation. Thanks to
-    Yuri Kozlov. (mh) Closes: #337080
+  * Update Russian (ru) manpage, program and debconf template translation.
+    Thanks to Yuri Kozlov. (mh) Closes: #337080
   * Fix typo in deluser.conf.5, hopefully without fuzzying
     translations. Thanks to Felipe Augusto van de Wiel and to Thomas
     Huriaux. (mh)
@@ -40,7 +40,7 @@ adduser (3.77.0) UNRELEASED; urgency=low
     (Closes: #336841), also changed the definition of the environment
     variable VERBOSE; DEBUG is deprecated now (but still defined).
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 13 Nov 2005 01:59:49 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 14 Nov 2005 14:01:04 +0100
 
 adduser (3.77) unstable; urgency=low
 
