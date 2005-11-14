@@ -1,3 +1,4 @@
+# translation of ru.po to Russian
 # translation of adduser_3.77_ru4.po to Russian
 # Copyright (C) 2005 Free Software Foundation, Inc.
 # Yuri Kozlov <kozlov.y@gmail.com>, 2005.
@@ -6,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser_3.77_ru4\n"
 "POT-Creation-Date: 2005-11-13  0:31+0000\n"
-"PO-Revision-Date: 2005-11-02 18:35+0400\n"
+"PO-Revision-Date: 2005-11-14 11:49+0300\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -54,12 +55,11 @@ msgstr "Debian GNU/Linux"
 #: ../deluser.conf.5:7 ../adduser.conf.5:7 ../deluser.8:10 ../adduser.8:10
 #, no-wrap
 msgid "NAME"
-msgstr "НАЗВАНИЕ"
+msgstr "NAME"
 
 # type: Plain text
 #: ../deluser.conf.5:12
-msgid ""
-"/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
+msgid "/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
 msgstr "/etc/deluser.conf - файл настройки для B<deluser(8)> и B<delgroup(8)>."
 
 # type: SH
@@ -130,7 +130,6 @@ msgstr "B<BACKUP>"
 
 # type: Plain text
 #: ../deluser.conf.5:49
-#, fuzzy
 msgid ""
 "If B<REMOVE_HOME> or B<REMOVE_ALL_FILES> is activated all files are backuped "
 "before they are removed. The backup file that is created defaults to "
@@ -140,8 +139,8 @@ msgid ""
 msgstr ""
 "Если B<REMOVE_HOME> или B<REMOVE_ALL_FILES> включены, то перед удалением "
 "делается резервная копия всех файлов. Будет создан архивный файл с именем "
-"имя_пользователя.tar(.gz|.bz2) в текущем рабочем каталоге. Из возможных "
-"методов сжатия выбирается лучший. Значениями могут быть 0 или 1."
+"имя_пользователя.tar(.gz|.bz2) в каталоге, указанном в B<BACKUP_TO>. Из "
+"возможных методов сжатия выбирается лучший. Значениями могут быть 0 или 1."
 
 # type: TP
 #: ../deluser.conf.5:49
@@ -216,10 +215,8 @@ msgstr "adduser.conf"
 
 # type: Plain text
 #: ../adduser.conf.5:12
-msgid ""
-"/etc/adduser.conf - configuration file for B<adduser(8)> and B<addgroup(8)>."
-msgstr ""
-"/etc/adduser.conf -- файл настройки для B<adduser(8)> и B<addgroup(8)>."
+msgid "/etc/adduser.conf - configuration file for B<adduser(8)> and B<addgroup(8)>."
+msgstr "/etc/adduser.conf -- файл настройки для B<adduser(8)> и B<addgroup(8)>."
 
 # type: Plain text
 #: ../adduser.conf.5:28
@@ -244,8 +241,7 @@ msgstr "B<DSHELL>"
 
 # type: Plain text
 #: ../adduser.conf.5:34
-msgid ""
-"The login shell to be used for all new users.  Defaults to I</bin/bash>."
+msgid "The login shell to be used for all new users.  Defaults to I</bin/bash>."
 msgstr ""
 "Регистрационный shell, который будут использовать все новые пользователи. По "
 "умолчанию I</bin/bash>."
@@ -865,10 +861,8 @@ msgstr "B<adduser> [параметры] пользователь группа"
 
 # type: Plain text
 #: ../adduser.8:29
-#, fuzzy
-msgid ""
-"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
-msgstr "[--quiet] [--force-badname] [--help|-h] [--version] [--conf ФАЙЛ]"
+msgid "[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
+msgstr "[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf ФАЙЛ]"
 
 # type: Plain text
 #: ../adduser.8:43
@@ -995,27 +989,26 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:113
-msgid ""
-"The environment variable VERBOSE is set according to the following rule:"
-msgstr ""
+msgid "The environment variable VERBOSE is set according to the following rule:"
+msgstr "Значение переменной среды VERBOSE устанавливается по следующему правилу:"
 
 # type: TP
 #: ../adduser.8:113
 #, no-wrap
 msgid "0 if --quiet is specified"
-msgstr ""
+msgstr "0, если указан --quiet"
 
 # type: TP
 #: ../adduser.8:115
 #, no-wrap
 msgid "1 if neither --quiet nor --debug is specified"
-msgstr ""
+msgstr "1, если не указан --quiet или --debug"
 
 # type: TP
 #: ../adduser.8:117
 #, no-wrap
 msgid "2 if --debug is specified"
-msgstr ""
+msgstr "2, если указан --debug"
 
 # type: Plain text
 #: ../adduser.8:121
@@ -1023,6 +1016,8 @@ msgid ""
 "(The same applies to the variable DEBUG, but DEBUG is deprecated and will be "
 "removed in a later version of adduser.)"
 msgstr ""
+"(Это же правило применяется к переменной DEBUG, но DEBUG лучше не использовать, "
+"так как она будет удалена в следующей версии adduser.)"
 
 # type: SS
 #: ../adduser.8:122
@@ -1307,19 +1302,18 @@ msgstr "Не создавать домашний каталог, даже есл
 # type: Plain text
 #: ../adduser.8:241
 msgid "Suppress informational messages, only show warnings and errors."
-msgstr ""
+msgstr "Не выводить информационные сообщения, показывать только предупреждения и ошибки."
 
 # type: TP
 #: ../adduser.8:241
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--debug>"
-msgstr "B<--help>"
+msgstr "B<--debug>"
 
 # type: Plain text
 #: ../adduser.8:244
-msgid ""
-"Be verbose, most usefull if you want to nail down a problem with adduser."
-msgstr ""
+msgid "Be verbose, most usefull if you want to nail down a problem with adduser."
+msgstr "Показывать отладочную информацию, очень полезно, если вы хотите понять в чём проблема у adduser."
 
 # type: Plain text
 #: ../adduser.8:247
@@ -1338,8 +1332,8 @@ msgid ""
 "Force the new userid to be the given number.  adduser will fail if the "
 "userid is already taken."
 msgstr ""
-"Присвоить новому userid заданный номер. adduser завершится неудачно, если "
-"userid уже используется."
+"Принудительно задать userid. adduser завершится неудачно, если "
+"такой userid уже используется."
 
 # type: TP
 #: ../adduser.8:251
@@ -1397,10 +1391,3 @@ msgstr ""
 "условия копирования в Универсальной Общественной Лицензии GNU версии 2 или "
 "более новой.  Не предоставляется I<никаких> гарантий."
 
-# type: Plain text
-#~ msgid ""
-#~ "username uid gid home-directory, and the environment variables DEBUG and "
-#~ "VERBOSE will be set according to the settings in the master program."
-#~ msgstr ""
-#~ "Имя пользователя,uid, gid, домашний каталог и переменные среды DEBUG "
-#~ "иVERBOSE будут установлены согласно настройкам в главной программе."
