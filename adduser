@@ -461,7 +461,31 @@ if ($action eq "adduser") {
 
     # useradd without -p has left the account disabled (password string is '!')
     if ($ask_passwd) {
-	&systemcall('/usr/bin/passwd', $new_name);
+	for (;;) {
+          &systemcall('/usr/bin/passwd', $new_name);
+	  my $ok = $? & 128;
+	  if ($ok != 0) {
+	    my $noexpr = langinfo(NOEXPR());
+            my $answer;
+            # hm, error, should we break now?
+	    print (gtx("Permission denied\n")) if ($ok == 1);
+	    print (gtx("invalid combination of options\n")) if ($ok == 2);
+	    print (gtx("unexpected failure, nothing done\n")) if ($ok == 3);
+	    print (gtx("unexpected failure, passwd file missing\n")) if ($ok == 3);
+	    print (gtx("passwd file busy, try again\n")) if ($ok == 4);
+	    print (gtx("invalid argument to option\n")) if ($ok == 5);
+	    
+	    # Translators: [y/N] has to be replaced by values defined in your
+	    # locale.  You can see by running "locale noexpr" which regular
+	    # expression will be checked to find positive answer.
+	    print "Try again(Y/n)?";
+	    chop ($answer=<STDIN>);
+	    last if ($answer =~ m/$noexpr/o);
+	  }
+	  else {
+	    last; ## passwd ok
+	  }
+	}
     } else {
 	if(!$disabled_login) {
 	    &systemcall('/usr/sbin/usermod', '-p', '*', $new_name);
