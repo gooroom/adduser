@@ -89,7 +89,7 @@ sub read_config {
 	chomp;
 	next if /^#/ || /^\s*$/;
 
-	if ((($var, $val) = /^\s*([a-zA-Z0-9]+)\s*=\s*(.*)/) != 2) {
+	if ((($var, $val) = /^\s*([_a-zA-Z0-9]+)\s*=\s*(.*)/) != 2) {
 	    warnf gtx("Couldn't parse `%s':%s.\n"),$conf_file,$.;
 	    next;
 	}

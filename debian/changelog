@@ -4,8 +4,10 @@ adduser (3.78.0) UNRELEASED; urgency=low
   * Fix shadowless systems _again_.
     Thanks to Matt Zimmerman. (mh) Closes: #339686
   * remove double values from adduser.conf. (mh)
+  * Allow underscores in adduser.conf variable names.
+    Thanks to David Bishop and Edward J. Shornock. (mh) Closes: #339670
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 18 Nov 2005 17:20:36 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 18 Nov 2005 17:23:40 +0000
 
 adduser (3.78) unstable; urgency=low
 
