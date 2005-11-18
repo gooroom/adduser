@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-16 13:04+0000\n"
+"POT-Creation-Date: 2005-11-18 17:25+0000\n"
 "PO-Revision-Date: 2000-05-27 13:00+0300\n"
 "Last-Translator: Nicolás Lichtmaier <nick@debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -89,7 +89,7 @@ msgstr "Añadiendo el grupo %s (%s)...\n"
 msgid "Done.\n"
 msgstr "Hecho.\n"
 
-#: ../adduser:259 ../adduser:655
+#: ../adduser:259 ../adduser:657
 #, perl-format
 msgid "The group `%s' already exists.\n"
 msgstr "El grupo `%s' ya existe.\n"
@@ -104,7 +104,7 @@ msgstr "No hay un GID disponible en el rango "
 msgid "The user `%s' does not exist.\n"
 msgstr "El usuario `%s' no existe.\n"
 
-#: ../adduser:290 ../adduser:662 ../deluser:329 ../deluser:368
+#: ../adduser:290 ../adduser:664 ../deluser:329 ../deluser:368
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "El grupo `%s' no existe.\n"
@@ -136,7 +136,7 @@ msgid ""
 "LAST_SYS_UID).\n"
 msgstr "No hay un par UID/GID disponible en el rango "
 
-#: ../adduser:335 ../adduser:347 ../adduser:418 ../adduser:430
+#: ../adduser:335 ../adduser:347 ../adduser:420 ../adduser:432
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "Usuario `%s' no creado.\n"
@@ -147,169 +147,169 @@ msgid ""
 "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 msgstr "No hay un UID disponible en el rango "
 
-#: ../adduser:351 ../adduser:357 ../adduser:434 ../adduser:440
+#: ../adduser:351 ../adduser:357 ../adduser:436 ../adduser:442
 msgid "Internal error"
 msgstr "Error interno"
 
-#: ../adduser:363 ../adduser:445
+#: ../adduser:363 ../adduser:447
 #, fuzzy, perl-format
 msgid "Adding new group `%s' (%s).\n"
 msgstr "Añadiendo nuevo grupo %s (%s).\n"
 
-#: ../adduser:369 ../adduser:451
+#: ../adduser:369 ../adduser:453
 #, fuzzy, perl-format
 msgid "Adding new user `%s' (%s) with group `%s'.\n"
 msgstr "Añadiendo nuevo usuario %s (%s) con grupo %s.\n"
 
-#: ../adduser:383
+#: ../adduser:385
 msgid ""
 "chage failed with return code 15, shadow not enabled, password aging cannot "
 "be set. Continuing.\n"
 msgstr ""
 
-#: ../adduser:409
+#: ../adduser:411
 #, perl-format
 msgid "Adding user `%s'...\n"
 msgstr "Añadiendo usuario %s...\n"
 
-#: ../adduser:417
+#: ../adduser:419
 #, fuzzy, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "No hay un par UID/GID disponible en el rango "
 
-#: ../adduser:429
+#: ../adduser:431
 #, fuzzy, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "No hay un UID disponible en el rango "
 
 #. hm, error, should we break now?
-#: ../adduser:471
+#: ../adduser:473
 msgid "Permission denied\n"
 msgstr ""
 
-#: ../adduser:472
+#: ../adduser:474
 msgid "invalid combination of options\n"
 msgstr ""
 
-#: ../adduser:473
+#: ../adduser:475
 msgid "unexpected failure, nothing done\n"
 msgstr ""
 
-#: ../adduser:474
+#: ../adduser:476
 msgid "unexpected failure, passwd file missing\n"
 msgstr ""
 
-#: ../adduser:475
+#: ../adduser:477
 msgid "passwd file busy, try again\n"
 msgstr ""
 
-#: ../adduser:476
+#: ../adduser:478
 msgid "invalid argument to option\n"
 msgstr ""
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale yesexpr" which regular
 #. expression will be checked to find positive answer.
-#: ../adduser:505
+#: ../adduser:507
 msgid "Is the information correct? [y/N] "
 msgstr "¿Es correcta la información? [y/N] "
 
-#: ../adduser:512
+#: ../adduser:514
 #, perl-format
 msgid "Setting quota from `%s'.\n"
 msgstr "Configurando quota desde %s.\n"
 
-#: ../adduser:545
+#: ../adduser:547
 #, fuzzy, perl-format
 msgid "Not creating home directory `%s'.\n"
 msgstr "No se crea el directorio home.\n"
 
-#: ../adduser:548
+#: ../adduser:550
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "El directorio hogar %s ya existe.  No se lo copia desde %s\n"
 
-#: ../adduser:554
+#: ../adduser:556
 msgid ""
 "Warning: that home directory does not belong to the user you are currently "
 "creating\n"
 msgstr ""
 
-#: ../adduser:559
+#: ../adduser:561
 #, perl-format
 msgid "Creating home directory `%s'.\n"
 msgstr "Creando el directorio home %s.\n"
 
-#: ../adduser:569
+#: ../adduser:571
 #, perl-format
 msgid "Copying files from `%s'\n"
 msgstr "Copiando archivos desde %s\n"
 
-#: ../adduser:645
+#: ../adduser:647
 #, fuzzy, perl-format
 msgid "The user `%s' already exists, and is not a system user.\n"
 msgstr "El grupo `%s' ya existe.\n"
 
-#: ../adduser:647
+#: ../adduser:649
 #, fuzzy, perl-format
 msgid "The user `%s' already exists.\n"
 msgstr "El grupo `%s' ya existe.\n"
 
-#: ../adduser:650
+#: ../adduser:652
 #, fuzzy, perl-format
 msgid "The UID %s is already in use.\n"
 msgstr "El GID `%s' ya está en uso.\n"
 
-#: ../adduser:657
+#: ../adduser:659
 #, perl-format
 msgid "The GID %s is already in use.\n"
 msgstr "El GID `%s' ya está en uso.\n"
 
-#: ../adduser:664
+#: ../adduser:666
 #, fuzzy, perl-format
 msgid "The GID %s does not exist.\n"
 msgstr "El usuario `%s' no existe.\n"
 
-#: ../adduser:720
+#: ../adduser:722
 msgid ""
 "To avoid problems, the username should consist of\n"
 "letters, digits, underscores, periods and dashes. For compatibility with\n"
 "Samba machine accounts $ is also supported at the end of the username\n"
 msgstr ""
 
-#: ../adduser:727
+#: ../adduser:729
 msgid "Allowing use of questionable username.\n"
 msgstr ""
 
-#: ../adduser:731
+#: ../adduser:733
 msgid ""
 "Please enter a username matching the regular expression configured\n"
 "via the name_regex configuration variable.  Use the `--force-badname'\n"
 "option to relax this check or reconfigure name_regex.\n"
 msgstr ""
 
-#: ../adduser:746
+#: ../adduser:748
 #, fuzzy, perl-format
 msgid "Selecting from %s %s (%s).\n"
 msgstr "Configurando quota desde %s.\n"
 
-#: ../adduser:811
+#: ../adduser:813
 #, fuzzy, perl-format
 msgid "Removing directory `%s'\n"
 msgstr "Creando el directorio home $s.\n"
 
-#: ../adduser:815
+#: ../adduser:817
 #, fuzzy, perl-format
 msgid "Removing user `%s'.\n"
 msgstr "Eliminando usuario %s...\n"
 
-#: ../adduser:819
+#: ../adduser:821
 #, fuzzy, perl-format
 msgid "Removing group `%s'.\n"
 msgstr "Eliminando el grupo %s ...\n"
 
-#: ../adduser:852
+#: ../adduser:854
 msgid ""
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
 "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"
