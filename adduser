@@ -374,7 +374,9 @@ if ($action eq "addsysuser") {
     &systemcall('/usr/sbin/useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$shell, '-u', $new_uid, $new_name);
     print "/usr/bin/chage -M 99999 $new_name\n" if ($verbose > 1);
-    if (&systemcall('/usr/bin/chage', '-M', '99999', $new_name)) {
+    # do _not_ use systemcall() here, since systemcall() dies on
+    # non-zero exit code and we need to do special handling here!
+    if (system('/usr/bin/chage', '-M', '99999', $new_name)) {
 	if( ($?>>8) ne 15 ) {
 	    &cleanup("$0: `/usr/bin/chage -M 99999 $new_name' returned error code " . ($?>>8) . ".  Aborting.\n")
 	      if ($?>>8);
