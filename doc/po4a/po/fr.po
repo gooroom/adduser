@@ -1335,7 +1335,7 @@ msgstr "B<--help>"
 # type: Plain text
 #: ../adduser.8:244
 msgid ""
-"Be verbose, most usefull if you want to nail down a problem with adduser."
+"Be verbose, most useful if you want to nail down a problem with adduser."
 msgstr ""
 
 # type: Plain text

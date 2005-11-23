@@ -1096,7 +1096,7 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:244
-msgid "Be verbose, most usefull if you want to nail down a problem with adduser."
+msgid "Be verbose, most useful if you want to nail down a problem with adduser."
 msgstr ""
 
 # type: Plain text
