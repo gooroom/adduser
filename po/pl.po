@@ -1,9 +1,12 @@
+# Polish translation of adduser
+# This file is distributed under the same license as the adduser package.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.77\n"
+"Project-Id-Version: adduser 3.79\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-18 17:25+0000\n"
-"PO-Revision-Date: 2005-10-26 19:45+0200\n"
+"PO-Revision-Date: 2005-11-22 17:52+0100\n"
 "Last-Translator: Robert Luberda <robert@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -188,27 +191,27 @@ msgstr "Brak dostêpnego UID w zakresie %d-%d (FIRST_UID - LAST_UID).\n"
 #. hm, error, should we break now?
 #: ../adduser:473
 msgid "Permission denied\n"
-msgstr ""
+msgstr "Dostêp zabroniony\n"
 
 #: ../adduser:474
 msgid "invalid combination of options\n"
-msgstr ""
+msgstr "niepoprawna kombinacja opcji\n"
 
 #: ../adduser:475
 msgid "unexpected failure, nothing done\n"
-msgstr ""
+msgstr "niespodziewany b³±d, nic nie zrobiono\n"
 
 #: ../adduser:476
 msgid "unexpected failure, passwd file missing\n"
-msgstr ""
+msgstr "niespodziewany b³±d, brak pliku passwd\n"
 
 #: ../adduser:477
 msgid "passwd file busy, try again\n"
-msgstr ""
+msgstr "plik passwd zajêty, proszê spróbowaæ ponownie\n"
 
 #: ../adduser:478
 msgid "invalid argument to option\n"
-msgstr ""
+msgstr "niepoprawny argument opcji\n"
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale yesexpr" which regular
@@ -310,12 +313,12 @@ msgstr "Usuwanie katalogu `%s'.\n"
 #: ../adduser:817
 #, perl-format
 msgid "Removing user `%s'.\n"
-msgstr "Usuwanie u¿ytkownika `%s'...\n"
+msgstr "Usuwanie u¿ytkownika `%s'.\n"
 
 #: ../adduser:821
 #, perl-format
 msgid "Removing group `%s'.\n"
-msgstr "Usuwanie grupy `%s'...\n"
+msgstr "Usuwanie grupy `%s'.\n"
 
 #: ../adduser:854
 msgid ""
@@ -444,7 +447,7 @@ msgstr "Usuwanie plików...\n"
 #: ../deluser:314
 #, perl-format
 msgid "Removing user `%s'...\n"
-msgstr "Usuwanie u¿ytkownika %s...\n"
+msgstr "Usuwanie u¿ytkownika `%s'...\n"
 
 #: ../deluser:321 ../deluser:356 ../deluser:392
 msgid "done.\n"

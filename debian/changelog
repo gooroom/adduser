@@ -5,8 +5,11 @@ adduser (3.79.0) UNRELEASED; urgency=low
     Thanks to Rob Snelders. (mh) Closes: #339875
   * Fix typo in adduser man page and translations.
     Thanks to A Costa. (mh) Closes: #340343
+  * Make Polish (pl) man pages actually included.
+    Update Polish (pl) program and manpage translation.
+    Thanks to Robert Luberda. (mh) Closes: #340327
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 23 Nov 2005 11:09:21 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 23 Nov 2005 12:26:59 +0100
 
 adduser (3.79) unstable; urgency=low
 
