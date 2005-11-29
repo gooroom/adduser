@@ -1,6 +1,5 @@
-adduser (3.79.0) UNRELEASED; urgency=low
+adduser (3.80) unstable; urgency=low
 
-  * NOT RELEASED YET
   * Update Dutch (nl) program translation.
     Thanks to Rob Snelders. (mh) Closes: #339875
   * Fix typo in adduser man page and translations.
@@ -16,7 +15,7 @@ adduser (3.79.0) UNRELEASED; urgency=low
   * Fix two typos in french manpage translator addenda. Thanks to
     Thomas Huriaux.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 29 Nov 2005 13:46:26 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 29 Nov 2005 14:07:10 +0000
 
 adduser (3.79) unstable; urgency=low
 
