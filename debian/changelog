@@ -1,3 +1,9 @@
+adduser (3.80.0) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 29 Nov 2005 14:10:20 +0000
+
 adduser (3.80) unstable; urgency=low
 
   * Update Dutch (nl) program translation.
