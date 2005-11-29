@@ -19,6 +19,7 @@ clean:
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.fr
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.es
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.pl
+	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.sv
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.pt_BR
 	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.ru
 	-rm -rf build *~ debian/tmp debian/*~ debian/files* debian/substvars
@@ -40,6 +41,8 @@ binary-indep:	checkroot build
 		debian/tmp/usr/share/man/fr/man8 \
 		debian/tmp/usr/share/man/pl/man5 \
 		debian/tmp/usr/share/man/pl/man8 \
+		debian/tmp/usr/share/man/sv/man5 \
+		debian/tmp/usr/share/man/sv/man8 \
 		debian/tmp/usr/share/man/pt_BR/man5 \
 		debian/tmp/usr/share/man/pt_BR/man8 \
 		debian/tmp/usr/share/man/es/man5 \
