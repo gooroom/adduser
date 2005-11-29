@@ -12,8 +12,12 @@ adduser (3.79.0) UNRELEASED; urgency=low
     Thanks to Daniel Nylander. (mh) Closes: #340669
   * New Swedish (sv) manpage translation, also from Daniel. Still
     pending: translator file, po4a configuration.
+  * Add addendum.template to aid manpage translators. Thanks to
+    Thomas Huriaux.
+  * Fix two typos in french manpage translator addenda. Thanks to
+    Thomas Huriaux.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 25 Nov 2005 16:30:58 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 29 Nov 2005 13:39:38 +0000
 
 adduser (3.79) unstable; urgency=low
 
