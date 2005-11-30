@@ -1,8 +1,9 @@
 adduser (3.80.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * fix swedish manpage addendum thanks to Thomas Huriaux.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 29 Nov 2005 14:10:20 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 30 Nov 2005 13:03:45 +0100
 
 adduser (3.80) unstable; urgency=low
 
