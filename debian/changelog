@@ -2,8 +2,10 @@ adduser (3.80.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
   * fix swedish manpage addendum thanks to Thomas Huriaux.
+  * Update French (fr) program translation.
+    Thanks to Aurelien Ricard. (mh) Closes: #341264
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 30 Nov 2005 13:03:45 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 30 Nov 2005 15:46:16 +0100
 
 adduser (3.80) unstable; urgency=low
 
