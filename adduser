@@ -480,7 +480,7 @@ if ($action eq "adduser") {
 	    # Translators: [y/N] has to be replaced by values defined in your
 	    # locale.  You can see by running "locale noexpr" which regular
 	    # expression will be checked to find positive answer.
-	    print "Try again(Y/n)?";
+	    print (gtx("Try again(Y/n)?"));
 	    chop ($answer=<STDIN>);
 	    last if ($answer =~ m/$noexpr/o);
 	  }
@@ -808,7 +808,7 @@ sub user_is_member {
 
 
 sub cleanup {
-    print ("@{_}Cleaning up.\n");
+    print (gtx("@{_}Cleaning up.\n"));
     if ($undohome) {
 	printf (gtx("Removing directory `%s'\n"),$undohome);
 	&systemcall('rm', '-rf', $undohome);
