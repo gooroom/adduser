@@ -311,6 +311,12 @@ if($action eq "deluser") {
       }
     }
 
+    if (system("crontab -l > $user /dev/null 2>&1") == 0) {
+      # crontab -l returns 1 if there is no crontab
+      systemcall("/usr/bin/crontab -r $user");
+      s_print (gtx("Removing crontab\n"));
+    }
+
     s_printf (gtx("Removing user `%s'...\n"),$user);
     systemcall("/usr/sbin/userdel", $user);
     &invalidate_nscd();
