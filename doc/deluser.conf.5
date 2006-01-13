@@ -61,6 +61,11 @@ deleted in course of deleting home directories or deleting files owned
 by the user to be deleted are checked against each of these regular
 expressions. If a match is detected, the file is not deleted. Defaults
 to a list of system directories, leaving only /home.
+.TP
+\fBONLY_IF_EMPTY\fP
+Only delete a group if there are no user who belong to this group. Defaults to 0.
+
+
 .SH FILES
 .I /etc/deluser.conf
 .SH SEE ALSO
