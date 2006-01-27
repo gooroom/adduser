@@ -232,9 +232,8 @@ if ($action eq "addsysgroup") {
     dief (gtx("The GID `%s' is already in use.\n"),$new_gid)
 	if (defined($new_gid) && defined(getgrgid($new_gid)));
     if (!defined($new_gid)) {
-        $new_gid = &first_avail_id($config{"first_system_gid"},
-				   $config{"last_system_gid"},
-				   &get_current_gids);
+        $new_gid = &first_avail_gid($config{"first_system_gid"},
+				   $config{"last_system_gid"});
 
         if ($new_gid == -1) {
 	    print STDERR "$0: ";
@@ -261,9 +260,8 @@ if ($action eq "addgroup") {
     dief (gtx("The GID `%s' is already in use.\n"),$new_gid)
 	if (defined($new_gid) && defined(getgrgid($new_gid)));
     if (!defined($new_gid)) {
-        $new_gid = &first_avail_id($config{"first_gid"},
-				   $config{"last_gid"},
-				   &get_current_gids);
+        $new_gid = &first_avail_gid($config{"first_gid"},
+				   $config{"last_gid"});
 
         if ($new_gid == -1) {
 	    print STDERR "$0: ";
@@ -326,9 +324,8 @@ if ($action eq "addsysuser") {
     printf (gtx("Adding system user `%s'...\n"),$new_name) if $verbose;
 
     if (!defined($new_uid) && $make_group_also) {
-	$new_uid = &first_avail_id($config{"first_system_uid"},
-				   $config{"last_system_uid"},
-				   &get_current_uids, &get_current_gids);
+	$new_uid = &first_avail_uid($config{"first_system_uid"},
+				   $config{"last_system_uid"});
         if ($new_uid == -1) {
 	    print STDERR "$0: ";
 	    printf STDERR gtx("No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"),$config{"first_system_uid"},$config{"last_system_uid"};
@@ -338,9 +335,8 @@ if ($action eq "addsysuser") {
 	$ingroup_name = $new_name;
     }
     elsif (!defined($new_uid) && !$make_group_also) {
-	$new_uid = &first_avail_id($config{"first_system_uid"},
-				   $config{"last_system_uid"},
-				   &get_current_uids);
+	$new_uid = &first_avail_uid($config{"first_system_uid"},
+				   $config{"last_system_uid"});
         if ($new_uid == -1) {
 	    print STDERR "$0: ";
 	    printf STDERR gtx("No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"),$config{"first_system_uid"},$config{"last_system_uid"};
@@ -411,9 +407,9 @@ if ($action eq "adduser") {
     printf (gtx("Adding user `%s'...\n"),$new_name) if $verbose;
 
     if (!defined($new_uid) && $make_group_also) {
-	$new_uid = &first_avail_id($first_uid,
-				   $last_uid,
-				   &get_current_uids, &get_current_gids);
+	$new_uid = &first_avail_uid($first_uid,
+				   $last_uid);
+				
         if ($new_uid == -1) {
 	    print STDERR "$0: ";
             printf STDERR gtx("No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"),$first_uid,$last_uid;
@@ -423,9 +419,8 @@ if ($action eq "adduser") {
 	$ingroup_name = $new_name;
     }
     elsif (!defined($new_uid) && !$make_group_also) {
-	$new_uid = &first_avail_id($first_uid,
-				   $last_uid,
-				   &get_current_uids);
+	$new_uid = &first_avail_uid($first_uid,
+				   $last_uid);
 	if ($new_uid == -1) {
 	    print STDERR "$0: ";
 	    printf STDERR gtx("No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"),$config{"first_uid"},$config{"last_uid"};
@@ -738,42 +733,32 @@ option to relax this check or reconfigure name_regex.\n"));
     }
 }
 
+# return the first available uid in given range
+# return -1 if no free uid is available
+sub first_avail_uid {
+    my ($min, $max) = @_;
+    printf (gtx("Selecting uid from range %s to %s.\n"),$min,$max) if ($verbose > 1);
 
-# return the smallest X such that
-# $min <= X <= $max, and X is not an element of @ids
-# or -1 if no such X
-sub first_avail_id {
-    my ($min, $max, @ids) = @_;
-    @ids = sort {$a <=> $b} @ids;
-    printf (gtx("Selecting from %s %s (%s).\n"),$min,$max,join(",",@ids)) if ($verbose > 1);
-    
-    while ($min <= $max) {
-	return $min if ($min <  $ids[0] || @ids==0);
-	shift @ids  if ($min >  $ids[0]);
-	$min++      if ($min == $ids[0]);
+    my $t = $min;
+    while ($t <= $max) {
+       return $t if (defined(getpwuid($t)));
+       $t++;
     }
-
-    return -1;			# nothing available
+    return -1; # nothing available
 }
 
+# return the first available gid in given range
+# return -1 if no free gid is available
+sub first_avail_gid {
+    my ($min, $max) = @_;
+    printf (gtx("Selecting gid from range %s to %s.\n"),$min,$max) if ($verbose > 1);
 
-# return an array containing all the GIDs
-sub get_current_gids {
-    my(@gids, $gid);
-    setgrent;
-    push @gids, $gid while defined($gid = (getgrent)[2]);
-    endgrent;
-    return @gids;
-}
-
-
-# return an array containing all the UIDs
-sub get_current_uids {
-    my(@uids, $uid);
-    setpwent;
-    push @uids, $uid while defined($uid = (getpwent)[2]);
-    endpwent;
-    return @uids;
+    my $t = $min;
+    while ($t <= $max) {
+       return $t if (defined(getgrgid($t)));
+       $t++;
+    }
+    return -1; # nothing available
 }
 
 sub ch_gecos {

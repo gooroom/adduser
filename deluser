@@ -402,7 +402,7 @@ if($action eq "deluserfromgroup")
 ######
 
 sub version {
-    printf (gtx("deluser: (version: %s)\n\n", $version));
+    printf ("deluser: (version: %s)\n\n", $version);
     printf (gtx("removing user and groups from the system. "));
 
     printf gtx("Copyright (C) 2000 Roland Bauerschmidt <roland\@copyleft.de>\n\n");
@@ -422,7 +422,7 @@ General Public License, /usr/share/common-licenses/GPL, for more details.\n");
 }
 
 sub usage {
-    printf (gtx("deluser: (version %s)\n\n", $version));
+    printf ("deluser: (version %s)\n\n", $version);
     printf gtx("removing user and groups from the system. Version:");
 
     printf gtx("deluser user
