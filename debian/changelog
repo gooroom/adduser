@@ -11,9 +11,9 @@ adduser (3.80.0) UNRELEASED; urgency=low
   * (nearly) all output should now use gettext
   * deluser now removes also user crontabs
   * added only-if-empty parameter to delgroup.conf (Closes: #347717)
-  * improved search for new uid/gid (thanks to Karl Rink)
+  * improved search for new uid/gid (thanks to Karl Rink) (Closes: #119597)
 
- -- Joerg Hoh <joerg@joerghoh.de>  Fri, 27 Jan 2006 22:31:15 +0100
+ -- Joerg Hoh <joerg@joerghoh.de>  Fri, 27 Jan 2006 22:47:50 +0100
 
 adduser (3.80) unstable; urgency=low
 
