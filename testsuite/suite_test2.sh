@@ -11,7 +11,7 @@ $CMD > /dev/null 2>&1
 # expect:
 #  - a new user $USER
 #  - added to group nogroup
-#  - a home directory /home/$USER
+#  - a home directory /var/$USER
 
 test_doesUserExist $USER
 test_doesGroupExist nogroup
