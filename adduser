@@ -741,7 +741,7 @@ sub first_avail_uid {
 
     my $t = $min;
     while ($t <= $max) {
-       return $t if (defined(getpwuid($t)));
+       return $t if (!defined(getpwuid($t)));
        $t++;
     }
     return -1; # nothing available
@@ -755,7 +755,7 @@ sub first_avail_gid {
 
     my $t = $min;
     while ($t <= $max) {
-       return $t if (defined(getgrgid($t)));
+       return $t if (!defined(getgrgid($t)));
        $t++;
     }
     return -1; # nothing available
