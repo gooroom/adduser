@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser_3.77_ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-18 17:25+0000\n"
+"POT-Creation-Date: 2006-02-04 12:06+0000\n"
 "PO-Revision-Date: 2005-11-14 15:04+0300\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -72,73 +72,73 @@ msgstr ""
 msgid "The group `%s' already exists and is not a system group.\n"
 msgstr "Группа `%s' уже существует и не является системной.\n"
 
-#: ../adduser:232 ../adduser:261
+#: ../adduser:232 ../adduser:260
 #, perl-format
 msgid "The GID `%s' is already in use.\n"
 msgstr "GID `%s' уже используется.\n"
 
-#: ../adduser:241
+#: ../adduser:240
 #, perl-format
 msgid ""
 "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
 msgstr "Нет свободного GID в диапазоне %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
 
-#: ../adduser:242 ../adduser:271
+#: ../adduser:241 ../adduser:269
 #, perl-format
 msgid "The group `%s' was not created.\n"
 msgstr "Группа `%s' не создана.\n"
 
-#: ../adduser:246 ../adduser:275
+#: ../adduser:245 ../adduser:273
 #, perl-format
 msgid "Adding group `%s' (%s)...\n"
 msgstr "Добавляется группа `%s' (%s)...\n"
 
-#: ../adduser:250 ../adduser:279 ../adduser:310
+#: ../adduser:249 ../adduser:277 ../adduser:308
 msgid "Done.\n"
 msgstr "Готово.\n"
 
-#: ../adduser:259 ../adduser:657
+#: ../adduser:258 ../adduser:652
 #, perl-format
 msgid "The group `%s' already exists.\n"
 msgstr "Группа `%s' уже существует.\n"
 
-#: ../adduser:270
+#: ../adduser:268
 #, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "Нет свободного GID в диапазоне %d-%d (FIRST_GID - LAST_GID).\n"
 
-#: ../adduser:288 ../deluser:221 ../deluser:365
+#: ../adduser:286 ../deluser:221 ../deluser:371
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "Пользователь `%s' не существует.\n"
 
-#: ../adduser:290 ../adduser:664 ../deluser:329 ../deluser:368
+#: ../adduser:288 ../adduser:659 ../deluser:335 ../deluser:374
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Группа `%s' не существует.\n"
 
-#: ../adduser:293
+#: ../adduser:291
 #, perl-format
 msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "Пользователь `%s' уже является членом группы `%s'.\n"
 
-#: ../adduser:298
+#: ../adduser:296
 #, perl-format
 msgid "Adding user `%s' to group `%s'...\n"
 msgstr "Добавляется пользователь `%s' в группу `%s'...\n"
 
-#: ../adduser:320
+#: ../adduser:318
 #, perl-format
 msgid "The user `%s' already exists as a system user. Exiting...\n"
 msgstr ""
 "Пользователь `%s' уже существует и является системным. Завершение работы...\n"
 
-#: ../adduser:326
+#: ../adduser:324
 #, perl-format
 msgid "Adding system user `%s'...\n"
 msgstr "Добавляется пользователь `%s'...\n"
 
-#: ../adduser:334
+#: ../adduser:331
 #, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
@@ -147,32 +147,32 @@ msgstr ""
 "Нет свободной UID/GID пары в диапазоне %d-%d (FIRST_SYS_UID - "
 "LAST_SYS_UID).\n"
 
-#: ../adduser:335 ../adduser:347 ../adduser:420 ../adduser:432
+#: ../adduser:332 ../adduser:343 ../adduser:416 ../adduser:427
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "Пользователь `%s' не создан.\n"
 
-#: ../adduser:346
+#: ../adduser:342
 #, perl-format
 msgid ""
 "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 msgstr "Нет свободного UID в диапазоне %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 
-#: ../adduser:351 ../adduser:357 ../adduser:436 ../adduser:442
+#: ../adduser:347 ../adduser:353 ../adduser:431 ../adduser:437
 msgid "Internal error"
 msgstr "Внутренняя ошибка"
 
-#: ../adduser:363 ../adduser:447
+#: ../adduser:359 ../adduser:442
 #, perl-format
 msgid "Adding new group `%s' (%s).\n"
 msgstr "Добавляется новая группа `%s' (%s).\n"
 
-#: ../adduser:369 ../adduser:453
+#: ../adduser:365 ../adduser:448
 #, perl-format
 msgid "Adding new user `%s' (%s) with group `%s'.\n"
 msgstr "Добавляется новый пользователь `%s' (%s) в группу `%s'.\n"
 
-#: ../adduser:385
+#: ../adduser:381
 msgid ""
 "chage failed with return code 15, shadow not enabled, password aging cannot "
 "be set. Continuing.\n"
@@ -180,70 +180,77 @@ msgstr ""
 "chage не выполнен (вернул код ошибки 15), теневые пароли не включены, "
 "устаревание пароля не задано. Продолжнение работы.\n"
 
-#: ../adduser:411
+#: ../adduser:407
 #, perl-format
 msgid "Adding user `%s'...\n"
 msgstr "Добавляется пользователь `%s'...\n"
 
-#: ../adduser:419
+#: ../adduser:415
 #, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Нет свободной UID/GID пары в диапазоне %d-%d (FIRST_UID - LAST_UID).\n"
 
-#: ../adduser:431
+#: ../adduser:426
 #, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Нет свободного UID в диапазоне %d-%d (FIRST_UID - LAST_UID).\n"
 
 #. hm, error, should we break now?
-#: ../adduser:473
+#: ../adduser:468
 msgid "Permission denied\n"
 msgstr ""
 
-#: ../adduser:474
+#: ../adduser:469
 msgid "invalid combination of options\n"
 msgstr ""
 
-#: ../adduser:475
+#: ../adduser:470
 msgid "unexpected failure, nothing done\n"
 msgstr ""
 
-#: ../adduser:476
+#: ../adduser:471
 msgid "unexpected failure, passwd file missing\n"
 msgstr ""
 
-#: ../adduser:477
+#: ../adduser:472
 msgid "passwd file busy, try again\n"
 msgstr ""
 
-#: ../adduser:478
+#: ../adduser:473
 msgid "invalid argument to option\n"
+msgstr ""
+
+#. Translators: [y/N] has to be replaced by values defined in your
+#. locale.  You can see by running "locale noexpr" which regular
+#. expression will be checked to find positive answer.
+#: ../adduser:478
+msgid "Try again(Y/n)?"
 msgstr ""
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale yesexpr" which regular
 #. expression will be checked to find positive answer.
-#: ../adduser:507
+#: ../adduser:502
 msgid "Is the information correct? [y/N] "
 msgstr "Данная информация корректна? [д/Н] "
 
-#: ../adduser:514
+#: ../adduser:509
 #, perl-format
 msgid "Setting quota from `%s'.\n"
 msgstr "Настройка квот из `%s'.\n"
 
-#: ../adduser:547
+#: ../adduser:542
 #, perl-format
 msgid "Not creating home directory `%s'.\n"
 msgstr "Не создаётся домашний каталог `%s'.\n"
 
-#: ../adduser:550
+#: ../adduser:545
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "Домашний каталог `%s' уже существует. Не копируется из `%s'\n"
 
-#: ../adduser:556
+#: ../adduser:551
 msgid ""
 "Warning: that home directory does not belong to the user you are currently "
 "creating\n"
@@ -251,42 +258,42 @@ msgstr ""
 "Предупреждение: данный домашний каталог не принадлежит пользователю, который "
 "сейчас создаётся\n"
 
-#: ../adduser:561
+#: ../adduser:556
 #, perl-format
 msgid "Creating home directory `%s'.\n"
 msgstr "Создание домашнего каталога `%s'.\n"
 
-#: ../adduser:571
+#: ../adduser:566
 #, perl-format
 msgid "Copying files from `%s'\n"
 msgstr "Копирование файлов из `%s'\n"
 
-#: ../adduser:647
+#: ../adduser:642
 #, perl-format
 msgid "The user `%s' already exists, and is not a system user.\n"
 msgstr "Пользователь `%s' уже существует и не является системным.\n"
 
-#: ../adduser:649
+#: ../adduser:644
 #, perl-format
 msgid "The user `%s' already exists.\n"
 msgstr "Пользователь `%s' уже существует.\n"
 
-#: ../adduser:652
+#: ../adduser:647
 #, perl-format
 msgid "The UID %s is already in use.\n"
 msgstr "UID %s уже используется.\n"
 
-#: ../adduser:659
+#: ../adduser:654
 #, perl-format
 msgid "The GID %s is already in use.\n"
 msgstr "GID %s уже используется.\n"
 
-#: ../adduser:666
+#: ../adduser:661
 #, perl-format
 msgid "The GID %s does not exist.\n"
 msgstr "GID `%s' не существует.\n"
 
-#: ../adduser:722
+#: ../adduser:717
 msgid ""
 "To avoid problems, the username should consist of\n"
 "letters, digits, underscores, periods and dashes. For compatibility with\n"
@@ -296,11 +303,11 @@ msgstr ""
 "букв, цифр, подчёркиваний, точек и тире. Для совместимости с\n"
 "Samba также можно указывать $ в конце имени пользователя\n"
 
-#: ../adduser:729
+#: ../adduser:724
 msgid "Allowing use of questionable username.\n"
 msgstr "Разрешено использование не везде корректных имён.\n"
 
-#: ../adduser:733
+#: ../adduser:728
 msgid ""
 "Please enter a username matching the regular expression configured\n"
 "via the name_regex configuration variable.  Use the `--force-badname'\n"
@@ -311,27 +318,36 @@ msgstr ""
 "параметр `--force-badname', чтобы выключить эту проверку или\n"
 "настройте name_regex под свои правила.\n"
 
-#: ../adduser:748
-#, perl-format
-msgid "Selecting from %s %s (%s).\n"
+#: ../adduser:740
+#, fuzzy, perl-format
+msgid "Selecting uid from range %s to %s.\n"
 msgstr "Выбирается из %s %s (%s).\n"
 
-#: ../adduser:813
+#: ../adduser:754
+#, fuzzy, perl-format
+msgid "Selecting gid from range %s to %s.\n"
+msgstr "Выбирается из %s %s (%s).\n"
+
+#: ../adduser:796
+msgid "Cleaning up.\n"
+msgstr ""
+
+#: ../adduser:798
 #, perl-format
 msgid "Removing directory `%s'\n"
 msgstr "Удаляется каталог `%s'\n"
 
-#: ../adduser:817
+#: ../adduser:802
 #, perl-format
 msgid "Removing user `%s'.\n"
 msgstr "Удаляется пользователь `%s'.\n"
 
-#: ../adduser:821
+#: ../adduser:806
 #, perl-format
 msgid "Removing group `%s'.\n"
 msgstr "Удаляется группа `%s'.\n"
 
-#: ../adduser:854
+#: ../adduser:839
 msgid ""
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
 "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"
@@ -463,68 +479,64 @@ msgstr "Создание резервных копий файлов перед �
 msgid "Removing files...\n"
 msgstr "Идет удаление файлов...\n"
 
-#: ../deluser:314
+#: ../deluser:317
+#, fuzzy
+msgid "Removing crontab\n"
+msgstr "Удаляется группа `%s'.\n"
+
+#: ../deluser:320
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "Удаляется пользователь `%s'...\n"
 
-#: ../deluser:321 ../deluser:356 ../deluser:392
+#: ../deluser:327 ../deluser:362 ../deluser:398
 msgid "done.\n"
 msgstr "готово.\n"
 
-#: ../deluser:333
+#: ../deluser:339
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr "ошибка при выполнении getgrnam `%s'. Этого не должно случиться.\n"
 
-#: ../deluser:338
+#: ../deluser:344
 #, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "Группа `%s' не является системной ... Завершение работы.\n"
 
-#: ../deluser:342
+#: ../deluser:348
 #, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "Группа `%s' не пуста!\n"
 
-#: ../deluser:348
+#: ../deluser:354
 #, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "У пользователя`%s' в качестве первичной указана группа `%s'!\n"
 
-#: ../deluser:353
+#: ../deluser:359
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "Удаляется группа `%s'...\n"
 
-#: ../deluser:371
+#: ../deluser:377
 msgid "You may not remove the account from its primary group.\n"
 msgstr "Вы не можете удалить учётную запись из первичной группы.\n"
 
-#: ../deluser:385
+#: ../deluser:391
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "Пользователь `%s' не является членом группы `%s'.\n"
 
-#: ../deluser:388
+#: ../deluser:394
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "Удаляется пользователь `%s' из группы `%s'...\n"
 
-#: ../deluser:399
-#, perl-format
-msgid ""
-"deluser: (version: %s)\n"
-"\n"
-msgstr ""
-"deluser: (версия: %s)\n"
-"\n"
-
-#: ../deluser:400
+#: ../deluser:406
 msgid "removing user and groups from the system. "
 msgstr "удаление пользователей и групп из системы. "
 
-#: ../deluser:402
+#: ../deluser:408
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
@@ -532,7 +544,7 @@ msgstr ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 
-#: ../deluser:404
+#: ../deluser:410
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 "<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
@@ -541,7 +553,7 @@ msgstr ""
 "Ian Murdock <imurdock@gnu.ai.mit.edu> и Ted Hajek <tedhajek@boombox.micro."
 "umn.edu>\n"
 
-#: ../deluser:407
+#: ../deluser:413
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -565,20 +577,11 @@ msgstr ""
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n"
 "General Public License, /usr/share/common-licenses/GPL, for more details.\n"
 
-#: ../deluser:419
-#, perl-format
-msgid ""
-"deluser: (version %s)\n"
-"\n"
-msgstr ""
-"deluser: (версия %s)\n"
-"\n"
-
-#: ../deluser:420
+#: ../deluser:426
 msgid "removing user and groups from the system. Version:"
 msgstr "удаление пользователей и групп из системы. Версия:"
 
-#: ../deluser:422
+#: ../deluser:428
 msgid ""
 "deluser user\n"
 "  remove a normal user from the system\n"
@@ -659,3 +662,17 @@ msgstr "Не удалось разобрать `%s':%s.\n"
 #, perl-format
 msgid "Unknown variable `%s' at `%s':%s.\n"
 msgstr "Неизвестная переменная `%s' в `%s':%s.\n"
+
+#~ msgid ""
+#~ "deluser: (version: %s)\n"
+#~ "\n"
+#~ msgstr ""
+#~ "deluser: (версия: %s)\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "deluser: (version %s)\n"
+#~ "\n"
+#~ msgstr ""
+#~ "deluser: (версия %s)\n"
+#~ "\n"
