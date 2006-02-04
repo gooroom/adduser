@@ -1,7 +1,6 @@
-adduser (3.80.0) UNRELEASED; urgency=low
+adduser (3.81) unstable; urgency=low
 
   [ Marc Haber ]
-  * NOT RELEASED YET
   * fix swedish manpage addendum thanks to Thomas Huriaux.
   * Update Swedish (sv) manpage translation, again from Daniel Nylander.
   * Update French (fr) program translation.
@@ -13,7 +12,7 @@ adduser (3.80.0) UNRELEASED; urgency=low
   * added only-if-empty parameter to delgroup.conf (Closes: #347717)
   * improved search for new uid/gid (thanks to Karl Rink) (Closes: #119597)
 
- -- Joerg Hoh <joerg@joerghoh.de>  Fri, 27 Jan 2006 22:47:50 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  4 Feb 2006 11:57:27 +0000
 
 adduser (3.80) unstable; urgency=low
 
