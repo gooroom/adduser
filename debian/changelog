@@ -1,10 +1,9 @@
-adduser (3.81.0) UNRELEASED; urgency=low
+adduser (3.82) unstable; urgency=low
 
-  * NOT RELEASED YET
-  * Don't assume that gid can be equal to the uid. This is a probable
-    fix for #351480 (pending submitter confirmation).
+  * Don't assume that gid can be equal to the uid.
+    Thanks to Junichi Uekawa. (jh) Closes: #351480
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun,  5 Feb 2006 09:34:29 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun,  5 Feb 2006 18:12:43 +0000
 
 adduser (3.81) unstable; urgency=low
 
