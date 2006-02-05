@@ -326,7 +326,7 @@ if ($action eq "addsysuser") {
     $new_gid = $nogroup_id
 	if (!$ingroup_name && !defined($new_gid) && !$make_group_also);
     check_user_group(1);
-    printf (gtx("Adding system user `%s' with uid $uid...\n"),$new_name,$new_uid) if $verbose;
+    printf (gtx("Adding system user `%s' with uid %s...\n"),$new_name,$new_uid) if $verbose;
 
     if (!defined($new_uid) && $make_group_also) {
 	$new_uid = &first_avail_uid($config{"first_system_uid"},
