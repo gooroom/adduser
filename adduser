@@ -314,14 +314,19 @@ if ($action eq "addusertogroup") {
 ## addsysuser ##
 ################
 if ($action eq "addsysuser") {
-    if (existing_user_ok($new_name, $new_uid)) {
+    if (existing_user_ok($new_name, $new_uid) == 1) {
 	printf (gtx("The user `%s' already exists as a system user. Exiting...\n"), $new_name) if $verbose;
 	exit 0;
     }
+    if (existing_user_ok($new_name, $new_uid) == 2) {
+	printf (gtx("The user `%s' already exists with a different uid. Aborting\n"), $new_name) if $verbose;
+	exit 1;
+    }
+
     $new_gid = $nogroup_id
 	if (!$ingroup_name && !defined($new_gid) && !$make_group_also);
     check_user_group(1);
-    printf (gtx("Adding system user `%s'...\n"),$new_name) if $verbose;
+    printf (gtx("Adding system user `%s' with uid $uid...\n"),$new_name,$new_uid) if $verbose;
 
     if (!defined($new_uid) && $make_group_also) {
 	$new_uid = &first_avail_uid($config{"first_system_uid"},
@@ -595,9 +600,8 @@ sub mktree {
 }
 
 # returns 0 if the the user doesn't exist or
-# returns 1 if
-#     - the account already exists as a system user or
-#     - if an explicit UID is given, that UID matches the existing user.
+# returns 1 if the user already exists with the specified uid
+# returns 2 if the user already exists with a different uid
 sub existing_user_ok {
     my($new_name,$new_uid) = @_;
     my ($dummy1,$dummy2,$uid);
@@ -607,7 +611,7 @@ sub existing_user_ok {
 	}
 	if( $uid >= $config{"first_system_uid"} &&
 	    $uid <= $config{"last_system_uid" } ) {
-		return 1;
+		return 2;
 	}
     } else {
 	return 0;
