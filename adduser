@@ -331,7 +331,7 @@ if ($action eq "addsysuser") {
 	    printf STDERR gtx("No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"),$config{"first_system_uid"},$config{"last_system_uid"};
             dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
-        $new_gid = &first_avail_gid($config{"first_system_gid"},$config{"last_system_gid"});
+        $new_gid = $new_uid;
 	$ingroup_name = $new_name;
     }
     elsif (!defined($new_uid) && !$make_group_also) {
