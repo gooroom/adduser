@@ -16,7 +16,7 @@ $CMD > /dev/null 2>&1
 test_doesUserExist $USER
 test_doesGroupExist nogroup
 
-if [ -d /home/$USER ]; then
+if [ -d "/home/$USER" ]; then
   echo "Found a homedirectory but I don't want one"
   echo "$0 failed"
   export FAILED=1

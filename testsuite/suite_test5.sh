@@ -19,7 +19,7 @@ $CMD > /dev/null 2>&1
 
 test_doesUserExist $USER
 
-if [ $id != $USER_UID ]; then
+if [ "$id" != "$USER_UID" ]; then
   echo "haven't got the specified UID $id (but $USER_UID)"
   echo "$0 failed"
   exit 1

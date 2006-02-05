@@ -7,8 +7,8 @@ if [ "$(id -u)" != "0" ]; then
   exit 1
 fi
 
-echo "Starting test suite"
 for i in ./suite*.sh ; do
+  echo "Starting $i"
   sh $i
   if [ "$?" != "0" ]; then
     FAILED=1

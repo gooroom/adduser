@@ -42,14 +42,14 @@ else
   test_DoesFileExist $BACKUP_FILE
 
   rights=`stat -c "%a" $BACKUP_FILE`
-  if [ $rights -ne 600 ]; then
+  if [ "$rights" -ne "600" ]; then
     echo "  backup file has wrong permissions >$rights<"
     echo "  $0 failed"
     exit 1
   fi
 
   rights=`stat -c "%u:%g" $BACKUP_FILE`
-  if [ $rights != "0:0" ]; then
+  if [ "$rights" != "0:0" ]; then
     echo "  backup file has wrong permissions >$rights<"
     echo "  $0 failed"
     exit 1
