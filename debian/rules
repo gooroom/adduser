@@ -14,14 +14,8 @@ clean:
 	$(checkdir)
 	$(MAKE) -C po update clean
 	debconf-updatepo
-	cd doc/po4a && po4a po4a.conf
-	# remove generated man pages
-	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.fr
-	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.es
-	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.pl
-	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.sv
-	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.pt_BR
-	-rm -f doc/{adduser.8,adduser.conf.5,deluser.8,deluser.conf.5}.ru
+	cd doc/po4a && po4a --rm-translations po4a.conf
+	-rm -f doc/po4a/po/*~
 	-rm -rf build *~ debian/tmp debian/*~ debian/files* debian/substvars
 
 binary-indep:	checkroot build

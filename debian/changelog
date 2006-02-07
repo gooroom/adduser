@@ -3,8 +3,10 @@ adduser (3.82.0) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * Update French (fr) manpage translation.
     Thanks to Nicolas François. (mh) Closes: #346562
+  * Apply out-of-band patch from Thomas Huriaux to clean up po4a
+    handling.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue,  7 Feb 2006 14:21:14 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue,  7 Feb 2006 14:26:16 +0100
 
 adduser (3.82) unstable; urgency=low
 
