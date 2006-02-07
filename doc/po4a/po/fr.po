@@ -23,6 +23,8 @@ msgstr ""
 msgid "deluser.conf"
 msgstr "deluser.conf"
 
+# NOTE: VERSION doit être gardé. Il est ensuite remplacé par le véritable
+# NOTE: numéro de version
 # type: TH
 #.  Someone tell emacs that this is an -*- nroff -*- source file.
 #.  Copyright 1997, 1998, 1999 Guy Maor.
@@ -79,7 +81,7 @@ msgid ""
 msgstr ""
 "Le fichier I</etc/deluser.conf> contient les valeurs par défaut pour les "
 "programmes B<deluser>(8) et B<delgroup>(8). Chaque option est de la forme "
-"I<option> = I<valeur>. Les simples ou doubles guillemets sont autorisés "
+"I<option> = I<valeur>. Les guillemets simples ou doubles sont autorisés "
 "autour de la valeur. Les lignes de commentaires doivent avoir un caractère # "
 "en début de ligne."
 
@@ -105,7 +107,7 @@ msgid ""
 "Removes the home directory and mail spool of the user to be removed.  Value "
 "may be 0 or 1."
 msgstr ""
-"Supprime le répertoire personnel et la boite aux lettres de l'utilisateur à "
+"Supprime le répertoire personnel et la boîte aux lettres de l'utilisateur à "
 "retirer. La valeur peut être 0 ou 1."
 
 # type: TP
@@ -178,7 +180,7 @@ msgstr ""
 "Liste d'expressions rationnelles, séparées par des espaces. Tous les "
 "fichiers à détruire lors de la suppression d'un répertoire personnel, ou "
 "lors de la suppression de tous les fichiers de l'utilisateur à retirer, sont "
-"comprarés à chacunes de ces expressions rationnelles. Si l'une d'entre elle "
+"comparés à chacune de ces expressions rationnelles. Si l'une d'entre elles "
 "correspond, le fichier n'est pas détruit. La valeur par défaut est une liste "
 "de répertoires système, ne laissant que /home."
 
@@ -235,9 +237,9 @@ msgid ""
 msgstr ""
 "Le fichier I</etc/adduser.conf> contient les valeurs par défaut pour les "
 "programmes B<adduser>(8), B<addgroup>(8), B<deluser>(8) et B<delgroup>(8). "
-"Chaque option est de la forme I<option> = I<valeur>. Les simples ou doubles "
-"guillemets sont autorisés autour de la valeur. Les lignes de commentaires "
-"doivent avoir un caractère # au début de la ligne."
+"Chaque option est de la forme I<option> = I<valeur>. Les guillemets simples "
+"ou doubles sont autorisés autour de la valeur. Les lignes de commentaires "
+"doivent commencer par un caractère # (« dièse »)."
 
 # type: TP
 #: ../adduser.conf.5:30
@@ -250,7 +252,7 @@ msgstr "B<DSHELL>"
 msgid ""
 "The login shell to be used for all new users.  Defaults to I</bin/bash>."
 msgstr ""
-"Interpréteur de commandes initial («\\ login shell\\ ») devant être utilisé "
+"Interpréteur de commandes initial (« login shell ») devant être utilisé "
 "pour tous les nouveaux utilisateurs. Par défaut, I</bin/bash> est utilisé."
 
 # type: TP
@@ -375,7 +377,7 @@ msgid ""
 "If B<USERGROUPS> is I<no>, then B<USERS_GID> is the GID given to all newly-"
 "created users.  The default value is I<100>."
 msgstr ""
-"Si B<USERGROUPS> vaut I<no>, alors B<USERS_GID> est le GID à tous les "
+"Si B<USERGROUPS> vaut I<no>, alors B<USERS_GID> est le GID donné à tous les "
 "utilisateurs nouvellement créés. La valeur par défaut est I<100>."
 
 # type: TP
@@ -446,9 +448,9 @@ msgid ""
 "most conservative ^[a-z][-a-z0-9]*$."
 msgstr ""
 "Les noms des utilisateurs sont comparés à cette expression rationnelle. Si "
-"le nom ne correspond pas à cette expression rationnelle, la créassion de "
-"l'utilisateur est refusée, à moins que --force-badname ne soitutilisé. Avec "
-"l'option --force-badname, seules de très simples vérificationssont "
+"le nom ne correspond pas à cette expression rationnelle, la création de "
+"l'utilisateur est refusée, à moins que --force-badname ne soit utilisé. Avec "
+"l'option --force-badname, seules de très simples vérifications sont "
 "réalisées. La valeur par défaut est ^[a-z][-a-z0-9]*$."
 
 # type: Plain text
@@ -477,7 +479,7 @@ msgstr "DELUSER"
 # type: Plain text
 #: ../deluser.8:12
 msgid "deluser, delgroup - remove a user or group from the system"
-msgstr "deluser, delgroup - retire un utilisateur ou un groupe du système"
+msgstr "deluser, delgroup - Retire un utilisateur ou un groupe du système"
 
 # type: SH
 #: ../deluser.8:12 ../adduser.8:12
@@ -537,8 +539,8 @@ msgstr ""
 "conviviales que les programmes B<userdel> et B<groupdel>. Elles permettent "
 "de supprimer un répertoire personnel, de supprimer tous les fichiers du "
 "système possédés par un utilisateur, de lancer un script personnalisé, et "
-"d'autres caractéristiques encore. B<deluser> et B<delgroup> peuvent être "
-"lancées d'une de ces trois façons\\ :"
+"possèdent d'autres fonctionnalités. B<deluser> et B<delgroup> peuvent être "
+"lancées d'une de ces trois façons :"
 
 # type: SS
 #: ../deluser.8:37
@@ -566,9 +568,9 @@ msgid ""
 "user's real home directory."
 msgstr ""
 "Par défaut, B<deluser> retirera l'utilisateur sans retirer son répertoire "
-"personnel, sa boite aux lettres ou tout autre fichier possédé par "
+"personnel, sa boîte aux lettres ou tout autre fichier possédé par "
 "l'utilisateur sur le système. On peut retirer le répertoire personnel et la "
-"boite aux lettres en utilisant l'option B<--remove-home>. Avec l'option B<--"
+"boîte aux lettres en utilisant l'option B<--remove-home>. Avec l'option B<--"
 "home>, B<deluser> ne retirera l'utilisateur que si le répertoire donné par "
 "l'option B<--home> correspond réellement au répertoire personnel de "
 "l'utilisateur."
@@ -612,9 +614,9 @@ msgid ""
 "arguments passed to B<deluser.local> are:"
 msgstr ""
 "Si le fichier B</usr/local/sbin/deluser.local> existe, il sera exécuté après "
-"que le compte utilisateur a été retiré, ce qui permet de réaliser des "
+"que le compte utilisateur aura été retiré, ce qui permet de réaliser des "
 "opérations propres au système. Les arguments passés à B<deluser.local> sont"
-"\\ :"
+" :"
 
 # type: Plain text
 #: ../deluser.8:84 ../adduser.8:111
@@ -642,7 +644,7 @@ msgid ""
 "Warning: If any users have the group to be removed as primary group the "
 "group cannot be removed."
 msgstr ""
-"Attention\\ : si un utilisateur utilise ce groupe comme groupe primaire, "
+"Attention : si un utilisateur utilise ce groupe comme groupe principal, "
 "alors ce groupe ne peut pas être retiré."
 
 # type: Plain text
@@ -667,7 +669,7 @@ msgid ""
 "a specific group."
 msgstr ""
 "Lorsqu'il est appelé avec deux arguments qui ne sont pas des options, "
-"B<deluser> retire un utilisateur du groupe particulier."
+"B<deluser> retire un utilisateur d'un groupe particulier."
 
 # type: SH
 #: ../deluser.8:101 ../adduser.8:179
@@ -741,7 +743,7 @@ msgstr ""
 "d'un groupe système. Cela permet de ne pas supprimer accidentellement un "
 "utilisateur ou un groupe non système. De plus, si l'utilisateur n'existe "
 "pas, aucune valeur d'erreur n'est retournée. Cette option a été "
-"principalement faite pour les scripts de maintenance des paquets Debian."
+"principalement implémentée pour les scripts de maintenance des paquets Debian."
 
 # type: TP
 #: ../deluser.8:123 ../adduser.8:257
@@ -778,7 +780,7 @@ msgid ""
 msgstr ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber. "
 "Cette page de manuel et le programme deluser est basé sur le programme "
-"adduser :"
+"adduser :"
 
 # type: Plain text
 #: ../deluser.8:137
@@ -801,8 +803,8 @@ msgid ""
 "General Public Licence version 2 or later for copying conditions.  There is "
 "I<no> warranty."
 msgstr ""
-"Copyright (C) 1994 Ian Murdock. B<deluser> est un logiciel libre\\ ; voyez "
-"la licence publique générale du projet GNU («\\ GPL\\ ») version 2 ou "
+"Copyright (C) 1994 Ian Murdock. B<deluser> est un logiciel libre ; voyez "
+"la licence publique générale du projet GNU (« GPL ») version 2 ou "
 "supérieure pour les droits de copie. Ce programme est fourni sans I<aucune> "
 "garantie."
 
@@ -822,7 +824,7 @@ msgstr "ADDUSER"
 # type: Plain text
 #: ../adduser.8:12
 msgid "adduser, addgroup - add a user or group to the system"
-msgstr "adduser, addgroup - ajoute un utilisateur ou un groupe au système"
+msgstr "adduser, addgroup - Ajoute un utilisateur ou un groupe au système"
 
 # type: Plain text
 #: ../adduser.8:14
@@ -873,10 +875,11 @@ msgstr "B<adduser> [options] utilisateur groupe"
 
 # type: Plain text
 #: ../adduser.8:29
-#, fuzzy
 msgid ""
 "[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
-msgstr "[--quiet] [--force-badname] [--help|-h] [--version] [--conf FICHIER]"
+msgstr ""
+"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf "
+"FICHIER]"
 
 # type: Plain text
 #: ../adduser.8:43
@@ -897,7 +900,7 @@ msgstr ""
 "charte Debian, de créer un répertoire personnel configuré suivant un modèle "
 "(squelette), d'utiliser un script sur mesure, et d'autres fonctionnalités "
 "encore. B<adduser> et B<addgroup> peuvent être exécutées d'une de ces cinq "
-"façons\\ :"
+"façons :"
 
 # type: SS
 #: ../adduser.8:43
@@ -953,7 +956,7 @@ msgstr ""
 "accessibles en écriture pour un groupe : les utilisateurs appropriés sont "
 "placés dans le nouveau groupe, le bit SGID du répertoire est positionné, et "
 "on s'assure que tous les utilisateurs ont un masque de création des fichiers "
-"(«\\ umask\\ ») de 002. Si cette option est désactivée en configurant "
+"(« umask ») de 002. Si cette option est désactivée en configurant "
 "B<USERGROUPS> à I<no>, tous les identifiants de groupe des utilisateurs "
 "seront B<USERS_GID>. Les groupes des utilisateurs peuvent aussi être forcés "
 "en ligne de commande avec l'option B<--gid> ou B<--ingroup> respectivement "
@@ -972,7 +975,7 @@ msgstr ""
 "B<adduser> créera un répertoire personnel en fonction de B<DHOME>, "
 "B<GROUPHOMES> et B<LETTERHOMES>. Le répertoire personnel peut être forcé en "
 "ligne de commande avec l'option B<--home>, et l'interpréteur de commandes "
-"(«\\ shell\\ ») avec l'option B<--shell>. Le bit SGID du répertoire "
+"(« shell ») avec l'option B<--shell>. Le bit SGID du répertoire "
 "personnel est positionné si B<USERGROUPS> vaut I<yes>, de telle sorte que "
 "tous les fichiers créés dans le répertoire personnel de l'utilisateur auront "
 "le bon groupe."
@@ -992,7 +995,7 @@ msgstr ""
 "finger) et un mot de passe. Le champ gecos peut aussi être donné par "
 "l'option B<--gecos>. Avec l'option B<--disabled-login>, le compte est créé "
 "mais est désactivé tant que le mot de passe n'est pas configuré. Dans ce "
-"cas, les connexions SSH par clef RSA sont toujours possibles."
+"cas, les connexions SSH par clé RSA sont toujours possibles."
 
 # type: Plain text
 #: ../adduser.8:109
@@ -1003,31 +1006,32 @@ msgid ""
 msgstr ""
 "Si le fichier B</usr/local/sbin/adduser.local> existe, il est exécuté une "
 "fois que l'utilisateur a été configuré, de façon à réaliser des opérations "
-"propres au système. Les arguments passés à B<adduser.local> sont\\ :"
+"propres au système. Les arguments passés à B<adduser.local> sont :"
 
 # type: Plain text
 #: ../adduser.8:113
 msgid ""
 "The environment variable VERBOSE is set according to the following rule:"
 msgstr ""
+"La variable d'environnement VERBOSE est positionnée de la façon suivante :"
 
 # type: TP
 #: ../adduser.8:113
 #, no-wrap
 msgid "0 if --quiet is specified"
-msgstr ""
+msgstr "0 si --quiet est spécifiée"
 
 # type: TP
 #: ../adduser.8:115
 #, no-wrap
 msgid "1 if neither --quiet nor --debug is specified"
-msgstr ""
+msgstr "1 si ni --quiet ni --debug ne sont spécifiées"
 
 # type: TP
 #: ../adduser.8:117
 #, no-wrap
 msgid "2 if --debug is specified"
-msgstr ""
+msgstr "2 si --debug est spécifiée"
 
 # type: Plain text
 #: ../adduser.8:121
@@ -1035,6 +1039,8 @@ msgid ""
 "(The same applies to the variable DEBUG, but DEBUG is deprecated and will be "
 "removed in a later version of adduser.)"
 msgstr ""
+"(Ceci s'applique également à la variable DEBUG, mais DEBUG est dépréciée et "
+"sera supprimée dans une version ultérieure d'adduser.)"
 
 # type: SS
 #: ../adduser.8:122
@@ -1053,7 +1059,7 @@ msgstr ""
 "Lorsqu'il est appelé avec un seul argument qui n'est pas une option et avec "
 "l'option B<--system>, B<adduser> ajoute un utilisateur système. Si "
 "l'utilisateur possède déjà un identifiant dans l'intervalle affecté au "
-"système (même si on indique un uid différent), adduser quittera avec un "
+"système (même si on indique un UID différent), adduser quittera avec un "
 "message d'avertissement."
 
 # type: Plain text
@@ -1199,7 +1205,7 @@ msgid ""
 "RSA keys, but not using password authentication."
 msgstr ""
 "Comme B<--disabled-login>, mais les connexions sont toujours possibles, par "
-"exemple par des clefs RSA pour SSH, mais pas par une authentification par "
+"exemple par des clés RSA pour SSH, mais pas par une authentification par "
 "mot de passe."
 
 # type: TP
@@ -1232,7 +1238,7 @@ msgid ""
 "finger information if this option is given."
 msgstr ""
 "Fixe le champ gecos pour la nouvelle entrée générée. B<adduser> ne demandera "
-"pas d'information de type finger si cette option en donnée."
+"pas d'information de type finger si cette option est donnée."
 
 # type: TP
 #: ../adduser.8:204
@@ -1292,8 +1298,8 @@ msgid ""
 "Use SHELL as the user's login shell, rather than the default specified by "
 "the configuration file."
 msgstr ""
-"Utilise I<SHELL> comme interpréteur de commandes initial («\\ login shell"
-"\\»), plutôt que l'interpréteur donné dans le fichier de configuration."
+"Utilise I<SHELL> comme interpréteur de commandes initial (« login shell"
+" »), plutôt que l'interpréteur donné dans le fichier de configuration."
 
 # type: TP
 #: ../adduser.8:231
@@ -1319,29 +1325,31 @@ msgstr "B<--no-create-home>"
 # type: Plain text
 #: ../adduser.8:238
 msgid "Do not create the home directory, even if it doesn't exist."
-msgstr "Ne créé pas le répertoire personnel, même s'il n'existe pas."
+msgstr "Ne crée pas le répertoire personnel, même s'il n'existe pas."
 
 # type: Plain text
 #: ../adduser.8:241
 msgid "Suppress informational messages, only show warnings and errors."
 msgstr ""
+"Supprime les messages d'information, n'affiche que les avertissements et les "
+"erreurs."
 
 # type: TP
 #: ../adduser.8:241
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--debug>"
-msgstr "B<--help>"
+msgstr "B<--debug>"
 
 # type: Plain text
 #: ../adduser.8:244
 msgid ""
 "Be verbose, most useful if you want to nail down a problem with adduser."
-msgstr ""
+msgstr "Mode bavard, utile pour l'investigation d'un problème dans adduser."
 
 # type: Plain text
 #: ../adduser.8:247
 msgid "Create a system user."
-msgstr "Créé un utilisateur système."
+msgstr "Crée un utilisateur système."
 
 # type: TP
 #: ../adduser.8:247
@@ -1411,15 +1419,7 @@ msgid ""
 "General Public Licence version 2 or later for copying conditions.  There is "
 "I<no> warranty."
 msgstr ""
-"Copyright (C) 1994 Ian Murdock. B<adduser> est un logiciel libre\\ ; voyez "
-"la licence publique générale du projet GNU («\\ GPL\\ ») version 2 ou "
+"Copyright (C) 1994 Ian Murdock. B<adduser> est un logiciel libre ; voyez "
+"la licence publique générale du projet GNU (« GPL ») version 2 ou "
 "supérieure pour les droits de copie. Ce programme est fourni sans I<aucune> "
 "garantie."
-
-# type: Plain text
-#~ msgid ""
-#~ "username uid gid home-directory, and the environment variables DEBUG and "
-#~ "VERBOSE will be set according to the settings in the master program."
-#~ msgstr ""
-#~ "nom_utilisateur uid gid rep_perso, et les variables d'environnement DEBUG "
-#~ "et VERBOSE seront positionnées suivant les paramètres du programme maître."
