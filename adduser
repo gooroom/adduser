@@ -223,10 +223,15 @@ $SIG{'INT'} = $SIG{'QUIT'} = $SIG{'HUP'} = 'handler';
 #################
 if ($action eq "addsysgroup") {
     # Check if requested group already exists and we can exit safely
-    if (existing_group_ok($new_name, $new_gid)) {
+    if (existing_group_ok($new_name, $new_gid) == 1) {
 	printf (gtx("The group `%s' already exists as a system group. Exiting...\n"), $new_name) if $verbose;
 	exit 0;
     }
+    if (existing_group_ok($new_name, $new_gid) == 2) {
+	printf (gtx("The group `%s' already exists, but has a different gid, aborting...\n"), $new_name) if $verbose;
+	exit 1;
+    }
+
     dief (gtx("The group `%s' already exists and is not a system group.\n"),$new_name)
 	if (defined getgrnam($new_name));
     dief (gtx("The GID `%s' is already in use.\n"),$new_gid)
@@ -600,14 +605,17 @@ sub mktree {
 }
 
 # returns 0 if the the user doesn't exist or
-# returns 1 if the user already exists with the specified uid
-# returns 2 if the user already exists with a different uid
+# returns 1 if the user already exists with the specified uid (or $new_uid wasn't specified)
+# returns 2 if the user already exists, but $new_uid doesn't matches its uid
 sub existing_user_ok {
     my($new_name,$new_uid) = @_;
     my ($dummy1,$dummy2,$uid);
     if (($dummy1,$dummy2,$uid) = getpwnam($new_name)) {
 	if( defined($new_uid) && $uid == $new_uid ) {
 	    return 1;
+	}
+	if (! defined($new_uid)) { 
+		return 1;
 	}
 	if( $uid >= $config{"first_system_uid"} &&
 	    $uid <= $config{"last_system_uid" } ) {
@@ -619,9 +627,8 @@ sub existing_user_ok {
 }
 
 # returns 0 if the group doesn't exist or
-# returns 1 if 
-#     - the group already exists as a system group or
-#     - if an explicit GID is given, that GID matches the existing group.
+# returns 1 if the group already exists with the specified gid (or $new_gid wasn't specified)
+# returns 2 if the group already exists, but $new_gid doesn't match its gid 
 sub existing_group_ok {
     my($new_name,$new_gid) = @_;
     my ($dummy1,$dummy2,$gid);
@@ -629,9 +636,12 @@ sub existing_group_ok {
 	if( defined($new_gid) && $gid == $new_gid ) {
 	    return 1;
 	}
+	if (! defined($new_gid)) {
+		return 1;
+	}
 	if( $gid >= $config{"first_system_gid"} &&
 	    $gid <= $config{"last_system_gid" } ) {
-		return 1;
+		return 2;
 	}
     } else {
 	return 0;
