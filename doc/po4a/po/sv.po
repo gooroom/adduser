@@ -1,12 +1,12 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Swedish translation of adduser manpage.
+# Copyright (C) 2006 Free Software Foundation, Inc.
+# Daniel Nylander <po@danielnylander.se>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.79 manual\n"
-"POT-Creation-Date: 2005-11-29 13:53+0000\n"
-"PO-Revision-Date: 2005-11-30 23:57+0100\n"
+"Project-Id-Version: adduser 3.82 manual\n"
+"POT-Creation-Date: 2006-02-05 20:15+0000\n"
+"PO-Revision-Date: 2006-02-11 14:58+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -149,8 +149,19 @@ msgstr "B<NO_DEL_PATHS>"
 msgid "A list of regular expressions, space separated. All files to be deleted in course of deleting home directories or deleting files owned by the user to be deleted are checked against each of these regular expressions. If a match is detected, the file is not deleted. Defaults to a list of system directories, leaving only /home."
 msgstr "En list på reguljära uttryck, separerade med mellanslag. Alla filer som ska tas bort om hemkataloger ska tas bort eller borttagning av filer ägda av en användare som ska tas bort kontrolleras mot varje av dessa reguljära uttryck. Om en matchning upptäcks kommer filen inte att tas bort. Standardvärde är en lista av systemkataloger, endast /home gäller."
 
-# type: SH
+# type: TP
 #: ../deluser.conf.5:64
+#, no-wrap
+msgid "B<ONLY_IF_EMPTY>"
+msgstr "B<ONLY_IF_EMPTY>"
+
+# type: Plain text
+#: ../deluser.conf.5:67
+msgid "Only delete a group if there are no user who belong to this group. Defaults to 0."
+msgstr "Ta endast bort en grupp om det inte finns några som tillhör denna grupp. Standardvärde är 0."
+
+# type: SH
+#: ../deluser.conf.5:69
 #: ../adduser.conf.5:113
 #: ../deluser.8:126
 #: ../adduser.8:260
@@ -159,12 +170,12 @@ msgid "FILES"
 msgstr "FILER"
 
 # type: Plain text
-#: ../deluser.conf.5:66
+#: ../deluser.conf.5:71
 msgid "I</etc/deluser.conf>"
 msgstr "I</etc/deluser.conf>"
 
 # type: SH
-#: ../deluser.conf.5:66
+#: ../deluser.conf.5:71
 #: ../adduser.conf.5:115
 #: ../deluser.8:128
 #: ../adduser.8:262
@@ -173,7 +184,7 @@ msgid "SEE ALSO"
 msgstr "SE OCKSÅ"
 
 # type: Plain text
-#: ../deluser.conf.5:67
+#: ../deluser.conf.5:72
 msgid "deluser(8), delgroup(8), adduser.conf(5)"
 msgstr "deluser(8), delgroup(8), adduser.conf(5)"
 
@@ -261,7 +272,7 @@ msgstr "B<FIRST_SYSTEM_UID> and B<LAST_SYSTEM_UID>"
 # type: Plain text
 #: ../adduser.conf.5:67
 msgid "specify an inclusive range of UIDs from which system UIDs can be dynamically allocated. Default to I<100> - I<999>."
-msgstr "ange ett omfång av UID från vilka systemanvändarnas UID kan dynamiskt allokeras. Standardvärde är I<100> - I<999>."
+msgstr "ange ett intervall av UID från vilka systemanvändarnas UID kan dynamiskt allokeras. Standardvärde är I<100> - I<999>."
 
 # type: TP
 #: ../adduser.conf.5:67
@@ -272,7 +283,7 @@ msgstr "B<FIRST_UID> and B<LAST_UID>"
 # type: Plain text
 #: ../adduser.conf.5:72
 msgid "specify an inclusive range of UIDs from which normal user's UIDs can be dynamically allocated. Default to I<1000> - I<29999>."
-msgstr "ange ett omfång av UID från vilka normala användares UID kan dynamiskt allokeras. Standardvärde är I<1000> - I<29999>."
+msgstr "ange ett intervall av UID från vilka normala användares UID kan dynamiskt allokeras. Standardvärde är I<1000> - I<29999>."
 
 # type: TP
 #: ../adduser.conf.5:72
@@ -677,17 +688,17 @@ msgstr "Om startad med ett icke-flagga-argument och utan flaggan B<--system> ell
 # type: Plain text
 #: ../adduser.8:54
 msgid "B<adduser> will choose the first available UID from the range specified for normal users in the configuration file.  The UID can be overridden with the B<--uid> option."
-msgstr "B<adduser> kommer att välja det första tillgängliga UID från omfånget som angivits för normala användare i konfigurationsfilen.  UID kan köras över med flaggan B<--uid>."
+msgstr "B<adduser> kommer att välja det första tillgängliga UID från intervallet som angivits för normala användare i konfigurationsfilen.  UID kan överskridas med flaggan B<--uid>."
 
 # type: Plain text
 #: ../adduser.8:60
 msgid "The range specified in the configuration file may be overridden with the B<--firstuid> and B<--lastuid> options."
-msgstr "Omfånget som anges i konfigurationsfilen kan köras över med flaggorna B<--firstuid> och B<--lastuid>"
+msgstr "Intervallet som anges i konfigurationsfilen kan överskridas med flaggorna B<--firstuid> och B<--lastuid>"
 
 # type: Plain text
 #: ../adduser.8:74
 msgid "By default, each user in Debian GNU/Linux is given a corresponding group with the same name and id.  Usergroups allow group writable directories to be easily maintained by placing the appropriate users in the new group, setting the set-group-ID bit in the directory, and ensuring that all users use a umask of 002.  If this option is turned off by setting B<USERGROUPS> to I<no>, all users' GIDs are set to B<USERS_GID>.  Users' groups can also be overridden from the command line with the B<--gid> or B<--ingroup> options to set the group by id or name, respectively."
-msgstr "Som standard ges varje användare i Debian GNU/Linux en motsvarande grupp med samma namn och id. Användargrupper tillåter kataloger vara skrivbara för grupper som är lätthanterliga genom att placera lämpliga användare i nya gruppen, sätta setgid-biten på katalogen och se till att alla användare använder en umask på 002. Om denna funktion är avstängd genom att sätta B<USERGROUPS> till I<no> sätts alla användares GID till B<USERS_GID>.  Användarnas grupper kan också köras över från kommandoraden med flaggorna B<--gid> eller B<--ingroup> för att sätta grupp genom id eller namn."
+msgstr "Som standard ges varje användare i Debian GNU/Linux en motsvarande grupp med samma namn och id. Användargrupper tillåter kataloger vara skrivbara för grupper som är lätthanterliga genom att placera lämpliga användare i nya gruppen, sätta setgid-biten på katalogen och se till att alla användare använder en umask på 002. Om denna funktion är avstängd genom att ställa in B<USERGROUPS> till I<no> ställs alla användares GID in till B<USERS_GID>.  Användarnas grupper kan också överskridas från kommandoraden med flaggorna B<--gid> eller B<--ingroup> för att ställa in grupp genom id eller namn."
 
 # type: Plain text
 #: ../adduser.8:88
@@ -707,7 +718,7 @@ msgstr "Om filen B</usr/local/sbin/adduser.local> existerar kommer den att start
 # type: Plain text
 #: ../adduser.8:113
 msgid "The environment variable VERBOSE is set according to the following rule:"
-msgstr "Miljövariabeln VERBOSE sätts enligt följande regel:"
+msgstr "Miljövariabeln VERBOSE ställs in enligt följande regel:"
 
 # type: TP
 #: ../adduser.8:113
@@ -741,12 +752,12 @@ msgstr "Lägg till en systemanvändare"
 # type: Plain text
 #: ../adduser.8:128
 msgid "If called with one non-option argument and the B<--system> option, B<adduser> will add a system user. If an user with an uid in the system range (or if the uid is specified, with that) does already exist, adduser will exit with a warning."
-msgstr "Om startad med ett icke-flagga-argument och flaggan B<--system> kommer B<adduser> att lägga till en systemanvändare. Om en användare med ett UID i systemomfånget (eller om uid angivs med den) inte redan existerar kommer adduser att avslutas med en varning."
+msgstr "Om startad med ett icke-flagga-argument och flaggan B<--system> kommer B<adduser> att lägga till en systemanvändare. Om en användare med ett UID i systemintervallet (eller om uid angivs med den) inte redan existerar kommer adduser att avslutas med en varning."
 
 # type: Plain text
 #: ../adduser.8:134
 msgid "B<adduser> will choose the first available UID from the range specified for system users in the configuration file.  The UID can be overridden with the B<--uid> option."
-msgstr "B<adduser> kommer att välja det första tillgängliga UID från omfånget som angivits för systemanvändare i konfigurationsfilen.  UID kan köras över med flaggan B<--uid>."
+msgstr "B<adduser> kommer att välja det första tillgängliga UID från intervallet som angivits för systemanvändare i konfigurationsfilen.  UID kan överskridas med flaggan B<--uid>."
 
 # type: Plain text
 #: ../adduser.8:144
@@ -756,7 +767,7 @@ msgstr "Som standard placeras systemanvändare i gruppen B<nogroup>.  För att p
 # type: Plain text
 #: ../adduser.8:152
 msgid "A home directory is created by the same rules as for normal users.  The new system user will have the shell I</bin/false> (unless overridden with the B<--shell> option), and have logins disabled.  Skeletal configuration files are not copied."
-msgstr "En hemkatalog skapas med samma regler som för normala användare.  Den nya systemanvändaren kommer att ha skalet I</bin/false> (om inte den körs över med flaggan B<--shell>) och ha möjligheten för inloggning avstängd.  Skelettkonfigurationsfiler kopieras inte."
+msgstr "En hemkatalog skapas med samma regler som för normala användare.  Den nya systemanvändaren kommer att ha skalet I</bin/false> (om den inte överskrids med flaggan B<--shell>) och ha möjligheten för inloggning avstängd.  Skelettkonfigurationsfiler kopieras inte."
 
 # type: SS
 #: ../adduser.8:152
@@ -772,7 +783,7 @@ msgstr "Om B<adduser> kallas upp med flaggan B<--group> och utan flaggan B<--sys
 # type: Plain text
 #: ../adduser.8:162
 msgid "A GID will be chosen from the range specified for user UIDS in the configuration file.  The GID can be overridden with the B<--gid> option."
-msgstr "Ett GID kommer att väljas från omfånget som angivits för användarnas UID i konfigurationsfilen.  GID kan köras över med flaggan B<--gid>."
+msgstr "Ett GID kommer att väljas från intervallet som angivits för användarnas UID i konfigurationsfilen.  GID kan överskridas med flaggan B<--gid>."
 
 # type: Plain text
 #: ../adduser.8:164
@@ -794,7 +805,7 @@ msgstr "Om B<addgroup> kallas upp med flaggan B<--system> kommer en systemgrupp 
 # type: Plain text
 #: ../adduser.8:173
 msgid "A GID will be chosen from the range specified for system UIDS in the configuration file.  The GID can be overridden with the B<--gid> option."
-msgstr "Ett GID kommer att väljas från omfånget som angivits för systemanvändarnas UID i konfigurationsfilen.  GID kan köras över med flaggan B<--gid>."
+msgstr "Ett GID kommer att väljas från intervallet som angivits för systemanvändarnas UID i konfigurationsfilen.  GID kan överskridas med flaggan B<--gid>."
 
 # type: SS
 #: ../adduser.8:175
@@ -821,7 +832,7 @@ msgstr "B<--disabled-login>"
 # type: Plain text
 #: ../adduser.8:188
 msgid "Do not run passwd to set the password.  The user won't be able to use her account until the password is set."
-msgstr "Kör inte passwd för att sätta lösenordet.  Användaren kommer inte att kunna använda sitt konto tills lösenordet är satt."
+msgstr "Kör inte passwd för att ställa in lösenordet.  Användaren kommer inte att kunna använda sitt konto tills lösenordet är inställt."
 
 # type: TP
 #: ../adduser.8:188
@@ -854,7 +865,7 @@ msgstr "B<--gecos GECOS>"
 # type: Plain text
 #: ../adduser.8:204
 msgid "Set the gecos field for the new entry generated.  adduser will not ask for finger information if this option is given."
-msgstr "Sätter gecos-fältet för den nya genereade posten.  adduser kommer inte att fråga efter finger-information om denna flagga anges."
+msgstr "Ställer in gecos-fältet för den nya genererade posten.  adduser kommer inte att fråga efter finger-information om denna flagga anges."
 
 # type: TP
 #: ../adduser.8:204
@@ -957,7 +968,7 @@ msgstr "B<--firstuid ID>"
 # type: Plain text
 #: ../adduser.8:254
 msgid "Override the first uid in the range that the uid is chosen from."
-msgstr "Kör över det första UID i omfånget som UID väljs ifrån."
+msgstr "Överskrid det första UID i intervallet som UID väljs ifrån."
 
 # type: TP
 #: ../adduser.8:254
@@ -968,7 +979,7 @@ msgstr "B<--lastuid ID>"
 # type: Plain text
 #: ../adduser.8:257
 msgid "Override the last uid in the range that the uid is chosen from."
-msgstr "Kör över det sista UID i omfånget som UID väljs ifrån."
+msgstr "Överskrid det sista UID i intervallet som UID väljs ifrån."
 
 # type: Plain text
 #: ../adduser.8:262

@@ -12,7 +12,10 @@ adduser (3.82.0) UNRELEASED; urgency=low
     detailed bug report. (jh) Closes: #352225
   * Updated adduser.8 : don't assume that adduser creates a new user with
     uid == gid (jh)
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 12 Feb 2006 11:48:08 +0000
+  * Update Swedish (sv) program and manpage translation, again from
+    Daniel Nylander. (mh) Closes: #352355
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 12 Feb 2006 12:21:44 +0000
 
 adduser (3.82) unstable; urgency=low
 
