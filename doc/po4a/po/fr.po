@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
-"POT-Creation-Date: 2005-11-13  0:31+0000\n"
+"POT-Creation-Date: 2006-02-12 13:51+0000\n"
 "PO-Revision-Date: 2005-08-06 14:36+0300\n"
 "Last-Translator: Nicolas François <nicolas.francois@centraliens.net>\n"
 "Language-Team: Debian French Team <debian-l10n-french@lists.debian.org>\n"
@@ -184,27 +184,40 @@ msgstr ""
 "correspond, le fichier n'est pas détruit. La valeur par défaut est une liste "
 "de répertoires système, ne laissant que /home."
 
+# type: TP
+#: ../deluser.conf.5:64
+#, no-wrap
+msgid "B<ONLY_IF_EMPTY>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.conf.5:67
+msgid ""
+"Only delete a group if there are no user who belong to this group. Defaults "
+"to 0."
+msgstr ""
+
 # type: SH
-#: ../deluser.conf.5:64 ../adduser.conf.5:113 ../deluser.8:126
+#: ../deluser.conf.5:69 ../adduser.conf.5:113 ../deluser.8:126
 #: ../adduser.8:260
 #, no-wrap
 msgid "FILES"
 msgstr "FICHIER"
 
 # type: Plain text
-#: ../deluser.conf.5:66
+#: ../deluser.conf.5:71
 msgid "I</etc/deluser.conf>"
 msgstr "I</etc/deluser.conf>"
 
 # type: SH
-#: ../deluser.conf.5:66 ../adduser.conf.5:115 ../deluser.8:128
+#: ../deluser.conf.5:71 ../adduser.conf.5:115 ../deluser.8:128
 #: ../adduser.8:262
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "VOIR AUSSI"
 
 # type: Plain text
-#: ../deluser.conf.5:67
+#: ../deluser.conf.5:72
 msgid "deluser(8), delgroup(8), adduser.conf(5)"
 msgstr "B<deluser>(8), B<delgroup>(8), B<adduser.conf>(5)"
 
@@ -252,8 +265,8 @@ msgstr "B<DSHELL>"
 msgid ""
 "The login shell to be used for all new users.  Defaults to I</bin/bash>."
 msgstr ""
-"Interpréteur de commandes initial (« login shell ») devant être utilisé "
-"pour tous les nouveaux utilisateurs. Par défaut, I</bin/bash> est utilisé."
+"Interpréteur de commandes initial (« login shell ») devant être utilisé pour "
+"tous les nouveaux utilisateurs. Par défaut, I</bin/bash> est utilisé."
 
 # type: TP
 #: ../adduser.conf.5:34
@@ -615,8 +628,7 @@ msgid ""
 msgstr ""
 "Si le fichier B</usr/local/sbin/deluser.local> existe, il sera exécuté après "
 "que le compte utilisateur aura été retiré, ce qui permet de réaliser des "
-"opérations propres au système. Les arguments passés à B<deluser.local> sont"
-" :"
+"opérations propres au système. Les arguments passés à B<deluser.local> sont :"
 
 # type: Plain text
 #: ../deluser.8:84 ../adduser.8:111
@@ -743,7 +755,8 @@ msgstr ""
 "d'un groupe système. Cela permet de ne pas supprimer accidentellement un "
 "utilisateur ou un groupe non système. De plus, si l'utilisateur n'existe "
 "pas, aucune valeur d'erreur n'est retournée. Cette option a été "
-"principalement implémentée pour les scripts de maintenance des paquets Debian."
+"principalement implémentée pour les scripts de maintenance des paquets "
+"Debian."
 
 # type: TP
 #: ../deluser.8:123 ../adduser.8:257
@@ -803,10 +816,9 @@ msgid ""
 "General Public Licence version 2 or later for copying conditions.  There is "
 "I<no> warranty."
 msgstr ""
-"Copyright (C) 1994 Ian Murdock. B<deluser> est un logiciel libre ; voyez "
-"la licence publique générale du projet GNU (« GPL ») version 2 ou "
-"supérieure pour les droits de copie. Ce programme est fourni sans I<aucune> "
-"garantie."
+"Copyright (C) 1994 Ian Murdock. B<deluser> est un logiciel libre ; voyez la "
+"licence publique générale du projet GNU (« GPL ») version 2 ou supérieure "
+"pour les droits de copie. Ce programme est fourni sans I<aucune> garantie."
 
 # type: TH
 #.  Someone tell emacs that this is an -*- nroff -*- source file.
@@ -940,15 +952,16 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:74
+#, fuzzy
 msgid ""
 "By default, each user in Debian GNU/Linux is given a corresponding group "
-"with the same name and id.  Usergroups allow group writable directories to "
-"be easily maintained by placing the appropriate users in the new group, "
-"setting the set-group-ID bit in the directory, and ensuring that all users "
-"use a umask of 002.  If this option is turned off by setting B<USERGROUPS> "
-"to I<no>, all users' GIDs are set to B<USERS_GID>.  Users' groups can also "
-"be overridden from the command line with the B<--gid> or B<--ingroup> "
-"options to set the group by id or name, respectively."
+"with the same name.  Usergroups allow group writable directories to be "
+"easily maintained by placing the appropriate users in the new group, setting "
+"the set-group-ID bit in the directory, and ensuring that all users use a "
+"umask of 002.  If this option is turned off by setting B<USERGROUPS> to "
+"I<no>, all users' GIDs are set to B<USERS_GID>.  Users' groups can also be "
+"overridden from the command line with the B<--gid> or B<--ingroup> options "
+"to set the group by id or name, respectively."
 msgstr ""
 "Par défaut, chaque utilisateur d'un système Debian GNU/Linux se voit "
 "attribué un groupe avec le même nom et le même identifiant numérique. Les "
@@ -975,10 +988,10 @@ msgstr ""
 "B<adduser> créera un répertoire personnel en fonction de B<DHOME>, "
 "B<GROUPHOMES> et B<LETTERHOMES>. Le répertoire personnel peut être forcé en "
 "ligne de commande avec l'option B<--home>, et l'interpréteur de commandes "
-"(« shell ») avec l'option B<--shell>. Le bit SGID du répertoire "
-"personnel est positionné si B<USERGROUPS> vaut I<yes>, de telle sorte que "
-"tous les fichiers créés dans le répertoire personnel de l'utilisateur auront "
-"le bon groupe."
+"(« shell ») avec l'option B<--shell>. Le bit SGID du répertoire personnel "
+"est positionné si B<USERGROUPS> vaut I<yes>, de telle sorte que tous les "
+"fichiers créés dans le répertoire personnel de l'utilisateur auront le bon "
+"groupe."
 
 # type: Plain text
 #: ../adduser.8:102
@@ -1205,8 +1218,8 @@ msgid ""
 "RSA keys, but not using password authentication."
 msgstr ""
 "Comme B<--disabled-login>, mais les connexions sont toujours possibles, par "
-"exemple par des clés RSA pour SSH, mais pas par une authentification par "
-"mot de passe."
+"exemple par des clés RSA pour SSH, mais pas par une authentification par mot "
+"de passe."
 
 # type: TP
 #: ../adduser.8:192
@@ -1298,8 +1311,8 @@ msgid ""
 "Use SHELL as the user's login shell, rather than the default specified by "
 "the configuration file."
 msgstr ""
-"Utilise I<SHELL> comme interpréteur de commandes initial (« login shell"
-" »), plutôt que l'interpréteur donné dans le fichier de configuration."
+"Utilise I<SHELL> comme interpréteur de commandes initial (« login shell »), "
+"plutôt que l'interpréteur donné dans le fichier de configuration."
 
 # type: TP
 #: ../adduser.8:231
@@ -1419,7 +1432,6 @@ msgid ""
 "General Public Licence version 2 or later for copying conditions.  There is "
 "I<no> warranty."
 msgstr ""
-"Copyright (C) 1994 Ian Murdock. B<adduser> est un logiciel libre ; voyez "
-"la licence publique générale du projet GNU (« GPL ») version 2 ou "
-"supérieure pour les droits de copie. Ce programme est fourni sans I<aucune> "
-"garantie."
+"Copyright (C) 1994 Ian Murdock. B<adduser> est un logiciel libre ; voyez la "
+"licence publique générale du projet GNU (« GPL ») version 2 ou supérieure "
+"pour les droits de copie. Ce programme est fourni sans I<aucune> garantie."

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser_3.77_ru4\n"
-"POT-Creation-Date: 2005-11-13  0:31+0000\n"
+"POT-Creation-Date: 2006-02-12 13:51+0000\n"
 "PO-Revision-Date: 2005-11-14 11:49+0300\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -59,7 +59,8 @@ msgstr "NAME"
 
 # type: Plain text
 #: ../deluser.conf.5:12
-msgid "/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
+msgid ""
+"/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
 msgstr "/etc/deluser.conf - файл настройки для B<deluser(8)> и B<delgroup(8)>."
 
 # type: SH
@@ -179,27 +180,40 @@ msgstr ""
 "обнаруживается совпадение, то файл не удаляется. По умолчанию в список "
 "входят системные каталоги, остаётся только /home."
 
+# type: TP
+#: ../deluser.conf.5:64
+#, no-wrap
+msgid "B<ONLY_IF_EMPTY>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.conf.5:67
+msgid ""
+"Only delete a group if there are no user who belong to this group. Defaults "
+"to 0."
+msgstr ""
+
 # type: SH
-#: ../deluser.conf.5:64 ../adduser.conf.5:113 ../deluser.8:126
+#: ../deluser.conf.5:69 ../adduser.conf.5:113 ../deluser.8:126
 #: ../adduser.8:260
 #, no-wrap
 msgid "FILES"
 msgstr "ФАЙЛЫ"
 
 # type: Plain text
-#: ../deluser.conf.5:66
+#: ../deluser.conf.5:71
 msgid "I</etc/deluser.conf>"
 msgstr "I</etc/deluser.conf>"
 
 # type: SH
-#: ../deluser.conf.5:66 ../adduser.conf.5:115 ../deluser.8:128
+#: ../deluser.conf.5:71 ../adduser.conf.5:115 ../deluser.8:128
 #: ../adduser.8:262
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "СМОТРИТЕ ТАКЖЕ"
 
 # type: Plain text
-#: ../deluser.conf.5:67
+#: ../deluser.conf.5:72
 msgid "deluser(8), delgroup(8), adduser.conf(5)"
 msgstr "deluser(8), delgroup(8), adduser.conf(5)"
 
@@ -215,8 +229,10 @@ msgstr "adduser.conf"
 
 # type: Plain text
 #: ../adduser.conf.5:12
-msgid "/etc/adduser.conf - configuration file for B<adduser(8)> and B<addgroup(8)>."
-msgstr "/etc/adduser.conf -- файл настройки для B<adduser(8)> и B<addgroup(8)>."
+msgid ""
+"/etc/adduser.conf - configuration file for B<adduser(8)> and B<addgroup(8)>."
+msgstr ""
+"/etc/adduser.conf -- файл настройки для B<adduser(8)> и B<addgroup(8)>."
 
 # type: Plain text
 #: ../adduser.conf.5:28
@@ -241,7 +257,8 @@ msgstr "B<DSHELL>"
 
 # type: Plain text
 #: ../adduser.conf.5:34
-msgid "The login shell to be used for all new users.  Defaults to I</bin/bash>."
+msgid ""
+"The login shell to be used for all new users.  Defaults to I</bin/bash>."
 msgstr ""
 "Регистрационный shell, который будут использовать все новые пользователи. По "
 "умолчанию I</bin/bash>."
@@ -861,8 +878,10 @@ msgstr "B<adduser> [параметры] пользователь группа"
 
 # type: Plain text
 #: ../adduser.8:29
-msgid "[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
-msgstr "[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf ФАЙЛ]"
+msgid ""
+"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
+msgstr ""
+"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf ФАЙЛ]"
 
 # type: Plain text
 #: ../adduser.8:43
@@ -920,15 +939,16 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:74
+#, fuzzy
 msgid ""
 "By default, each user in Debian GNU/Linux is given a corresponding group "
-"with the same name and id.  Usergroups allow group writable directories to "
-"be easily maintained by placing the appropriate users in the new group, "
-"setting the set-group-ID bit in the directory, and ensuring that all users "
-"use a umask of 002.  If this option is turned off by setting B<USERGROUPS> "
-"to I<no>, all users' GIDs are set to B<USERS_GID>.  Users' groups can also "
-"be overridden from the command line with the B<--gid> or B<--ingroup> "
-"options to set the group by id or name, respectively."
+"with the same name.  Usergroups allow group writable directories to be "
+"easily maintained by placing the appropriate users in the new group, setting "
+"the set-group-ID bit in the directory, and ensuring that all users use a "
+"umask of 002.  If this option is turned off by setting B<USERGROUPS> to "
+"I<no>, all users' GIDs are set to B<USERS_GID>.  Users' groups can also be "
+"overridden from the command line with the B<--gid> or B<--ingroup> options "
+"to set the group by id or name, respectively."
 msgstr ""
 "По умолчанию, каждый пользователь в Debian GNU/Linux входит в "
 "соответствующую группу с тем же именем и id. Объединение пользователей в "
@@ -989,8 +1009,10 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:113
-msgid "The environment variable VERBOSE is set according to the following rule:"
-msgstr "Значение переменной среды VERBOSE устанавливается по следующему правилу:"
+msgid ""
+"The environment variable VERBOSE is set according to the following rule:"
+msgstr ""
+"Значение переменной среды VERBOSE устанавливается по следующему правилу:"
 
 # type: TP
 #: ../adduser.8:113
@@ -1016,8 +1038,8 @@ msgid ""
 "(The same applies to the variable DEBUG, but DEBUG is deprecated and will be "
 "removed in a later version of adduser.)"
 msgstr ""
-"(Это же правило применяется к переменной DEBUG, но DEBUG лучше не использовать, "
-"так как она будет удалена в следующей версии adduser.)"
+"(Это же правило применяется к переменной DEBUG, но DEBUG лучше не "
+"использовать, так как она будет удалена в следующей версии adduser.)"
 
 # type: SS
 #: ../adduser.8:122
@@ -1302,7 +1324,9 @@ msgstr "Не создавать домашний каталог, даже есл
 # type: Plain text
 #: ../adduser.8:241
 msgid "Suppress informational messages, only show warnings and errors."
-msgstr "Не выводить информационные сообщения, показывать только предупреждения и ошибки."
+msgstr ""
+"Не выводить информационные сообщения, показывать только предупреждения и "
+"ошибки."
 
 # type: TP
 #: ../adduser.8:241
@@ -1312,8 +1336,11 @@ msgstr "B<--debug>"
 
 # type: Plain text
 #: ../adduser.8:244
-msgid "Be verbose, most useful if you want to nail down a problem with adduser."
-msgstr "Показывать отладочную информацию, очень полезно, если вы хотите понять в чём проблема у adduser."
+msgid ""
+"Be verbose, most useful if you want to nail down a problem with adduser."
+msgstr ""
+"Показывать отладочную информацию, очень полезно, если вы хотите понять в чём "
+"проблема у adduser."
 
 # type: Plain text
 #: ../adduser.8:247
@@ -1332,8 +1359,8 @@ msgid ""
 "Force the new userid to be the given number.  adduser will fail if the "
 "userid is already taken."
 msgstr ""
-"Принудительно задать userid. adduser завершится неудачно, если "
-"такой userid уже используется."
+"Принудительно задать userid. adduser завершится неудачно, если такой userid "
+"уже используется."
 
 # type: TP
 #: ../adduser.8:251
@@ -1390,4 +1417,3 @@ msgstr ""
 "Copyright (C) 1994 Ian Murdock. B<adduser> это свободное ПО; смотрите "
 "условия копирования в Универсальной Общественной Лицензии GNU версии 2 или "
 "более новой.  Не предоставляется I<никаких> гарантий."
-
