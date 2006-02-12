@@ -5,8 +5,13 @@ adduser (3.82.0) UNRELEASED; urgency=low
     Thanks to Nicolas François. (mh) Closes: #346562
   * Apply out-of-band patch from Thomas Huriaux to clean up po4a
     handling.
+  * Fixed bug which prevented adduser from adding an already existing user
+    with the same uid/... again (Thanks to Henrique de Moraes Holschuh for the
+    detailed bug report, Closes: 352225) (jh)
+  * Updated adduser.8 : don't assume that adduser creates a new user with
+    uid == gid (jh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue,  7 Feb 2006 14:26:16 +0100
+ -- Joerg Hoh <joerg@joerghoh.de>  Sun, 12 Feb 2006 12:24:17 +0100
 
 adduser (3.82) unstable; urgency=low
 
