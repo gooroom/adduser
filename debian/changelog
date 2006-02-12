@@ -6,7 +6,7 @@ adduser (3.82.0) UNRELEASED; urgency=low
   * Apply out-of-band patch from Thomas Huriaux to clean up po4a
     handling. (mh)
   * Make $configfile a reference in deluser GetOptions call (perl
-    5.8.8 checks this). (mh)
+    5.8.8 checks this). (mh) Closes: #352496
   * Fixed bug which prevented adduser from adding an already existing user
     with the same uid/... again. Thanks to Henrique de Moraes Holschuh for the
     detailed bug report. (jh) Closes: #352225
@@ -15,7 +15,7 @@ adduser (3.82.0) UNRELEASED; urgency=low
   * Update Swedish (sv) program and manpage translation, again from
     Daniel Nylander. (mh) Closes: #352355
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 12 Feb 2006 12:21:44 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 12 Feb 2006 12:58:48 +0000
 
 adduser (3.82) unstable; urgency=low
 
