@@ -331,7 +331,6 @@ if ($action eq "addsysuser") {
     $new_gid = $nogroup_id
 	if (!$ingroup_name && !defined($new_gid) && !$make_group_also);
     check_user_group(1);
-    printf (gtx("Adding system user `%s' with uid %s...\n"),$new_name,$new_uid) if $verbose;
 
     if (!defined($new_uid) && $make_group_also) {
 	$new_uid = &first_avail_uid($config{"first_system_uid"},
@@ -362,6 +361,7 @@ if ($action eq "addsysuser") {
 	elsif ($make_group_also){ $new_gid=$new_uid; $ingroup_name=$new_name; }
 	else { die (gtx("Internal error")); }
     }
+    printf (gtx("Adding system user `%s' with uid %s...\n"),$new_name,$new_uid) if $verbose;
 
     &invalidate_nscd();
     # if we reach this point, and the group does already exist, we can use it.
