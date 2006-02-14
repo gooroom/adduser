@@ -4,9 +4,9 @@ adduser (3.83.0) UNRELEASED; urgency=low
   * Fixed warning when using --verbose, which has independently been
     spotted by Paul Slootman. (jh)
   * Have --remove-all-files not descend into special file systems. The
-    list is still hard coded. (jh)
+    list is still hard coded. (jh) This is supposed to close #344488.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 14 Feb 2006 08:50:29 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 14 Feb 2006 08:54:34 +0000
 
 adduser (3.83) unstable; urgency=low
 
