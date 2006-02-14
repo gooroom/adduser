@@ -97,8 +97,8 @@ option.  With the
 option, the account will be created but will be disabled until a
 password is set. The
 .B \-\-disabled-password
-option will not set a password, but login are still possible for example
-through SSH RSA keys.
+option will not set a password, but login is still possible (for example
+with SSH RSA keys).
 
 If the file
 .B /usr/local/sbin/adduser.local
@@ -166,7 +166,7 @@ If
 .BR addgroup " is called with the
 .BR \-\-system " option, a system group will be added.
 
-A GID will be chosen from the range specified for system UIDS in the
+A GID will be chosen from the range specified for system GIDS in the
 configuration file.  The GID can be overridden with the
 .B \-\-gid
 option.
@@ -187,8 +187,8 @@ Do not run passwd to set the password.  The user won't be able to use
 her account until the password is set.
 .TP
 .B \-\-disabled-password
-Like \-\-disabled-login, but logins are still possible for example through
-SSH RSA keys, but not using password authentication.
+Like \-\-disabled-login, but logins are still possible (for example using 
+SSH RSA keys) but not using password authentication.
 .TP
 .B \-\-force\-badname
 By default, user and group names are checked against a configurable
