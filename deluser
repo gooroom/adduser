@@ -235,7 +235,8 @@ if($action eq "deluser") {
       while (<MOUNT>) {
 	      my @temparray = split;
 	      my $fstype = $temparray[4];
-	      next if ($fstype =~ /(proc|sysfs|usbfs|devpts|tmpfs)/);
+	      my $exclude_fstypes = $config{"exclude_fstypes"};
+	      next if ($fstype =~ /$exclude_fstypes/);
 	      push @mountpoints,$temparray[2];
       }
       close(MOUNT) or die (gtx("can't close mount pipe: %s\n",$!));
