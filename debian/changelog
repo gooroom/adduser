@@ -2,7 +2,8 @@ adduser (3.83.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
   * Fixed warning when using --verbose, which has independently been
-    spotted by Paul Slootman. (jh)
+    spotted by Paul Slootman and has been reported later by Kevin B.
+    McCarty. (jh) Closes: #353032
   * Have --remove-all-files not descend into special file systems.
     Thanks to Kai Hendry. (jh) Closes: #344488
   * Update Swedish (sv) program and manpage translation, again from
