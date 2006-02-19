@@ -1,3 +1,9 @@
+adduser (3.84.0) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 19 Feb 2006 18:27:08 +0000
+
 adduser (3.84) unstable; urgency=low
 
   * Fixed warning when using --verbose, which has independently been
