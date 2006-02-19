@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.63\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-12 13:51+0000\n"
+"POT-Creation-Date: 2006-02-19 18:19+0000\n"
 "PO-Revision-Date: 2005-03-10 15:10+0100\n"
 "Last-Translator: Hans Fredrik Nordhaug <hans@nordhaug.priv.no>\n"
 "Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
@@ -107,12 +107,12 @@ msgstr "Gruppen «%s» eksisterer allerede.\n"
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "Ingen gruppe-ID (GID) er ledig i utvalget "
 
-#: ../adduser:291 ../deluser:221 ../deluser:371
+#: ../adduser:291 ../deluser:221 ../deluser:373
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "Brukeren «%s» eksisterer ikke.\n"
 
-#: ../adduser:293 ../adduser:673 ../deluser:335 ../deluser:374
+#: ../adduser:293 ../adduser:673 ../deluser:337 ../deluser:376
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Gruppen «%s» eksisterer ikke.\n"
@@ -137,32 +137,32 @@ msgstr "Brukeren «%s» eksisterer allerede som en systembruker. Avslutter...\n"
 msgid "The user `%s' already exists with a different uid. Aborting\n"
 msgstr "Brukeren «%s» eksisterer allerede som en systembruker. Avslutter...\n"
 
-#: ../adduser:334
-#, fuzzy, perl-format
-msgid "Adding system user `%s' with uid %s...\n"
-msgstr "Oppretter systembruker %s...\n"
-
-#: ../adduser:341
+#: ../adduser:340
 #, fuzzy, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
 "LAST_SYS_UID).\n"
 msgstr "Intet UID/GID par er ledig i utvalget "
 
-#: ../adduser:342 ../adduser:353 ../adduser:426 ../adduser:437
+#: ../adduser:341 ../adduser:352 ../adduser:426 ../adduser:437
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "Bruker «%s» ikke opprettet.\n"
 
-#: ../adduser:352
+#: ../adduser:351
 #, fuzzy, perl-format
 msgid ""
 "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 msgstr "Intet UID ledig i utvalget "
 
-#: ../adduser:357 ../adduser:363 ../adduser:441 ../adduser:447
+#: ../adduser:356 ../adduser:362 ../adduser:441 ../adduser:447
 msgid "Internal error"
 msgstr "Intern feil"
+
+#: ../adduser:364
+#, fuzzy, perl-format
+msgid "Adding system user `%s' with uid %s...\n"
+msgstr "Oppretter systembruker %s...\n"
 
 #: ../adduser:369 ../adduser:452
 #, perl-format
@@ -449,106 +449,106 @@ msgstr "Kikker etter filer som skal sikkerhetskopieres / fjernes...\n"
 msgid "fork for parse mount points failed: %s\n"
 msgstr ""
 
-#: ../deluser:240
+#: ../deluser:242
 #, perl-format
 msgid "can't close mount pipe: %s\n"
 msgstr ""
 
-#: ../deluser:248
+#: ../deluser:250
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
 msgstr ""
 "Ingen sikkerhetskopiering eller sletting av «%s» siden det er et "
 "monteringspunkt.\n"
 
-#: ../deluser:255
+#: ../deluser:257
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
 msgstr ""
 "Ingen sikkerhetskopiering eller sletting av «%s» siden det samsvarer med %"
 "s.\n"
 
-#: ../deluser:287
+#: ../deluser:289
 #, fuzzy, perl-format
 msgid "Backing up files to be removed to %s ...\n"
 msgstr "Sikkerhetsopierer filer som skal fjernes til "
 
-#: ../deluser:306
+#: ../deluser:308
 msgid "Removing files...\n"
 msgstr "Fjerner filer...\n"
 
-#: ../deluser:317
+#: ../deluser:319
 #, fuzzy
 msgid "Removing crontab\n"
 msgstr "Fjerner gruppe «%s».\n"
 
-#: ../deluser:320
+#: ../deluser:322
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "Fjerner bruker «%s»...\n"
 
-#: ../deluser:327 ../deluser:362 ../deluser:398
+#: ../deluser:329 ../deluser:364 ../deluser:400
 msgid "done.\n"
 msgstr "Ferdig.\n"
 
-#: ../deluser:339
+#: ../deluser:341
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr "getgrnam «%s» feilet. Dette skal ikke skje.\n"
 
-#: ../deluser:344
+#: ../deluser:346
 #, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "Gruppen «%s» er ikke en systemgruppe... Avslutter.\n"
 
-#: ../deluser:348
+#: ../deluser:350
 #, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "Gruppen «%s» er ikke tom!\n"
 
-#: ../deluser:354
+#: ../deluser:356
 #, fuzzy, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "Det finnes brukere med «%s» som primær gruppe!\n"
 
-#: ../deluser:359
+#: ../deluser:361
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "Fjerner gruppe «%s»...\n"
 
-#: ../deluser:377
+#: ../deluser:379
 #, fuzzy
 msgid "You may not remove the account from its primary group.\n"
 msgstr "Du får ikke fjerne en bruker fra han/hennes primære gruppe.\n"
 
-#: ../deluser:391
+#: ../deluser:393
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "Brukeren «%s» er ikke medlem av gruppen «%s».\n"
 
-#: ../deluser:394
+#: ../deluser:396
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "Fjerner bruker «%s» fra gruppe «%s»...\n"
 
-#: ../deluser:406
+#: ../deluser:408
 #, fuzzy
 msgid "removing user and groups from the system. "
 msgstr "fjerner bruker og grupper fra systemet. Version:"
 
-#: ../deluser:408
+#: ../deluser:410
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 msgstr ""
 
-#: ../deluser:410
+#: ../deluser:412
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 "<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 msgstr ""
 
-#: ../deluser:413
+#: ../deluser:415
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -562,11 +562,11 @@ msgid ""
 "General Public License, /usr/share/common-licenses/GPL, for more details.\n"
 msgstr ""
 
-#: ../deluser:426
+#: ../deluser:428
 msgid "removing user and groups from the system. Version:"
 msgstr "fjerner bruker og grupper fra systemet. Version:"
 
-#: ../deluser:428
+#: ../deluser:430
 #, fuzzy
 msgid ""
 "deluser user\n"

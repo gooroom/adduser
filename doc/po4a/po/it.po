@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser manpages italian translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-12 13:51+0000\n"
+"POT-Creation-Date: 2006-02-19 18:19+0000\n"
 "PO-Revision-Date: 2006-02-13 21:11+0100\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@list.linux.it>\n"
@@ -198,27 +198,41 @@ msgstr ""
 "Rimuove un gruppo solo se non ci sono utenti che appartengono a questo "
 "gruppo. Il valore predefinito è 0."
 
+# type: TP
+#: ../deluser.conf.5:67
+#, no-wrap
+msgid "B<EXCLUDE_FSTYPES>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.conf.5:70
+msgid ""
+"A regular expression which describes all file systems which should be "
+"excluded when looking for files of a user to be deleted. Defaults to \"(proc|"
+"sysfs|usbfs|devpts|tmpfs)\"."
+msgstr ""
+
 # type: SH
-#: ../deluser.conf.5:69 ../adduser.conf.5:113 ../deluser.8:126
+#: ../deluser.conf.5:71 ../adduser.conf.5:113 ../deluser.8:126
 #: ../adduser.8:260
 #, no-wrap
 msgid "FILES"
 msgstr "FILE"
 
 # type: Plain text
-#: ../deluser.conf.5:71
+#: ../deluser.conf.5:73
 msgid "I</etc/deluser.conf>"
 msgstr "I</etc/deluser.conf>"
 
 # type: SH
-#: ../deluser.conf.5:71 ../adduser.conf.5:115 ../deluser.8:128
+#: ../deluser.conf.5:73 ../adduser.conf.5:115 ../deluser.8:128
 #: ../adduser.8:262
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "VEDERE ANCHE"
 
 # type: Plain text
-#: ../deluser.conf.5:72
+#: ../deluser.conf.5:74
 msgid "deluser(8), delgroup(8), adduser.conf(5)"
 msgstr "deluser(8), delgroup(8), adduser.conf(5)"
 
@@ -954,15 +968,14 @@ msgid ""
 "to set the group by id or name, respectively."
 msgstr ""
 "In un sistema GNU/Linux Debian a ciascun utente viene assegnato un gruppo "
-"con lo stesso nome. B<USERGROUPS> permette alle directory "
-"su cui il gruppo ha il permesso di scrittura di essere facilmente gestite "
-"inserendo gli utenti nel nuovo gruppo, attivando il bit set-group-ID sulla "
-"directory e assicurandosi che tutti gli utenti abbiano la umask a 022. Se "
-"questa opzione è disattivata, cioè il valore di B<USERGROUPS> è I<no>, il "
-"valore del GID per tutti i nuovi utenti è B<USERS_GID>. I gruppi degli "
-"utenti possono anche essere cambiati dalla riga di comando con le opzioni "
-"B<--gid> o B<--ingroup> che permettono di impostare rispettivamente l'ID "
-"oppure il nome del gruppo."
+"con lo stesso nome. B<USERGROUPS> permette alle directory su cui il gruppo "
+"ha il permesso di scrittura di essere facilmente gestite inserendo gli "
+"utenti nel nuovo gruppo, attivando il bit set-group-ID sulla directory e "
+"assicurandosi che tutti gli utenti abbiano la umask a 022. Se questa opzione "
+"è disattivata, cioè il valore di B<USERGROUPS> è I<no>, il valore del GID "
+"per tutti i nuovi utenti è B<USERS_GID>. I gruppi degli utenti possono anche "
+"essere cambiati dalla riga di comando con le opzioni B<--gid> o B<--ingroup> "
+"che permettono di impostare rispettivamente l'ID oppure il nome del gruppo."
 
 # type: Plain text
 #: ../adduser.8:88
@@ -984,13 +997,14 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:102
+#, fuzzy
 msgid ""
 "B<adduser> will copy files from B<SKEL> into the home directory and prompt "
 "for finger (gecos) information and a password.  The gecos may also be set "
 "with the B<--gecos> option.  With the B<--disabled-login> option, the "
 "account will be created but will be disabled until a password is set. The "
-"B<--disabled-password> option will not set a password, but login are still "
-"possible for example through SSH RSA keys."
+"B<--disabled-password> option will not set a password, but login is still "
+"possible (for example with SSH RSA keys)."
 msgstr ""
 "B<adduser> copia i file da B<SKEL> nella directory home e richiede le "
 "informazioni (finger) per il campo gecos e la password. Il valore per il "
@@ -1150,8 +1164,9 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:173
+#, fuzzy
 msgid ""
-"A GID will be chosen from the range specified for system UIDS in the "
+"A GID will be chosen from the range specified for system GIDS in the "
 "configuration file.  The GID can be overridden with the B<--gid> option."
 msgstr ""
 "Il GID verrà scelto all'interno dell'intervallo specificato nel file di "
@@ -1201,9 +1216,10 @@ msgstr "B<--disabled-password>"
 
 # type: Plain text
 #: ../adduser.8:192
+#, fuzzy
 msgid ""
-"Like --disabled-login, but logins are still possible for example through SSH "
-"RSA keys, but not using password authentication."
+"Like --disabled-login, but logins are still possible (for example using SSH "
+"RSA keys) but not using password authentication."
 msgstr ""
 "Simile a --disabled-login però il login è ancora concesso, per esempio, "
 "tramite SSH con chiavi RSA ma non tramite l'autenticazione con password."

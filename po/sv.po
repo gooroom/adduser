@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.83\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-12 13:51+0000\n"
+"POT-Creation-Date: 2006-02-19 18:19+0000\n"
 "PO-Revision-Date: 2006-02-13 23:08+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -20,13 +20,11 @@ msgstr ""
 msgid "Only root may add a user or group to the system.\n"
 msgstr "Endast root får lägga till användare eller grupper i systemet.\n"
 
-#: ../adduser:118
-#: ../deluser:111
+#: ../adduser:118 ../deluser:111
 msgid "No options allowed after names.\n"
 msgstr "Inga flaggor tillåts efter namnen.\n"
 
-#: ../adduser:125
-#: ../deluser:128
+#: ../adduser:125 ../deluser:128
 msgid "Only one or two names allowed.\n"
 msgstr "Endast ett eller två namn tillåts.\n"
 
@@ -74,37 +72,34 @@ msgstr "Gruppen \"%s\" existerar redan men har ett annat gid, avbryter\n"
 msgid "The group `%s' already exists and is not a system group.\n"
 msgstr "Gruppen \"%s\" existerar redan och är inte en systemgrupp.\n"
 
-#: ../adduser:237
-#: ../adduser:265
+#: ../adduser:237 ../adduser:265
 #, perl-format
 msgid "The GID `%s' is already in use.\n"
 msgstr "GID \"%s\" används redan.\n"
 
 #: ../adduser:245
 #, perl-format
-msgid "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
-msgstr "Inget GID är tillgängligt i intervallet %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
+msgid ""
+"No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
+msgstr ""
+"Inget GID är tillgängligt i intervallet %d-%d (FIRST_SYS_GID - "
+"LAST_SYS_GID).\n"
 
-#: ../adduser:246
-#: ../adduser:274
+#: ../adduser:246 ../adduser:274
 #, perl-format
 msgid "The group `%s' was not created.\n"
 msgstr "Gruppen \"%s\" skapades inte.\n"
 
-#: ../adduser:250
-#: ../adduser:278
+#: ../adduser:250 ../adduser:278
 #, perl-format
 msgid "Adding group `%s' (%s)...\n"
 msgstr "Lägger till grupp \"%s\" (%s)...\n"
 
-#: ../adduser:254
-#: ../adduser:282
-#: ../adduser:313
+#: ../adduser:254 ../adduser:282 ../adduser:313
 msgid "Done.\n"
 msgstr "Klar.\n"
 
-#: ../adduser:263
-#: ../adduser:666
+#: ../adduser:263 ../adduser:666
 #, perl-format
 msgid "The group `%s' already exists.\n"
 msgstr "Gruppen \"%s\" existerar redan.\n"
@@ -112,19 +107,15 @@ msgstr "Gruppen \"%s\" existerar redan.\n"
 #: ../adduser:273
 #, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
-msgstr "Inget GID är tillgängligt i intervallet %d-%d (FIRST_GID - LAST_GID).\n"
+msgstr ""
+"Inget GID är tillgängligt i intervallet %d-%d (FIRST_GID - LAST_GID).\n"
 
-#: ../adduser:291
-#: ../deluser:221
-#: ../deluser:371
+#: ../adduser:291 ../deluser:221 ../deluser:373
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "Användaren \"%s\" existerar inte.\n"
 
-#: ../adduser:293
-#: ../adduser:673
-#: ../deluser:335
-#: ../deluser:374
+#: ../adduser:293 ../adduser:673 ../deluser:337 ../deluser:376
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Gruppen \"%s\" existerar inte.\n"
@@ -142,59 +133,63 @@ msgstr "Lägger till användare \"%s\" till grupp \"%s\"...\n"
 #: ../adduser:323
 #, perl-format
 msgid "The user `%s' already exists as a system user. Exiting...\n"
-msgstr "Användaren \"%s\" existerar redan som en systemanvändare. Avslutar...\n"
+msgstr ""
+"Användaren \"%s\" existerar redan som en systemanvändare. Avslutar...\n"
 
 #: ../adduser:327
 #, perl-format
 msgid "The user `%s' already exists with a different uid. Aborting\n"
 msgstr "Användaren \"%s\" existerar redan med ett annat uid. Avbryter\n"
 
-#: ../adduser:334
-#, perl-format
-msgid "Adding system user `%s' with uid %s...\n"
-msgstr "Lägger till systemanvändare \"%s\" med uid %s...\n"
-
 # Samma sak med denna
-#: ../adduser:341
+#: ../adduser:340
 #, perl-format
-msgid "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
-msgstr "Inga UID/GID-par är tillgängliga i intervallet %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
+"LAST_SYS_UID).\n"
+msgstr ""
+"Inga UID/GID-par är tillgängliga i intervallet %d-%d (FIRST_SYS_UID - "
+"LAST_SYS_UID).\n"
 
-#: ../adduser:342
-#: ../adduser:353
-#: ../adduser:426
-#: ../adduser:437
+#: ../adduser:341 ../adduser:352 ../adduser:426 ../adduser:437
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "Användaren \"%s\" skapades inte.\n"
 
-#: ../adduser:352
+#: ../adduser:351
 #, perl-format
-msgid "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
-msgstr "Inget UID är tillgängligt i intervallet %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
+msgid ""
+"No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
+msgstr ""
+"Inget UID är tillgängligt i intervallet %d-%d (FIRST_SYS_UID - "
+"LAST_SYS_UID).\n"
 
-#: ../adduser:357
-#: ../adduser:363
-#: ../adduser:441
-#: ../adduser:447
+#: ../adduser:356 ../adduser:362 ../adduser:441 ../adduser:447
 msgid "Internal error"
 msgstr "Internt fel"
 
-#: ../adduser:369
-#: ../adduser:452
+#: ../adduser:364
+#, perl-format
+msgid "Adding system user `%s' with uid %s...\n"
+msgstr "Lägger till systemanvändare \"%s\" med uid %s...\n"
+
+#: ../adduser:369 ../adduser:452
 #, perl-format
 msgid "Adding new group `%s' (%s).\n"
 msgstr "Lägger till ny grupp \"%s\" (%s).\n"
 
-#: ../adduser:375
-#: ../adduser:458
+#: ../adduser:375 ../adduser:458
 #, perl-format
 msgid "Adding new user `%s' (%s) with group `%s'.\n"
 msgstr "Lägger till ny användare \"%s\" (%s) med grupp \"%s\".\n"
 
 #: ../adduser:391
-msgid "chage failed with return code 15, shadow not enabled, password aging cannot be set. Continuing.\n"
-msgstr "chage misslyckades med felkod 15, shadow inte aktiverad, lösenordsföråldring kan inte ställas in. Fortsätter.\n"
+msgid ""
+"chage failed with return code 15, shadow not enabled, password aging cannot "
+"be set. Continuing.\n"
+msgstr ""
+"chage misslyckades med felkod 15, shadow inte aktiverad, lösenordsföråldring "
+"kan inte ställas in. Fortsätter.\n"
 
 #: ../adduser:417
 #, perl-format
@@ -203,13 +198,17 @@ msgstr "Lägger till användare \"%s\"...\n"
 
 #: ../adduser:425
 #, perl-format
-msgid "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-msgstr "Inga UID/GID-par är tillgängliga i intervallet %d-%d (FIRST_UID - LAST_UID).\n"
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr ""
+"Inga UID/GID-par är tillgängliga i intervallet %d-%d (FIRST_UID - "
+"LAST_UID).\n"
 
 #: ../adduser:436
 #, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-msgstr "Inget UID är tillgängligt i intervallet %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr ""
+"Inget UID är tillgängligt i intervallet %d-%d (FIRST_UID - LAST_UID).\n"
 
 #. hm, error, should we break now?
 #: ../adduser:478
@@ -266,8 +265,12 @@ msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "Hemkatalogen \"%s\" existerar redan.  Ingen kopiering från \"%s\"\n"
 
 #: ../adduser:561
-msgid "Warning: that home directory does not belong to the user you are currently creating\n"
-msgstr "Varning: den angivna hemkatalogen tillhör inte den användare du för närvarande skapar\n"
+msgid ""
+"Warning: that home directory does not belong to the user you are currently "
+"creating\n"
+msgstr ""
+"Varning: den angivna hemkatalogen tillhör inte den användare du för "
+"närvarande skapar\n"
 
 #: ../adduser:566
 #, perl-format
@@ -365,7 +368,8 @@ msgid ""
 "   Add a normal user\n"
 "\n"
 "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-"[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-password]\n"
+"[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
+"password]\n"
 "[--disabled-login] user\n"
 "   Add a system user\n"
 "\n"
@@ -387,8 +391,10 @@ msgstr ""
 "[--disabled-password] [--disabled-login] användare\n"
 "   Lägg till en normal användare\n"
 "\n"
-"adduser --system [--home KATALOG] [--shell SKAL] [--no-create-home] [--uid ID]\n"
-"[--gecos GECOS] [--group | --ingroup GRUPP | --gid ID] [--disabled-password]\n"
+"adduser --system [--home KATALOG] [--shell SKAL] [--no-create-home] [--uid "
+"ID]\n"
+"[--gecos GECOS] [--group | --ingroup GRUPP | --gid ID] [--disabled-"
+"password]\n"
 "[--disabled-login] användare\n"
 "   Lägg till en systemanvändare\n"
 "\n"
@@ -419,12 +425,14 @@ msgstr "Ange ett användarnamn att ta bort: "
 
 #: ../deluser:162
 msgid ""
-"In order to use the --remove-home, --remove-all-files, and --backup features,\n"
+"In order to use the --remove-home, --remove-all-files, and --backup "
+"features,\n"
 "you need to install the `perl-modules' package. To accomplish that, run\n"
 "apt-get install perl-modules\n"
 msgstr ""
 "För att kunna använda funktionerna --remove-home, --remove-all-files och\n"
-"--backup behöver du installera paketet \"perl-modules\". För att göra detta, kör\n"
+"--backup behöver du installera paketet \"perl-modules\". För att göra detta, "
+"kör\n"
 "apt-get install perl-modules\n"
 
 #: ../deluser:211
@@ -440,7 +448,9 @@ msgstr "Användaren \"%s\" existerar inte men --system angavs... Avslutar.\n"
 #: ../deluser:225
 #, perl-format
 msgid "passwd home dir `%s' does not match command line home dir, aborting.\n"
-msgstr "Hemkatalog i passwd, \"%s\" matchar inte kommandoradens hemkatalog, avbryter.\n"
+msgstr ""
+"Hemkatalog i passwd, \"%s\" matchar inte kommandoradens hemkatalog, "
+"avbryter.\n"
 
 #: ../deluser:231
 msgid "Looking for files to backup/remove...\n"
@@ -451,89 +461,88 @@ msgstr "Letar efter filer att säkerhetskopiera/ta bort...\n"
 msgid "fork for parse mount points failed: %s\n"
 msgstr "processgrening för tolkning av monteringspunkter misslyckades: %s\n"
 
-#: ../deluser:240
+#: ../deluser:242
 #, perl-format
 msgid "can't close mount pipe: %s\n"
 msgstr "kan inte stänga monteringsrör: %s\n"
 
-#: ../deluser:248
+#: ../deluser:250
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
-msgstr "Säkerhetskopierar inte/tar inte bort \"%s\", det är en monteringspunkt.\n"
+msgstr ""
+"Säkerhetskopierar inte/tar inte bort \"%s\", det är en monteringspunkt.\n"
 
-#: ../deluser:255
+#: ../deluser:257
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
 msgstr "Säkerhetskopierar inte/tar inte bort \"%s\", den matchar %s.\n"
 
-#: ../deluser:287
+#: ../deluser:289
 #, perl-format
 msgid "Backing up files to be removed to %s ...\n"
 msgstr "Säkerhetskopierar filer som ska tas bort till %s ...\n"
 
-#: ../deluser:306
+#: ../deluser:308
 msgid "Removing files...\n"
 msgstr "Tar bort filer...\n"
 
-#: ../deluser:317
+#: ../deluser:319
 msgid "Removing crontab\n"
 msgstr "Tar bort crontab\n"
 
-#: ../deluser:320
+#: ../deluser:322
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "Tar bort användare \"%s\"...\n"
 
-#: ../deluser:327
-#: ../deluser:362
-#: ../deluser:398
+#: ../deluser:329 ../deluser:364 ../deluser:400
 msgid "done.\n"
 msgstr "klar.\n"
 
-#: ../deluser:339
+#: ../deluser:341
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr "getgrnam \"%s\" misslyckades. Detta ska inte hända.\n"
 
-#: ../deluser:344
+#: ../deluser:346
 #, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "Gruppen \"%s\" är inte en systemgrupp... Avslutar.\n"
 
-#: ../deluser:348
+#: ../deluser:350
 #, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "Gruppen \"%s\" är inte tom!\n"
 
-#: ../deluser:354
+#: ../deluser:356
 #, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "\"%s\" har fortfarande \"%s\" som dess primära grupp!\n"
 
-#: ../deluser:359
+#: ../deluser:361
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "Tar bort grupp \"%s\"...\n"
 
-#: ../deluser:377
+#: ../deluser:379
 msgid "You may not remove the account from its primary group.\n"
 msgstr "Du kan inte ta bort kontot från dess primära grupp.\n"
 
-#: ../deluser:391
+#: ../deluser:393
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "Användaren \"%s\" är inte medlem av gruppen \"%s\".\n"
 
-#: ../deluser:394
+#: ../deluser:396
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "Tar bort användare \"%s\" från grupp \"%s\"...\n"
 
-#: ../deluser:406
+#: ../deluser:408
 msgid "removing user and groups from the system. "
 msgstr "tar bort användare och grupper från systemet. "
 
-#: ../deluser:408
+#: ../deluser:410
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
@@ -541,7 +550,7 @@ msgstr ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 
-#: ../deluser:410
+#: ../deluser:412
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 "<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
@@ -549,7 +558,7 @@ msgstr ""
 "deluser är baserad på adduser av Guy Maor <maor@debian.org>, Ian Murdock\n"
 "<imurdock@gnu.ai.mit.edu> och Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 
-#: ../deluser:413
+#: ../deluser:415
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -575,13 +584,14 @@ msgstr ""
 "Detta program distribueras i hopp om att det ska vara användbart,\n"
 "men UTAN NÅGON SOM HELST GARANTI, även utan underförstådd garanti\n"
 "om SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU\n"
-"General Public License, /usr/share/common-licenses/GPL för ytterligare information.\n"
+"General Public License, /usr/share/common-licenses/GPL för ytterligare "
+"information.\n"
 
-#: ../deluser:426
+#: ../deluser:428
 msgid "removing user and groups from the system. Version:"
 msgstr "tar bort användare och grupper från systemet. Version:"
 
-#: ../deluser:428
+#: ../deluser:430
 msgid ""
 "deluser user\n"
 "  remove a normal user from the system\n"
@@ -668,10 +678,10 @@ msgstr "Okänd variabel \"%s\" vid \"%s\":%s.\n"
 #~ msgstr ""
 #~ "deluser: (version: %s)\n"
 #~ "\n"
+
 #~ msgid ""
 #~ "deluser: (version %s)\n"
 #~ "\n"
 #~ msgstr ""
 #~ "deluser: (version %s)\n"
 #~ "\n"
-

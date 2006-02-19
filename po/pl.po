@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-12 13:51+0000\n"
+"POT-Creation-Date: 2006-02-19 18:19+0000\n"
 "PO-Revision-Date: 2005-11-22 17:52+0100\n"
 "Last-Translator: Robert Luberda <robert@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -106,12 +106,12 @@ msgstr "Grupa `%s' ju¿ istnieje.\n"
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "Brak dostêpnego numeru GID w zakresie %d-%d (FIRST_GID - LAST_GID).\n"
 
-#: ../adduser:291 ../deluser:221 ../deluser:371
+#: ../adduser:291 ../deluser:221 ../deluser:373
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "U¿ytkownik `%s' nie istnieje.\n"
 
-#: ../adduser:293 ../adduser:673 ../deluser:335 ../deluser:374
+#: ../adduser:293 ../adduser:673 ../deluser:337 ../deluser:376
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Grupa `%s' nie istnieje.\n"
@@ -136,12 +136,7 @@ msgstr "U¿ytkownik `%s' ju¿ istnieje jako u¿ytkownik systemowy. Koñczenie...\n"
 msgid "The user `%s' already exists with a different uid. Aborting\n"
 msgstr "U¿ytkownik `%s' ju¿ istnieje jako u¿ytkownik systemowy. Koñczenie...\n"
 
-#: ../adduser:334
-#, fuzzy, perl-format
-msgid "Adding system user `%s' with uid %s...\n"
-msgstr "Dodawanie u¿ytkownika systemowego `%s'...\n"
-
-#: ../adduser:341
+#: ../adduser:340
 #, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
@@ -149,20 +144,25 @@ msgid ""
 msgstr ""
 "Brak dostêpnego UID/GID w zakresie %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 
-#: ../adduser:342 ../adduser:353 ../adduser:426 ../adduser:437
+#: ../adduser:341 ../adduser:352 ../adduser:426 ../adduser:437
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "Nie utworzono u¿ytkownika `%s'.\n"
 
-#: ../adduser:352
+#: ../adduser:351
 #, perl-format
 msgid ""
 "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 msgstr "Brak dostêpnego UID w zakresie %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 
-#: ../adduser:357 ../adduser:363 ../adduser:441 ../adduser:447
+#: ../adduser:356 ../adduser:362 ../adduser:441 ../adduser:447
 msgid "Internal error"
 msgstr "B³±d wewnêtrzny"
+
+#: ../adduser:364
+#, fuzzy, perl-format
+msgid "Adding system user `%s' with uid %s...\n"
+msgstr "Dodawanie u¿ytkownika systemowego `%s'...\n"
 
 #: ../adduser:369 ../adduser:452
 #, perl-format
@@ -446,88 +446,88 @@ msgstr "Szukanie plików do kopii bezpieczeñstwa/usuniêcia...\n"
 msgid "fork for parse mount points failed: %s\n"
 msgstr "niepowodzenie fork parsuj±cego punkty montowania: %s\n"
 
-#: ../deluser:240
+#: ../deluser:242
 #, perl-format
 msgid "can't close mount pipe: %s\n"
 msgstr "nie mo¿na zamkn±æ potoku mount: %s\n"
 
-#: ../deluser:248
+#: ../deluser:250
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
 msgstr "`%s' nie bêdzie archiwizowany/usuwany, gdy¿ jest punktem montowania.\n"
 
-#: ../deluser:255
+#: ../deluser:257
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
 msgstr "`%s' nie bêdzie archiwizowany/usuwany, gdy¿ pasuje do %s.\n"
 
-#: ../deluser:287
+#: ../deluser:289
 #, perl-format
 msgid "Backing up files to be removed to %s ...\n"
 msgstr "Tworzenie kopii bezpieczeñstwa usuwanych plików %s...\n"
 
-#: ../deluser:306
+#: ../deluser:308
 msgid "Removing files...\n"
 msgstr "Usuwanie plików...\n"
 
-#: ../deluser:317
+#: ../deluser:319
 #, fuzzy
 msgid "Removing crontab\n"
 msgstr "Usuwanie grupy `%s'.\n"
 
-#: ../deluser:320
+#: ../deluser:322
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "Usuwanie u¿ytkownika `%s'...\n"
 
-#: ../deluser:327 ../deluser:362 ../deluser:398
+#: ../deluser:329 ../deluser:364 ../deluser:400
 msgid "done.\n"
 msgstr "gotowe.\n"
 
-#: ../deluser:339
+#: ../deluser:341
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr "niepowodzenie getgrnam `%s'. Nie powinno siê to by³o zdarzyæ.\n"
 
-#: ../deluser:344
+#: ../deluser:346
 #, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "Grupa `%s' nie jest grup± systemow±... Koñczenie.\n"
 
-#: ../deluser:348
+#: ../deluser:350
 #, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "Grupa `%s' nie jest pusta!\n"
 
-#: ../deluser:354
+#: ../deluser:356
 #, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "`%s' wci±¿ ma `%s' jako grupê podstawow±!\n"
 
-#: ../deluser:359
+#: ../deluser:361
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "Usuwanie grupy `%s'...\n"
 
-#: ../deluser:377
+#: ../deluser:379
 msgid "You may not remove the account from its primary group.\n"
 msgstr "Nie mo¿na usun±æ u¿ytkownika z jego/jej podstawowej grupy.\n"
 
-#: ../deluser:391
+#: ../deluser:393
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "`%s' nie jest cz³onkiem grupy `%s'.\n"
 
-#: ../deluser:394
+#: ../deluser:396
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "Usuwanie u¿ytkownika `%s' z grupy `%s'...\n"
 
-#: ../deluser:406
+#: ../deluser:408
 msgid "removing user and groups from the system. "
 msgstr "usuwanie u¿ytkowników i grup z systemu."
 
-#: ../deluser:408
+#: ../deluser:410
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
@@ -535,7 +535,7 @@ msgstr ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 
-#: ../deluser:410
+#: ../deluser:412
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 "<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
@@ -543,7 +543,7 @@ msgstr ""
 "deluser jest oparty na adduser Guya Maora <maor@debian.org>, Iana Murdocka\n"
 "<imurdock@gnu.ai.mit.edu> i Teda Hajeka <tedhajek@boombox.micro.umn.edu>\n"
 
-#: ../deluser:413
+#: ../deluser:415
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -567,11 +567,11 @@ msgstr ""
 "DO SPRZEDA¯Y ani DO KONKRETNYCH CELÓW. Szczegó³y mo¿na znale¼æ w Ogólnej\n"
 "Licencji Publicznej GNU w pliku //usr/share/common-licenses/GPL.\n"
 
-#: ../deluser:426
+#: ../deluser:428
 msgid "removing user and groups from the system. Version:"
 msgstr "usuwanie u¿ytkownika i grupy z systemu. Wersja:"
 
-#: ../deluser:428
+#: ../deluser:430
 msgid ""
 "deluser user\n"
 "  remove a normal user from the system\n"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-12 13:51+0000\n"
+"POT-Creation-Date: 2006-02-19 18:19+0000\n"
 "PO-Revision-Date: 2004-11-04 14:14+0100\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
@@ -109,12 +109,12 @@ msgstr "`%s' taldea badago dagoeneko.\n"
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "Ez dago GID erabilgarririk bitartean "
 
-#: ../adduser:291 ../deluser:221 ../deluser:371
+#: ../adduser:291 ../deluser:221 ../deluser:373
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "`%s' erabiltzailea ez dago.\n"
 
-#: ../adduser:293 ../adduser:673 ../deluser:335 ../deluser:374
+#: ../adduser:293 ../adduser:673 ../deluser:337 ../deluser:376
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "`%s' taldea ez dago.\n"
@@ -139,32 +139,32 @@ msgstr "`%s' erabiltzailea abdago dagoeneko.\n"
 msgid "The user `%s' already exists with a different uid. Aborting\n"
 msgstr "`%s' erabiltzailea abdago dagoeneko.\n"
 
-#: ../adduser:334
-#, fuzzy, perl-format
-msgid "Adding system user `%s' with uid %s...\n"
-msgstr "`%s' sistema erabiltzailea sortzen...\n"
-
-#: ../adduser:341
+#: ../adduser:340
 #, fuzzy, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
 "LAST_SYS_UID).\n"
 msgstr "Ez dago UID/GID bikote erabilgarririk bitartean "
 
-#: ../adduser:342 ../adduser:353 ../adduser:426 ../adduser:437
+#: ../adduser:341 ../adduser:352 ../adduser:426 ../adduser:437
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "`%s' erabiltzailea ez da sortua izan.\n"
 
-#: ../adduser:352
+#: ../adduser:351
 #, fuzzy, perl-format
 msgid ""
 "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 msgstr "Ez dago UID erabilgarririk bitartean "
 
-#: ../adduser:357 ../adduser:363 ../adduser:441 ../adduser:447
+#: ../adduser:356 ../adduser:362 ../adduser:441 ../adduser:447
 msgid "Internal error"
 msgstr "Barne-errorea"
+
+#: ../adduser:364
+#, fuzzy, perl-format
+msgid "Adding system user `%s' with uid %s...\n"
+msgstr "`%s' sistema erabiltzailea sortzen...\n"
 
 #: ../adduser:369 ../adduser:452
 #, fuzzy, perl-format
@@ -451,102 +451,102 @@ msgstr "Babeskopia/ezabatzeko fitxategiak arakatzen...\n"
 msgid "fork for parse mount points failed: %s\n"
 msgstr ""
 
-#: ../deluser:240
+#: ../deluser:242
 #, perl-format
 msgid "can't close mount pipe: %s\n"
 msgstr ""
 
-#: ../deluser:248
+#: ../deluser:250
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
 msgstr ""
 
-#: ../deluser:255
+#: ../deluser:257
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
 msgstr ""
 
-#: ../deluser:287
+#: ../deluser:289
 #, fuzzy, perl-format
 msgid "Backing up files to be removed to %s ...\n"
 msgstr "Ezabatuko diren fitxategien babes-kopia egiten...\n"
 
-#: ../deluser:306
+#: ../deluser:308
 msgid "Removing files...\n"
 msgstr "Fitxategiak ezabatzen...\n"
 
-#: ../deluser:317
+#: ../deluser:319
 #, fuzzy
 msgid "Removing crontab\n"
 msgstr "`%s' taldea ezabatzen.\n"
 
-#: ../deluser:320
+#: ../deluser:322
 #, perl-format
 msgid "Removing user `%s'...\n"
 msgstr "`%s' erabiltzailea ezabatzen...\n"
 
-#: ../deluser:327 ../deluser:362 ../deluser:398
+#: ../deluser:329 ../deluser:364 ../deluser:400
 msgid "done.\n"
 msgstr "eginda.\n"
 
-#: ../deluser:339
+#: ../deluser:341
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr ""
 
-#: ../deluser:344
+#: ../deluser:346
 #, fuzzy, perl-format
 msgid "The group `%s' is not a system group... Exiting.\n"
 msgstr "`%s' taldea ez dago.\n"
 
-#: ../deluser:348
+#: ../deluser:350
 #, fuzzy, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "`%s' taldea ez dago.\n"
 
-#: ../deluser:354
+#: ../deluser:356
 #, fuzzy, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "`%s' talde primario bezala duten erabiltzaileak daude!\n"
 
-#: ../deluser:359
+#: ../deluser:361
 #, perl-format
 msgid "Removing group `%s'...\n"
 msgstr "`%s' taldea ezabatzen...\n"
 
-#: ../deluser:377
+#: ../deluser:379
 #, fuzzy
 msgid "You may not remove the account from its primary group.\n"
 msgstr "Ezin duzu erabiltzailea bere talde primariotik ezabatu.\n"
 
-#: ../deluser:391
+#: ../deluser:393
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "`%s' erabiltzailea ez da `%s' taldeko partaide.\n"
 
-#: ../deluser:394
+#: ../deluser:396
 #, perl-format
 msgid "Removing user `%s' from group `%s'...\n"
 msgstr "`%s' erabiltzailea `%s' taldetik ezabatzen...\n"
 
-#: ../deluser:406
+#: ../deluser:408
 #, fuzzy
 msgid "removing user and groups from the system. "
 msgstr "Sistematik erabiltzail eta taldeak ezabatzen. Bertsioa:"
 
-#: ../deluser:408
+#: ../deluser:410
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 msgstr ""
 
-#: ../deluser:410
+#: ../deluser:412
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 "<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 msgstr ""
 
-#: ../deluser:413
+#: ../deluser:415
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -560,11 +560,11 @@ msgid ""
 "General Public License, /usr/share/common-licenses/GPL, for more details.\n"
 msgstr ""
 
-#: ../deluser:426
+#: ../deluser:428
 msgid "removing user and groups from the system. Version:"
 msgstr "Sistematik erabiltzail eta taldeak ezabatzen. Bertsioa:"
 
-#: ../deluser:428
+#: ../deluser:430
 msgid ""
 "deluser user\n"
 "  remove a normal user from the system\n"

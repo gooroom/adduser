@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2006-02-12 13:51+0000\n"
+"POT-Creation-Date: 2006-02-19 18:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,25 +170,39 @@ msgid ""
 "to 0."
 msgstr ""
 
+# type: TP
+#: ../deluser.conf.5:67
+#, no-wrap
+msgid "B<EXCLUDE_FSTYPES>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.conf.5:70
+msgid ""
+"A regular expression which describes all file systems which should be "
+"excluded when looking for files of a user to be deleted. Defaults to "
+"\"(proc|sysfs|usbfs|devpts|tmpfs)\"."
+msgstr ""
+
 # type: SH
-#: ../deluser.conf.5:69 ../adduser.conf.5:113 ../deluser.8:126 ../adduser.8:260
+#: ../deluser.conf.5:71 ../adduser.conf.5:113 ../deluser.8:126 ../adduser.8:260
 #, no-wrap
 msgid "FILES"
 msgstr ""
 
 # type: Plain text
-#: ../deluser.conf.5:71
+#: ../deluser.conf.5:73
 msgid "I</etc/deluser.conf>"
 msgstr ""
 
 # type: SH
-#: ../deluser.conf.5:71 ../adduser.conf.5:115 ../deluser.8:128 ../adduser.8:262
+#: ../deluser.conf.5:73 ../adduser.conf.5:115 ../deluser.8:128 ../adduser.8:262
 #, no-wrap
 msgid "SEE ALSO"
 msgstr ""
 
 # type: Plain text
-#: ../deluser.conf.5:72
+#: ../deluser.conf.5:74
 msgid "deluser(8), delgroup(8), adduser.conf(5)"
 msgstr ""
 
@@ -823,8 +837,8 @@ msgid ""
 "for finger (gecos) information and a password.  The gecos may also be set "
 "with the B<--gecos> option.  With the B<--disabled-login> option, the "
 "account will be created but will be disabled until a password is set. The "
-"B<--disabled-password> option will not set a password, but login are still "
-"possible for example through SSH RSA keys."
+"B<--disabled-password> option will not set a password, but login is still "
+"possible (for example with SSH RSA keys)."
 msgstr ""
 
 # type: Plain text
@@ -948,7 +962,7 @@ msgstr ""
 # type: Plain text
 #: ../adduser.8:173
 msgid ""
-"A GID will be chosen from the range specified for system UIDS in the "
+"A GID will be chosen from the range specified for system GIDS in the "
 "configuration file.  The GID can be overridden with the B<--gid> option."
 msgstr ""
 
@@ -992,8 +1006,8 @@ msgstr ""
 # type: Plain text
 #: ../adduser.8:192
 msgid ""
-"Like --disabled-login, but logins are still possible for example through SSH "
-"RSA keys, but not using password authentication."
+"Like --disabled-login, but logins are still possible (for example using SSH "
+"RSA keys) but not using password authentication."
 msgstr ""
 
 # type: TP

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2006-02-12 13:51+0000\n"
+"POT-Creation-Date: 2006-02-19 18:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -188,27 +188,41 @@ msgid ""
 "to 0."
 msgstr ""
 
+# type: TP
+#: ../deluser.conf.5:67
+#, no-wrap
+msgid "B<EXCLUDE_FSTYPES>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.conf.5:70
+msgid ""
+"A regular expression which describes all file systems which should be "
+"excluded when looking for files of a user to be deleted. Defaults to \"(proc|"
+"sysfs|usbfs|devpts|tmpfs)\"."
+msgstr ""
+
 # type: SH
-#: ../deluser.conf.5:69 ../adduser.conf.5:113 ../deluser.8:126
+#: ../deluser.conf.5:71 ../adduser.conf.5:113 ../deluser.8:126
 #: ../adduser.8:260
 #, no-wrap
 msgid "FILES"
 msgstr "FICHEROS"
 
 # type: Plain text
-#: ../deluser.conf.5:71
+#: ../deluser.conf.5:73
 msgid "I</etc/deluser.conf>"
 msgstr "I</etc/deluser.conf>"
 
 # type: SH
-#: ../deluser.conf.5:71 ../adduser.conf.5:115 ../deluser.8:128
+#: ../deluser.conf.5:73 ../adduser.conf.5:115 ../deluser.8:128
 #: ../adduser.8:262
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "VÉASE TAMBIÉN"
 
 # type: Plain text
-#: ../deluser.conf.5:72
+#: ../deluser.conf.5:74
 msgid "deluser(8), delgroup(8), adduser.conf(5)"
 msgstr "deluser(8), delgroup(8), adduser.conf(5)"
 
@@ -966,13 +980,14 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:102
+#, fuzzy
 msgid ""
 "B<adduser> will copy files from B<SKEL> into the home directory and prompt "
 "for finger (gecos) information and a password.  The gecos may also be set "
 "with the B<--gecos> option.  With the B<--disabled-login> option, the "
 "account will be created but will be disabled until a password is set. The "
-"B<--disabled-password> option will not set a password, but login are still "
-"possible for example through SSH RSA keys."
+"B<--disabled-password> option will not set a password, but login is still "
+"possible (for example with SSH RSA keys)."
 msgstr ""
 "B<adduser> copiará los ficheros de B<SKEL> en el directorio personal y "
 "preguntará por la información del campo gecos y por la clave. El campo gecos "
@@ -1129,7 +1144,7 @@ msgstr ""
 #: ../adduser.8:173
 #, fuzzy
 msgid ""
-"A GID will be chosen from the range specified for system UIDS in the "
+"A GID will be chosen from the range specified for system GIDS in the "
 "configuration file.  The GID can be overridden with the B<--gid> option."
 msgstr ""
 "Se elegirá un GID dentro del rango especificado en el fichero de "
@@ -1179,9 +1194,10 @@ msgstr "B<--disabled-password>"
 
 # type: Plain text
 #: ../adduser.8:192
+#, fuzzy
 msgid ""
-"Like --disabled-login, but logins are still possible for example through SSH "
-"RSA keys, but not using password authentication."
+"Like --disabled-login, but logins are still possible (for example using SSH "
+"RSA keys) but not using password authentication."
 msgstr ""
 "Como --disabled-login, pero todavía es posible usar la cuenta, por ejemplo "
 "mediante claves SSH RSA, pero no usando autenticación de claves."
