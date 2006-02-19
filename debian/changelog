@@ -8,8 +8,10 @@ adduser (3.83.0) UNRELEASED; urgency=low
     Thanks to Kai Hendry. (jh) Closes: #344488
   * Update Swedish (sv) program and manpage translation, again from
     Daniel Nylander. (mh) Closes: #352740, #352742
+  * Update Italian (it) program and manpage translation.
+    Thanks to Luca Monducci. (mh) Closes: #353467
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 15 Feb 2006 08:10:45 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 19 Feb 2006 18:15:51 +0000
 
 adduser (3.83) unstable; urgency=low
 
