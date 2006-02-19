@@ -1,6 +1,5 @@
-adduser (3.83.0) UNRELEASED; urgency=low
+adduser (3.84) unstable; urgency=low
 
-  * NOT RELEASED YET
   * Fixed warning when using --verbose, which has independently been
     spotted by Paul Slootman and has been reported later by Kevin B.
     McCarty. (jh) Closes: #353032
@@ -11,7 +10,7 @@ adduser (3.83.0) UNRELEASED; urgency=low
   * Update Italian (it) program and manpage translation.
     Thanks to Luca Monducci. (mh) Closes: #353467
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 19 Feb 2006 18:15:51 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 19 Feb 2006 18:19:15 +0000
 
 adduser (3.83) unstable; urgency=low
 
