@@ -197,6 +197,7 @@ sub preseed_config {
   $configref->{"setgid_home"} = "no";
   $configref->{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bin/.* ^/boot/.* ^/dev/.* ^/lib/.* ^/proc/.* ^/root/.* ^/sbin/.* ^/tmp/.* ^/sys/.* ^/srv/.* ^/opt/.* ^/initrd/.* ^/usr/.* ^/var/.*";
   $configref->{"name_regex"} = "^[a-z][-a-z0-9]*\$";
+  $configref->{"exclude_fstypes"} = "(proc|sysfs|usbfs|devpts|tmpfs)";
 
   foreach( @$conflistref ) {
       read_config($_,$configref);
