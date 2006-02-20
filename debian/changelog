@@ -1,9 +1,10 @@
 adduser (3.84.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
-  * Add unversioned Replaces for manpages-it, see #353666.
+  * Add versioned Replaces for manpages-it. Thanks to Marco Presi and
+    Francesco Paolo Lovergine. (mh) Closes: #353666.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 20 Feb 2006 09:39:14 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 20 Feb 2006 21:35:29 +0100
 
 adduser (3.84) unstable; urgency=low
 
