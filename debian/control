@@ -10,7 +10,7 @@ Package: adduser
 Architecture: all
 Depends: perl-base (>=5.6.0), passwd (>= 1:4.0.12), debconf | debconf-2.0
 Suggests: liblocale-gettext-perl, perl-modules
-Replaces: manpages-pl (<= 20051117-1)
+Replaces: manpages-pl (<= 20051117-1), manpages-it
 Description: Add and remove users and groups
  This package includes the adduser and deluser commands for creating
  and removing users.
