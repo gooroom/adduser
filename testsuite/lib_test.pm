@@ -1,6 +1,19 @@
 #!/usr/bin/perl -w
 
 use strict;
+use Debian::AdduserCommon;
+
+
+# helper routines
+
+my %add_config;
+my %del_config;
+
+preseed_config(("/etc/adduser.conf"),\%add_config);
+preseed_config(("/etc/deluser.conf"),\%del_config);
+
+my $user_prefix = "addusertest";
+
 
 
 sub assert {
@@ -11,10 +24,68 @@ sub assert {
   }
 }
 
+sub find_unused_uid {
+  my ($mode) = @_;
+  my $low_uid, my $high_uid;
+  if ($mode =~ /"user"/i) {
+    $low_uid = $add_config{"first_uid"};
+    $high_uid = $add_config{"last_uid"};
+  } else {
+    $low_uid = $add_config{"first_system_uid"};
+    $high_uid = $add_config{"last_system_uid"};
+  }
+  setpwent();
+  my $uid = $low_uid;
+  while (($uid <= $high_uid) || (defined(getpwuid($uid)))) {$uid++;}
+  endpwent();
+  
+  if (($uid <= $high_uid) && (defined(getpwuid($uid)))) {
+    return (getpwuid($uid))[2];
+  }
+  else {
+    print "Haven't found a unused uid in range ($low_uid - $high_uid)\nExiting ...\n";
+    exit 1;
+  }
+}
+
+sub find_unused_username {
+  my $i = 1;
+  setpwent();
+  while (defined(getpwnam("$user_prefix$i"))) {$i++;}
+  endpwent();
+  return "$user_prefix$i";
+}
+
+sub find_unused_gid {
+  my ($mode) = @_;
+  my $low_gid, my $high_gid;
+  if ($mode =~ /"user"/i) {
+    $low_gid = $add_config{"first_gid"};
+    $high_gid = $add_config{"last_gid"};
+  } else {
+    $low_gid = $add_config{"first_system_gid"};
+    $high_gid = $add_config{"last_system_gid"};
+  }
+  setgrent();
+  my $gid = $low_gid;
+  while (($gid <= $high_gid) || (defined(getgrgid($gid)))) {$gid++;}
+  endgrent();
+  
+  if (($gid <= $high_gid) && (defined(getgrgid($gid)))) {
+    return (getgrgid($gid))[2];
+  }
+  else {
+    print "Haven't found a unused gid in range ($low_gid - $high_gid)\nExiting ...\n";
+    exit 1;
+  }
+}
+
+# checking routines
+
 sub check_user_exist {
   my ($username,$uid) = @_;
   
-  my @ent = getpwname ($username);
+  my @ent = getpwnam ($username);
   if (!@ent) {
 	print "user $username does not exist\n";
 	exit 1;
@@ -27,10 +98,14 @@ sub check_user_exist {
 }
 
 sub check_homedir_exist {
-  my ($username) = @_;
+  my ($username, $homedir) = @_;
   my $dir = (getpwnam($username))[7];
-  if (! -f $dir) {
-    print "check_homedir: there's no home directory $dir\n";
+  if ((defined($homedir)) && (! $dir != $homedir)) {
+    print "check_homedir_exist: wrong homedir ($homedir != $dir)\n";
+    return 1;
+  }
+  if (! -d $dir) {
+    print "check_homedir_exist: there's no home directory $dir\n";
     return 1;
   }
   return 0;
