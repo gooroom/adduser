@@ -328,8 +328,9 @@ if ($action eq "addsysuser") {
 	exit 1;
     }
 
-    $new_gid = $nogroup_id
-	if (!$ingroup_name && !defined($new_gid) && !$make_group_also);
+    if (!$ingroup_name && !defined($new_gid) && !$make_group_also) {
+      $new_gid = $nogroup_id;
+    }
     check_user_group(1);
 
     if (!defined($new_uid) && $make_group_also) {
@@ -340,7 +341,8 @@ if ($action eq "addsysuser") {
 	    printf STDERR gtx("No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"),$config{"first_system_uid"},$config{"last_system_uid"};
             dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
-        $new_gid = &first_avail_gid($config{"first_system_gid"},$config{"last_system_gid"});
+        $new_gid = &first_avail_gid($config{"first_system_gid"},
+	                            $config{"last_system_gid"});
 	$ingroup_name = $new_name;
     }
     elsif (!defined($new_uid) && !$make_group_also) {
@@ -425,7 +427,8 @@ if ($action eq "adduser") {
             printf STDERR gtx("No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"),$first_uid,$last_uid;
 	    dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
-	$new_gid = $new_uid;
+	$new_gid = &first_avail_gid($config{"first_gid"}, 
+	                            $config{"last_gid"});
 	$ingroup_name = $new_name;
     }
     elsif (!defined($new_uid) && !$make_group_also) {
@@ -579,6 +582,7 @@ sub create_homedir {
 	  while (<FIND>) {
 	      chop;
 	      next if ($_ eq ".");
+	      next if ($_ =~ /\.dpkg-/);
 	      &copy_to_dir($config{"skel"}, $_, $home_dir, $new_uid,
 			    $new_gid, ($config{"setgid_home"} =~ /yes/i));
 	  }
