@@ -111,6 +111,23 @@ sub check_homedir_exist {
   return 0;
 }
 
+sub check_no_homedir_exist {
+  my ($username, $homedir) = @_;
+  my $dir = (getpwnam($username))[7];
+
+  if ((defined($homedir)) && (! $dir != $homedir)) {
+    print "check_no_homedir_exist: wrong homedir ($homedir != $dir)\n";
+    return 1;
+  }
+
+  if ( -d $dir) {
+    print "check_no_homedir_exist: there's a homedir! ($homedir)\n";
+    return 1;
+  }
+  return 0; 
+}
+
+
 sub check_group_exist {
   my ($groupname) = @_;
   if (!defined(getgrnam($groupname))) {
@@ -119,5 +136,16 @@ sub check_group_exist {
   }
   return 0;
 }
+
+sub check_user_in_group {
+  my ($user,$group) = @_;
+  my ($name,$passwd,$gid,$members) = getgrnam ($group);
+  foreach  my $u (split(" ",$members)) {
+    if ( $u eq $user) { return 0; }
+  }
+  print "check_user_in_group: User $user not in group $group\n";
+  return 1;
+}
+
 
 return 1
