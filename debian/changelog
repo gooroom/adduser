@@ -6,7 +6,7 @@ adduser (3.84.0) UNRELEASED; urgency=low
   * Apply a bunch of patches from Stephen Gran, which look like they
     finish unfinished work.
   * introduce skel_ignore_regex, patch by Stephen Gran. (mh)
-    Closes: #121262
+    Closes: #121262, #354459
 
  -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 26 Feb 2006 15:18:42 +0000
 
