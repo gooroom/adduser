@@ -577,12 +577,12 @@ sub create_homedir {
 
       if ($config{"skel"} && $copy_skeleton) {
 	  printf gtx("Copying files from `%s'\n"),$config{skel} if $verbose;
-	  open(FIND, "cd $config{skel}; find .  ! -name '*.dpkg-*' -print |")
+	  open(FIND, "cd $config{skel}; find .  -print |")
 	      || &cleanup("fork for find: $!\n");
 	  while (<FIND>) {
 	      chop;
 	      next if ($_ eq ".");
-	      next if ($_ =~ /\.dpkg-/);
+	      next if ($_ =~ qr/$config{skel_ignore_regex}/ );
 	      &copy_to_dir($config{"skel"}, $_, $home_dir, $new_uid,
 			    $new_gid, ($config{"setgid_home"} =~ /yes/i));
 	  }

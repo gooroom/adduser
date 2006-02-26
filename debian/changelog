@@ -5,8 +5,10 @@ adduser (3.84.0) UNRELEASED; urgency=low
     Francesco Paolo Lovergine. (mh) Closes: #353666, #353672.
   * Apply a bunch of patches from Stephen Gran, which look like they
     finish unfinished work.
+  * introduce skel_ignore_regex, patch by Stephen Gran. (mh)
+    Closes: #121262
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 26 Feb 2006 14:59:48 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 26 Feb 2006 15:18:42 +0000
 
 adduser (3.84) unstable; urgency=low
 

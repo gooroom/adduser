@@ -110,8 +110,13 @@ User names are checked against this regular expression. If the name
 doesn't match this regexp, user creation is refused unless
 --force-badname is set. With --force-badname set, only weak checks are
 performed. The default is the most conservative ^[a-z][-a-z0-9]*$.
+.TP
+\fBSKEL_IGNORE_REGEX\fB
+Files in /etc/skel/ are checked against this regex, and not copied to
+the newly created home directory if they match.  This is by default set
+to the regular expression matching files left over from unmerged config
+files (dpkg-(old|new|dist)).
 .SH FILES
 .I /etc/adduser.conf
 .SH SEE ALSO
 adduser(8), addgroup(8), deluser(8), delgroup(8)
-
