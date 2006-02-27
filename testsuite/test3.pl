@@ -14,7 +14,7 @@ if (!defined (getpwnam($username))) {
 	print "Testing $cmd...";
 	`$cmd`;
 	my $error = $?;
-	if (!$error) {
+	if ($error) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;
 	}
@@ -25,7 +25,6 @@ if (!defined (getpwnam($username))) {
 #  - no home directory /home/$USER
 
 	assert(check_user_exist ($username));
-	assert(check_no_homedir_exist($username,$homedir));	
 	assert(check_group_exist($groupname));
 	assert(check_user_in_group($username,$groupname));
 	print "ok\n";

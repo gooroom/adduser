@@ -15,7 +15,7 @@ if (!defined (getpwnam($username))) {
 	print "Testing $cmd...";
 	`$cmd`;
 	my $error = $?;
-	if (!$error) {
+	if ($error) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;
 	}

@@ -36,11 +36,11 @@ sub find_unused_uid {
   }
   setpwent();
   my $uid = $low_uid;
-  while (($uid <= $high_uid) || (defined(getpwuid($uid)))) {$uid++;}
+  while (($uid <= $high_uid) && (defined(getpwuid($uid)))) {$uid++;}
   endpwent();
   
-  if (($uid <= $high_uid) && (defined(getpwuid($uid)))) {
-    return (getpwuid($uid))[2];
+  if (($uid <= $high_uid) && (! defined(getpwuid($uid)))) {
+    return $uid;
   }
   else {
     print "Haven't found a unused uid in range ($low_uid - $high_uid)\nExiting ...\n";
@@ -68,11 +68,11 @@ sub find_unused_gid {
   }
   setgrent();
   my $gid = $low_gid;
-  while (($gid <= $high_gid) || (defined(getgrgid($gid)))) {$gid++;}
+  while (($gid <= $high_gid) &&  (defined(getgrgid($gid)))) { $gid++;}
   endgrent();
   
-  if (($gid <= $high_gid) && (defined(getgrgid($gid)))) {
-    return (getgrgid($gid))[2];
+  if (($gid <= $high_gid) && (! defined(getgrgid($gid)))) {
+    return $gid;
   }
   else {
     print "Haven't found a unused gid in range ($low_gid - $high_gid)\nExiting ...\n";
@@ -90,8 +90,8 @@ sub check_user_exist {
 	print "user $username does not exist\n";
 	exit 1;
   }
-  if ((defined($uid)) && ($ent[2] == $uid)) {
-	print "uid $uid does not match %s",$ent[2];
+  if ((! defined($uid)) || ($ent[2] != $uid)) {
+	printf "uid $uid does not match %s",$ent[2];
 	return 1;
   }
   return 0;
@@ -100,7 +100,7 @@ sub check_user_exist {
 sub check_homedir_exist {
   my ($username, $homedir) = @_;
   my $dir = (getpwnam($username))[7];
-  if ((defined($homedir)) && (! $dir != $homedir)) {
+  if ((defined($homedir)) && (! $dir eq $homedir)) {
     print "check_homedir_exist: wrong homedir ($homedir != $dir)\n";
     return 1;
   }
@@ -153,6 +153,26 @@ sub check_user_in_group {
   }
   
   print "check_user_in_group: User $user not in group $group\n";
+  return 1;
+}
+
+
+sub check_user_has_gid {
+  my ($user,$gid) = @_;
+  my ($name,$passwd,$group_gid,$members) = getgrgid($gid);
+  #print "check_user_has_gid: group $group = $members\n";
+  foreach  my $u (split(" ",$members)) {
+    #print "check_user_has_gid: Testing user $u for group $group\n";
+    if ( $u eq $user) { return 0; }
+  }
+  # ok, but $group is maybe $user's primary group ...
+  my @pw = getpwnam($user);
+  my $primary_gid = $pw[3];
+  if (getgrgid($primary_gid) eq $name) {
+    return 0;
+  }
+  
+  print "check_user_has_gid: User $user has no gid $gid\n";
   return 1;
 }
 
