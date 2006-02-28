@@ -5,11 +5,9 @@ use strict;
 
 use lib_test;
 
-my $groupname = "nogroup";
 my $username = find_unused_username();
-my $want_uid = find_unused_uid("system");
 
-my $cmd = "adduser --system --uid $want_uid $username";
+my $cmd = "adduser --system $username";
 
 
 if (!defined (getpwnam($username))) {
@@ -20,16 +18,20 @@ if (!defined (getpwnam($username))) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;
 	}
+	`$cmd`;
+	my $error = $?;
+	if ($error) {
+          print "failed\n double execution with same parameters showed an error (return code $error)\n";
+	  exit $error;
+	}
 
 # expect:
-#  - a new user $USER with uid $want_uid
+#  - a new user $USER
 #  - added to group nogroup
-#  - a home directory /home/$USER
+#  - a home directory
 
-	assert(check_user_exist ($username, $want_uid));
+	assert(check_user_exist ($username,0));
 	assert(check_homedir_exist ($username));
-	assert(check_group_exist($groupname));
-	assert(check_user_in_group($username,$groupname));
 	print "ok\n";
 }
   

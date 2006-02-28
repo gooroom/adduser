@@ -22,7 +22,7 @@ if (!defined (getpwnam($username))) {
 	}
 
 # expect:
-#  - a new user $USER
+#  - a new user $USER with uid $want_uid and gid 0
 #  - added to group nogroup
 #  - no home directory /home/$USER
 
