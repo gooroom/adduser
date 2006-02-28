@@ -84,13 +84,13 @@ sub find_unused_gid {
 
 sub check_user_exist {
   my ($username,$uid) = @_;
-  
+ 
   my @ent = getpwnam ($username);
   if (!@ent) {
 	print "user $username does not exist\n";
 	exit 1;
   }
-  if ((! defined($uid)) || ($ent[2] != $uid)) {
+  if (( defined($uid)) && ($ent[2] != $uid)) {
 	printf "uid $uid does not match %s",$ent[2];
 	return 1;
   }
