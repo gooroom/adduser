@@ -91,7 +91,7 @@ sub check_user_exist {
 	exit 1;
   }
   if (( defined($uid)) && ($ent[2] != $uid)) {
-	printf "uid $uid does not match %s",$ent[2];
+	printf "uid $uid does not match %s\n",$ent[2];
 	return 1;
   }
   return 0;

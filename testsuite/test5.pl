@@ -13,7 +13,7 @@ my $cmd = "adduser --system --uid $want_uid $username";
 
 
 if (!defined (getpwnam($username))) {
-	print "Testing $cmd...";
+	print "Testing $cmd... ";
 	`$cmd`;
 	my $error = $?;
 	if ($error) {

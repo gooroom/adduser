@@ -12,7 +12,7 @@ my $cmd = "adduser --system --home $homedir --no-create-home $username";
 
 
 if (!defined (getpwnam($username))) {
-	print "Testing $cmd...";
+	print "Testing $cmd... ";
 	`$cmd`;
 	my $error = $?;
 	if ($error) {

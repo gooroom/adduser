@@ -11,7 +11,7 @@ my $cmd = "adduser --system $username";
 
 
 if (!defined (getpwnam($username))) {
-	print "Testing $cmd...";
+	print "Testing $cmd... ";
 	`$cmd`;
 	my $error = $?;
 	if ($error) {
@@ -19,7 +19,7 @@ if (!defined (getpwnam($username))) {
 	  exit $error;
 	}
 	`$cmd`;
-	my $error = $?;
+	$error = $?;
 	if ($error) {
           print "failed\n double execution with same parameters showed an error (return code $error)\n";
 	  exit $error;
@@ -30,7 +30,7 @@ if (!defined (getpwnam($username))) {
 #  - added to group nogroup
 #  - a home directory
 
-	assert(check_user_exist ($username,0));
+	assert(check_user_exist ($username));
 	assert(check_homedir_exist ($username));
 	print "ok\n";
 }
