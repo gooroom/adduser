@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser manpages italian translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-19 18:19+0000\n"
+"POT-Creation-Date: 2006-03-01 12:03+0000\n"
 "PO-Revision-Date: 2006-02-13 21:11+0100\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@list.linux.it>\n"
@@ -213,7 +213,7 @@ msgid ""
 msgstr ""
 
 # type: SH
-#: ../deluser.conf.5:71 ../adduser.conf.5:113 ../deluser.8:126
+#: ../deluser.conf.5:71 ../adduser.conf.5:119 ../deluser.8:126
 #: ../adduser.8:260
 #, no-wrap
 msgid "FILES"
@@ -225,7 +225,7 @@ msgid "I</etc/deluser.conf>"
 msgstr "I</etc/deluser.conf>"
 
 # type: SH
-#: ../deluser.conf.5:73 ../adduser.conf.5:115 ../deluser.8:128
+#: ../deluser.conf.5:73 ../adduser.conf.5:121 ../deluser.8:128
 #: ../adduser.8:262
 #, no-wrap
 msgid "SEE ALSO"
@@ -481,13 +481,28 @@ msgstr ""
 "in questo caso viene effettuato un controllo più debole. Il valore "
 "predefinito, scleto con molta prudenza, è ^[a-z][-a-z0-9]*$."
 
+# type: TP
+#: ../adduser.conf.5:113
+#, fuzzy, no-wrap
+msgid "B<SKEL_IGNORE_REGEX>"
+msgstr "B<NAME_REGEX>"
+
 # type: Plain text
-#: ../adduser.conf.5:115
+#: ../adduser.conf.5:119
+msgid ""
+"Files in /etc/skel/ are checked against this regex, and not copied to the "
+"newly created home directory if they match.  This is by default set to the "
+"regular expression matching files left over from unmerged config files (dpkg-"
+"(old|new|dist))."
+msgstr ""
+
+# type: Plain text
+#: ../adduser.conf.5:121
 msgid "I</etc/adduser.conf>"
 msgstr "I</etc/adduser.conf>"
 
 # type: Plain text
-#: ../adduser.conf.5:117
+#: ../adduser.conf.5:122
 msgid "adduser(8), addgroup(8), deluser(8), delgroup(8)"
 msgstr "adduser(8), addgroup(8), deluser(8), delgroup(8)"
 

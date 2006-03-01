@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk_uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-19 18:19+0000\n"
+"POT-Creation-Date: 2006-03-01 12:03+0000\n"
 "PO-Revision-Date: 2005-02-08 20:26+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -103,7 +103,7 @@ msgstr "Додається група \"%s\" (%s)...\n"
 msgid "Done.\n"
 msgstr "Завершено.\n"
 
-#: ../adduser:263 ../adduser:666
+#: ../adduser:263 ../adduser:670
 #, perl-format
 msgid "The group `%s' already exists.\n"
 msgstr "Група \"%s\" вже існує.\n"
@@ -118,7 +118,7 @@ msgstr "Немає вільного GID на проміжку "
 msgid "The user `%s' does not exist.\n"
 msgstr "Користувач \"%s\" не існує.\n"
 
-#: ../adduser:293 ../adduser:673 ../deluser:337 ../deluser:376
+#: ../adduser:293 ../adduser:677 ../deluser:337 ../deluser:376
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Група \"%s\" не існує.\n"
@@ -143,161 +143,161 @@ msgstr "Користувач \"%s\" вже існує як системний к
 msgid "The user `%s' already exists with a different uid. Aborting\n"
 msgstr "Користувач \"%s\" вже існує як системний користувач. Виходимо...\n"
 
-#: ../adduser:340
+#: ../adduser:341
 #, fuzzy, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
 "LAST_SYS_UID).\n"
 msgstr "Немає вільної пари UID/GID на проміжку "
 
-#: ../adduser:341 ../adduser:352 ../adduser:426 ../adduser:437
+#: ../adduser:342 ../adduser:354 ../adduser:428 ../adduser:440
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "Користувач \"%s\" не був створений.\n"
 
-#: ../adduser:351
+#: ../adduser:353
 #, fuzzy, perl-format
 msgid ""
 "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 msgstr "Немає вільного UID на проміжку "
 
-#: ../adduser:356 ../adduser:362 ../adduser:441 ../adduser:447
+#: ../adduser:358 ../adduser:364 ../adduser:444 ../adduser:450
 msgid "Internal error"
 msgstr "Внутрішня помилка"
 
-#: ../adduser:364
+#: ../adduser:366
 #, fuzzy, perl-format
 msgid "Adding system user `%s' with uid %s...\n"
 msgstr "Додається системний користувач \"%s\"...\n"
 
-#: ../adduser:369 ../adduser:452
+#: ../adduser:371 ../adduser:455
 #, perl-format
 msgid "Adding new group `%s' (%s).\n"
 msgstr "Додається нова група \"%s\" (%s).\n"
 
-#: ../adduser:375 ../adduser:458
+#: ../adduser:377 ../adduser:461
 #, perl-format
 msgid "Adding new user `%s' (%s) with group `%s'.\n"
 msgstr "Додається новий користувач \"%s\" (%s) з групою \"%s\".\n"
 
-#: ../adduser:391
+#: ../adduser:393
 msgid ""
 "chage failed with return code 15, shadow not enabled, password aging cannot "
 "be set. Continuing.\n"
 msgstr ""
 
-#: ../adduser:417
+#: ../adduser:419
 #, perl-format
 msgid "Adding user `%s'...\n"
 msgstr "Додається користувач \"%s\"...\n"
 
-#: ../adduser:425
+#: ../adduser:427
 #, fuzzy, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Немає вільної пари UID/GID на проміжку "
 
-#: ../adduser:436
+#: ../adduser:439
 #, fuzzy, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Немає вільного UID на проміжку "
 
 #. hm, error, should we break now?
-#: ../adduser:478
+#: ../adduser:481
 msgid "Permission denied\n"
 msgstr ""
 
-#: ../adduser:479
+#: ../adduser:482
 msgid "invalid combination of options\n"
 msgstr ""
 
-#: ../adduser:480
+#: ../adduser:483
 msgid "unexpected failure, nothing done\n"
 msgstr ""
 
-#: ../adduser:481
+#: ../adduser:484
 msgid "unexpected failure, passwd file missing\n"
 msgstr ""
 
-#: ../adduser:482
+#: ../adduser:485
 msgid "passwd file busy, try again\n"
 msgstr ""
 
-#: ../adduser:483
+#: ../adduser:486
 msgid "invalid argument to option\n"
 msgstr ""
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale noexpr" which regular
 #. expression will be checked to find positive answer.
-#: ../adduser:488
+#: ../adduser:491
 msgid "Try again(Y/n)?"
 msgstr ""
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale yesexpr" which regular
 #. expression will be checked to find positive answer.
-#: ../adduser:512
+#: ../adduser:515
 msgid "Is the information correct? [y/N] "
 msgstr "Чи вірні ці дані? [y/N] "
 
-#: ../adduser:519
+#: ../adduser:522
 #, perl-format
 msgid "Setting quota from `%s'.\n"
 msgstr "Встановлюються обмеження із \"%s\".\n"
 
-#: ../adduser:552
+#: ../adduser:555
 #, fuzzy, perl-format
 msgid "Not creating home directory `%s'.\n"
 msgstr "Домашня директорія не створюється.\n"
 
-#: ../adduser:555
+#: ../adduser:558
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "Домашня директорія \"%s\" вже існує. Не копіюється з \"%s\"\n"
 
-#: ../adduser:561
+#: ../adduser:564
 msgid ""
 "Warning: that home directory does not belong to the user you are currently "
 "creating\n"
 msgstr ""
 
-#: ../adduser:566
+#: ../adduser:569
 #, perl-format
 msgid "Creating home directory `%s'.\n"
 msgstr "Створюється домашня директорія \"%s\".\n"
 
-#: ../adduser:576
+#: ../adduser:579
 #, perl-format
 msgid "Copying files from `%s'\n"
 msgstr "Копіюються файли з \"%s\"\n"
 
-#: ../adduser:656
+#: ../adduser:660
 #, perl-format
 msgid "The user `%s' already exists, and is not a system user.\n"
 msgstr "Користувач \"%s\" вже існує і не є системним користувачем.\n"
 
-#: ../adduser:658
+#: ../adduser:662
 #, perl-format
 msgid "The user `%s' already exists.\n"
 msgstr "Користувач \"%s\" вже існує.\n"
 
-#: ../adduser:661
+#: ../adduser:665
 #, perl-format
 msgid "The UID %s is already in use.\n"
 msgstr "GID %s вже використовується.\n"
 
-#: ../adduser:668
+#: ../adduser:672
 #, perl-format
 msgid "The GID %s is already in use.\n"
 msgstr "GID %s вже використовується.\n"
 
-#: ../adduser:675
+#: ../adduser:679
 #, perl-format
 msgid "The GID %s does not exist.\n"
 msgstr "GID %s не існує.\n"
 
-#: ../adduser:731
+#: ../adduser:735
 msgid ""
 "To avoid problems, the username should consist of\n"
 "letters, digits, underscores, periods and dashes. For compatibility with\n"
@@ -307,11 +307,11 @@ msgstr ""
 "літер, цифр, знаків підкреслювання, крапок та дефісів. Для сумісності з\n"
 "Samba, в кінці імені користувача також може знаходитись знак $\n"
 
-#: ../adduser:738
+#: ../adduser:742
 msgid "Allowing use of questionable username.\n"
 msgstr "Дозволяється використання сумнівного імені користувача.\n"
 
-#: ../adduser:742
+#: ../adduser:746
 #, fuzzy
 msgid ""
 "Please enter a username matching the regular expression configured\n"
@@ -322,36 +322,36 @@ msgstr ""
 "конфігураційною змінною name_regex. Використовуйте опцію --force-badname\n"
 "щоб пом'якшити цю перевірку, або встановіть name_regex.\n"
 
-#: ../adduser:754
+#: ../adduser:758
 #, fuzzy, perl-format
 msgid "Selecting uid from range %s to %s.\n"
 msgstr "Вибір із %s %s (%s).\n"
 
-#: ../adduser:768
+#: ../adduser:772
 #, fuzzy, perl-format
 msgid "Selecting gid from range %s to %s.\n"
 msgstr "Вибір із %s %s (%s).\n"
 
-#: ../adduser:810
+#: ../adduser:814
 msgid "Cleaning up.\n"
 msgstr ""
 
-#: ../adduser:812
+#: ../adduser:816
 #, perl-format
 msgid "Removing directory `%s'\n"
 msgstr "Видаляється директорія \"%s\"\n"
 
-#: ../adduser:816
+#: ../adduser:820
 #, perl-format
 msgid "Removing user `%s'.\n"
 msgstr "Видаляється користувач \"%s\".\n"
 
-#: ../adduser:820
+#: ../adduser:824
 #, perl-format
 msgid "Removing group `%s'.\n"
 msgstr "Видаляється група \"%s\".\n"
 
-#: ../adduser:853
+#: ../adduser:857
 #, fuzzy
 msgid ""
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
