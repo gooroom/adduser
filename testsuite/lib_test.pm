@@ -97,6 +97,17 @@ sub check_user_exist {
   return 0;
 }
 
+sub check_user_not_exist {
+  my ($username) = @_;
+
+  if (defined(getpwnam($username))) {
+    return 1;
+  }
+  return 0;
+}
+
+
+#####################
 sub check_homedir_exist {
   my ($username, $homedir) = @_;
   my $dir = (getpwnam($username))[7];
@@ -111,6 +122,18 @@ sub check_homedir_exist {
   return 0;
 }
 
+
+sub check_homedir_not_exist {
+  my ($username, $homedir) = @_;
+  my $dir = (getpwnam($username))[7];
+  if ( -d $dir) {
+    print "check_homedir_not_exist: there's a home directory $dir\n";
+    return 1;
+  }
+  return 0;
+}
+
+###################################
 sub check_no_homedir_exist {
   my ($username, $homedir) = @_;
   my $dir = (getpwnam($username))[7];
