@@ -124,31 +124,14 @@ sub check_homedir_exist {
 
 
 sub check_homedir_not_exist {
-  my ($username, $homedir) = @_;
-  my $dir = (getpwnam($username))[7];
-  if ( -d $dir) {
-    print "check_homedir_not_exist: there's a home directory $dir\n";
+  my ($homedir) = @_;
+  if ( -d $homedir) {
+    print "check_homedir_not_exist: there's a home directory $homedir\n";
     return 1;
   }
   return 0;
 }
 
-###################################
-sub check_no_homedir_exist {
-  my ($username, $homedir) = @_;
-  my $dir = (getpwnam($username))[7];
-
-  if ((defined($homedir)) && (! $dir eq $homedir)) {
-    print "check_no_homedir_exist: wrong homedir ($homedir != $dir)\n";
-    return 1;
-  }
-
-  if ( -d $dir) {
-    print "check_no_homedir_exist: there's a homedir! ($homedir)\n";
-    return 1;
-  }
-  return 0; 
-}
 
 
 sub check_group_exist {

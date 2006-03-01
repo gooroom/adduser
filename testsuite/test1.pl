@@ -26,7 +26,8 @@ if (!defined (getpwnam($username))) {
 }
 
 $cmd = "deluser --remove-home $username";
-if (!defined (getpwnam($username))) {
+if (defined (getpwnam($username))) {
+  	my $homedir = (getpwnam($username))[7];
 	print "Testing $cmd... ";
 	`$cmd`;
 	my $error = $?;
@@ -35,7 +36,7 @@ if (!defined (getpwnam($username))) {
 	  exit $error;
 	}
 	assert(check_user_not_exist ($username));
-	assert(check_homedir_not_exist($username));	
+	assert(check_homedir_not_exist($homedir));	
 	print "ok\n";
 }
 

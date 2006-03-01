@@ -7,7 +7,7 @@ use lib_test;
 
 my $groupname = "nogroup";
 my $username = find_unused_username();
-my $homedir = "/var/$username";
+my $homedir = "/home/$username";
 my $cmd = "adduser --system --home $homedir $username";
 
 
@@ -25,4 +25,17 @@ if (!defined (getpwnam($username))) {
 	assert(check_user_in_group ($username,$groupname));
 	print "ok\n";
 }
-  
+
+$cmd = "deluser --remove-home $username";
+if (defined (getpwnam($username))) {
+	print "Testing $cmd... ";
+	`$cmd`;
+	my $error = $?;
+	if ($error) {
+	  print "failed\n  deluser returned an errorcode != 0 ($error)\n";
+	  exit $error;
+	}
+	assert(check_user_not_exist ($username));
+	assert(check_homedir_not_exist($homedir));	
+	print "ok\n";
+}
