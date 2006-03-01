@@ -9,8 +9,9 @@ adduser (3.84.0) UNRELEASED; urgency=low
     Closes: #121262, #354459
   * Initialize configref->{"exclude_fstypes"} in AdduserCommon.pm.
     Thanks to Nobuhiro KUSUNO. Closes: #354823
+  * Add perl-based test suite, shell scripts seem to be no-op now. (jh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 26 Feb 2006 15:18:42 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed,  1 Mar 2006 13:02:00 +0100
 
 adduser (3.84) unstable; urgency=low
 
