@@ -7,6 +7,8 @@ adduser (3.84.0) UNRELEASED; urgency=low
     finish unfinished work.
   * introduce skel_ignore_regex, patch by Stephen Gran. (mh)
     Closes: #121262, #354459
+  * Initialize configref->{"exclude_fstypes"} in AdduserCommon.pm.
+    Thanks to Nobuhiro KUSUNO. Closes: #354823
 
  -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 26 Feb 2006 15:18:42 +0000
 
