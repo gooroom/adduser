@@ -1,3 +1,9 @@
+adduser (3.85.0) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  4 Mar 2006 08:39:31 +0000
+
 adduser (3.85) unstable; urgency=low
 
   * Add versioned Replaces for manpages-it. Thanks to Marco Presi and
