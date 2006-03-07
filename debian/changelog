@@ -1,8 +1,10 @@
 adduser (3.85.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * Only check $! after calling symlink() if symlink() failed.
+    Patch from Ubuntu, thanks to Colin Watson. (mh) Closes: #355708
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  4 Mar 2006 08:39:31 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue,  7 Mar 2006 15:45:41 +0100
 
 adduser (3.85) unstable; urgency=low
 

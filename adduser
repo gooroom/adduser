@@ -693,8 +693,7 @@ sub copy_to_dir {
 	my $error="";
 	$)="$newg";
 	$>="$newu";
-	symlink("$target", "$todir/$file");
-	$error="$!";
+	symlink("$target", "$todir/$file") or $error="$!";
         $>="$curuid";
         $)="$curgid";
 	if( "$error" ne "" ) {
