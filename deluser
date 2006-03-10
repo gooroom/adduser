@@ -236,7 +236,9 @@ if($action eq "deluser") {
 	      my @temparray = split;
 	      my $fstype = $temparray[4];
 	      my $exclude_fstypes = $config{"exclude_fstypes"};
-	      next if ($fstype =~ /$exclude_fstypes/);
+	      if (defined($exclude_fstypes)) {
+	      	next if ($fstype =~ /$exclude_fstypes/);
+	      }
 	      push @mountpoints,$temparray[2];
       }
       close(MOUNT) or die (gtx("can't close mount pipe: %s\n",$!));

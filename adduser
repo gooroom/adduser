@@ -810,7 +810,8 @@ sub user_is_member {
 
 
 sub cleanup {
-    print (gtx("Cleaning up.\n"));
+    my ($msg) = @_;
+    printf (gtx("Stopped: %s\n",$msg));
     if ($undohome) {
 	printf (gtx("Removing directory `%s'\n"),$undohome);
 	&systemcall('rm', '-rf', $undohome);
