@@ -31,6 +31,7 @@ my $version = "VERSION";
 ####################
 
 use warnings;
+use strict;
 use Debian::AdduserCommon;
 use Getopt::Long;
 
@@ -62,16 +63,46 @@ setlocale(LC_MESSAGES, "");
 textdomain("adduser");
 my $yesexpr = langinfo(YESEXPR());
 
-our $verbose = 1;		# should we be verbose?
-my $allow_badname = 0;		# should we allow bad names?
-my $ask_passwd = 1;		# ask for a passwd? 
-my $disabled_login = 0;		# leave the new account disabled?
 my %config;			# configuration hash
 
 my @defaults = ("/etc/adduser.conf");
 my $nogroup_id = getgrnam("nogroup") || 65534;
 $0 =~ s+.*/++; 
 
+our $verbose = 1;		# should we be verbose?
+my $allow_badname = 0;		# should we allow bad names?
+my $ask_passwd = 1;		# ask for a passwd? 
+my $disabled_login = 0;		# leave the new account disabled?
+
+our $configfile = undef;
+our $found_group_opt = undef;
+our $found_sys_opt = undef;
+our $ingroup_name = undef;
+our $new_firstuid = undef;
+our $new_gecos = undef;
+our $new_gid = undef;
+our $new_lastuid = undef;
+our $new_uid = undef;
+our $no_create_home = undef;
+our $special_home = undef;
+our $special_shell = undef;
+
+# Global variables we need later
+my $existing_user = undef;
+my $existing_group = undef;
+my $new_name = undef;
+my $make_group_also = 0;
+my $home_dir = undef;
+my $undohome = undef;
+my $undouser = undef;
+my $undogroup = undef;
+my $shell = undef;
+my $first_uid = undef;
+my $last_uid = undef;
+my $dir_mode = undef;
+my $perm = undef;
+
+my @names = undef;
 
 # Parse options, sanity checks
 GetOptions ("quiet" => sub { $verbose = 0 },
@@ -113,7 +144,7 @@ if (defined($found_sys_opt)) {
 ############################
 
 
-while (defined($arg = shift(@ARGV))) {
+while (defined(my $arg = shift(@ARGV))) {
   if (defined($names[0]) && $arg =~ /^--/) {
       die ("$0: ",gtx("No options allowed after names.\n"))
     } else {			# it's a username
@@ -134,7 +165,7 @@ if (@names == 0) {
       {
 	  print (gtx("Enter a username to add: "));
       }
-    chomp($answer=<STDIN>);
+    chomp(my $answer=<STDIN>);
     push(@names, $answer);
 }
 
@@ -513,7 +544,7 @@ if ($action eq "adduser") {
 	    # locale.  You can see by running "locale yesexpr" which regular
 	    # expression will be checked to find positive answer.
 	    print (gtx("Is the information correct? [y/N] "));
-	    chop ($answer=<STDIN>);
+	    chop (my $answer=<STDIN>);
 	    last if ($answer =~ m/$yesexpr/o);
 	}
     }
