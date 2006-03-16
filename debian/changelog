@@ -7,7 +7,7 @@ adduser (3.85.0) UNRELEASED; urgency=low
   * Update French (fr) manpage translation.
     Thanks to Nicolas François. (mh) Closes: #356253
   * Be more strict in user name checking.
-    Thanks to Jeroen van Wolffelaar. (mh) Closes: #357185
+    Thanks to Jeroen van Wolffelaar and Brendan O'Dea. (mh) Closes: #357185
 
  -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 16 Mar 2006 09:09:39 +0100
 
