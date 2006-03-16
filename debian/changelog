@@ -6,8 +6,10 @@ adduser (3.85.0) UNRELEASED; urgency=low
   * Print error when failing, thanks to Ted Percival. (jh) Closes: #356162
   * Update French (fr) manpage translation.
     Thanks to Nicolas François. (mh) Closes: #356253
+  * Be more strict in user name checking.
+    Thanks to Jeroen van Wolffelaar. (mh) Closes: #357185
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 12 Mar 2006 15:38:28 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 16 Mar 2006 09:09:39 +0100
 
 adduser (3.85) unstable; urgency=low
 
