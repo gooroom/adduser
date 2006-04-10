@@ -262,7 +262,7 @@ if($action eq "deluser") {
 	    }
 	  }
 	  push(@files, $File::Find::name) 
-	    if(-f $File::Find::name);
+	    if(-f $File::Find::name || -l $File::Find::name);
 	  push(@dirs, $File::Find::name)
 	    if(-d $File::Find::name);
 	} # sub home_match

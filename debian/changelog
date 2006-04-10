@@ -1,5 +1,6 @@
 adduser (3.85.0) UNRELEASED; urgency=low
 
+  [ Marc Haber ]
   * NOT RELEASED YET
   * Only check $! after calling symlink() if symlink() failed.
     Patch from Ubuntu, thanks to Colin Watson. (mh) Closes: #355708
@@ -11,7 +12,11 @@ adduser (3.85.0) UNRELEASED; urgency=low
   * Be more strict in user name checking.
     Thanks to Jeroen van Wolffelaar and Brendan O'Dea. (mh) Closes: #357185
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 10 Apr 2006 11:03:00 +0200
+  [ Joerg Hoh ]
+  * deluser: include symbolic links in backup. Patch from
+    Ubuntu.
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Mon, 10 Apr 2006 21:08:36 +0200
 
 adduser (3.85) unstable; urgency=low
 
