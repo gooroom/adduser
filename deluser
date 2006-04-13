@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!usr/bin/perl
 
 # deluser -- a utility to remove users from the system
 # delgroup -- a utilty to remove groups from the system
@@ -209,11 +209,11 @@ if($action eq "deluser") {
 	    if ( ($uid < $config{"first_system_uid"} ||
 		$uid > $config{"last_system_uid" } ) ) {
 		printf (gtx("The user `%s' is not a system account... Exiting.\n"), $user) if $verbose;
-		exit 0;
+		exit 1;
 	    }
         } else {
 	    printf (gtx("The user `%s' does not exist, but --system was given... Exiting.\n"), $user) if $verbose;
-	    exit 0;
+	    exit 2;
 	}
     }
     
@@ -346,7 +346,7 @@ if($action eq "delgroup") {
 	($gid < $config{"first_system_gid"} ||
 	 $gid > $config{"last_system_gid" } )) {
         printf (gtx("The group `%s' is not a system group... Exiting.\n"), $group) if $verbose;
-	exit 0;
+	exit 3;
     }
     if( $config{"only_if_empty"} && $members ne "") {
 	dief (gtx("The group `%s' is not empty!\n"),$group);

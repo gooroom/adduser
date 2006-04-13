@@ -123,6 +123,21 @@ for use in Debian package maintainer scripts.
 .TP
 .B \-\-version
 Display version and copyright information.
+.SH RETURN VALUE
+.TP
+.B 0
+The action was successfully executed.
+.TP
+.B 1
+The user to delete was not a system account. No action was performed.
+.TP
+.B 2
+There is no such user.
+.TP
+.B 3
+There is no such group.
+
+
 .SH FILES
 /etc/deluser.conf
 .SH "SEE ALSO"
