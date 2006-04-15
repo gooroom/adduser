@@ -11,6 +11,7 @@ adduser (3.85.0) UNRELEASED; urgency=low
     Thanks to Miroslav Kure. (mh) Closes: #361413
   * Be more strict in user name checking.
     Thanks to Jeroen van Wolffelaar and Brendan O'Dea. (mh) Closes: #357185
+  * Fix interpreter name in deluser. (mh)
 
   [ Joerg Hoh ]
   * deluser: include symbolic links in backup. Patch from
@@ -18,7 +19,7 @@ adduser (3.85.0) UNRELEASED; urgency=low
   * deluser: Fixed handling of return codes, updated deluser.8
   * deluser: removed the --home parameter
 
- -- Joerg Hoh <joerg@joerghoh.de>  Sat, 15 Apr 2006 20:27:58 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 15 Apr 2006 18:36:46 +0000
 
 adduser (3.85) unstable; urgency=low
 

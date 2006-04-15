@@ -1,4 +1,4 @@
-#!usr/bin/perl
+#!/usr/bin/perl
 
 # deluser -- a utility to remove users from the system
 # delgroup -- a utilty to remove groups from the system
