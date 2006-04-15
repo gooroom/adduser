@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
-"POT-Creation-Date: 2006-03-01 12:03+0000\n"
+"POT-Creation-Date: 2006-04-15 18:29+0000\n"
 "PO-Revision-Date: 2006-03-11 15:11+0100\n"
 "Last-Translator: Nicolas François <nicolas.francois@centraliens.net>\n"
 "Language-Team: Debian French Team <debian-l10n-french@lists.debian.org>\n"
@@ -14,10 +14,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # type: TH
-#.  Hey, Emacs!  This is an -*- nroff -*- source file.
-#.  Adduser and this manpage are copyright 1995 by Ted Hajek
-#.  This is free software; see the GNU General Public Lisence version 2
-#.  or later for copying conditions.  There is NO warranty.
 #: ../deluser.conf.5:6
 #, no-wrap
 msgid "deluser.conf"
@@ -26,26 +22,12 @@ msgstr "deluser.conf"
 # NOTE: VERSION doit être gardé. Il est ensuite remplacé par le véritable
 # NOTE: numéro de version
 # type: TH
-#.  Someone tell emacs that this is an -*- nroff -*- source file.
-#.  Copyright 1997, 1998, 1999 Guy Maor.
-#.  Adduser and this manpage are copyright 1995 by Ted Hajek,
-#.  With much borrowing from the original adduser copyright 1994 by
-#.  Ian Murdock.
-#.  This is free software; see the GNU General Public License version
-#.  2 or later for copying conditions.  There is NO warranty.
 #: ../deluser.conf.5:6 ../adduser.conf.5:6 ../deluser.8:9 ../adduser.8:9
 #, no-wrap
 msgid "Version VERSION"
 msgstr "Version VERSION"
 
 # type: TH
-#.  Someone tell emacs that this is an -*- nroff -*- source file.
-#.  Copyright 1997, 1998, 1999 Guy Maor.
-#.  Adduser and this manpage are copyright 1995 by Ted Hajek,
-#.  With much borrowing from the original adduser copyright 1994 by
-#.  Ian Murdock.
-#.  This is free software; see the GNU General Public License version
-#.  2 or later for copying conditions.  There is NO warranty.
 #: ../deluser.conf.5:6 ../adduser.conf.5:6 ../deluser.8:9 ../adduser.8:9
 #, no-wrap
 msgid "Debian GNU/Linux"
@@ -217,7 +199,7 @@ msgstr ""
 "défaut est \"(proc|sysfs|usbfs|devpts|tmpfs)\"."
 
 # type: SH
-#: ../deluser.conf.5:71 ../adduser.conf.5:119 ../deluser.8:126
+#: ../deluser.conf.5:71 ../adduser.conf.5:119 ../deluser.8:147
 #: ../adduser.8:260
 #, no-wrap
 msgid "FILES"
@@ -229,7 +211,7 @@ msgid "I</etc/deluser.conf>"
 msgstr "I</etc/deluser.conf>"
 
 # type: SH
-#: ../deluser.conf.5:73 ../adduser.conf.5:121 ../deluser.8:128
+#: ../deluser.conf.5:73 ../adduser.conf.5:121 ../deluser.8:149
 #: ../adduser.8:262
 #, no-wrap
 msgid "SEE ALSO"
@@ -241,10 +223,6 @@ msgid "deluser(8), delgroup(8), adduser.conf(5)"
 msgstr "B<deluser>(8), B<delgroup>(8), B<adduser.conf>(5)"
 
 # type: TH
-#.  Hey, Emacs!  This is an -*- nroff -*- source file.
-#.  Adduser and this manpage are copyright 1995 by Ted Hajek
-#.  This is free software; see the GNU General Public Lisence version 2
-#.  or later for copying conditions.  There is NO warranty.
 #: ../adduser.conf.5:6
 #, no-wrap
 msgid "adduser.conf"
@@ -499,11 +477,11 @@ msgid ""
 "regular expression matching files left over from unmerged config files (dpkg-"
 "(old|new|dist))."
 msgstr ""
-"Les fichiers de /etc/skel/ sont comparés à cette expression rationnelle "
-"et ne sont pas copiés dans le nouveau répertoire personnel quand ils "
-"correspondent. Elle prend par défaut la valeur de l'expression "
-"rationnelle qui correspond aux fichiers laissés lors du traitement des "
-"fichiers de configuration modifiés (dpkg-(old|new|dist))."
+"Les fichiers de /etc/skel/ sont comparés à cette expression rationnelle et "
+"ne sont pas copiés dans le nouveau répertoire personnel quand ils "
+"correspondent. Elle prend par défaut la valeur de l'expression rationnelle "
+"qui correspond aux fichiers laissés lors du traitement des fichiers de "
+"configuration modifiés (dpkg-(old|new|dist))."
 
 # type: Plain text
 #: ../adduser.conf.5:121
@@ -516,13 +494,6 @@ msgid "adduser(8), addgroup(8), deluser(8), delgroup(8)"
 msgstr "B<adduser>(8), B<addgroup>(8), B<deluser>(8), B<delgroup>(8)"
 
 # type: TH
-#.  Someone tell emacs that this is an -*- nroff -*- source file.
-#.  Copyright 1997, 1998, 1999 Guy Maor.
-#.  Adduser and this manpage are copyright 1995 by Ted Hajek,
-#.  With much borrowing from the original adduser copyright 1994 by
-#.  Ian Murdock.
-#.  This is free software; see the GNU General Public License version
-#.  2 or later for copying conditions.  There is NO warranty.
 #: ../deluser.8:9
 #, no-wrap
 msgid "DELUSER"
@@ -541,9 +512,10 @@ msgstr "SYNOPSIS"
 
 # type: Plain text
 #: ../deluser.8:14
+#, fuzzy
 msgid ""
-"B<deluser> [options] [--remove-home] [--home DIR] [--remove-all-files] [--"
-"backup] [--backup-to] user"
+"B<deluser> [options] [--remove-home] [--remove-all-files] [--backup] [--"
+"backup-to] user"
 msgstr ""
 "B<deluser> [options] [--remove-home] [--home REP] [--remove-all-files] [--"
 "backup] [--backup-to] utilisateur"
@@ -610,14 +582,13 @@ msgstr ""
 "sans l'option B<--group>, B<deluser> retire un utilisateur normal."
 
 # type: Plain text
-#: ../deluser.8:54
+#: ../deluser.8:49
+#, fuzzy
 msgid ""
 "By default, B<deluser> will remove the user without removing the home "
 "directory, the mail spool or any other files on the system owned by the "
 "user. Removing the home directory and mail spool can be achieved using the "
-"B<--remove-home> option. If the B<--home> option is given, deluser will only "
-"remove the user if the directory given to the B<--home> option matches the "
-"user's real home directory."
+"B<--remove-home> option."
 msgstr ""
 "Par défaut, B<deluser> retirera l'utilisateur sans retirer son répertoire "
 "personnel, sa boîte aux lettres ou tout autre fichier possédé par "
@@ -628,7 +599,7 @@ msgstr ""
 "l'utilisateur."
 
 # type: Plain text
-#: ../deluser.8:64
+#: ../deluser.8:59
 msgid ""
 "The B<--remove-all-files> option removes all files on the system owned by "
 "the user. Note that if you activate both options B<--remove-home> will have "
@@ -641,7 +612,7 @@ msgstr ""
 "sont déjà couverts par l'option B<--remove-all-files>."
 
 # type: Plain text
-#: ../deluser.8:75
+#: ../deluser.8:70
 msgid ""
 "If you want to backup all files before deleting them you can activate the "
 "B<--backup> option which will create a file username.tar(.gz|.bz2) in the "
@@ -659,7 +630,7 @@ msgstr ""
 "Voyez B<deluser.conf>(5) pour davantage d'informations."
 
 # type: Plain text
-#: ../deluser.8:82
+#: ../deluser.8:77
 msgid ""
 "If the file B</usr/local/sbin/deluser.local> exists, it will be executed "
 "after the user account has been removed in order to do any local setup. The "
@@ -671,18 +642,18 @@ msgstr ""
 "sont :"
 
 # type: Plain text
-#: ../deluser.8:84 ../adduser.8:111
+#: ../deluser.8:79 ../adduser.8:111
 msgid "username uid gid home-directory"
 msgstr "nom_utilisateur uid gid rep-perso"
 
 # type: SS
-#: ../deluser.8:85
+#: ../deluser.8:80
 #, no-wrap
 msgid "Remove a group"
 msgstr "Retire un groupe"
 
 # type: Plain text
-#: ../deluser.8:89
+#: ../deluser.8:84
 msgid ""
 "If B<deluser> is called with the B<--group> option, or B<delgroup> is "
 "called, a group will be removed."
@@ -691,7 +662,7 @@ msgstr ""
 "B<delgroup> est appelé, un groupe est retiré."
 
 # type: Plain text
-#: ../deluser.8:92
+#: ../deluser.8:87
 msgid ""
 "Warning: If any users have the group to be removed as primary group the "
 "group cannot be removed."
@@ -700,7 +671,7 @@ msgstr ""
 "alors ce groupe ne peut pas être retiré."
 
 # type: Plain text
-#: ../deluser.8:96
+#: ../deluser.8:91
 msgid ""
 "If the option B<--only-if-empty> is given, the group won't be removed if it "
 "has any members left."
@@ -709,13 +680,13 @@ msgstr ""
 "n'a plus d'utilisateur."
 
 # type: SS
-#: ../deluser.8:97
+#: ../deluser.8:92
 #, no-wrap
 msgid "Remove an user from a specific group"
 msgstr "Retire un utilisateur d'un groupe"
 
 # type: Plain text
-#: ../deluser.8:101
+#: ../deluser.8:96
 msgid ""
 "If called with two non-option arguments, B<deluser> will remove an user from "
 "a specific group."
@@ -724,30 +695,30 @@ msgstr ""
 "B<deluser> retire un utilisateur d'un groupe particulier."
 
 # type: SH
-#: ../deluser.8:101 ../adduser.8:179
+#: ../deluser.8:96 ../adduser.8:179
 #, no-wrap
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
 # type: TP
-#: ../deluser.8:102 ../adduser.8:180
+#: ../deluser.8:97 ../adduser.8:180
 #, no-wrap
 msgid "B<--conf FILE>"
 msgstr "B<--conf> I<FICHIER>"
 
 # type: Plain text
-#: ../deluser.8:106
+#: ../deluser.8:101
 msgid "Use FILE instead of I</etc/deluser.conf>."
 msgstr "Utilise I<FICHIER> plutôt que I</etc/deluser.conf>."
 
 # type: TP
-#: ../deluser.8:106 ../adduser.8:209
+#: ../deluser.8:101 ../adduser.8:209
 #, no-wrap
 msgid "B<--group>"
 msgstr "B<--group>"
 
 # type: Plain text
-#: ../deluser.8:111
+#: ../deluser.8:106
 msgid ""
 "Remove a group. This is the default action if the program is invoked as "
 "I<delgroup>."
@@ -756,35 +727,35 @@ msgstr ""
 "I<delgroup>."
 
 # type: TP
-#: ../deluser.8:111 ../adduser.8:219
+#: ../deluser.8:106 ../adduser.8:219
 #, no-wrap
 msgid "B<--help>"
 msgstr "B<--help>"
 
 # type: Plain text
-#: ../deluser.8:114 ../adduser.8:222
+#: ../deluser.8:109 ../adduser.8:222
 msgid "Display brief instructions."
 msgstr "Affiche un résumé des instructions."
 
 # type: TP
-#: ../deluser.8:114 ../adduser.8:238
+#: ../deluser.8:109 ../adduser.8:238
 #, no-wrap
 msgid "B<--quiet>"
 msgstr "B<--quiet>"
 
 # type: Plain text
-#: ../deluser.8:117
+#: ../deluser.8:112
 msgid "Suppress progress messages."
 msgstr "N'affiche pas les messages d'avancement."
 
 # type: TP
-#: ../deluser.8:117 ../adduser.8:244
+#: ../deluser.8:112 ../adduser.8:244
 #, no-wrap
 msgid "B<--system>"
 msgstr "B<--system>"
 
 # type: Plain text
-#: ../deluser.8:123
+#: ../deluser.8:118
 msgid ""
 "Only delete if user/group is a system user/group. This avoids accidentally "
 "deleting non-system user/groups. Additionally, if the user does not exist, "
@@ -799,49 +770,146 @@ msgstr ""
 "Debian."
 
 # type: TP
-#: ../deluser.8:123 ../adduser.8:257
+#: ../deluser.8:118 ../adduser.8:257
 #, no-wrap
 msgid "B<--version>"
 msgstr "B<--version>"
 
 # type: Plain text
-#: ../deluser.8:126 ../adduser.8:260
+#: ../deluser.8:121 ../adduser.8:260
 msgid "Display version and copyright information."
 msgstr "Affiche la version et le copyright."
 
+# type: SH
+#: ../deluser.8:121
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr ""
+
+# type: TP
+#: ../deluser.8:122
+#, no-wrap
+msgid "B<0>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.8:125
+msgid "The action was successfully executed."
+msgstr ""
+
+# type: TP
+#: ../deluser.8:125
+#, no-wrap
+msgid "B<1>"
+msgstr ""
+
 # type: Plain text
 #: ../deluser.8:128
+msgid "The user to delete was not a system account. No action was performed."
+msgstr ""
+
+# type: TP
+#: ../deluser.8:128
+#, no-wrap
+msgid "B<2>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.8:131
+msgid "There is no such user. No action was performed."
+msgstr ""
+
+# type: TP
+#: ../deluser.8:131
+#, no-wrap
+msgid "B<3>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.8:134
+msgid "There is no such group. No action was performed."
+msgstr ""
+
+# type: TP
+#: ../deluser.8:134
+#, no-wrap
+msgid "B<4>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.8:137
+msgid "Internal error."
+msgstr ""
+
+# type: TP
+#: ../deluser.8:137
+#, no-wrap
+msgid "B<5>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.8:140
+msgid "The group to delete is not empty. No action was performed."
+msgstr ""
+
+# type: TP
+#: ../deluser.8:140
+#, no-wrap
+msgid "B<6>"
+msgstr ""
+
+# type: Plain text
+#: ../deluser.8:143
+msgid "The user does not belong to the specified group."
+msgstr ""
+
+# type: TP
+#: ../deluser.8:143
+#, no-wrap
+msgid "B<7>"
+msgstr ""
+
+# type: SS
+#: ../deluser.8:146
+#, fuzzy
+msgid "You cannot remove a user from its primary group."
+msgstr "Retire un utilisateur d'un groupe"
+
+# type: Plain text
+#: ../deluser.8:149
 msgid "/etc/deluser.conf"
 msgstr "I</etc/deluser.conf>"
 
 # type: Plain text
-#: ../deluser.8:130
+#: ../deluser.8:151
 msgid "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
 msgstr "B<deluser.conf>(5), B<adduser>(8), B<userdel>(8), B<groupdel>(8)"
 
 # type: SH
-#: ../deluser.8:131 ../adduser.8:266
+#: ../deluser.8:152 ../adduser.8:266
 #, no-wrap
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
 # type: Plain text
-#: ../deluser.8:135
+#: ../deluser.8:156
+#, fuzzy
 msgid ""
-"Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber.  "
-"This manpage and the deluser program is based on adduser which is:"
+"Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
+"and Joerg Hoh.  This manpage and the deluser program is based on adduser "
+"which is:"
 msgstr ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber. "
 "Cette page de manuel et le programme deluser est basé sur le programme "
 "adduser :"
 
 # type: Plain text
-#: ../deluser.8:137
+#: ../deluser.8:158
 msgid "Copyright (C) 1997, 1998, 1999 Guy Maor."
 msgstr "Copyright (C) 1997, 1998, 1999 Guy Maor."
 
 # type: Plain text
-#: ../deluser.8:141 ../adduser.8:273
+#: ../deluser.8:162 ../adduser.8:273
 msgid ""
 "Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original "
 "Debian B<adduser>"
@@ -850,7 +918,7 @@ msgstr ""
 "commande B<adduser> de Debian."
 
 # type: Plain text
-#: ../deluser.8:147
+#: ../deluser.8:168
 msgid ""
 "Copyright (C) 1994 Ian Murdock.  B<deluser> is free software; see the GNU "
 "General Public Licence version 2 or later for copying conditions.  There is "
@@ -861,13 +929,6 @@ msgstr ""
 "pour les droits de copie. Ce programme est fourni sans I<aucune> garantie."
 
 # type: TH
-#.  Someone tell emacs that this is an -*- nroff -*- source file.
-#.  Copyright 1997, 1998, 1999 Guy Maor.
-#.  Adduser and this manpage are copyright 1995 by Ted Hajek,
-#.  With much borrowing from the original adduser copyright 1994 by
-#.  Ian Murdock.
-#.  This is free software; see the GNU General Public License version
-#.  2 or later for copying conditions.  There is NO warranty.
 #: ../adduser.8:9
 #, no-wrap
 msgid "ADDUSER"
