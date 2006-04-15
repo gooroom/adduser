@@ -1,7 +1,6 @@
-adduser (3.85.0) UNRELEASED; urgency=low
+adduser (3.86) unstable; urgency=low
 
   [ Marc Haber ]
-  * NOT RELEASED YET
   * Only check $! after calling symlink() if symlink() failed.
     Patch from Ubuntu, thanks to Colin Watson. (mh) Closes: #355708
   * Print error when failing, thanks to Ted Percival. (jh) Closes: #356162
@@ -20,7 +19,7 @@ adduser (3.85.0) UNRELEASED; urgency=low
   * deluser: removed the --home parameter
   * adduser: fix @names initialization
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 15 Apr 2006 19:45:17 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 15 Apr 2006 19:45:52 +0000
 
 adduser (3.85) unstable; urgency=low
 
