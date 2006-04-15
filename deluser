@@ -84,7 +84,6 @@ GetOptions ("quiet|q" => sub {$verbose = 0; },
 	    "conf=s" => \$configfile,
 	    "system" => \$pconfig{"system"},
 	    "only-if-empty" => \$pconfig{"only_if_empty"},
-	    "home=s" => \$pconfig{"home"},
 	    "remove-home" => \$pconfig{"remove_home"},
 	    "remove-all-files" => \$pconfig{"remove_all_files"},
 	    "backup" => \$pconfig{"backup"},
@@ -218,20 +217,15 @@ if($action eq "deluser") {
     }
     
     unless(exist_user($user)) {
-	dief (gtx("The user `%s' does not exist.\n"),$user);
+	fail (2,gtx("The user `%s' does not exist.\n"),$user);
     }
-
-    if($config{"remove_home"} && $config{"home"} && ($config{"home"} ne "") && ($config{"home"} ne $pw_homedir)) {
-	dief (gtx("passwd home dir `%s' does not match command line home dir, aborting.\n"),
-	$pw_homedir,$config{"home"});
-    } 
 
 
     if($config{"remove_home"} || $config{"remove_all_files"}) {
       s_print (gtx("Looking for files to backup/remove...\n"));
       my @mountpoints;
       open(MOUNT, "mount |")
-	      || die (gtx("fork for parse mount points failed: %s\n", $!));
+	      || fail (4 ,gtx("fork for parse mount points failed: %s\n", $!));
       while (<MOUNT>) {
 	      my @temparray = split;
 	      my $fstype = $temparray[4];
@@ -336,11 +330,11 @@ if($action eq "deluser") {
 if($action eq "delgroup") {
     &invalidate_nscd();
     unless(exist_group($group)) {
-	dief (gtx("The group `%s' does not exist.\n"),$group);
+	fail (3 ,gtx("The group `%s' does not exist.\n"),$group);
     }
     my($dummy,$gid,$members);
     if( !(($dummy, $dummy, $gid, $members ) = getgrnam($group)) ) {
-	dief (gtx("getgrnam `%s' failed. This shouldn't happen.\n"), $group);
+	fail (4 ,gtx("getgrnam `%s' failed. This shouldn't happen.\n"), $group);
     }
     if( $config{"system"} && 
 	($gid < $config{"first_system_gid"} ||
@@ -349,13 +343,13 @@ if($action eq "delgroup") {
 	exit 3;
     }
     if( $config{"only_if_empty"} && $members ne "") {
-	dief (gtx("The group `%s' is not empty!\n"),$group);
+	fail (5, gtx("The group `%s' is not empty!\n"),$group);
     }
     
     setpwent;
     while ((my $acctname,my $primgrp) = (getpwent)[0,3]) {
 	if( $primgrp eq $gr_gid ) {
-	    dief (gtx("`%s' still has `%s' as their primary group!\n"),$acctname,$group);
+	    fail (7, gtx("`%s' still has `%s' as their primary group!\n"),$acctname,$group);
 	}
     }
     endpwent;
@@ -372,13 +366,13 @@ if($action eq "deluserfromgroup")
 {
     &invalidate_nscd();
     unless(exist_user($user)) {
-	dief (gtx("The user `%s' does not exist.\n"),$user);
+	fail (2, gtx("The user `%s' does not exist.\n"),$user);
     }
     unless(exist_group($group)) {
-	dief (gtx("The group `%s' does not exist.\n"),$group);
+	fail (3, gtx("The group `%s' does not exist.\n"),$group);
     }
     if($maingroup eq $group) {
-	die ("$0: ",gtx("You may not remove the account from its primary group.\n"));
+	fail (7, "$0: ",gtx("You may not remove the account from its primary group.\n"));
     }
 
     my @members = get_group_members($group);
@@ -392,7 +386,7 @@ if($action eq "deluserfromgroup")
     }
 
     unless($ismember) {
-	dief (gtx("The user `%s' is not a member of group `%s'.\n"),$user,$group);
+	fail (6, gtx("The user `%s' is not a member of group `%s'.\n"),$user,$group);
     }
 
     s_printf (gtx("Removing user `%s' from group `%s'...\n"),$user,$group);
@@ -404,6 +398,13 @@ if($action eq "deluserfromgroup")
 
 
 ######
+
+sub fail {
+  my ($errorcode, $format, @args) = @_;
+  printf STDERR "$0: $format",@args;
+  exit $errorcode;
+
+}
 
 sub version {
     printf ("deluser: (version: %s)\n\n", $version);
@@ -435,8 +436,6 @@ sub usage {
 
   --remove-home             remove the users home directory and mail spool
   --remove-all-files        remove all files owned by user
-  --home <dir>              remove home only if /etc/passwd home dir
-                            matches directory given here
   --backup		    backup files before removing.
   --backup-to <dir>         target directory for the backups.
                             Default is the current directory.

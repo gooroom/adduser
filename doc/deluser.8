@@ -10,7 +10,7 @@
 .SH NAME
 deluser, delgroup \- remove a user or group from the system
 .SH SYNOPSIS
-.BR deluser " [options] [\-\-remove-home] [\-\-home DIR] [\-\-remove-all-files] [\-\-backup] [\-\-backup-to] user"
+.BR deluser " [options] [\-\-remove-home] [\-\-remove-all-files] [\-\-backup] [\-\-backup-to] user"
 .PP
 .BR deluser " \-\-group [options] group"
 .br
@@ -45,12 +45,7 @@ will remove the user without removing the home directory, the mail spool  or
 any other files on the system owned by the user. Removing the home directory
 and mail spool can be achieved using the
 .B \-\-remove-home
-option. If the
-.B \-\-home
-option is given, deluser will only remove the user if the
-directory given to the 
-.B \-\-home
-option matches the user's real home directory.
+option. 
 
 The 
 .B \-\-remove-all-files
@@ -123,7 +118,7 @@ for use in Debian package maintainer scripts.
 .TP
 .B \-\-version
 Display version and copyright information.
-.SH RETURN VALUE
+.SH "RETURN VALUE"
 .TP
 .B 0
 The action was successfully executed.
@@ -132,11 +127,22 @@ The action was successfully executed.
 The user to delete was not a system account. No action was performed.
 .TP
 .B 2
-There is no such user.
+There is no such user. No action was performed.
 .TP
 .B 3
-There is no such group.
-
+There is no such group. No action was performed.
+.TP
+.B 4
+Internal error.
+.TP
+.B 5
+The group to delete is not empty. No action was performed.
+.TP
+.B 6
+The user does not belong to the specified group.
+.TP
+.B 7
+You cannot remove a user from its primary group.
 
 .SH FILES
 /etc/deluser.conf
@@ -145,7 +151,7 @@ deluser.conf(5), adduser(8), userdel(8), groupdel(8)
 
 .SH COPYRIGHT
 Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004
-Marc Haber.
+Marc Haber and Joerg Hoh.
 This manpage and the deluser program is based on adduser which is:
 .br
 Copyright (C) 1997, 1998, 1999 Guy Maor.
