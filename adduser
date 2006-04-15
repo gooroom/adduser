@@ -102,7 +102,7 @@ my $last_uid = undef;
 my $dir_mode = undef;
 my $perm = undef;
 
-my @names = undef;
+our @names;
 
 # Parse options, sanity checks
 GetOptions ("quiet" => sub { $verbose = 0 },
