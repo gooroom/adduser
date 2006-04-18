@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: adduser manpages italian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-15 18:29+0000\n"
-"PO-Revision-Date: 2006-02-13 21:11+0100\n"
+"PO-Revision-Date: 2006-04-17 17:43+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
-"Language-Team: Italian <tp@list.linux.it>\n"
+"Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -184,7 +184,7 @@ msgstr ""
 #: ../deluser.conf.5:67
 #, no-wrap
 msgid "B<EXCLUDE_FSTYPES>"
-msgstr ""
+msgstr "B<EXCLUDE_FSTYPES>"
 
 # type: Plain text
 #: ../deluser.conf.5:70
@@ -193,6 +193,9 @@ msgid ""
 "excluded when looking for files of a user to be deleted. Defaults to \"(proc|"
 "sysfs|usbfs|devpts|tmpfs)\"."
 msgstr ""
+"Una espressione regolare che indica quali file system devono essere esclusi "
+"durante la ricerca dei file dell'utente da eliminare. Il valore predefinito "
+"è \"(proc|sysfs|usbfs|devpts|tmpfs)\"."
 
 # type: SH
 #: ../deluser.conf.5:71 ../adduser.conf.5:119 ../deluser.8:147
@@ -457,13 +460,13 @@ msgstr ""
 "creazione dell'utente viene rifiutata se il nome non verifica questa "
 "espressione regolare, a meno che non sia attivata l'opzione --force-badname; "
 "in questo caso viene effettuato un controllo più debole. Il valore "
-"predefinito, scleto con molta prudenza, è ^[a-z][-a-z0-9]*$."
+"predefinito, scelto con molta prudenza, è ^[a-z][-a-z0-9]*$."
 
 # type: TP
 #: ../adduser.conf.5:113
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<SKEL_IGNORE_REGEX>"
-msgstr "B<NAME_REGEX>"
+msgstr "B<SKEL_IGNORE_REGEX>"
 
 # type: Plain text
 #: ../adduser.conf.5:119
@@ -473,6 +476,10 @@ msgid ""
 "regular expression matching files left over from unmerged config files (dpkg-"
 "(old|new|dist))."
 msgstr ""
+"I file in /etc/skel/ sono confrontati con questa espressione regolare e, se "
+"verficano l'espressione, non sono copiati nella directory home. Il valore "
+"predefinito è una espressione regolare che esclude la copia dei file di "
+"configurazione non uniti (dpkg-(old|new|dist))."
 
 # type: Plain text
 #: ../adduser.conf.5:121
@@ -503,13 +510,12 @@ msgstr "SINTASSI"
 
 # type: Plain text
 #: ../deluser.8:14
-#, fuzzy
 msgid ""
 "B<deluser> [options] [--remove-home] [--remove-all-files] [--backup] [--"
 "backup-to] user"
 msgstr ""
-"B<deluser> [opzioni] [--remove-home] [--home DIR] [--remove-all-files] [--"
-"backup] [--backup-to] utente"
+"B<deluser> [opzioni] [--remove-home] [--remove-all-files] [--backup] [--"
+"backup-to] utente"
 
 # type: Plain text
 #: ../deluser.8:16
@@ -573,7 +579,6 @@ msgstr ""
 
 # type: Plain text
 #: ../deluser.8:49
-#, fuzzy
 msgid ""
 "By default, B<deluser> will remove the user without removing the home "
 "directory, the mail spool or any other files on the system owned by the "
@@ -583,9 +588,7 @@ msgstr ""
 "B<deluser> rimuove l'utente senza cancellare la directory home, lo spool di "
 "posta e tutti i file appartenenti all'utente presenti nel sistema. Per "
 "cancellare directory home e spool di posta si può usare l'opzione B<--remove-"
-"home>, invece usando solo l'opzione B<--home> deluser rimuove l'utente solo "
-"se la directory passata come argomento dell'opzione B<--home> è identica "
-"alla vera directory home dell'utente."
+"home>."
 
 # type: Plain text
 #: ../deluser.8:59
@@ -768,96 +771,97 @@ msgstr "Mostra le informazioni su versione e copyright del programma."
 #: ../deluser.8:121
 #, no-wrap
 msgid "RETURN VALUE"
-msgstr ""
+msgstr "VALORE RESTITUITO"
 
 # type: TP
 #: ../deluser.8:122
 #, no-wrap
 msgid "B<0>"
-msgstr ""
+msgstr "B<0>"
 
 # type: Plain text
 #: ../deluser.8:125
 msgid "The action was successfully executed."
-msgstr ""
+msgstr "Operazione conclusa correttamente."
 
 # type: TP
 #: ../deluser.8:125
 #, no-wrap
 msgid "B<1>"
-msgstr ""
+msgstr "B<1>"
 
 # type: Plain text
 #: ../deluser.8:128
 msgid "The user to delete was not a system account. No action was performed."
 msgstr ""
+"L'utente da rimuovere non è un account di sistema. Nessuna operazione "
+"effettuata."
 
 # type: TP
 #: ../deluser.8:128
 #, no-wrap
 msgid "B<2>"
-msgstr ""
+msgstr "B<2>"
 
 # type: Plain text
 #: ../deluser.8:131
 msgid "There is no such user. No action was performed."
-msgstr ""
+msgstr "Utente non esistente. Nessuna operazione effettuata."
 
 # type: TP
 #: ../deluser.8:131
 #, no-wrap
 msgid "B<3>"
-msgstr ""
+msgstr "B<3>"
 
 # type: Plain text
 #: ../deluser.8:134
 msgid "There is no such group. No action was performed."
-msgstr ""
+msgstr "Gruppo non esistente. Nessuna operazione effettuata."
 
 # type: TP
 #: ../deluser.8:134
 #, no-wrap
 msgid "B<4>"
-msgstr ""
+msgstr "B<4>"
 
 # type: Plain text
 #: ../deluser.8:137
 msgid "Internal error."
-msgstr ""
+msgstr "Errore interno."
 
 # type: TP
 #: ../deluser.8:137
 #, no-wrap
 msgid "B<5>"
-msgstr ""
+msgstr "B<5>"
 
 # type: Plain text
 #: ../deluser.8:140
 msgid "The group to delete is not empty. No action was performed."
-msgstr ""
+msgstr "Il gruppo da rimuovere non è vuoto. Nessuna operazione effettuata."
 
 # type: TP
 #: ../deluser.8:140
 #, no-wrap
 msgid "B<6>"
-msgstr ""
+msgstr "B<6>"
 
 # type: Plain text
 #: ../deluser.8:143
 msgid "The user does not belong to the specified group."
-msgstr ""
+msgstr "L'utente non appartiene al gruppo specificato."
 
 # type: TP
 #: ../deluser.8:143
 #, no-wrap
 msgid "B<7>"
-msgstr ""
+msgstr "B<7>"
 
 # type: SS
 #: ../deluser.8:146
-#, fuzzy
 msgid "You cannot remove a user from its primary group."
-msgstr "Rimozione di un utente da un gruppo"
+msgstr "Non è possibile rimuovere un utente dal proprio gruppo primario."
 
 # type: Plain text
 #: ../deluser.8:149
@@ -877,14 +881,14 @@ msgstr "COPYRIGHT"
 
 # type: Plain text
 #: ../deluser.8:156
-#, fuzzy
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
 "and Joerg Hoh.  This manpage and the deluser program is based on adduser "
 "which is:"
 msgstr ""
-"Copyright (C) 2000 Roland Bauerschmidt. Modifiche (C) 2004 Marc Haber. "
-"Questa pagina man e il programma deluser sono basati su adduser che è:"
+"Copyright (C) 2000 Roland Bauerschmidt. Modifiche (C) 2004 Marc Haber e "
+"Joerg Hoh. Questa pagina man e il programma deluser sono basati su adduser "
+"che è:"
 
 # type: Plain text
 #: ../deluser.8:158
@@ -1073,7 +1077,6 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:102
-#, fuzzy
 msgid ""
 "B<adduser> will copy files from B<SKEL> into the home directory and prompt "
 "for finger (gecos) information and a password.  The gecos may also be set "
@@ -1087,8 +1090,8 @@ msgstr ""
 "campo gecos può essere inserito anche usando l'opzione B<--gecos>. Con "
 "l'opzione B<--disabled-login> l'account viene creato ma non è possibile "
 "accedere fino a quando non viene impostata una password. Con l'opzione B<--"
-"disabled-password> non viene impostata la password però è possibile accedere "
-"per esempio con SSH e chiavi RSA."
+"disabled-password> non viene impostata la password, è comunque possibile "
+"accedere al sistema (per esempio tramite SSH con chiavi RSA)."
 
 # type: Plain text
 #: ../adduser.8:109
@@ -1240,13 +1243,12 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:173
-#, fuzzy
 msgid ""
 "A GID will be chosen from the range specified for system GIDS in the "
 "configuration file.  The GID can be overridden with the B<--gid> option."
 msgstr ""
 "Il GID verrà scelto all'interno dell'intervallo specificato nel file di "
-"configurazione per gli UID di sistema. Il GID può essere forzato usando "
+"configurazione per i GID di sistema. Il GID può essere forzato usando "
 "l'opzione B<--gid>."
 
 # type: SS
@@ -1292,13 +1294,12 @@ msgstr "B<--disabled-password>"
 
 # type: Plain text
 #: ../adduser.8:192
-#, fuzzy
 msgid ""
 "Like --disabled-login, but logins are still possible (for example using SSH "
 "RSA keys) but not using password authentication."
 msgstr ""
-"Simile a --disabled-login però il login è ancora concesso, per esempio, "
-"tramite SSH con chiavi RSA ma non tramite l'autenticazione con password."
+"Simile a --disabled-login però il login è ancora concesso (per esempio "
+"tramite SSH con chiavi RSA) ma non tramite l'autenticazione con password."
 
 # type: TP
 #: ../adduser.8:192

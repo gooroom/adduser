@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: adduser italian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-15 19:22+0000\n"
-"PO-Revision-Date: 2006-02-13 21:23+0100\n"
+"PO-Revision-Date: 2006-04-17 17:43+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -305,7 +305,6 @@ msgid "The GID %s does not exist.\n"
 msgstr "Il GID «%s» non esiste.\n"
 
 #: ../adduser:765
-#, fuzzy
 msgid ""
 "To avoid problems, the username should consist of\n"
 "letters, digits, underscores, periods and dashes, and not start with a\n"
@@ -313,9 +312,10 @@ msgid ""
 "machine accounts $ is also supported at the end of the username\n"
 msgstr ""
 "Per evitare problemi il nome utente dovrebbe essere composto da lettere,\n"
-"cifre, sottolineature (_), punti (.) e trattini (-). Per compatibilità\n"
-"con gli account di macchine Samba è supportato l'uso del carattere dollaro\n"
-"«$» come carattere finale del nome utente.\n"
+"cifre, sottolineature (_), punti (.) e trattini (-), inoltre non dovrebbe\n"
+"iniziare con un trattino (in base allo standard IEEE 1003.1-2001). Per\n"
+"compatibilità con gli account di macchine Samba è supportato l'uso del\n"
+"carattere dollaro ($) come carattere finale del nome utente.\n"
 
 #: ../adduser:773
 msgid "Allowing use of questionable username.\n"
@@ -345,7 +345,7 @@ msgstr "Scelta del GID nell'intervallo da %s a %s.\n"
 #: ../adduser:846
 #, perl-format
 msgid "Stopped: %s\n"
-msgstr ""
+msgstr "Fermato: %s\n"
 
 #: ../adduser:848
 #, perl-format
@@ -583,7 +583,6 @@ msgid "removing user and groups from the system. Version:"
 msgstr "rimuove utenti e gruppi dal sistema. Versione:"
 
 #: ../deluser:433
-#, fuzzy
 msgid ""
 "deluser user\n"
 "  remove a normal user from the system\n"
@@ -622,8 +621,6 @@ msgstr ""
 "  --remove-home            cancella home directory e spool di posta\n"
 "                           dell'utente\n"
 "  --remove-all-files       cancella tutti i file appartenenti all'utente\n"
-"  --home <dir>             cancella la home directory solo se quella in\n"
-"                           /etc/passwd corrisponde a quella specificata\n"
 "  --backup                 backup dei file prima della loro cancellazione\n"
 "  --backup-to <dir>        directory in cui è effettuato il backup, il\n"
 "                           valore predefinito è la directory corrente\n"
@@ -662,12 +659,3 @@ msgstr "Impossibile analizzare «%s»:%s.\n"
 #, perl-format
 msgid "Unknown variable `%s' at `%s':%s.\n"
 msgstr "Variabile «%s» sconosciuta a «%s»:%s.\n"
-
-#~ msgid "Cleaning up.\n"
-#~ msgstr "Pulizie in corso.\n"
-
-#~ msgid ""
-#~ "passwd home dir `%s' does not match command line home dir, aborting.\n"
-#~ msgstr ""
-#~ "la directory home «%s» definita in passwd non corrisponde a quella "
-#~ "specificata nella riga di comando. Uscita.\n"
