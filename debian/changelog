@@ -3,10 +3,12 @@ adduser (3.86.0) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * Update Italian (it) program and manpage translation.
     Thanks to Luca Monducci. (mh) Closes: #363100
+  * Update French (fr) program translation. Thanks to Thomas Huriaux
+    and Luc FROIDEFOND. (mh) Closes: #356130
   * Fix mis-placed closing bracket in sub cleanup.
     Thanks to Ted Percival. (mh) Closes: #363182
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Apr 2006 11:17:20 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 20 Apr 2006 17:16:54 +0200
 
 adduser (3.86) unstable; urgency=low
 
