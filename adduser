@@ -126,7 +126,7 @@ GetOptions ("quiet" => sub { $verbose = 0 },
 	    "debug" => sub { $verbose = 2 } );
 
 # everyone can issue "--help" and "--version", but only root can go on
-die ("$0: ",gtx("Only root may add a user or group to the system.\n")) if ($> != 0);
+dief ("$0: ",gtx("Only root may add a user or group to the system.\n")) if ($> != 0);
 
 if( defined($configfile) ) { @defaults = ($configfile); }
 
@@ -145,20 +145,16 @@ if (defined($found_sys_opt)) {
 
 
 while (defined(my $arg = shift(@ARGV))) {
-  if (defined($names[0]) && $arg =~ /^--/) {
-      die ("$0: ",gtx("No options allowed after names.\n"))
-    } else {			# it's a username
-	push (@names, $arg);
-    }
+  push (@names, $arg);
 }
 
 if ( (! defined $names[0]) || length($names[0]) == 0 || @names > 2) {
-    die ("$0: ",gtx("Only one or two names allowed.\n"));
+    dief ("$0: ",gtx("Only one or two names allowed.\n"));
 }
 	    
 
 if (@names == 2) {	# must be addusertogroup
-    die ("$0: ",gtx("Specify only one name in this mode.\n"))
+    dief ("$0: ",gtx("Specify only one name in this mode.\n"))
 	if ($action eq "addsysuser" || $found_group_opt);
     $action = "addusertogroup";
     $existing_user = shift (@names);
@@ -174,12 +170,12 @@ else {
 
 if ($action ne "addgroup" &&
     defined($found_group_opt) +defined($ingroup_name) +defined($new_gid) > 1 ) {
-    die ("$0: ",gtx("The --group, --ingroup, and --gid options are mutually exclusive.\n"));
+    dief ("$0: ",gtx("The --group, --ingroup, and --gid options are mutually exclusive.\n"));
 }
 
 
 if ((defined($special_home)) && ($special_home !~ m+^/+ )) {
-  (die "$0: ",gtx("The home dir must be an absolute path.\n"))
+  (dief "$0: ",gtx("The home dir must be an absolute path.\n"))
 }
 	   
 if (defined($special_home) && $verbose) {
@@ -374,13 +370,13 @@ if ($action eq "addsysuser") {
         }
         if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
 	elsif ($ingroup_name) { $new_gid = getgrnam($ingroup_name); }
-	else { die (gtx("Internal error")); }
+	else { dief (gtx("Internal error")); }
     }
     else {
 	if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
 	elsif ($ingroup_name) { $new_gid = getgrnam($ingroup_name); }
 	elsif ($make_group_also){ $new_gid=$new_uid; $ingroup_name=$new_name; }
-	else { die (gtx("Internal error")); }
+	else { dief (gtx("Internal error")); }
     }
     printf (gtx("Adding system user `%s' with uid %s...\n"),$new_name,$new_uid) if $verbose;
 
@@ -460,13 +456,13 @@ if ($action eq "adduser") {
         }
 	if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
 	elsif ($ingroup_name) { $new_gid = getgrnam($ingroup_name); }
-	else { die (gtx("Internal error")); }
+	else { dief (gtx("Internal error")); }
     }
     else {
 	if (defined($new_gid)) { $ingroup_name = getgrgid($new_gid); }
 	elsif ($ingroup_name) { $new_gid = getgrnam($ingroup_name); }
 	elsif ($make_group_also){ $new_gid=$new_uid; $ingroup_name=$new_name; }
-	else { die (gtx("Internal error")); }
+	else { dien (gtx("Internal error")); }
     }
 
     &invalidate_nscd();

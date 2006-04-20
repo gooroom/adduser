@@ -1,5 +1,6 @@
 adduser (3.86.0) UNRELEASED; urgency=low
 
+  [ Marc Haber ]
   * NOT RELEASED YET
   * Update Italian (it) program and manpage translation.
     Thanks to Luca Monducci. (mh) Closes: #363100
@@ -8,7 +9,12 @@ adduser (3.86.0) UNRELEASED; urgency=low
   * Fix mis-placed closing bracket in sub cleanup.
     Thanks to Ted Percival. (mh) Closes: #363182
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 20 Apr 2006 17:16:54 +0200
+  [ Joerg Hoh ]
+  * removed some unnecessary code
+  * converted all calls of die() to dief(); Thanks to Stephan Gran
+    <sgran@debian.org>
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Thu, 20 Apr 2006 23:05:40 +0200
 
 adduser (3.86) unstable; urgency=low
 
