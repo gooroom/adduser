@@ -10,7 +10,7 @@
 .SH NAME
 deluser, delgroup \- remove a user or group from the system
 .SH SYNOPSIS
-.BR deluser " [options] [\-\-remove-home] [\-\-remove-all-files] [\-\-backup] [\-\-backup-to] user"
+.BR deluser " [options] [\-\-remove-home] [\-\-remove-all-files] [\-\-backup] [\-\-backup-to DIR] user"
 .PP
 .BR deluser " \-\-group [options] group"
 .br
@@ -71,7 +71,7 @@ for details.
 If the file
 .B /usr/local/sbin/deluser.local
 exists, it will be executed after the user account has been removed
-in order to do any local setup. The arguments passed to
+in order to do any local cleanup. The arguments passed to
 .B deluser.local
 are:
 .br
@@ -82,17 +82,16 @@ If
 .BR deluser " is called with the " \-\-group " option, or " delgroup
 is called, a group will be removed.
 
-Warning: If any users have the group to be removed as primary group
-the group cannot be removed.
+Warning: The primary group of an existing user cannot be removed.
 
 If the option
 .B \-\-only-if-empty
 is given, the group won't be removed if it has any members left.
 
-.SS "Remove an user from a specific group"
+.SS "Remove a user from a specific group"
 If called with two non-option arguments,
 .B deluser
-will remove an user from a specific group.
+will remove a user from a specific group.
 .SH OPTIONS
 .TP
 .B \-\-conf FILE
@@ -112,7 +111,7 @@ Suppress progress messages.
 .TP
 .B \-\-system
 Only delete if user/group is a system user/group. This avoids
-accidentally deleting non-system user/groups. Additionally, if the
+accidentally deleting non-system users/groups. Additionally, if the
 user does not exist, no error value is returned. This option is mainly
 for use in Debian package maintainer scripts.
 .TP
