@@ -86,6 +86,7 @@ our $new_uid = undef;
 our $no_create_home = undef;
 our $special_home = undef;
 our $special_shell = undef;
+our $add_extra_groups = 0;
 
 # Global variables we need later
 my $existing_user = undef;
@@ -123,6 +124,7 @@ GetOptions ("quiet" => sub { $verbose = 0 },
 	    "gid=i" => \$new_gid,
 	    "conf=s" => \$configfile,
 	    "no-create-home" => \$no_create_home,
+            "add_extra_groups" => \$add_extra_groups,
 	    "debug" => sub { $verbose = 2 } );
 
 # everyone can issue "--help" and "--version", but only root can go on
@@ -532,6 +534,31 @@ if ($action eq "adduser") {
 	    last if ($answer =~ m/$yesexpr/o);
 	}
     }
+
+    if ( ( $add_extra_groups || $config{"add_extra_groups"} ) && defined($config{"extra_groups"}) ) {
+        printf (gtx("Adding new user `%s' to extra groups\n"), $new_name);
+        foreach my $newgrp ( split ' ', $config{"extra_groups"} ) {
+            if (!defined getgrnam($newgrp)) {
+                warnf (gtx("The group `%s' does not exist.\n"),$newgrp);
+                next;
+            }
+            if (&user_is_member($new_name, $newgrp)) {
+                printf gtx("The user `%s' is already a member of `%s'.\n"),
+                        $new_name,$newgrp if $verbose;
+                next;
+
+            }
+
+            printf gtx("Adding user `%s' to group `%s'...\n"),$new_name,$newgrp
+                if $verbose;
+            &invalidate_nscd();
+            &systemcall('/usr/bin/gpasswd', '-M',
+                        join(',', get_group_members($newgrp), $new_name),
+                        $newgrp);
+            &invalidate_nscd();
+        }
+    }
+
 
     if ($config{"quotauser"}) {
 	printf (gtx("Setting quota from `%s'.\n"),$config{quotauser});

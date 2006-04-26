@@ -10,7 +10,7 @@
 .SH NAME
 adduser, addgroup \- add a user or group to the system
 .SH SYNOPSIS
-.BR adduser " [options] [\-\-home DIR] [\-\-shell|\-s SHELL] [\-\-no-create-home] [\-\-uid ID] [\-\-firstuid ID] [\-\-lastuid ID] [\-\-ingroup GROUP | \-\-gid ID] [\-\-disabled-password] [\-\-disabled-login] [\-\-gecos GECOS] user"
+.BR adduser " [options] [\-\-home DIR] [\-\-shell|\-s SHELL] [\-\-no-create-home] [\-\-uid ID] [\-\-firstuid ID] [\-\-lastuid ID] [\-\-ingroup GROUP | \-\-gid ID] [\-\-disabled-password] [\-\-disabled-login] [\-\-gecos GECOS] [\-\-extra_groups] user"
 .PP
 .BR adduser " \-\-system [options] [\-\-home DIR] [\-\-shell SHELL] [\-\-no-create-home] [\-\-uid ID] [\-\-group | \-\-ingroup GROUP | \-\-gid ID] [\-\-disabled-password] [\-\-disabled-login] [\-\-gecos GECOS] user"
 .PP
@@ -70,7 +70,10 @@ all users' GIDs are set to
 .BR USERS_GID .
 Users' groups can also be overridden from the command line with the
 .BR \-\-gid " or " \-\-ingroup
-options to set the group by id or name, respectively.
+options to set the group by id or name, respectively.  Also, users can be
+added to one or more groups defined in adduser.conf either by setting
+ADD_EXTRA_GROUPS to 1 in adduser.conf, or by passing --add_extra_groups on
+the commandline.
 
 .B adduser
 will create a home directory subject to
@@ -254,6 +257,9 @@ Override the first uid in the range that the uid is chosen from.
 .TP
 .B \-\-lastuid ID
 Override the last uid in the range that the uid is chosen from.
+.TP
+.B \-\-add_extra_groups
+Add new user to extra groups defined in adduser.conf
 .TP
 .B \-\-version
 Display version and copyright information.
