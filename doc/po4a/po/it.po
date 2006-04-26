@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser manpages italian translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-15 18:29+0000\n"
+"POT-Creation-Date: 2006-04-26  9:23+0000\n"
 "PO-Revision-Date: 2006-04-17 17:43+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -198,7 +198,7 @@ msgstr ""
 "è \"(proc|sysfs|usbfs|devpts|tmpfs)\"."
 
 # type: SH
-#: ../deluser.conf.5:71 ../adduser.conf.5:119 ../deluser.8:147
+#: ../deluser.conf.5:71 ../adduser.conf.5:119 ../deluser.8:146
 #: ../adduser.8:260
 #, no-wrap
 msgid "FILES"
@@ -210,7 +210,7 @@ msgid "I</etc/deluser.conf>"
 msgstr "I</etc/deluser.conf>"
 
 # type: SH
-#: ../deluser.conf.5:73 ../adduser.conf.5:121 ../deluser.8:149
+#: ../deluser.conf.5:73 ../adduser.conf.5:121 ../deluser.8:148
 #: ../adduser.8:262
 #, no-wrap
 msgid "SEE ALSO"
@@ -510,9 +510,10 @@ msgstr "SINTASSI"
 
 # type: Plain text
 #: ../deluser.8:14
+#, fuzzy
 msgid ""
 "B<deluser> [options] [--remove-home] [--remove-all-files] [--backup] [--"
-"backup-to] user"
+"backup-to DIR] user"
 msgstr ""
 "B<deluser> [opzioni] [--remove-home] [--remove-all-files] [--backup] [--"
 "backup-to] utente"
@@ -623,10 +624,11 @@ msgstr ""
 
 # type: Plain text
 #: ../deluser.8:77
+#, fuzzy
 msgid ""
 "If the file B</usr/local/sbin/deluser.local> exists, it will be executed "
-"after the user account has been removed in order to do any local setup. The "
-"arguments passed to B<deluser.local> are:"
+"after the user account has been removed in order to do any local cleanup. "
+"The arguments passed to B<deluser.local> are:"
 msgstr ""
 "Se esiste il file B</usr/local/sbin/deluser.local>, viene eseguito dopo che "
 "l'utente è stato rimosso in modo da applicare qualsiasi impostazione "
@@ -653,16 +655,12 @@ msgstr ""
 "B<delgroup>, viene rimosso un gruppo."
 
 # type: Plain text
-#: ../deluser.8:87
-msgid ""
-"Warning: If any users have the group to be removed as primary group the "
-"group cannot be removed."
+#: ../deluser.8:86
+msgid "Warning: The primary group of an existing user cannot be removed."
 msgstr ""
-"Attenzione: se il gruppo che si intende rimuovere è il gruppo primario di "
-"alcuni utenti, il gruppo non può essere rimosso."
 
 # type: Plain text
-#: ../deluser.8:91
+#: ../deluser.8:90
 msgid ""
 "If the option B<--only-if-empty> is given, the group won't be removed if it "
 "has any members left."
@@ -670,44 +668,45 @@ msgstr ""
 "Con l'opzione B<--only-if-empty> il gruppo viene rimosso solo se è vuoto."
 
 # type: SS
-#: ../deluser.8:92
-#, no-wrap
-msgid "Remove an user from a specific group"
+#: ../deluser.8:91
+#, fuzzy, no-wrap
+msgid "Remove a user from a specific group"
 msgstr "Rimozione di un utente da un gruppo"
 
 # type: Plain text
-#: ../deluser.8:96
+#: ../deluser.8:95
+#, fuzzy
 msgid ""
-"If called with two non-option arguments, B<deluser> will remove an user from "
+"If called with two non-option arguments, B<deluser> will remove a user from "
 "a specific group."
 msgstr ""
 "Se eseguito con due argomenti, B<deluser> rimuove un utente da un gruppo."
 
 # type: SH
-#: ../deluser.8:96 ../adduser.8:179
+#: ../deluser.8:95 ../adduser.8:179
 #, no-wrap
 msgid "OPTIONS"
 msgstr "OPZIONI"
 
 # type: TP
-#: ../deluser.8:97 ../adduser.8:180
+#: ../deluser.8:96 ../adduser.8:180
 #, no-wrap
 msgid "B<--conf FILE>"
 msgstr "B<--conf FILE>"
 
 # type: Plain text
-#: ../deluser.8:101
+#: ../deluser.8:100
 msgid "Use FILE instead of I</etc/deluser.conf>."
 msgstr "Usa FILE al posto di I</etc/deluser.conf>."
 
 # type: TP
-#: ../deluser.8:101 ../adduser.8:209
+#: ../deluser.8:100 ../adduser.8:209
 #, no-wrap
 msgid "B<--group>"
 msgstr "B<--group>"
 
 # type: Plain text
-#: ../deluser.8:106
+#: ../deluser.8:105
 msgid ""
 "Remove a group. This is the default action if the program is invoked as "
 "I<delgroup>."
@@ -716,38 +715,39 @@ msgstr ""
 "richiamato con I<delgroup>."
 
 # type: TP
-#: ../deluser.8:106 ../adduser.8:219
+#: ../deluser.8:105 ../adduser.8:219
 #, no-wrap
 msgid "B<--help>"
 msgstr "B<--help>"
 
 # type: Plain text
-#: ../deluser.8:109 ../adduser.8:222
+#: ../deluser.8:108 ../adduser.8:222
 msgid "Display brief instructions."
 msgstr "Mostra le informazioni sull'uso del programma."
 
 # type: TP
-#: ../deluser.8:109 ../adduser.8:238
+#: ../deluser.8:108 ../adduser.8:238
 #, no-wrap
 msgid "B<--quiet>"
 msgstr "B<--quiet>"
 
 # type: Plain text
-#: ../deluser.8:112
+#: ../deluser.8:111
 msgid "Suppress progress messages."
 msgstr "Non mostra le informazioni sull'avanzamento dell'elaborazione."
 
 # type: TP
-#: ../deluser.8:112 ../adduser.8:244
+#: ../deluser.8:111 ../adduser.8:244
 #, no-wrap
 msgid "B<--system>"
 msgstr "B<--system>"
 
 # type: Plain text
-#: ../deluser.8:118
+#: ../deluser.8:117
+#, fuzzy
 msgid ""
 "Only delete if user/group is a system user/group. This avoids accidentally "
-"deleting non-system user/groups. Additionally, if the user does not exist, "
+"deleting non-system users/groups. Additionally, if the user does not exist, "
 "no error value is returned. This option is mainly for use in Debian package "
 "maintainer scripts."
 msgstr ""
@@ -757,130 +757,130 @@ msgstr ""
 "script di gestione dei pacchetti Debian."
 
 # type: TP
-#: ../deluser.8:118 ../adduser.8:257
+#: ../deluser.8:117 ../adduser.8:257
 #, no-wrap
 msgid "B<--version>"
 msgstr "B<--version>"
 
 # type: Plain text
-#: ../deluser.8:121 ../adduser.8:260
+#: ../deluser.8:120 ../adduser.8:260
 msgid "Display version and copyright information."
 msgstr "Mostra le informazioni su versione e copyright del programma."
 
 # type: SH
-#: ../deluser.8:121
+#: ../deluser.8:120
 #, no-wrap
 msgid "RETURN VALUE"
 msgstr "VALORE RESTITUITO"
 
 # type: TP
-#: ../deluser.8:122
+#: ../deluser.8:121
 #, no-wrap
 msgid "B<0>"
 msgstr "B<0>"
 
 # type: Plain text
-#: ../deluser.8:125
+#: ../deluser.8:124
 msgid "The action was successfully executed."
 msgstr "Operazione conclusa correttamente."
 
 # type: TP
-#: ../deluser.8:125
+#: ../deluser.8:124
 #, no-wrap
 msgid "B<1>"
 msgstr "B<1>"
 
 # type: Plain text
-#: ../deluser.8:128
+#: ../deluser.8:127
 msgid "The user to delete was not a system account. No action was performed."
 msgstr ""
 "L'utente da rimuovere non è un account di sistema. Nessuna operazione "
 "effettuata."
 
 # type: TP
-#: ../deluser.8:128
+#: ../deluser.8:127
 #, no-wrap
 msgid "B<2>"
 msgstr "B<2>"
 
 # type: Plain text
-#: ../deluser.8:131
+#: ../deluser.8:130
 msgid "There is no such user. No action was performed."
 msgstr "Utente non esistente. Nessuna operazione effettuata."
 
 # type: TP
-#: ../deluser.8:131
+#: ../deluser.8:130
 #, no-wrap
 msgid "B<3>"
 msgstr "B<3>"
 
 # type: Plain text
-#: ../deluser.8:134
+#: ../deluser.8:133
 msgid "There is no such group. No action was performed."
 msgstr "Gruppo non esistente. Nessuna operazione effettuata."
 
 # type: TP
-#: ../deluser.8:134
+#: ../deluser.8:133
 #, no-wrap
 msgid "B<4>"
 msgstr "B<4>"
 
 # type: Plain text
-#: ../deluser.8:137
+#: ../deluser.8:136
 msgid "Internal error."
 msgstr "Errore interno."
 
 # type: TP
-#: ../deluser.8:137
+#: ../deluser.8:136
 #, no-wrap
 msgid "B<5>"
 msgstr "B<5>"
 
 # type: Plain text
-#: ../deluser.8:140
+#: ../deluser.8:139
 msgid "The group to delete is not empty. No action was performed."
 msgstr "Il gruppo da rimuovere non è vuoto. Nessuna operazione effettuata."
 
 # type: TP
-#: ../deluser.8:140
+#: ../deluser.8:139
 #, no-wrap
 msgid "B<6>"
 msgstr "B<6>"
 
 # type: Plain text
-#: ../deluser.8:143
+#: ../deluser.8:142
 msgid "The user does not belong to the specified group."
 msgstr "L'utente non appartiene al gruppo specificato."
 
 # type: TP
-#: ../deluser.8:143
+#: ../deluser.8:142
 #, no-wrap
 msgid "B<7>"
 msgstr "B<7>"
 
 # type: SS
-#: ../deluser.8:146
+#: ../deluser.8:145
 msgid "You cannot remove a user from its primary group."
 msgstr "Non è possibile rimuovere un utente dal proprio gruppo primario."
 
 # type: Plain text
-#: ../deluser.8:149
+#: ../deluser.8:148
 msgid "/etc/deluser.conf"
 msgstr "/etc/deluser.conf"
 
 # type: Plain text
-#: ../deluser.8:151
+#: ../deluser.8:150
 msgid "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
 msgstr "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
 
 # type: SH
-#: ../deluser.8:152 ../adduser.8:266
+#: ../deluser.8:151 ../adduser.8:266
 #, no-wrap
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
 # type: Plain text
-#: ../deluser.8:156
+#: ../deluser.8:155
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
 "and Joerg Hoh.  This manpage and the deluser program is based on adduser "
@@ -891,12 +891,12 @@ msgstr ""
 "che è:"
 
 # type: Plain text
-#: ../deluser.8:158
+#: ../deluser.8:157
 msgid "Copyright (C) 1997, 1998, 1999 Guy Maor."
 msgstr "Copyright (C) 1997, 1998, 1999 Guy Maor."
 
 # type: Plain text
-#: ../deluser.8:162 ../adduser.8:273
+#: ../deluser.8:161 ../adduser.8:273
 msgid ""
 "Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original "
 "Debian B<adduser>"
@@ -905,7 +905,7 @@ msgstr ""
 "originale di Debian"
 
 # type: Plain text
-#: ../deluser.8:168
+#: ../deluser.8:167
 msgid ""
 "Copyright (C) 1994 Ian Murdock.  B<deluser> is free software; see the GNU "
 "General Public Licence version 2 or later for copying conditions.  There is "
@@ -1147,11 +1147,12 @@ msgstr "Aggiunta un utente di sistema"
 
 # type: Plain text
 #: ../adduser.8:128
+#, fuzzy
 msgid ""
 "If called with one non-option argument and the B<--system> option, "
-"B<adduser> will add a system user. If an user with an uid in the system "
-"range (or if the uid is specified, with that) does already exist, adduser "
-"will exit with a warning."
+"B<adduser> will add a system user. If a user with the same name already "
+"exists in the system uid range (or, if the uid is specified, if a user with "
+"that uid already exists), adduser will exit with a warning."
 msgstr ""
 "Se eseguito con un solo argomento e con l'opzione B<--system>, B<adduser> "
 "aggiunge un utente di sistema. Se un utente con UID nell'intervallo degli "
@@ -1514,3 +1515,11 @@ msgstr ""
 "Copyright (C) 1994 Ian Murdock. B<adduser> è software libero; si veda la GNU "
 "General Public Licence versione 2 o successiva per le condizioni sulla "
 "copia. Non c'è I<nessuna> garanzia."
+
+# type: Plain text
+#~ msgid ""
+#~ "Warning: If any users have the group to be removed as primary group the "
+#~ "group cannot be removed."
+#~ msgstr ""
+#~ "Attenzione: se il gruppo che si intende rimuovere è il gruppo primario di "
+#~ "alcuni utenti, il gruppo non può essere rimosso."
