@@ -125,7 +125,7 @@ unless ( GetOptions ("quiet" => sub { $verbose = 0 },
 	    "conf=s" => \$configfile,
 	    "no-create-home" => \$no_create_home,
             "add_extra_groups" => \$add_extra_groups,
-	    "debug" => sub { $verbose = 2 } ) {
+	    "debug" => sub { $verbose = 2 } ) ) {
     &usage;
     exit 1;
 }
