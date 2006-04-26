@@ -2,11 +2,14 @@ adduser (3.87.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
   * experimental version
-  * add patch from Stephen Gran to allow additional groups to be used
-    for a new user. (mh)
+  * add patches from Stephen Gran:
+    * allow additional groups to be used for a new user. (mh)
     Closes: #147518, #166718, #212452, #233894, #239006, #240707, #240855
+    * Fix "adduser: adduser:" output of error messages. (mh)
+    * Fix error messages like "foo ", gtx( ..., whch does not produce
+      output at all. (mh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 26 Apr 2006 14:31:43 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 26 Apr 2006 15:37:17 +0000
 
 adduser (3.87) unstable; urgency=low
 

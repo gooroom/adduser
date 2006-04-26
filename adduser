@@ -106,7 +106,7 @@ my $perm = undef;
 our @names;
 
 # Parse options, sanity checks
-GetOptions ("quiet" => sub { $verbose = 0 },
+unless ( GetOptions ("quiet" => sub { $verbose = 0 },
             "force-badname" => \$allow_badname,
 	    "help|h" => sub { &usage(); exit 0 },
 	    "version" => sub { &version(); exit 0 },
@@ -125,10 +125,13 @@ GetOptions ("quiet" => sub { $verbose = 0 },
 	    "conf=s" => \$configfile,
 	    "no-create-home" => \$no_create_home,
             "add_extra_groups" => \$add_extra_groups,
-	    "debug" => sub { $verbose = 2 } );
+	    "debug" => sub { $verbose = 2 } ) {
+    &usage;
+    exit 1;
+}
 
 # everyone can issue "--help" and "--version", but only root can go on
-dief ("$0: ",gtx("Only root may add a user or group to the system.\n")) if ($> != 0);
+dief (gtx("Only root may add a user or group to the system.\n")) if ($> != 0);
 
 if( defined($configfile) ) { @defaults = ($configfile); }
 
@@ -151,12 +154,12 @@ while (defined(my $arg = shift(@ARGV))) {
 }
 
 if ( (! defined $names[0]) || length($names[0]) == 0 || @names > 2) {
-    dief ("$0: ",gtx("Only one or two names allowed.\n"));
+    dief (gtx("Only one or two names allowed.\n"));
 }
 	    
 
 if (@names == 2) {	# must be addusertogroup
-    dief ("$0: ",gtx("Specify only one name in this mode.\n"))
+    dief (gtx("Specify only one name in this mode.\n"))
 	if ($action eq "addsysuser" || $found_group_opt);
     $action = "addusertogroup";
     $existing_user = shift (@names);
@@ -172,18 +175,18 @@ else {
 
 if ($action ne "addgroup" &&
     defined($found_group_opt) +defined($ingroup_name) +defined($new_gid) > 1 ) {
-    dief ("$0: ",gtx("The --group, --ingroup, and --gid options are mutually exclusive.\n"));
+    dief (gtx("The --group, --ingroup, and --gid options are mutually exclusive.\n"));
 }
 
 
 if ((defined($special_home)) && ($special_home !~ m+^/+ )) {
-  (dief "$0: ",gtx("The home dir must be an absolute path.\n"))
+  dief (gtx("The home dir must be an absolute path.\n"));
 }
 	   
 if (defined($special_home) && $verbose) {
-    print "$0: ",gtx("Warning: The home dir you specified already exists.\n")
+    print gtx("Warning: The home dir you specified already exists.\n")
       if (!defined($no_create_home) && -d $special_home);
-    print "$0: ",gtx("Warning: The home dir you specified does not exist.\n")
+    print gtx("Warning: The home dir you specified does not exist.\n")
       if (defined($no_create_home) && ! -d $special_home);
 }
 
@@ -773,7 +776,7 @@ sub checkname {
     my ($name) = @_;
     if ($name !~ /^[_.A-Za-z0-9][-_.A-Za-z0-9]*\$?$/) {
 	print STDERR
-("$0: ",gtx("To avoid problems, the username should consist of
+("$0: " . gtx("To avoid problems, the username should consist of
 letters, digits, underscores, periods and dashes, and not start with a
 dash (as defined by IEEE Std 1003.1-2001). For compatibility with Samba
 machine accounts \$ is also supported at the end of the username\n"));
@@ -785,7 +788,7 @@ machine accounts \$ is also supported at the end of the username\n"));
       }
       else {
         print STDERR
-("$0: ",gtx("Please enter a username matching the regular expression configured
+("$0: " . gtx("Please enter a username matching the regular expression configured
 via the name_regex configuration variable.  Use the `--force-badname'
 option to relax this check or reconfigure name_regex.\n"));
         exit 1;
