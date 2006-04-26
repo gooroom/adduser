@@ -1,0 +1,54 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: adduser\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-26 14:05+0100\n"
+"PO-Revision-Date: 2006-04-07 12:55+0200\n"
+"Last-Translator: Jacobo Tarrio <jtarrio@debian.org>\n"
+"Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Do you want system wide readable home directories?"
+msgstr "¿Quere directorios de usuario lexibles en todo o sistema?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"Normally, home directories can be viewed by all users on the system. If you "
+"want to increase the security/privacy on your system, you might want your "
+"home directories only readable by the user. If you are unsure, enable system "
+"wide readable home directories."
+msgstr ""
+"Normalmente, todos os usuarios do sistema poden ver os directorios dos "
+"usuarios. Se quere aumentar a seguridade ou intimidade do seu sistema, pode "
+"que prefira que cada directorio de usuario só o poida ver o usuario. Se non "
+"está seguro, active os directorios de usuario lexibles en todo o sistema."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"This will only affect home directories of users added with the adduser "
+"program later."
+msgstr ""
+"Isto só ha afectar aos directorios dos usuarios engadidos co programa "
+"adduser a partires de agora."
