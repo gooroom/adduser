@@ -269,7 +269,8 @@ if ($action eq "addsysgroup") {
 
     printf (gtx("Adding group `%s' (%s)...\n"),$new_name,$new_gid) if $verbose;
     &invalidate_nscd("group");
-    &systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
+    my $groupadd = &which('groupadd');
+    &systemcall($groupadd, '-g', $new_gid, $new_name);
     &invalidate_nscd("group");
     print (gtx("Done.\n")) if $verbose;
     exit 0;
@@ -297,7 +298,8 @@ if ($action eq "addgroup") {
 
     printf (gtx("Adding group `%s' (%s)...\n"),$new_name,$new_gid) if $verbose;
     &invalidate_nscd("group");
-    &systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
+    my $groupadd = &which('groupadd');
+    &systemcall($groupadd, '-g', $new_gid, $new_name);
     &invalidate_nscd("group");
     print (gtx("Done.\n")) if $verbose;
     exit 0;
@@ -325,7 +327,8 @@ if ($action eq "addusertogroup") {
     #&systemcall('usermod', '-G',
 		#join(",", get_users_groups($existing_user), $existing_group), 
 		#$existing_user);
-    &systemcall('/usr/bin/gpasswd', '-M',
+    my $gpasswd = &which('gpasswd');
+    &systemcall($gpasswd, '-M',
 		join(',', get_group_members($existing_group), $existing_user),
 		$existing_group);
     #&systemcall('gpasswd', '-a',$existing_user,$existing_group);
@@ -390,7 +393,8 @@ if ($action eq "addsysuser") {
     if ($make_group_also && !getgrnam($new_name)) {
 	printf (gtx("Adding new group `%s' (%s).\n"),$new_name,$new_gid) if $verbose;
 	$undogroup = $new_name;
-	&systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
+       my $groupadd = &which('groupadd');
+	&systemcall($groupadd, '-g', $new_gid, $new_name);
 	&invalidate_nscd("group");
     }
 
@@ -399,18 +403,20 @@ if ($action eq "addsysuser") {
     $home_dir = $special_home || &homedir($new_name, $ingroup_name);
 	$shell = $special_shell || '/bin/false';
     $undouser = $new_name;
-    &systemcall('/usr/sbin/useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
+    my $useradd = &which('useradd');
+    &systemcall($useradd, '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$shell, '-u', $new_uid, $new_name);
-    print "/usr/bin/chage -M 99999 $new_name\n" if ($verbose > 1);
+    my $chage = &which('chage');
+    print "$chage -M 99999 $new_name\n" if ($verbose > 1);
     # do _not_ use systemcall() here, since systemcall() dies on
     # non-zero exit code and we need to do special handling here!
-    if (system('/usr/bin/chage', '-M', '99999', $new_name)) {
+    if (&systemcall($chage, '-M', '99999', $new_name)) {
 	if( ($?>>8) ne 15 ) {
-	    &cleanup("$0: `/usr/bin/chage -M 99999 $new_name' returned error code " . ($?>>8) . ".  Aborting.\n")
+	    &cleanup("$0: `$chage -M 99999 $new_name' returned error code " . ($?>>8) . ".  Aborting.\n")
 	      if ($?>>8);
-	    &cleanup("$0: `/usr/bin/chage -M 99999 $new_name' exited from signal " . ($?&255) . ".  Aborting.\n");
+	    &cleanup("$0: `$chage -M 99999 $new_name' exited from signal " . ($?&255) . ".  Aborting.\n");
 	} else {
-	    print (gtx("chage failed with return code 15, shadow not enabled, password aging cannot be set. Continuing.\n"));
+	    printf (gtx("%s failed with return code 15, shadow not enabled, password aging cannot be set. Continuing.\n"), $chage);
 	}
     }
     &invalidate_nscd();
@@ -474,7 +480,8 @@ if ($action eq "adduser") {
     if ($make_group_also) {
 	printf (gtx("Adding new group `%s' (%s).\n"),$new_name,$new_gid) if $verbose;
 	$undogroup = $new_name;
-	&systemcall('/usr/sbin/groupadd', '-g', $new_gid, $new_name);
+       my $groupadd = &which('groupadd');
+	&systemcall($groupadd, '-g', $new_gid, $new_name);
 	&invalidate_nscd();
     }
 
@@ -483,7 +490,8 @@ if ($action eq "adduser") {
     $home_dir = $special_home || &homedir($new_name, $ingroup_name);
 	$shell = $special_shell || $config{"dshell"};
     $undouser = $new_name;
-    &systemcall('/usr/sbin/useradd', '-d', $home_dir, '-g', $ingroup_name, '-s',
+    my $useradd = &which('useradd');
+    &systemcall($useradd, '-d', $home_dir, '-g', $ingroup_name, '-s',
 		$shell, '-u', $new_uid, $new_name);
     &invalidate_nscd();
 
@@ -492,7 +500,8 @@ if ($action eq "adduser") {
     # useradd without -p has left the account disabled (password string is '!')
     if ($ask_passwd) {
 	for (;;) {
-          &systemcall('/usr/bin/passwd', $new_name);
+          my $passwd = &which('passwd');
+          &systemcall($passwd, $new_name);
 	  my $ok = $? & 128;
 	  if ($ok != 0) {
 	    my $noexpr = langinfo(NOEXPR());
@@ -518,7 +527,8 @@ if ($action eq "adduser") {
 	}
     } else {
 	if(!$disabled_login) {
-	    &systemcall('/usr/sbin/usermod', '-p', '*', $new_name);
+           my $usermod = &which('usermod');
+	    &systemcall($usermod, '-p', '*', $new_name);
 	}
     }
 
@@ -528,7 +538,8 @@ if ($action eq "adduser") {
     else {
 	my $yesexpr = langinfo(YESEXPR());
 	for (;;) {
-	    &systemcall('/usr/bin/chfn', $new_name);
+           my $chfn = &which('chfn');
+	    &systemcall($chfn, $new_name);
 	    # Translators: [y/N] has to be replaced by values defined in your
 	    # locale.  You can see by running "locale yesexpr" which regular
 	    # expression will be checked to find positive answer.
@@ -555,7 +566,8 @@ if ($action eq "adduser") {
             printf gtx("Adding user `%s' to group `%s'...\n"),$new_name,$newgrp
                 if $verbose;
             &invalidate_nscd();
-            &systemcall('/usr/bin/gpasswd', '-M',
+            my $gpasswd = &which('gpasswd');
+            &systemcall($gpasswd, '-M',
                         join(',', get_group_members($newgrp), $new_name),
                         $newgrp);
             &invalidate_nscd();
@@ -565,7 +577,8 @@ if ($action eq "adduser") {
 
     if ($config{"quotauser"}) {
 	printf (gtx("Setting quota from `%s'.\n"),$config{quotauser});
-	&systemcall('/usr/sbin/edquota', '-p', $config{quotauser}, $new_name);
+       my $edquota = &which('edquota');
+	&systemcall($edquota, '-p', $config{quotauser}, $new_name);
     }
 
     &systemcall('/usr/local/sbin/adduser.local', $new_name, $new_uid,
@@ -825,23 +838,24 @@ sub first_avail_gid {
 }
 
 sub ch_gecos {
+    my $chfn = &which('chfn');
     my $gecos = shift;
     if($gecos =~ /,/)
       {
 	  my($gecos_name,$gecos_room,$gecos_work,$gecos_home,$gecos_other)
 	    = split(/,/,$gecos);
 
-	  &systemcall('/usr/bin/chfn', '-f', $gecos_name, '-r', $gecos_room, $new_name);
-	  &systemcall('/usr/bin/chfn','-w',$gecos_work,$new_name)
+	  &systemcall($chfn, '-f', $gecos_name, '-r', $gecos_room, $new_name);
+	  &systemcall($chfn,'-w',$gecos_work,$new_name)
 	    if(defined($gecos_work));
-	  &systemcall('/usr/bin/chfn','-h',$gecos_home,$new_name)
+	  &systemcall($chfn,'-h',$gecos_home,$new_name)
 	    if(defined($gecos_home));
-	  &systemcall('/usr/bin/chfn','-o',$gecos_other,$new_name)
+	  &systemcall($chfn,'-o',$gecos_other,$new_name)
 	    if(defined($gecos_other));
       }
     else
       {
-	  &systemcall('/usr/bin/chfn', '-f', $gecos, $new_name);
+	  &systemcall($chfn, '-f', $gecos, $new_name);
       }
 }
 
@@ -953,4 +967,4 @@ sub get_dir_mode
 # cperl-indent-level:4
 # End:
 
-
+# vim:set ai et sts=4 sw=4 tw=0:

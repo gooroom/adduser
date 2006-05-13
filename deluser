@@ -28,8 +28,6 @@ my $version = "VERSION";
 # See the usage subroutine for explanation about how the program can be called
 ####################
 
-$ENV{"PATH"} = "/sbin:/bin:/usr/sbin:/usr/bin";
-
 use warnings;
 use strict;
 use Getopt::Long;
@@ -289,14 +287,18 @@ if($action eq "deluser") {
 	  print "backup_name = $backup_name";
 	  print $filesfile join("\n",@files);
 	  $filesfile->close();
-	  systemcall("/bin/tar", "-cf", $backup_name, "--files-from", $filesfilename);
-	  systemcall("chmod","600", $backup_name);
-	  systemcall("chown","root:root", $backup_name);
+         my $tar = &which('tar');
+	  &systemcall($tar, "-cf", $backup_name, "--files-from", $filesfilename);
+	  chmod 600, $backup_name;
+         my $rootid = 0;
+	  chown $rootid, $rootid, $backup_name;
 	  unlink($filesfilename);
-	  if(-e "/usr/bin/bzip2") {
-	      systemcall("/usr/bin/bzip2", $backup_name);
-	  } elsif(-e "/bin/gzip") {
-	      systemcall("/bin/gzip", "--best", $backup_name);
+         my $bzip2 = &which('bzip2', 1);
+         my $gzip = &which('gzip', 1);
+	  if($bzip2) {
+	      systemcall($bzip2, $backup_name);
+	  } elsif($gzip) {
+	      systemcall($gzip, "--best", $backup_name);
 	  }
       }
 
@@ -311,12 +313,14 @@ if($action eq "deluser") {
 
     if (system("crontab -l $user >/dev/null 2>&1") == 0) {
       # crontab -l returns 1 if there is no crontab
-      systemcall("/usr/bin/crontab -r $user");
+      my $crontab = &which('crontab');
+      &systemcall($crontab, "-r", $user);
       s_print (gtx("Removing crontab\n"));
     }
 
     s_printf (gtx("Removing user `%s'...\n"),$user);
-    systemcall("/usr/sbin/userdel", $user);
+    my $userdel = &which('userdel');
+    &systemcall($userdel, $user);
     &invalidate_nscd();
 
     systemcall('/usr/local/sbin/deluser.local', $user, $pw_uid,
@@ -355,7 +359,8 @@ if($action eq "delgroup") {
     endpwent;
 
     s_printf (gtx("Removing group `%s'...\n"),$group);
-    systemcall("/usr/sbin/groupdel",$group);
+    my $groupdel = &which('groupdel');
+    &systemcall($groupdel,$group);
     &invalidate_nscd();
     s_print (gtx("done.\n"));
     exit 0;
@@ -391,7 +396,8 @@ if($action eq "deluserfromgroup")
 
     s_printf (gtx("Removing user `%s' from group `%s'...\n"),$user,$group);
     #systemcall("usermod","-G", join(",",@groups), $user );
-    systemcall('/usr/bin/gpasswd','-M', join(',',@members), $group);
+    my $gpasswd = &which('gpasswd');
+    &systemcall($gpasswd,'-M', join(',',@members), $group);
     &invalidate_nscd();
     s_print (gtx("done.\n"));
 }
@@ -470,4 +476,4 @@ sub exist_group {
     return(defined getgrnam($exist_group));
 }
 
-
+# vim:set ai et sts=4 sw=4 tw=0:

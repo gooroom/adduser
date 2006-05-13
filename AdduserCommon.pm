@@ -30,12 +30,7 @@ sub invalidate_nscd {
     }
  
     # Check if we need to invalidate the NSCD cache
-    my $nscd;
-    if(-e "/usr/sbin/nscd") {
-        $nscd = "/usr/sbin/nscd";
-    } elsif(-e "/usr/bin/nscd") {
-        $nscd = "/usr/bin/nscd";
-    }
+    my $nscd = &which('nscd',1);
     # this function replaces startnscd and stopnscd (closes: #54726)
     # We are ignoring any error messages given by nscd here since we
     # cannot expect the nscd maintainer and upstream to document their
@@ -166,6 +161,17 @@ sub systemcall {
     }
 }
 
+sub which {
+    my ($progname, $nonfatal) = @_ ;
+    for my $dir (split /:/, $ENV{"PATH"}) {
+        if (-x "$dir/$progname" ) {
+            return "$dir/$progname";
+        }
+    }
+    dief(gtx("No program named %s in \$PATH\n"), $progname) unless ($nonfatal);
+}
+
+
 # preseed the configuration variables 
 # then read the config file /etc/adduser and overwrite the data hardcoded here
 sub preseed_config {
@@ -210,3 +216,5 @@ sub preseed_config {
 # Local Variables:
 # mode:cperl
 # End:
+
+#vim:set ai et sts=4 sw=4 tw=0:
