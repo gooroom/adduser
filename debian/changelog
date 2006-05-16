@@ -12,10 +12,12 @@ adduser (3.87.0) UNRELEASED; urgency=low
     * Honor system PATH, do not hard-code paths to sub-programs.
   * Update French (fr) program translation.
     Thanks to Thomas Huriaux. (mh) Closes: #366885
+  * Update French (fr) manpage translation.
+    Thanks to Nicolas François. (mh) Closes: #367380
   * Apply two small patches to deluser man page.
     Thanks to Florentin Duneau. (mh) Closes: #367213
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 14 May 2006 23:02:17 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 16 May 2006 10:01:25 +0200
 
 adduser (3.87) unstable; urgency=low
 
