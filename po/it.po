@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: adduser italian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-13 13:27+0000\n"
-"PO-Revision-Date: 2006-04-17 17:43+0200\n"
+"PO-Revision-Date: 2006-06-02 12:16+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -170,13 +170,13 @@ msgid "Adding new user `%s' (%s) with group `%s'.\n"
 msgstr "Aggiunta del nuovo utente «%s» (%s) con gruppo «%s».\n"
 
 #: ../adduser:419
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "%s failed with return code 15, shadow not enabled, password aging cannot be "
 "set. Continuing.\n"
 msgstr ""
-"fallita la chiamata a chage (restituito il codice 15), shadow non abilitato, "
-"non può essere abilitata la scadenza delle password. Continuo.\n"
+"%s fallito restituendo il codice 15, shadow non abilitato, non può essere "
+"abilitata la scadenza delle password. Continuo.\n"
 
 #: ../adduser:445
 #, perl-format
@@ -237,9 +237,9 @@ msgid "Is the information correct? [y/N] "
 msgstr "Le informazioni sono corrette? [s/N] "
 
 #: ../adduser:553
-#, fuzzy, perl-format
+#, perl-format
 msgid "Adding new user `%s' to extra groups\n"
-msgstr "Aggiunta del nuovo utente «%s» (%s) con gruppo «%s».\n"
+msgstr "Aggiunta del nuovo utente «%s» ai gruppi extra.\n"
 
 #: ../adduser:579
 #, perl-format
@@ -661,10 +661,4 @@ msgstr "Variabile «%s» sconosciuta a «%s»:%s.\n"
 #: ../AdduserCommon.pm:171
 #, perl-format
 msgid "No program named %s in $PATH\n"
-msgstr ""
-
-#~ msgid "Enter a groupname to add: "
-#~ msgstr "Nome del gruppo da aggiungere: "
-
-#~ msgid "Enter a username to add: "
-#~ msgstr "Nome dell'utente da aggiungere: "
+msgstr "Nessun programma con nome %s in $PATH\n"

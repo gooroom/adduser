@@ -16,8 +16,10 @@ adduser (3.87.0) UNRELEASED; urgency=low
     Thanks to Nicolas François. (mh) Closes: #367380
   * Apply two small patches to deluser man page.
     Thanks to Florentin Duneau. (mh) Closes: #367213
+  * Update Italian (it) program and manpage translations.
+    Thanks to Luca Monducci. (mh) Closes: #370030
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 16 May 2006 10:01:25 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Jun 2006 13:32:31 +0200
 
 adduser (3.87) unstable; urgency=low
 

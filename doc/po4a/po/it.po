@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: adduser manpages italian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-13 13:27+0000\n"
-"PO-Revision-Date: 2006-04-17 17:43+0200\n"
+"PO-Revision-Date: 2006-06-02 12:17+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -510,13 +510,12 @@ msgstr "SINTASSI"
 
 # type: Plain text
 #: ../deluser.8:14
-#, fuzzy
 msgid ""
 "B<deluser> [options] [--remove-home] [--remove-all-files] [--backup] [--"
 "backup-to DIR] user"
 msgstr ""
 "B<deluser> [opzioni] [--remove-home] [--remove-all-files] [--backup] [--"
-"backup-to] utente"
+"backup-to DIR] utente"
 
 # type: Plain text
 #: ../deluser.8:16
@@ -624,15 +623,15 @@ msgstr ""
 
 # type: Plain text
 #: ../deluser.8:77
-#, fuzzy
 msgid ""
 "If the file B</usr/local/sbin/deluser.local> exists, it will be executed "
 "after the user account has been removed in order to do any local cleanup. "
 "The arguments passed to B<deluser.local> are:"
 msgstr ""
-"Se esiste il file B</usr/local/sbin/deluser.local>, viene eseguito dopo che "
-"l'utente è stato rimosso in modo da applicare qualsiasi impostazione "
-"specifica del sistema locale. Gli argomenti passati a B<deluser.local> sono:"
+"Se esiste, il file B</usr/local/sbin/deluser.local> viene eseguito dopo "
+"che l'utente è stato rimosso in modo da applicare qualsiasi operazione di "
+"pulizia specifica del sistema locale. Gli argomenti passati a "
+"B<deluser.local> sono:"
 
 # type: Plain text
 #: ../deluser.8:79 ../adduser.8:114
@@ -658,6 +657,8 @@ msgstr ""
 #: ../deluser.8:86
 msgid "Warning: The primary group of an existing user cannot be removed."
 msgstr ""
+"Attenzione: il gruppo primario di un utente esistente non può essere "
+"rimosso."
 
 # type: Plain text
 #: ../deluser.8:90
@@ -669,18 +670,18 @@ msgstr ""
 
 # type: SS
 #: ../deluser.8:91
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Remove a user from a specific group"
-msgstr "Rimozione di un utente da un gruppo"
+msgstr "Rimozione di un utente dal gruppo specificato"
 
 # type: Plain text
 #: ../deluser.8:95
-#, fuzzy
 msgid ""
 "If called with two non-option arguments, B<deluser> will remove a user from "
 "a specific group."
 msgstr ""
-"Se eseguito con due argomenti, B<deluser> rimuove un utente da un gruppo."
+"Se eseguito con due argomenti, B<deluser> rimuove un utente dal gruppo "
+"specificato."
 
 # type: SH
 #: ../deluser.8:95 ../adduser.8:182
@@ -744,7 +745,6 @@ msgstr "B<--system>"
 
 # type: Plain text
 #: ../deluser.8:117
-#, fuzzy
 msgid ""
 "Only delete if user/group is a system user/group. This avoids accidentally "
 "deleting non-system users/groups. Additionally, if the user does not exist, "
@@ -928,7 +928,6 @@ msgstr "adduser, addgroup - aggiunge un utente o un gruppo al sistema"
 
 # type: Plain text
 #: ../adduser.8:14
-#, fuzzy
 msgid ""
 "B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
 "uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
@@ -937,7 +936,8 @@ msgid ""
 msgstr ""
 "B<adduser> [opzioni] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
 "uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GRUPPO | --gid ID] [--"
-"disabled-password] [--disabled-login] [--gecos GECOS] utente"
+"disabled-password] [--disabled-login] [--gecos GECOS] [--add_extra_groups] "
+"utente"
 
 # type: Plain text
 #: ../adduser.8:16
@@ -1039,7 +1039,6 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:77
-#, fuzzy
 msgid ""
 "By default, each user in Debian GNU/Linux is given a corresponding group "
 "with the same name.  Usergroups allow group writable directories to be "
@@ -1054,14 +1053,17 @@ msgid ""
 "the commandline."
 msgstr ""
 "In un sistema GNU/Linux Debian a ciascun utente viene assegnato un gruppo "
-"con lo stesso nome. B<USERGROUPS> permette alle directory su cui il gruppo "
-"ha il permesso di scrittura di essere facilmente gestite inserendo gli "
-"utenti nel nuovo gruppo, attivando il bit set-group-ID sulla directory e "
-"assicurandosi che tutti gli utenti abbiano la umask a 022. Se questa opzione "
-"è disattivata, cioè il valore di B<USERGROUPS> è I<no>, il valore del GID "
-"per tutti i nuovi utenti è B<USERS_GID>. I gruppi degli utenti possono anche "
-"essere cambiati dalla riga di comando con le opzioni B<--gid> o B<--ingroup> "
-"che permettono di impostare rispettivamente l'ID oppure il nome del gruppo."
+"con lo stesso nome. B<USERGROUPS> permette di gestire facilmente le "
+"directory su cui il gruppo ha il permesso di scrittura, infatti inserisce "
+"gli utenti nel nuovo gruppo, attiva il bit set-group-ID sulla directory e "
+"assicura che tutti gli utenti abbiano la umask a 022. Se questa opzione è "
+"disattivata, cioè il valore di B<USERGROUPS> è I<no>, il valore del GID per "
+"tutti i nuovi utenti è B<USERS_GID>. I gruppi degli utenti possono anche "
+"essere cambiati dalla riga di comando con le opzioni B<--gid> o B<--"
+"ingroup> che permettono di impostare rispettivamente l'ID oppure il nome "
+"del gruppo. Inoltre gli utenti possono essere aggiunti a uno o più gruppi "
+"definiti in adduser.conf, impostando ADD_EXTRA_GROUPS a 1 in adduser.conf "
+"oppure usando --add_extra_groups sulla riga di comando."
 
 # type: Plain text
 #: ../adduser.8:91
@@ -1153,7 +1155,6 @@ msgstr "Aggiunta un utente di sistema"
 
 # type: Plain text
 #: ../adduser.8:131
-#, fuzzy
 msgid ""
 "If called with one non-option argument and the B<--system> option, "
 "B<adduser> will add a system user. If a user with the same name already "
@@ -1161,9 +1162,10 @@ msgid ""
 "that uid already exists), adduser will exit with a warning."
 msgstr ""
 "Se eseguito con un solo argomento e con l'opzione B<--system>, B<adduser> "
-"aggiunge un utente di sistema. Se un utente con UID nell'intervallo degli "
-"UID di sistema (oppure se lo UID per l'utente è specificato) già esiste, "
-"adduser esce con un messaggio d'avviso."
+"aggiunge un utente di sistema. Se già esiste un utente con lo stesso nome "
+"nell'intervallo degli UID di sistema (oppure, se è specificato lo UID, se "
+"già esiste un utente con lo stesso UID), adduser esce con un messaggio "
+"d'avviso."
 
 # type: Plain text
 #: ../adduser.8:137
@@ -1270,8 +1272,8 @@ msgid ""
 "If called with two non-option arguments, B<adduser> will add an existing "
 "user to an existing group."
 msgstr ""
-"Se eseguito con due argomenti, B<adduser> aggiunge un utente esistente a un "
-"gruppo esistente."
+"Se eseguito con due argomenti, B<adduser> aggiunge un utente esistente a "
+"un gruppo esistente."
 
 # type: Plain text
 #: ../adduser.8:187
@@ -1490,14 +1492,14 @@ msgstr "Cambia l'estremo superiore dell'intervallo da cui sono scelti gli UID."
 
 # type: TP
 #: ../adduser.8:260
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--add_extra_groups>"
-msgstr "B<--group>"
+msgstr "B<--add_extra_groups>"
 
 # type: Plain text
 #: ../adduser.8:263
 msgid "Add new user to extra groups defined in adduser.conf"
-msgstr ""
+msgstr "Aggiunge il nuovo utente ai gruppi extra definiti in adduser.conf"
 
 # type: Plain text
 #: ../adduser.8:268
@@ -1532,11 +1534,3 @@ msgstr ""
 "Copyright (C) 1994 Ian Murdock. B<adduser> è software libero; si veda la GNU "
 "General Public Licence versione 2 o successiva per le condizioni sulla "
 "copia. Non c'è I<nessuna> garanzia."
-
-# type: Plain text
-#~ msgid ""
-#~ "Warning: If any users have the group to be removed as primary group the "
-#~ "group cannot be removed."
-#~ msgstr ""
-#~ "Attenzione: se il gruppo che si intende rimuovere è il gruppo primario di "
-#~ "alcuni utenti, il gruppo non può essere rimosso."
