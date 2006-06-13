@@ -10,6 +10,7 @@ adduser (3.87.0) UNRELEASED; urgency=low
     * Fix "adduser: adduser:" output of error messages. (mh)
     * Fix error messages like "foo ", gtx( ..., whch does not produce
       output at all. (mh)
+      This also has the effect of (closes: #351968)
     * Honor system PATH, do not hard-code paths to sub-programs.
       closes: #357978
   * Update French (fr) program translation.
@@ -29,7 +30,7 @@ adduser (3.87.0) UNRELEASED; urgency=low
   * deluser should match it's documentation, and exit 0 when asked to remove a
     system user that doesn't exist. (closes: #372599)
 
- -- Stephen Gran <sgran@debian.org>  Tue, 13 Jun 2006 16:31:02 +0100
+ -- Stephen Gran <sgran@debian.org>  Tue, 13 Jun 2006 16:56:05 +0100
 
 adduser (3.87) unstable; urgency=low
 
