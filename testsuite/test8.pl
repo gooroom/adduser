@@ -28,6 +28,34 @@ if (!defined (getpwnam($username))) {
 	print "ok\n";
 }
 
+my $newgroup = find_unused_username();
+
+$cmd = "addgroup $newgroup"
+unless (defined getgrnam($newgroup) {
+        print "Testing $cmd... ";
+        `$cmd`;
+        my $error = $?;
+        if ($error) {
+            print "failed\n  addgroup returned an errorcode != 0 ($error)\n";
+            exit $error;
+        }
+        assert(check_group_exist ($newgroup));
+        print "ok\n";
+}
+
+$cmd = "adduser $username $newgroup";
+if (defined (getpwnam($username))) {
+   print "Testing $cmd... ";
+   `$cmd`;
+   my $error = $?;
+   if ($error) {
+     print "failed\n  adduser returned an errorcode != 0 ($error)\n";
+     exit $error;
+   }
+   assert(check_user_in_group ($username,$newgroup));
+   print "ok\n";
+}
+
 $cmd = "deluser --remove-home $username";
 if (defined (getpwnam($username))) {
 	print "Testing $cmd... ";

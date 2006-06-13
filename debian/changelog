@@ -1,5 +1,6 @@
 adduser (3.87.0) UNRELEASED; urgency=low
 
+  [ Marc Haber ]
   * NOT RELEASED YET
   * TODO: testsuite test 8 should actually add a group
   * experimental version
@@ -10,6 +11,7 @@ adduser (3.87.0) UNRELEASED; urgency=low
     * Fix error messages like "foo ", gtx( ..., whch does not produce
       output at all. (mh)
     * Honor system PATH, do not hard-code paths to sub-programs.
+      closes: #357978
   * Update French (fr) program translation.
     Thanks to Thomas Huriaux. (mh) Closes: #366885
   * Update French (fr) manpage translation.
@@ -19,7 +21,12 @@ adduser (3.87.0) UNRELEASED; urgency=low
   * Update Italian (it) program and manpage translations.
     Thanks to Luca Monducci. (mh) Closes: #370030
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  3 Jun 2006 13:32:31 +0200
+  [ Stephen Gran ]
+  * test 8 now adds a group, and adds the new user to that group - this should
+    ensure that the new additional groups feature does not get invoked for
+    'adduser to group' code paths
+
+ -- Stephen Gran <sgran@debian.org>  Tue, 13 Jun 2006 10:53:26 +0100
 
 adduser (3.87) unstable; urgency=low
 
