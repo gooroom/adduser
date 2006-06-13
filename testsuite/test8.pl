@@ -30,8 +30,8 @@ if (!defined (getpwnam($username))) {
 
 my $newgroup = find_unused_username();
 
-$cmd = "addgroup $newgroup"
-unless (defined getgrnam($newgroup) {
+$cmd = "addgroup $newgroup";
+unless (defined getgrnam($newgroup)) {
         print "Testing $cmd... ";
         `$cmd`;
         my $error = $?;
