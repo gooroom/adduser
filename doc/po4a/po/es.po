@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2006-05-13 13:27+0000\n"
+"POT-Creation-Date: 2006-06-13 11:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -544,9 +544,10 @@ msgstr "Eliminar un usuario normal"
 
 # type: Plain text
 #: ../deluser.8:41
+#, fuzzy
 msgid ""
-"If called with one non-option argument and without the B< --group >option,B< "
-"deluser> will remove a normal user."
+"If called with one non-option argument and without the B<--group> option, "
+"B<deluser> will remove a normal user."
 msgstr ""
 "Si se invoca con un argumento que no es ninguna opción y sin las opciones "
 "B<--group>, B<deluser> eliminará un usuario normal."
@@ -861,7 +862,7 @@ msgstr "COPYRIGHT"
 #, fuzzy
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
-"and Joerg Hoh.  This manpage and the deluser program is based on adduser "
+"and Joerg Hoh.  This manpage and the deluser program are based on adduser "
 "which is:"
 msgstr ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modificaciones (C) 2004 Marc Haber.  "

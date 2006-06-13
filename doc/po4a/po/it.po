@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser manpages italian translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-05-13 13:27+0000\n"
+"POT-Creation-Date: 2006-06-13 11:02+0000\n"
 "PO-Revision-Date: 2006-06-02 12:17+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -570,9 +570,10 @@ msgstr "Rimozione di un utente normale"
 
 # type: Plain text
 #: ../deluser.8:41
+#, fuzzy
 msgid ""
-"If called with one non-option argument and without the B< --group >option,B< "
-"deluser> will remove a normal user."
+"If called with one non-option argument and without the B<--group> option, "
+"B<deluser> will remove a normal user."
 msgstr ""
 "Se eseguito con un solo argomento non-opzione e senza l'opzione B<--group>, "
 "B<deluser> rimuove un utente normale."
@@ -628,10 +629,10 @@ msgid ""
 "after the user account has been removed in order to do any local cleanup. "
 "The arguments passed to B<deluser.local> are:"
 msgstr ""
-"Se esiste, il file B</usr/local/sbin/deluser.local> viene eseguito dopo "
-"che l'utente è stato rimosso in modo da applicare qualsiasi operazione di "
-"pulizia specifica del sistema locale. Gli argomenti passati a "
-"B<deluser.local> sono:"
+"Se esiste, il file B</usr/local/sbin/deluser.local> viene eseguito dopo che "
+"l'utente è stato rimosso in modo da applicare qualsiasi operazione di "
+"pulizia specifica del sistema locale. Gli argomenti passati a B<deluser."
+"local> sono:"
 
 # type: Plain text
 #: ../deluser.8:79 ../adduser.8:114
@@ -657,8 +658,7 @@ msgstr ""
 #: ../deluser.8:86
 msgid "Warning: The primary group of an existing user cannot be removed."
 msgstr ""
-"Attenzione: il gruppo primario di un utente esistente non può essere "
-"rimosso."
+"Attenzione: il gruppo primario di un utente esistente non può essere rimosso."
 
 # type: Plain text
 #: ../deluser.8:90
@@ -881,9 +881,10 @@ msgstr "COPYRIGHT"
 
 # type: Plain text
 #: ../deluser.8:155
+#, fuzzy
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
-"and Joerg Hoh.  This manpage and the deluser program is based on adduser "
+"and Joerg Hoh.  This manpage and the deluser program are based on adduser "
 "which is:"
 msgstr ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifiche (C) 2004 Marc Haber e "
@@ -1059,11 +1060,11 @@ msgstr ""
 "assicura che tutti gli utenti abbiano la umask a 022. Se questa opzione è "
 "disattivata, cioè il valore di B<USERGROUPS> è I<no>, il valore del GID per "
 "tutti i nuovi utenti è B<USERS_GID>. I gruppi degli utenti possono anche "
-"essere cambiati dalla riga di comando con le opzioni B<--gid> o B<--"
-"ingroup> che permettono di impostare rispettivamente l'ID oppure il nome "
-"del gruppo. Inoltre gli utenti possono essere aggiunti a uno o più gruppi "
-"definiti in adduser.conf, impostando ADD_EXTRA_GROUPS a 1 in adduser.conf "
-"oppure usando --add_extra_groups sulla riga di comando."
+"essere cambiati dalla riga di comando con le opzioni B<--gid> o B<--ingroup> "
+"che permettono di impostare rispettivamente l'ID oppure il nome del gruppo. "
+"Inoltre gli utenti possono essere aggiunti a uno o più gruppi definiti in "
+"adduser.conf, impostando ADD_EXTRA_GROUPS a 1 in adduser.conf oppure usando "
+"--add_extra_groups sulla riga di comando."
 
 # type: Plain text
 #: ../adduser.8:91
@@ -1272,8 +1273,8 @@ msgid ""
 "If called with two non-option arguments, B<adduser> will add an existing "
 "user to an existing group."
 msgstr ""
-"Se eseguito con due argomenti, B<adduser> aggiunge un utente esistente a "
-"un gruppo esistente."
+"Se eseguito con due argomenti, B<adduser> aggiunge un utente esistente a un "
+"gruppo esistente."
 
 # type: Plain text
 #: ../adduser.8:187

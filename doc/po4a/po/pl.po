@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.79\n"
-"POT-Creation-Date: 2006-05-13 13:27+0000\n"
+"POT-Creation-Date: 2006-06-13 11:02+0000\n"
 "PO-Revision-Date: 2005-11-22 18:28+0100\n"
 "Last-Translator: Robert Luberda <robert@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -562,9 +562,10 @@ msgstr "Usuwanie zwyk³ych u¿ytkowników"
 
 # type: Plain text
 #: ../deluser.8:41
+#, fuzzy
 msgid ""
-"If called with one non-option argument and without the B< --group >option,B< "
-"deluser> will remove a normal user."
+"If called with one non-option argument and without the B<--group> option, "
+"B<deluser> will remove a normal user."
 msgstr ""
 "B<deluser>, wywo³any z jednym argumentem nie bêd±cym opcj± oraz bez opcji "
 "B<--group>, usunie zwyk³ego u¿ytkownika."
@@ -880,7 +881,7 @@ msgstr "PRAWA AUTORSKIE"
 #, fuzzy
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
-"and Joerg Hoh.  This manpage and the deluser program is based on adduser "
+"and Joerg Hoh.  This manpage and the deluser program are based on adduser "
 "which is:"
 msgstr ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modyfikacje (C) 2004 Marc Haber. Ta "
