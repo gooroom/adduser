@@ -210,7 +210,7 @@ if($action eq "deluser") {
 	    }
         } else {
 	    printf (gtx("The user `%s' does not exist, but --system was given... Exiting.\n"), $user) if $verbose;
-	    exit 2;
+	    exit 0;
 	}
     }
     
