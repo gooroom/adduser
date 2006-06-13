@@ -1,36 +1,32 @@
-adduser (3.87.0) UNRELEASED; urgency=low
+adduser (3.88) experimental; urgency=low
 
   [ Marc Haber ]
-  * NOT RELEASED YET
-  * TODO: testsuite test 8 should actually add a group
   * experimental version
-  * add patches from Stephen Gran:
-    * allow additional groups to be used for a new user. (mh)
-    Closes: #147518, #166718, #212452, #233894, #239006, #240707, #240855
-    * Fix "adduser: adduser:" output of error messages. (mh)
-    * Fix error messages like "foo ", gtx( ..., whch does not produce
-      output at all. (mh)
-      This also has the effect of (closes: #351968)
-    * Honor system PATH, do not hard-code paths to sub-programs.
-      closes: #357978
   * Update French (fr) program translation.
-    Thanks to Thomas Huriaux. (mh) Closes: #366885
+    Thanks to Thomas Huriaux. Closes: #366885
   * Update French (fr) manpage translation.
-    Thanks to Nicolas François. (mh) Closes: #367380
+    Thanks to Nicolas François. Closes: #367380
   * Apply two small patches to deluser man page.
-    Thanks to Florentin Duneau. (mh) Closes: #367213
+    Thanks to Florentin Duneau. Closes: #367213
   * Update Italian (it) program and manpage translations.
-    Thanks to Luca Monducci. (mh) Closes: #370030
+    Thanks to Luca Monducci. Closes: #370030
   * Standards-Version: 3.7.2, no changed necessary.
 
   [ Stephen Gran ]
+  * allow additional groups to be used for a new user.
+    Closes: #147518, #166718, #212452, #233894, #239006, #240707, #240855
   * test 8 now adds a group, and adds the new user to that group - this should
     ensure that the new additional groups feature does not get invoked for
     'adduser to group' code paths
-  * deluser should match it's documentation, and exit 0 when asked to remove a
-    system user that doesn't exist. (closes: #372599)
+  * Fix "adduser: adduser:" output of error messages.
+  * Fix error messages like "foo ", gtx( ..., whch does not produce
+    output at all. Closes: #351968
+  * Honor system PATH, do not hard-code paths to sub-programs.
+    Closes: #357978
+  * deluser should match its documentation, and exit 0 when asked to remove a
+    system user that doesn't exist. Closes: #372599
 
- -- Stephen Gran <sgran@debian.org>  Tue, 13 Jun 2006 16:56:05 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 13 Jun 2006 19:46:00 +0000
 
 adduser (3.87) unstable; urgency=low
 
