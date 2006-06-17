@@ -69,3 +69,21 @@ if (defined (getpwnam($username))) {
 	print "ok\n";
 }
 
+my $sysusername = find_unused_username(); 
+$cmd = "adduser --system --gecos test --disabled-password --add_extra_groups $username";
+
+if (!defined (getpwnam($sysusername))) {
+	print "Testing $cmd... ";
+	`$cmd`;
+	my $error = $?;
+	if ($error) {
+	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
+	  exit $error;
+	}
+	assert(check_user_exist ($sysusername));
+
+        foreach my $group (split ' ', $config{"extra_groups"}) {
+          assert(!check_user_in_group($username,$group));
+        }
+	print "ok\n";
+}
