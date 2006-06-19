@@ -2,8 +2,10 @@ adduser (3.89) experimental; urgency=low
 
   * Add additional check to testsuite/test8.pl to make sure system users are
     not added to extra groups.
+  * New translations:
+    - lt (Gintautas Miliauskas <gintas@akl.lt>) (closes: #374316)
 
- -- Stephen Gran <sgran@debian.org>  Sat, 17 Jun 2006 11:38:19 +0100
+ -- Stephen Gran <sgran@debian.org>  Mon, 19 Jun 2006 16:26:58 +0100
 
 adduser (3.88) experimental; urgency=low
 
