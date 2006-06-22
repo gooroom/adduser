@@ -1,9 +1,11 @@
-adduser (3.89) experimental; urgency=low
+adduser (3.89) unstable; urgency=low
 
   * Add additional check to testsuite/test8.pl to make sure system users are
-    not added to extra groups.
+    not added to extra groups. (sg)
   * New translations:
-    - lt (Gintautas Miliauskas <gintas@akl.lt>) (closes: #374316)
+    - lt (Gintautas Miliauskas <gintas@akl.lt>) (sg) Closes: #374316
+  * 3.88 was in experimental for a week without any bug reports.
+  * now upload to unstable to let potential breakage begin.
 
  -- Stephen Gran <sgran@debian.org>  Mon, 19 Jun 2006 16:26:58 +0100
 
