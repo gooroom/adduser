@@ -1,3 +1,9 @@
+adduser (3.90.0) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 23 Jun 2006 14:24:29 +0000
+
 adduser (3.90) unstable; urgency=low
 
   * 3.89 is not an NMU, I botched up the changelog. Fixing.
