@@ -1,3 +1,9 @@
+adduser (3.90) unstable; urgency=low
+
+  * 3.89 is not an NMU, I botched up the changelog. Fixing.
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 23 Jun 2006 14:23:00 +0000
+
 adduser (3.89) unstable; urgency=low
 
   * Add additional check to testsuite/test8.pl to make sure system users are
