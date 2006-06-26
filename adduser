@@ -410,7 +410,7 @@ if ($action eq "addsysuser") {
     print "$chage -M 99999 $new_name\n" if ($verbose > 1);
     # do _not_ use systemcall() here, since systemcall() dies on
     # non-zero exit code and we need to do special handling here!
-    if (&systemcall($chage, '-M', '99999', $new_name)) {
+    if (system($chage, '-M', '99999', $new_name)) {
 	if( ($?>>8) ne 15 ) {
 	    &cleanup("$0: `$chage -M 99999 $new_name' returned error code " . ($?>>8) . ".  Aborting.\n")
 	      if ($?>>8);
