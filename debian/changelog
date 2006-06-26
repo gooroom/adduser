@@ -5,8 +5,14 @@ adduser (3.90.0) UNRELEASED; urgency=low
 
   [ Stephen Gran ]
   * Revert usage of systemcall for chage invocation (closes: #375524)
+  * testsuite changes:
+    - testsuite now wrapped in shadowconfig {off,on} calls to avoid, these sorts
+      of failures in the future.
+    - change assert to exit 1 if $condition, as it did not seem to in previous
+      tests.
+    - Also make test8.pl able to handle being called multiple times in a row
 
- -- Stephen Gran <sgran@debian.org>  Mon, 26 Jun 2006 19:08:28 +0100
+ -- Stephen Gran <sgran@debian.org>  Mon, 26 Jun 2006 22:38:41 +0100
 
 adduser (3.90) unstable; urgency=low
 

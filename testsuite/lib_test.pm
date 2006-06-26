@@ -20,7 +20,7 @@ sub assert {
   my ($cond) = @_;
   if ($cond) {
     print "Test failed; aborting test suite\n";
-    exit $cond;
+    exit 1;
   }
 }
 

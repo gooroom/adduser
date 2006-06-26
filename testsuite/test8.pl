@@ -69,8 +69,21 @@ if (defined (getpwnam($username))) {
 	print "ok\n";
 }
 
+$cmd = "delgroup $newgroup";
+unless (!defined getgrnam($newgroup)) {
+        print "Testing $cmd... ";
+        `$cmd`;
+        my $error = $?;
+        if ($error) {
+            print "failed\n  delgroup returned an errorcode != 0 ($error)\n";
+            exit $error;
+        }
+        assert(!check_group_exist ($newgroup));
+        print "ok\n";
+}
+
 my $sysusername = find_unused_username(); 
-$cmd = "adduser --system --gecos test --disabled-password --add_extra_groups $username";
+$cmd = "adduser --system --gecos test --disabled-password --add_extra_groups $sysusername";
 
 if (!defined (getpwnam($sysusername))) {
 	print "Testing $cmd... ";
