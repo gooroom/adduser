@@ -1,3 +1,9 @@
+adduser (3.91.0) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 27 Jun 2006 19:49:25 +0000
+
 adduser (3.91) unstable; urgency=low
 
   * Revert usage of systemcall for chage invocation. (sg)
