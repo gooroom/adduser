@@ -1,9 +1,5 @@
-adduser (3.90.0) UNRELEASED; urgency=low
+adduser (3.91) unstable; urgency=low
 
-  [ Marc Haber ]
-  * NOT RELEASED YET
-
-  [ Stephen Gran ]
   * Revert usage of systemcall for chage invocation. (sg)
     Thanks to Junichi Uekawa, Martin Lohmeier and Matt Kraai.
     Closes: #375524, #375720, #375510
@@ -17,7 +13,7 @@ adduser (3.90.0) UNRELEASED; urgency=low
     - Correctly handle non-zero exit codes in tests. (mh)
     - Have runsuite list failed tests at end. (mh)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 27 Jun 2006 19:32:29 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 27 Jun 2006 19:37:47 +0000
 
 adduser (3.90) unstable; urgency=low
 
