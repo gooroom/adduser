@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.63\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 14:05+0100\n"
+"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
+"POT-Creation-Date: 2006-06-27 19:38+0000\n"
 "PO-Revision-Date: 2005-03-10 10:24+0100\n"
 "Last-Translator: Hans Fredrik Nordhaug <hans@nordhaug.priv.no>\n"
 "Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
@@ -25,19 +25,29 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1001
 msgid "Do you want system wide readable home directories?"
 msgstr "Vil du ha at hjemmekatalogene skal være lesebare for alle på systemet?"
 
 #. Type: boolean
 #. Description
-#: ../templates:4
-msgid "Normally, home directories can be viewed by all users on the system. If you want to increase the security/privacy on your system, you might want your home directories only readable by the user. If you are unsure, enable system wide readable home directories."
-msgstr "Vanligvis kan alle brukerne på systemet lese hjemmekatalogene til hverandre. Hvis du vil øke sikkerheten/fortroligheten på systemet ditt, så vil du kanskje at hjemmekatalogene kun skal være lesbare av eierne. Hvis du er usikker, velg lesebare hjemmekataloger for alle. "
+#: ../templates:1002
+msgid ""
+"Normally, home directories can be viewed by all users on the system. If you "
+"want to increase the security/privacy on your system, you might want your "
+"home directories only readable by the user. If you are unsure, enable system "
+"wide readable home directories."
+msgstr ""
+"Vanligvis kan alle brukerne på systemet lese hjemmekatalogene til hverandre. "
+"Hvis du vil øke sikkerheten/fortroligheten på systemet ditt, så vil du "
+"kanskje at hjemmekatalogene kun skal være lesbare av eierne. Hvis du er "
+"usikker, velg lesebare hjemmekataloger for alle. "
 
 #. Type: boolean
 #. Description
-#: ../templates:4
-msgid "This will only affect home directories of users added with the adduser program later."
-msgstr "Dette vil ikke påvirke hjemmekataloger for allerede opprettede brukere."
-
+#: ../templates:1003
+msgid ""
+"This will only affect home directories of users added with the adduser "
+"program later."
+msgstr ""
+"Dette vil ikke påvirke hjemmekataloger for allerede opprettede brukere."

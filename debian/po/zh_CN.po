@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.9\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 14:05+0100\n"
+"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
+"POT-Creation-Date: 2006-06-27 19:38+0000\n"
 "PO-Revision-Date: 2004-02-02 05:21+1300\n"
 "Last-Translator: Hiei Xu <nicky@mail.edu.cn>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -25,13 +25,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1001
 msgid "Do you want system wide readable home directories?"
 msgstr "您希望让主目录全局可读吗？"
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1002
 #, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
@@ -44,7 +44,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1003
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."

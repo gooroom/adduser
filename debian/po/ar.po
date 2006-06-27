@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.65\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 14:05+0100\n"
+"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
+"POT-Creation-Date: 2006-06-27 19:38+0000\n"
 "PO-Revision-Date: 2005-07-19 18:47+0300\n"
 "Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <debian-l10n-arabic@lists.debian.org>\n"
@@ -26,25 +26,30 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1001
 msgid "Do you want system wide readable home directories?"
 msgstr "هل ترغب بجعل الأدلة المنزلية مقروءة للجميع؟"
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1002
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
-msgstr "عادة، يمكن لأي مستخدم عرض الأدلة المنزلية على النظام. إن أردت زيادة مستوى الأمن/الخصوصويّة على نظامك، قد ترغب بجعل الأدلّة المنزليّة مقروءة فقط من قبل المستخدم نفسه. إن لم تكن متأكّداً، فاترك الأدلة المنزلية قالبة للقراءة من قبل جميع المستخدمين."
+msgstr ""
+"عادة، يمكن لأي مستخدم عرض الأدلة المنزلية على النظام. إن أردت زيادة مستوى "
+"الأمن/الخصوصويّة على نظامك، قد ترغب بجعل الأدلّة المنزليّة مقروءة فقط من قبل "
+"المستخدم نفسه. إن لم تكن متأكّداً، فاترك الأدلة المنزلية قالبة للقراءة من قبل "
+"جميع المستخدمين."
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1003
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
-msgstr "سوف يؤثر هذا فقط على أدلة المستخدمين المنزليّة الذي يضافون باستخدام برنامج adduser لاحقاً."
-
+msgstr ""
+"سوف يؤثر هذا فقط على أدلة المستخدمين المنزليّة الذي يضافون باستخدام برنامج "
+"adduser لاحقاً."

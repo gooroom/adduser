@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 14:05+0100\n"
+"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
+"POT-Creation-Date: 2006-06-27 19:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,13 +26,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1001
 msgid "Do you want system wide readable home directories?"
 msgstr "Vrei ca directoarele din /home sã fie vizibile tuturor?"
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1002
 #, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
@@ -47,7 +47,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1003
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."

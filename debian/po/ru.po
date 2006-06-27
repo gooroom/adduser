@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser-debconf\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 14:05+0100\n"
+"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
+"POT-Creation-Date: 2006-06-27 19:38+0000\n"
 "PO-Revision-Date: 2005-11-14 15:06+0300\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -27,32 +27,31 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1001
 msgid "Do you want system wide readable home directories?"
 msgstr "Хотите сделать домашние каталоги доступными для чтения всем в системе?"
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1002
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
 msgstr ""
-"Обычно, домашние каталоги могут просматриваться всеми пользователями системы. "
-"В целях повышения безопасности/конфиденциальности, вы можете сделать "
-"так, чтобы содержимое домашних каталогов было доступно только его владельцу. "
-"Если не уверены, ответьте \"да\", тогда домашние каталоги будут доступны для "
-"чтения всем."
+"Обычно, домашние каталоги могут просматриваться всеми пользователями "
+"системы. В целях повышения безопасности/конфиденциальности, вы можете "
+"сделать так, чтобы содержимое домашних каталогов было доступно только его "
+"владельцу. Если не уверены, ответьте \"да\", тогда домашние каталоги будут "
+"доступны для чтения всем."
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1003
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
 msgstr ""
-"Это коснётся только домашних каталогов новых пользователей (т.е. которые будут "
-"добавлены в систему с помощью adduser позднее)."
-
+"Это коснётся только домашних каталогов новых пользователей (т.е. которые "
+"будут добавлены в систему с помощью adduser позднее)."

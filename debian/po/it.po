@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.52 (templates)\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 14:05+0100\n"
+"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
+"POT-Creation-Date: 2006-06-27 19:38+0000\n"
 "PO-Revision-Date: 2004-05-07 13:38+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
@@ -12,13 +12,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1001
 msgid "Do you want system wide readable home directories?"
 msgstr "Si vuole che le home directory siano leggibili da tutto il sistema?"
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1002
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
@@ -26,13 +26,13 @@ msgid ""
 "wide readable home directories."
 msgstr ""
 "Normalmente le home directory possono essere viste da tutti gli utenti del "
-"sistema. Se si desidera incrementare la sicurezza/privacy sul sistema si "
-"può pensare di rendere le home directory leggibili solo dall'utente. Se non "
-"si è sicuri impostare le home directory come leggibili da tutto il sistema."
+"sistema. Se si desidera incrementare la sicurezza/privacy sul sistema si può "
+"pensare di rendere le home directory leggibili solo dall'utente. Se non si è "
+"sicuri impostare le home directory come leggibili da tutto il sistema."
 
 #. Type: boolean
 #. Description
-#: ../templates:4
+#: ../templates:1003
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
