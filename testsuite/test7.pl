@@ -13,13 +13,13 @@ my $cmd = "adduser --system $username";
 if (!defined (getpwnam($username))) {
 	print "Testing $cmd... ";
 	`$cmd`;
-	my $error = $?;
+	my $error = ($?>>8);
 	if ($error) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;
 	}
 	`$cmd`;
-	$error = $?;
+	$error = ($?>>8);
 	if ($error) {
           print "failed\n double execution with same parameters showed an error (return code $error)\n";
 	  exit $error;

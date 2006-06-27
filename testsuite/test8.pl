@@ -15,7 +15,7 @@ preseed_config(("/etc/adduser.conf"),\%config);
 if (!defined (getpwnam($username))) {
 	print "Testing $cmd... ";
 	`$cmd`;
-	my $error = $?;
+	my $error = ($?>>8);
 	if ($error) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;
@@ -34,7 +34,7 @@ $cmd = "addgroup $newgroup";
 unless (defined getgrnam($newgroup)) {
         print "Testing $cmd... ";
         `$cmd`;
-        my $error = $?;
+        my $error = ($?>>8);
         if ($error) {
             print "failed\n  addgroup returned an errorcode != 0 ($error)\n";
             exit $error;
@@ -47,7 +47,7 @@ $cmd = "adduser $username $newgroup";
 if (defined (getpwnam($username))) {
    print "Testing $cmd... ";
    `$cmd`;
-   my $error = $?;
+   my $error = ($?>>8);
    if ($error) {
      print "failed\n  adduser returned an errorcode != 0 ($error)\n";
      exit $error;
@@ -60,7 +60,7 @@ $cmd = "deluser --remove-home $username";
 if (defined (getpwnam($username))) {
 	print "Testing $cmd... ";
 	`$cmd`;
-	my $error = $?;
+	my $error = ($?>>8);
 	if ($error) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;
@@ -73,7 +73,7 @@ $cmd = "delgroup $newgroup";
 unless (!defined getgrnam($newgroup)) {
         print "Testing $cmd... ";
         `$cmd`;
-        my $error = $?;
+        my $error = ($?>>8);
         if ($error) {
             print "failed\n  delgroup returned an errorcode != 0 ($error)\n";
             exit $error;
@@ -88,7 +88,7 @@ $cmd = "adduser --system --gecos test --disabled-password --add_extra_groups $sy
 if (!defined (getpwnam($sysusername))) {
 	print "Testing $cmd... ";
 	`$cmd`;
-	my $error = $?;
+	my $error = ($?>>8);
 	if ($error) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;

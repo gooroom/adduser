@@ -4,15 +4,20 @@ adduser (3.90.0) UNRELEASED; urgency=low
   * NOT RELEASED YET
 
   [ Stephen Gran ]
-  * Revert usage of systemcall for chage invocation (closes: #375524)
+  * Revert usage of systemcall for chage invocation. (sg)
+    Thanks to Junichi Uekawa, Martin Lohmeier and Matt Kraai.
+    Closes: #375524, #375720, #375510
   * testsuite changes:
-    - testsuite now wrapped in shadowconfig {off,on} calls to avoid, these sorts
-      of failures in the future.
+    - testsuite now wrapped in shadowconfig {off,on} calls to avoid
+      these sorts of failures in the future. (sg/mh)
     - change assert to exit 1 if $condition, as it did not seem to in previous
-      tests.
-    - Also make test8.pl able to handle being called multiple times in a row
+      tests. (sg)
+    - Also make test8.pl able to handle being called multiple times in
+      a row. (sg)
+    - Correctly handle non-zero exit codes in tests. (mh)
+    - Have runsuite list failed tests at end. (mh)
 
- -- Stephen Gran <sgran@debian.org>  Mon, 26 Jun 2006 22:38:41 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 27 Jun 2006 19:32:29 +0000
 
 adduser (3.90) unstable; urgency=low
 

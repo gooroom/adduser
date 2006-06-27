@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FAILED=0
+FAILED=""
 
 PASSWD_BAK="./passwd.backup"
 
@@ -12,24 +12,25 @@ fi
 
 cp /etc/passwd $PASSWD_BAK
 
-for i in ./test*.pl ; do
-  for a in off on; do
+for a in off on; do
+  for i in ./test*.pl ; do
     shadowconfig $a
     echo
     echo "Starting $i"
     /usr/bin/perl $i
     if [ "$?" != "0" ]; then
-      FAILED=1
+      FAILED="$FAILED $i($a)"
     fi
   done
 done
 
-if [ "$FAILED" = "0" ]; then
+if [ -z "$FAILED" ]; then
   echo "All tests passed successfully"
   rm $PASSWD_BAK
+  exit 0
 else
-  echo "Some tests failed"
+  echo "tests $FAILED failed"
   echo "see $PASSWD_BAK for a copy of /etc/passwd before starting"
+  exit 1
 fi
 
-exit $FAILED

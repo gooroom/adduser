@@ -13,7 +13,7 @@ my $cmd = "adduser --system --no-create-home $username";
 if (!defined (getpwnam($username))) {
 	print "Testing $cmd... ";
 	`$cmd`;
-	my $error = $?;
+	my $error = ($?>>8);
 	if ($error) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;

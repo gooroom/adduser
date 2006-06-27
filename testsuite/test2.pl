@@ -14,7 +14,7 @@ my $cmd = "adduser --system --home $homedir $username";
 if (!defined (getpwnam($username))) {
 	print "Testing $cmd... ";
 	`$cmd`;
-	my $error = $?;
+	my $error = ($?>>8);
 	if ($error) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;
@@ -30,7 +30,7 @@ $cmd = "deluser --remove-home $username";
 if (defined (getpwnam($username))) {
 	print "Testing $cmd... ";
 	`$cmd`;
-	my $error = $?;
+	my $error = ($?>>8);
 	if ($error) {
 	  print "failed\n  deluser returned an errorcode != 0 ($error)\n";
 	  exit $error;
