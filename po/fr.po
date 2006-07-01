@@ -185,12 +185,12 @@ msgstr ""
 "« %s ».\n"
 
 #: ../adduser:419
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "%s failed with return code 15, shadow not enabled, password aging cannot be "
 "set. Continuing.\n"
 msgstr ""
-"La commande « chage » a échoué avec un code de retour 15, indiquant que\n"
+"La commande « %s » a échoué avec un code de retour 15, indiquant que\n"
 "les mots de passe cachés (« shadow passwords ») ne sont pas utilisés. La\n"
 "fin de validité du mot de passe ne peut pas être établie mais la création\n"
 "se poursuit.\n"
@@ -255,11 +255,10 @@ msgid "Is the information correct? [y/N] "
 msgstr "Ces informations sont-elles correctes ? [o/N]"
 
 #: ../adduser:553
-#, fuzzy, perl-format
+#, perl-format
 msgid "Adding new user `%s' to extra groups\n"
 msgstr ""
-"Ajout du nouvel utilisateur « %s » (%s) avec le groupe\n"
-"« %s ».\n"
+"Ajout du nouvel utilisateur « %s » aux groupes supplémentaires\n"
 
 #: ../adduser:579
 #, perl-format
@@ -694,4 +693,4 @@ msgstr "Variable « %s » inconnue en « %s » : %s.\n"
 #: ../AdduserCommon.pm:171
 #, perl-format
 msgid "No program named %s in $PATH\n"
-msgstr ""
+msgstr "Aucun programme %s dans $PATH\n"
