@@ -501,7 +501,9 @@ if ($action eq "adduser") {
     if ($ask_passwd) {
 	for (;;) {
           my $passwd = &which('passwd');
-          &systemcall($passwd, $new_name);
+	  # do _not_ use systemcall() here, since systemcall() dies on
+	  # non-zero exit code and we need to do special handling here!
+          system($passwd, $new_name);
 	  my $ok = $? & 128;
 	  if ($ok != 0) {
 	    my $noexpr = langinfo(NOEXPR());
