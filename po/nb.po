@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.63\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-05-13 13:27+0000\n"
+"POT-Creation-Date: 2006-07-07 08:18+0000\n"
 "PO-Revision-Date: 2005-03-10 15:10+0100\n"
 "Last-Translator: Hans Fredrik Nordhaug <hans@nordhaug.priv.no>\n"
 "Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
@@ -85,7 +85,7 @@ msgstr "Oppretter gruppe «%s» (%s)...\n"
 msgid "Done.\n"
 msgstr "Ferdig.\n"
 
-#: ../adduser:284 ../adduser:728
+#: ../adduser:284 ../adduser:730
 #, perl-format
 msgid "The group `%s' already exists.\n"
 msgstr "Gruppen «%s» eksisterer allerede.\n"
@@ -100,17 +100,17 @@ msgstr "Ingen gruppe-ID (GID) er ledig i utvalget "
 msgid "The user `%s' does not exist.\n"
 msgstr "Brukeren «%s» eksisterer ikke.\n"
 
-#: ../adduser:315 ../adduser:556 ../adduser:735 ../deluser:337 ../deluser:377
+#: ../adduser:315 ../adduser:558 ../adduser:737 ../deluser:337 ../deluser:377
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Gruppen «%s» eksisterer ikke.\n"
 
-#: ../adduser:318 ../adduser:560
+#: ../adduser:318 ../adduser:562
 #, perl-format
 msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "Brukeren «%s» er allerede et medlem av «%s».\n"
 
-#: ../adduser:323 ../adduser:566
+#: ../adduser:323 ../adduser:568
 #, perl-format
 msgid "Adding user `%s' to group `%s'...\n"
 msgstr "Legger til bruker «%s» i gruppe «%s»...\n"
@@ -186,106 +186,106 @@ msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Intet UID ledig i utvalget "
 
 #. hm, error, should we break now?
-#: ../adduser:510
+#: ../adduser:512
 msgid "Permission denied\n"
 msgstr ""
 
-#: ../adduser:511
+#: ../adduser:513
 msgid "invalid combination of options\n"
 msgstr ""
 
-#: ../adduser:512
+#: ../adduser:514
 msgid "unexpected failure, nothing done\n"
 msgstr ""
 
-#: ../adduser:513
+#: ../adduser:515
 msgid "unexpected failure, passwd file missing\n"
 msgstr ""
 
-#: ../adduser:514
+#: ../adduser:516
 msgid "passwd file busy, try again\n"
 msgstr ""
 
-#: ../adduser:515
+#: ../adduser:517
 msgid "invalid argument to option\n"
 msgstr ""
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale noexpr" which regular
 #. expression will be checked to find positive answer.
-#: ../adduser:520
+#: ../adduser:522
 msgid "Try again(Y/n)?"
 msgstr ""
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale yesexpr" which regular
 #. expression will be checked to find positive answer.
-#: ../adduser:546
+#: ../adduser:548
 msgid "Is the information correct? [y/N] "
 msgstr "Er informationen korrekt? [j/N] "
 
-#: ../adduser:553
+#: ../adduser:555
 #, fuzzy, perl-format
 msgid "Adding new user `%s' to extra groups\n"
 msgstr "Oppretter ny bruker «%s» (%s) med gruppe «%s».\n"
 
-#: ../adduser:579
+#: ../adduser:581
 #, perl-format
 msgid "Setting quota from `%s'.\n"
 msgstr "Setter kvote fra «%s».\n"
 
-#: ../adduser:613
+#: ../adduser:615
 #, fuzzy, perl-format
 msgid "Not creating home directory `%s'.\n"
 msgstr "Oppretter ikke hjemmekatalog.\n"
 
-#: ../adduser:616
+#: ../adduser:618
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'\n"
 msgstr "Hjemmekatalog «%s» eksisterer allerede. Kopierer ikke fra «%s»\n"
 
-#: ../adduser:622
+#: ../adduser:624
 msgid ""
 "Warning: that home directory does not belong to the user you are currently "
 "creating\n"
 msgstr ""
 
-#: ../adduser:627
+#: ../adduser:629
 #, perl-format
 msgid "Creating home directory `%s'.\n"
 msgstr "Oppretter hjemmekatalog %s.\n"
 
-#: ../adduser:637
+#: ../adduser:639
 #, perl-format
 msgid "Copying files from `%s'\n"
 msgstr "Kopierer filene fra «%s»\n"
 
-#: ../adduser:718
+#: ../adduser:720
 #, perl-format
 msgid "The user `%s' already exists, and is not a system user.\n"
 msgstr "Brukeren «%s» eksisterer allerede, og er ikke en systembruker.\n"
 
-#: ../adduser:720
+#: ../adduser:722
 #, perl-format
 msgid "The user `%s' already exists.\n"
 msgstr "Brukeren «%s» eksisterer allerede.\n"
 
-#: ../adduser:723
+#: ../adduser:725
 #, perl-format
 msgid "The UID %s is already in use.\n"
 msgstr "Bruker-ID-en (UID) «%s» er allerede i bruk.\n"
 
-#: ../adduser:730
+#: ../adduser:732
 #, perl-format
 msgid "The GID %s is already in use.\n"
 msgstr "Gruppe-ID-en (GID) «%s» er allerede i bruk.\n"
 
-#: ../adduser:737
+#: ../adduser:739
 #, perl-format
 msgid "The GID %s does not exist.\n"
 msgstr "Gruppe-ID-en (GID) «%s» eksisterer ikke.\n"
 
-#: ../adduser:792
+#: ../adduser:794
 #, fuzzy
 msgid ""
 "To avoid problems, the username should consist of\n"
@@ -297,11 +297,11 @@ msgstr ""
 "og bindestreker. For samspill med\n"
 "Samba-kontoer er også $ støttet som siste tegn i brukernavnet.\n"
 
-#: ../adduser:800
+#: ../adduser:802
 msgid "Allowing use of questionable username.\n"
 msgstr "Tillat bruk av tvilsomme brukernavn.\n"
 
-#: ../adduser:804
+#: ../adduser:806
 msgid ""
 "Please enter a username matching the regular expression configured\n"
 "via the name_regex configuration variable.  Use the `--force-badname'\n"
@@ -311,37 +311,37 @@ msgstr ""
 "via «name_regex»-konfigurasjonsvariablen. Bruk «--force-badname»-opsjonen\n"
 "for å overstyre denne kontrollen eller endre «name_regex».\n"
 
-#: ../adduser:816
+#: ../adduser:818
 #, fuzzy, perl-format
 msgid "Selecting uid from range %s to %s.\n"
 msgstr "Velger fra % s%s (%s).\n"
 
-#: ../adduser:830
+#: ../adduser:832
 #, fuzzy, perl-format
 msgid "Selecting gid from range %s to %s.\n"
 msgstr "Velger fra % s%s (%s).\n"
 
-#: ../adduser:874
+#: ../adduser:876
 #, perl-format
 msgid "Stopped: %s\n"
 msgstr ""
 
-#: ../adduser:876
+#: ../adduser:878
 #, perl-format
 msgid "Removing directory `%s'\n"
 msgstr "Fjerner katalog «%s».\n"
 
-#: ../adduser:880
+#: ../adduser:882
 #, perl-format
 msgid "Removing user `%s'.\n"
 msgstr "Fjerner bruker «%s».\n"
 
-#: ../adduser:884
+#: ../adduser:886
 #, perl-format
 msgid "Removing group `%s'.\n"
 msgstr "Fjerner gruppe «%s».\n"
 
-#: ../adduser:917
+#: ../adduser:919
 #, fuzzy
 msgid ""
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
