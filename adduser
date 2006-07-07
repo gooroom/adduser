@@ -51,7 +51,7 @@ BEGIN {
     }
     eval {
 	require I18N::Langinfo;
-	import I18N::Langinfo qw(langinfo YESEXPR);
+	import I18N::Langinfo qw(langinfo YESEXPR NOEXPR);
     };
     if ($@) {
 	*langinfo = sub { "^[yY]" };
@@ -504,7 +504,7 @@ if ($action eq "adduser") {
 	  # do _not_ use systemcall() here, since systemcall() dies on
 	  # non-zero exit code and we need to do special handling here!
           system($passwd, $new_name);
-	  my $ok = $? & 128;
+	  my $ok = $?>>8;
 	  if ($ok != 0) {
 	    my $noexpr = langinfo(NOEXPR());
             my $answer;
