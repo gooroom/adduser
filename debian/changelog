@@ -1,13 +1,12 @@
-adduser (3.91.0) UNRELEASED; urgency=low
+adduser (3.92) unstable; urgency=low
 
-  * NOT RELEASED YET
   * Update French (fr) program translation.
     Thanks to Thomas Huriaux. Closes: #376286
   * do not use systemcall() for passwd call after creating new user.
     This broke our return code checking. Thanks to Alexander Wirt.
   * import NOEXPR from LangInfo.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri,  7 Jul 2006 08:17:08 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri,  7 Jul 2006 08:17:43 +0000
 
 adduser (3.91) unstable; urgency=low
 
