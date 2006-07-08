@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "POT-Creation-Date: 2006-06-13 11:02+0000\n"
-"PO-Revision-Date: 2006-05-15 10:24-0500\n"
+"PO-Revision-Date: 2006-07-01 16:17+0200\n"
 "Last-Translator: Nicolas François <nicolas.francois@centraliens.net>\n"
 "Language-Team: Debian French Team <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -573,7 +573,6 @@ msgstr "Retirer un utilisateur normal"
 
 # type: Plain text
 #: ../deluser.8:41
-#, fuzzy
 msgid ""
 "If called with one non-option argument and without the B<--group> option, "
 "B<deluser> will remove a normal user."
@@ -889,7 +888,6 @@ msgstr "COPYRIGHT"
 
 # type: Plain text
 #: ../deluser.8:155
-#, fuzzy
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
 "and Joerg Hoh.  This manpage and the deluser program are based on adduser "
@@ -937,7 +935,6 @@ msgstr "adduser, addgroup - Ajouter un utilisateur ou un groupe au système"
 
 # type: Plain text
 #: ../adduser.8:14
-#, fuzzy
 msgid ""
 "B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
 "uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
@@ -946,7 +943,7 @@ msgid ""
 msgstr ""
 "B<adduser> [options] [--home REP] [--shell|-s SHELL] [--no-create-home] [--"
 "uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUPE | --gid ID] [--"
-"disabled-password] [--disabled-login] [--gecos GECOS] utilisateur"
+"disabled-password] [--disabled-login] [--gecos GECOS] [--add_extra_groups] utilisateur"
 
 # type: Plain text
 #: ../adduser.8:16
@@ -1051,7 +1048,6 @@ msgstr ""
 
 # type: Plain text
 #: ../adduser.8:77
-#, fuzzy
 msgid ""
 "By default, each user in Debian GNU/Linux is given a corresponding group "
 "with the same name.  Usergroups allow group writable directories to be "
@@ -1075,7 +1071,10 @@ msgstr ""
 "identifiants de groupe des utilisateurs seront B<USERS_GID>. Les groupes des "
 "utilisateurs peuvent aussi être forcés en ligne de commande avec l'option "
 "B<--gid> ou B<--ingroup> respectivement pour l'identifiant numérique et le "
-"nom du groupe."
+"nom du groupe. De plus, les utilisateurs peuvent être ajoutés à un ou des "
+"groupes définis dans adduser.conf, soit en positionnant ADD_EXTRA_GROUPS à "
+"1 dans adduser.conf, soit en utilisant l'option --add_extra_groups en "
+"ligne de commande."
 
 # type: Plain text
 #: ../adduser.8:91
@@ -1508,14 +1507,15 @@ msgstr "Force la borne supérieure du domaine des identifiants."
 
 # type: TP
 #: ../adduser.8:260
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--add_extra_groups>"
-msgstr "B<--group>"
+msgstr "B<--add_extra_groups>"
 
 # type: Plain text
 #: ../adduser.8:263
 msgid "Add new user to extra groups defined in adduser.conf"
 msgstr ""
+"Ajoute l'utilisateur aux groupes supplémentaires définis dans adduser.conf"
 
 # type: Plain text
 #: ../adduser.8:268

@@ -1,8 +1,10 @@
 adduser (3.92.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * Update French (fr) manpage translation.
+    Thanks to Nicolas François. Closes: #377317
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri,  7 Jul 2006 08:22:19 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  8 Jul 2006 18:21:02 +0200
 
 adduser (3.92) unstable; urgency=low
 
