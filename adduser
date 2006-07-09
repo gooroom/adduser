@@ -638,7 +638,7 @@ sub create_homedir {
       if ($config{"skel"} && $copy_skeleton) {
 	  printf gtx("Copying files from `%s'\n"),$config{skel} if $verbose;
 	  open(FIND, "cd $config{skel}; find .  -print |")
-	      || &cleanup(sprintf(gtx("fork for find' failed: %s\n"), $!));
+	      || &cleanup(sprintf(gtx("fork for `find' failed: %s\n"), $!));
 	  while (<FIND>) {
 	      chop;
 	      next if ($_ eq ".");
