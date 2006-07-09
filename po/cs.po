@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-07 08:18+0000\n"
-"PO-Revision-Date: 2006-04-08 16:20+0200\n"
+"PO-Revision-Date: 2006-07-09 13:05+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -79,7 +79,7 @@ msgstr "Skupina '%s' nebyla vytvořena.\n"
 #: ../adduser:270 ../adduser:299
 #, perl-format
 msgid "Adding group `%s' (%s)...\n"
-msgstr "Přidávám skupinu `%s' (%s)...\n"
+msgstr "Přidávám skupinu '%s' (%s)...\n"
 
 #: ../adduser:275 ../adduser:304 ../adduser:336
 msgid "Done.\n"
@@ -165,12 +165,12 @@ msgid "Adding new user `%s' (%s) with group `%s'.\n"
 msgstr "Přidávám nového uživatele '%s' (%s) se skupinou '%s'.\n"
 
 #: ../adduser:419
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "%s failed with return code 15, shadow not enabled, password aging cannot be "
 "set. Continuing.\n"
 msgstr ""
-"chage selhal s návratovým kódem 15, stínová hesla nejsou povolena, stárnutí "
+"%s selhal s návratovým kódem 15, stínová hesla nejsou povolena, stárnutí "
 "hesel nebude nastaveno. Pokračuji.\n"
 
 #: ../adduser:445
@@ -229,9 +229,9 @@ msgid "Is the information correct? [y/N] "
 msgstr "Jsou informace správné? [a/N]"
 
 #: ../adduser:555
-#, fuzzy, perl-format
+#, perl-format
 msgid "Adding new user `%s' to extra groups\n"
-msgstr "Přidávám nového uživatele '%s' (%s) se skupinou '%s'.\n"
+msgstr "Přidávám nového uživatele '%s' do dalších skupin\n"
 
 #: ../adduser:581
 #, perl-format
@@ -241,7 +241,7 @@ msgstr "Nastavuji kvótu z '%s'.\n"
 #: ../adduser:615
 #, perl-format
 msgid "Not creating home directory `%s'.\n"
-msgstr "Nevytvářím domovský adresář `%s'.\n"
+msgstr "Nevytvářím domovský adresář '%s'.\n"
 
 #: ../adduser:618
 #, perl-format
@@ -292,15 +292,15 @@ msgid "The GID %s does not exist.\n"
 msgstr "GID '%s' neexistuje.\n"
 
 #: ../adduser:794
-#, fuzzy
 msgid ""
 "To avoid problems, the username should consist of\n"
 "letters, digits, underscores, periods and dashes, and not start with a\n"
 "dash (as defined by IEEE Std 1003.1-2001). For compatibility with Samba\n"
 "machine accounts $ is also supported at the end of the username\n"
 msgstr ""
-"Aby jste předešli problémům, mělo by se uživatelské jméno skládat\n"
-"z písmen, číslic, podtržítek, teček a pomlček. Kvůli\n"
+"Abyste předešli problémům, mělo by se uživatelské jméno skládat\n"
+"z písmen, číslic, podtržítek, teček a pomlček a nemělo by začínat\n"
+"pomlčkou (definováno v IEEE standardtu 1003.1-2001). Kvůli\n"
 "kompatibilitě se Sambou je na konci jména podporován také znak $.\n"
 
 #: ../adduser:802
@@ -331,7 +331,7 @@ msgstr "Vybírám gid z rozsahu %s - %s.\n"
 #: ../adduser:876
 #, perl-format
 msgid "Stopped: %s\n"
-msgstr ""
+msgstr "Zastaven: %s\n"
 
 #: ../adduser:878
 #, perl-format
@@ -486,7 +486,7 @@ msgstr "hotovo.\n"
 #: ../deluser:341
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
-msgstr "getgrnam `%s' selhal. To se nemělo stát.\n"
+msgstr "getgrnam '%s' selhal. To se nemělo stát.\n"
 
 #: ../deluser:346
 #, perl-format
@@ -570,7 +570,6 @@ msgid "removing user and groups from the system. Version:"
 msgstr "odstraňuje ze systému uživatele a skupiny. Verze:"
 
 #: ../deluser:439
-#, fuzzy
 msgid ""
 "deluser user\n"
 "  remove a normal user from the system\n"
@@ -608,8 +607,6 @@ msgstr ""
 "\n"
 "  --remove-home             odstraní domovský adresář uživatele a poštu\n"
 "  --remove-all-files        odstraní všechny soubory vlastněné uživatelem\n"
-"  --home <adr>              odstraní domovský adresář jen pokud se zadaný\n"
-"                            shoduje s tím uvedeným v /etc/passwd\n"
 "  --backup\t\t    před odstraněním soubory zálohuje\n"
 "  --backup-to <adr>         adresář pro uchovávání záloh;\n"
 "                            výchozí je aktuální adresář\n"
@@ -653,7 +650,7 @@ msgstr "Neznámá proměnná '%s' v '%s':%s.\n"
 #: ../AdduserCommon.pm:171
 #, perl-format
 msgid "No program named %s in $PATH\n"
-msgstr ""
+msgstr "V $PATH neexistuje program jménem %s\n"
 
 #~ msgid "Enter a groupname to add: "
 #~ msgstr "Zadejte jméno přidávané skupiny: "
