@@ -7,8 +7,10 @@ adduser (3.92.0) UNRELEASED; urgency=low
     Thanks to Tobias Toedter. Closes: #377415
   * Update Czech (cs) program translation.
     Thanks to Miroslav Kure. (mh) Closes: #377476
+  * Apply most Improvements for the program output.
+    Thanks to Tobias Toedter. Closes: #377387
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun,  9 Jul 2006 14:27:13 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun,  9 Jul 2006 18:57:58 +0200
 
 adduser (3.92) unstable; urgency=low
 

@@ -75,7 +75,7 @@ sub read_config {
     my ($var, $lcvar, $val);
 
     if (! -f $conf_file) {
-	printf gtx("%s: `%s' doesn't exist.  Using defaults.\n"),$0,$conf_file if $verbose;
+	printf gtx("%s: `%s' doesn't exist. Using defaults.\n"),$0,$conf_file if $verbose;
 	return;
     }
 
@@ -85,12 +85,12 @@ sub read_config {
 	next if /^#/ || /^\s*$/;
 
 	if ((($var, $val) = /^\s*([_a-zA-Z0-9]+)\s*=\s*(.*)/) != 2) {
-	    warnf gtx("Couldn't parse `%s':%s.\n"),$conf_file,$.;
+	    warnf gtx("Couldn't parse `%s', line %d.\n"),$conf_file,$.;
 	    next;
 	}
 	$lcvar = lc $var;
 	if (!defined($configref->{$lcvar})) {
-	    warnf gtx("Unknown variable `%s' at `%s':%s.\n"),$var,$conf_file,$.;
+	    warnf gtx("Unknown variable `%s' at `%s', line %d.\n"),$var,$conf_file,$.;
 	    next;
 	}
 
@@ -155,9 +155,9 @@ sub systemcall {
     my $c = join(' ', @_);
     print ("$c\n") if $verbose==2;
     if (system(@_)) {
-        die ("$0: `$c' returned error code " . ($?>>8) . ".  Aborting.\n")
-          if ($?>>8);
-        die ("$0: `$c' exited from signal " . ($?&255) . ".  Aborting.\n");
+	dief (gtx("`%s' returned error code %d. Exiting.\n"), $c, $?>>8)
+	  if ($?>>8);
+        dief (gtx("`%s' exited from signal %d. Exiting.\n"), $c, $?&255);
     }
 }
 
@@ -168,7 +168,7 @@ sub which {
             return "$dir/$progname";
         }
     }
-    dief(gtx("No program named %s in \$PATH\n"), $progname) unless ($nonfatal);
+    dief(gtx("Could not find program named %s in \$PATH\n"), $progname) unless ($nonfatal);
 }
 
 
