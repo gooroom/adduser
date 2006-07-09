@@ -248,7 +248,7 @@ if ($action eq "addsysgroup") {
 	exit 0;
     }
     if (existing_group_ok($new_name, $new_gid) == 2) {
-	printf (gtx("The group `%s' already exists, but has a different gid. Exiting ...\n"), $new_name) if $verbose;
+	printf (gtx("The group `%s' already exists, but has a different GID. Exiting ...\n"), $new_name) if $verbose;
 	exit 1;
     }
 
