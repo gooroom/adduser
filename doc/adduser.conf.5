@@ -116,6 +116,15 @@ Files in /etc/skel/ are checked against this regex, and not copied to
 the newly created home directory if they match.  This is by default set
 to the regular expression matching files left over from unmerged config
 files (dpkg-(old|new|dist)).
+.TP
+\fBADD_EXTRA_GROUPS\fB
+Setting this to something other than 0 (the default) will cause adduser
+to add newly created non-system users to the list of groups defined by 
+EXTRA_GROUPS (below).
+.TP
+\fBEXTRA_GROUPS\fB
+This is the list of groups that new non-system users will be added to.
+By default, this list is 'dialout cdrom floppy audio src video lp users'
 .SH FILES
 .I /etc/adduser.conf
 .SH SEE ALSO
