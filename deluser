@@ -74,10 +74,10 @@ my %config = ();
 my $configfile;
 my @defaults;
 
-GetOptions ("quiet|q" => sub {$verbose = 0; },
+unless ( GetOptions ("quiet|q" => sub {$verbose = 0; },
             "debug" => sub {$verbose = 2; },
-	    "version|v" => sub {version(); exit 0; },
-	    "help|h" => sub { usage(); exit 0;},
+	    "version|v" => sub { &version(); exit 0; },
+	    "help|h" => sub { &usage(); exit 0;},
 	    "group" => sub { $action = "delgroup";},
 	    "conf=s" => \$configfile,
 	    "system" => \$pconfig{"system"},
@@ -86,8 +86,12 @@ GetOptions ("quiet|q" => sub {$verbose = 0; },
 	    "remove-all-files" => \$pconfig{"remove_all_files"},
 	    "backup" => \$pconfig{"backup"},
 	    "backup-to" => \$pconfig{"backup_to"}
-	  );
+       ) ) {
+    &usage;
+    exit 1;
+}
 
+# everyone can issue "--help" and "--version", but only root can go on
 die ("$0: ",gtx("Only root may remove a user or group from the system.\n")) if ($> != 0);
 
 if (!defined($configfile)) { 
@@ -158,7 +162,7 @@ undef (%pconfig);
 if (($config{remove_home} || $config{remove_all_files} || $config{backup}) && ($install_more_packages)) {
     die (gtx("In order to use the --remove-home, --remove-all-files, and --backup features,
 you need to install the `perl-modules' package. To accomplish that, run
-apt-get install perl-modules\n"));
+apt-get install perl-modules.\n"));
 }
 
  
@@ -205,11 +209,11 @@ if($action eq "deluser") {
 	if( ($dummy1,$dummy2,$uid) = getpwnam($user) ) {
 	    if ( ($uid < $config{"first_system_uid"} ||
 		$uid > $config{"last_system_uid" } ) ) {
-		printf (gtx("The user `%s' is not a system account ... Exiting.\n"), $user) if $verbose;
+		printf (gtx("The user `%s' is not a system user. Exiting.\n"), $user) if $verbose;
 		exit 1;
 	    }
         } else {
-	    printf (gtx("The user `%s' does not exist, but --system was given ... Exiting.\n"), $user) if $verbose;
+	    printf (gtx("The user `%s' does not exist, but --system was given. Exiting.\n"), $user) if $verbose;
 	    exit 0;
 	}
     }
@@ -315,7 +319,7 @@ if($action eq "deluser") {
       # crontab -l returns 1 if there is no crontab
       my $crontab = &which('crontab');
       &systemcall($crontab, "-r", $user);
-      s_print (gtx("Removing crontab\n"));
+      s_print (gtx("Removing crontab ...\n"));
     }
 
     s_printf (gtx("Removing user `%s' ...\n"),$user);
@@ -343,7 +347,7 @@ if($action eq "delgroup") {
     if( $config{"system"} && 
 	($gid < $config{"first_system_gid"} ||
 	 $gid > $config{"last_system_gid" } )) {
-        printf (gtx("The group `%s' is not a system group ... Exiting.\n"), $group) if $verbose;
+        printf (gtx("The group `%s' is not a system group. Exiting.\n"), $group) if $verbose;
 	exit 3;
     }
     if( $config{"only_if_empty"} && $members ne "") {
@@ -377,7 +381,7 @@ if($action eq "deluserfromgroup")
 	fail (3, gtx("The group `%s' does not exist.\n"),$group);
     }
     if($maingroup eq $group) {
-	fail (7, "$0: ",gtx("You may not remove the account from its primary group.\n"));
+	fail (7, "$0: ",gtx("You may not remove the user from their primary group.\n"));
     }
 
     my @members = get_group_members($group);
@@ -413,15 +417,15 @@ sub fail {
 }
 
 sub version {
-    printf (gtx("deluser (version: %s)\n\n"), $version);
-    printf (gtx("Removes users and groups from the system."));
+    printf (gtx("deluser version %s\n\n"), $version);
+    printf (gtx("Removes users and groups from the system.\n"));
     
     printf gtx("Copyright (C) 2000 Roland Bauerschmidt <roland\@copyleft.de>\n\n");
 
     printf gtx("deluser is based on adduser by Guy Maor <maor\@debian.org>, Ian Murdock\n".
-	  "<imurdock\@gnu.ai.mit.edu> and Ted Hajek <tedhajek\@boombox.micro.umn.edu>\n");
+	  "<imurdock\@gnu.ai.mit.edu> and Ted Hajek <tedhajek\@boombox.micro.umn.edu>\n\n");
 
-    printf gtx("\nThis program is free software; you can redistribute it and/or modify
+    printf gtx("This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or (at
 your option) any later version.
@@ -433,10 +437,8 @@ General Public License, /usr/share/common-licenses/GPL, for more details.\n");
 }
 
 sub usage {
-    printf (gtx("deluser (version: %s)\n\n"), $version);
-    printf gtx("Removes users and groups from the system.");
-    
-    printf gtx("deluser USER
+    printf gtx(
+"deluser USER
   remove a normal user from the system
   example: deluser mike
 

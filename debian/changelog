@@ -8,14 +8,14 @@ adduser (3.92.0) UNRELEASED; urgency=low
     Thanks to Tobias Toedter. Closes: #377415
   * Update Czech (cs) program translation.
     Thanks to Miroslav Kure. (mh) Closes: #377476
-  * Apply most Improvements for the program output.
-    Thanks to Tobias Toedter. Closes: #377387
+  * Apply a lot of patches for the program output.
+    Thanks to Tobias Toedter. Closes: #377387, #377701
 
   [ Stephen Gran ]
   * Documentation of 'extra groups' feature in adduser.conf(5) and example in
     adduser.conf itself.  Closes: #377774
 
- -- Stephen Gran <sgran@debian.org>  Tue, 11 Jul 2006 12:33:32 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 14 Jul 2006 20:57:34 +0200
 
 adduser (3.92) unstable; urgency=low
 
