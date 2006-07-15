@@ -578,7 +578,7 @@ if ($action eq "adduser") {
 
 
     if ($config{"quotauser"}) {
-	printf (gtx("Setting quota for user %s' to values of user %s' ...\n"), $new_name, $config{quotauser});
+	printf (gtx("Setting quota for user `%s' to values of user `%s' ...\n"), $new_name, $config{quotauser});
 	my $edquota = &which('edquota');
 	&systemcall($edquota, '-p', $config{quotauser}, $new_name);
     }
