@@ -1,7 +1,6 @@
-adduser (3.92.0) UNRELEASED; urgency=low
+adduser (3.93) unstable; urgency=low
 
   [ Marc Haber ]
-  * NOT RELEASED YET
   * Update French (fr) manpage translation.
     Thanks to Nicolas François. Closes: #377317
   * Update German (de) program translation.
@@ -15,7 +14,7 @@ adduser (3.92.0) UNRELEASED; urgency=low
   * Documentation of 'extra groups' feature in adduser.conf(5) and example in
     adduser.conf itself.  Closes: #377774
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 14 Jul 2006 20:57:34 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 16 Jul 2006 21:54:58 +0000
 
 adduser (3.92) unstable; urgency=low
 
