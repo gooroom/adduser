@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-06-27 19:38+0000\n"
+"POT-Creation-Date: 2006-07-16 21:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr "홈 디렉토리를 시스템 전체에서 읽을 수 있도록 할까요?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1002
+#: ../templates:1001
 #, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
@@ -47,7 +47,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:1003
+#: ../templates:1001
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."

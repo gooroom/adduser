@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser_3.51_el\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-06-27 19:38+0000\n"
+"POT-Creation-Date: 2006-07-16 21:56+0000\n"
 "PO-Revision-Date: 2004-03-28 20:45EEST\n"
 "Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
@@ -33,7 +33,7 @@ msgstr "Θέλετε οι κατάλογοι των χρηστών να είνα
 
 #. Type: boolean
 #. Description
-#: ../templates:1002
+#: ../templates:1001
 #, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
@@ -49,7 +49,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:1003
+#: ../templates:1001
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."

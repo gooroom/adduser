@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.79\n"
-"POT-Creation-Date: 2006-06-13 11:02+0000\n"
+"POT-Creation-Date: 2006-07-16 21:56+0000\n"
 "PO-Revision-Date: 2005-11-22 18:28+0100\n"
 "Last-Translator: Robert Luberda <robert@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -13,206 +13,761 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# type: Plain text
-#: ../deluser.conf.5:6
+# type: TH
+#: ../adduser.8:9
 #, no-wrap
-msgid "deluser.conf"
-msgstr "deluser.conf"
+msgid "ADDUSER"
+msgstr "ADDUSER"
 
 # type: TH
-#: ../deluser.conf.5:6 ../adduser.conf.5:6 ../deluser.8:9 ../adduser.8:9
+#: ../adduser.8:9 ../adduser.conf.5:6 ../deluser.8:9 ../deluser.conf.5:6
 #, no-wrap
 msgid "Version VERSION"
 msgstr "wersja VERSION"
 
 # type: TH
-#: ../deluser.conf.5:6 ../adduser.conf.5:6 ../deluser.8:9 ../adduser.8:9
+#: ../adduser.8:9 ../adduser.conf.5:6 ../deluser.8:9 ../deluser.conf.5:6
 #, no-wrap
 msgid "Debian GNU/Linux"
 msgstr "Debian GNU/Linux"
 
 # type: SH
-#: ../deluser.conf.5:7 ../adduser.conf.5:7 ../deluser.8:10 ../adduser.8:10
+#: ../adduser.8:10 ../adduser.conf.5:7 ../deluser.8:10 ../deluser.conf.5:7
 #, no-wrap
 msgid "NAME"
 msgstr "NAZWA"
 
 # type: Plain text
-#: ../deluser.conf.5:12
-msgid ""
-"/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
-msgstr ""
-"/etc/deluser.conf - plik konfiguracyjny programów B<deluser(8)> i B<delgroup"
-"(8)>."
+#: ../adduser.8:12
+msgid "adduser, addgroup - add a user or group to the system"
+msgstr "adduser, addgroup - dodaje u¿ytkownika lub grupê do systemu"
 
 # type: SH
-#: ../deluser.conf.5:12 ../adduser.conf.5:12 ../deluser.8:23 ../adduser.8:29
+#: ../adduser.8:12 ../deluser.8:12
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "SK£ADNIA"
+
+# type: Plain text
+#: ../adduser.8:14
+#, fuzzy
+msgid ""
+"B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
+"uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
+"disabled-password] [--disabled-login] [--gecos GECOS] [--add_extra_groups] "
+"user"
+msgstr ""
+"B<adduser> [opcje] [--home KATALOG] [--shell|-s PROW£OKA] [--no-create-home] "
+"[--uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GRUPA | --gid ID] [--"
+"disabled-password] [--disabled-login] [--gecos GECOS] u¿ytkownik"
+
+# type: Plain text
+#: ../adduser.8:16
+msgid ""
+"B<adduser> --system [options] [--home DIR] [--shell SHELL] [--no-create-"
+"home] [--uid ID] [--group | --ingroup GROUP | --gid ID] [--disabled-"
+"password] [--disabled-login] [--gecos GECOS] user"
+msgstr ""
+"B<adduser> --system [opcje] [--home KATALOG] [--shell POW£OKA] [--no-create-"
+"home] [--uid ID] [--group | --ingroup GRUPA | --gid ID] [--disabled-"
+"password] [--disabled-login] [--gecos GECOS] u¿ytkownik"
+
+# type: Plain text
+#: ../adduser.8:18
+msgid "B<adduser> --group [options] [--gid ID] group"
+msgstr "B<adduser> --group [opcje] [--gid ID] grupa"
+
+# type: Plain text
+#: ../adduser.8:20
+msgid "B<addgroup> [options] [--gid ID] group"
+msgstr "B<addgroup> [opcje] [--gid ID] grupa"
+
+# type: Plain text
+#: ../adduser.8:22
+msgid "B<adduser> --group --system [options] [--gid ID] group"
+msgstr "B<adduser> --group --system [opcje] [--gid ID] grupa"
+
+# type: Plain text
+#: ../adduser.8:24
+msgid "B<addgroup> --system [options] [--gid ID] group"
+msgstr "B<addgroup> --system [opcje] [--gid ID] grupa"
+
+# type: Plain text
+#: ../adduser.8:26
+msgid "B<adduser> [options] user group"
+msgstr "B<adduser> [opcje] u¿ytkownik grupa"
+
+# type: SS
+#: ../adduser.8:26 ../deluser.8:20
+#, no-wrap
+msgid "COMMON OPTIONS"
+msgstr "WSPÓLNE OPCJE"
+
+# type: Plain text
+#: ../adduser.8:29
+msgid ""
+"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
+msgstr ""
+"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf PLIK]"
+
+# type: SH
+#: ../adduser.8:29 ../adduser.conf.5:12 ../deluser.8:23 ../deluser.conf.5:12
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "OPIS"
 
 # type: Plain text
-#: ../deluser.conf.5:23
+#: ../adduser.8:43
 msgid ""
-"The file I</etc/deluser.conf> contains defaults for the programs B<deluser(8)"
-"> and B<delgroup(8)>.  Each option takes the form I<option> = I<value>.  "
-"Double or single quotes are allowed around the value.  Comment lines must "
-"have a pound sign (#) at the beginning of the line."
+"B<adduser> and B<addgroup> add users and groups to the system according to "
+"command line options and configuration information in I</etc/adduser.conf>.  "
+"They are friendlier front ends to the low level tools like B<useradd,> "
+"B<groupadd> and B<usermod> programs, choosing Debian policy conformant UID "
+"and GID values, creating a home directory with skeletal configuration, "
+"running a custom script, and other features.  B<adduser> and B<addgroup> can "
+"be run in one of five modes:"
 msgstr ""
-"Plik I</etc/deluser.conf> zawiera domy¶lne warto¶ci konfiguracji programów "
-"B<deluser(8)> oraz B<delgroup(8)>. Ka¿da opcja ma postaæ I<opcja> = "
-"I<warto¶æ>. Dozwolone jest ujmowanie warto¶ci w apostrofy lub cudzys³owy. "
-"Linie komentarza musz± zaczynaæ siê od znaku hasha (#)."
+"B<adduser> i B<addgroup> dodaj± u¿ytkowników i grupy do systemu zgodnie z "
+"opcjami wymienionymi w linii poleceñ oraz konfiguracj± zawart± w pliku I</"
+"etc/adduser.conf>. Te programy s± bardziej przyjaznym dla u¿ytkownika "
+"interfejsem do programów B<useradd>, B<groupadd> i B<usermod>; wybieraj±cym "
+"zgodne ze standardami Debiana warto¶ci identyfikatora u¿ytkownika (UID) i "
+"identyfikatora grupy (GID), tworz±cymi katalogi domowe, uruchamiaj±cymi "
+"lokalne skrypty i maj±cymi inne dodatkowe funkcje. B<adduser> i B<addgroup> "
+"mog± byæ u¿yte w jednym z piêciu trybów:"
+
+# type: SS
+#: ../adduser.8:43
+#, no-wrap
+msgid "Add a normal user"
+msgstr "Dodawanie zwyk³ych u¿ytkowników"
 
 # type: Plain text
-#: ../deluser.conf.5:25
-msgid "deluser(8) and delgroup(8) also read /etc/adduser.conf."
-msgstr "deluser(8) i delgroup(8) równie¿ czytaj± plik /etc/adduser.conf."
+#: ../adduser.8:47
+msgid ""
+"If called with one non-option argument and without the B<--system> or B<--"
+"group> options, B<adduser> will add a normal user."
+msgstr ""
+"B<adduser>, wywo³any z jednym argumentem nie bêd±cym opcj± oraz bez opcji "
+"B<--system> lub B<--group>, doda zwyk³ego u¿ytkownika."
 
 # type: Plain text
-#: ../deluser.conf.5:27 ../adduser.conf.5:30
-msgid "The valid configuration options are:"
-msgstr "Poprawne s± nastêpuj±ce opcje:"
+#: ../adduser.8:54
+msgid ""
+"B<adduser> will choose the first available UID from the range specified for "
+"normal users in the configuration file.  The UID can be overridden with the "
+"B<--uid> option."
+msgstr ""
+"B<adduser> wybierze pierwszy mo¿liwy UID z zakresu przeznaczonego dla "
+"zwyk³ych u¿ytkowników w pliku konfiguracyjnym. Ten UID mo¿e zostaæ nadpisany "
+"za pomoc± opcji B<--uid>."
+
+# type: Plain text
+#: ../adduser.8:60
+msgid ""
+"The range specified in the configuration file may be overridden with the B<--"
+"firstuid> and B<--lastuid> options."
+msgstr ""
+"Zakres okre¶lony w pliku konfiguracyjnym równie¿ mo¿e zostaæ nadpisany "
+"opcjami B<--firstuid> i B<--lastuid>."
+
+# type: Plain text
+#: ../adduser.8:77
+#, fuzzy
+msgid ""
+"By default, each user in Debian GNU/Linux is given a corresponding group "
+"with the same name.  Usergroups allow group writable directories to be "
+"easily maintained by placing the appropriate users in the new group, setting "
+"the set-group-ID bit in the directory, and ensuring that all users use a "
+"umask of 002.  If this option is turned off by setting B<USERGROUPS> to "
+"I<no>, all users' GIDs are set to B<USERS_GID>.  Users' groups can also be "
+"overridden from the command line with the B<--gid> or B<--ingroup> options "
+"to set the group by id or name, respectively.  Also, users can be added to "
+"one or more groups defined in adduser.conf either by setting "
+"ADD_EXTRA_GROUPS to 1 in adduser.conf, or by passing --add_extra_groups on "
+"the commandline."
+msgstr ""
+"Domy¶lnie ka¿demu u¿ytkownikowi w systemie Debian GNU/Linux zostaje "
+"przypisana grupa maj±ca tê sam± nazwê i identyfikator, co u¿ytkownik. "
+"Umieszczanie ka¿dego u¿ytkownika w grupie o tej samej nazwie pozwala na "
+"³atwe zarz±dzanie katalogami dostêpnymi do zapisu dla grupy poprzez dodanie "
+"odpowiednich u¿ytkowników do nowej grupy, ustawienie flagi set-group-ID na "
+"katalogu i ustawienie ka¿demu u¿ytkownikowi warto¶ci umask równej 002. "
+"Je¿eli ta opcja zostanie wy³±czona przez ustawienie B<USERGROUPS> na I<no>, "
+"wszyscy nowo tworzeni u¿ytkownicy bêd± mieli identyfikator grupy ustawiony "
+"na B<USERS_GID>. Grupy u¿ytkowników mog± zostaæ równie¿ nadpisane przez "
+"podanie w linii poleceñ opcji B<--gid> lub B<--ingroup>, które ustawiaj± "
+"grupê przez podanie, odpowiednio, jej id lub nazwy."
+
+# type: Plain text
+#: ../adduser.8:91
+msgid ""
+"B<adduser> will create a home directory subject to B<DHOME>, B<GROUPHOMES>, "
+"and B<LETTERHOMES>.  The home directory can be overridden from the command "
+"line with the B<--home> option, and the shell with the B<--shell> option. "
+"The home directory's set-group-ID bit is set if B<USERGROUPS> is I<yes> so "
+"that any files created in the user's home directory will have the correct "
+"group."
+msgstr ""
+"B<adduser> utworzy katalog domowy u¿ytkownika zgodnie z ustawieniami "
+"B<DHOME>, B<GROUPHOMES>, B<LETTERHOMES> w pliku konfiguracyjnym. Katalog "
+"domowy mo¿e zostaæ nadpisany przez opcjê linii poleceñ B<--home>, a pow³oka "
+"- przez opcjê B<--shell>. Je¿eli B<USERGROUPS> jest ustawione na I<yes>, to "
+"katalogowi domowemu u¿ytkownika zostanie nadany bit set-group-ID, co "
+"powoduje, ¿e jakikolwiek plik utworzony w tym katalogu bêdzie mia³ "
+"przydzielon± w³a¶ciw± grupê."
+
+# type: Plain text
+#: ../adduser.8:105
+#, fuzzy
+msgid ""
+"B<adduser> will copy files from B<SKEL> into the home directory and prompt "
+"for finger (gecos) information and a password.  The gecos may also be set "
+"with the B<--gecos> option.  With the B<--disabled-login> option, the "
+"account will be created but will be disabled until a password is set. The "
+"B<--disabled-password> option will not set a password, but login is still "
+"possible (for example with SSH RSA keys)."
+msgstr ""
+"B<adduser> skopiuje pliki z katalogu B<SKEL> do katalogu domowego "
+"u¿ytkownika, poprosi o dane u¿ytkownika (GECOS) oraz o has³o. Dane "
+"u¿ytkownika mog± byæ tak¿e ustawione opcj± B<--gecos>. Podanie opcji B<--"
+"disabled-login> spowoduje utworzenie konta u¿ytkownika, które bêdzie "
+"niedostêpne (zablokowane), dopóki nie zostanie ustawione has³o. Opcja B<--"
+"disabled-password> nie ustawi has³a, ale dostêp u¿ytkownika do systemu "
+"bêdzie mo¿liwy na przyk³ad przez u¿ycie programu SSH z kluczami RSA."
+
+# type: Plain text
+#: ../adduser.8:112
+msgid ""
+"If the file B</usr/local/sbin/adduser.local> exists, it will be executed "
+"after the user account has been set up in order to do any local setup.  The "
+"arguments passed to B<adduser.local> are:"
+msgstr ""
+"Po utworzeniu i ustawieniu konta u¿ytkownika, je¿eli istnieje plik B</usr/"
+"local/sbin/adduser.local>, to zostanie on uruchomiony w celu wykonania "
+"lokalnych ustawieñ. Argumenty przekazywane do B<adduser.local> s± "
+"nastepuj±ce:"
+
+# type: Plain text
+#: ../adduser.8:114 ../deluser.8:79
+msgid "username uid gid home-directory"
+msgstr "nazwa-u¿ytkownika uid gid katalog-domowy"
+
+# type: Plain text
+#: ../adduser.8:116
+msgid ""
+"The environment variable VERBOSE is set according to the following rule:"
+msgstr "Zmienna ¶rodowiskowa VERBOSE jest ustawiana na:"
 
 # type: TP
-#: ../deluser.conf.5:27
+#: ../adduser.8:116
 #, no-wrap
-msgid "B<REMOVE_HOME>"
-msgstr "B<REMOVE_HOME>"
-
-# type: Plain text
-#: ../deluser.conf.5:31
-msgid ""
-"Removes the home directory and mail spool of the user to be removed.  Value "
-"may be 0 or 1."
-msgstr ""
-"Usuwa katalog domowy oraz plik zawieraj±cy przychodz±c± pocztê u¿ytkownika. "
-"Warto¶ci± tej opcji mo¿e byæ 0 lub 1."
+msgid "0 if --quiet is specified"
+msgstr "0, je¶li podano opcjê --quiet"
 
 # type: TP
-#: ../deluser.conf.5:31
+#: ../adduser.8:118
 #, no-wrap
-msgid "B<REMOVE_ALL_FILES>"
-msgstr "B<REMOVE_ALL_FILES>"
-
-# type: Plain text
-#: ../deluser.conf.5:37
-msgid ""
-"Removes all files on the system owned by the user to be removed.  If this "
-"option is activated B<REMOVE_HOME> has no effect. Values may be 0 or 1."
-msgstr ""
-"Usuwa z systemu wszystkie pliki, których w³a¶cicielem jest usuwany "
-"u¿ytkownik. Je¿eli ta opcja jest aktywna, to B<REMOVE_HOME> nie ma ¿adnego "
-"efektu. Warto¶ci± tej opcji mo¿e byæ 0 lub 1."
+msgid "1 if neither --quiet nor --debug is specified"
+msgstr "1, je¶li nie podano ¿adnej z opcji --quiet i --debug"
 
 # type: TP
-#: ../deluser.conf.5:37
+#: ../adduser.8:120
 #, no-wrap
-msgid "B<BACKUP>"
-msgstr "B<BACKUP>"
+msgid "2 if --debug is specified"
+msgstr "2, je¶li podano opcjê --debug"
 
 # type: Plain text
-#: ../deluser.conf.5:49
+#: ../adduser.8:124
 msgid ""
-"If B<REMOVE_HOME> or B<REMOVE_ALL_FILES> is activated all files are backuped "
-"before they are removed. The backup file that is created defaults to "
-"username.tar(.gz|.bz2) in the directory specified by the B<BACKUP_TO> "
-"option. The compression method is chosen to the best that is available.  "
-"Values may be 0 or 1."
+"(The same applies to the variable DEBUG, but DEBUG is deprecated and will be "
+"removed in a later version of adduser.)"
 msgstr ""
-"Je¿eli uaktywniono B<REMOVE_HOME> lub B<REMOVE_ALL_FILES>, to wszystkie "
-"pliki przed usuniêciem s± archiwizowane. Domy¶ln± nazw± pliku archiwum jest "
-"nazwa-u¿ytkownika.tar(.gz|.bz2) w katalogu okre¶lonym w opcji B<BACKUP_TO>. "
-"Jako metodê kompresji wybiera siê najlepsz± spo¶ród tych, które s± dostêpne. "
-"Warto¶ci± tej opcji mo¿e byæ 0 lub 1."
+"(To samo dotyczy zmiennej DEBUG, jednak ta zmienna jest przestarza³a i "
+"zostanie usuniêta w której¶ z przysz³ych wesji programu adduser)."
 
-# type: TP
-#: ../deluser.conf.5:49
+# type: SS
+#: ../adduser.8:125
 #, no-wrap
-msgid "B<BACKUP_TO>"
-msgstr "B<BACKUP_TO>"
+msgid "Add a system user"
+msgstr "Dodawanie u¿ytkowników systemowych"
 
 # type: Plain text
-#: ../deluser.conf.5:57
+#: ../adduser.8:131
+#, fuzzy
 msgid ""
-"If B<BACKUP> is activated, B<BACKUP_TO> specifies the directory the backup "
-"is written to. Default is the current directory."
+"If called with one non-option argument and the B<--system> option, "
+"B<adduser> will add a system user. If a user with the same name already "
+"exists in the system uid range (or, if the uid is specified, if a user with "
+"that uid already exists), adduser will exit with a warning."
 msgstr ""
-"Je¿eli uaktywniono B<BACKUP>, to B<BACKUP_TO> okre¶la nazwê katalogu, w "
-"którym s± zapisywane pliki z kopiami zapasowymi. Domy¶ln± warto¶ci± jest "
-"katalog bie¿±cy."
-
-# type: TP
-#: ../deluser.conf.5:57
-#, no-wrap
-msgid "B<NO_DEL_PATHS>"
-msgstr "B<NO_DEL_PATHS>"
+"B<adduser>, gdy zostanie uruchomiony z jednym argumentem, nie bêd±cym opcj±, "
+"oraz z opcj± B<--system>, doda u¿ytkownika systemowego. Je¿eli taki "
+"u¿ytkownik z identyfikatorem u¿ytkownika (uid) mieszcz±cym siê w zakresie "
+"identyfikatorów u¿ytkowników systemowych (lub je¿eli uid jest podany w linii "
+"poleceñ, to z tym identyfikatorem) ju¿ istnieje, adduser po prostu zakoñczy "
+"dzia³anie bez b³êdu."
 
 # type: Plain text
-#: ../deluser.conf.5:64
+#: ../adduser.8:137
 msgid ""
-"A list of regular expressions, space separated. All files to be deleted in "
-"course of deleting home directories or deleting files owned by the user to "
-"be deleted are checked against each of these regular expressions. If a match "
-"is detected, the file is not deleted. Defaults to a list of system "
-"directories, leaving only /home."
+"B<adduser> will choose the first available UID from the range specified for "
+"system users in the configuration file.  The UID can be overridden with the "
+"B<--uid> option."
 msgstr ""
-"Lista wyra¿eñ regularnych rozdzielonych spacjami. Wed³ug tych wyra¿eñ s± "
-"sprawdzane wszystkie pliki przeznaczone do usuniêcia z powodu usuwania "
-"katalogów domowych albo z powodu usuwania plików, których w³a¶cicielem jest "
-"dany u¿ytkownik. Je¿eli plik pasuje do wyra¿enia, to nie jest usuwany. "
-"Warto¶ci± domy¶ln± jest lista katalogów systemowych, oprócz /home."
-
-# type: TP
-#: ../deluser.conf.5:64
-#, no-wrap
-msgid "B<ONLY_IF_EMPTY>"
-msgstr ""
+"B<adduser> wybierze pierwszy mo¿liwy UID z zakresu identyfikatorów "
+"systemowych okre¶lonych w pliku konfiguracyjnym. UID ten mo¿e zostaæ "
+"nadpisany przez podanie opcji B<--uid>."
 
 # type: Plain text
-#: ../deluser.conf.5:67
+#: ../adduser.8:147
 msgid ""
-"Only delete a group if there are no user who belong to this group. Defaults "
-"to 0."
+"By default, system users are placed in the B<nogroup> group.  To place the "
+"new system user in an already existing group, use the B<--gid> or B<--"
+"ingroup> options.  To place the new system user in a new group with the same "
+"ID, use the B<--group> option."
 msgstr ""
-
-# type: TP
-#: ../deluser.conf.5:67
-#, no-wrap
-msgid "B<EXCLUDE_FSTYPES>"
-msgstr ""
+"Domy¶lnie u¿ytkownicy systemowi maj± przypisan± grupê B<nogroup>. Aby "
+"przypisaæ nowego u¿ytkownika systemowego do istniej±cej grupy, nale¿y u¿yæ "
+"opcji B<--gid> lub B<--ingroup>. Aby nowemu u¿ytkownikowi systemowemu "
+"zosta³a przypisana nowa grupa z tym samym identyfikatorem, trzeba u¿yæ opcji "
+"B<--group>."
 
 # type: Plain text
-#: ../deluser.conf.5:70
+#: ../adduser.8:155
 msgid ""
-"A regular expression which describes all file systems which should be "
-"excluded when looking for files of a user to be deleted. Defaults to \"(proc|"
-"sysfs|usbfs|devpts|tmpfs)\"."
+"A home directory is created by the same rules as for normal users.  The new "
+"system user will have the shell I</bin/false> (unless overridden with the "
+"B<--shell> option), and have logins disabled.  Skeletal configuration files "
+"are not copied."
 msgstr ""
+"Katalog domowy jest tworzony zgodnie z tymi samymi zasadami, co dla zwyk³ych "
+"u¿ytkowników. Nowy u¿ytkownik systemowy bêdzie mia³ pow³okê I</bin/false> "
+"(chyba ¿e zostanie to nadpisane opcj± B<--shell>) oraz wy³±czone has³o. "
+"Pliki z katalogu B<SKEL> nie zostan± skopiowane."
+
+# type: SS
+#: ../adduser.8:155
+#, no-wrap
+msgid "Add a user group"
+msgstr "Dodawanie zwyk³ych grup"
+
+# type: Plain text
+#: ../adduser.8:160
+msgid ""
+"If B<adduser> is called with the B<--group> option and without the B<--"
+"system> option, or B<addgroup> is called respectively, a user group will be "
+"added."
+msgstr ""
+"Je¿eli B<adduser> zostanie uruchomiony z opcj± B<--group>, ale bez opcji B<--"
+"system>, lub jako program B<addgroup>, to zostanie dodana grupa dla zwyk³ych "
+"u¿ytkowników."
+
+# type: Plain text
+#: ../adduser.8:165
+msgid ""
+"A GID will be chosen from the range specified for user UIDS in the "
+"configuration file.  The GID can be overridden with the B<--gid> option."
+msgstr ""
+"Grupie zostanie nadany identyfikator (GID) z zakresu okre¶lonego w pliku "
+"konfiguracyjnym dla identyfikatorów u¿ytkowników (UID), jednak¿e mo¿e zostaæ "
+"nadpisany opcj± B<--gid>."
+
+# type: Plain text
+#: ../adduser.8:167 ../adduser.8:178
+msgid "The group is created with no users."
+msgstr ""
+"Utworzenie grupy nie powoduje przypisania do niej ¿adnych u¿ytkowników."
+
+# type: SS
+#: ../adduser.8:167
+#, no-wrap
+msgid "Add a system group"
+msgstr "Dodawanie grup systemowych"
+
+# type: Plain text
+#: ../adduser.8:171
+msgid ""
+"If B<addgroup> is called with the B<--system> option, a system group will be "
+"added."
+msgstr ""
+"Je¿eli B<addgroup> zostanie wywo³any z opcj± B<--system>, to bêdzie "
+"utworzona nowa grupa systemowa."
+
+# type: Plain text
+#: ../adduser.8:176
+#, fuzzy
+msgid ""
+"A GID will be chosen from the range specified for system GIDS in the "
+"configuration file.  The GID can be overridden with the B<--gid> option."
+msgstr ""
+"Grupie zostanie nadany identyfikator (GID) z zakresu okre¶lonego w pliku "
+"konfiguracyjnym dla identyfikatorów u¿ytkowników systemowych (UID), jednak¿e "
+"mo¿e zostaæ nadpisany opcj± B<--gid>."
+
+# type: SS
+#: ../adduser.8:178
+#, no-wrap
+msgid "Add an existing user to an existing group"
+msgstr "Przydzielanie istniej±cego u¿ytkownika do istniej±cej grupy"
+
+# type: Plain text
+#: ../adduser.8:182
+msgid ""
+"If called with two non-option arguments, B<adduser> will add an existing "
+"user to an existing group."
+msgstr ""
+"B<adduser> wywo³any z dwoma argumentami nie bêd±cymi opcjami doda "
+"istniej±cego u¿ytkownika do istniej±cej grupy."
 
 # type: SH
-#: ../deluser.conf.5:71 ../adduser.conf.5:119 ../deluser.8:146
-#: ../adduser.8:266
+#: ../adduser.8:182 ../deluser.8:95
+#, no-wrap
+msgid "OPTIONS"
+msgstr "OPCJE"
+
+# type: TP
+#: ../adduser.8:183 ../deluser.8:96
+#, no-wrap
+msgid "B<--conf FILE>"
+msgstr "B<--conf PLIK>"
+
+# type: Plain text
+#: ../adduser.8:187
+msgid "Use FILE instead of I</etc/adduser.conf>."
+msgstr "U¿yje pliku PLIK zamiast I</etc/adduser.conf>."
+
+# type: TP
+#: ../adduser.8:187
+#, no-wrap
+msgid "B<--disabled-login>"
+msgstr "B<--disabled-login>"
+
+# type: Plain text
+#: ../adduser.8:191
+msgid ""
+"Do not run passwd to set the password.  The user won't be able to use her "
+"account until the password is set."
+msgstr ""
+"Nie uruchamia programu passwd do ustanowienia has³a. U¿ytkownik nie bêdzie "
+"móg³ u¿ywaæ swojego konta, dopóki has³o nie zostanie nadane."
+
+# type: TP
+#: ../adduser.8:191
+#, no-wrap
+msgid "B<--disabled-password>"
+msgstr "B<--disabled-password>"
+
+# type: Plain text
+#: ../adduser.8:195
+#, fuzzy
+msgid ""
+"Like --disabled-login, but logins are still possible (for example using SSH "
+"RSA keys) but not using password authentication."
+msgstr ""
+"Jak --disabled-login, ale dostêp u¿ytkownika do systemu bêdzie mo¿liwy na "
+"przyk³ad przez u¿ycie programu SSH z kluczami RSA, tj. bez autoryzacji za "
+"pomoc± has³a."
+
+# type: TP
+#: ../adduser.8:195
+#, no-wrap
+msgid "B<--force-badname>"
+msgstr "B<--force-badname>"
+
+# type: Plain text
+#: ../adduser.8:203
+msgid ""
+"By default, user and group names are checked against a configurable regular "
+"expression. This option forces B<adduser> and B<addgroup> to apply only a "
+"weak check for validity of the name."
+msgstr ""
+"Domy¶lnie nazwy u¿ytkowników i grup mog± siê sk³adaæ z ma³ej litery, po "
+"której nastêpuje zero lub wiêcej ma³ych liter b±d¼ cyfr. W nazwie "
+"u¿ytkownika mog± wyst±piæ równie¿ znaki my¶lnika. U¿ycie tej opcji "
+"spowoduje, ¿e B<adduser> i B<addgroup> bêd± mniej restrykcyjne w odniesieniu "
+"do tych nazw."
+
+# type: TP
+#: ../adduser.8:203
+#, no-wrap
+msgid "B<--gecos GECOS>"
+msgstr "B<--gecos GECOS>"
+
+# type: Plain text
+#: ../adduser.8:207
+msgid ""
+"Set the gecos field for the new entry generated.  adduser will not ask for "
+"finger information if this option is given."
+msgstr ""
+"Ustawia pole z informacjami GECOS dla nowego u¿ytkownika. Je¶li ta opcja "
+"jest podana, to adduser nie bêdzie prosi³ o podanie tych informacji "
+"interakcyjnie."
+
+# type: TP
+#: ../adduser.8:207
+#, no-wrap
+msgid "B<--gid ID>"
+msgstr "B<--gid ID>"
+
+# type: Plain text
+#: ../adduser.8:212
+msgid ""
+"When creating a group, this option forces the new groupid to be the given "
+"number.  When creating a user, this option will put the user in that group."
+msgstr ""
+"Przy tworzeniu nowej grupy, ta opcja ustawia identyfikator grupy na podan± "
+"warto¶æ. Przy tworzeniu u¿ytkownika, u¿ycie tej opcji spowoduje umieszczenie "
+"u¿ytkownika w zadanej grupie."
+
+# type: TP
+#: ../adduser.8:212 ../deluser.8:100
+#, no-wrap
+msgid "B<--group>"
+msgstr "B<--group>"
+
+# type: Plain text
+#: ../adduser.8:222
+msgid ""
+"When combined with B<--system>, a group with the same name and ID as the "
+"system user is created.  If not combined with B<--system>, a group with the "
+"given name is created.  This is the default action if the program is invoked "
+"as B<addgroup>."
+msgstr ""
+"U¿yte razem z B<--system>, spowoduje utworzenie grupy o takiej samej nazwie "
+"i identyfikatorze, jak nowo tworzony u¿ytkownik systemowy. Je¿eli nie "
+"zostanie u¿yte razem z opcj± B<--system>, to zostanie utworzone grupa o "
+"podanej nazwie. Ta opcja jest opcj± domy¶ln±, je¿eli program zosta³ wywo³any "
+"jako B<addgroup>."
+
+# type: TP
+#: ../adduser.8:222 ../deluser.8:105
+#, no-wrap
+msgid "B<--help>"
+msgstr "B<--help>"
+
+# type: Plain text
+#: ../adduser.8:225 ../deluser.8:108
+msgid "Display brief instructions."
+msgstr "Wy¶wietla krótk± instrukcjê u¿ywania programu."
+
+# type: TP
+#: ../adduser.8:225
+#, no-wrap
+msgid "B<--home DIR>"
+msgstr "B<--home KATALOG>"
+
+# type: Plain text
+#: ../adduser.8:230
+msgid ""
+"Use DIR as the user's home directory, rather than the default specified by "
+"the configuration file.  If the directory does not exist, it is created and "
+"skeleton files are copied."
+msgstr ""
+"U¿ywa katalogu KATALOG jako katalogu domowego u¿ytkownika, nadpisuj±c tym "
+"samym domy¶ln± warto¶æ okre¶lon± w pliku konfiguracyjnym. Je¿eli ten katalog "
+"nie istnieje, to bêdzie utworzony i zostan± skopiowane pliki z katalogu "
+"I<SKEL>."
+
+# type: TP
+#: ../adduser.8:230
+#, no-wrap
+msgid "B<--shell SHELL>"
+msgstr "B<--shell POW£OKA>"
+
+# type: Plain text
+#: ../adduser.8:234
+msgid ""
+"Use SHELL as the user's login shell, rather than the default specified by "
+"the configuration file."
+msgstr ""
+"Ustawia POW£OKÊ jako pow³okê logowania u¿ytkownika, nadpisuj±c domy¶ln± "
+"warto¶æ okre¶lon± w pliku konfiguracyjnym."
+
+# type: TP
+#: ../adduser.8:234
+#, no-wrap
+msgid "B<--ingroup GROUP>"
+msgstr "B<--ingroup GRUPA>"
+
+# type: Plain text
+#: ../adduser.8:238
+msgid ""
+"Add the new user to GROUP instead of a usergroup or the default group "
+"defined by USERS_GID in the adduser.conf file."
+msgstr ""
+"Umieszcza nowego u¿ytkownika w grupie GRUPA, zamiast w grupie okre¶lonej "
+"przez opcjê USERS_GID w pliku adduser.conf."
+
+# type: TP
+#: ../adduser.8:238
+#, no-wrap
+msgid "B<--no-create-home>"
+msgstr "B<--no-create-home>"
+
+# type: Plain text
+#: ../adduser.8:241
+msgid "Do not create the home directory, even if it doesn't exist."
+msgstr "Nie tworzy katalogu domowego, nawet je¿eli on nie istnieje."
+
+# type: TP
+#: ../adduser.8:241 ../deluser.8:108
+#, no-wrap
+msgid "B<--quiet>"
+msgstr "B<--quiet>"
+
+# type: Plain text
+#: ../adduser.8:244
+msgid "Suppress informational messages, only show warnings and errors."
+msgstr "Pomija informacje, pokazuje tylko ostrze¿enia i b³êdy."
+
+# type: TP
+#: ../adduser.8:244
+#, no-wrap
+msgid "B<--debug>"
+msgstr "B<--debug>"
+
+# type: Plain text
+#: ../adduser.8:247
+#, fuzzy
+msgid ""
+"Be verbose, most useful if you want to nail down a problem with adduser."
+msgstr ""
+"Tryb gadatliwy, przydatny w czasie rozwi±zywania problemów w programie "
+"adduser."
+
+# type: TP
+#: ../adduser.8:247 ../deluser.8:111
+#, no-wrap
+msgid "B<--system>"
+msgstr "B<--system>"
+
+# type: Plain text
+#: ../adduser.8:250
+msgid "Create a system user."
+msgstr "Tworzy u¿ytkownika systemowego."
+
+# type: TP
+#: ../adduser.8:250
+#, no-wrap
+msgid "B<--uid ID>"
+msgstr "B<--uid ID>"
+
+# type: Plain text
+#: ../adduser.8:254
+msgid ""
+"Force the new userid to be the given number.  adduser will fail if the "
+"userid is already taken."
+msgstr ""
+"Ustawia identyfikator nowego u¿ytkownika na podan± warto¶æ. adduser zakoñczy "
+"siê b³êdem, je¿eli taki identyfikator jest ju¿ zajêty."
+
+# type: TP
+#: ../adduser.8:254
+#, no-wrap
+msgid "B<--firstuid ID>"
+msgstr "B<--firstuid ID>"
+
+# type: Plain text
+#: ../adduser.8:257
+msgid "Override the first uid in the range that the uid is chosen from."
+msgstr "Nadpisuje warto¶æ pierwszego dostêpnego identyfikatora u¿ytkownika."
+
+# type: TP
+#: ../adduser.8:257
+#, no-wrap
+msgid "B<--lastuid ID>"
+msgstr "B<--lastuid ID>"
+
+# type: Plain text
+#: ../adduser.8:260
+msgid "Override the last uid in the range that the uid is chosen from."
+msgstr "Nadpisuje warto¶æ pierwszego ostatniego identyfikatora u¿ytkownika."
+
+# type: TP
+#: ../adduser.8:260
+#, fuzzy, no-wrap
+msgid "B<--add_extra_groups>"
+msgstr "B<--group>"
+
+# type: Plain text
+#: ../adduser.8:263
+msgid "Add new user to extra groups defined in adduser.conf"
+msgstr ""
+
+# type: TP
+#: ../adduser.8:263 ../deluser.8:117
+#, no-wrap
+msgid "B<--version>"
+msgstr "B<--version>"
+
+# type: Plain text
+#: ../adduser.8:266 ../deluser.8:120
+msgid "Display version and copyright information."
+msgstr "Wy¶wietla informacjê o wersji i prawach autorskich."
+
+# type: SH
+#: ../adduser.8:266 ../adduser.conf.5:128 ../deluser.8:146
+#: ../deluser.conf.5:71
 #, no-wrap
 msgid "FILES"
 msgstr "PLIKI"
 
 # type: Plain text
-#: ../deluser.conf.5:73
-msgid "I</etc/deluser.conf>"
-msgstr "I</etc/deluser.conf>"
+#: ../adduser.8:268
+msgid "/etc/adduser.conf"
+msgstr "/etc/adduser.conf"
 
 # type: SH
-#: ../deluser.conf.5:73 ../adduser.conf.5:121 ../deluser.8:148
-#: ../adduser.8:268
+#: ../adduser.8:268 ../adduser.conf.5:130 ../deluser.8:148
+#: ../deluser.conf.5:73
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "ZOBACZ TAK¯E"
 
 # type: Plain text
-#: ../deluser.conf.5:74
-msgid "deluser(8), delgroup(8), adduser.conf(5)"
-msgstr "deluser(8), delgroup(8), adduser.conf(5)"
+#: ../adduser.8:271
+msgid ""
+"adduser.conf(5), deluser(8), useradd(8), groupadd(8), usermod(8), Debian "
+"Policy 9.2.2."
+msgstr ""
+"adduser.conf(5), deluser(8), useradd(8), groupadd(8), usermod(8), punkt "
+"9.2.2 dokumentu Debian Policy."
+
+# type: SH
+#: ../adduser.8:272 ../deluser.8:151
+#, no-wrap
+msgid "COPYRIGHT"
+msgstr "PRAWA AUTORSKIE"
+
+# type: Plain text
+#: ../adduser.8:275
+msgid ""
+"Copyright (C) 1997, 1998, 1999 Guy Maor. Modifications by Roland "
+"Bauerschmidt and Marc Haber."
+msgstr ""
+"Copyright (C) 1997, 1998, 1999 Guy Maor. Modyfikowany przez Rolanda "
+"Bauerschmidta i Marca Habera."
+
+# type: Plain text
+#: ../adduser.8:279 ../deluser.8:161
+msgid ""
+"Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original "
+"Debian B<adduser>"
+msgstr ""
+"Copyright (C) 1995 Ted Hajek, z du¿ym wk³adem oryginalnego programu "
+"B<adduser> z Debiana."
+
+# type: Plain text
+#: ../adduser.8:285
+msgid ""
+"Copyright (C) 1994 Ian Murdock.  B<adduser> is free software; see the GNU "
+"General Public Licence version 2 or later for copying conditions.  There is "
+"I<no> warranty."
+msgstr ""
+"Copyright (C) 1994 Ian Murdock. B<adduser> jest wolnym oprogramowaniem, "
+"warunki licencji - patrz GNU General Public Licence w wersji 2 lub wy¿szej. "
+"Nie ma I<¿adnych> gwarancji."
 
 # type: Plain text
 #: ../adduser.conf.5:6
@@ -243,6 +798,11 @@ msgstr ""
 "jest otaczanie warto¶ci cudzys³owami lub apostrofami oraz dodawanie bia³ych "
 "znaków przed i po znaku rówo¶ci. Linie komentarza musz± zaczynaæ siê od "
 "znaku hasha (#)."
+
+# type: Plain text
+#: ../adduser.conf.5:30 ../deluser.conf.5:27
+msgid "The valid configuration options are:"
+msgstr "Poprawne s± nastêpuj±ce opcje:"
 
 # type: TP
 #: ../adduser.conf.5:30
@@ -471,13 +1031,40 @@ msgid ""
 "(old|new|dist))."
 msgstr ""
 
+# type: TP
+#: ../adduser.conf.5:119
+#, fuzzy, no-wrap
+msgid "B<ADD_EXTRA_GROUPS>"
+msgstr "B<USERGROUPS>"
+
 # type: Plain text
-#: ../adduser.conf.5:121
+#: ../adduser.conf.5:124
+msgid ""
+"Setting this to something other than 0 (the default) will cause adduser to "
+"add newly created non-system users to the list of groups defined by "
+"EXTRA_GROUPS (below)."
+msgstr ""
+
+# type: TP
+#: ../adduser.conf.5:124
+#, fuzzy, no-wrap
+msgid "B<EXTRA_GROUPS>"
+msgstr "B<USERGROUPS>"
+
+# type: Plain text
+#: ../adduser.conf.5:128
+msgid ""
+"This is the list of groups that new non-system users will be added to.  By "
+"default, this list is 'dialout cdrom floppy audio src video lp users'"
+msgstr ""
+
+# type: Plain text
+#: ../adduser.conf.5:130
 msgid "I</etc/adduser.conf>"
 msgstr "I</etc/adduser.conf>"
 
 # type: Plain text
-#: ../adduser.conf.5:122
+#: ../adduser.conf.5:131
 msgid "adduser(8), addgroup(8), deluser(8), delgroup(8)"
 msgstr "adduser(8), addgroup(8), deluser(8), delgroup(8)"
 
@@ -491,12 +1078,6 @@ msgstr "DELUSER"
 #: ../deluser.8:12
 msgid "deluser, delgroup - remove a user or group from the system"
 msgstr "deluser, delgroup - usuwa u¿ytkownika lub grupê z systemu"
-
-# type: SH
-#: ../deluser.8:12 ../adduser.8:12
-#, no-wrap
-msgid "SYNOPSIS"
-msgstr "SK£ADNIA"
 
 # type: Plain text
 #: ../deluser.8:14
@@ -522,12 +1103,6 @@ msgstr "B<delgroup> [opcje] [--only-if-empty] grupa"
 #: ../deluser.8:20
 msgid "B<deluser> [options] user group"
 msgstr "B<deluser> [opcje] u¿ytkownik grupa"
-
-# type: SS
-#: ../deluser.8:20 ../adduser.8:26
-#, no-wrap
-msgid "COMMON OPTIONS"
-msgstr "WSPÓLNE OPCJE"
 
 # type: Plain text
 #: ../deluser.8:23
@@ -629,11 +1204,6 @@ msgstr ""
 "deluser.local>, to zostanie on uruchomiony w celu wykonania lokalnych "
 "ustawieñ. Argumenty przekazywane do B<deluser.local> s± nastepuj±ce:"
 
-# type: Plain text
-#: ../deluser.8:79 ../adduser.8:114
-msgid "username uid gid home-directory"
-msgstr "nazwa-u¿ytkownika uid gid katalog-domowy"
-
 # type: SS
 #: ../deluser.8:80
 #, no-wrap
@@ -679,28 +1249,10 @@ msgstr ""
 "B<deluser> wywo³any z dwoma argumentami nie bêd±cymi opcjami usunie "
 "u¿ytkownika z podanej grupy."
 
-# type: SH
-#: ../deluser.8:95 ../adduser.8:182
-#, no-wrap
-msgid "OPTIONS"
-msgstr "OPCJE"
-
-# type: TP
-#: ../deluser.8:96 ../adduser.8:183
-#, no-wrap
-msgid "B<--conf FILE>"
-msgstr "B<--conf PLIK>"
-
 # type: Plain text
 #: ../deluser.8:100
 msgid "Use FILE instead of I</etc/deluser.conf>."
 msgstr "U¿yje pliku PLIK zamiast I</etc/deluser.conf>."
-
-# type: TP
-#: ../deluser.8:100 ../adduser.8:212
-#, no-wrap
-msgid "B<--group>"
-msgstr "B<--group>"
 
 # type: Plain text
 #: ../deluser.8:105
@@ -711,33 +1263,10 @@ msgstr ""
 "Usuwa grupê. Jest to domy¶lna akcja, je¿eli program jest wywo³any jako "
 "I<delgroup>."
 
-# type: TP
-#: ../deluser.8:105 ../adduser.8:222
-#, no-wrap
-msgid "B<--help>"
-msgstr "B<--help>"
-
-# type: Plain text
-#: ../deluser.8:108 ../adduser.8:225
-msgid "Display brief instructions."
-msgstr "Wy¶wietla krótk± instrukcjê u¿ywania programu."
-
-# type: TP
-#: ../deluser.8:108 ../adduser.8:241
-#, no-wrap
-msgid "B<--quiet>"
-msgstr "B<--quiet>"
-
 # type: Plain text
 #: ../deluser.8:111
 msgid "Suppress progress messages."
 msgstr "Program wy¶wietla mniej komunikatów ni¿ zazwyczaj."
-
-# type: TP
-#: ../deluser.8:111 ../adduser.8:247
-#, no-wrap
-msgid "B<--system>"
-msgstr "B<--system>"
 
 # type: Plain text
 #: ../deluser.8:117
@@ -753,17 +1282,6 @@ msgstr ""
 "grup. Dodatkowo, je¿eli u¿ytkownik nie istnieje, to nie jest zwracany b³±d. "
 "Ta opcja jest g³ównie przeznaczana do u¿ycia w skryptach opiekunów pakietów "
 "Debiana."
-
-# type: TP
-#: ../deluser.8:117 ../adduser.8:263
-#, no-wrap
-msgid "B<--version>"
-msgstr "B<--version>"
-
-# type: Plain text
-#: ../deluser.8:120 ../adduser.8:266
-msgid "Display version and copyright information."
-msgstr "Wy¶wietla informacjê o wersji i prawach autorskich."
 
 # type: SH
 #: ../deluser.8:120
@@ -870,12 +1388,6 @@ msgstr "/etc/deluser.conf"
 msgid "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
 msgstr "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
 
-# type: SH
-#: ../deluser.8:151 ../adduser.8:272
-#, no-wrap
-msgid "COPYRIGHT"
-msgstr "PRAWA AUTORSKIE"
-
 # type: Plain text
 #: ../deluser.8:155
 #, fuzzy
@@ -896,15 +1408,6 @@ msgstr ""
 "Bauerschmidta i Marca Habera."
 
 # type: Plain text
-#: ../deluser.8:161 ../adduser.8:279
-msgid ""
-"Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original "
-"Debian B<adduser>"
-msgstr ""
-"Copyright (C) 1995 Ted Hajek, z du¿ym wk³adem oryginalnego programu "
-"B<adduser> z Debiana."
-
-# type: Plain text
 #: ../deluser.8:167
 msgid ""
 "Copyright (C) 1994 Ian Murdock.  B<deluser> is free software; see the GNU "
@@ -915,639 +1418,163 @@ msgstr ""
 "warunki licencji - patrz GNU General Public Licence w wersji 2 lub wy¿szej. "
 "Nie ma I<¿adnych> gwarancji."
 
-# type: TH
-#: ../adduser.8:9
+# type: Plain text
+#: ../deluser.conf.5:6
 #, no-wrap
-msgid "ADDUSER"
-msgstr "ADDUSER"
+msgid "deluser.conf"
+msgstr "deluser.conf"
 
 # type: Plain text
-#: ../adduser.8:12
-msgid "adduser, addgroup - add a user or group to the system"
-msgstr "adduser, addgroup - dodaje u¿ytkownika lub grupê do systemu"
-
-# type: Plain text
-#: ../adduser.8:14
-#, fuzzy
+#: ../deluser.conf.5:12
 msgid ""
-"B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
-"uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
-"disabled-password] [--disabled-login] [--gecos GECOS] [--add_extra_groups] "
-"user"
+"/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
 msgstr ""
-"B<adduser> [opcje] [--home KATALOG] [--shell|-s PROW£OKA] [--no-create-home] "
-"[--uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GRUPA | --gid ID] [--"
-"disabled-password] [--disabled-login] [--gecos GECOS] u¿ytkownik"
+"/etc/deluser.conf - plik konfiguracyjny programów B<deluser(8)> i B<delgroup"
+"(8)>."
 
 # type: Plain text
-#: ../adduser.8:16
+#: ../deluser.conf.5:23
 msgid ""
-"B<adduser> --system [options] [--home DIR] [--shell SHELL] [--no-create-"
-"home] [--uid ID] [--group | --ingroup GROUP | --gid ID] [--disabled-"
-"password] [--disabled-login] [--gecos GECOS] user"
+"The file I</etc/deluser.conf> contains defaults for the programs B<deluser(8)"
+"> and B<delgroup(8)>.  Each option takes the form I<option> = I<value>.  "
+"Double or single quotes are allowed around the value.  Comment lines must "
+"have a pound sign (#) at the beginning of the line."
 msgstr ""
-"B<adduser> --system [opcje] [--home KATALOG] [--shell POW£OKA] [--no-create-"
-"home] [--uid ID] [--group | --ingroup GRUPA | --gid ID] [--disabled-"
-"password] [--disabled-login] [--gecos GECOS] u¿ytkownik"
+"Plik I</etc/deluser.conf> zawiera domy¶lne warto¶ci konfiguracji programów "
+"B<deluser(8)> oraz B<delgroup(8)>. Ka¿da opcja ma postaæ I<opcja> = "
+"I<warto¶æ>. Dozwolone jest ujmowanie warto¶ci w apostrofy lub cudzys³owy. "
+"Linie komentarza musz± zaczynaæ siê od znaku hasha (#)."
 
 # type: Plain text
-#: ../adduser.8:18
-msgid "B<adduser> --group [options] [--gid ID] group"
-msgstr "B<adduser> --group [opcje] [--gid ID] grupa"
-
-# type: Plain text
-#: ../adduser.8:20
-msgid "B<addgroup> [options] [--gid ID] group"
-msgstr "B<addgroup> [opcje] [--gid ID] grupa"
-
-# type: Plain text
-#: ../adduser.8:22
-msgid "B<adduser> --group --system [options] [--gid ID] group"
-msgstr "B<adduser> --group --system [opcje] [--gid ID] grupa"
-
-# type: Plain text
-#: ../adduser.8:24
-msgid "B<addgroup> --system [options] [--gid ID] group"
-msgstr "B<addgroup> --system [opcje] [--gid ID] grupa"
-
-# type: Plain text
-#: ../adduser.8:26
-msgid "B<adduser> [options] user group"
-msgstr "B<adduser> [opcje] u¿ytkownik grupa"
-
-# type: Plain text
-#: ../adduser.8:29
-msgid ""
-"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
-msgstr ""
-"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf PLIK]"
-
-# type: Plain text
-#: ../adduser.8:43
-msgid ""
-"B<adduser> and B<addgroup> add users and groups to the system according to "
-"command line options and configuration information in I</etc/adduser.conf>.  "
-"They are friendlier front ends to the low level tools like B<useradd,> "
-"B<groupadd> and B<usermod> programs, choosing Debian policy conformant UID "
-"and GID values, creating a home directory with skeletal configuration, "
-"running a custom script, and other features.  B<adduser> and B<addgroup> can "
-"be run in one of five modes:"
-msgstr ""
-"B<adduser> i B<addgroup> dodaj± u¿ytkowników i grupy do systemu zgodnie z "
-"opcjami wymienionymi w linii poleceñ oraz konfiguracj± zawart± w pliku I</"
-"etc/adduser.conf>. Te programy s± bardziej przyjaznym dla u¿ytkownika "
-"interfejsem do programów B<useradd>, B<groupadd> i B<usermod>; wybieraj±cym "
-"zgodne ze standardami Debiana warto¶ci identyfikatora u¿ytkownika (UID) i "
-"identyfikatora grupy (GID), tworz±cymi katalogi domowe, uruchamiaj±cymi "
-"lokalne skrypty i maj±cymi inne dodatkowe funkcje. B<adduser> i B<addgroup> "
-"mog± byæ u¿yte w jednym z piêciu trybów:"
-
-# type: SS
-#: ../adduser.8:43
-#, no-wrap
-msgid "Add a normal user"
-msgstr "Dodawanie zwyk³ych u¿ytkowników"
-
-# type: Plain text
-#: ../adduser.8:47
-msgid ""
-"If called with one non-option argument and without the B<--system> or B<--"
-"group> options, B<adduser> will add a normal user."
-msgstr ""
-"B<adduser>, wywo³any z jednym argumentem nie bêd±cym opcj± oraz bez opcji "
-"B<--system> lub B<--group>, doda zwyk³ego u¿ytkownika."
-
-# type: Plain text
-#: ../adduser.8:54
-msgid ""
-"B<adduser> will choose the first available UID from the range specified for "
-"normal users in the configuration file.  The UID can be overridden with the "
-"B<--uid> option."
-msgstr ""
-"B<adduser> wybierze pierwszy mo¿liwy UID z zakresu przeznaczonego dla "
-"zwyk³ych u¿ytkowników w pliku konfiguracyjnym. Ten UID mo¿e zostaæ nadpisany "
-"za pomoc± opcji B<--uid>."
-
-# type: Plain text
-#: ../adduser.8:60
-msgid ""
-"The range specified in the configuration file may be overridden with the B<--"
-"firstuid> and B<--lastuid> options."
-msgstr ""
-"Zakres okre¶lony w pliku konfiguracyjnym równie¿ mo¿e zostaæ nadpisany "
-"opcjami B<--firstuid> i B<--lastuid>."
-
-# type: Plain text
-#: ../adduser.8:77
-#, fuzzy
-msgid ""
-"By default, each user in Debian GNU/Linux is given a corresponding group "
-"with the same name.  Usergroups allow group writable directories to be "
-"easily maintained by placing the appropriate users in the new group, setting "
-"the set-group-ID bit in the directory, and ensuring that all users use a "
-"umask of 002.  If this option is turned off by setting B<USERGROUPS> to "
-"I<no>, all users' GIDs are set to B<USERS_GID>.  Users' groups can also be "
-"overridden from the command line with the B<--gid> or B<--ingroup> options "
-"to set the group by id or name, respectively.  Also, users can be added to "
-"one or more groups defined in adduser.conf either by setting "
-"ADD_EXTRA_GROUPS to 1 in adduser.conf, or by passing --add_extra_groups on "
-"the commandline."
-msgstr ""
-"Domy¶lnie ka¿demu u¿ytkownikowi w systemie Debian GNU/Linux zostaje "
-"przypisana grupa maj±ca tê sam± nazwê i identyfikator, co u¿ytkownik. "
-"Umieszczanie ka¿dego u¿ytkownika w grupie o tej samej nazwie pozwala na "
-"³atwe zarz±dzanie katalogami dostêpnymi do zapisu dla grupy poprzez dodanie "
-"odpowiednich u¿ytkowników do nowej grupy, ustawienie flagi set-group-ID na "
-"katalogu i ustawienie ka¿demu u¿ytkownikowi warto¶ci umask równej 002. "
-"Je¿eli ta opcja zostanie wy³±czona przez ustawienie B<USERGROUPS> na I<no>, "
-"wszyscy nowo tworzeni u¿ytkownicy bêd± mieli identyfikator grupy ustawiony "
-"na B<USERS_GID>. Grupy u¿ytkowników mog± zostaæ równie¿ nadpisane przez "
-"podanie w linii poleceñ opcji B<--gid> lub B<--ingroup>, które ustawiaj± "
-"grupê przez podanie, odpowiednio, jej id lub nazwy."
-
-# type: Plain text
-#: ../adduser.8:91
-msgid ""
-"B<adduser> will create a home directory subject to B<DHOME>, B<GROUPHOMES>, "
-"and B<LETTERHOMES>.  The home directory can be overridden from the command "
-"line with the B<--home> option, and the shell with the B<--shell> option. "
-"The home directory's set-group-ID bit is set if B<USERGROUPS> is I<yes> so "
-"that any files created in the user's home directory will have the correct "
-"group."
-msgstr ""
-"B<adduser> utworzy katalog domowy u¿ytkownika zgodnie z ustawieniami "
-"B<DHOME>, B<GROUPHOMES>, B<LETTERHOMES> w pliku konfiguracyjnym. Katalog "
-"domowy mo¿e zostaæ nadpisany przez opcjê linii poleceñ B<--home>, a pow³oka "
-"- przez opcjê B<--shell>. Je¿eli B<USERGROUPS> jest ustawione na I<yes>, to "
-"katalogowi domowemu u¿ytkownika zostanie nadany bit set-group-ID, co "
-"powoduje, ¿e jakikolwiek plik utworzony w tym katalogu bêdzie mia³ "
-"przydzielon± w³a¶ciw± grupê."
-
-# type: Plain text
-#: ../adduser.8:105
-#, fuzzy
-msgid ""
-"B<adduser> will copy files from B<SKEL> into the home directory and prompt "
-"for finger (gecos) information and a password.  The gecos may also be set "
-"with the B<--gecos> option.  With the B<--disabled-login> option, the "
-"account will be created but will be disabled until a password is set. The "
-"B<--disabled-password> option will not set a password, but login is still "
-"possible (for example with SSH RSA keys)."
-msgstr ""
-"B<adduser> skopiuje pliki z katalogu B<SKEL> do katalogu domowego "
-"u¿ytkownika, poprosi o dane u¿ytkownika (GECOS) oraz o has³o. Dane "
-"u¿ytkownika mog± byæ tak¿e ustawione opcj± B<--gecos>. Podanie opcji B<--"
-"disabled-login> spowoduje utworzenie konta u¿ytkownika, które bêdzie "
-"niedostêpne (zablokowane), dopóki nie zostanie ustawione has³o. Opcja B<--"
-"disabled-password> nie ustawi has³a, ale dostêp u¿ytkownika do systemu "
-"bêdzie mo¿liwy na przyk³ad przez u¿ycie programu SSH z kluczami RSA."
-
-# type: Plain text
-#: ../adduser.8:112
-msgid ""
-"If the file B</usr/local/sbin/adduser.local> exists, it will be executed "
-"after the user account has been set up in order to do any local setup.  The "
-"arguments passed to B<adduser.local> are:"
-msgstr ""
-"Po utworzeniu i ustawieniu konta u¿ytkownika, je¿eli istnieje plik B</usr/"
-"local/sbin/adduser.local>, to zostanie on uruchomiony w celu wykonania "
-"lokalnych ustawieñ. Argumenty przekazywane do B<adduser.local> s± "
-"nastepuj±ce:"
-
-# type: Plain text
-#: ../adduser.8:116
-msgid ""
-"The environment variable VERBOSE is set according to the following rule:"
-msgstr "Zmienna ¶rodowiskowa VERBOSE jest ustawiana na:"
+#: ../deluser.conf.5:25
+msgid "deluser(8) and delgroup(8) also read /etc/adduser.conf."
+msgstr "deluser(8) i delgroup(8) równie¿ czytaj± plik /etc/adduser.conf."
 
 # type: TP
-#: ../adduser.8:116
+#: ../deluser.conf.5:27
 #, no-wrap
-msgid "0 if --quiet is specified"
-msgstr "0, je¶li podano opcjê --quiet"
+msgid "B<REMOVE_HOME>"
+msgstr "B<REMOVE_HOME>"
+
+# type: Plain text
+#: ../deluser.conf.5:31
+msgid ""
+"Removes the home directory and mail spool of the user to be removed.  Value "
+"may be 0 or 1."
+msgstr ""
+"Usuwa katalog domowy oraz plik zawieraj±cy przychodz±c± pocztê u¿ytkownika. "
+"Warto¶ci± tej opcji mo¿e byæ 0 lub 1."
 
 # type: TP
-#: ../adduser.8:118
+#: ../deluser.conf.5:31
 #, no-wrap
-msgid "1 if neither --quiet nor --debug is specified"
-msgstr "1, je¶li nie podano ¿adnej z opcji --quiet i --debug"
+msgid "B<REMOVE_ALL_FILES>"
+msgstr "B<REMOVE_ALL_FILES>"
+
+# type: Plain text
+#: ../deluser.conf.5:37
+msgid ""
+"Removes all files on the system owned by the user to be removed.  If this "
+"option is activated B<REMOVE_HOME> has no effect. Values may be 0 or 1."
+msgstr ""
+"Usuwa z systemu wszystkie pliki, których w³a¶cicielem jest usuwany "
+"u¿ytkownik. Je¿eli ta opcja jest aktywna, to B<REMOVE_HOME> nie ma ¿adnego "
+"efektu. Warto¶ci± tej opcji mo¿e byæ 0 lub 1."
 
 # type: TP
-#: ../adduser.8:120
+#: ../deluser.conf.5:37
 #, no-wrap
-msgid "2 if --debug is specified"
-msgstr "2, je¶li podano opcjê --debug"
+msgid "B<BACKUP>"
+msgstr "B<BACKUP>"
 
 # type: Plain text
-#: ../adduser.8:124
+#: ../deluser.conf.5:49
 msgid ""
-"(The same applies to the variable DEBUG, but DEBUG is deprecated and will be "
-"removed in a later version of adduser.)"
+"If B<REMOVE_HOME> or B<REMOVE_ALL_FILES> is activated all files are backuped "
+"before they are removed. The backup file that is created defaults to "
+"username.tar(.gz|.bz2) in the directory specified by the B<BACKUP_TO> "
+"option. The compression method is chosen to the best that is available.  "
+"Values may be 0 or 1."
 msgstr ""
-"(To samo dotyczy zmiennej DEBUG, jednak ta zmienna jest przestarza³a i "
-"zostanie usuniêta w której¶ z przysz³ych wesji programu adduser)."
-
-# type: SS
-#: ../adduser.8:125
-#, no-wrap
-msgid "Add a system user"
-msgstr "Dodawanie u¿ytkowników systemowych"
-
-# type: Plain text
-#: ../adduser.8:131
-#, fuzzy
-msgid ""
-"If called with one non-option argument and the B<--system> option, "
-"B<adduser> will add a system user. If a user with the same name already "
-"exists in the system uid range (or, if the uid is specified, if a user with "
-"that uid already exists), adduser will exit with a warning."
-msgstr ""
-"B<adduser>, gdy zostanie uruchomiony z jednym argumentem, nie bêd±cym opcj±, "
-"oraz z opcj± B<--system>, doda u¿ytkownika systemowego. Je¿eli taki "
-"u¿ytkownik z identyfikatorem u¿ytkownika (uid) mieszcz±cym siê w zakresie "
-"identyfikatorów u¿ytkowników systemowych (lub je¿eli uid jest podany w linii "
-"poleceñ, to z tym identyfikatorem) ju¿ istnieje, adduser po prostu zakoñczy "
-"dzia³anie bez b³êdu."
-
-# type: Plain text
-#: ../adduser.8:137
-msgid ""
-"B<adduser> will choose the first available UID from the range specified for "
-"system users in the configuration file.  The UID can be overridden with the "
-"B<--uid> option."
-msgstr ""
-"B<adduser> wybierze pierwszy mo¿liwy UID z zakresu identyfikatorów "
-"systemowych okre¶lonych w pliku konfiguracyjnym. UID ten mo¿e zostaæ "
-"nadpisany przez podanie opcji B<--uid>."
-
-# type: Plain text
-#: ../adduser.8:147
-msgid ""
-"By default, system users are placed in the B<nogroup> group.  To place the "
-"new system user in an already existing group, use the B<--gid> or B<--"
-"ingroup> options.  To place the new system user in a new group with the same "
-"ID, use the B<--group> option."
-msgstr ""
-"Domy¶lnie u¿ytkownicy systemowi maj± przypisan± grupê B<nogroup>. Aby "
-"przypisaæ nowego u¿ytkownika systemowego do istniej±cej grupy, nale¿y u¿yæ "
-"opcji B<--gid> lub B<--ingroup>. Aby nowemu u¿ytkownikowi systemowemu "
-"zosta³a przypisana nowa grupa z tym samym identyfikatorem, trzeba u¿yæ opcji "
-"B<--group>."
-
-# type: Plain text
-#: ../adduser.8:155
-msgid ""
-"A home directory is created by the same rules as for normal users.  The new "
-"system user will have the shell I</bin/false> (unless overridden with the "
-"B<--shell> option), and have logins disabled.  Skeletal configuration files "
-"are not copied."
-msgstr ""
-"Katalog domowy jest tworzony zgodnie z tymi samymi zasadami, co dla zwyk³ych "
-"u¿ytkowników. Nowy u¿ytkownik systemowy bêdzie mia³ pow³okê I</bin/false> "
-"(chyba ¿e zostanie to nadpisane opcj± B<--shell>) oraz wy³±czone has³o. "
-"Pliki z katalogu B<SKEL> nie zostan± skopiowane."
-
-# type: SS
-#: ../adduser.8:155
-#, no-wrap
-msgid "Add a user group"
-msgstr "Dodawanie zwyk³ych grup"
-
-# type: Plain text
-#: ../adduser.8:160
-msgid ""
-"If B<adduser> is called with the B<--group> option and without the B<--"
-"system> option, or B<addgroup> is called respectively, a user group will be "
-"added."
-msgstr ""
-"Je¿eli B<adduser> zostanie uruchomiony z opcj± B<--group>, ale bez opcji B<--"
-"system>, lub jako program B<addgroup>, to zostanie dodana grupa dla zwyk³ych "
-"u¿ytkowników."
-
-# type: Plain text
-#: ../adduser.8:165
-msgid ""
-"A GID will be chosen from the range specified for user UIDS in the "
-"configuration file.  The GID can be overridden with the B<--gid> option."
-msgstr ""
-"Grupie zostanie nadany identyfikator (GID) z zakresu okre¶lonego w pliku "
-"konfiguracyjnym dla identyfikatorów u¿ytkowników (UID), jednak¿e mo¿e zostaæ "
-"nadpisany opcj± B<--gid>."
-
-# type: Plain text
-#: ../adduser.8:167 ../adduser.8:178
-msgid "The group is created with no users."
-msgstr ""
-"Utworzenie grupy nie powoduje przypisania do niej ¿adnych u¿ytkowników."
-
-# type: SS
-#: ../adduser.8:167
-#, no-wrap
-msgid "Add a system group"
-msgstr "Dodawanie grup systemowych"
-
-# type: Plain text
-#: ../adduser.8:171
-msgid ""
-"If B<addgroup> is called with the B<--system> option, a system group will be "
-"added."
-msgstr ""
-"Je¿eli B<addgroup> zostanie wywo³any z opcj± B<--system>, to bêdzie "
-"utworzona nowa grupa systemowa."
-
-# type: Plain text
-#: ../adduser.8:176
-#, fuzzy
-msgid ""
-"A GID will be chosen from the range specified for system GIDS in the "
-"configuration file.  The GID can be overridden with the B<--gid> option."
-msgstr ""
-"Grupie zostanie nadany identyfikator (GID) z zakresu okre¶lonego w pliku "
-"konfiguracyjnym dla identyfikatorów u¿ytkowników systemowych (UID), jednak¿e "
-"mo¿e zostaæ nadpisany opcj± B<--gid>."
-
-# type: SS
-#: ../adduser.8:178
-#, no-wrap
-msgid "Add an existing user to an existing group"
-msgstr "Przydzielanie istniej±cego u¿ytkownika do istniej±cej grupy"
-
-# type: Plain text
-#: ../adduser.8:182
-msgid ""
-"If called with two non-option arguments, B<adduser> will add an existing "
-"user to an existing group."
-msgstr ""
-"B<adduser> wywo³any z dwoma argumentami nie bêd±cymi opcjami doda "
-"istniej±cego u¿ytkownika do istniej±cej grupy."
-
-# type: Plain text
-#: ../adduser.8:187
-msgid "Use FILE instead of I</etc/adduser.conf>."
-msgstr "U¿yje pliku PLIK zamiast I</etc/adduser.conf>."
+"Je¿eli uaktywniono B<REMOVE_HOME> lub B<REMOVE_ALL_FILES>, to wszystkie "
+"pliki przed usuniêciem s± archiwizowane. Domy¶ln± nazw± pliku archiwum jest "
+"nazwa-u¿ytkownika.tar(.gz|.bz2) w katalogu okre¶lonym w opcji B<BACKUP_TO>. "
+"Jako metodê kompresji wybiera siê najlepsz± spo¶ród tych, które s± dostêpne. "
+"Warto¶ci± tej opcji mo¿e byæ 0 lub 1."
 
 # type: TP
-#: ../adduser.8:187
+#: ../deluser.conf.5:49
 #, no-wrap
-msgid "B<--disabled-login>"
-msgstr "B<--disabled-login>"
+msgid "B<BACKUP_TO>"
+msgstr "B<BACKUP_TO>"
 
 # type: Plain text
-#: ../adduser.8:191
+#: ../deluser.conf.5:57
 msgid ""
-"Do not run passwd to set the password.  The user won't be able to use her "
-"account until the password is set."
+"If B<BACKUP> is activated, B<BACKUP_TO> specifies the directory the backup "
+"is written to. Default is the current directory."
 msgstr ""
-"Nie uruchamia programu passwd do ustanowienia has³a. U¿ytkownik nie bêdzie "
-"móg³ u¿ywaæ swojego konta, dopóki has³o nie zostanie nadane."
+"Je¿eli uaktywniono B<BACKUP>, to B<BACKUP_TO> okre¶la nazwê katalogu, w "
+"którym s± zapisywane pliki z kopiami zapasowymi. Domy¶ln± warto¶ci± jest "
+"katalog bie¿±cy."
 
 # type: TP
-#: ../adduser.8:191
+#: ../deluser.conf.5:57
 #, no-wrap
-msgid "B<--disabled-password>"
-msgstr "B<--disabled-password>"
+msgid "B<NO_DEL_PATHS>"
+msgstr "B<NO_DEL_PATHS>"
 
 # type: Plain text
-#: ../adduser.8:195
-#, fuzzy
+#: ../deluser.conf.5:64
 msgid ""
-"Like --disabled-login, but logins are still possible (for example using SSH "
-"RSA keys) but not using password authentication."
+"A list of regular expressions, space separated. All files to be deleted in "
+"course of deleting home directories or deleting files owned by the user to "
+"be deleted are checked against each of these regular expressions. If a match "
+"is detected, the file is not deleted. Defaults to a list of system "
+"directories, leaving only /home."
 msgstr ""
-"Jak --disabled-login, ale dostêp u¿ytkownika do systemu bêdzie mo¿liwy na "
-"przyk³ad przez u¿ycie programu SSH z kluczami RSA, tj. bez autoryzacji za "
-"pomoc± has³a."
+"Lista wyra¿eñ regularnych rozdzielonych spacjami. Wed³ug tych wyra¿eñ s± "
+"sprawdzane wszystkie pliki przeznaczone do usuniêcia z powodu usuwania "
+"katalogów domowych albo z powodu usuwania plików, których w³a¶cicielem jest "
+"dany u¿ytkownik. Je¿eli plik pasuje do wyra¿enia, to nie jest usuwany. "
+"Warto¶ci± domy¶ln± jest lista katalogów systemowych, oprócz /home."
 
 # type: TP
-#: ../adduser.8:195
+#: ../deluser.conf.5:64
 #, no-wrap
-msgid "B<--force-badname>"
-msgstr "B<--force-badname>"
+msgid "B<ONLY_IF_EMPTY>"
+msgstr ""
 
 # type: Plain text
-#: ../adduser.8:203
+#: ../deluser.conf.5:67
 msgid ""
-"By default, user and group names are checked against a configurable regular "
-"expression. This option forces B<adduser> and B<addgroup> to apply only a "
-"weak check for validity of the name."
+"Only delete a group if there are no user who belong to this group. Defaults "
+"to 0."
 msgstr ""
-"Domy¶lnie nazwy u¿ytkowników i grup mog± siê sk³adaæ z ma³ej litery, po "
-"której nastêpuje zero lub wiêcej ma³ych liter b±d¼ cyfr. W nazwie "
-"u¿ytkownika mog± wyst±piæ równie¿ znaki my¶lnika. U¿ycie tej opcji "
-"spowoduje, ¿e B<adduser> i B<addgroup> bêd± mniej restrykcyjne w odniesieniu "
-"do tych nazw."
 
 # type: TP
-#: ../adduser.8:203
+#: ../deluser.conf.5:67
 #, no-wrap
-msgid "B<--gecos GECOS>"
-msgstr "B<--gecos GECOS>"
+msgid "B<EXCLUDE_FSTYPES>"
+msgstr ""
 
 # type: Plain text
-#: ../adduser.8:207
+#: ../deluser.conf.5:70
 msgid ""
-"Set the gecos field for the new entry generated.  adduser will not ask for "
-"finger information if this option is given."
-msgstr ""
-"Ustawia pole z informacjami GECOS dla nowego u¿ytkownika. Je¶li ta opcja "
-"jest podana, to adduser nie bêdzie prosi³ o podanie tych informacji "
-"interakcyjnie."
-
-# type: TP
-#: ../adduser.8:207
-#, no-wrap
-msgid "B<--gid ID>"
-msgstr "B<--gid ID>"
-
-# type: Plain text
-#: ../adduser.8:212
-msgid ""
-"When creating a group, this option forces the new groupid to be the given "
-"number.  When creating a user, this option will put the user in that group."
-msgstr ""
-"Przy tworzeniu nowej grupy, ta opcja ustawia identyfikator grupy na podan± "
-"warto¶æ. Przy tworzeniu u¿ytkownika, u¿ycie tej opcji spowoduje umieszczenie "
-"u¿ytkownika w zadanej grupie."
-
-# type: Plain text
-#: ../adduser.8:222
-msgid ""
-"When combined with B<--system>, a group with the same name and ID as the "
-"system user is created.  If not combined with B<--system>, a group with the "
-"given name is created.  This is the default action if the program is invoked "
-"as B<addgroup>."
-msgstr ""
-"U¿yte razem z B<--system>, spowoduje utworzenie grupy o takiej samej nazwie "
-"i identyfikatorze, jak nowo tworzony u¿ytkownik systemowy. Je¿eli nie "
-"zostanie u¿yte razem z opcj± B<--system>, to zostanie utworzone grupa o "
-"podanej nazwie. Ta opcja jest opcj± domy¶ln±, je¿eli program zosta³ wywo³any "
-"jako B<addgroup>."
-
-# type: TP
-#: ../adduser.8:225
-#, no-wrap
-msgid "B<--home DIR>"
-msgstr "B<--home KATALOG>"
-
-# type: Plain text
-#: ../adduser.8:230
-msgid ""
-"Use DIR as the user's home directory, rather than the default specified by "
-"the configuration file.  If the directory does not exist, it is created and "
-"skeleton files are copied."
-msgstr ""
-"U¿ywa katalogu KATALOG jako katalogu domowego u¿ytkownika, nadpisuj±c tym "
-"samym domy¶ln± warto¶æ okre¶lon± w pliku konfiguracyjnym. Je¿eli ten katalog "
-"nie istnieje, to bêdzie utworzony i zostan± skopiowane pliki z katalogu "
-"I<SKEL>."
-
-# type: TP
-#: ../adduser.8:230
-#, no-wrap
-msgid "B<--shell SHELL>"
-msgstr "B<--shell POW£OKA>"
-
-# type: Plain text
-#: ../adduser.8:234
-msgid ""
-"Use SHELL as the user's login shell, rather than the default specified by "
-"the configuration file."
-msgstr ""
-"Ustawia POW£OKÊ jako pow³okê logowania u¿ytkownika, nadpisuj±c domy¶ln± "
-"warto¶æ okre¶lon± w pliku konfiguracyjnym."
-
-# type: TP
-#: ../adduser.8:234
-#, no-wrap
-msgid "B<--ingroup GROUP>"
-msgstr "B<--ingroup GRUPA>"
-
-# type: Plain text
-#: ../adduser.8:238
-msgid ""
-"Add the new user to GROUP instead of a usergroup or the default group "
-"defined by USERS_GID in the adduser.conf file."
-msgstr ""
-"Umieszcza nowego u¿ytkownika w grupie GRUPA, zamiast w grupie okre¶lonej "
-"przez opcjê USERS_GID w pliku adduser.conf."
-
-# type: TP
-#: ../adduser.8:238
-#, no-wrap
-msgid "B<--no-create-home>"
-msgstr "B<--no-create-home>"
-
-# type: Plain text
-#: ../adduser.8:241
-msgid "Do not create the home directory, even if it doesn't exist."
-msgstr "Nie tworzy katalogu domowego, nawet je¿eli on nie istnieje."
-
-# type: Plain text
-#: ../adduser.8:244
-msgid "Suppress informational messages, only show warnings and errors."
-msgstr "Pomija informacje, pokazuje tylko ostrze¿enia i b³êdy."
-
-# type: TP
-#: ../adduser.8:244
-#, no-wrap
-msgid "B<--debug>"
-msgstr "B<--debug>"
-
-# type: Plain text
-#: ../adduser.8:247
-#, fuzzy
-msgid ""
-"Be verbose, most useful if you want to nail down a problem with adduser."
-msgstr ""
-"Tryb gadatliwy, przydatny w czasie rozwi±zywania problemów w programie "
-"adduser."
-
-# type: Plain text
-#: ../adduser.8:250
-msgid "Create a system user."
-msgstr "Tworzy u¿ytkownika systemowego."
-
-# type: TP
-#: ../adduser.8:250
-#, no-wrap
-msgid "B<--uid ID>"
-msgstr "B<--uid ID>"
-
-# type: Plain text
-#: ../adduser.8:254
-msgid ""
-"Force the new userid to be the given number.  adduser will fail if the "
-"userid is already taken."
-msgstr ""
-"Ustawia identyfikator nowego u¿ytkownika na podan± warto¶æ. adduser zakoñczy "
-"siê b³êdem, je¿eli taki identyfikator jest ju¿ zajêty."
-
-# type: TP
-#: ../adduser.8:254
-#, no-wrap
-msgid "B<--firstuid ID>"
-msgstr "B<--firstuid ID>"
-
-# type: Plain text
-#: ../adduser.8:257
-msgid "Override the first uid in the range that the uid is chosen from."
-msgstr "Nadpisuje warto¶æ pierwszego dostêpnego identyfikatora u¿ytkownika."
-
-# type: TP
-#: ../adduser.8:257
-#, no-wrap
-msgid "B<--lastuid ID>"
-msgstr "B<--lastuid ID>"
-
-# type: Plain text
-#: ../adduser.8:260
-msgid "Override the last uid in the range that the uid is chosen from."
-msgstr "Nadpisuje warto¶æ pierwszego ostatniego identyfikatora u¿ytkownika."
-
-# type: TP
-#: ../adduser.8:260
-#, fuzzy, no-wrap
-msgid "B<--add_extra_groups>"
-msgstr "B<--group>"
-
-# type: Plain text
-#: ../adduser.8:263
-msgid "Add new user to extra groups defined in adduser.conf"
+"A regular expression which describes all file systems which should be "
+"excluded when looking for files of a user to be deleted. Defaults to \"(proc|"
+"sysfs|usbfs|devpts|tmpfs)\"."
 msgstr ""
 
 # type: Plain text
-#: ../adduser.8:268
-msgid "/etc/adduser.conf"
-msgstr "/etc/adduser.conf"
+#: ../deluser.conf.5:73
+msgid "I</etc/deluser.conf>"
+msgstr "I</etc/deluser.conf>"
 
 # type: Plain text
-#: ../adduser.8:271
-msgid ""
-"adduser.conf(5), deluser(8), useradd(8), groupadd(8), usermod(8), Debian "
-"Policy 9.2.2."
-msgstr ""
-"adduser.conf(5), deluser(8), useradd(8), groupadd(8), usermod(8), punkt "
-"9.2.2 dokumentu Debian Policy."
-
-# type: Plain text
-#: ../adduser.8:275
-msgid ""
-"Copyright (C) 1997, 1998, 1999 Guy Maor. Modifications by Roland "
-"Bauerschmidt and Marc Haber."
-msgstr ""
-"Copyright (C) 1997, 1998, 1999 Guy Maor. Modyfikowany przez Rolanda "
-"Bauerschmidta i Marca Habera."
-
-# type: Plain text
-#: ../adduser.8:285
-msgid ""
-"Copyright (C) 1994 Ian Murdock.  B<adduser> is free software; see the GNU "
-"General Public Licence version 2 or later for copying conditions.  There is "
-"I<no> warranty."
-msgstr ""
-"Copyright (C) 1994 Ian Murdock. B<adduser> jest wolnym oprogramowaniem, "
-"warunki licencji - patrz GNU General Public Licence w wersji 2 lub wy¿szej. "
-"Nie ma I<¿adnych> gwarancji."
+#: ../deluser.conf.5:74
+msgid "deluser(8), delgroup(8), adduser.conf(5)"
+msgstr "deluser(8), delgroup(8), adduser.conf(5)"
 
 # type: Plain text
 #~ msgid ""
