@@ -57,13 +57,13 @@ sub gtx {
 
 sub dief {
     my ($form,@argu)=@_;
-    printf STDERR "$0: $form",@argu;
+    printf STDERR sprintf(gtx("%s: %s"), $0, $form), @argu;
     exit 1;
 }
 
 sub warnf {
     my ($form,@argu)=@_;
-    printf STDERR "$0: $form",@argu;
+    printf STDERR STDERR sprintf(gtx("%s: %s"), $0, $form), @argu;
 }
 
 # parse the configuration file
@@ -75,7 +75,7 @@ sub read_config {
     my ($var, $lcvar, $val);
 
     if (! -f $conf_file) {
-	printf gtx("%s: `%s' doesn't exist. Using defaults.\n"),$0,$conf_file if $verbose;
+	warnf gtx("%s: `%s' does not exist. Using defaults.\n"),$conf_file if $verbose;
 	return;
     }
 
@@ -168,7 +168,7 @@ sub which {
             return "$dir/$progname";
         }
     }
-    dief(gtx("Could not find program named %s in \$PATH\n"), $progname) unless ($nonfatal);
+    dief(gtx("Could not find program named `%s' in \$PATH\n"), $progname) unless ($nonfatal);
 }
 
 

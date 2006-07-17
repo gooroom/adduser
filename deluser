@@ -92,7 +92,7 @@ unless ( GetOptions ("quiet|q" => sub {$verbose = 0; },
 }
 
 # everyone can issue "--help" and "--version", but only root can go on
-die ("$0: ",gtx("Only root may remove a user or group from the system.\n")) if ($> != 0);
+dief (gtx("Only root may remove a user or group from the system.\n")) if ($> != 0);
 
 if (!defined($configfile)) { 
     @defaults = ("/etc/adduser.conf", "/etc/deluser.conf");
@@ -109,7 +109,7 @@ my ($user,$group);
 
 while (defined(my $arg = shift(@ARGV))) {
   if (defined($names[0]) && $arg =~ /^--/) {
-      die ("$0: ",gtx("No options allowed after names.\n"));
+      dief (gtx("No options allowed after names.\n"));
     } else {			# it's a username
 	push (@names, $arg);
     }
@@ -126,7 +126,7 @@ if(@names == 0) {
 }
 
 if (length($names[0]) == 0 || @names > 2) {
-    die ("$0: ",gtx("Only one or two names allowed.\n"));
+    dief (gtx("Only one or two names allowed.\n"));
 }
 
 if(@names == 2) {      # must be deluserfromgroup
@@ -160,7 +160,7 @@ foreach(keys(%pconfig)) {
 undef (%pconfig);
 
 if (($config{remove_home} || $config{remove_all_files} || $config{backup}) && ($install_more_packages)) {
-    die (gtx("In order to use the --remove-home, --remove-all-files, and --backup features,
+    dief (gtx("In order to use the --remove-home, --remove-all-files, and --backup features,
 you need to install the `perl-modules' package. To accomplish that, run
 apt-get install perl-modules.\n"));
 }
@@ -237,7 +237,7 @@ if($action eq "deluser") {
 	      }
 	      push @mountpoints,$temparray[2];
       }
-      close(MOUNT) or die (gtx("pipe of command `mount' could not be closed: %s\n",$!));
+      close(MOUNT) or dief (gtx("pipe of command `mount' could not be closed: %s\n",$!));
       my(@files,@dirs);
       if($config{"remove_home"} && ! $config{"remove_all_files"}) {
 
