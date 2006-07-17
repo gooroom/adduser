@@ -63,7 +63,7 @@ sub dief {
 
 sub warnf {
     my ($form,@argu)=@_;
-    printf STDERR STDERR sprintf(gtx("%s: %s"), $0, $form), @argu;
+    printf STDERR sprintf(gtx("%s: %s"), $0, $form), @argu;
 }
 
 # parse the configuration file
