@@ -1,10 +1,9 @@
-adduser (3.93.0) UNRELEASED; urgency=low
+adduser (3.94) unstable; urgency=low
 
-  * NOT RELEASED YET
   * More patches for program output.
     Thanks again to Tobias Toedter. Closes: #378539
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 17 Jul 2006 16:25:38 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 17 Jul 2006 16:26:25 +0000
 
 adduser (3.93) unstable; urgency=low
 
