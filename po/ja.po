@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.45\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:55+0000\n"
+"POT-Creation-Date: 2006-07-17 16:26+0000\n"
 "PO-Revision-Date: 2002-03-08 16:20+0900\n"
 "Last-Translator: Tomohiro KUBOTA <kubota@debian.org>\n"
 "Language-Team: Japanese <debian-doc@debian.or.jp>\n"
@@ -78,7 +78,7 @@ msgstr "`%s' グループは作成されませんでした。\n"
 
 #: ../adduser:270
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%d) ...\n"
+msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "グループ %s (%s) を追加しています…\n"
 
 #: ../adduser:275 ../adduser:304 ../adduser:336 ../deluser:333 ../deluser:369
@@ -98,7 +98,7 @@ msgstr "この範囲では利用できる GID がありません :"
 
 #: ../adduser:299
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%s) ...\n"
+msgid "Adding group `%s' (GID %s) ...\n"
 msgstr "グループ %s (%s) を追加しています…\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
@@ -155,27 +155,27 @@ msgstr "内部エラー"
 
 #: ../adduser:389
 #, fuzzy, perl-format
-msgid "Adding system user `%s' with UID %d ...\n"
+msgid "Adding system user `%s' (UID %d) ...\n"
 msgstr "システムユーザ %s を追加しています...\n"
 
-#: ../adduser:394 ../adduser:481
+#: ../adduser:394
 #, fuzzy, perl-format
-msgid "Adding new group `%s' (%d) ...\n"
+msgid "Adding new group `%s' (GID %d) ...\n"
 msgstr "新しいグループ %s (%s) を追加しています。\n"
 
-#: ../adduser:401 ../adduser:488
+#: ../adduser:401
 #, fuzzy, perl-format
-msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "グループ %s に新しいユーザ %s (%s) を追加しています。\n"
 
-#: ../adduser:415
+#: ../adduser:415 ../AdduserCommon.pm:158
 #, perl-format
-msgid "%s: `%s' returned error code %d. Exiting.\n"
+msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:417
 #, perl-format
-msgid "%s: `%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %s. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -200,6 +200,16 @@ msgstr "次の範囲で利用可能な UID/GID のペアがありません :"
 #, fuzzy, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "次の範囲に利用可能な UID がありません :"
+
+#: ../adduser:481
+#, fuzzy, perl-format
+msgid "Adding new group `%s' (%d) ...\n"
+msgstr "新しいグループ %s (%s) を追加しています。\n"
+
+#: ../adduser:488
+#, fuzzy, perl-format
+msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgstr "グループ %s に新しいユーザ %s (%s) を追加しています。\n"
 
 #. hm, error, should we break now?
 #: ../adduser:512
@@ -273,8 +283,8 @@ msgstr "ホームディレクトリ %s を作成しています。\n"
 
 #: ../adduser:631
 #, fuzzy, perl-format
-msgid "Couldn't create %s: %s.\n"
-msgstr "%s を分析できません:%s.\n"
+msgid "Couldn't create home directory `%s': %s.\n"
+msgstr "ホームディレクトリは作成しません。\n"
 
 #: ../adduser:639
 #, fuzzy, perl-format
@@ -314,7 +324,7 @@ msgstr "グループ ID `%s' が存在しません。\n"
 #: ../adduser:777
 #, perl-format
 msgid ""
-"Can't deal with %s.\n"
+"Cannot deal with %s.\n"
 "It is not a dir, file, or symlink.\n"
 msgstr ""
 
@@ -631,9 +641,14 @@ msgid ""
 "\n"
 msgstr ""
 
+#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#, perl-format
+msgid "%s: %s"
+msgstr ""
+
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' doesn't exist. Using defaults.\n"
+msgid "%s: `%s' does not exist. Using defaults.\n"
 msgstr "%s: %s が存在しません。デフォルトを使用します。\n"
 
 #: ../AdduserCommon.pm:88
@@ -646,11 +661,6 @@ msgstr "%s を分析できません:%s.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "不明な変数 `%s' が %s にあります:%s.\n"
 
-#: ../AdduserCommon.pm:158
-#, perl-format
-msgid "`%s' returned error code %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:160
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
@@ -658,8 +668,12 @@ msgstr ""
 
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named %s in $PATH\n"
+msgid "Could not find program named `%s' in $PATH\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Couldn't create %s: %s.\n"
+#~ msgstr "%s を分析できません:%s.\n"
 
 #~ msgid "Setting quota from `%s'.\n"
 #~ msgstr "%s から quota を設定しています。\n"

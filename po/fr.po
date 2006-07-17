@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:55+0000\n"
+"POT-Creation-Date: 2006-07-17 16:26+0000\n"
 "PO-Revision-Date: 2006-05-08 21:18+0200\n"
 "Last-Translator: Thomas Huriaux <thomas.huriaux@gmail.com>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -88,7 +88,7 @@ msgstr "Le groupe « %s » n'a pas été créé.\n"
 
 #: ../adduser:270
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%d) ...\n"
+msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Ajout du groupe « %s » (%s)...\n"
 
 #: ../adduser:275 ../adduser:304 ../adduser:336 ../deluser:333 ../deluser:369
@@ -110,7 +110,7 @@ msgstr ""
 
 #: ../adduser:299
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%s) ...\n"
+msgid "Adding group `%s' (GID %s) ...\n"
 msgstr "Ajout du groupe « %s » (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
@@ -175,29 +175,29 @@ msgstr "Erreur interne"
 
 #: ../adduser:389
 #, fuzzy, perl-format
-msgid "Adding system user `%s' with UID %d ...\n"
+msgid "Adding system user `%s' (UID %d) ...\n"
 msgstr "Ajout de l'utilisateur « %s » avec l'identifiant %s...\n"
 
-#: ../adduser:394 ../adduser:481
+#: ../adduser:394
 #, fuzzy, perl-format
-msgid "Adding new group `%s' (%d) ...\n"
+msgid "Adding new group `%s' (GID %d) ...\n"
 msgstr "Ajout du nouveau groupe « %s » (%s).\n"
 
-#: ../adduser:401 ../adduser:488
+#: ../adduser:401
 #, fuzzy, perl-format
-msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr ""
 "Ajout du nouvel utilisateur « %s » (%s) avec le groupe\n"
 "« %s ».\n"
 
-#: ../adduser:415
+#: ../adduser:415 ../AdduserCommon.pm:158
 #, perl-format
-msgid "%s: `%s' returned error code %d. Exiting.\n"
+msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:417
 #, perl-format
-msgid "%s: `%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %s. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -230,6 +230,18 @@ msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr ""
 "Aucun identifiant utilisateur n'est disponible dans l'intervalle %d-%d\n"
 "(FIRST_UID - LAST_UID).\n"
+
+#: ../adduser:481
+#, fuzzy, perl-format
+msgid "Adding new group `%s' (%d) ...\n"
+msgstr "Ajout du nouveau groupe « %s » (%s).\n"
+
+#: ../adduser:488
+#, fuzzy, perl-format
+msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgstr ""
+"Ajout du nouvel utilisateur « %s » (%s) avec le groupe\n"
+"« %s ».\n"
 
 #. hm, error, should we break now?
 #: ../adduser:512
@@ -309,8 +321,8 @@ msgstr "Création du répertoire personnel « %s ».\n"
 
 #: ../adduser:631
 #, fuzzy, perl-format
-msgid "Couldn't create %s: %s.\n"
-msgstr "Impossible d'analyser « %s » : %s.\n"
+msgid "Couldn't create home directory `%s': %s.\n"
+msgstr "Répertoire personnel « %s » non créé.\n"
 
 #: ../adduser:639
 #, fuzzy, perl-format
@@ -351,7 +363,7 @@ msgstr "L'identifiant de groupe %s n'existe pas.\n"
 #: ../adduser:777
 #, perl-format
 msgid ""
-"Can't deal with %s.\n"
+"Cannot deal with %s.\n"
 "It is not a dir, file, or symlink.\n"
 msgstr ""
 
@@ -746,9 +758,14 @@ msgstr ""
 "  --conf | -c FICHIER  utiliser FICHIER comme fichier de configuration\n"
 "\n"
 
+#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#, perl-format
+msgid "%s: %s"
+msgstr ""
+
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' doesn't exist. Using defaults.\n"
+msgid "%s: `%s' does not exist. Using defaults.\n"
 msgstr "%s : « %s » n'existe pas. Utilisation des valeurs par défaut.\n"
 
 #: ../AdduserCommon.pm:88
@@ -761,11 +778,6 @@ msgstr "Impossible d'analyser « %s » : %s.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Variable « %s » inconnue en « %s » : %s.\n"
 
-#: ../AdduserCommon.pm:158
-#, perl-format
-msgid "`%s' returned error code %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:160
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
@@ -773,8 +785,12 @@ msgstr ""
 
 #: ../AdduserCommon.pm:171
 #, fuzzy, perl-format
-msgid "Could not find program named %s in $PATH\n"
+msgid "Could not find program named `%s' in $PATH\n"
 msgstr "Aucun programme %s dans $PATH\n"
+
+#, fuzzy
+#~ msgid "Couldn't create %s: %s.\n"
+#~ msgstr "Impossible d'analyser « %s » : %s.\n"
 
 #~ msgid "Setting quota from `%s'.\n"
 #~ msgstr "Mise en place des quotas à partir de « %s ».\n"

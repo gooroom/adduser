@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:55+0000\n"
+"POT-Creation-Date: 2006-07-17 16:26+0000\n"
 "PO-Revision-Date: 2006-07-09 13:05+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
@@ -78,7 +78,7 @@ msgstr "Skupina '%s' nebyla vytvořena.\n"
 
 #: ../adduser:270
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%d) ...\n"
+msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Přidávám skupinu '%s' (%s)...\n"
 
 #: ../adduser:275 ../adduser:304 ../adduser:336 ../deluser:333 ../deluser:369
@@ -98,7 +98,7 @@ msgstr "Již není volné žádné GID z rozsahu %d-%d (FIRST_GID - LAST_GID).\n
 
 #: ../adduser:299
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%s) ...\n"
+msgid "Adding group `%s' (GID %s) ...\n"
 msgstr "Přidávám skupinu '%s' (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
@@ -157,27 +157,27 @@ msgstr "Vnitřní chyba"
 
 #: ../adduser:389
 #, fuzzy, perl-format
-msgid "Adding system user `%s' with UID %d ...\n"
+msgid "Adding system user `%s' (UID %d) ...\n"
 msgstr "Přidávám systémového uživatele '%s' s uid %s...\n"
 
-#: ../adduser:394 ../adduser:481
+#: ../adduser:394
 #, fuzzy, perl-format
-msgid "Adding new group `%s' (%d) ...\n"
+msgid "Adding new group `%s' (GID %d) ...\n"
 msgstr "Přidávám novou skupinu '%s' (%s).\n"
 
-#: ../adduser:401 ../adduser:488
+#: ../adduser:401
 #, fuzzy, perl-format
-msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "Přidávám nového uživatele '%s' (%s) se skupinou '%s'.\n"
 
-#: ../adduser:415
+#: ../adduser:415 ../AdduserCommon.pm:158
 #, perl-format
-msgid "%s: `%s' returned error code %d. Exiting.\n"
+msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:417
 #, perl-format
-msgid "%s: `%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %s. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -204,6 +204,16 @@ msgstr "Již není volný pár UID/GID z rozsahu %d-%d (FIRST_UID - LAST_UID).\n
 #, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Již není volné žádné UID z rozsahu %d-%d (FIRST_UID - LAST_UID).\n"
+
+#: ../adduser:481
+#, fuzzy, perl-format
+msgid "Adding new group `%s' (%d) ...\n"
+msgstr "Přidávám novou skupinu '%s' (%s).\n"
+
+#: ../adduser:488
+#, fuzzy, perl-format
+msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgstr "Přidávám nového uživatele '%s' (%s) se skupinou '%s'.\n"
 
 #. hm, error, should we break now?
 #: ../adduser:512
@@ -281,8 +291,8 @@ msgstr "Vytvářím domovský adresář '%s'.\n"
 
 #: ../adduser:631
 #, fuzzy, perl-format
-msgid "Couldn't create %s: %s.\n"
-msgstr "Nemohu zpracovat '%s':%s.\n"
+msgid "Couldn't create home directory `%s': %s.\n"
+msgstr "Nevytvářím domovský adresář '%s'.\n"
 
 #: ../adduser:639
 #, fuzzy, perl-format
@@ -322,7 +332,7 @@ msgstr "GID '%s' neexistuje.\n"
 #: ../adduser:777
 #, perl-format
 msgid ""
-"Can't deal with %s.\n"
+"Cannot deal with %s.\n"
 "It is not a dir, file, or symlink.\n"
 msgstr ""
 
@@ -703,9 +713,14 @@ msgstr ""
 "  --conf | -c SOUB  jako konfigurační soubor použije SOUB\n"
 "\n"
 
+#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#, perl-format
+msgid "%s: %s"
+msgstr ""
+
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' doesn't exist. Using defaults.\n"
+msgid "%s: `%s' does not exist. Using defaults.\n"
 msgstr "%s: '%s' neexistuje. Používám výchozí hodnoty.\n"
 
 #: ../AdduserCommon.pm:88
@@ -718,11 +733,6 @@ msgstr "Nemohu zpracovat '%s':%s.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Neznámá proměnná '%s' v '%s':%s.\n"
 
-#: ../AdduserCommon.pm:158
-#, perl-format
-msgid "`%s' returned error code %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:160
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
@@ -730,8 +740,12 @@ msgstr ""
 
 #: ../AdduserCommon.pm:171
 #, fuzzy, perl-format
-msgid "Could not find program named %s in $PATH\n"
+msgid "Could not find program named `%s' in $PATH\n"
 msgstr "V $PATH neexistuje program jménem %s\n"
+
+#, fuzzy
+#~ msgid "Couldn't create %s: %s.\n"
+#~ msgstr "Nemohu zpracovat '%s':%s.\n"
 
 #~ msgid "Setting quota from `%s'.\n"
 #~ msgstr "Nastavuji kvótu z '%s'.\n"

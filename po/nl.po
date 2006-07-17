@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.41\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:55+0000\n"
+"POT-Creation-Date: 2006-07-17 16:26+0000\n"
 "PO-Revision-Date: 2005-11-19 13:51+0100\n"
 "Last-Translator: Rob Snelders <programming@ertai.nl>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -80,7 +80,7 @@ msgstr "Groep `%s' is niet aangemaakt.\n"
 
 #: ../adduser:270
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%d) ...\n"
+msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Toevoegen groep `%s' (%s)...\n"
 
 #: ../adduser:275 ../adduser:304 ../adduser:336 ../deluser:333 ../deluser:369
@@ -100,7 +100,7 @@ msgstr "Geen GID is beschikbaar in het bereik %d-%d (FIRST_GID - LAST_GID).\n"
 
 #: ../adduser:299
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%s) ...\n"
+msgid "Adding group `%s' (GID %s) ...\n"
 msgstr "Toevoegen groep `%s' (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
@@ -160,27 +160,27 @@ msgstr "Interne fout"
 
 #: ../adduser:389
 #, fuzzy, perl-format
-msgid "Adding system user `%s' with UID %d ...\n"
+msgid "Adding system user `%s' (UID %d) ...\n"
 msgstr "Toevoegen systeemgebruiker `%s'...\n"
 
-#: ../adduser:394 ../adduser:481
+#: ../adduser:394
 #, fuzzy, perl-format
-msgid "Adding new group `%s' (%d) ...\n"
+msgid "Adding new group `%s' (GID %d) ...\n"
 msgstr "Toevoegen nieuwe groep `%s' (%s).\n"
 
-#: ../adduser:401 ../adduser:488
+#: ../adduser:401
 #, fuzzy, perl-format
-msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "Toevoegen nieuwe gebruiker `%s' (%s) in groep `%s'.\n"
 
-#: ../adduser:415
+#: ../adduser:415 ../AdduserCommon.pm:158
 #, perl-format
-msgid "%s: `%s' returned error code %d. Exiting.\n"
+msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:417
 #, perl-format
-msgid "%s: `%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %s. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -209,6 +209,16 @@ msgstr ""
 #, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Geen UID beschikbaar in het bereik %d-%d (FIRST_UID - LAST_UID).\n"
+
+#: ../adduser:481
+#, fuzzy, perl-format
+msgid "Adding new group `%s' (%d) ...\n"
+msgstr "Toevoegen nieuwe groep `%s' (%s).\n"
+
+#: ../adduser:488
+#, fuzzy, perl-format
+msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgstr "Toevoegen nieuwe gebruiker `%s' (%s) in groep `%s'.\n"
 
 #. hm, error, should we break now?
 #: ../adduser:512
@@ -285,8 +295,8 @@ msgstr "Aanmaken home directory `%s'.\n"
 
 #: ../adduser:631
 #, fuzzy, perl-format
-msgid "Couldn't create %s: %s.\n"
-msgstr "Kon `%s':%s niet verwerken.\n"
+msgid "Couldn't create home directory `%s': %s.\n"
+msgstr "maak home directory `%s' niet aan.\n"
 
 #: ../adduser:639
 #, fuzzy, perl-format
@@ -326,7 +336,7 @@ msgstr "De GID `%s' bestaat niet.\n"
 #: ../adduser:777
 #, perl-format
 msgid ""
-"Can't deal with %s.\n"
+"Cannot deal with %s.\n"
 "It is not a dir, file, or symlink.\n"
 msgstr ""
 
@@ -721,9 +731,14 @@ msgstr ""
 "  --conf | -c BESTAND  gebruik BESTAND als configuratie bestand\n"
 "\n"
 
+#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#, perl-format
+msgid "%s: %s"
+msgstr ""
+
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' doesn't exist. Using defaults.\n"
+msgid "%s: `%s' does not exist. Using defaults.\n"
 msgstr "%s: `%s' bestaat niet.  Standaardinstellingen worden gebruikt.\n"
 
 #: ../AdduserCommon.pm:88
@@ -736,11 +751,6 @@ msgstr "Kon `%s':%s niet verwerken.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Onbekende variabele `%s' in `%s':%s.\n"
 
-#: ../AdduserCommon.pm:158
-#, perl-format
-msgid "`%s' returned error code %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:160
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
@@ -748,8 +758,12 @@ msgstr ""
 
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named %s in $PATH\n"
+msgid "Could not find program named `%s' in $PATH\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Couldn't create %s: %s.\n"
+#~ msgstr "Kon `%s':%s niet verwerken.\n"
 
 #~ msgid "Setting quota from `%s'.\n"
 #~ msgstr "Instellen van quota van `%s'.\n"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:55+0000\n"
+"POT-Creation-Date: 2006-07-17 16:26+0000\n"
 "PO-Revision-Date: 2004-11-04 14:14+0100\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
@@ -80,7 +80,7 @@ msgstr "`%s' taldea ez da sortua izan.\n"
 
 #: ../adduser:270
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%d) ...\n"
+msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Taldea gehitzen: %s (%s)...\n"
 
 #: ../adduser:275 ../adduser:304 ../adduser:336 ../deluser:333 ../deluser:369
@@ -100,7 +100,7 @@ msgstr "Ez dago GID erabilgarririk bitartean "
 
 #: ../adduser:299
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%s) ...\n"
+msgid "Adding group `%s' (GID %s) ...\n"
 msgstr "Taldea gehitzen: %s (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
@@ -157,27 +157,27 @@ msgstr "Barne-errorea"
 
 #: ../adduser:389
 #, fuzzy, perl-format
-msgid "Adding system user `%s' with UID %d ...\n"
+msgid "Adding system user `%s' (UID %d) ...\n"
 msgstr "`%s' sistema erabiltzailea sortzen...\n"
 
-#: ../adduser:394 ../adduser:481
+#: ../adduser:394
 #, fuzzy, perl-format
-msgid "Adding new group `%s' (%d) ...\n"
+msgid "Adding new group `%s' (GID %d) ...\n"
 msgstr "%s (%s) talde berria gehitzen.\n"
 
-#: ../adduser:401 ../adduser:488
+#: ../adduser:401
 #, fuzzy, perl-format
-msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "%s (%s) erabiltzaile berria %s taldeaz geitzen.\n"
 
-#: ../adduser:415
+#: ../adduser:415 ../AdduserCommon.pm:158
 #, perl-format
-msgid "%s: `%s' returned error code %d. Exiting.\n"
+msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:417
 #, perl-format
-msgid "%s: `%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %s. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -202,6 +202,16 @@ msgstr "Ez dago UID/GID bikote erabilgarririk bitartean "
 #, fuzzy, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Ez dago UID erabilgarririk bitartean "
+
+#: ../adduser:481
+#, fuzzy, perl-format
+msgid "Adding new group `%s' (%d) ...\n"
+msgstr "%s (%s) talde berria gehitzen.\n"
+
+#: ../adduser:488
+#, fuzzy, perl-format
+msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgstr "%s (%s) erabiltzaile berria %s taldeaz geitzen.\n"
 
 #. hm, error, should we break now?
 #: ../adduser:512
@@ -275,8 +285,8 @@ msgstr "`%s' etxe karpeta sortzen.\n"
 
 #: ../adduser:631
 #, fuzzy, perl-format
-msgid "Couldn't create %s: %s.\n"
-msgstr "Ezin da %s analizatu: %s.\n"
+msgid "Couldn't create home directory `%s': %s.\n"
+msgstr "Ez da etxe karpeta sortuko.\n"
 
 #: ../adduser:639
 #, fuzzy, perl-format
@@ -316,7 +326,7 @@ msgstr "%s GID-a ez dago.\n"
 #: ../adduser:777
 #, perl-format
 msgid ""
-"Can't deal with %s.\n"
+"Cannot deal with %s.\n"
 "It is not a dir, file, or symlink.\n"
 msgstr ""
 
@@ -648,9 +658,14 @@ msgid ""
 "\n"
 msgstr ""
 
+#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#, perl-format
+msgid "%s: %s"
+msgstr ""
+
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' doesn't exist. Using defaults.\n"
+msgid "%s: `%s' does not exist. Using defaults.\n"
 msgstr "%s: %s ez dago.  lehenespenak erabiltzen.\n"
 
 #: ../AdduserCommon.pm:88
@@ -663,11 +678,6 @@ msgstr "Ezin da %s analizatu: %s.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "`%s' aldagai ezezaguna %s-en:%s.\n"
 
-#: ../AdduserCommon.pm:158
-#, perl-format
-msgid "`%s' returned error code %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:160
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
@@ -675,8 +685,12 @@ msgstr ""
 
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named %s in $PATH\n"
+msgid "Could not find program named `%s' in $PATH\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Couldn't create %s: %s.\n"
+#~ msgstr "Ezin da %s analizatu: %s.\n"
 
 #~ msgid "Setting quota from `%s'.\n"
 #~ msgstr "`%s'-tik quota ezartzen.\n"

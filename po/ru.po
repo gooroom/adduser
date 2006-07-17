@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser_3.77_ru\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:55+0000\n"
+"POT-Creation-Date: 2006-07-17 16:26+0000\n"
 "PO-Revision-Date: 2005-11-14 15:04+0300\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -84,7 +84,7 @@ msgstr "Группа `%s' не создана.\n"
 
 #: ../adduser:270
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%d) ...\n"
+msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Добавляется группа `%s' (%s)...\n"
 
 #: ../adduser:275 ../adduser:304 ../adduser:336 ../deluser:333 ../deluser:369
@@ -104,7 +104,7 @@ msgstr "Нет свободного GID в диапазоне %d-%d (FIRST_GID -
 
 #: ../adduser:299
 #, fuzzy, perl-format
-msgid "Adding group `%s' (%s) ...\n"
+msgid "Adding group `%s' (GID %s) ...\n"
 msgstr "Добавляется группа `%s' (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
@@ -165,27 +165,27 @@ msgstr "Внутренняя ошибка"
 
 #: ../adduser:389
 #, fuzzy, perl-format
-msgid "Adding system user `%s' with UID %d ...\n"
+msgid "Adding system user `%s' (UID %d) ...\n"
 msgstr "Добавляется пользователь `%s'...\n"
 
-#: ../adduser:394 ../adduser:481
+#: ../adduser:394
 #, fuzzy, perl-format
-msgid "Adding new group `%s' (%d) ...\n"
+msgid "Adding new group `%s' (GID %d) ...\n"
 msgstr "Добавляется новая группа `%s' (%s).\n"
 
-#: ../adduser:401 ../adduser:488
+#: ../adduser:401
 #, fuzzy, perl-format
-msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "Добавляется новый пользователь `%s' (%s) в группу `%s'.\n"
 
-#: ../adduser:415
+#: ../adduser:415 ../AdduserCommon.pm:158
 #, perl-format
-msgid "%s: `%s' returned error code %d. Exiting.\n"
+msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:417
 #, perl-format
-msgid "%s: `%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %s. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -212,6 +212,16 @@ msgstr "Нет свободной UID/GID пары в диапазоне %d-%d (
 #, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Нет свободного UID в диапазоне %d-%d (FIRST_UID - LAST_UID).\n"
+
+#: ../adduser:481
+#, fuzzy, perl-format
+msgid "Adding new group `%s' (%d) ...\n"
+msgstr "Добавляется новая группа `%s' (%s).\n"
+
+#: ../adduser:488
+#, fuzzy, perl-format
+msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgstr "Добавляется новый пользователь `%s' (%s) в группу `%s'.\n"
 
 #. hm, error, should we break now?
 #: ../adduser:512
@@ -288,8 +298,8 @@ msgstr "Создание домашнего каталога `%s'.\n"
 
 #: ../adduser:631
 #, fuzzy, perl-format
-msgid "Couldn't create %s: %s.\n"
-msgstr "Не удалось разобрать `%s':%s.\n"
+msgid "Couldn't create home directory `%s': %s.\n"
+msgstr "Не создаётся домашний каталог `%s'.\n"
 
 #: ../adduser:639
 #, fuzzy, perl-format
@@ -329,7 +339,7 @@ msgstr "GID `%s' не существует.\n"
 #: ../adduser:777
 #, perl-format
 msgid ""
-"Can't deal with %s.\n"
+"Cannot deal with %s.\n"
 "It is not a dir, file, or symlink.\n"
 msgstr ""
 
@@ -724,9 +734,14 @@ msgstr ""
 "  --conf | -c ФАЙЛ          использовать ФАЙЛ в качестве конфигурационного\n"
 "\n"
 
+#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#, perl-format
+msgid "%s: %s"
+msgstr ""
+
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' doesn't exist. Using defaults.\n"
+msgid "%s: `%s' does not exist. Using defaults.\n"
 msgstr "%s: `%s' не существует. Используются настройки по умолчанию.\n"
 
 #: ../AdduserCommon.pm:88
@@ -739,11 +754,6 @@ msgstr "Не удалось разобрать `%s':%s.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Неизвестная переменная `%s' в `%s':%s.\n"
 
-#: ../AdduserCommon.pm:158
-#, perl-format
-msgid "`%s' returned error code %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:160
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
@@ -751,8 +761,12 @@ msgstr ""
 
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named %s in $PATH\n"
+msgid "Could not find program named `%s' in $PATH\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Couldn't create %s: %s.\n"
+#~ msgstr "Не удалось разобрать `%s':%s.\n"
 
 #~ msgid "Setting quota from `%s'.\n"
 #~ msgstr "Настройка квот из `%s'.\n"

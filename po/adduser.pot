@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:55+0000\n"
+"POT-Creation-Date: 2006-07-17 16:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,7 +79,7 @@ msgstr ""
 
 #: ../adduser:270
 #, perl-format
-msgid "Adding group `%s' (%d) ...\n"
+msgid "Adding group `%s' (GID %d) ...\n"
 msgstr ""
 
 #: ../adduser:275 ../adduser:304 ../adduser:336 ../deluser:333 ../deluser:369
@@ -99,7 +99,7 @@ msgstr ""
 
 #: ../adduser:299
 #, perl-format
-msgid "Adding group `%s' (%s) ...\n"
+msgid "Adding group `%s' (GID %s) ...\n"
 msgstr ""
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
@@ -156,27 +156,27 @@ msgstr ""
 
 #: ../adduser:389
 #, perl-format
-msgid "Adding system user `%s' with UID %d ...\n"
+msgid "Adding system user `%s' (UID %d) ...\n"
 msgstr ""
 
-#: ../adduser:394 ../adduser:481
+#: ../adduser:394
 #, perl-format
-msgid "Adding new group `%s' (%d) ...\n"
+msgid "Adding new group `%s' (GID %d) ...\n"
 msgstr ""
 
-#: ../adduser:401 ../adduser:488
+#: ../adduser:401
 #, perl-format
-msgid "Adding new user `%s' (%d) with group `%s' ...\n"
+msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr ""
 
-#: ../adduser:415
+#: ../adduser:415 ../AdduserCommon.pm:158
 #, perl-format
-msgid "%s: `%s' returned error code %d. Exiting.\n"
+msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:417
 #, perl-format
-msgid "%s: `%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %s. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -200,6 +200,16 @@ msgstr ""
 #: ../adduser:465
 #, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr ""
+
+#: ../adduser:481
+#, perl-format
+msgid "Adding new group `%s' (%d) ...\n"
+msgstr ""
+
+#: ../adduser:488
+#, perl-format
+msgid "Adding new user `%s' (%d) with group `%s' ...\n"
 msgstr ""
 
 #. hm, error, should we break now?
@@ -274,7 +284,7 @@ msgstr ""
 
 #: ../adduser:631
 #, perl-format
-msgid "Couldn't create %s: %s.\n"
+msgid "Couldn't create home directory `%s': %s.\n"
 msgstr ""
 
 #: ../adduser:639
@@ -315,7 +325,7 @@ msgstr ""
 #: ../adduser:777
 #, perl-format
 msgid ""
-"Can't deal with %s.\n"
+"Cannot deal with %s.\n"
 "It is not a dir, file, or symlink.\n"
 msgstr ""
 
@@ -603,9 +613,14 @@ msgid ""
 "\n"
 msgstr ""
 
+#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#, perl-format
+msgid "%s: %s"
+msgstr ""
+
 #: ../AdduserCommon.pm:78
 #, perl-format
-msgid "%s: `%s' doesn't exist. Using defaults.\n"
+msgid "%s: `%s' does not exist. Using defaults.\n"
 msgstr ""
 
 #: ../AdduserCommon.pm:88
@@ -618,11 +633,6 @@ msgstr ""
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr ""
 
-#: ../AdduserCommon.pm:158
-#, perl-format
-msgid "`%s' returned error code %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:160
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
@@ -630,5 +640,5 @@ msgstr ""
 
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named %s in $PATH\n"
+msgid "Could not find program named `%s' in $PATH\n"
 msgstr ""
