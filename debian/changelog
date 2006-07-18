@@ -1,8 +1,9 @@
 adduser (3.95.0) UNRELEASED; urgency=low
 
-  * NOT RELEASED YET
+  * Update German (de) program translation.
+    Thanks to Tobias Toedter. Closes: #378658
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Jul 2006 05:38:44 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Jul 2006 12:22:08 +0200
 
 adduser (3.95) unstable; urgency=low
 
