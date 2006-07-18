@@ -296,7 +296,7 @@ if ($action eq "addgroup") {
         }
     }
 
-    printf (gtx("Adding group `%s' (GID %s) ...\n"),$new_name,$new_gid) if $verbose;
+    printf (gtx("Adding group `%s' (GID %d) ...\n"),$new_name,$new_gid) if $verbose;
     &invalidate_nscd("group");
     my $groupadd = &which('groupadd');
     &systemcall($groupadd, '-g', $new_gid, $new_name);
@@ -414,7 +414,7 @@ if ($action eq "addsysuser") {
 	if( ($?>>8) ne 15 ) {
 	    &cleanup(sprintf(gtx("`%s' returned error code %d. Exiting.\n"), "$chage -M 99999 $new_name", $?>>8))
 	      if ($?>>8);
-	    &cleanup(sprintf(gtx("`%s' exited from signal %s. Exiting.\n"), "$chage -M 99999 $new_name", $?&255));
+	    &cleanup(sprintf(gtx("`%s' exited from signal %d. Exiting.\n"), "$chage -M 99999 $new_name", $?&255));
 	} else {
 	    printf (gtx("%s failed with return code 15, shadow not enabled, password aging cannot be set. Continuing.\n"), $chage);
 	}

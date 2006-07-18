@@ -75,7 +75,7 @@ sub read_config {
     my ($var, $lcvar, $val);
 
     if (! -f $conf_file) {
-	warnf gtx("%s: `%s' does not exist. Using defaults.\n"),$conf_file if $verbose;
+	warnf gtx("`%s' does not exist. Using defaults.\n"),$conf_file if $verbose;
 	return;
     }
 
@@ -168,7 +168,7 @@ sub which {
             return "$dir/$progname";
         }
     }
-    dief(gtx("Could not find program named `%s' in \$PATH\n"), $progname) unless ($nonfatal);
+    dief(gtx("Could not find program named `%s' in \$PATH.\n"), $progname) unless ($nonfatal);
 }
 
 
