@@ -8,8 +8,10 @@ adduser (3.95.0) UNRELEASED; urgency=low
     Thanks to Erçin EKER. Closes: #378708
   * Update Korean (ko) debconf translation.
     Thanks to Sunjae Park. Closes: #378733
+  * Update Czech (cs) program translation.
+    Thanks to Miroslav Kure. (mh) Closes: #378766
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Jul 2006 18:42:22 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Jul 2006 23:14:31 +0200
 
 adduser (3.95) unstable; urgency=low
 
