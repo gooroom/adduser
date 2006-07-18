@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.57\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-17 16:26+0000\n"
+"POT-Creation-Date: 2006-07-18 05:34+0000\n"
 "PO-Revision-Date: 2004-07-26 17:25+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -77,7 +77,7 @@ msgstr "No hi ha cap GID disponible en el rang "
 msgid "The group `%s' was not created.\n"
 msgstr "No s'ha creat el grup «%s».\n"
 
-#: ../adduser:270
+#: ../adduser:270 ../adduser:299
 #, fuzzy, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "S'està afegint el grup %s (%s)...\n"
@@ -96,11 +96,6 @@ msgstr "El grup «%s» ja existeix.\n"
 #, fuzzy, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "No hi ha cap GID disponible en el rang "
-
-#: ../adduser:299
-#, fuzzy, perl-format
-msgid "Adding group `%s' (GID %s) ...\n"
-msgstr "S'està afegint el grup %s (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
 #, perl-format
@@ -176,9 +171,9 @@ msgstr "S'està afegint el nou usuari %s (%s) amb grup %s.\n"
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417
+#: ../adduser:417 ../AdduserCommon.pm:160
 #, perl-format
-msgid "`%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -670,7 +665,7 @@ msgstr ""
 
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' does not exist. Using defaults.\n"
+msgid "`%s' does not exist. Using defaults.\n"
 msgstr "%s: %s no existeix. S'utilitzaran els valors per defecte.\n"
 
 #: ../AdduserCommon.pm:88
@@ -683,15 +678,14 @@ msgstr "No s'ha pogut analitzar %s:%s.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "La variable «%s» en %s:%s és desconeguda.\n"
 
-#: ../AdduserCommon.pm:160
-#, perl-format
-msgid "`%s' exited from signal %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named `%s' in $PATH\n"
+msgid "Could not find program named `%s' in $PATH.\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Adding group `%s' (GID %s) ...\n"
+#~ msgstr "S'està afegint el grup %s (%s)...\n"
 
 #, fuzzy
 #~ msgid "Couldn't create %s: %s.\n"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.45\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-17 16:26+0000\n"
+"POT-Creation-Date: 2006-07-18 05:34+0000\n"
 "PO-Revision-Date: 2002-03-08 16:20+0900\n"
 "Last-Translator: Tomohiro KUBOTA <kubota@debian.org>\n"
 "Language-Team: Japanese <debian-doc@debian.or.jp>\n"
@@ -76,7 +76,7 @@ msgstr "この範囲では利用できる GID がありません :"
 msgid "The group `%s' was not created.\n"
 msgstr "`%s' グループは作成されませんでした。\n"
 
-#: ../adduser:270
+#: ../adduser:270 ../adduser:299
 #, fuzzy, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "グループ %s (%s) を追加しています…\n"
@@ -95,11 +95,6 @@ msgstr "グループ `%s' は既に存在しています。\n"
 #, fuzzy, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "この範囲では利用できる GID がありません :"
-
-#: ../adduser:299
-#, fuzzy, perl-format
-msgid "Adding group `%s' (GID %s) ...\n"
-msgstr "グループ %s (%s) を追加しています…\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
 #, perl-format
@@ -173,9 +168,9 @@ msgstr "グループ %s に新しいユーザ %s (%s) を追加しています。\n"
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417
+#: ../adduser:417 ../AdduserCommon.pm:160
 #, perl-format
-msgid "`%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -648,7 +643,7 @@ msgstr ""
 
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' does not exist. Using defaults.\n"
+msgid "`%s' does not exist. Using defaults.\n"
 msgstr "%s: %s が存在しません。デフォルトを使用します。\n"
 
 #: ../AdduserCommon.pm:88
@@ -661,15 +656,14 @@ msgstr "%s を分析できません:%s.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "不明な変数 `%s' が %s にあります:%s.\n"
 
-#: ../AdduserCommon.pm:160
-#, perl-format
-msgid "`%s' exited from signal %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named `%s' in $PATH\n"
+msgid "Could not find program named `%s' in $PATH.\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Adding group `%s' (GID %s) ...\n"
+#~ msgstr "グループ %s (%s) を追加しています…\n"
 
 #, fuzzy
 #~ msgid "Couldn't create %s: %s.\n"

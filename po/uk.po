@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk_uk\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-17 16:26+0000\n"
+"POT-Creation-Date: 2006-07-18 05:34+0000\n"
 "PO-Revision-Date: 2005-02-08 20:26+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -82,7 +82,7 @@ msgstr "Немає вільного GID на проміжку "
 msgid "The group `%s' was not created.\n"
 msgstr "Група \"%s\" не була створена.\n"
 
-#: ../adduser:270
+#: ../adduser:270 ../adduser:299
 #, fuzzy, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Додається група \"%s\" (%s)...\n"
@@ -101,11 +101,6 @@ msgstr "Група \"%s\" вже існує.\n"
 #, fuzzy, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "Немає вільного GID на проміжку "
-
-#: ../adduser:299
-#, fuzzy, perl-format
-msgid "Adding group `%s' (GID %s) ...\n"
-msgstr "Додається група \"%s\" (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
 #, perl-format
@@ -179,9 +174,9 @@ msgstr "Додається новий користувач \"%s\" (%s) з гру
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417
+#: ../adduser:417 ../AdduserCommon.pm:160
 #, perl-format
-msgid "`%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -662,7 +657,7 @@ msgstr ""
 
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' does not exist. Using defaults.\n"
+msgid "`%s' does not exist. Using defaults.\n"
 msgstr "\"%s\" не існує.\n"
 
 #: ../AdduserCommon.pm:88
@@ -675,15 +670,14 @@ msgstr ""
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Невідомий аргумент \"%s\".\n"
 
-#: ../AdduserCommon.pm:160
-#, perl-format
-msgid "`%s' exited from signal %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named `%s' in $PATH\n"
+msgid "Could not find program named `%s' in $PATH.\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Adding group `%s' (GID %s) ...\n"
+#~ msgstr "Додається група \"%s\" (%s)...\n"
 
 #~ msgid "Setting quota from `%s'.\n"
 #~ msgstr "Встановлюються обмеження із \"%s\".\n"

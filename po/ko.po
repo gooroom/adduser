@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.37\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-17 16:26+0000\n"
+"POT-Creation-Date: 2006-07-18 05:34+0000\n"
 "PO-Revision-Date: 2001-06-13 07:00+0900\n"
 "Last-Translator: Eungkyu Song <eungkyu@sparcs.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -79,7 +79,7 @@ msgstr "범위 내에 쓸 수 있는 GID가 없습니다 "
 msgid "The group `%s' was not created.\n"
 msgstr "`%s' 그룹이 만들어지지 않았습니다.\n"
 
-#: ../adduser:270
+#: ../adduser:270 ../adduser:299
 #, fuzzy, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "그룹 %s (%s) 추가...\n"
@@ -99,11 +99,6 @@ msgstr "`%s' 그룹은 이미 존재합니다.\n"
 #, fuzzy, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "범위 내에 쓸 수 있는 GID가 없습니다 "
-
-#: ../adduser:299
-#, fuzzy, perl-format
-msgid "Adding group `%s' (GID %s) ...\n"
-msgstr "그룹 %s (%s) 추가...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
 #, perl-format
@@ -179,9 +174,9 @@ msgstr "새로운 사용자 %s (%s) 을(를) 그룹 %s로(으로) 추가합니다.\n"
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417
+#: ../adduser:417 ../AdduserCommon.pm:160
 #, perl-format
-msgid "`%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -633,7 +628,7 @@ msgstr ""
 
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' does not exist. Using defaults.\n"
+msgid "`%s' does not exist. Using defaults.\n"
 msgstr "`%s'이(가) 없습니다.\n"
 
 #: ../AdduserCommon.pm:88
@@ -646,15 +641,14 @@ msgstr ""
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "알 수 없는 인자 `%s'.\n"
 
-#: ../AdduserCommon.pm:160
-#, perl-format
-msgid "`%s' exited from signal %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named `%s' in $PATH\n"
+msgid "Could not find program named `%s' in $PATH.\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Adding group `%s' (GID %s) ...\n"
+#~ msgstr "그룹 %s (%s) 추가...\n"
 
 #~ msgid "Setting quota from `%s'.\n"
 #~ msgstr "%s에서 디스크 제한을 설정합니다.\n"

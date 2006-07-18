@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-17 16:30+0000\n"
+"POT-Creation-Date: 2006-07-18 05:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,7 +77,7 @@ msgstr ""
 msgid "The group `%s' was not created.\n"
 msgstr ""
 
-#: ../adduser:270
+#: ../adduser:270 ../adduser:299
 #, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
 msgstr ""
@@ -95,11 +95,6 @@ msgstr ""
 #: ../adduser:294
 #, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
-msgstr ""
-
-#: ../adduser:299
-#, perl-format
-msgid "Adding group `%s' (GID %s) ...\n"
 msgstr ""
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
@@ -174,9 +169,9 @@ msgstr ""
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417
+#: ../adduser:417 ../AdduserCommon.pm:160
 #, perl-format
-msgid "`%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -620,7 +615,7 @@ msgstr ""
 
 #: ../AdduserCommon.pm:78
 #, perl-format
-msgid "%s: `%s' does not exist. Using defaults.\n"
+msgid "`%s' does not exist. Using defaults.\n"
 msgstr ""
 
 #: ../AdduserCommon.pm:88
@@ -633,12 +628,7 @@ msgstr ""
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr ""
 
-#: ../AdduserCommon.pm:160
-#, perl-format
-msgid "`%s' exited from signal %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named `%s' in $PATH\n"
+msgid "Could not find program named `%s' in $PATH.\n"
 msgstr ""

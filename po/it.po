@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser italian translation\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-17 16:26+0000\n"
+"POT-Creation-Date: 2006-07-18 05:34+0000\n"
 "PO-Revision-Date: 2006-06-02 12:16+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "The group `%s' was not created.\n"
 msgstr "Il grupppo «%s» non è stato creato.\n"
 
-#: ../adduser:270
+#: ../adduser:270 ../adduser:299
 #, fuzzy, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Aggiunta del gruppo «%s» (%s)...\n"
@@ -98,11 +98,6 @@ msgstr "Il gruppo «%s» già esiste.\n"
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr ""
 "Nessun GID è disponibile nell'intervallo %d-%d (FIRST_GID - LAST_GID).\n"
-
-#: ../adduser:299
-#, fuzzy, perl-format
-msgid "Adding group `%s' (GID %s) ...\n"
-msgstr "Aggiunta del gruppo «%s» (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
 #, perl-format
@@ -180,9 +175,9 @@ msgstr "Aggiunta del nuovo utente «%s» (%s) con gruppo «%s».\n"
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417
+#: ../adduser:417 ../AdduserCommon.pm:160
 #, perl-format
-msgid "`%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -730,7 +725,7 @@ msgstr ""
 
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' does not exist. Using defaults.\n"
+msgid "`%s' does not exist. Using defaults.\n"
 msgstr "%s: «%s» non esiste. Verranno usati i valori predefiniti.\n"
 
 #: ../AdduserCommon.pm:88
@@ -743,15 +738,14 @@ msgstr "Impossibile analizzare «%s»:%s.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Variabile «%s» sconosciuta a «%s»:%s.\n"
 
-#: ../AdduserCommon.pm:160
-#, perl-format
-msgid "`%s' exited from signal %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:171
 #, fuzzy, perl-format
-msgid "Could not find program named `%s' in $PATH\n"
+msgid "Could not find program named `%s' in $PATH.\n"
 msgstr "Nessun programma con nome %s in $PATH\n"
+
+#, fuzzy
+#~ msgid "Adding group `%s' (GID %s) ...\n"
+#~ msgstr "Aggiunta del gruppo «%s» (%s)...\n"
 
 #, fuzzy
 #~ msgid "Couldn't create %s: %s.\n"

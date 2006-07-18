@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser_3.77_ru\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-17 16:26+0000\n"
+"POT-Creation-Date: 2006-07-18 05:34+0000\n"
 "PO-Revision-Date: 2005-11-14 15:04+0300\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -82,7 +82,7 @@ msgstr "Нет свободного GID в диапазоне %d-%d (FIRST_SYS_G
 msgid "The group `%s' was not created.\n"
 msgstr "Группа `%s' не создана.\n"
 
-#: ../adduser:270
+#: ../adduser:270 ../adduser:299
 #, fuzzy, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Добавляется группа `%s' (%s)...\n"
@@ -101,11 +101,6 @@ msgstr "Группа `%s' уже существует.\n"
 #, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "Нет свободного GID в диапазоне %d-%d (FIRST_GID - LAST_GID).\n"
-
-#: ../adduser:299
-#, fuzzy, perl-format
-msgid "Adding group `%s' (GID %s) ...\n"
-msgstr "Добавляется группа `%s' (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
 #, perl-format
@@ -183,9 +178,9 @@ msgstr "Добавляется новый пользователь `%s' (%s) в 
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417
+#: ../adduser:417 ../AdduserCommon.pm:160
 #, perl-format
-msgid "`%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -741,7 +736,7 @@ msgstr ""
 
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' does not exist. Using defaults.\n"
+msgid "`%s' does not exist. Using defaults.\n"
 msgstr "%s: `%s' не существует. Используются настройки по умолчанию.\n"
 
 #: ../AdduserCommon.pm:88
@@ -754,15 +749,14 @@ msgstr "Не удалось разобрать `%s':%s.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Неизвестная переменная `%s' в `%s':%s.\n"
 
-#: ../AdduserCommon.pm:160
-#, perl-format
-msgid "`%s' exited from signal %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named `%s' in $PATH\n"
+msgid "Could not find program named `%s' in $PATH.\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Adding group `%s' (GID %s) ...\n"
+#~ msgstr "Добавляется группа `%s' (%s)...\n"
 
 #, fuzzy
 #~ msgid "Couldn't create %s: %s.\n"

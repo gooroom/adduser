@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.41\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-17 16:26+0000\n"
+"POT-Creation-Date: 2006-07-18 05:34+0000\n"
 "PO-Revision-Date: 2005-11-19 13:51+0100\n"
 "Last-Translator: Rob Snelders <programming@ertai.nl>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "The group `%s' was not created.\n"
 msgstr "Groep `%s' is niet aangemaakt.\n"
 
-#: ../adduser:270
+#: ../adduser:270 ../adduser:299
 #, fuzzy, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Toevoegen groep `%s' (%s)...\n"
@@ -97,11 +97,6 @@ msgstr "De groep `%s' bestaat reeds.\n"
 #, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "Geen GID is beschikbaar in het bereik %d-%d (FIRST_GID - LAST_GID).\n"
-
-#: ../adduser:299
-#, fuzzy, perl-format
-msgid "Adding group `%s' (GID %s) ...\n"
-msgstr "Toevoegen groep `%s' (%s)...\n"
 
 #: ../adduser:313 ../deluser:222 ../deluser:378
 #, perl-format
@@ -178,9 +173,9 @@ msgstr "Toevoegen nieuwe gebruiker `%s' (%s) in groep `%s'.\n"
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417
+#: ../adduser:417 ../AdduserCommon.pm:160
 #, perl-format
-msgid "`%s' exited from signal %s. Exiting.\n"
+msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
 
 #: ../adduser:419
@@ -738,7 +733,7 @@ msgstr ""
 
 #: ../AdduserCommon.pm:78
 #, fuzzy, perl-format
-msgid "%s: `%s' does not exist. Using defaults.\n"
+msgid "`%s' does not exist. Using defaults.\n"
 msgstr "%s: `%s' bestaat niet.  Standaardinstellingen worden gebruikt.\n"
 
 #: ../AdduserCommon.pm:88
@@ -751,15 +746,14 @@ msgstr "Kon `%s':%s niet verwerken.\n"
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Onbekende variabele `%s' in `%s':%s.\n"
 
-#: ../AdduserCommon.pm:160
-#, perl-format
-msgid "`%s' exited from signal %d. Exiting.\n"
-msgstr ""
-
 #: ../AdduserCommon.pm:171
 #, perl-format
-msgid "Could not find program named `%s' in $PATH\n"
+msgid "Could not find program named `%s' in $PATH.\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Adding group `%s' (GID %s) ...\n"
+#~ msgstr "Toevoegen groep `%s' (%s)...\n"
 
 #, fuzzy
 #~ msgid "Couldn't create %s: %s.\n"
