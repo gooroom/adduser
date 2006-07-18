@@ -2,16 +2,17 @@ adduser (3.95.0) UNRELEASED; urgency=low
 
   * Update German (de) program translation.
     Thanks to Tobias Toedter. Closes: #378658
-  * Update Swedish (sv) program translation.
-    Thanks to Daniel Nylander. Closes: #378692
+  * Update Swedish (sv) program and man page translation.
+    Thanks to Daniel Nylander. Closes: #378692, #378770
   * Update Turkish (tr) debconf translation.
     Thanks to Erçin EKER. Closes: #378708
   * Update Korean (ko) debconf translation.
     Thanks to Sunjae Park. Closes: #378733
   * Update Czech (cs) program translation.
     Thanks to Miroslav Kure. (mh) Closes: #378766
+  * 
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Jul 2006 23:14:31 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 18 Jul 2006 23:18:29 +0200
 
 adduser (3.95) unstable; urgency=low
 
