@@ -1,56 +1,38 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: adduser\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-07-19 00:46+0900\n"
+"Last-Translator: Sunjae Park <darehanl@gmail.com>\n"
+"Language-Team: Korean <debian-l10n-korean@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Korean\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:1001
 msgid "Do you want system wide readable home directories?"
-msgstr "È¨ µğ·ºÅä¸®¸¦ ½Ã½ºÅÛ ÀüÃ¼¿¡¼­ ÀĞÀ» ¼ö ÀÖµµ·Ï ÇÒ±î¿ä?"
+msgstr "í™ˆ ë””ë ‰í† ë¦¬ë¥¼ ì‹œìŠ¤í…œ ì „ì²´ì—ì„œ ì½ì„ ìˆ˜ ìˆë„ë¡ í• ê¹Œìš”?"
 
 #. Type: boolean
 #. Description
 #: ../templates:1001
-#, fuzzy
-msgid ""
-"Normally, home directories can be viewed by all users on the system. If you "
+msgid "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
-msgstr ""
-"º¸Åë, È¨ µğ·ºÅä¸®´Â ½Ã½ºÅÛÀÇ ¸ğµç »ç¿ëÀÚ°¡ º¼ ¼ö ÀÖ½À´Ï´Ù. ¸¸¾à ½Ã½ºÅÛÀÇ º¸"
-"¾È/»ç»ıÈ° º¸È£¸¦ Áõ°¡½ÃÅ°±æ ¿øÇÑ´Ù¸é, È¨ µğ·ºÅä¸®¸¦ ±× »ç¿ëÀÚ¸¸ º¼ ¼ö ÀÖµµ·Ï "
-"ÇÏ±â¸¦ ¿øÇÒ °ÍÀÔ´Ï´Ù. È®½ÇÇÏÁö ¾Ê´Ù¸é, ¿¹·Î ´ë´äÇØ¼­ ½Ã½ºÅÛ ÀüÃ¼¿¡¼­ È¨ µğ·º"
-"Åä¸®¸¦ ÀĞÀ» ¼ö ÀÖ°Ô ÇÏ¼¼¿ä."
+msgstr "í™ˆ ë””ë ‰í† ë¦¬ëŠ” ì‹œìŠ¤í…œì˜ ëª¨ë“  ì‚¬ìš©ìê°€ ë³¼ ìˆ˜ ìˆëŠ” ê²½ìš°ê°€ ë§ìŠµë‹ˆë‹¤. ì‹œìŠ¤í…œì˜ "
+"ë³´ì•ˆ ìˆ˜ì¤€ì´ë‚˜ ì‚¬ìƒí™œ ë³´í˜¸ ìˆ˜ì¤€ì„ ë†’ì´ê¸¸ ì›í•œë‹¤ë©´ í™ˆ ë””ë ‰í† ë¦¬ë¥¼ ê·¸ ì‚¬ìš©ìë§Œ ë³¼ ìˆ˜ "
+"ìˆë„ë¡ í•˜ê¸°ë¥¼ ì›í•  ê²ƒì…ë‹ˆë‹¤. í™•ì‹¤í•˜ì§€ ì•Šë‹¤ë©´ ì‹œìŠ¤í…œ ì „ì²´ì—ì„œ í™ˆ ë””ë ‰í† ë¦¬ë¥¼ ì½ì„ "
+"ìˆ˜ ìˆë„ë¡ í•˜ì‹­ì‹œì˜¤."
 
 #. Type: boolean
 #. Description
 #: ../templates:1001
-msgid ""
-"This will only affect home directories of users added with the adduser "
+msgid "This will only affect home directories of users added with the adduser "
 "program later."
-msgstr ""
-"ÀÌ°ÍÀº ´ÙÀ½¿¡ adduser ÇÁ·Î±×·¥À¸·Î Ãß°¡µÈ »ç¿ëÀÚÀÇ È¨ µğ·ºÅä¸®¿¡¸¸ ¿µÇâÀ» ÁÙ "
-"°ÍÀÔ´Ï´Ù."
+msgstr "ì´ ì„¤ì •ì€ ì¶”í›„ì— adduser í”„ë¡œê·¸ë¨ìœ¼ë¡œ ì¶”ê°€ëœ ì‚¬ìš©ìì˜ í™ˆ ë””ë ‰í† ë¦¬ì—ë§Œ "
+"ì˜í–¥ì„ ì¤ë‹ˆë‹¤."
+
