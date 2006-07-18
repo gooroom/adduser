@@ -1,14 +1,14 @@
 # Turkish translation of adduser.
 # This file is distributed under the same license as the adduser package.
-# Erçin EKER <erc.caldera@gmx.net>, 2004.
+# Erçin EKER <erc.caldera@gmx.net>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
 "POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2004-03-21 03:21+0200\n"
-"Last-Translator: Erçin EKER <erc.caldera@gmx.net>\n"
+"PO-Revision-Date: 2006-07-18 16:54+0300\n"
+"Last-Translator: Erçin EKER <ercin.eker@linux.org.tr>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,18 +25,17 @@ msgstr "Ev dizinlerinin herkes tarafından okunabilmesini ister misiniz?"
 #. Type: boolean
 #. Description
 #: ../templates:1001
-#, fuzzy
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
 msgstr ""
-"Normalde, ev dizinleri sistemdeki tüm kullanıcılar tarafından "
-"görüntülenebilir. Eğer sisteminizin güvenliğini/gizliliğini artırmak "
-"istiyorsanız, ev dizinlerinin sadece ilgili kullanıcılar tarafından "
-"okunabilmesini isteyebilirsiniz. Şayet emin değilseniz, evet diyerek ev "
-"dizinlerinin herkes tarafından okunabilir olmasını sağlayın."
+"Normalde, ev dizinleri sistemdeki tüm kullanıcılar tarafından görüntülenebilir. "
+"Eğer sisteminizin güvenliğini/gizliliğini artırmak istiyorsanız, ev dizinlerinin "
+"sadece ilgili kullanıcılar tarafından okunabilmesini isteyebilirsiniz. Şayet "
+"emin değilseniz, evet diyerek ev dizinlerinin herkes tarafından okunabilir "
+"olmasını sağlayın."
 
 #. Type: boolean
 #. Description
@@ -45,5 +44,5 @@ msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
 msgstr ""
-"Bu sadece daha sonra adduser ile eklenen kullanıcıların ev dizinlerini "
+"Bu sadece adduser ile daha sonra eklenen kullanıcıların ev dizinlerini "
 "etkileyecektir."
