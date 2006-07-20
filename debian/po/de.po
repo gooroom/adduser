@@ -1,3 +1,6 @@
+# German translation of adduser templates
+# This file is distributed under the same license as the adduser package.
+#
 # Translators, if you are not familiar with the PO format, gettext
 # documentation is worth reading, especially sections dedicated to
 # this format, e.g. by running:
@@ -7,48 +10,52 @@
 # /usr/share/doc/po-debconf/README-trans
 # or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Developers do not need to manually edit POT or PO files.
-# , fuzzy
-# 
-# 
+#
+# Copyright (C)
+#   Daniel Knabl <daniel@knabl.com>, 2005.
+#   Tobias Toedter <t.toedter@gmx.net>, 2006.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: adduser 3.95\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2005-09-02 01:19+0200\n"
-"Last-Translator: Daniel Knabl <daniel@knabl.com>\n"
-"Language-Team: German <gnome-de@gnome.org>\n"
+"POT-Creation-Date: 2006-06-27 19:38+0000\n"
+"PO-Revision-Date: 2006-07-18 08:46+0200\n"
+"Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:1001
 msgid "Do you want system wide readable home directories?"
-msgstr "Wünschen Sie systemweit lesbare Heimatverzeichnisse?"
+msgstr "Wünschen Sie systemweit lesbare Home-Verzeichnisse?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:1002
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
 msgstr ""
-"Für gewöhnlich können die Heimatverzeichnisse von allen Benutzern eines "
-"Systems eingesehen werden. Falls Sie die Sicherheit/Privatsphäre erhöhen "
-"wollen, möchten Sie wahrscheinlich, dass die Heimatverzeichnisse nur vom "
-"jeweiligen Besitzer eingesehen werden können. Falls SIe sich nicht sicher "
-"sind, wählen Sie systemweit lesbare Heimatverzeichnisse."
+"Für gewöhnlich können die Home-Verzeichnisse von allen Benutzern eines "
+"Systems eingesehen werden. Falls Sie die Sicherheit/Privatsphäre Ihres "
+"Systems erhöhen wollen, sollten Sie einstellen, dass die Home-Verzeichnisse "
+"nur vom jeweiligen Besitzer eingesehen werden können. Falls Sie sich nicht "
+"sicher sind, wählen Sie systemweit lesbare Home-Verzeichnisse."
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:1003
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
 msgstr ""
-"Das wird lediglich die Heimatverzeichnisse von Benutzern betreffen, die "
-"später mit dem Programm \"adduser\" hinzugefügt werden."
+"Dies wird lediglich die Home-Verzeichnisse von Benutzern betreffen, die "
+"später mit dem Programm »adduser« hinzugefügt werden."
