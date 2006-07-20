@@ -12,8 +12,10 @@ adduser (3.95.0) UNRELEASED; urgency=low
     Thanks to Miroslav Kure. Closes: #378766
   * Updated Ukrainian program translation. Thanks to
     Eugeniy Meshcheryakov. Closes: #378805
+  * Updated Norwegian Bokmal program translations.
+    Thanks to Hans Fredrik Nordhaug. Closes: #378969
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 19 Jul 2006 07:17:22 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 20 Jul 2006 09:41:33 +0200
 
 adduser (3.95) unstable; urgency=low
 
