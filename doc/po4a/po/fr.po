@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2006-07-01 16:17+0200\n"
+"PO-Revision-Date: 2006-07-23 11:17+0200\n"
 "Last-Translator: Nicolas François <nicolas.francois@centraliens.net>\n"
 "Language-Team: Debian French Team <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -192,7 +192,7 @@ msgid ""
 "the commandline."
 msgstr ""
 "Par défaut, chaque utilisateur d'un système Debian GNU/Linux se voit "
-"attribué un groupe avec son propre nom. Les groupes d'utilisateurs "
+"attribuer un groupe avec son propre nom. Les groupes d'utilisateurs "
 "facilitent la gestion des répertoires qui sont accessibles en écriture pour "
 "un groupe : les utilisateurs appropriés sont placés dans le nouveau groupe, "
 "le bit SGID du répertoire est positionné, et on s'assure que tous les "
@@ -289,8 +289,8 @@ msgid ""
 "(The same applies to the variable DEBUG, but DEBUG is deprecated and will be "
 "removed in a later version of adduser.)"
 msgstr ""
-"(Ceci s'applique également à la variable DEBUG, mais DEBUG est dépréciée et "
-"sera supprimée dans une version ultérieure d'adduser)."
+"(Ceci s'applique également à la variable DEBUG, mais DEBUG est déconseillée "
+"et sera supprimée dans une version ultérieure d'adduser)."
 
 # type: SS
 #: ../adduser.8:125
@@ -1035,9 +1035,9 @@ msgstr ""
 
 # type: TP
 #: ../adduser.conf.5:119
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ADD_EXTRA_GROUPS>"
-msgstr "B<USERGROUPS>"
+msgstr "B<ADD_EXTRA_GROUPS>"
 
 # type: Plain text
 #: ../adduser.conf.5:124
@@ -1046,12 +1046,15 @@ msgid ""
 "add newly created non-system users to the list of groups defined by "
 "EXTRA_GROUPS (below)."
 msgstr ""
+"Avec une valeur autre que 0 (la valeur par défaut), les nouveaux groupes non-"
+"système créés par adduser seront ajoutés aux groupes de la liste définie par "
+"EXTRA_GROUPS (voir ci-dessous)."
 
 # type: TP
 #: ../adduser.conf.5:124
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<EXTRA_GROUPS>"
-msgstr "B<USERGROUPS>"
+msgstr "B<EXTRA_GROUPS>"
 
 # type: Plain text
 #: ../adduser.conf.5:128
@@ -1059,6 +1062,8 @@ msgid ""
 "This is the list of groups that new non-system users will be added to.  By "
 "default, this list is 'dialout cdrom floppy audio src video lp users'"
 msgstr ""
+"La liste des groupes auxquels seront ajoutés les utilisateurs non-système. "
+"Par défaut, la liste est « dialout cdrom floppy audio src video lp users »."
 
 # type: Plain text
 #: ../adduser.conf.5:130
