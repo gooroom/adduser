@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: adduser manpages italian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2006-06-02 12:17+0200\n"
+"PO-Revision-Date: 2006-07-19 19:39+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -142,7 +142,7 @@ msgstr ""
 #: ../adduser.8:43
 #, no-wrap
 msgid "Add a normal user"
-msgstr "Aggiunta un utente normale"
+msgstr "Aggiunta di un utente normale"
 
 # type: Plain text
 #: ../adduser.8:47
@@ -292,7 +292,7 @@ msgstr ""
 #: ../adduser.8:125
 #, no-wrap
 msgid "Add a system user"
-msgstr "Aggiunta un utente di sistema"
+msgstr "Aggiunta di un utente di sistema"
 
 # type: Plain text
 #: ../adduser.8:131
@@ -305,8 +305,8 @@ msgstr ""
 "Se eseguito con un solo argomento e con l'opzione B<--system>, B<adduser> "
 "aggiunge un utente di sistema. Se già esiste un utente con lo stesso nome "
 "nell'intervallo degli UID di sistema (oppure, se è specificato lo UID, se "
-"già esiste un utente con lo stesso UID), adduser esce con un messaggio "
-"d'avviso."
+"già esiste un utente con lo stesso UID), adduser esce mostrando un "
+"messaggio d'avviso."
 
 # type: Plain text
 #: ../adduser.8:137
@@ -349,7 +349,7 @@ msgstr ""
 #: ../adduser.8:155
 #, no-wrap
 msgid "Add a user group"
-msgstr "Aggiunta un gruppo"
+msgstr "Aggiunta di un gruppo"
 
 # type: Plain text
 #: ../adduser.8:160
@@ -380,7 +380,7 @@ msgstr "Il gruppo viene creato senza nessun utente al suo interno."
 #: ../adduser.8:167
 #, no-wrap
 msgid "Add a system group"
-msgstr "Aggiunta un gruppo di sistema"
+msgstr "Aggiunta di un gruppo di sistema"
 
 # type: Plain text
 #: ../adduser.8:171
@@ -405,7 +405,7 @@ msgstr ""
 #: ../adduser.8:178
 #, no-wrap
 msgid "Add an existing user to an existing group"
-msgstr "Aggiunta un utente esistente a un gruppo esistente"
+msgstr "Aggiunta di un utente esistente a un gruppo esistente"
 
 # type: Plain text
 #: ../adduser.8:182
@@ -1024,9 +1024,9 @@ msgstr ""
 
 # type: TP
 #: ../adduser.conf.5:119
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ADD_EXTRA_GROUPS>"
-msgstr "B<USERGROUPS>"
+msgstr "B<ADD_EXTRA_GROUPS>"
 
 # type: Plain text
 #: ../adduser.conf.5:124
@@ -1035,12 +1035,14 @@ msgid ""
 "add newly created non-system users to the list of groups defined by "
 "EXTRA_GROUPS (below)."
 msgstr ""
+"Se impostato con un valore diverso da 0 (il valore predefinito) adduser "
+"aggiunge i nuovi utenti normali ai gruppi definiti in EXTRA_GROUPS."
 
 # type: TP
 #: ../adduser.conf.5:124
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<EXTRA_GROUPS>"
-msgstr "B<USERGROUPS>"
+msgstr "B<EXTRA_GROUPS>"
 
 # type: Plain text
 #: ../adduser.conf.5:128
@@ -1048,6 +1050,9 @@ msgid ""
 "This is the list of groups that new non-system users will be added to.  By "
 "default, this list is 'dialout cdrom floppy audio src video lp users'"
 msgstr ""
+"Elenco dei gruppi a cui vengono aggiunti gli utenti normali al momento "
+"della loro creazione. Il valore predefinito è \"dialout cdrom floppy audio "
+"src video lp users\"."
 
 # type: Plain text
 #: ../adduser.conf.5:130
@@ -1126,7 +1131,6 @@ msgstr "Rimozione di un utente normale"
 
 # type: Plain text
 #: ../deluser.8:41
-#, fuzzy
 msgid ""
 "If called with one non-option argument and without the B<--group> option, "
 "B<deluser> will remove a normal user."
@@ -1374,7 +1378,6 @@ msgstr "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
 
 # type: Plain text
 #: ../deluser.8:155
-#, fuzzy
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
 "and Joerg Hoh.  This manpage and the deluser program are based on adduser "

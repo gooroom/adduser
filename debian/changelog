@@ -18,8 +18,10 @@ adduser (3.95.0) UNRELEASED; urgency=low
     Thanks to Yuri Kozlov. Closes: #378748
   * Update Brazilian Portuguese (pt_BR) manpage translation. Thanks to
     Felipe Augusto van de Wiel.
+  * Update Italian (it) program and manpage translations.
+    Thanks to Luca Monducci. Closes: #379165
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 23 Jul 2006 14:32:23 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 23 Jul 2006 15:12:22 +0200
 
 adduser (3.95) unstable; urgency=low
 
