@@ -22,8 +22,10 @@ adduser (3.95.0) UNRELEASED; urgency=low
     Thanks to Luca Monducci. Closes: #379165
   * Update French (fr) manpage translation.
     Thanks to Nicolas François. Closes: #379394
+  * Update Romanian (ro) debconf translation.
+    Thanks to Eddy Petrişor. Closes: #378788
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 23 Jul 2006 15:34:01 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 24 Jul 2006 15:13:44 +0200
 
 adduser (3.95) unstable; urgency=low
 
