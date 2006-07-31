@@ -1,4 +1,4 @@
-adduser (3.95.0) UNRELEASED; urgency=low
+adduser (3.96) unstable; urgency=low
 
   * Update German (de) program and debconf translation.
     Thanks to Tobias Toedter. Closes: #378658, #378661
@@ -27,7 +27,7 @@ adduser (3.95.0) UNRELEASED; urgency=low
   * Update Romanian (ro) debconf translation.
     Thanks to Eddy Petrişor. Closes: #378788
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 27 Jul 2006 12:03:00 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 31 Jul 2006 06:58:21 +0000
 
 adduser (3.95) unstable; urgency=low
 
