@@ -5,7 +5,7 @@
 # Licensed under the same terms of adduser
 # 
 msgid ""
-msgstr "pt_BR utf-8\n"
+msgstr ""
 "Project-Id-Version: adduser VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-16 21:56+0000\n"
@@ -15,6 +15,7 @@ msgstr "pt_BR utf-8\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"pt_BR utf-8\n"
 
 # type: TH
 #: ../adduser.8:9
@@ -111,7 +112,8 @@ msgstr "OPÇÕES COMUNS"
 msgid ""
 "[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
 msgstr ""
-"[--quiet] [--debug] [--force-badname] [--help]|-h [--version] [--conf ARQUIVO]"
+"[--quiet] [--debug] [--force-badname] [--help]|-h [--version] [--conf "
+"ARQUIVO]"
 
 # type: SH
 #: ../adduser.8:29 ../adduser.conf.5:12 ../deluser.8:23 ../deluser.conf.5:12
@@ -197,7 +199,7 @@ msgstr ""
 "umask de 002. Se esta opção for desligada configurando o B<USERGROUPS> para "
 "I<no>, todos os GIDs dos usuários serão configurados para B<USERS_GID>.  "
 "Grupos de usuários também podem ser sobrescritos a partir da linha de "
-"comando com as opções B<--gid> ou B<--"ingroup> para configurar o grupo por "
+"comando com as opções B<--gid> ou B<--ingroup> para configurar o grupo por "
 "id ou nome, respectivamente.  Além disso, usuários podem ser adicionados em "
 "um ou mais grupos definidos no adduser.conf tanto definindo ADD_EXTRA_GROUPS "
 "para 1 no adduser.conf, como passando --add_extra_groups na linha de comando."
@@ -232,8 +234,8 @@ msgstr ""
 "perguntar informações para o finger (gecos) e uma senha. O gecos também pode "
 "ser configurado com a opção B<--gecos>.  Com a opção B<--disabled-login>, a "
 "conta será criada mas é desativada até que uma senha seja definida. A opção "
-"B<--disabled-password> não configura uma senha, mas o login ainda é "
-"possível (por exemplo através de chaves SSH RSA)."
+"B<--disabled-password> não configura uma senha, mas o login ainda é possível "
+"(por exemplo através de chaves SSH RSA)."
 
 # type: Plain text
 #: ../adduser.8:112
@@ -299,10 +301,10 @@ msgid ""
 "exists in the system uid range (or, if the uid is specified, if a user with "
 "that uid already exists), adduser will exit with a warning."
 msgstr ""
-"Se chamado com um argumento não-opção e a opção B<--system>, "
-"B<adduser> irá adicionar um usuário de sistema. Se um usuário com o mesmo "
-"nome já existir na faixa de uid do sistema (ou, se o uid foi especificado, "
-"se um usuário com este uid já existir), adduser sairá com um aviso."
+"Se chamado com um argumento não-opção e a opção B<--system>, B<adduser> irá "
+"adicionar um usuário de sistema. Se um usuário com o mesmo nome já existir "
+"na faixa de uid do sistema (ou, se o uid foi especificado, se um usuário com "
+"este uid já existir), adduser sairá com um aviso."
 
 # type: Plain text
 #: ../adduser.8:137
@@ -1131,8 +1133,8 @@ msgid ""
 "If called with one non-option argument and without the B<--group> option, "
 "B<deluser> will remove a normal user."
 msgstr ""
-"Se chamado com um argumento não-opção e sem a opção B<--group>, "
-"B<deluser> irá remover um usuário normal."
+"Se chamado com um argumento não-opção e sem a opção B<--group>, B<deluser> "
+"irá remover um usuário normal."
 
 # type: Plain text
 #: ../deluser.8:49
@@ -1142,10 +1144,10 @@ msgid ""
 "user. Removing the home directory and mail spool can be achieved using the "
 "B<--remove-home> option."
 msgstr ""
-"Por padrão, B<deluser> irá remover o usuário sem remover o diretório "
-"\"home\", a fila (\"spool\") de e-mail ou qualquer outro arquivo no sistema "
-"pertencente ao usuário. A remoção do diretório \"home\" e da fila "
-"(\"spool\") de e-mail pode ser obtida usando a opção B<--remove-home>."
+"Por padrão, B<deluser> irá remover o usuário sem remover o diretório \"home"
+"\", a fila (\"spool\") de e-mail ou qualquer outro arquivo no sistema "
+"pertencente ao usuário. A remoção do diretório \"home\" e da fila (\"spool"
+"\") de e-mail pode ser obtida usando a opção B<--remove-home>."
 
 # type: Plain text
 #: ../deluser.8:59
@@ -1185,8 +1187,8 @@ msgid ""
 "The arguments passed to B<deluser.local> are:"
 msgstr ""
 "Se o arquivo B</usr/local/sbin/deluser.local> existe, ele será executado "
-"após a conta do usuário ser removida para fazer qualquer limpeza local. "
-"Os argumentos passados para B<deluser.local> são:"
+"após a conta do usuário ser removida para fazer qualquer limpeza local. Os "
+"argumentos passados para B<deluser.local> são:"
 
 # type: SS
 #: ../deluser.8:80
@@ -1291,8 +1293,9 @@ msgstr "B<1>"
 # type: Plain text
 #: ../deluser.8:127
 msgid "The user to delete was not a system account. No action was performed."
-msgstr "O usuário a ser removido não era uma conta de sistema. Nenhuma ação "
-"foi realizada."
+msgstr ""
+"O usuário a ser removido não era uma conta de sistema. Nenhuma ação foi "
+"realizada."
 
 # type: TP
 #: ../deluser.8:127
@@ -1378,8 +1381,8 @@ msgid ""
 "which is:"
 msgstr ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
-"and Joerg Hoh.  Essa página de manual e o programa deluser foram baseados "
-"no adduser que é:"
+"and Joerg Hoh.  Essa página de manual e o programa deluser foram baseados no "
+"adduser que é:"
 
 # type: Plain text
 #: ../deluser.8:157
@@ -1547,8 +1550,8 @@ msgid ""
 "sysfs|usbfs|devpts|tmpfs)\"."
 msgstr ""
 "A expressão regular que descreve todos os sistemas de arquivos que devem ser "
-"excluídos quando procurando por arquivos do usuários para serem removidos. "
-"O padrão é \"(proc|sysfs|usbfs|devpt|tmpfs)\"."
+"excluídos quando procurando por arquivos do usuários para serem removidos. O "
+"padrão é \"(proc|sysfs|usbfs|devpt|tmpfs)\"."
 
 # type: Plain text
 #: ../deluser.conf.5:73
