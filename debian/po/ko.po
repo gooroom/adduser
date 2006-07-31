@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
-"POT-Creation-Date: \n"
+"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
+"POT-Creation-Date: 2006-07-16 21:56+0000\n"
 "PO-Revision-Date: 2006-07-19 00:46+0900\n"
 "Last-Translator: Sunjae Park <darehanl@gmail.com>\n"
 "Language-Team: Korean <debian-l10n-korean@lists.debian.org>\n"
@@ -19,20 +20,23 @@ msgstr "홈 디렉토리를 시스템 전체에서 읽을 수 있도록 할까�
 #. Type: boolean
 #. Description
 #: ../templates:1001
-msgid "Normally, home directories can be viewed by all users on the system. If you "
+msgid ""
+"Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
-msgstr "홈 디렉토리는 시스템의 모든 사용자가 볼 수 있는 경우가 많습니다. 시스템의 "
-"보안 수준이나 사생활 보호 수준을 높이길 원한다면 홈 디렉토리를 그 사용자만 볼 수 "
-"있도록 하기를 원할 것입니다. 확실하지 않다면 시스템 전체에서 홈 디렉토리를 읽을 "
-"수 있도록 하십시오."
+msgstr ""
+"홈 디렉토리는 시스템의 모든 사용자가 볼 수 있는 경우가 많습니다. 시스템의 보"
+"안 수준이나 사생활 보호 수준을 높이길 원한다면 홈 디렉토리를 그 사용자만 볼 "
+"수 있도록 하기를 원할 것입니다. 확실하지 않다면 시스템 전체에서 홈 디렉토리"
+"를 읽을 수 있도록 하십시오."
 
 #. Type: boolean
 #. Description
 #: ../templates:1001
-msgid "This will only affect home directories of users added with the adduser "
+msgid ""
+"This will only affect home directories of users added with the adduser "
 "program later."
-msgstr "이 설정은 추후에 adduser 프로그램으로 추가된 사용자의 홈 디렉토리에만 "
-"영향을 줍니다."
-
+msgstr ""
+"이 설정은 추후에 adduser 프로그램으로 추가된 사용자의 홈 디렉토리에만 영향을 "
+"줍니다."

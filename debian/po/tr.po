@@ -1,7 +1,7 @@
 # Turkish translation of adduser.
 # This file is distributed under the same license as the adduser package.
 # Erçin EKER <erc.caldera@gmx.net>, 2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
@@ -31,11 +31,11 @@ msgid ""
 "home directories only readable by the user. If you are unsure, enable system "
 "wide readable home directories."
 msgstr ""
-"Normalde, ev dizinleri sistemdeki tüm kullanıcılar tarafından görüntülenebilir. "
-"Eğer sisteminizin güvenliğini/gizliliğini artırmak istiyorsanız, ev dizinlerinin "
-"sadece ilgili kullanıcılar tarafından okunabilmesini isteyebilirsiniz. Şayet "
-"emin değilseniz, evet diyerek ev dizinlerinin herkes tarafından okunabilir "
-"olmasını sağlayın."
+"Normalde, ev dizinleri sistemdeki tüm kullanıcılar tarafından "
+"görüntülenebilir. Eğer sisteminizin güvenliğini/gizliliğini artırmak "
+"istiyorsanız, ev dizinlerinin sadece ilgili kullanıcılar tarafından "
+"okunabilmesini isteyebilirsiniz. Şayet emin değilseniz, evet diyerek ev "
+"dizinlerinin herkes tarafından okunabilir olmasını sağlayın."
 
 #. Type: boolean
 #. Description

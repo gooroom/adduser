@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.95\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-06-27 19:38+0000\n"
+"POT-Creation-Date: 2006-07-16 21:56+0000\n"
 "PO-Revision-Date: 2006-07-18 08:46+0200\n"
 "Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -37,7 +37,7 @@ msgstr "Wünschen Sie systemweit lesbare Home-Verzeichnisse?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1002
+#: ../templates:1001
 msgid ""
 "Normally, home directories can be viewed by all users on the system. If you "
 "want to increase the security/privacy on your system, you might want your "
@@ -52,7 +52,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:1003
+#: ../templates:1001
 msgid ""
 "This will only affect home directories of users added with the adduser "
 "program later."
