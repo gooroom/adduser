@@ -20,8 +20,12 @@ sub invalidate_nscd {
     } elsif(-f "/etc/init.d/nis") {
         $nisconfig = "/etc/init.d/nis";
     }
+    # find out whether a local ypserv is running
+    # We can ditch any rpcinfo error since if the portmapper is nonfunctional,
+    # we couldn't connect to ypserv anyway. If this assumption is invalid,
+    # please file a bug and suggest a better way.
     if(defined($nisconfig) && -f "/var/yp/Makefile" &&
-        -x "/usr/bin/rpcinfo" && grep(/ypserv/, qx{/usr/bin/rpcinfo -p})) {
+        -x "/usr/bin/rpcinfo" && grep(/ypserv/, qx{/usr/bin/rpcinfo -p 2>/dev/null})) {
 	open(NISCONFIG, "<$nisconfig");
 	if(grep(/^NISSERVER=master/, <NISCONFIG>)) {
             system("make", "-C", "/var/yp");
