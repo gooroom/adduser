@@ -1,10 +1,14 @@
 adduser (3.96.0) UNRELEASED; urgency=low
 
+  [ Marc Haber ]
   * NOT RELEASED YET
   * Don't show rpcinfo -p errors to the user.
     Thanks to Michael Prokop. Closes: #381923
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue,  8 Aug 2006 09:07:58 +0000
+  [ Stephen Gran ]
+  * Merge multiple EXTRA_GROUPS comments into one (closes: #382251)
+
+ -- Stephen Gran <sgran@debian.org>  Wed,  9 Aug 2006 20:10:26 +0100
 
 adduser (3.96) unstable; urgency=low
 
