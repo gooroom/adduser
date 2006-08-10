@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: adduser italian translation\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
 "POT-Creation-Date: 2006-07-18 05:34+0000\n"
-"PO-Revision-Date: 2006-07-19 19:38+0200\n"
+"PO-Revision-Date: 2006-08-10 13:20+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -746,7 +746,7 @@ msgstr "Variabile «%s» sconosciuta in «%s», riga %d.\n"
 #: ../AdduserCommon.pm:171
 #, perl-format
 msgid "Could not find program named `%s' in $PATH.\n"
-msgstr "Nessun programma con nome %s in $PATH\n"
+msgstr "Nessun programma con nome «%s» in $PATH\n"
 
 #, fuzzy
 #~ msgid "Adding group `%s' (GID %s) ...\n"
