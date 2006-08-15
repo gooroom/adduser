@@ -1,7 +1,6 @@
-adduser (3.96.0) UNRELEASED; urgency=low
+adduser (3.97) unstable; urgency=low
 
   [ Marc Haber ]
-  * NOT RELEASED YET
   * Don't show rpcinfo -p errors to the user.
     Thanks to Michael Prokop. Closes: #381923
   * Fix a typo in Italian (it) program translation.
@@ -10,7 +9,7 @@ adduser (3.96.0) UNRELEASED; urgency=low
   [ Stephen Gran ]
   * Merge multiple EXTRA_GROUPS comments into one (closes: #382251)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 11 Aug 2006 00:46:37 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 15 Aug 2006 19:33:21 +0000
 
 adduser (3.96) unstable; urgency=low
 
