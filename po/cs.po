@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-18 05:34+0000\n"
+"POT-Creation-Date: 2006-08-15 19:34+0000\n"
 "PO-Revision-Date: 2006-07-18 21:22+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
@@ -165,12 +165,12 @@ msgstr "Přidávám novou skupinu '%s' (GID %d) ...\n"
 msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "Přidávám nového uživatele '%s' (UID %d) se skupinou '%s' ...\n"
 
-#: ../adduser:415 ../AdduserCommon.pm:158
+#: ../adduser:415 ../AdduserCommon.pm:162
 #, perl-format
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr "`%s' vrátil chzbobý kód %d. Končím.\n"
 
-#: ../adduser:417 ../AdduserCommon.pm:160
+#: ../adduser:417 ../AdduserCommon.pm:164
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr "'%s' byl ukončen signálem %d. Končím.\n"
@@ -709,27 +709,27 @@ msgstr ""
 "  --conf | -c SOUB  jako konfigurační soubor použije SOUB\n"
 "\n"
 
-#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#: ../AdduserCommon.pm:64 ../AdduserCommon.pm:70
 #, perl-format
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: ../AdduserCommon.pm:78
+#: ../AdduserCommon.pm:82
 #, perl-format
 msgid "`%s' does not exist. Using defaults.\n"
 msgstr "'%s' neexistuje. Používám výchozí hodnoty.\n"
 
-#: ../AdduserCommon.pm:88
+#: ../AdduserCommon.pm:92
 #, perl-format
 msgid "Couldn't parse `%s', line %d.\n"
 msgstr "Nemohu zpracovat '%s', řádek %d.\n"
 
-#: ../AdduserCommon.pm:93
+#: ../AdduserCommon.pm:97
 #, perl-format
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Neznámá proměnná '%s' v '%s', řádek %d.\n"
 
-#: ../AdduserCommon.pm:171
+#: ../AdduserCommon.pm:175
 #, perl-format
 msgid "Could not find program named `%s' in $PATH.\n"
 msgstr "V $PATH neexistuje program jménem '%s'.\n"

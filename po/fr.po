@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-18 05:34+0000\n"
+"POT-Creation-Date: 2006-08-15 19:34+0000\n"
 "PO-Revision-Date: 2006-07-19 12:15+0200\n"
 "Last-Translator: Thomas Huriaux <thomas.huriaux@gmail.com>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -185,14 +185,14 @@ msgstr ""
 "Ajout du nouvel utilisateur « %s » (identifiant : %d) avec le\n"
 "groupe « %s »...\n"
 
-#: ../adduser:415 ../AdduserCommon.pm:158
+#: ../adduser:415 ../AdduserCommon.pm:162
 #, perl-format
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 "« %s » a renvoyé le code d'erreur %d.\n"
 "Abandon.\n"
 
-#: ../adduser:417 ../AdduserCommon.pm:160
+#: ../adduser:417 ../AdduserCommon.pm:164
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr "« %s » a terminé avec le signal %d. Abandon.\n"
@@ -766,27 +766,27 @@ msgstr ""
 "  --conf | -c FICHIER  utiliser FICHIER comme fichier de configuration\n"
 "\n"
 
-#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#: ../AdduserCommon.pm:64 ../AdduserCommon.pm:70
 #, perl-format
 msgid "%s: %s"
 msgstr "%s : %s"
 
-#: ../AdduserCommon.pm:78
+#: ../AdduserCommon.pm:82
 #, perl-format
 msgid "`%s' does not exist. Using defaults.\n"
 msgstr "« %s » n'existe pas. Utilisation des valeurs par défaut.\n"
 
-#: ../AdduserCommon.pm:88
+#: ../AdduserCommon.pm:92
 #, perl-format
 msgid "Couldn't parse `%s', line %d.\n"
 msgstr "Impossible d'analyser « %s », ligne %d.\n"
 
-#: ../AdduserCommon.pm:93
+#: ../AdduserCommon.pm:97
 #, perl-format
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Variable « %s » inconnue en « %s », ligne %d.\n"
 
-#: ../AdduserCommon.pm:171
+#: ../AdduserCommon.pm:175
 #, perl-format
 msgid "Could not find program named `%s' in $PATH.\n"
 msgstr "Aucun programme « %s » dans $PATH.\n"

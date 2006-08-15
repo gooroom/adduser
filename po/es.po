@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-18 05:34+0000\n"
+"POT-Creation-Date: 2006-08-15 19:34+0000\n"
 "PO-Revision-Date: 2000-05-27 13:00+0300\n"
 "Last-Translator: Nicolás Lichtmaier <nick@debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -160,12 +160,12 @@ msgstr "Añadiendo nuevo grupo %s (%s).\n"
 msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "Añadiendo nuevo usuario %s (%s) con grupo %s.\n"
 
-#: ../adduser:415 ../AdduserCommon.pm:158
+#: ../adduser:415 ../AdduserCommon.pm:162
 #, perl-format
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417 ../AdduserCommon.pm:160
+#: ../adduser:417 ../AdduserCommon.pm:164
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
@@ -611,27 +611,27 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#: ../AdduserCommon.pm:64 ../AdduserCommon.pm:70
 #, perl-format
 msgid "%s: %s"
 msgstr ""
 
-#: ../AdduserCommon.pm:78
+#: ../AdduserCommon.pm:82
 #, fuzzy, perl-format
 msgid "`%s' does not exist. Using defaults.\n"
 msgstr "%s: %s no existe.  Usando valores por omisión.\n"
 
-#: ../AdduserCommon.pm:88
+#: ../AdduserCommon.pm:92
 #, perl-format
 msgid "Couldn't parse `%s', line %d.\n"
 msgstr ""
 
-#: ../AdduserCommon.pm:93
+#: ../AdduserCommon.pm:97
 #, fuzzy, perl-format
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Parámetro desconocido `%s'.\n"
 
-#: ../AdduserCommon.pm:171
+#: ../AdduserCommon.pm:175
 #, perl-format
 msgid "Could not find program named `%s' in $PATH.\n"
 msgstr ""

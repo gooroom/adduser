@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser italian translation\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-18 05:34+0000\n"
+"POT-Creation-Date: 2006-08-15 19:34+0000\n"
 "PO-Revision-Date: 2006-08-10 13:20+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -170,12 +170,12 @@ msgstr "Aggiunta del nuovo gruppo «%s» (GID %d) ...\n"
 msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "Aggiunta del nuovo utente «%s» (UID %d) con gruppo «%s» ...\n"
 
-#: ../adduser:415 ../AdduserCommon.pm:158
+#: ../adduser:415 ../AdduserCommon.pm:162
 #, perl-format
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr "«%s» ha restituito l'errore con codice %d. Uscita.\n"
 
-#: ../adduser:417 ../AdduserCommon.pm:160
+#: ../adduser:417 ../AdduserCommon.pm:164
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr "«%s» uscito a causa del segnale %d. Uscita.\n"
@@ -266,8 +266,8 @@ msgstr "Aggiunta del nuovo utente «%s» ai gruppi extra ...\n"
 #, perl-format
 msgid "Setting quota for user `%s' to values of user `%s' ...\n"
 msgstr ""
-"Impostazione della quota per l'utente «%s» con la configurazione "
-"dell'utente «%s» ...\n"
+"Impostazione della quota per l'utente «%s» con la configurazione dell'utente "
+"«%s» ...\n"
 
 #: ../adduser:615
 #, perl-format
@@ -452,7 +452,8 @@ msgstr ""
 "\n"
 "Questo programma è distribuito nella speranza che possa risultare utile, ma\n"
 "SENZA ALCUNA GARANZIA, nemmeno la garanzia implicita di COMMERCIABILITÀ o\n"
-"APPLICABILITÀ PER UNO SCOPO PARTICOLARE. Per maggiori dettagli consultare la\n"
+"APPLICABILITÀ PER UNO SCOPO PARTICOLARE. Per maggiori dettagli consultare "
+"la\n"
 "GNU General Public License (/usr/share/common-licenses/GPL).\n"
 
 #: ../adduser:923
@@ -723,27 +724,27 @@ msgstr ""
 "  --conf | -c FILE  usa FILE come file di configurazione\n"
 "\n"
 
-#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#: ../AdduserCommon.pm:64 ../AdduserCommon.pm:70
 #, perl-format
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: ../AdduserCommon.pm:78
+#: ../AdduserCommon.pm:82
 #, perl-format
 msgid "`%s' does not exist. Using defaults.\n"
 msgstr "«%s» non esiste. Verranno usati i valori predefiniti.\n"
 
-#: ../AdduserCommon.pm:88
+#: ../AdduserCommon.pm:92
 #, perl-format
 msgid "Couldn't parse `%s', line %d.\n"
 msgstr "Impossibile analizzare «%s», riga %d.\n"
 
-#: ../AdduserCommon.pm:93
-#, perl-format, verificare la stringa
+#: ../AdduserCommon.pm:97
+#, perl-format
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Variabile «%s» sconosciuta in «%s», riga %d.\n"
 
-#: ../AdduserCommon.pm:171
+#: ../AdduserCommon.pm:175
 #, perl-format
 msgid "Could not find program named `%s' in $PATH.\n"
 msgstr "Nessun programma con nome «%s» in $PATH\n"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.41\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-18 05:34+0000\n"
+"POT-Creation-Date: 2006-08-15 19:34+0000\n"
 "PO-Revision-Date: 2005-11-19 13:51+0100\n"
 "Last-Translator: Rob Snelders <programming@ertai.nl>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -168,12 +168,12 @@ msgstr "Toevoegen nieuwe groep `%s' (%s).\n"
 msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "Toevoegen nieuwe gebruiker `%s' (%s) in groep `%s'.\n"
 
-#: ../adduser:415 ../AdduserCommon.pm:158
+#: ../adduser:415 ../AdduserCommon.pm:162
 #, perl-format
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr ""
 
-#: ../adduser:417 ../AdduserCommon.pm:160
+#: ../adduser:417 ../AdduserCommon.pm:164
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr ""
@@ -726,27 +726,27 @@ msgstr ""
 "  --conf | -c BESTAND  gebruik BESTAND als configuratie bestand\n"
 "\n"
 
-#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#: ../AdduserCommon.pm:64 ../AdduserCommon.pm:70
 #, perl-format
 msgid "%s: %s"
 msgstr ""
 
-#: ../AdduserCommon.pm:78
+#: ../AdduserCommon.pm:82
 #, fuzzy, perl-format
 msgid "`%s' does not exist. Using defaults.\n"
 msgstr "%s: `%s' bestaat niet.  Standaardinstellingen worden gebruikt.\n"
 
-#: ../AdduserCommon.pm:88
+#: ../AdduserCommon.pm:92
 #, fuzzy, perl-format
 msgid "Couldn't parse `%s', line %d.\n"
 msgstr "Kon `%s':%s niet verwerken.\n"
 
-#: ../AdduserCommon.pm:93
+#: ../AdduserCommon.pm:97
 #, fuzzy, perl-format
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Onbekende variabele `%s' in `%s':%s.\n"
 
-#: ../AdduserCommon.pm:171
+#: ../AdduserCommon.pm:175
 #, perl-format
 msgid "Could not find program named `%s' in $PATH.\n"
 msgstr ""

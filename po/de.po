@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.95\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-18 05:34+0000\n"
+"POT-Creation-Date: 2006-08-15 19:34+0000\n"
 "PO-Revision-Date: 2006-07-18 08:16+0200\n"
 "Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -33,7 +33,8 @@ msgstr "Geben Sie in diesem Modus nur einen Namen an.\n"
 
 #: ../adduser:178
 msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
-msgstr "Die Optionen --group, --ingroup und --gid schließen sich gegenseitig aus.\n"
+msgstr ""
+"Die Optionen --group, --ingroup und --gid schließen sich gegenseitig aus.\n"
 
 #: ../adduser:183
 msgid "The home dir must be an absolute path.\n"
@@ -41,7 +42,8 @@ msgstr "Das Home-Verzeichnis muss ein absoluter Pfad sein.\n"
 
 #: ../adduser:187
 msgid "Warning: The home dir you specified already exists.\n"
-msgstr "Warnung: Das von Ihnen angegebene Home-Verzeichnis existiert bereits.\n"
+msgstr ""
+"Warnung: Das von Ihnen angegebene Home-Verzeichnis existiert bereits.\n"
 
 #: ../adduser:189
 msgid "Warning: The home dir you specified does not exist.\n"
@@ -55,7 +57,8 @@ msgstr "Die Gruppe »%s« existiert bereits als Systemgruppe. Programmende.\n"
 #: ../adduser:251
 #, perl-format
 msgid "The group `%s' already exists, but has a different GID. Exiting.\n"
-msgstr "Die Gruppe »%s« existiert bereits, hat aber eine andere GID. Programmende.\n"
+msgstr ""
+"Die Gruppe »%s« existiert bereits, hat aber eine andere GID. Programmende.\n"
 
 #: ../adduser:255
 #, perl-format
@@ -69,8 +72,10 @@ msgstr "Die GID »%s« wird bereits verwendet.\n"
 
 #: ../adduser:265
 #, perl-format
-msgid "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
-msgstr "Es ist keine GID im Bereich %d-%d verfügbar (FIRST_SYS_GID - LAST_SYS_GID).\n"
+msgid ""
+"No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
+msgstr ""
+"Es ist keine GID im Bereich %d-%d verfügbar (FIRST_SYS_GID - LAST_SYS_GID).\n"
 
 #: ../adduser:266 ../adduser:295
 #, perl-format
@@ -120,12 +125,14 @@ msgstr "Füge Benutzer »%s« der Gruppe »%s« hinzu ...\n"
 #: ../adduser:346
 #, perl-format
 msgid "The user `%s' already exists as a system user. Exiting.\n"
-msgstr "Der Benutzer »%s« existiert bereits als Systembenutzer. Programmende.\n"
+msgstr ""
+"Der Benutzer »%s« existiert bereits als Systembenutzer. Programmende.\n"
 
 #: ../adduser:350
 #, perl-format
 msgid "The user `%s' already exists with a different UID. Exiting.\n"
-msgstr "Der Benutzer »%s« existiert bereits mit einer anderen UID. Programmende.\n"
+msgstr ""
+"Der Benutzer »%s« existiert bereits mit einer anderen UID. Programmende.\n"
 
 #: ../adduser:364
 #, perl-format
@@ -143,8 +150,10 @@ msgstr "Benutzer »%s« wurde nicht angelegt.\n"
 
 #: ../adduser:376
 #, perl-format
-msgid "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
-msgstr "Es ist keine UID im Bereich %d-%d verfügbar (FIRST_SYS_UID - LAST_SYS_UID).\n"
+msgid ""
+"No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
+msgstr ""
+"Es ist keine UID im Bereich %d-%d verfügbar (FIRST_SYS_UID - LAST_SYS_UID).\n"
 
 #: ../adduser:381 ../adduser:387 ../adduser:470 ../adduser:476
 msgid "Internal error"
@@ -165,12 +174,12 @@ msgstr "Lege neue Gruppe »%s« (GID %d) an ...\n"
 msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "Lege neuen Benutzer »%s« (UID %d) mit Gruppe »%s« an ...\n"
 
-#: ../adduser:415 ../AdduserCommon.pm:158
+#: ../adduser:415 ../AdduserCommon.pm:162
 #, perl-format
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr "»%s« gab den Fehlercode %d zurück. Programmende.\n"
 
-#: ../adduser:417 ../AdduserCommon.pm:160
+#: ../adduser:417 ../AdduserCommon.pm:164
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr "»%s« wurde durch das Signal %d beendet. Programmende.\n"
@@ -191,8 +200,10 @@ msgstr "Lege Benutzer »%s« an ...\n"
 
 #: ../adduser:453
 #, perl-format
-msgid "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
-msgstr "Es ist kein UID/GID-Paar im Bereich %d-%d verfügbar (FIRST_UID - LAST_UID).\n"
+msgid ""
+"No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
+msgstr ""
+"Es ist kein UID/GID-Paar im Bereich %d-%d verfügbar (FIRST_UID - LAST_UID).\n"
 
 #: ../adduser:465
 #, perl-format
@@ -256,7 +267,8 @@ msgstr "Füge neuen Benutzer »%s« zu den zusätzlichen Gruppen hinzu ...\n"
 #: ../adduser:581
 #, perl-format
 msgid "Setting quota for user `%s' to values of user `%s' ...\n"
-msgstr "Setze Quota für den Benutzer »%s« auf die Werte des Benutzers »%s« ...\n"
+msgstr ""
+"Setze Quota für den Benutzer »%s« auf die Werte des Benutzers »%s« ...\n"
 
 #: ../adduser:615
 #, perl-format
@@ -724,28 +736,27 @@ msgstr ""
 "  --conf | -c DATEI benutze DATEI als Konfigurationsdatei\n"
 "\n"
 
-#: ../AdduserCommon.pm:60 ../AdduserCommon.pm:66
+#: ../AdduserCommon.pm:64 ../AdduserCommon.pm:70
 #, perl-format
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: ../AdduserCommon.pm:78
+#: ../AdduserCommon.pm:82
 #, perl-format
 msgid "`%s' does not exist. Using defaults.\n"
 msgstr "»%s« existiert nicht. Benutze Standardwerte.\n"
 
-#: ../AdduserCommon.pm:88
+#: ../AdduserCommon.pm:92
 #, perl-format
 msgid "Couldn't parse `%s', line %d.\n"
 msgstr "Konnte »%s«, Zeile %d nicht auswerten.\n"
 
-#: ../AdduserCommon.pm:93
+#: ../AdduserCommon.pm:97
 #, perl-format
 msgid "Unknown variable `%s' at `%s', line %d.\n"
 msgstr "Unbekannte Variable »%s« in »%s«, Zeile %d.\n"
 
-#: ../AdduserCommon.pm:171
+#: ../AdduserCommon.pm:175
 #, perl-format
 msgid "Could not find program named `%s' in $PATH.\n"
 msgstr "Kein Programm mit dem Namen »%s« in Verzeichnisliste $PATH gefunden.\n"
-
