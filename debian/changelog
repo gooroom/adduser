@@ -3,8 +3,10 @@ adduser (3.97.0) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * Update Polish (pl) program and manpage translation.
     Thanks to Robert Luberda. (mh) Closes: #383724
+  * Update Brazilian Portuguese (pt_BR) manpage translation. Thanks to
+    Felipe Augusto van de Wiel.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 19 Aug 2006 13:50:10 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 23 Aug 2006 07:38:20 +0200
 
 adduser (3.97) unstable; urgency=low
 
