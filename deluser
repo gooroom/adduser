@@ -85,7 +85,7 @@ unless ( GetOptions ("quiet|q" => sub {$verbose = 0; },
 	    "remove-home" => \$pconfig{"remove_home"},
 	    "remove-all-files" => \$pconfig{"remove_all_files"},
 	    "backup" => \$pconfig{"backup"},
-	    "backup-to" => \$pconfig{"backup_to"}
+	    "backup-to=" => \$pconfig{"backup_to"}
        ) ) {
     &usage;
     exit 1;
