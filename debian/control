@@ -15,10 +15,10 @@ Description: Add and remove users and groups
  This package includes the adduser and deluser commands for creating
  and removing users.
  .
- o Adduser can create new users and groups and add existing users to
-   existing groups.
- o Deluser can remove users and groups and remove users from a given
-   group.
+  - Adduser can create new users and groups and add existing users to
+    existing groups.
+  - Deluser can remove users and groups and remove users from a given
+    group.
  .
  Adding users with adduser is much easier than adding them by hand.
  Adduser will choose appropriate UID and GID values, create a home
