@@ -790,7 +790,7 @@ sub checkname {
     my ($name) = @_;
     if ($name !~ /^[_.A-Za-z0-9][-_.A-Za-z0-9]*\$?$/) {
 	printf STDERR
-(gtx("%s: To avoid problems, the username should consist only of
+(gtx("%s warning: To avoid problems, the username should consist only of
 letters, digits, underscores, periods and dashes, and not start with a
 dash (as defined by IEEE Std 1003.1-2001). For compatibility with Samba
 machine accounts \$ is also supported at the end of the username\n"), $0);
