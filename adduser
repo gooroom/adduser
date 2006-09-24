@@ -794,7 +794,6 @@ sub checkname {
 letters, digits, underscores, periods and dashes, and not start with a
 dash (as defined by IEEE Std 1003.1-2001). For compatibility with Samba
 machine accounts \$ is also supported at the end of the username\n"), $0);
-        exit 1;
     }
     if ($name !~ qr/$config{"name_regex"}/) {
       if ($allow_badname) {
