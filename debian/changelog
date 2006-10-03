@@ -6,6 +6,8 @@ adduser (3.97.0) UNRELEASED; urgency=low
     Thanks to Robert Luberda. (mh) Closes: #383724
   * Update Brazilian Portuguese (pt_BR) manpage translation. Thanks to
     Felipe Augusto van de Wiel.
+  * Fix typo in Czech (sh) program translation.
+    Thanks to Miroslav Kure. (mh) Closes: #390536
   * streamline --backup-to option parsing.
     Thanks to Gerfried Fuchs. Closes: #385433
   * Fix list in package description.
@@ -14,7 +16,7 @@ adduser (3.97.0) UNRELEASED; urgency=low
   [ Stephen Gran ]
   * Make --force-badname work (closes: #389160)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 24 Sep 2006 17:52:34 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed,  4 Oct 2006 00:03:07 +0200
 
 adduser (3.97) unstable; urgency=low
 
