@@ -1,7 +1,5 @@
-adduser (3.97.0) UNRELEASED; urgency=low
+adduser (3.98) unstable; urgency=low
 
-  [ Marc Haber ]
-  * NOT RELEASED YET
   * Update Polish (pl) program and manpage translation.
     Thanks to Robert Luberda. (mh) Closes: #383724
   * Update Brazilian Portuguese (pt_BR) manpage translation. Thanks to
@@ -12,11 +10,11 @@ adduser (3.97.0) UNRELEASED; urgency=low
     Thanks to Gerfried Fuchs. Closes: #385433
   * Fix list in package description.
     Thanks to Tomas Pospisek. Closes: #388853
+  * Allow @ in user names if allowed by local configuration or
+    --force-badname is given.
+    Thanks to Christoph Ulrich Scholler. Closes: #389160
 
-  [ Stephen Gran ]
-  * Make --force-badname work (closes: #389160)
-
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed,  4 Oct 2006 00:03:07 +0200
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 12 Oct 2006 09:34:22 +0000
 
 adduser (3.97) unstable; urgency=low
 
