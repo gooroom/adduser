@@ -412,9 +412,9 @@ if ($action eq "addsysuser") {
     # non-zero exit code and we need to do special handling here!
     if (system($chage, '-M', '99999', $new_name)) {
 	if( ($?>>8) ne 15 ) {
-	    &cleanup(sprintf(gtx("`%s' returned error code %d. Exiting.\n"), "$chage -M 99999 $new_name", $?>>8))
+	    &cleanup(sprintf((gtx("`%s' returned error code %d. Exiting.\n")), "$chage -M 99999 $new_name", $?>>8))
 	      if ($?>>8);
-	    &cleanup(sprintf(gtx("`%s' exited from signal %d. Exiting.\n"), "$chage -M 99999 $new_name", $?&255));
+	    &cleanup(sprintf((gtx("`%s' exited from signal %d. Exiting.\n")), "$chage -M 99999 $new_name", $?&255));
 	} else {
 	    printf (gtx("%s failed with return code 15, shadow not enabled, password aging cannot be set. Continuing.\n"), $chage);
 	}
@@ -774,7 +774,7 @@ sub copy_to_dir {
 	mkdir("$todir/$file", 700) || &cleanup("mkdir: $!");
     }
     else {
-	&cleanup(sprintf(gtx("Cannot deal with %s.\nIt is not a dir, file, or symlink.\n"), "$fromdir/$file"));
+	&cleanup(sprintf((gtx("Cannot deal with %s.\nIt is not a dir, file, or symlink.\n")), "$fromdir/$file"));
     }
     
     chown($newu, $newg, "$todir/$file")

@@ -13,8 +13,9 @@ adduser (3.98) unstable; urgency=low
   * Allow @ in user names if allowed by local configuration or
     --force-badname is given.
     Thanks to Christoph Ulrich Scholler. Closes: #389160
+  * Add parenthesis to make gettext happy (see #386912)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Thu, 12 Oct 2006 09:34:22 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 13 Oct 2006 08:23:55 +0000
 
 adduser (3.97) unstable; urgency=low
 

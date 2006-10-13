@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-10-01 19:25+0200\n"
+"POT-Creation-Date: 2006-10-13 08:24+0000\n"
 "PO-Revision-Date: 2006-10-01 19:29+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
@@ -332,11 +332,12 @@ msgstr ""
 "Nejedná se o adresář, soubor ani symbolický odkaz.\n"
 
 #: ../adduser:793
-#, perl-format
+#, fuzzy, perl-format
 msgid ""
-"%s warning: To avoid problems, the username should consist only of\n"
-"letters, digits, underscores, periods and dashes, and not start with a\n"
-"dash (as defined by IEEE Std 1003.1-2001). For compatibility with Samba\n"
+"%s: To avoid problems, the username should consist only of\n"
+"letters, digits, underscores, periods, at signs and dashes, and not start "
+"with\n"
+"a dash (as defined by IEEE Std 1003.1-2001). For compatibility with Samba\n"
 "machine accounts $ is also supported at the end of the username\n"
 msgstr ""
 "%s varování: Abyste předešli problémům, mělo by se uživatelské jméno\n"
@@ -344,11 +345,11 @@ msgstr ""
 "začínat pomlčkou (definováno v IEEE standardu 1003.1-2001). Kvůli\n"
 "kompatibilitě se Sambou je na konci jména podporován také znak $.\n"
 
-#: ../adduser:800
+#: ../adduser:801
 msgid "Allowing use of questionable username.\n"
 msgstr "Povoluji použití sporného uživatelského jména.\n"
 
-#: ../adduser:804
+#: ../adduser:805
 #, perl-format
 msgid ""
 "%s: Please enter a username matching the regular expression configured\n"
@@ -360,44 +361,44 @@ msgstr ""
 "kontroly použijte volbu '--force-badname', nebo změňte proměnnou\n"
 "NAME_REGEX.\n"
 
-#: ../adduser:816
+#: ../adduser:817
 #, perl-format
 msgid "Selecting UID from range %d to %d ...\n"
 msgstr "Vybírám UID z rozsahu %d - %d ...\n"
 
-#: ../adduser:830
+#: ../adduser:831
 #, perl-format
 msgid "Selecting GID from range %d to %d ...\n"
 msgstr "Vybírám GID z rozsahu %d - %d ...\n"
 
-#: ../adduser:874
+#: ../adduser:875
 #, perl-format
 msgid "Stopped: %s\n"
 msgstr "Zastaven: %s\n"
 
-#: ../adduser:876
+#: ../adduser:877
 #, perl-format
 msgid "Removing directory `%s' ...\n"
 msgstr "Odstraňuji adresář '%s' ...\n"
 
-#: ../adduser:880 ../deluser:325
+#: ../adduser:881 ../deluser:325
 #, perl-format
 msgid "Removing user `%s' ...\n"
 msgstr "Odstraňuji uživatele '%s' ...\n"
 
-#: ../adduser:884 ../deluser:365
+#: ../adduser:885 ../deluser:365
 #, perl-format
 msgid "Removing group `%s' ...\n"
 msgstr "Odstraňuji skupinu '%s' ...\n"
 
 #. Translators: the variable %s is INT, QUIT, or HUP.
 #. Please do not insert a space character between SIG and %s.
-#: ../adduser:895
+#: ../adduser:896
 #, perl-format
 msgid "Caught a SIG%s.\n"
 msgstr "Zachycen SIG%s.\n"
 
-#: ../adduser:900
+#: ../adduser:901
 #, perl-format
 msgid ""
 "adduser version %s\n"
@@ -406,7 +407,7 @@ msgstr ""
 "adduser verze %s\n"
 "\n"
 
-#: ../adduser:901
+#: ../adduser:902
 msgid ""
 "Adds a user or group to the system.\n"
 "  \n"
@@ -422,7 +423,7 @@ msgstr ""
 "                   Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 "\n"
 
-#: ../adduser:908 ../deluser:428
+#: ../adduser:909 ../deluser:428
 msgid ""
 "This program is free software; you can redistribute it and/or modify\n"
 "it under the terms of the GNU General Public License as published by\n"
@@ -442,7 +443,7 @@ msgstr ""
 "JAKÉKOLIV ZÁRUKY. Pro více podrobností si přečtěte GNU General\n"
 "Public License v /usr/share/common-licenses/GPL.\n"
 
-#: ../adduser:922
+#: ../adduser:923
 msgid ""
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
 "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"
