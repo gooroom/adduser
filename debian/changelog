@@ -1,3 +1,10 @@
+adduser (3.99) unstable; urgency=low
+
+  * escape @ in new regexp, now really fixing #389160.
+    Thanks to Stephen for spotting this in time.
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 13 Oct 2006 11:01:12 +0000
+
 adduser (3.98) unstable; urgency=low
 
   * Update Polish (pl) program and manpage translation.
