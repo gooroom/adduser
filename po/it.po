@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: adduser italian translation\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
 "POT-Creation-Date: 2006-10-13 08:24+0000\n"
-"PO-Revision-Date: 2006-08-10 13:20+0200\n"
+"PO-Revision-Date: 2006-11-03 20:58+0100\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -341,7 +341,7 @@ msgstr ""
 "Non è una directory, né un file né un link simbolico.\n"
 
 #: ../adduser:793
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "%s: To avoid problems, the username should consist only of\n"
 "letters, digits, underscores, periods, at signs and dashes, and not start "
@@ -350,11 +350,11 @@ msgid ""
 "machine accounts $ is also supported at the end of the username\n"
 msgstr ""
 "%s: Per evitare problemi il nome utente dovrebbe essere composto\n"
-"solo da lettere, cifre, sottolineature (_), punti (.) e trattini (-),\n"
-"inoltre non dovrebbe iniziare con un trattino (in base allo standard\n"
-"IEEE 1003.1-2001). Per compatibilità con gli account di macchine Samba è\n"
-"supportato l'uso del carattere dollaro ($) come carattere finale del nome\n"
-"utente.\n"
+"solo da lettere, cifre, sottolineature (_), punti (.), chioccioline (@) e\n"
+"trattini (-), inoltre non dovrebbe iniziare con un trattino (in base allo\n"
+"standard IEEE 1003.1-2001). Per compatibilità con gli account di macchine\n"
+"Samba è supportato l'uso del carattere dollaro ($) come carattere finale\n"
+"del nome utente.\n"
 
 #: ../adduser:801
 msgid "Allowing use of questionable username.\n"
@@ -748,7 +748,7 @@ msgstr "Variabile «%s» sconosciuta in «%s», riga %d.\n"
 #: ../AdduserCommon.pm:175
 #, perl-format
 msgid "Could not find program named `%s' in $PATH.\n"
-msgstr "Nessun programma con nome «%s» in $PATH\n"
+msgstr "Nessun programma con nome «%s» in $PATH.\n"
 
 #, fuzzy
 #~ msgid "Adding group `%s' (GID %s) ...\n"

@@ -1,8 +1,10 @@
 adduser (3.99.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * Update Italian (it) program translations.
+    Thanks to Luca Monducci. Closes: #396948
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 13 Oct 2006 11:08:55 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  4 Nov 2006 11:01:17 +0100
 
 adduser (3.99) unstable; urgency=low
 
