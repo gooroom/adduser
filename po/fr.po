@@ -1,17 +1,17 @@
-# translation of fr.po to French
 # French (fr) translation of adduser
 # Original translation by Jean-Philippe Guerard
 # Christian Perrier <bubulle@debian.org>, 2005.
 # Aurélien Ricard <r.aurelien@wanadoo.fr>, 2006.
 # Luc Froidefond <luc.froidefond@free.fr>, 2006.
+# Thomas Huriaux <thomas.huriaux@gmail.com>, 2006.
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
 "POT-Creation-Date: 2006-10-13 08:24+0000\n"
-"PO-Revision-Date: 2006-07-19 12:15+0200\n"
-"Last-Translator: Thomas Huriaux <thomas.huriaux@gmail.com>\n"
+"PO-Revision-Date: 2006-10-21 17:38+0200\n"
+"Last-Translator: Nicolas François <nicolas.francois@centraliens.net>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-15\n"
@@ -365,7 +365,7 @@ msgstr ""
 "Ce n'est ni un répertoire, ni un fichier, ni un lien symbolique.\n"
 
 #: ../adduser:793
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "%s: To avoid problems, the username should consist only of\n"
 "letters, digits, underscores, periods, at signs and dashes, and not start "
@@ -374,10 +374,10 @@ msgid ""
 "machine accounts $ is also supported at the end of the username\n"
 msgstr ""
 "%s : Pour éviter tout problème, le nom d'utilisateur ne peut comporter\n"
-"que des lettres, des chiffres, le caractère « _ », des points et des\n"
-"tirets, mais ne peut pas commencer par un tiret (comme défini dans le\n"
-"standard IEEE Std 1003.1-2001). Pour rester compatible avec les comptes\n"
-"de machines Samba, le caractère « $ » est également accepté comme\n"
+"que des lettres, des chiffres, le caractère « _ », des points, des arobases\n"
+"« @ » et des tirets, mais ne peut pas commencer par un tiret (comme défini\n"
+"dans le standard IEEE Std 1003.1-2001). Pour rester compatible avec les\n"
+"comptes de machines Samba, le caractère « $ » est également accepté comme\n"
 "caractère final.\n"
 
 #: ../adduser:801
