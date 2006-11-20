@@ -7,8 +7,10 @@ adduser (3.99.0) UNRELEASED; urgency=low
     Thanks to Nicolas François. Closes: #396737
   * Update German (de) program translation.
     Thanks to Tobias Toedter. Closes: #397131
+  * Update Basque (eu) program translation.
+    Thanks to Piarres Beobide. (mh) Closes: #399552
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon,  6 Nov 2006 13:47:24 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 20 Nov 2006 16:58:45 +0100
 
 adduser (3.99) unstable; urgency=low
 
