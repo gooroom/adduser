@@ -1,5 +1,6 @@
 adduser (3.99.0) UNRELEASED; urgency=low
 
+  [ Marc Haber ]
   * NOT RELEASED YET
   * Update Italian (it) program translation.
     Thanks to Luca Monducci. Closes: #396948
@@ -10,7 +11,11 @@ adduser (3.99.0) UNRELEASED; urgency=low
   * Update Basque (eu) program translation.
     Thanks to Piarres Beobide. (mh) Closes: #399552
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Mon, 20 Nov 2006 16:58:45 +0100
+  [ Stephen Gran ]
+  * Tentative fix for Undefined subroutine &main::NOEXPR called at
+    /usr/sbin/adduser line 509 (which incidentally closes: #212872)
+
+ -- Stephen Gran <sgran@debian.org>  Sat, 25 Nov 2006 02:14:56 +0000
 
 adduser (3.99) unstable; urgency=low
 
