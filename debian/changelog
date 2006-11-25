@@ -15,7 +15,8 @@ adduser (3.99.0) UNRELEASED; urgency=low
 
   [ Stephen Gran ]
   * Tentative fix for Undefined subroutine &main::NOEXPR called at
-    /usr/sbin/adduser line 509 (which incidentally closes: #212872)
+    /usr/sbin/adduser line 509.
+    Thanks to Thorsten Gunkel. Closes: #212872
 
  -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 25 Nov 2006 09:48:47 +0100
 
