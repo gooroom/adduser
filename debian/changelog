@@ -1,7 +1,6 @@
-adduser (3.99.0) UNRELEASED; urgency=low
+adduser (3.100) unstable; urgency=low
 
   [ Marc Haber ]
-  * NOT RELEASED YET
   * Update Italian (it) program translation.
     Thanks to Luca Monducci. Closes: #396948
   * Update French (fr) program translation.
@@ -18,7 +17,7 @@ adduser (3.99.0) UNRELEASED; urgency=low
     /usr/sbin/adduser line 509.
     Thanks to Thorsten Gunkel. Closes: #212872
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 25 Nov 2006 09:48:47 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sun, 26 Nov 2006 22:12:28 +0100
 
 adduser (3.99) unstable; urgency=low
 
