@@ -1,3 +1,9 @@
+adduser (3.100.0) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat,  9 Dec 2006 10:57:33 +0100
+
 adduser (3.100) unstable; urgency=low
 
   [ Marc Haber ]
