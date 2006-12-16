@@ -64,6 +64,8 @@ copied.  Defaults to
 specify an inclusive range of UIDs from which system UIDs can be
 dynamically allocated. Default to
 .IR 100 " - " 999 .
+Please note that system software, such as the users allocated by the base-passwd 
+package, may assume that UIDs less than 100 are unallocated.
 .TP
 .BR FIRST_UID " and " LAST_UID
 specify an inclusive range of UIDs from which normal user's UIDs can
