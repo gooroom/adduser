@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
+"POT-Creation-Date: 2006-12-17 21:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,14 +118,15 @@ msgstr "DESCRIPCIÓN"
 
 # type: Plain text
 #: ../adduser.8:43
+#, fuzzy
 msgid ""
 "B<adduser> and B<addgroup> add users and groups to the system according to "
 "command line options and configuration information in I</etc/adduser.conf>.  "
 "They are friendlier front ends to the low level tools like B<useradd,> "
-"B<groupadd> and B<usermod> programs, choosing Debian policy conformant UID "
-"and GID values, creating a home directory with skeletal configuration, "
-"running a custom script, and other features.  B<adduser> and B<addgroup> can "
-"be run in one of five modes:"
+"B<groupadd> and B<usermod> programs, by default choosing Debian policy "
+"conformant UID and GID values, creating a home directory with skeletal "
+"configuration, running a custom script, and other features.  B<adduser> and "
+"B<addgroup> can be run in one of five modes:"
 msgstr ""
 "B<adduser> y B<addgroup> añaden usuarios al sistema de acuerdo a las "
 "opciones de la línea de órdenes y a la configuración en I</etc/adduser."
@@ -686,7 +687,7 @@ msgid "Display version and copyright information."
 msgstr "Muestra la versión e información acerca del copyright."
 
 # type: SH
-#: ../adduser.8:266 ../adduser.conf.5:128 ../deluser.8:146
+#: ../adduser.8:266 ../adduser.conf.5:130 ../deluser.8:146
 #: ../deluser.conf.5:71
 #, no-wrap
 msgid "FILES"
@@ -698,7 +699,7 @@ msgid "/etc/adduser.conf"
 msgstr "/etc/adduser.conf"
 
 # type: SH
-#: ../adduser.8:268 ../adduser.conf.5:130 ../deluser.8:148
+#: ../adduser.8:268 ../adduser.conf.5:132 ../deluser.8:148
 #: ../deluser.conf.5:73
 #, no-wrap
 msgid "SEE ALSO"
@@ -861,22 +862,25 @@ msgid "B<FIRST_SYSTEM_UID> and B<LAST_SYSTEM_UID>"
 msgstr "B<FIRST_SYSTEM_UID> y B<LAST_SYSTEM_UID>"
 
 # type: Plain text
-#: ../adduser.conf.5:67
+#: ../adduser.conf.5:69
+#, fuzzy
 msgid ""
 "specify an inclusive range of UIDs from which system UIDs can be dynamically "
-"allocated. Default to I<100> - I<999>."
+"allocated. Default to I<100> - I<999>.  Please note that system software, "
+"such as the users allocated by the base-passwd package, may assume that UIDs "
+"less than 100 are unallocated."
 msgstr ""
 "especifica un rango dinámico de IDs para usuarios del sistema (ambos "
 "incluidos).  Por omisión es I<100> - I<999>."
 
 # type: TP
-#: ../adduser.conf.5:67
+#: ../adduser.conf.5:69
 #, no-wrap
 msgid "B<FIRST_UID> and B<LAST_UID>"
 msgstr "B<FIRST_UID> y B<LAST_UID>"
 
 # type: Plain text
-#: ../adduser.conf.5:72
+#: ../adduser.conf.5:74
 msgid ""
 "specify an inclusive range of UIDs from which normal user's UIDs can be "
 "dynamically allocated. Default to I<1000> - I<29999>."
@@ -885,13 +889,13 @@ msgstr ""
 "incluidos).  Por omisión es I<1000> - I<29999>."
 
 # type: TP
-#: ../adduser.conf.5:72
+#: ../adduser.conf.5:74
 #, no-wrap
 msgid "B<USERGROUPS>"
 msgstr "B<USERGROUPS>"
 
 # type: Plain text
-#: ../adduser.conf.5:82
+#: ../adduser.conf.5:84
 msgid ""
 "If this is set to I<yes>, then each created user will be given their own "
 "group to use.  If this is I<no>, then each created user will be placed in "
@@ -902,13 +906,13 @@ msgstr ""
 "grupo aquel cuyo GID es B<USERS_GID> (lea más abajo).  Por omisión es I<yes>."
 
 # type: TP
-#: ../adduser.conf.5:82
+#: ../adduser.conf.5:84
 #, no-wrap
 msgid "B<USERS_GID>"
 msgstr "B<USERS_GID>"
 
 # type: Plain text
-#: ../adduser.conf.5:89
+#: ../adduser.conf.5:91
 msgid ""
 "If B<USERGROUPS> is I<no>, then B<USERS_GID> is the GID given to all newly-"
 "created users.  The default value is I<100>."
@@ -917,13 +921,13 @@ msgstr ""
 "los usuarios creados. El valor por omisión es I<100>."
 
 # type: TP
-#: ../adduser.conf.5:89
+#: ../adduser.conf.5:91
 #, no-wrap
 msgid "B<DIR_MODE>"
 msgstr "B<DIR_MODE>"
 
 # type: Plain text
-#: ../adduser.conf.5:93
+#: ../adduser.conf.5:95
 msgid ""
 "If set to a valid value (e.g. 0755 or 755), directories created will have "
 "the specified permissions. Otherwise 0755 is used as default."
@@ -932,13 +936,13 @@ msgstr ""
 "permisos especificados. En otro caso se usará el valor predeterminado 0755."
 
 # type: TP
-#: ../adduser.conf.5:93
+#: ../adduser.conf.5:95
 #, no-wrap
 msgid "B<SETGID_HOME>"
 msgstr "B<SETGID_HOME>"
 
 # type: Plain text
-#: ../adduser.conf.5:103
+#: ../adduser.conf.5:105
 msgid ""
 "If this is set to I<yes>, then home directories for users with their own "
 "group ( I<USERGROUPS=yes> ) will have the setgid bit set. This was the "
@@ -954,13 +958,13 @@ msgstr ""
 "todavía puede activarlo aquí."
 
 # type: TP
-#: ../adduser.conf.5:103
+#: ../adduser.conf.5:105
 #, no-wrap
 msgid "B<QUOTAUSER>"
 msgstr "B<QUOTAUSER>"
 
 # type: Plain text
-#: ../adduser.conf.5:107
+#: ../adduser.conf.5:109
 msgid ""
 "If set to a nonempty value, new users will have quotas copied from that "
 "user.  The default is empty."
@@ -969,13 +973,13 @@ msgstr ""
 "mismas cuotas que ese usuario. Por omisión está vacío."
 
 # type: TP
-#: ../adduser.conf.5:107
+#: ../adduser.conf.5:109
 #, no-wrap
 msgid "B<NAME_REGEX>"
 msgstr "B<NAME_REGEX>"
 
 # type: Plain text
-#: ../adduser.conf.5:113
+#: ../adduser.conf.5:115
 msgid ""
 "User names are checked against this regular expression. If the name doesn't "
 "match this regexp, user creation is refused unless --force-badname is set. "
@@ -984,13 +988,13 @@ msgid ""
 msgstr ""
 
 # type: TP
-#: ../adduser.conf.5:113
+#: ../adduser.conf.5:115
 #, fuzzy, no-wrap
 msgid "B<SKEL_IGNORE_REGEX>"
 msgstr "B<NAME_REGEX>"
 
 # type: Plain text
-#: ../adduser.conf.5:119
+#: ../adduser.conf.5:121
 msgid ""
 "Files in /etc/skel/ are checked against this regex, and not copied to the "
 "newly created home directory if they match.  This is by default set to the "
@@ -999,13 +1003,13 @@ msgid ""
 msgstr ""
 
 # type: TP
-#: ../adduser.conf.5:119
+#: ../adduser.conf.5:121
 #, fuzzy, no-wrap
 msgid "B<ADD_EXTRA_GROUPS>"
 msgstr "B<USERGROUPS>"
 
 # type: Plain text
-#: ../adduser.conf.5:124
+#: ../adduser.conf.5:126
 msgid ""
 "Setting this to something other than 0 (the default) will cause adduser to "
 "add newly created non-system users to the list of groups defined by "
@@ -1013,25 +1017,25 @@ msgid ""
 msgstr ""
 
 # type: TP
-#: ../adduser.conf.5:124
+#: ../adduser.conf.5:126
 #, fuzzy, no-wrap
 msgid "B<EXTRA_GROUPS>"
 msgstr "B<USERGROUPS>"
 
 # type: Plain text
-#: ../adduser.conf.5:128
+#: ../adduser.conf.5:130
 msgid ""
 "This is the list of groups that new non-system users will be added to.  By "
 "default, this list is 'dialout cdrom floppy audio src video lp users'"
 msgstr ""
 
 # type: Plain text
-#: ../adduser.conf.5:130
+#: ../adduser.conf.5:132
 msgid "I</etc/adduser.conf>"
 msgstr "I</etc/adduser.conf>"
 
 # type: Plain text
-#: ../adduser.conf.5:131
+#: ../adduser.conf.5:133
 msgid "adduser(8), addgroup(8), deluser(8), delgroup(8)"
 msgstr "adduser(8), addgroup(8), deluser(8), delgroup(8)"
 

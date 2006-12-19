@@ -8,7 +8,7 @@ adduser (3.100.0) UNRELEASED; urgency=low
   [ Stephen Gran ]
   * Update documentation about system uid's < 100 (closes: #402288)
 
- -- Stephen Gran <sgran@debian.org>  Sat, 16 Dec 2006 16:29:57 +0000
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 19 Dec 2006 10:20:19 +0100
 
 adduser (3.100) unstable; urgency=low
 
