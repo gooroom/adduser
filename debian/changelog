@@ -4,11 +4,12 @@ adduser (3.100.0) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * Update French (fr) program and man page translation.
     Thanks to Nicolas François. Closes: #402247
+    The man page translation is from off-BTS
 
   [ Stephen Gran ]
   * Update documentation about system uid's < 100 (closes: #402288)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 19 Dec 2006 10:20:19 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 19 Dec 2006 10:21:39 +0100
 
 adduser (3.100) unstable; urgency=low
 
