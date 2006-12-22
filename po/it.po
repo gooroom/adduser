@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: adduser italian translation\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
 "POT-Creation-Date: 2006-12-09 10:56+0100\n"
-"PO-Revision-Date: 2006-11-03 20:58+0100\n"
+"PO-Revision-Date: 2006-12-22 11:24+0100\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -18,16 +18,16 @@ msgstr ""
 #. everyone can issue "--help" and "--version", but only root can go on
 #: ../adduser:135
 msgid "Only root may add a user or group to the system.\n"
-msgstr "Solo root può aggiungere utenti o gruppi al sistema.\n"
+msgstr "Solo l'utente root può aggiungere un utente o un gruppo al sistema.\n"
 
 #: ../adduser:158 ../deluser:129
 msgid "Only one or two names allowed.\n"
-msgstr "Sono permessi solo uno o due nomi.\n"
+msgstr "Sono consentiti solo uno o due nomi.\n"
 
 #. must be addusertogroup
 #: ../adduser:163
 msgid "Specify only one name in this mode.\n"
-msgstr "Indicare solo un nome in questa modalità.\n"
+msgstr "In questa modalità è possibile specifiare solo un nome.\n"
 
 #: ../adduser:179
 msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
@@ -112,7 +112,7 @@ msgstr "Il gruppo «%s» non esiste.\n"
 #: ../adduser:319 ../adduser:563
 #, perl-format
 msgid "The user `%s' is already a member of `%s'.\n"
-msgstr "L'utente «%s» è già un membro del gruppo «%s».\n"
+msgstr "L'utente «%s» fa già parte del gruppo «%s».\n"
 
 #: ../adduser:324 ../adduser:569
 #, perl-format
@@ -229,7 +229,7 @@ msgstr "combinazione di opzioni non valida\n"
 
 #: ../adduser:515
 msgid "unexpected failure, nothing done\n"
-msgstr "errore inaspettato, niente di fatto\n"
+msgstr "errore inaspettato, nessuna modifica apportata\n"
 
 #: ../adduser:516
 msgid "unexpected failure, passwd file missing\n"
@@ -237,7 +237,7 @@ msgstr "errore inaspettato, manca il file passwd\n"
 
 #: ../adduser:517
 msgid "passwd file busy, try again\n"
-msgstr "il file passwd è occupato, provare di nuovo\n"
+msgstr "il file passwd è occupato, riprovare\n"
 
 #: ../adduser:518
 msgid "invalid argument to option\n"
@@ -272,7 +272,7 @@ msgstr ""
 #: ../adduser:616
 #, perl-format
 msgid "Not creating home directory `%s'.\n"
-msgstr "Creazione della directory home «%s» non effettuata.\n"
+msgstr "La directory home «%s» non è stata creata.\n"
 
 #: ../adduser:619
 #, perl-format
@@ -286,7 +286,8 @@ msgid ""
 "Warning: that home directory does not belong to the user you are currently "
 "creating.\n"
 msgstr ""
-"Attenzione: la directory home non appartiene all'utente che si sta creando.\n"
+"Attenzione: questa directory home non appartiene all'utente che si sta "
+"creando.\n"
 
 #: ../adduser:632
 #, perl-format
@@ -369,10 +370,9 @@ msgid ""
 "via the NAME_REGEX configuration variable.  Use the `--force-badname'\n"
 "option to relax this check or reconfigure NAME_REGEX.\n"
 msgstr ""
-"%s: Inserire un nome utente che verifichi l'espressione regolare\n"
-"definita nella variabile di configurazione NAME_REGEX. Utilizzare l'opzione\n"
-"«--force-badname» per allentare questo controllo oppure riconfigurare\n"
-"NAME_REGEX.\n"
+"%s: Inserire un nome utente che soddisfi l'espressione regolare configurata\n"
+"tramite la variabile NAME_REGEX. Per evitare questo controllo, utilizzare\n"
+"l'opzione «--force-badname» oppure riconfigurare NAME_REGEX.\n"
 
 #: ../adduser:820
 #, perl-format
@@ -529,7 +529,7 @@ msgstr "Solo root può rimuovere un utente o un gruppo dal sistema.\n"
 
 #: ../deluser:112
 msgid "No options allowed after names.\n"
-msgstr "Non è permesso l'uso delle opzioni dopo i nomi.\n"
+msgstr "Dopo i nomi non è possibile specificare delle opzioni.\n"
 
 #: ../deluser:120
 msgid "Enter a group name to remove: "
@@ -567,22 +567,26 @@ msgstr "Ricerca dei file di cui fare il backup e da cancellare ...\n"
 #: ../deluser:230
 #, perl-format
 msgid "fork for `mount' to parse mount points failed: %s\n"
-msgstr "fallito il fork di «mount» per l'analisi dei mount point: %s\n"
+msgstr "fork di «mount» per analizzare i punti di mount fallito: %s\n"
 
 #: ../deluser:240
 #, perl-format
 msgid "pipe of command `mount' could not be closed: %s\n"
-msgstr "la pipe del comando «mount» non può essere chiusa: %s\n"
+msgstr "la pipe sul comando «mount» non può essere chiusa: %s\n"
 
 #: ../deluser:248
 #, perl-format
 msgid "Not backing up/removing `%s', it is a mount point.\n"
-msgstr "Non fatto il backup né cancellato «%s», è un mount point.\n"
+msgstr ""
+"Il backup o la rimozione di «%s» non è stata effettuata, poiché è un mount "
+"point.\n"
 
 #: ../deluser:255
 #, perl-format
 msgid "Not backing up/removing `%s', it matches %s.\n"
-msgstr "Non fatto il backup né cancellato «%s», poiché verifica %s.\n"
+msgstr ""
+"Il backup o la rimozione di «%s» non è stata effettuata, poiché verifica "
+"%s.\n"
 
 #: ../deluser:287
 #, perl-format
@@ -600,7 +604,7 @@ msgstr "Rimozione di crontab ...\n"
 #: ../deluser:345
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
-msgstr "Fallita l'operazione getgrnam «%s». Non dovrebbe accadere.\n"
+msgstr "getgrnam «%s» fallito. Non dovrebbe accadere.\n"
 
 #: ../deluser:350
 #, perl-format
@@ -626,7 +630,7 @@ msgstr ""
 #: ../deluser:398
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
-msgstr "L'utente «%s» non è un membro del gruppo «%s».\n"
+msgstr "L'utente «%s» non fa parte del gruppo «%s».\n"
 
 #: ../deluser:401
 #, perl-format

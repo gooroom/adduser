@@ -7,11 +7,13 @@ adduser (3.100.0) UNRELEASED; urgency=low
     The man page translation is from off-BTS
   * Update Russian (ru) man page translation.
     Thanks to Yuri Kozlov. Closes: #403785
+  * Update Italian (it) program and man page translation.
+    Thanks to Luca Monducci. Closes: #404262
 
   [ Stephen Gran ]
   * Update documentation about system uid's < 100 (closes: #402288)
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Tue, 19 Dec 2006 22:32:18 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Sat, 23 Dec 2006 00:51:21 +0100
 
 adduser (3.100) unstable; urgency=low
 

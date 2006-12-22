@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: adduser manpages italian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-12-17 21:03+0100\n"
-"PO-Revision-Date: 2006-07-19 19:39+0200\n"
+"PO-Revision-Date: 2006-12-22 11:12+0100\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -120,7 +120,6 @@ msgstr "DESCRIZIONE"
 
 # type: Plain text
 #: ../adduser.8:43
-#, fuzzy
 msgid ""
 "B<adduser> and B<addgroup> add users and groups to the system according to "
 "command line options and configuration information in I</etc/adduser.conf>.  "
@@ -133,11 +132,11 @@ msgstr ""
 "B<adduser> e B<addgroup> aggiungono utenti e gruppi al sistema in base alle "
 "opzioni sulla riga di comando e alla configurazione in I</etc/adduser.conf>. "
 "Sono delle interfacce semplificate per gli strumenti di basso livello "
-"B<useradd,> B<groupadd> e B<usermod>, scelgono i valori di UID e GID in base "
-"alla policy Debian, creano la directory home seguendo uno scheletro della "
-"configurazione, permettono di eseguire script personalizzati e hanno molte "
-"altre funzionalità. B<adduser> e B<addgroup> possono essere eseguiti in "
-"cinque modalità diverse:"
+"B<useradd,> B<groupadd> e B<usermod>, con la configurazione predefinita "
+"scelgono i valori di UID e GID in base alla policy Debian, creano la "
+"directory home seguendo uno scheletro della configurazione, permettono di "
+"eseguire script personalizzati e hanno molte altre funzionalità. B<adduser> "
+"e B<addgroup> possono essere eseguiti in cinque modalità diverse:"
 
 # type: SS
 #: ../adduser.8:43
@@ -877,7 +876,6 @@ msgstr "B<FIRST_SYSTEM_UID> e B<LAST_SYSTEM_UID>"
 
 # type: Plain text
 #: ../adduser.conf.5:69
-#, fuzzy
 msgid ""
 "specify an inclusive range of UIDs from which system UIDs can be dynamically "
 "allocated. Default to I<100> - I<999>.  Please note that system software, "
@@ -885,7 +883,10 @@ msgid ""
 "less than 100 are unallocated."
 msgstr ""
 "specifica l'intervallo (estremi compresi) in cui possono essere allocati "
-"dinamicamente gli UID di sistema. Il valore predefinito è I<100> - I<999>."
+"dinamicamente gli UID di sistema. Il valore predefinito è I<100> - I<999>. "
+"Da notare che alcuni programmi di sistema, per esempio gli utenti allocati "
+"dal pacchetto base-passwd, potrebbero dare per scontato che gli UID "
+"inferiori a 100 siano non allocati."
 
 # type: TP
 #: ../adduser.conf.5:69
@@ -1002,7 +1003,7 @@ msgid ""
 "most conservative ^[a-z][-a-z0-9]*$."
 msgstr ""
 "I nomi degli utenti sono controllati usando questa espressione regolare. La "
-"creazione dell'utente viene rifiutata se il nome non verifica questa "
+"creazione dell'utente viene rifiutata se il nome non soddisfa questa "
 "espressione regolare, a meno che non sia attivata l'opzione --force-badname; "
 "in questo caso viene effettuato un controllo più debole. Il valore "
 "predefinito, scelto con molta prudenza, è ^[a-z][-a-z0-9]*$."
