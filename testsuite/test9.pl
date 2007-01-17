@@ -65,6 +65,9 @@ if (!defined (getgrnam($sysgroupname))) {
 # now testing whether adding the group again passes as it should
 # ("already exists as a system group")
 
+my $gid = getgrnam($sysgroupname);
+
+$cmd = "addgroup --system $sysgroupname --gid $gid" ;
 print "Testing $cmd... ";
 `$cmd`;
 $error = ($?>>8);
