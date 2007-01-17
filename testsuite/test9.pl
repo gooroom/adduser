@@ -97,7 +97,7 @@ if ($error) {
   print "failed\n  $cmd returned an errorcode != 0 ($error)\n";
   exit $error;
 }
-if ($output !~ /^The group `addusertest\d+' already exists as a system group\. Exiting\.\n$/ ) {
+if ($output !~ /^addgroup: The group `addusertest\d+' already exists as a system group\. Exiting\.\n$/ ) {
   print "failed\n  $cmd returned unexpected output ($output)\n";
   exit 1;
 }
