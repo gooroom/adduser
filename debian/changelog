@@ -8,14 +8,13 @@ adduser (3.101.0) UNRELEASED; urgency=low
   * remove shell script tests, they are no longer used
 
   [ Stephen Gran ]
-  * addsysgroup action was calling existing_group_ok() before defining
-    $new_group, and exiting with wrong return code if user existed but was not
-    a system group.  (closes: #407231)
-  * Update test9.pl to not fail if group being added exists, but has a
-    different gid than the one we are looking for.
+  * existing_group_ok was not properly differentiating between an existing
+    user group and an existing system group.  (closes: #407231)
   * Test suite documentation update
+  * lib_test.pl did not properly handle out of sequence or gappy usernames in
+    getpwent or getgrent loops.
 
- -- Stephen Gran <sgran@debian.org>  Wed, 17 Jan 2007 14:37:32 +0000
+ -- Stephen Gran <sgran@debian.org>  Wed, 17 Jan 2007 18:35:22 +0000
 
 adduser (3.101) unstable; urgency=low
 
