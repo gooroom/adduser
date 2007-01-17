@@ -248,17 +248,20 @@ if ($action eq "addsysgroup") {
     my $ret = existing_group_ok($new_name, $new_gid);
 
     if ($ret == 3) {
-	printf (gtx("The group `%s' already exists as a system group. Exiting.\n"), $new_name) if $verbose;
+        print STDERR "$0: ";
+	printf STDERR (gtx("The group `%s' already exists as a system group. Exiting.\n"), $new_name) if $verbose;
 	exit 0;
     }
 
     if ($ret == 1) {
-	printf (gtx("$0: The group `%s' already exists and is not a system group.\n"), $new_name) if $verbose;
+        print STDERR "$0: ";
+	printf STDERR (gtx("The group `%s' already exists and is not a system group.\n"), $new_name) if $verbose;
 	exit 1;
     }
 
     if ($ret == 2) {
-	printf (gtx("The group `%s' already exists, but has a different GID. Exiting.\n"), $new_name) if $verbose;
+        print STDERR "$0: ";
+	printf STDERR (gtx("The group `%s' already exists, but has a different GID. Exiting.\n"), $new_name) if $verbose;
 	exit 1;
     }
 
