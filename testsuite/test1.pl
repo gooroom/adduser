@@ -1,14 +1,17 @@
 #!/usr/bin/perl -w
-#
+
+# expect:
+#  - a new system user $USER
+#  - added to group nogroup
+#  - home directory /home/$USER
+#  - removal of home directory works
 
 use strict;
-
 use lib_test;
 
 my $groupname = "nogroup";
 my $username = find_unused_name(); 
 my $cmd = "adduser --system $username";
-
 
 if (!defined (getpwnam($username))) {
 	print "Testing $cmd... ";

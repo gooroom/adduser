@@ -1,5 +1,12 @@
 #!/usr/bin/perl -w
-#
+
+# expect:
+#  - a new non-system group $groupname
+#  - readding the group fails
+#  - readding the group as a system group fails
+#  - a new system group $groupname
+#  - readding the group succeeds
+#  - readding the group as a non-system group fails
 
 use strict;
 

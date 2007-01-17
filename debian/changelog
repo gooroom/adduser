@@ -13,8 +13,9 @@ adduser (3.101.0) UNRELEASED; urgency=low
     a system group.  (closes: #407231)
   * Update test9.pl to not fail if group being added exists, but has a
     different gid than the one we are looking for.
+  * Test suite documentation update
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 17 Jan 2007 15:27:41 +0100
+ -- Stephen Gran <sgran@debian.org>  Wed, 17 Jan 2007 14:37:32 +0000
 
 adduser (3.101) unstable; urgency=low
 

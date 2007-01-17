@@ -1,8 +1,15 @@
 #!/usr/bin/perl -w
-#
+
+# expect:
+#  - a new system user $USER
+#  - Added to all groups in extra_groups
+#  - a new group
+#  - $USER added to new group
+#  - Removal of $USER works
+#  - removal of new group works
+#  - system users do not get added to extra_groups
 
 use strict;
-
 use lib_test;
 
 my $username = find_unused_name(); 

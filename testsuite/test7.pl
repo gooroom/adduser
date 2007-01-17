@@ -1,14 +1,15 @@
 #!/usr/bin/perl -w
-#
+
+# expect:
+#  - a new system user $USER
+#  - Second execution of command does not return an error.
 
 use strict;
-
 use lib_test;
 
 my $username = find_unused_name();
 
 my $cmd = "adduser --system $username";
-
 
 if (!defined (getpwnam($username))) {
 	print "Testing $cmd... ";
@@ -24,11 +25,6 @@ if (!defined (getpwnam($username))) {
           print "failed\n double execution with same parameters showed an error (return code $error)\n";
 	  exit $error;
 	}
-
-# expect:
-#  - a new user $USER
-#  - added to group nogroup
-#  - a home directory
 
 	assert(check_user_exist ($username));
 	assert(check_homedir_exist ($username));

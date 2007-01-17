@@ -1,8 +1,11 @@
 #!/usr/bin/perl -w
-#
+
+# expect:
+#  - a new user $USER
+#  - added to group nogroup
+#  - no home directory /home/$USER
 
 use strict;
-
 use lib_test;
 
 my $groupname = "nogroup";
@@ -19,11 +22,6 @@ if (!defined (getpwnam($username))) {
 	  print "failed\n  adduser returned an errorcode != 0 ($error)\n";
 	  exit $error;
 	}
-
-# expect:
-#  - a new user $USER
-#  - added to group nogroup
-#  - no home directory /home/$USER
 
 	assert(check_user_exist ($username));
 	assert(check_homedir_not_exist($homedir));	
