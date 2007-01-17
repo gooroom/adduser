@@ -5,6 +5,7 @@ adduser (3.101.0) UNRELEASED; urgency=low
   [ Marc Haber ]
   * Add testsuite test9.pl to catch the bug from #407231
   * Some testsuite tweaks
+  * remove shell script tests, they are no longer used
 
   [ Stephen Gran ]
   * addsysgroup action was calling existing_group_ok() before defining
@@ -13,7 +14,7 @@ adduser (3.101.0) UNRELEASED; urgency=low
   * Update test9.pl to not fail if group being added exists, but has a
     different gid than the one we are looking for.
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 17 Jan 2007 15:22:56 +0100
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 17 Jan 2007 15:27:41 +0100
 
 adduser (3.101) unstable; urgency=low
 
