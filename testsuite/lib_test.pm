@@ -80,6 +80,14 @@ sub find_unused_gid {
   }
 }
 
+sub find_unused_groupname {
+  my $i = 1;
+  setgrent();
+  while (defined(getgrnam("$user_prefix$i"))) {$i++;}
+  endgrent();
+  return "$user_prefix$i";
+}
+
 # checking routines
 
 sub check_user_exist {
