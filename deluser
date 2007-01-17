@@ -338,7 +338,8 @@ if($action eq "deluser") {
 if($action eq "delgroup") {
     &invalidate_nscd();
     unless(exist_group($group)) {
-	fail (3 ,gtx("The group `%s' does not exist.\n"),$group);
+	printf( gtx("The group `%s' does not exist.\n"),$group) if $verbose;
+        exit 3;
     }
     my($dummy,$gid,$members);
     if( !(($dummy, $dummy, $gid, $members ) = getgrnam($group)) ) {

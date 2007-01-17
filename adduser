@@ -255,7 +255,7 @@ if ($action eq "addsysgroup") {
 
     if ($ret == 1) {
         print STDERR "$0: ";
-	printf STDERR (gtx("The group `%s' already exists and is not a system group.\n"), $new_name) if $verbose;
+	printf STDERR (gtx("The group `%s' already exists and is not a system group. Exiting.\n"), $new_name) if $verbose;
 	exit 1;
     }
 
