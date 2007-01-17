@@ -51,13 +51,21 @@ sub find_unused_uid {
 sub find_unused_name {
   my $i = 1;
   setpwent();
-  while (defined(getpwnam("$user_prefix$i"))) {$i++;}
+  while (my $name = getpwent) {
+    if ($name =~ /$user_prefix(\d+)/) {
+      $i = $1>$i?$1:$i;
+    }
+  }
   endpwent();
   my $j = 1;
   setgrent();
-  while (defined(getgrnam("$user_prefix$j"))) {$j++;}
+  while (my $name = getgrent) {
+    if ($name =~ /$user_prefix(\d+)/) {
+      $j = $1>$j?$1:$j;
+    }
+  }
   endgrent();
-  return "$user_prefix".(($i>$j)?$i:$j);
+  return "$user_prefix".(($i>$j)?++$i:++$j);
 }
 
 sub find_unused_gid {
