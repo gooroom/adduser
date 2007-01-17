@@ -48,12 +48,16 @@ sub find_unused_uid {
   }
 }
 
-sub find_unused_username {
+sub find_unused_name {
   my $i = 1;
   setpwent();
   while (defined(getpwnam("$user_prefix$i"))) {$i++;}
   endpwent();
-  return "$user_prefix$i";
+  my $j = 1;
+  setgrent();
+  while (defined(getgrnam("$user_prefix$j"))) {$j++;}
+  endgrent();
+  return "$user_prefix".(($i>$j)?$i:$j);
 }
 
 sub find_unused_gid {
@@ -78,14 +82,6 @@ sub find_unused_gid {
     print "Haven't found a unused gid in range ($low_gid - $high_gid)\nExiting ...\n";
     exit 1;
   }
-}
-
-sub find_unused_groupname {
-  my $i = 1;
-  setgrent();
-  while (defined(getgrnam("$user_prefix$i"))) {$i++;}
-  endgrent();
-  return "$user_prefix$i";
 }
 
 # checking routines

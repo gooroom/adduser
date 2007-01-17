@@ -14,9 +14,12 @@ cp /etc/passwd $PASSWD_BAK
 
 for a in off on; do
   for i in ./test*.pl ; do
-    shadowconfig $a
+    if ! shadowconfig $a > /dev/null; then
+      echo "shadowconfig $a failed"
+      exit 1
+    fi
     echo
-    echo "Starting $i"
+    echo "Starting $i (shadow $a)"
     /usr/bin/perl $i
     if [ "$?" != "0" ]; then
       FAILED="$FAILED $i($a)"

@@ -5,7 +5,7 @@ use strict;
 
 use lib_test;
 
-my $username = find_unused_username(); 
+my $username = find_unused_name(); 
 my $cmd = "adduser --gecos test --disabled-password --add_extra_groups $username";
 
 my %config;
@@ -28,7 +28,7 @@ if (!defined (getpwnam($username))) {
 	print "ok\n";
 }
 
-my $newgroup = find_unused_username();
+my $newgroup = find_unused_name();
 
 $cmd = "addgroup $newgroup";
 unless (defined getgrnam($newgroup)) {
@@ -82,7 +82,7 @@ unless (!defined getgrnam($newgroup)) {
         print "ok\n";
 }
 
-my $sysusername = find_unused_username(); 
+my $sysusername = find_unused_name(); 
 $cmd = "adduser --system --gecos test --disabled-password --add_extra_groups $sysusername";
 
 if (!defined (getpwnam($sysusername))) {

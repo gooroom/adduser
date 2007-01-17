@@ -7,7 +7,7 @@ use lib_test;
 
 my $error;
 my $output;
-my $groupname = find_unused_groupname();
+my $groupname = find_unused_name();
 my $cmd = "addgroup $groupname";
 
 if (!defined (getgrnam($groupname))) {
@@ -59,7 +59,7 @@ if ($output !~ /^addgroup: The group `addusertest\d+' already exists and is not 
 }
 print "ok\n";
 
-my $sysgroupname = find_unused_groupname();
+my $sysgroupname = find_unused_name();
 $cmd = "addgroup --system $sysgroupname";
 
 if (!defined (getgrnam($sysgroupname))) {

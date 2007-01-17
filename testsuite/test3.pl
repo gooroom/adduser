@@ -6,7 +6,7 @@ use strict;
 use lib_test;
 
 my $groupname = "nogroup";
-my $username = find_unused_username();
+my $username = find_unused_name();
 my $cmd = "adduser --system --no-create-home $username";
 
 
