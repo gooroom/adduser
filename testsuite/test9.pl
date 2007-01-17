@@ -89,9 +89,7 @@ if (!defined (getgrnam($sysgroupname))) {
 # now testing whether adding the group again passes as it should
 # ("already exists as a system group")
 
-my $gid = getgrnam($sysgroupname);
-
-$cmd = "addgroup --system $sysgroupname --gid $gid" ;
+$cmd = "addgroup --system $sysgroupname" ;
 print "Testing (9.5) $cmd... ";
 $output=`$cmd 2>&1`;
 $error = ($?>>8);
