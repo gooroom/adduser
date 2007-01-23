@@ -619,9 +619,12 @@ sub homedir {
 
 
 # create_homedir -- create the homedirectory
-# parameter 1: $copy_skeleton: 
-#       if 0  -> don't copy the skeleton data
-#       if 1  -> copy the files in /etc/skel to the newly created home directory
+# parameter 
+#   1: $copy_skeleton: 
+#     if 0  -> don't copy the skeleton data
+#     if 1  -> copy the files in /etc/skel to the newly created home directory
+# return values:
+#   none
 sub create_homedir {
   my ($copy_skeleton) = @_;
 
@@ -666,8 +669,11 @@ sub create_homedir {
   }
 }
 
-# create a directory and all parent directories
-# we don't care about the rights and so on
+# mktree: create a directory and all parent directories, we don't care about the rights and so on
+# parameters:
+#   tree: the path 
+# return values:
+#   none
 sub mktree {
     my($tree) = @_;
     my($done, @path);
@@ -684,9 +690,14 @@ sub mktree {
     return 1;
 }
 
-# returns 0 if the the user doesn't exist or
-# returns 1 if the user already exists with the specified uid (or $new_uid wasn't specified)
-# returns 2 if the user already exists, but $new_uid doesn't matches its uid
+# existing_user_ok: check if there's already a user present on the system which satisfies the requirements
+# parameter:
+#   new_name: the name of the user to check
+#   new_uid : the UID of the user
+# return values:
+#   0 if the the user doesn't exist 
+#   1 if the user already exists with the specified uid (or $new_uid wasn't specified)
+#   2 if the user already exists, but $new_uid doesn't matches its uid 
 sub existing_user_ok {
     my($new_name,$new_uid) = @_;
     my ($dummy1,$dummy2,$uid);
@@ -697,6 +708,7 @@ sub existing_user_ok {
 	if (! defined($new_uid)) { 
 		return 1;
 	}
+        # TODO: do we really need this code? Range check shouldn't performed here
 	if( $uid >= $config{"first_system_uid"} &&
 	    $uid <= $config{"last_system_uid" } ) {
 		return 2;
@@ -706,14 +718,21 @@ sub existing_user_ok {
     }
 }
 
-# returns 0 if the group doesn't exist or
-# returns 1 if the group already exists with the specified gid (or $new_gid wasn't specified)
-# returns 2 if the group already exists, but $new_gid doesn't match its gid 
-# returns 3 if the group already exists inside the system range
+# existing_group_ok: check if there's already a group which satiesfies the requirements
+# parameter:
+#   new_name: the name of the group
+#   new_gid : the UID of the group
+# return values:
+#   0 if the group doesn't exist
+#   1 if the group already exists with the specified gid (or $new_gid wasn't specified)
+#   2 if the group already exists, but $new_gid doesn't match its gid 
+#   3 if the group already exists inside the system range
 sub existing_group_ok {
     my($new_name,$new_gid) = @_;
     my ($dummy1,$dummy2,$gid);
     if (($dummy1,$dummy2,$gid) = getgrnam($new_name)) {
+
+        # TODO: is this check required? There shouldn't be any gid outside of our allowed range anyways ...
 	if( $gid >= $config{"first_system_gid"} &&
 	    $gid <= $config{"last_system_gid" } ) {
 		return 3;
@@ -733,7 +752,11 @@ sub existing_group_ok {
 
 
 
-
+# check_user_group: ???
+# parameters:
+#   system: 0 if the user isn't a system user, 1 otherwise
+# return values:
+#   
 sub check_user_group {
     my ($system) = @_;
     if( !$system || !existing_user_ok($new_name, $new_uid) ) {
@@ -764,7 +787,16 @@ sub check_user_group {
 }
 
 
-# copy files, directories, symlinks    
+# copy_to_dir :
+# parameters:
+#   fromdir
+#   file
+#   todir
+#   newi
+#   newg
+#   sgiddir
+# return values:
+#   none
 sub copy_to_dir {
     my($fromdir, $file, $todir, $newu, $newg, $sgiddir) = @_;
 
@@ -807,7 +839,11 @@ sub copy_to_dir {
 }
        
 
-# check if the given name matches some sanity checks
+# checkname: perform some sanity checks
+# parameters:
+#   none
+# return values:
+#   none (exits on error)
 sub checkname {
     my ($name) = @_;
     if ($name !~ /^[_.A-Za-z0-9][-\@_.A-Za-z0-9]*\$?$/) {
@@ -832,8 +868,12 @@ option to relax this check or reconfigure NAME_REGEX.\n"), $0);
     }
 }
 
-# return the first available uid in given range
-# return -1 if no free uid is available
+# first_avail_uid: return the first available uid in given range
+# parameters:
+#   min, max: the range
+# return values:
+#   -1 if no free uid is available
+#  otherwise the choosen uid
 sub first_avail_uid {
     my ($min, $max) = @_;
     printf (gtx("Selecting UID from range %d to %d ...\n"),$min,$max) if ($verbose > 1);
@@ -846,8 +886,12 @@ sub first_avail_uid {
     return -1; # nothing available
 }
 
-# return the first available gid in given range
-# return -1 if no free gid is available
+# first_avail_gid: return the first available gid in given range
+# parameters:
+#   min, max: the range
+# return values:
+#   -1 if no free gid is available
+#   otherwise the choosen gid
 sub first_avail_gid {
     my ($min, $max) = @_;
     printf (gtx("Selecting GID from range %d to %d ...\n"),$min,$max) if ($verbose > 1);
