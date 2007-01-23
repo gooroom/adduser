@@ -263,6 +263,18 @@ Add new user to extra groups defined in adduser.conf
 .TP
 .B \-\-version
 Display version and copyright information.
+
+.SH EXIT VALUES
+
+.TP
+.B 0 
+The user exists as specified. This can have 2 causes: The user was created by adduser or the user was already present on the system before adduser was invoked. Invoking adduser a second time with the same parameters as before also returns 0.
+.TP
+.B 1
+Creating the user or group failed because it was already present with other UID/GID than specified. The username or groupname was rejected because of a mismatch with the configured regular expressions, see adduser.conf(5). Adduser has been aborted by a signal.
+.br
+Or for many other yet undocumented reasons which are printed to console then.
+
 .SH FILES
 /etc/adduser.conf
 .SH "SEE ALSO"
@@ -271,7 +283,7 @@ Debian Policy 9.2.2.
 
 .SH COPYRIGHT
 Copyright (C) 1997, 1998, 1999 Guy Maor. Modifications by Roland
-Bauerschmidt and Marc Haber.
+Bauerschmidt and Marc Haber. Additional patches by Joerg Hoh and Stephen Gran.
 .br
 Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original
 Debian 
