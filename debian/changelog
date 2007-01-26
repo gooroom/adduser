@@ -1,8 +1,12 @@
 adduser (3.102.0) UNRELEASED; urgency=low
 
+  [ Marc Haber ]
   * NOT RELEASED YET
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 19 Jan 2007 08:55:26 +0100
+  [ Stephen Gran ]
+  * Add myself to Uploaders.
+
+ -- Stephen Gran <sgran@debian.org>  Fri, 26 Jan 2007 18:10:15 +0000
 
 adduser (3.102) unstable; urgency=low
 
