@@ -274,7 +274,7 @@ if ($action eq "addsysgroup") {
         $new_gid = &first_avail_gid($config{"first_system_gid"},
 				   $config{"last_system_gid"});
         if ($new_gid == -1) {
-	    print STDERR "$0: " if $verbose;
+	    print STDERR "$0: ";
 	    printf STDERR gtx("No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"),$config{"first_system_gid"},$config{"last_system_gid"};
             dief (gtx("The group `%s' was not created.\n"),$new_name);
         }
@@ -304,7 +304,7 @@ if ($action eq "addgroup") {
 				   $config{"last_gid"});
 
         if ($new_gid == -1) {
-	    print STDERR "$0: " if $verbose;
+	    print STDERR "$0: ";
 	    printf STDERR gtx("No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"),$config{"first_gid"},$config{"last_gid"};
             dief (gtx("The group `%s' was not created.\n"),$new_name);
         }
@@ -374,7 +374,7 @@ if ($action eq "addsysuser") {
 	$new_uid = &first_avail_uid($config{"first_system_uid"},
 				   $config{"last_system_uid"});
         if ($new_uid == -1) {
-	    print STDERR "$0: " if $verbose;
+	    print STDERR "$0: ";
 	    printf STDERR gtx("No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"),$config{"first_system_uid"},$config{"last_system_uid"};
             dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
@@ -386,7 +386,7 @@ if ($action eq "addsysuser") {
 	$new_uid = &first_avail_uid($config{"first_system_uid"},
 				   $config{"last_system_uid"});
         if ($new_uid == -1) {
-	    print STDERR "$0: " if $verbose;
+	    print STDERR "$0: ";
 	    printf STDERR gtx("No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"),$config{"first_system_uid"},$config{"last_system_uid"};
 	    dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
@@ -463,7 +463,7 @@ if ($action eq "adduser") {
 				   $last_uid);
 				
         if ($new_uid == -1) {
-	    print STDERR "$0: " if $verbose;
+	    print STDERR "$0: ";
             printf STDERR gtx("No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"),$first_uid,$last_uid;
 	    dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
@@ -475,7 +475,7 @@ if ($action eq "adduser") {
 	$new_uid = &first_avail_uid($first_uid,
 				   $last_uid);
 	if ($new_uid == -1) {
-	    print STDERR "$0: " if $verbose;
+	    print STDERR "$0: ";
 	    printf STDERR gtx("No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"),$config{"first_uid"},$config{"last_uid"};
             dief (gtx("The user `%s' was not created.\n"),$new_name);
         }
