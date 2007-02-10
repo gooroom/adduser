@@ -5,8 +5,10 @@ adduser (3.102.0) UNRELEASED; urgency=low
 
   [ Stephen Gran ]
   * Add myself to Uploaders.
+  * print "$0: " needs to be conditional on $verbose, just like the printf
+    following it
 
- -- Stephen Gran <sgran@debian.org>  Fri, 26 Jan 2007 18:10:15 +0000
+ -- Stephen Gran <sgran@debian.org>  Sat, 10 Feb 2007 11:38:33 +0000
 
 adduser (3.102) unstable; urgency=low
 
