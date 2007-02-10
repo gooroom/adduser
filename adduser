@@ -187,6 +187,8 @@ if ((defined($special_home)) && ($special_home !~ m+^/+ )) {
 if (defined($special_home) && $verbose) {
     print gtx("Warning: The home dir you specified already exists.\n")
       if (!defined($no_create_home) && -d $special_home);
+    # post etch: see 399992
+    #print gtx("Warning: The home dir you specified can't be accessed: $!\n")
     print gtx("Warning: The home dir you specified does not exist.\n")
       if (defined($no_create_home) && ! -d $special_home);
 }
