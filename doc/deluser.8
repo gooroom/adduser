@@ -115,6 +115,22 @@ accidentally deleting non-system users/groups. Additionally, if the
 user does not exist, no error value is returned. This option is mainly
 for use in Debian package maintainer scripts.
 .TP
+.B \-\-backup
+Backup all files contained in the userhome and the mailspool-file to a file named
+/$user.tar.bz2 or /$user.tar.gz.
+.TP
+.B \-\-backup-to
+Place the backup files not in / but in the directory specified by this parameter.
+.TP
+.B \-\-remove-home
+Remove the home directory of the user and its mailspool. If \-\-backup is specified,
+the files are deleted after having performed the backup.
+.TP
+.B \-\-remove-all-files
+Remove all files from the system owned by this user. Note: \-\-remove-home does
+not have an effect any more. If \-\-backup is specified, the files are deleted after
+having performed the backup.
+.TP
 .B \-\-version
 Display version and copyright information.
 .SH "RETURN VALUE"
