@@ -998,7 +998,6 @@ adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
 [--disabled-login] USER
    Add a system user
 
-adduser --group [--gid ID] GROUP
 addgroup [--gid ID] GROUP
    Add a user group
 
