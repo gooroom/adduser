@@ -14,8 +14,9 @@ adduser (3.102.0) UNRELEASED; urgency=low
     (Closes: #410366)
   * updated deluser.8 and documented some more parameters
     (Closes: #270247)
+  * Be more verbose in error message (Closes: #397916)
 
- -- Joerg Hoh <joerg@joerghoh.de>  Sat, 24 Feb 2007 19:24:11 +0100
+ -- Joerg Hoh <joerg@joerghoh.de>  Sat, 24 Feb 2007 19:35:49 +0100
 
 adduser (3.102) unstable; urgency=low
 
