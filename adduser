@@ -109,8 +109,8 @@ our @names;
 # Parse options, sanity checks
 unless ( GetOptions ("quiet|q" => sub { $verbose = 0 },
             "force-badname" => \$allow_badname,
-	    "help|h" => sub { &usage(); exit 1 },
-	    "version|v" => sub { &version(); exit 1 },
+	    "help|h" => sub { &usage(); exit 0 },
+	    "version|v" => sub { &version(); exit 0 },
 	    "system" => \$found_sys_opt,
 	    "group" => \$found_group_opt,
 	    "ingroup=s" => \$ingroup_name,
