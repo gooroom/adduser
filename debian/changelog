@@ -10,7 +10,7 @@ adduser (3.102.0) UNRELEASED; urgency=low
   [ Stephen Gran ]
   * Add myself to Uploaders.
   * print "$0: " needs to be conditional on $verbose, just like the printf
-    following it
+    following it (closes: #410370)
   * deluser: wrong format passed to dief, making it print oddly
     (closes: #412204)
   * Translations:
