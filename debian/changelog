@@ -1,4 +1,4 @@
-adduser (3.102.0) UNRELEASED; urgency=low
+adduser (3.102.0) unstable; urgency=low
 
   [ Joerg Hoh ]
   * Updated adduser.8
@@ -16,7 +16,7 @@ adduser (3.102.0) UNRELEASED; urgency=low
   * Translations:
     hu (closes: #410792)
 
- -- Stephen Gran <sgran@debian.org>  Mon, 26 Feb 2007 21:35:54 +0000
+ -- Stephen Gran <sgran@debian.org>  Mon, 26 Feb 2007 21:52:17 +0000
 
 adduser (3.102) unstable; urgency=low
 
