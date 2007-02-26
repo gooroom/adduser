@@ -11,8 +11,10 @@ adduser (3.102.0) UNRELEASED; urgency=low
   * Add myself to Uploaders.
   * print "$0: " needs to be conditional on $verbose, just like the printf
     following it
+  * deluser: wrong format passed to dief, making it print oddly 
+    (closes: #412204)
 
- -- Stephen Gran <sgran@debian.org>  Mon, 26 Feb 2007 21:21:10 +0000
+ -- Stephen Gran <sgran@debian.org>  Mon, 26 Feb 2007 21:30:45 +0000
 
 adduser (3.102) unstable; urgency=low
 

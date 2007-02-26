@@ -382,7 +382,7 @@ if($action eq "deluserfromgroup")
 	fail (3, gtx("The group `%s' does not exist.\n"),$group);
     }
     if($maingroup eq $group) {
-	fail (7, "$0: ",gtx("You may not remove the user from their primary group.\n"));
+	fail (7, gtx("You may not remove the user from their primary group.\n"));
     }
 
     my @members = get_group_members($group);
