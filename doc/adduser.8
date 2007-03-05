@@ -190,16 +190,19 @@ Like \-\-disabled-login, but logins are still possible (for example using
 SSH RSA keys) but not using password authentication.
 .TP
 .B \-\-force\-badname
-By default, user and group names are checked against a configurable
-regular expression. This option forces
+By default, user and group names are checked against the configurable
+regular expression 
+.B NAME_REGEX 
+specified in the configuration file. This option forces
 .B adduser
 and 
 .B addgroup
 to apply only a weak check for validity of the name.
 .TP
 .B \-\-gecos GECOS
-Set the gecos field for the new entry generated.  adduser will not ask
-for finger information if this option is given.
+Set the gecos field for the new entry generated.
+.B adduser 
+will not ask for finger information if this option is given.
 .TP
 .B \-\-gid ID
 When creating a group, this option forces the new groupid to be the
@@ -230,7 +233,9 @@ configuration file.
 .TP
 .B \-\-ingroup GROUP
 Add the new user to GROUP instead of a usergroup or the default group
-defined by USERS_GID in the adduser.conf file.
+defined by 
+.B USERS_GID 
+in the configuration file.
 .TP
 .B \-\-no-create-home
 Do not create the home directory, even if it doesn't exist.
@@ -242,20 +247,25 @@ Suppress informational messages, only show warnings and errors.
 Be verbose, most useful if you want to nail down a problem with adduser.
 .TP
 .B \-\-system
-Create a system user.
+Create a system user or group.
 .TP
 .B \-\-uid ID
-Force the new userid to be the given number.  adduser will fail if the userid
-is already taken.
+Force the new userid to be the given number.
+.B adduser 
+will fail if the userid is already taken.
 .TP
 .B \-\-firstuid ID
-Override the first uid in the range that the uid is chosen from.
+Override the first uid in the range that the uid is chosen from (overrides
+.B FIRST_UID
+specified in the configuration file).
 .TP
 .B \-\-lastuid ID
-Override the last uid in the range that the uid is chosen from.
+Override the last uid in the range that the uid is chosen from (
+.B LAST_UID
+)
 .TP
 .B \-\-add_extra_groups
-Add new user to extra groups defined in adduser.conf
+Add new user to extra groups defined in the configuration file.
 .TP
 .B \-\-version
 Display version and copyright information.
