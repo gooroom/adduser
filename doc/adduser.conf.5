@@ -24,7 +24,7 @@ Each line holds a single value pair in the form
 .IR option " = " value .
 Double or single quotes are allowed around the value, as is whitespace
 around the equals sign.  Comment lines must have a hash sign (#) in the
-first line.
+first column.
 
 The valid configuration options are:
 .TP
@@ -91,7 +91,7 @@ default value is
 .TP
 \fBDIR_MODE\fP
 If set to a valid value (e.g. 0755 or 755), directories created will have
-the specified permissions. Otherwise 0755 is used as default.
+the specified permissions as umask. Otherwise 0755 is used as default.
 .TP
 \fBSETGID_HOME\fP
 If this is set to
@@ -109,7 +109,7 @@ that user.  The default is empty.
 .TP
 \fBNAME_REGEX\fB
 User names are checked against this regular expression. If the name
-doesn't match this regexp, user creation is refused unless
+doesn't match this regexp, user creation in adduser is refused unless
 --force-badname is set. With --force-badname set, only weak checks are
 performed. The default is the most conservative ^[a-z][-a-z0-9]*$.
 .TP
