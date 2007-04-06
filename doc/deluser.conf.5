@@ -21,13 +21,13 @@ Each option takes the form
 Double or single quotes are allowed around the value.  Comment lines
 must have a pound sign (#) at the beginning of the line.
 
-deluser(8) and delgroup(8) also read /etc/adduser.conf.
+deluser(8) and delgroup(8) also read /etc/adduser.conf, see adduser.conf(8)
 
 The valid configuration options are:
 .TP
 \fBREMOVE_HOME\fP
 Removes the home directory and mail spool of the user to be removed.
-Value may be 0 or 1.
+Value may be 0 (don't delete) or 1 (do delete).
 .TP
 \fBREMOVE_ALL_FILES\fP
 Removes all files on the system owned by the user to be removed.
