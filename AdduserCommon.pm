@@ -130,7 +130,7 @@ sub get_group_members
       my $group = shift;
       my @members;
       foreach (split(/ /, (getgrnam($group))[3])) {
-	  if( getpwnam($_) ) {
+	  if (getpwuid(getpwnam($_)) eq $_ ) {
 	      push @members, $_;
 	  }
       }

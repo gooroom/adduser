@@ -8,6 +8,8 @@ adduser (3.102.0) unstable; urgency=low
     (Closes: #270247)
   * added a specific return value if deluser required perl modules.
     (Closes: #421089)
+  * get_group_members never returned root as a member of a group.
+    (Closes: #428144)
 
   [ Stephen Gran ]
   * Add myself to Uploaders.
@@ -18,8 +20,7 @@ adduser (3.102.0) unstable; urgency=low
   * Translations:
     hu (closes: #410792)
 
-
- -- Joerg Hoh <joerg@joerghoh.de>  Sun, 17 Jun 2007 09:53:22 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Sun, 17 Jun 2007 11:22:19 +0200
 
 adduser (3.102) unstable; urgency=low
 
