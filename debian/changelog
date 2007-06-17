@@ -6,6 +6,8 @@ adduser (3.102.0) unstable; urgency=low
     (Closes: #410366)
   * updated deluser.8 and documented some more parameters
     (Closes: #270247)
+  * added a specific return value if deluser required perl modules.
+    (Closes: #421089)
 
   [ Stephen Gran ]
   * Add myself to Uploaders.
@@ -16,7 +18,8 @@ adduser (3.102.0) unstable; urgency=low
   * Translations:
     hu (closes: #410792)
 
- -- Stephen Gran <sgran@debian.org>  Mon, 26 Feb 2007 21:52:17 +0000
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Sun, 17 Jun 2007 09:53:22 +0200
 
 adduser (3.102) unstable; urgency=low
 

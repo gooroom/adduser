@@ -160,7 +160,7 @@ foreach(keys(%pconfig)) {
 undef (%pconfig);
 
 if (($config{remove_home} || $config{remove_all_files} || $config{backup}) && ($install_more_packages)) {
-    dief (gtx("In order to use the --remove-home, --remove-all-files, and --backup features,
+    fail (8, gtx("In order to use the --remove-home, --remove-all-files, and --backup features,
 you need to install the `perl-modules' package. To accomplish that, run
 apt-get install perl-modules.\n"));
 }
