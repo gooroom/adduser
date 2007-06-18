@@ -1,4 +1,4 @@
-adduser (3.102.0) unstable; urgency=low
+adduser (3.103) unstable; urgency=low
 
   [ Joerg Hoh ]
   * Updated adduser.8
