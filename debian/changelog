@@ -2,8 +2,9 @@ adduser (3.104) unstable; urgency=low
 
   * Added useful information to warning in adduser. Thanks to Marc Haber for
     the patch and Peter Eisentraut for the report, Closes: #397916
+  * Made the GID ranges also configurable. CLoses: #415024
 
- -- Joerg Hoh <joerg@joerghoh.de>  Wed, 20 Jun 2007 22:34:03 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Wed, 20 Jun 2007 22:50:13 +0200
 
 adduser (3.103) unstable; urgency=low
 
