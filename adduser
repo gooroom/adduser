@@ -640,9 +640,7 @@ sub create_homedir {
       my $home_uid = $homedir_stat[4];
       my $home_gid = $homedir_stat[5];
       if (($home_uid != $new_uid) || ($home_gid != $new_gid)) {
-          # post-etch, see #397916
-	  # warnf gtx("Warning: The home directory `%s' does not belong to the user you are currently creating.\n"), $home_dir;
-          warnf gtx("Warning: that home directory does not belong to the user you are currently creating.\n");
+	  warnf gtx("Warning: The home directory `%s' does not belong to the user you are currently creating.\n"), $home_dir;
       }
       undef @homedir_stat; undef $home_uid; undef $home_gid;
   }
