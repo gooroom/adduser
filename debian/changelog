@@ -4,9 +4,11 @@ adduser (3.104) unstable; urgency=low
     the patch and Peter Eisentraut for the report, Closes: #397916
   * Made the GID ranges also configurable. CLoses: #415024
   * Clarified error message when specifying an unaccessible home directory;
-    thanks to Alexander Klauer and Stephan Gran. Closes #399992
+    thanks to Alexander Klauer and Stephan Gran. Closes: #399992
+  * Removed race condition; don't add too much (LDAP|NIS|...) user to local
+    groups. Closes: #294579
 
- -- Joerg Hoh <joerg@joerghoh.de>  Wed, 20 Jun 2007 23:00:54 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Sun, 24 Jun 2007 11:25:45 +0200
 
 adduser (3.103) unstable; urgency=low
 

@@ -187,6 +187,8 @@ if ((defined($special_home)) && ($special_home !~ m+^/+ )) {
 if (defined($special_home) && $verbose) {
     printf gtx("Warning: The home dir %s you specified already exists.\n",$special_home)
       if (!defined($no_create_home) && -d $special_home);
+    #FIXME: Testing adduser --system --home /var/addusertest81 --no-create-home addusertest81... 
+    #       Use of uninitialized value in printf at /usr/sbin/adduser line 190.
     printf gtx("Warning: The home dir %s you specified can't be accessed: $!\n",$special_home)
       if (defined($no_create_home) && ! -d $special_home);
 }
@@ -337,15 +339,8 @@ if ($action eq "addusertogroup") {
     printf gtx("Adding user `%s' to group `%s' ...\n"),$existing_user,$existing_group
 	if $verbose;
     &invalidate_nscd();
-    # FIXME - the next line has a race condition.
-    #&systemcall('usermod', '-G',
-		#join(",", get_users_groups($existing_user), $existing_group), 
-		#$existing_user);
     my $gpasswd = &which('gpasswd');
-    &systemcall($gpasswd, '-M',
-		join(',', get_group_members($existing_group), $existing_user),
-		$existing_group);
-    #&systemcall('gpasswd', '-a',$existing_user,$existing_group);
+    &systemcall($gpasswd, '-a',$existing_user,$existing_group);
     &invalidate_nscd();
     print (gtx("Done.\n")) if $verbose;
     exit 0;
