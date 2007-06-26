@@ -7,8 +7,10 @@ adduser (3.104) unstable; urgency=low
     thanks to Alexander Klauer and Stephan Gran. Closes: #399992
   * Removed race condition; don't add too much (LDAP|NIS|...) user to local
     groups. Closes: #294579
+  * Fix rights to backup files created by userdel, thanks to Vincent Danjean.
+    Closes: #430637
 
- -- Joerg Hoh <joerg@joerghoh.de>  Sun, 24 Jun 2007 11:25:45 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Tue, 26 Jun 2007 22:16:29 +0200
 
 adduser (3.103) unstable; urgency=low
 

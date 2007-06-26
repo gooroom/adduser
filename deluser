@@ -293,7 +293,7 @@ if($action eq "deluser") {
 	  $filesfile->close();
          my $tar = &which('tar');
 	  &systemcall($tar, "-cf", $backup_name, "--files-from", $filesfilename);
-	  chmod 600, $backup_name;
+	  chmod 0600, $backup_name;
          my $rootid = 0;
 	  chown $rootid, $rootid, $backup_name;
 	  unlink($filesfilename);
