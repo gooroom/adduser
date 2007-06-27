@@ -137,6 +137,13 @@ EXTRA_GROUPS (below).
 \fBEXTRA_GROUPS\fB
 This is the list of groups that new non-system users will be added to.
 By default, this list is 'dialout cdrom floppy audio src video lp users'
+.SH NOTES
+.TP
+\fBVALID NAMES\fB
+adduser and addgroup enforce conformity to IEEE Std 1003.1-2001, which allows only the following characters to appear in group and user names: letters, digits, underscores, periods, at signs (@) and dashes. The name may no start with a dash. The "$" sign is allowed at the end of usernames (to conform to samba).
+
+An additional check can be adjusted via the configuration parameter NAME_REGEX to enforce a local policy.
+
 .SH FILES
 .I /etc/adduser.conf
 .SH SEE ALSO

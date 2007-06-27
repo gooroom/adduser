@@ -10,9 +10,10 @@ adduser (3.104) unstable; urgency=low
   * Fix rights to backup files created by userdel, thanks to Vincent Danjean.
     Closes: #430637
   * deluser: also backup symlinks, pipes and sockets; thanks to Vincent
-    Danjean. Closes: #430640 
+    Danjean. Closes: #430640
+  * NAME_REGEX also applies to group names. Closes: #408148 
 
- -- Joerg Hoh <joerg@joerghoh.de>  Wed, 27 Jun 2007 22:19:12 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Wed, 27 Jun 2007 23:14:31 +0200
 
 adduser (3.103) unstable; urgency=low
 
