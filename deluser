@@ -241,6 +241,7 @@ if($action eq "deluser") {
       my(@files,@dirs);
       if($config{"remove_home"} && ! $config{"remove_all_files"}) {
 
+        # collect all files in user home
 	sub home_match {
 	  # according to the manpage
 	  foreach my $mount (@mountpoints) {
@@ -257,6 +258,7 @@ if($action eq "deluser") {
 	      return;
 	    }
 	  }
+
 	  push(@files, $File::Find::name) 
 	    if(-f $File::Find::name || -l $File::Find::name);
 	  push(@dirs, $File::Find::name)
@@ -268,7 +270,8 @@ if($action eq "deluser") {
 	push(@files, "/var/mail/$user")
 	  if(-e "/var/mail/$user");
       } else {
-	
+
+        # collect all files on system belonging to that user
 	sub find_match {
 	  my ($dev,$ino,$mode,$nlink,$uid,$gid);
 	  (($dev,$ino,$mode,$nlink,$uid,$gid) = lstat($_)) &&
@@ -276,7 +279,10 @@ if($action eq "deluser") {
 	      (
 		($File::Find::name =~ /^\/proc\// && ($File::Find::prune = 1)) ||
 		(-f $File::Find::name && push(@files, $File::Find::name)) ||
-		(-d $File::Find::name && push(@dirs, $File::Find::name))
+		(-d $File::Find::name && push(@dirs, $File::Find::name)) ||
+                (-l $File::Find::name && push(@dirs, $File::Find::name)) ||
+                (-s $File::Find::name && push(@dirs, $File::Find::name)) || 
+                (-p $File::Find::name && push(@dirs, $File::Find::name))
 	      );
 	} # sub find_match
 	

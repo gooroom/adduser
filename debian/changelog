@@ -9,8 +9,10 @@ adduser (3.104) unstable; urgency=low
     groups. Closes: #294579
   * Fix rights to backup files created by userdel, thanks to Vincent Danjean.
     Closes: #430637
+  * deluser: also backup symlinks, pipes and sockets; thanks to Vincent
+    Danjean. Closes: #430640 
 
- -- Joerg Hoh <joerg@joerghoh.de>  Tue, 26 Jun 2007 22:16:29 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Wed, 27 Jun 2007 22:19:12 +0200
 
 adduser (3.103) unstable; urgency=low
 
