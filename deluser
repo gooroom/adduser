@@ -169,8 +169,6 @@ apt-get install perl-modules.\n"));
 my ($pw_uid, $pw_gid, $pw_homedir, $gr_gid, $maingroup);
 
 if($user) {
-    #($pw_name,$pw_passwd,$pw_uid,$pw_gid,$pw_quota,$pw_comment,
-    # $pw_gecos,$pw_homedir,$pw_shell,$pw_expire) = getpwnam($user);
     my @passwd = getpwnam($user);
     $pw_uid = $passwd[2];
     $pw_gid = $passwd[3];
@@ -201,6 +199,10 @@ if($action eq "deluser") {
     &invalidate_nscd();
     
     my($dummy1,$dummy2,$uid);
+
+    # Check if there is more than one account with the same uid
+
+
 
     # Don't allow a non-system user to be deleted when --system is given
     # Also, "user does not exist" is only a warning with --system, but an
