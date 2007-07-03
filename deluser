@@ -331,6 +331,10 @@ if($action eq "deluser") {
     }
 
     s_printf (gtx("Removing user `%s' ...\n"),$user);
+    my @members = get_group_members($maingroup);
+    if (@members == 0) {
+        s_printf (gtx("Warning: Removing group `%s', since no other user is part of it.\n"), $maingroup);    
+    }
     my $userdel = &which('userdel');
     &systemcall($userdel, $user);
     &invalidate_nscd();
