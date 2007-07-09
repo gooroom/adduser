@@ -19,7 +19,7 @@ adduser (3.104) unstable; urgency=low
     - Template changes (thanks bubulle!) (closes: #430643)
     - ar (thanks Ossama Khayat <okhayat@yahoo.com>) (closes: #431975)
     - cs (thanks Miroslav Kure <kurem@upcase.inf.upol.cz>) (closes: #431284)
-    - es (thanks Carlos Valdivia Yagüe <valyag@dat.etsit.upm.es>) 
+    - es (thanks Carlos Valdivia Yagüe <valyag@dat.etsit.upm.es>)
     - eu (thanks Piarres Beobide <pi@beobide.net>) (closes: #431347)
     - gl (thanks Jacobo Tarrio <jtarrio@trasno.net>) (closes: #431321)
     - it (thanks Luca Monducci <luca.mo@tiscali.it>) (closes: #432203)
@@ -29,8 +29,9 @@ adduser (3.104) unstable; urgency=low
          (closes: #431719)
     - ru (thanks Yuri Kozlov <kozlov.y@gmail.com>) (closes: #432213)
     - vi (thanks Clytie Siddall <clytie@riverland.net.au>) (closes: #431277)
+  * Touch up invalid variable interpolation in gettext string
 
- -- Stephen Gran <sgran@debian.org>  Mon, 09 Jul 2007 23:41:45 +0100
+ -- Stephen Gran <sgran@debian.org>  Mon, 09 Jul 2007 23:51:21 +0100
 
 adduser (3.103) unstable; urgency=low
 
