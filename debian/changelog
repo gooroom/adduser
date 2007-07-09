@@ -1,5 +1,6 @@
 adduser (3.104) unstable; urgency=low
 
+  [ Joerg Hoh ]
   * Added useful information to warning in adduser. Thanks to Marc Haber for
     the patch and Peter Eisentraut for the report, Closes: #397916
   * Made the GID ranges also configurable. CLoses: #415024
@@ -11,9 +12,25 @@ adduser (3.104) unstable; urgency=low
     Closes: #430637
   * deluser: also backup symlinks, pipes and sockets; thanks to Vincent
     Danjean. Closes: #430640
-  * NAME_REGEX also applies to group names. Closes: #408148 
+  * NAME_REGEX also applies to group names. Closes: #408148
 
- -- Joerg Hoh <joerg@joerghoh.de>  Wed, 27 Jun 2007 23:14:31 +0200
+  [ Stephen Gran ]
+  * Translation and template changes:
+    - Template changes (thanks bubulle!) (closes: #430643)
+    - ar (thanks Ossama Khayat <okhayat@yahoo.com>) (closes: #431975)
+    - cs (thanks Miroslav Kure <kurem@upcase.inf.upol.cz>) (closes: #431284)
+    - es (thanks Carlos Valdivia Yagüe <valyag@dat.etsit.upm.es>) 
+    - eu (thanks Piarres Beobide <pi@beobide.net>) (closes: #431347)
+    - gl (thanks Jacobo Tarrio <jtarrio@trasno.net>) (closes: #431321)
+    - it (thanks Luca Monducci <luca.mo@tiscali.it>) (closes: #432203)
+    - ja (thanks Kenshi Muto <kmuto@debian.org>) (closes: #431184)
+    - ko (thanks Sunjae Park <darehanl@gmail.com>) (closes: #431182)
+    - po (thanks Wojciech Zareba <wojtekz@comp.waw.pl>) (closes: #431549)
+         (closes: #431719)
+    - ru (thanks Yuri Kozlov <kozlov.y@gmail.com>) (closes: #432213)
+    - vi (thanks Clytie Siddall <clytie@riverland.net.au>) (closes: #431277)
+
+ -- Stephen Gran <sgran@debian.org>  Mon, 09 Jul 2007 23:41:45 +0100
 
 adduser (3.103) unstable; urgency=low
 

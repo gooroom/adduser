@@ -13,42 +13,36 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: adduser 3.103\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2004-04-03 11:59+0900\n"
+"POT-Creation-Date: 2007-06-30 09:45+0200\n"
+"PO-Revision-Date: 2007-06-30 22:33+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-JP\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
-msgid "Do you want system wide readable home directories?"
-msgstr "¥Û¡¼¥à¥Ç¥£¥ì¥¯¥È¥ê¤ò¤Û¤«¤Î¥æ¡¼¥¶¤«¤éÆÉ¤á¤ë¤è¤¦¤Ë¤·¤Ş¤¹¤«?"
+#: ../templates:2001
+msgid "Do you want system-wide readable home directories?"
+msgstr "ãƒ›ãƒ¼ãƒ ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ã»ã‹ã®ãƒ¦ãƒ¼ã‚¶ã‹ã‚‰èª­ã‚ã‚‹ã‚ˆã†ã«ã—ã¾ã™ã‹?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"Normally, home directories can be viewed by all users on the system. If you "
-"want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the user. If you are unsure, enable system "
-"wide readable home directories."
-msgstr ""
-"ÄÌ¾ï¡¢¥Û¡¼¥à¥Ç¥£¥ì¥¯¥È¥ê¤Ï¥·¥¹¥Æ¥à¾å¤ÎÁ´¥æ¡¼¥¶¤«¤é¸«¤ë¤³¤È¤¬¤Ç¤­¤Ş¤¹¡£ ¤â¤·¥·"
-"¥¹¥Æ¥à¤Î¥»¥­¥å¥ê¥Æ¥£¤ä¥×¥é¥¤¥Ğ¥·¡¼¤ò²şÁ±¤·¤¿¤±¤ì¤Ğ¡¢¥Û¡¼¥à ¥Ç¥£¥ì¥¯¥È¥ê¤ò¤½¤Î"
-"¥æ¡¼¥¶¤«¤é¤·¤«ÆÉ¤á¤Ê¤¯¤·¤Æ¤·¤Ş¤¦¤³¤È¤¬¤Ç¤­¤Ş¤¹¡£ ¤è¤¯¤ï¤«¤é¤Ê¤±¤ì¤Ğ¡¢¥·¥¹¥Æ¥à"
-"Á´ÂÎ¤«¤é¥Û¡¼¥à¥Ç¥£¥ì¥¯¥È¥ê¤¬ÆÉ¤á¤ë¤è¤¦¡¢ ¡Ö¤Ï¤¤¡×¤òÁª¤ó¤Ç¤¯¤À¤µ¤¤¡£"
+"By default, users' home directories are readable by all users on the system. "
+"If you want to increase security and privacy, you might want home "
+"directories to be readable only for their owners. But if in doubt, leave "
+"this option enabled."
+msgstr "ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯ãƒ¦ãƒ¼ã‚¶ã®ãƒ›ãƒ¼ãƒ ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¯ã‚·ã‚¹ãƒ†ãƒ ä¸Šã®å…¨ãƒ¦ãƒ¼ã‚¶ã‹ã‚‰èª­ã¿å–ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚ ã‚·ã‚¹ãƒ†ãƒ ã®ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ã‚„ãƒ—ãƒ©ã‚¤ãƒã‚·ãƒ¼ã‚’æ”¹å–„ã™ã‚‹ãŸã‚ã«ã€ãƒ›ãƒ¼ãƒ ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ãã®æ‰€æœ‰è€…ã®ã¿èª­ã¿å–ã‚Šå¯èƒ½ã«ã—ãŸã„ã¨æ€ã†ã‹ã‚‚ã—ã‚Œã¾ã›ã‚“ã€‚ã—ã‹ã—ã€ã‚ˆãã‚ã‹ã‚‰ãªã‘ã‚Œã°ã€ã“ã®é¸æŠè‚¢ã¯ã€Œã¯ã„ã€ã®ã¾ã¾ã«ã—ã¦ãŠã„ã¦ãã ã•ã„ã€‚"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"This will only affect home directories of users added with the adduser "
-"program later."
-msgstr ""
-"¤³¤ì¤Ï¡¢¸½»şÅÀ°Ê¹ß¤Ë adduser ¤ÇÄÉ²Ã¤·¤¿¥æ¡¼¥¶¤Î¥Û¡¼¥à¥Ç¥£¥ì¥¯¥È¥ê¤Ë¤Î¤ß±Æ¶Á¤·"
-"¤Ş¤¹¡£"
+"This will only affect home directories of users added from now on with the "
+"adduser command."
+msgstr "ã“ã‚Œã¯ã€ç¾æ™‚ç‚¹ä»¥é™ã« adduser ã‚³ãƒãƒ³ãƒ‰ã§è¿½åŠ ã—ãŸãƒ¦ãƒ¼ã‚¶ã®ãƒ›ãƒ¼ãƒ ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ã®ã¿å½±éŸ¿ã—ã¾ã™ã€‚"

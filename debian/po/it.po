@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.52 (templates)\n"
+"Project-Id-Version: adduser 3.103 (templates)\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2004-05-07 13:38+0200\n"
+"POT-Creation-Date: 2007-06-30 09:45+0200\n"
+"PO-Revision-Date: 2007-07-08 12:10+0200\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,30 +12,31 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
-msgid "Do you want system wide readable home directories?"
-msgstr "Si vuole che le home directory siano leggibili da tutto il sistema?"
+#: ../templates:2001
+msgid "Do you want system-wide readable home directories?"
+msgstr "Si vuole che le directory home siano leggibili da tutti?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"Normally, home directories can be viewed by all users on the system. If you "
-"want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the user. If you are unsure, enable system "
-"wide readable home directories."
+"By default, users' home directories are readable by all users on the system. "
+"If you want to increase security and privacy, you might want home "
+"directories to be readable only for their owners. But if in doubt, leave "
+"this option enabled."
 msgstr ""
-"Normalmente le home directory possono essere viste da tutti gli utenti del "
-"sistema. Se si desidera incrementare la sicurezza/privacy sul sistema si può "
-"pensare di rendere le home directory leggibili solo dall'utente. Se non si è "
-"sicuri impostare le home directory come leggibili da tutto il sistema."
+"Con la configurazione predefinita le directory home degli utenti sono "
+"leggibili da tutti gli utenti del sistema. Per incrementare sicurezza e "
+"privacy sul sistema è possibile rendere le directory home leggibili solo "
+"dai legittimi proprietari. Se non si è sicuri, lasciare attiva questa "
+"opzione."
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"This will only affect home directories of users added with the adduser "
-"program later."
+"This will only affect home directories of users added from now on with the "
+"adduser command."
 msgstr ""
-"Questa modifica avrà effetto solo sulle home directory degli utenti che "
-"verranno creati con il programma adduser in futuro."
+"Questa modifica ha effetto solo sulle directory home degli utenti che "
+"verranno creati con il comando adduser da adesso in poi."

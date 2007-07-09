@@ -15,40 +15,49 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2006-04-07 12:55+0200\n"
+"POT-Creation-Date: 2007-06-30 09:45+0200\n"
+"PO-Revision-Date: 2007-07-01 18:35+0200\n"
 "Last-Translator: Jacobo Tarrio <jtarrio@debian.org>\n"
-"Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
+"Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
-msgid "Do you want system wide readable home directories?"
+#: ../templates:2001
+#| msgid "Do you want system wide readable home directories?"
+msgid "Do you want system-wide readable home directories?"
 msgstr "¿Quere directorios de usuario lexibles en todo o sistema?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
+#| msgid ""
+#| "Normally, home directories can be viewed by all users on the system. If "
+#| "you want to increase the security/privacy on your system, you might want "
+#| "your home directories only readable by the user. If you are unsure, "
+#| "enable system wide readable home directories."
 msgid ""
-"Normally, home directories can be viewed by all users on the system. If you "
-"want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the user. If you are unsure, enable system "
-"wide readable home directories."
+"By default, users' home directories are readable by all users on the system. "
+"If you want to increase security and privacy, you might want home "
+"directories to be readable only for their owners. But if in doubt, leave "
+"this option enabled."
 msgstr ""
-"Normalmente, todos os usuarios do sistema poden ver os directorios dos "
-"usuarios. Se quere aumentar a seguridade ou intimidade do seu sistema, pode "
-"que prefira que cada directorio de usuario só o poida ver o usuario. Se non "
-"está seguro, active os directorios de usuario lexibles en todo o sistema."
+"Por defecto, os directorios iniciais dos usuarios son lexibles para tódolos "
+"usuarios do sistema. Se quere aumentar a seguridade e a intimidade, pode que "
+"prefira que os directorios iniciais só sexan lexibles aos seus propietarios. "
+"Se ten dúbidas, deixe activada esta opción."
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
+#| msgid ""
+#| "This will only affect home directories of users added with the adduser "
+#| "program later."
 msgid ""
-"This will only affect home directories of users added with the adduser "
-"program later."
+"This will only affect home directories of users added from now on with the "
+"adduser command."
 msgstr ""
-"Isto só ha afectar aos directorios dos usuarios engadidos co programa "
-"adduser a partires de agora."
+"Isto só ha afectar aos directorios dos usuarios engadidos a partires de "
+"agora coa orde \"adduser\"."
