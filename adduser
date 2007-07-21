@@ -189,7 +189,7 @@ if (defined($special_home) && $verbose) {
       if (!defined($no_create_home) && -d $special_home);
     #FIXME: Testing adduser --system --home /var/addusertest81 --no-create-home addusertest81... 
     #       Use of uninitialized value in printf at /usr/sbin/adduser line 190.
-    printf gtx("Warning: The home dir %s you specified can't be accessed: %s\n",$!, $special_home)
+    printf gtx("Warning: The home dir %s you specified can't be accessed: %s\n", $special_home, $!)
       if (defined($no_create_home) && ! -d $special_home);
 }
 
@@ -267,8 +267,6 @@ if ($action eq "addsysgroup") {
 	exit 1;
     }
 
-    dief (gtx("The group `%s' already exists and is not a system group.\n"),$new_name)
-	if (defined getgrnam($new_name));
     dief (gtx("The GID `%s' is already in use.\n"),$new_gid)
 	if (defined($new_gid) && defined(getgrgid($new_gid)));
 
@@ -410,7 +408,7 @@ if ($action eq "addsysuser") {
     printf gtx("Adding new user `%s' (UID %d) with group `%s' ...\n"),$new_name,$new_uid,$ingroup_name
 	if $verbose;
     $home_dir = $special_home || &homedir($new_name, $ingroup_name);
-	$shell = $special_shell || '/bin/false';
+    $shell = $special_shell || '/bin/false';
     $undouser = $new_name;
     my $useradd = &which('useradd');
     &systemcall($useradd, '-d', $home_dir, '-g', $ingroup_name, '-s',
@@ -433,7 +431,6 @@ if ($action eq "addsysuser") {
     if(defined($new_gecos)) {
 	&ch_gecos($new_gecos);
     }
-
     create_homedir (0);
 
     exit 0;
@@ -521,9 +518,9 @@ if ($action eq "adduser") {
 	    print (gtx("Permission denied\n")) if ($ok == 1);
 	    print (gtx("invalid combination of options\n")) if ($ok == 2);
 	    print (gtx("unexpected failure, nothing done\n")) if ($ok == 3);
-	    print (gtx("unexpected failure, passwd file missing\n")) if ($ok == 3);
-	    print (gtx("passwd file busy, try again\n")) if ($ok == 4);
-	    print (gtx("invalid argument to option\n")) if ($ok == 5);
+	    print (gtx("unexpected failure, passwd file missing\n")) if ($ok == 4);
+	    print (gtx("passwd file busy, try again\n")) if ($ok == 5);
+	    print (gtx("invalid argument to option\n")) if ($ok == 6);
 	    
 	    # Translators: [Y/n] has to be replaced by values defined in your
 	    # locale.  You can see by running "locale noexpr" which regular
