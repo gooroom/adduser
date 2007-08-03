@@ -1,3 +1,10 @@
+adduser (3.105) unstable; urgency=low
+
+  * fix incorrect message when trying an already existing user as system user.
+    Thanks to Vincent Bernat for spotting. Closes: #435777
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Fri, 03 Aug 2007 22:34:52 +0200
+
 adduser (3.104) unstable; urgency=low
 
   [ Joerg Hoh ]

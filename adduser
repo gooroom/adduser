@@ -350,7 +350,7 @@ if ($action eq "addusertogroup") {
 ################
 if ($action eq "addsysuser") {
     if (existing_user_ok($new_name, $new_uid) == 1) {
-	printf (gtx("The user `%s' already exists as a system user. Exiting.\n"), $new_name) if $verbose;
+	printf (gtx("The user `%s' already exists. Exiting.\n"), $new_name) if $verbose;
 	exit 0;
     }
     if (existing_user_ok($new_name, $new_uid) == 2) {
