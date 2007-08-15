@@ -209,7 +209,7 @@ sub preseed_config {
   $configref->{"name_regex"} = "^[a-z][-a-z0-9]*\$";
   $configref->{"exclude_fstypes"} = "(proc|sysfs|usbfs|devpts|tmpfs)";
   $configref->{"skel_ignore_regex"} = "dpkg-(old|new|dist)\$";
-  $configref->{"extra_groups"} = "dialout cdrom floppy audio src video lp users";
+  $configref->{"extra_groups"} = "dialout cdrom floppy audio video plugdev users";
   $configref->{"add_extra_groups"} = 0;
 
   foreach( @$conflistref ) {

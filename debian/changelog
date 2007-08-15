@@ -4,8 +4,10 @@ adduser (3.105) unstable; urgency=low
     Thanks to Vincent Bernat for spotting. Closes: #435777
   * fix non-working --disabled-password, when using --system.
     Thanks to Ray Miller. Closes: #433639
+  * adjust EXTRA_GROUPS to have the same values as debian-installer for the
+    first user. Thanks Trent W. Buck. Closes: #432710 
 
- -- Joerg Hoh <joerg@joerghoh.de>  Wed, 15 Aug 2007 23:49:43 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Thu, 16 Aug 2007 00:00:58 +0200
 
 adduser (3.104) unstable; urgency=low
 
