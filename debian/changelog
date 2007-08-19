@@ -6,8 +6,10 @@ adduser (3.105) unstable; urgency=low
     Thanks to Ray Miller for the patch. Closes: #433639
   * adjust EXTRA_GROUPS to have the same values as debian-installer for the
     first user, removing "src" and "lp". Thanks Trent W. Buck. Closes: #432710
+  * fixed error message when home directory already exists.
+    Thanks Justin Pryzby, Closes: #438801
 
- -- Joerg Hoh <joerg@joerghoh.de>  Thu, 16 Aug 2007 00:05:00 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Sun, 19 Aug 2007 23:42:30 +0200
 
 adduser (3.104) unstable; urgency=low
 
