@@ -185,9 +185,9 @@ if ((defined($special_home)) && ($special_home !~ m+^/+ )) {
 }
 	   
 if (defined($special_home) && $verbose) {
-    printf (gtx("Warning: The home dir %s you specified already exists.\n"),$special_home)
+    printf gtx("Warning: The home dir %s you specified already exists.\n"),$special_home
       if (!defined($no_create_home) && -d $special_home);
-    printf (gtx("Warning: The home dir %s you specified can't be accessed: %s\n"), $special_home, $!)
+    printf gtx("Warning: The home dir %s you specified can't be accessed: %s\n"), $special_home, $!
       if (defined($no_create_home) && ! -d $special_home);
 }
 
