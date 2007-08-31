@@ -17,41 +17,41 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.50\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
+"POT-Creation-Date: 2007-06-30 09:45+0200\n"
 "PO-Revision-Date: 2004-04-01 18:24+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
-msgid "Do you want system wide readable home directories?"
-msgstr "Voulez-vous des répertoires personnels lisibles par tous ?"
+#: ../templates:2001
+msgid "Do you want system-wide readable home directories?"
+msgstr "Voulez-vous des rÃ©pertoires personnels lisibles par tous ?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"Normally, home directories can be viewed by all users on the system. If you "
-"want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the user. If you are unsure, enable system "
-"wide readable home directories."
+"By default, users' home directories are readable by all users on the system. "
+"If you want to increase security and privacy, you might want home "
+"directories to be readable only for their owners. But if in doubt, leave "
+"this option enabled."
 msgstr ""
-"Les répertoires personnels sont habituellement lisibles par tous les "
-"utilisateurs du système. Si vous voulez rendre votre système plus sûr ou "
-"plus confidentiel, vous pouvez décider que les répertoires personnels ne "
-"seront lisibles que par leur propriétaire. Si vous êtes indécis, activez les "
-"répertoires personnels lisibles par tous."
+"Les rÃ©pertoires personnels sont par dÃ©faut lisibles par tous les "
+"utilisateurs du systÃ¨me. Si vous voulez amÃ©liorer la sÃ©curitÃ© et la confidentialitÃ©, "
+"vous pouvez dÃ©cider que les rÃ©pertoires personnels ne "
+"seront lisibles que par leur propriÃ©taire. Dans le doute, cependant, "
+"vous devriez laisser cette option active."
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"This will only affect home directories of users added with the adduser "
-"program later."
+"This will only affect home directories of users added from now on with the "
+"adduser command."
 msgstr ""
-"Cela ne concerne que les répertoires personnels des utilisateurs qui seront "
-"ajoutés avec la commande « adduser »."
+"Cela ne concernera que les rÃ©pertoires personnels des utilisateurs qui seront "
+"ajoutÃ©s dans le futur, avec la commande Â« adduser Â»."

@@ -1,5 +1,6 @@
 adduser (3.105) unstable; urgency=low
 
+  [ Joerg Hoh ]
   * fix incorrect message when trying an already existing user as system user.
     Thanks to Vincent Bernat for spotting. Closes: #435777
   * fix non-working --disabled-password, when using --system.
@@ -11,7 +12,26 @@ adduser (3.105) unstable; urgency=low
   * fixed name for "#" (pound -> hash), thanks to Malcolm Parsons.
     Closes: #440236
 
- -- Joerg Hoh <joerg@joerghoh.de>  Fri, 31 Aug 2007 00:26:13 +0200
+  [ Stephen Gran ]
+  * Translations:
+    - add sk (thanks Ivan Masár <helix84@centrum.sk>) (closes: #439212)
+    - update de (thanks Helge Kreutzmann <debian@helgefjell.de>)
+      (closes: #433089)
+    - update fi (thanks Sami Kallio <xaicawa@yahoo.com>)
+      (closes: #433182)
+    - update fr, doc/po4a/po/fr, and po4a.conf
+      ( thanks Nicolas François" <nicolas.francois@centraliens.net>,
+        and Christian Perrier <bubulle@debian.org>)
+      (closes: #435883, #432639, #433063, #435886)
+    - update nb (thanks Hans Fredrik Nordhaug <hans@nordhaug.priv.no>)
+      (closes: #433043)
+    - update nl (thanks Thijs Kinkhorst <thijs@debian.org>) (closes: #433298)
+    - update pt (thanks Miguel Figueiredo <elmig@debianpt.org>)
+      (closes: #433147)
+    - update pt_BR (thanks Eder L. Marques <frolic@debian-ce.org>)
+      (closes: #433634)
+
+ -- Stephen Gran <sgran@debian.org>  Fri, 31 Aug 2007 16:22:00 +0100
 
 adduser (3.104) unstable; urgency=low
 

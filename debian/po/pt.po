@@ -1,12 +1,15 @@
+# Portuguese translation for adduser's debconf messages
+# Released under the same license as the adduser package
 # 2005-10-27 - Marco Ferra <mferra@sdf.lonestar.org> (initial translation)
+# 2007-07-14 - Miguel Figueiredo
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.77\n"
+"Project-Id-Version: adduser 3.104\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2005-10-27 01:08+0100\n"
-"Last-Translator: Marco Ferra <mferra@sdf.lonestar.org>\n"
+"POT-Creation-Date: 2007-07-09 23:57+0100\n"
+"PO-Revision-Date: 2007-07-14 22:36+0100\n"
+"Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,32 +17,30 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
-msgid "Do you want system wide readable home directories?"
-msgstr ""
-"Deseja que os directórios em /home possam ser lidos por qualquer utilizador?"
+#: ../templates:2001
+msgid "Do you want system-wide readable home directories?"
+msgstr "Deseja directórios 'home' que possam ser lidos por todo o sistema?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"Normally, home directories can be viewed by all users on the system. If you "
-"want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the user. If you are unsure, enable system "
-"wide readable home directories."
+"By default, users' home directories are readable by all users on the system. "
+"If you want to increase security and privacy, you might want home "
+"directories to be readable only for their owners. But if in doubt, leave "
+"this option enabled."
 msgstr ""
-"É normal os directórios em /home poderem serem vistos por todos os "
-"utilizadores no sistema. Se deseja que o seu sistema fique mais seguro/"
-"privado pode tornar os directórios em /home apenas possíveis de ler pelo "
-"próprio utilizador em causa. Se está incerto do que deve fazer escolha "
-"directórios de leitura aberta."
+"Por omissão, os directórios 'home' dos utilizadores são legíveis por todos os "
+"utilizadores no sistema. Se deseja aumentar a segurança e privacidade, você "
+"pode querer que os directórios 'home' sejam legíveis apenas pelos próprios "
+"donos. Em caso de dúvida, deixe esta opção habilitada."
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"This will only affect home directories of users added with the adduser "
-"program later."
+"This will only affect home directories of users added from now on with the "
+"adduser command."
 msgstr ""
-"Isto irá apenas afectar os directórios em /home de utilizadores adicionados "
-"posteriormente pelo commando adduser."
+"Isto irá afectar apenas os directórios 'home' de utilizadores adicionados "
+"a partir de agora com o commando adduser."
