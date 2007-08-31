@@ -143,7 +143,10 @@ if (defined($found_sys_opt)) {
   $action = "addsysgroup" if ($action eq "addgroup");
 }
 
-
+# explicitly set PATH, because super (1) cleans up the path and makes adduser unusable;
+# this is also a good idea for sudo (which doesn't clean up)
+$ENV{"PATH"}="/bin:/usr/bin:/sbin:/usr/sbin";
+$ENV{"IFS"}=" \t\n";
 
 ############################
 # checks related to @names #
