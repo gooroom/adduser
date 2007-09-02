@@ -200,7 +200,7 @@ if($action eq "deluser") {
     
     my($dummy1,$dummy2,$uid);
 
-    # Check if there is more than one account with the same uid
+
 
 
 
@@ -222,6 +222,15 @@ if($action eq "deluser") {
     
     unless(exist_user($user)) {
 	fail (2,gtx("The user `%s' does not exist.\n"),$user);
+    }
+    
+    # Warn in any case if you want to remove the root account 
+    if ($uid == 0) {
+        printf (gtx("WARNING: You are just about to delete the root account (uid 0)\n"));
+        printf (gtx("Usually this is never required as it may render the whole system unusable\n"));
+        printf (gtx("Press immediately Ctrl+C if you want to abort\n"));
+        sleep 5;
+        printf (gtx("Ok, you really want it, I'll delete that account\n"));
     }
 
 

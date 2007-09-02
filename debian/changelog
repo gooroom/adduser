@@ -3,12 +3,14 @@ adduser (3.106) unstable; urgency=low
   [ Joerg Hoh ]
   * adduser exits with returncode 1 if trying to add an already existing user
     as system user. Thanks to Vincent Bernat; Closes: #435778
+  * deluser: warn if you want to remove the root account. Closes: #145430
 
   [ Stephen Gran ]
   * Translation:
     sk (thanks Ivan Masár <helix84@centrum.sk>)(closes: #439212)
 
- -- Stephen Gran <sgran@debian.org>  Fri, 31 Aug 2007 17:06:40 +0100
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Sun, 02 Sep 2007 17:36:30 +0200
 
 adduser (3.105) unstable; urgency=low
 
