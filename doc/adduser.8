@@ -279,7 +279,9 @@ The user exists as specified. This can have 2 causes: The user was created by ad
 .B 1
 Creating the user or group failed because it was already present with other UID/GID than specified. The username or groupname was rejected because of a mismatch with the configured regular expressions, see adduser.conf(5). Adduser has been aborted by a signal.
 .br
-Or for many other yet undocumented reasons which are printed to console then.
+Or for many other yet undocumented reasons which are printed to console then. You may then consider to remove 
+.B \-\-quiet
+to make adduser more verbose.
 
 .SH FILES
 .TP 

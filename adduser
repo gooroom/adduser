@@ -351,8 +351,15 @@ if ($action eq "addusertogroup") {
 ################
 if ($action eq "addsysuser") {
     if (existing_user_ok($new_name, $new_uid) == 1) {
+
+        # a user with this name already exists; it's a problem when it's not a system user
+        my $tmp_u = getpwnam($new_name);
+        if (($tmp_u >= $config{"first_system_uid"}) and ($tmp_u <= $config{"last_system_uid"})) {
+	    printf (gtx("The system user `%s' already exists. Exiting.\n"), $new_name) if $verbose;
+            exit 0;
+        }
 	printf (gtx("The user `%s' already exists. Exiting.\n"), $new_name) if $verbose;
-	exit 0;
+	exit 1;
     }
     if (existing_user_ok($new_name, $new_uid) == 2) {
 	printf (gtx("The user `%s' already exists with a different UID. Exiting.\n"), $new_name) if $verbose;
