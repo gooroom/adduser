@@ -127,7 +127,7 @@ uid already exists), adduser will exit with a warning.
 
 .B adduser
 will choose the first available UID from the range specified for
-system users in the configuration file.  The UID can be overridden with the
+system users in the configuration file (FIRST_SYSTEM_UID and LAST_SYSTEM_UID). If you want to have a specific UID, you can specify it using the
 .B \-\-uid
 option.
 
@@ -154,8 +154,9 @@ If
 .BR \-\-system " option, or " addgroup " is called respectively, a user
 group will be added.
 
-A GID will be chosen from the range specified for group GIDs in the
-configuration file.  The GID can be overridden with the
+
+A GID will be chosen from the range specified for system GIDS in the
+configuration file (FIRST_GID, LAST_GID). To override that mechanism you can give the GID using the
 .B \-\-gid
 option.
 
@@ -166,7 +167,7 @@ If
 .BR \-\-system " option, a system group will be added.
 
 A GID will be chosen from the range specified for system GIDS in the
-configuration file.  The GID can be overridden with the
+configuration file (FIRST_SYSTEM_GID, LAST_SYSTEM_GID). To override that mechanism you can give the GID using the
 .B \-\-gid
 option.
 

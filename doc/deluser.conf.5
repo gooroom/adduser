@@ -21,7 +21,7 @@ Each option takes the form
 Double or single quotes are allowed around the value.  Comment lines
 must have a hash sign (#) at the beginning of the line.
 
-deluser(8) and delgroup(8) also read /etc/adduser.conf, see adduser.conf(8)
+deluser(8) and delgroup(8) also read /etc/adduser.conf, see adduser.conf(8); settings in deluser.conf may overwrite settings made in adduser.conf.
 
 The valid configuration options are:
 .TP
@@ -61,6 +61,9 @@ deleted in course of deleting home directories or deleting files owned
 by the user to be deleted are checked against each of these regular
 expressions. If a match is detected, the file is not deleted. Defaults
 to a list of system directories, leaving only /home.
+
+In other words: By default only files below /home belonging to that specific user are going to be deleted.
+
 .TP
 \fBONLY_IF_EMPTY\fP
 Only delete a group if there are no user who belong to this group. Defaults to 0.
