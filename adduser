@@ -169,7 +169,7 @@ if (@names == 2) {	# must be addusertogroup
     $existing_user = shift (@names);
     $existing_group = shift (@names);
 }
-else {
+else { # 1 parameter, must be adduser
     $new_name = shift (@names);
 }
 
@@ -498,7 +498,7 @@ if ($action eq "adduser") {
     if ($make_group_also) {
 	printf (gtx("Adding new group `%s' (%d) ...\n"),$new_name,$new_gid) if $verbose;
 	$undogroup = $new_name;
-       my $groupadd = &which('groupadd');
+        my $groupadd = &which('groupadd');
 	&systemcall($groupadd, '-g', $new_gid, $new_name);
 	&invalidate_nscd();
     }

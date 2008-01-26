@@ -173,6 +173,7 @@ sub which {
         }
     }
     dief(gtx("Could not find program named `%s' in \$PATH.\n"), $progname) unless ($nonfatal);
+    return 0;
 }
 
 

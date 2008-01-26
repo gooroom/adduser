@@ -4,13 +4,17 @@ adduser (3.106) unstable; urgency=low
   * adduser exits with returncode 1 if trying to add an already existing user
     as system user. Thanks to Vincent Bernat; Closes: #435778
   * deluser: warn if you want to remove the root account. Closes: #145430
+  * deluser: fix backup when bzip2 is not available. Closes: #453419
+  * deluser: print correct warning when you removed the last user in a group;
+    thanks Marc 'Zugschlus' Haber and Peter Eisentraut 
+    (Closes: #454928,#451967)
 
   [ Stephen Gran ]
   * Translation:
     sk (thanks Ivan Masár <helix84@centrum.sk>)(closes: #439212)
 
 
- -- Joerg Hoh <joerg@joerghoh.de>  Sun, 02 Sep 2007 17:36:30 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Sat, 26 Jan 2008 09:54:58 +0100
 
 adduser (3.105) unstable; urgency=low
 
