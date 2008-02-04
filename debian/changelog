@@ -12,9 +12,9 @@ adduser (3.106) unstable; urgency=low
   [ Stephen Gran ]
   * Translation:
     sk (thanks Ivan Masár <helix84@centrum.sk>)(closes: #439212)
+  * Mark /etc/adduser.conf as a conffile (closes: #463880)
 
-
- -- Joerg Hoh <joerg@joerghoh.de>  Sat, 26 Jan 2008 09:54:58 +0100
+ -- Stephen Gran <sgran@debian.org>  Mon, 04 Feb 2008 00:25:14 +0000
 
 adduser (3.105) unstable; urgency=low
 
