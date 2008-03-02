@@ -16,8 +16,9 @@ adduser (3.106) unstable; urgency=low
     zh_CN (thanks LI Daobing <lidaobing@gmail.com>)(closes: #447868)
   * Mark /etc/adduser.conf as a conffile (closes: #463880)
   * Clarify --in-group documentation (closes: #468152)
+  * deluser: Let tar gzip/bzip backups directly (closes: #451321)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 02 Mar 2008 16:31:05 +0000
+ -- Stephen Gran <sgran@debian.org>  Sun, 02 Mar 2008 16:37:07 +0000
 
 adduser (3.105) unstable; urgency=low
 

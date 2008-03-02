@@ -301,26 +301,29 @@ if($action eq "deluser") {
       }
 
       if($config{"backup"}) {
-	  s_printf (gtx("Backing up files to be removed to %s ...\n"),$config{"backup_to"});
-	  my $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
-	  my $filesfilename = $filesfile->filename;
-	  my $backup_name = $config{"backup_to"} . "/$user.tar";
-	  print "backup_name = $backup_name";
-	  print $filesfile join("\n",@files);
-	  $filesfile->close();
+	 s_printf (gtx("Backing up files to be removed to %s ...\n"),$config{"backup_to"});
+	 my $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
+	 my $filesfilename = $filesfile->filename;
+	 my $backup_name = $config{"backup_to"} . "/$user.tar";
+	 print "backup_name = $backup_name";
+	 print $filesfile join("\n",@files);
+	 $filesfile->close();
          my $tar = &which('tar');
-	  &systemcall($tar, "-cf", $backup_name, "--files-from", $filesfilename);
-	  chmod 0600, $backup_name;
-         my $rootid = 0;
-	  chown $rootid, $rootid, $backup_name;
-	  unlink($filesfilename);
          my $bzip2 = &which('bzip2', 1);
          my $gzip = &which('gzip', 1);
-	  if($bzip2) {
-	      systemcall($bzip2, $backup_name);
-	  } elsif($gzip) {
-	      systemcall($gzip, "--best", $backup_name);
-	  }
+         my $options = '';
+	 if($bzip2) {
+             $backup_name = "$backup_name.bz2";
+             $options = "--bzip2";
+	 } elsif($gzip) {
+             $backup_name = "$backup_name.gz";
+             $options = "--gzip";
+	 }
+	 &systemcall($tar, "-cf", $options, $backup_name, "--files-from", $filesfilename);
+	 chmod 0600, $backup_name;
+         my $rootid = 0;
+	 chown $rootid, $rootid, $backup_name;
+	 unlink($filesfilename);
       }
 
       if(@files || @dirs) {
