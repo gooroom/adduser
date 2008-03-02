@@ -11,41 +11,41 @@
 #
 #    Developers do not need to manually edit POT or PO files.
 #
+# Hiei Xu <nicky@mail.edu.cn>, 2004.
+# LI Daobing <lidaobing@gmail.com>, 2007.
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.9\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2004-02-02 05:21+1300\n"
-"Last-Translator: Hiei Xu <nicky@mail.edu.cn>\n"
-"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
+"POT-Creation-Date: 2007-08-31 16:29+0100\n"
+"PO-Revision-Date: 2007-10-26 13:52+0800\n"
+"Last-Translator: LI Daobing <lidaobing@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
-msgid "Do you want system wide readable home directories?"
+#: ../templates:2001
+msgid "Do you want system-wide readable home directories?"
 msgstr "您希望让主目录全局可读吗？"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
-#, fuzzy
+#: ../templates:2001
 msgid ""
-"Normally, home directories can be viewed by all users on the system. If you "
-"want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the user. If you are unsure, enable system "
-"wide readable home directories."
-msgstr ""
-"通常主目录可以被系统的所有用户查看。如果您想要提高系统的安全性或隐私，您也许"
-"想让用户只可以读取自己的主目录。如果您不确定，回答 yes 来允许主目录全局可读。"
+"By default, users' home directories are readable by all users on the system. "
+"If you want to increase security and privacy, you might want home "
+"directories to be readable only for their owners. But if in doubt, leave "
+"this option enabled."
+msgstr "默认设置下，用户的主目录对系统所有用户都可读。如果您想要提高系统的安全性或私密性，您也许想让用户的主目录只有该用户自己可读。如果您不确定，保持本选项开启。"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"This will only affect home directories of users added with the adduser "
-"program later."
+"This will only affect home directories of users added from now on with the "
+"adduser command."
 msgstr "这只会影响到以后使用 adduser 程序添加的用户的主目录。"
