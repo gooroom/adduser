@@ -14,8 +14,9 @@ adduser (3.106) unstable; urgency=low
     be (thanks Pavel Piatruk <berserker@neolocation.com>)( closes: #447104)
     sk (thanks Ivan Masár <helix84@centrum.sk>)(closes: #439212)
   * Mark /etc/adduser.conf as a conffile (closes: #463880)
+  * Clarify --in-group documentation (closes: #468152)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 02 Mar 2008 16:22:52 +0000
+ -- Stephen Gran <sgran@debian.org>  Sun, 02 Mar 2008 16:27:56 +0000
 
 adduser (3.105) unstable; urgency=low
 

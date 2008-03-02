@@ -64,7 +64,7 @@ to
 .IR no ,
 all users' GIDs are set to
 .BR USERS_GID .
-Users' groups can also be overridden from the command line with the
+Users' primary groups can also be overridden from the command line with the
 .BR \-\-gid " or " \-\-ingroup
 options to set the group by id or name, respectively.  Also, users can be
 added to one or more groups defined in adduser.conf either by setting
@@ -236,7 +236,10 @@ configuration file.
 Add the new user to GROUP instead of a usergroup or the default group
 defined by 
 .B USERS_GID 
-in the configuration file.
+in the configuration file.  This affects the users primary group.  To add additional
+groups, see the 
+.B add_extra_groups
+option
 .TP
 .B \-\-no-create-home
 Do not create the home directory, even if it doesn't exist.
