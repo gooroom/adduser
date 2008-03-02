@@ -3,9 +3,12 @@ Section: admin
 Priority: important
 Maintainer: Debian Adduser Developers <adduser-devel@lists.alioth.debian.org>
 Uploaders: Roland Bauerschmidt <rb@debian.org>, Marc Haber <mh+debian-packages@zugschlus.de>, Stephen Gran <sgran@debian.org>
-Standards-Version: 3.7.2
+Standards-Version: 3.7.3
 Build-Depends: po-debconf
 Build-Depends-Indep: gettext (>= 0.13), po4a (>= 0.23)
+Vcs-Svn: svn://svn.debian.org/adduser/
+Vcs-Browser: http://svn.debian.org/wsvn/adduser/
+Homepage: http://alioth.debian.org/projects/adduser/
 
 Package: adduser
 Architecture: all
@@ -31,6 +34,5 @@ Description: add and remove users and groups
  .
  A custom script can be executed after each of the commands.
  .
-  Homepage: http://alioth.debian.org/projects/adduser/
   Development mailing list:
     http://lists.alioth.debian.org/mailman/listinfo/adduser-devel/

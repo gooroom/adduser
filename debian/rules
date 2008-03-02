@@ -76,7 +76,6 @@ binary-indep:	checkroot build
 	dpkg --build debian/tmp ..
 
 binary-arch:	checkroot build
-	$(checkdir)
 
 define checkdir
 	test -f $(package) -a -f debian/rules
