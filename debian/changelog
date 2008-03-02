@@ -16,7 +16,6 @@ adduser (3.106) unstable; urgency=low
     ru (thanks Yuri Kozlov <kozlov.y@gmail.com>)(closes: #452289, #452290)
     sk (thanks Ivan Masár <helix84@centrum.sk>)(closes: #439212)
     zh_CN (thanks LI Daobing <lidaobing@gmail.com>)(closes: #447868)
-  * Mark /etc/adduser.conf as a conffile (closes: #463880)
   * Clarify --in-group documentation (closes: #468152)
   * deluser: Let tar gzip/bzip backups directly (closes: #451321)
 
