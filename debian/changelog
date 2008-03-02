@@ -13,13 +13,14 @@ adduser (3.106) unstable; urgency=low
   * Translation:
     be (thanks Pavel Piatruk <berserker@neolocation.com>)( closes: #447104)
     fr (thanks Nicolas François <nicolas.francois@centraliens.net>)(closes: #442203)
+    ru (thanks Yuri Kozlov <kozlov.y@gmail.com>)(closes: #452289)
     sk (thanks Ivan Masár <helix84@centrum.sk>)(closes: #439212)
     zh_CN (thanks LI Daobing <lidaobing@gmail.com>)(closes: #447868)
   * Mark /etc/adduser.conf as a conffile (closes: #463880)
   * Clarify --in-group documentation (closes: #468152)
   * deluser: Let tar gzip/bzip backups directly (closes: #451321)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 02 Mar 2008 16:39:33 +0000
+ -- Stephen Gran <sgran@debian.org>  Sun, 02 Mar 2008 16:40:59 +0000
 
 adduser (3.105) unstable; urgency=low
 
