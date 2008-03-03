@@ -1,3 +1,10 @@
+adduser (3.107) unstable; urgency=low
+
+  * fix warning about initialized value in deluser; closes: 469165
+    thanks to Bram Senders for reporting
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Mon, 03 Mar 2008 21:27:14 +0100
+
 adduser (3.106) unstable; urgency=low
 
   [ Joerg Hoh ]
