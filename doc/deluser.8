@@ -10,7 +10,7 @@
 .SH NAME
 deluser, delgroup \- remove a user or group from the system
 .SH SYNOPSIS
-.BR deluser " [options] [\-\-remove-home] [\-\-remove-all-files] [\-\-backup] [\-\-backup-to DIR] user"
+.BR deluser " [options] [\-\-force] [\-\-remove-home] [\-\-remove-all-files] [\-\-backup] [\-\-backup-to DIR] user"
 .PP
 .BR deluser " \-\-group [options] group"
 .br
@@ -67,6 +67,10 @@ and backup options can also be activated for default in the configuration
 file /etc/deluser.conf. See
 .B deluser.conf(5)
 for details.
+
+If you want to remove the root account (uid 0), then use the 
+.B \-\-force 
+parameter; this may prevent to remove the root user by accident.
 
 If the file
 .B /usr/local/sbin/deluser.local
@@ -163,6 +167,9 @@ You cannot remove a user from its primary group. No action was performed.
 .TP
 .B 8
 The required perl-package 'perl modules' is not installed. This package is required to perform the requested actions. No action was performed.
+.TP
+.B 9
+For removing the root account the parameter "--force" is required. No action was performed.
 
 .SH FILES
 /etc/deluser.conf

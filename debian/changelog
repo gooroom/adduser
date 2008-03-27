@@ -1,9 +1,9 @@
 adduser (3.107) unstable; urgency=low
 
-  * fix warning about initialized value in deluser; closes: 469165
-    thanks to Bram Senders for reporting
+  * deluser: fix really annoying message about removing root account when removing
+    just a simple user. Closes: 469165
 
- -- Joerg Hoh <joerg@joerghoh.de>  Mon, 03 Mar 2008 21:27:14 +0100
+ -- Joerg Hoh <joerg@joerghoh.de>  Thu, 27 Mar 2008 21:18:01 +0100
 
 adduser (3.106) unstable; urgency=low
 

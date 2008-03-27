@@ -73,6 +73,8 @@ my %pconfig = ();
 my %config = ();
 my $configfile;
 my @defaults;
+my $force;
+
 
 unless ( GetOptions ("quiet|q" => sub {$verbose = 0; },
             "debug" => sub {$verbose = 2; },
@@ -85,7 +87,8 @@ unless ( GetOptions ("quiet|q" => sub {$verbose = 0; },
 	    "remove-home" => \$pconfig{"remove_home"},
 	    "remove-all-files" => \$pconfig{"remove_all_files"},
 	    "backup" => \$pconfig{"backup"},
-	    "backup-to=s" => \$pconfig{"backup_to"}
+	    "backup-to=s" => \$pconfig{"backup_to"},
+            "force" => \$force
        ) ) {
     &usage;
     exit 1;
@@ -225,12 +228,12 @@ if($action eq "deluser") {
     }
     
     # Warn in any case if you want to remove the root account 
-    if ($pw_uid == 0) {
+    if ((defined($pw_uid)) && ($pw_uid == 0) && (!defined($force)))  {
         printf (gtx("WARNING: You are just about to delete the root account (uid 0)\n"));
         printf (gtx("Usually this is never required as it may render the whole system unusable\n"));
-        printf (gtx("Press immediately Ctrl+C if you want to abort\n"));
-        sleep 5;
-        printf (gtx("Ok, you really want it, I'll delete that account\n"));
+        printf (gtx("If you really want this, call deluser with parameter --force\n"));
+        printf (gtx("Stopping now without having performed any action\n"));
+        exit 9;
     }
 
 
