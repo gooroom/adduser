@@ -1,9 +1,14 @@
 adduser (3.107) unstable; urgency=low
 
+  [ Joerg Hoh ]
   * deluser: fix really annoying message about removing root account when removing
     just a simple user. (Closes: #469165, #470464, #470847, #471705, #472349)
 
- -- Joerg Hoh <joerg@joerghoh.de>  Thu, 27 Mar 2008 21:18:01 +0100
+  [ Stephen Gran ]
+  * Translations:
+    - eu (thanks Piarres Beobide <pi@beobide.net>)(closes: #471903)
+
+ -- Stephen Gran <sgran@debian.org>  Thu, 27 Mar 2008 20:43:30 +0000
 
 adduser (3.106) unstable; urgency=low
 
