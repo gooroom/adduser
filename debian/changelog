@@ -1,7 +1,7 @@
 adduser (3.107) unstable; urgency=low
 
   * deluser: fix really annoying message about removing root account when removing
-    just a simple user. Closes: 469165
+    just a simple user. (Closes: #469165, #470464, #470847, #471705, #472349)
 
  -- Joerg Hoh <joerg@joerghoh.de>  Thu, 27 Mar 2008 21:18:01 +0100
 
