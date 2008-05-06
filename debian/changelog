@@ -1,3 +1,11 @@
+adduser (3.108) unstable; urgency=low
+
+  [ Joerg Hoh ]
+  * also ignore ".dpkg-save" files when populating the new homedir initially.
+    (Closes: #452864)
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Tue, 06 May 2008 21:26:14 +0200
+
 adduser (3.107) unstable; urgency=low
 
   [ Joerg Hoh ]
