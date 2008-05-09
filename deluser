@@ -36,6 +36,7 @@ use Debian::AdduserCommon;
 my $install_more_packages ;
 
 BEGIN {
+    local $ENV{PERL_DL_NONLAZY}=1;
     eval 'use File::Find';
     if ($@) {
       $install_more_packages = 1;

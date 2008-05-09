@@ -36,6 +36,7 @@ use Debian::AdduserCommon;
 use Getopt::Long;
 
 BEGIN {
+    local $ENV{PERL_DL_NONLAZY}=1;
     eval 'use Locale::gettext';
     if ($@) {
 	*gettext = sub { shift };
