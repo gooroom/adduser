@@ -3,6 +3,8 @@ adduser (3.108) unstable; urgency=low
   [ Joerg Hoh ]
   * also ignore ".dpkg-save" files when populating the new homedir initially.
     (Closes: #452864)
+  * deluser: fix order of arguments to tar. Thanks to Otto Visser.
+    (Closes: #481352)
 
   [ Stephen Gran ]
   * Use $ENV{PERL_DL_NONLAZY}=1 in eval of module loading to catch XS module

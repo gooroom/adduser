@@ -323,7 +323,7 @@ if($action eq "deluser") {
              $backup_name = "$backup_name.gz";
              $options = "--gzip";
 	 }
-	 &systemcall($tar, "-cf", $options, $backup_name, "--files-from", $filesfilename);
+	 &systemcall($tar, $options, "-cf", $backup_name, "--files-from", $filesfilename);
 	 chmod 0600, $backup_name;
          my $rootid = 0;
 	 chown $rootid, $rootid, $backup_name;
