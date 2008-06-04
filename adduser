@@ -517,6 +517,7 @@ if ($action eq "adduser") {
     create_homedir (1); # copy skeleton data
 
     # useradd without -p has left the account disabled (password string is '!')
+    my $yesexpr = langinfo(YESEXPR());
     if ($ask_passwd) {
 	for (;;) {
           my $passwd = &which('passwd');
@@ -525,7 +526,6 @@ if ($action eq "adduser") {
           system($passwd, $new_name);
 	  my $ok = $?>>8;
 	  if ($ok != 0) {
-	    my $noexpr = langinfo(NOEXPR());
             my $answer;
             # hm, error, should we break now?
 	    print (gtx("Permission denied\n")) if ($ok == 1);
@@ -538,9 +538,9 @@ if ($action eq "adduser") {
 	    # Translators: [Y/n] has to be replaced by values defined in your
 	    # locale.  You can see by running "locale noexpr" which regular
 	    # expression will be checked to find positive answer.
-	    print (gtx("Try again? [Y/n] "));
+	    print (gtx("Try again? [y/N] "));
 	    chop ($answer=<STDIN>);
-	    last if ($answer =~ m/$noexpr/o);
+	    last if ($answer !~ m/$yesexpr/o);
 	  }
 	  else {
 	    last; ## passwd ok
@@ -557,16 +557,16 @@ if ($action eq "adduser") {
 	&ch_gecos($new_gecos);
     }
     else {
-	my $yesexpr = langinfo(YESEXPR());
+	my $noexpr = langinfo(NOEXPR());
 	for (;;) {
            my $chfn = &which('chfn');
 	    &systemcall($chfn, $new_name);
 	    # Translators: [y/N] has to be replaced by values defined in your
 	    # locale.  You can see by running "locale yesexpr" which regular
 	    # expression will be checked to find positive answer.
-	    print (gtx("Is the information correct? [y/N] "));
+	    print (gtx("Is the information correct? [Y/n] "));
 	    chop (my $answer=<STDIN>);
-	    last if ($answer =~ m/$yesexpr/o);
+	    last if ($answer !~ m/$noexpr/o);
 	}
     }
 

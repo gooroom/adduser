@@ -9,8 +9,11 @@ adduser (3.108) unstable; urgency=low
   [ Stephen Gran ]
   * Use $ENV{PERL_DL_NONLAZY}=1 in eval of module loading to catch XS module
     ABI mismatches
+  * Get rid of two infinite loops (closes: #417291).  Incidentally, this
+    (closes: #405905) by changing to assume yes to avoid going around the loop
+    again.
 
- -- Stephen Gran <sgran@debian.org>  Fri, 09 May 2008 17:00:17 +0100
+ -- Stephen Gran <sgran@debian.org>  Wed, 04 Jun 2008 01:07:56 +0100
 
 adduser (3.107) unstable; urgency=low
 
