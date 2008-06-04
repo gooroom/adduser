@@ -13,8 +13,14 @@ adduser (3.108) unstable; urgency=low
     (closes: #405905) by changing to assume yes to avoid going around the loop
     again.
   * Add group games to the default list for EXTRA_GROUPS (closes: #435642)
+  * New translations:
+    - fr (thanks Nicolas François <nicolas.francois@centraliens.net>)
+       (closes: #478089, #478087)
+    - hy (thanks Vardan Gevorgyan <vgevorgyan@debian.am>)(closes: #475147)
+    - ru (thanks Yuri Kozlov <kozlov.y@gmail.com>)(closes: #473286)
+    - sv (thanks Martin Bagge <martin.bagge@bthstudent.se>)(closes: #483436)
 
- -- Stephen Gran <sgran@debian.org>  Wed, 04 Jun 2008 01:14:07 +0100
+ -- Stephen Gran <sgran@debian.org>  Wed, 04 Jun 2008 01:22:55 +0100
 
 adduser (3.107) unstable; urgency=low
 
