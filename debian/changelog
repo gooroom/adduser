@@ -12,8 +12,9 @@ adduser (3.108) unstable; urgency=low
   * Get rid of two infinite loops (closes: #417291).  Incidentally, this
     (closes: #405905) by changing to assume yes to avoid going around the loop
     again.
+  * Add group games to the default list for EXTRA_GROUPS (closes: #435642)
 
- -- Stephen Gran <sgran@debian.org>  Wed, 04 Jun 2008 01:07:56 +0100
+ -- Stephen Gran <sgran@debian.org>  Wed, 04 Jun 2008 01:14:07 +0100
 
 adduser (3.107) unstable; urgency=low
 
