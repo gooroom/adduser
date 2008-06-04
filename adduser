@@ -535,7 +535,7 @@ if ($action eq "adduser") {
 	    print (gtx("passwd file busy, try again\n")) if ($ok == 5);
 	    print (gtx("invalid argument to option\n")) if ($ok == 6);
 	    
-	    # Translators: [Y/n] has to be replaced by values defined in your
+	    # Translators: [y/N] has to be replaced by values defined in your
 	    # locale.  You can see by running "locale noexpr" which regular
 	    # expression will be checked to find positive answer.
 	    print (gtx("Try again? [y/N] "));
