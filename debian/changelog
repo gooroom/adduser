@@ -1,3 +1,10 @@
+adduser (3.109) unstable; urgency=low
+
+  [ Joerg Hoh ]
+  * fix adduser manpage (closes: #488977), thanks Aleksi Suhonen
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Thu, 03 Jul 2008 08:57:26 +0200
+
 adduser (3.108) unstable; urgency=low
 
   [ Joerg Hoh ]
