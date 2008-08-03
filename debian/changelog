@@ -3,7 +3,7 @@ adduser (3.109) unstable; urgency=low
   [ Joerg Hoh ]
   * fix adduser manpage (closes: #488977), thanks Aleksi Suhonen
   * New translations:
-    - es (thanks Javier Fern·ndez-Sanguino PeÒa <jfs@computer.org>)
+    - es (thanks Javier Fern√°ndez-Sanguino Pe√±a <jfs@computer.org>)
         (Closes: #492429, #489041)
 
   [ Stephen Gran ]
