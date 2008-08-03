@@ -6,7 +6,10 @@ adduser (3.109) unstable; urgency=low
     - es (thanks Javier Fernández-Sanguino Peña <jfs@computer.org>)
         (Closes: #492429, #489041)
 
- -- Joerg Hoh <joerg@joerghoh.de>  Mon, 28 Jul 2008 20:36:59 +0200
+  [ Stephen Gran ]
+  * Add Joerg to uploaders and remove Marc - thanks for your work
+
+ -- Stephen Gran <sgran@debian.org>  Mon, 04 Aug 2008 00:09:03 +0100
 
 adduser (3.108) unstable; urgency=low
 
