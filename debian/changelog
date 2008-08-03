@@ -8,8 +8,9 @@ adduser (3.109) unstable; urgency=low
 
   [ Stephen Gran ]
   * Add Joerg to uploaders and remove Marc - thanks for your work
+  * Update Standards-Version to 3.8.0 - no changes
 
- -- Stephen Gran <sgran@debian.org>  Mon, 04 Aug 2008 00:09:03 +0100
+ -- Stephen Gran <sgran@debian.org>  Mon, 04 Aug 2008 00:11:17 +0100
 
 adduser (3.108) unstable; urgency=low
 
