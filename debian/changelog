@@ -4,8 +4,9 @@ adduser (3.110) unstable; urgency=low
     - fr (thanks Nicolas François <nicolas.francois@centraliens.net>)
       (closes: #478087, #478089)
     - ro (thanks Eddy Petrișor <eddy.petrisor@gmail.com>) (closes: #488730)
+    - ru (thanks Yuri Kozlov <kozlov.y@gmail.com>) (closes: #493609)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 10 Aug 2008 22:25:55 +0100
+ -- Stephen Gran <sgran@debian.org>  Sun, 10 Aug 2008 22:29:16 +0100
 
 adduser (3.109) unstable; urgency=low
 
