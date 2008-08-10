@@ -1,3 +1,4 @@
+# translation of ro.po to Romanian
 #
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
@@ -9,45 +10,50 @@
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
 #    Developers do not need to manually edit POT or PO files.
 #
-# Eddy Petri∫or <eddy.petrisor@gmail.com>, 2006.
+# Eddy Petri»ôor <eddy.petrisor@gmail.com>, 2006, 2008.
+# Igor »òtirbu <igor.stirbu@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2006-07-18 23:24+0300\n"
-"Last-Translator: Eddy Petri∫or <eddy.petrisor@gmail.com>\n"
+"POT-Creation-Date: 2007-06-30 09:45+0200\n"
+"PO-Revision-Date: 2008-07-01 00:40+0300\n"
+"Last-Translator: Eddy Petri»ôor <eddy.petrisor@gmail.com>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
-"Plural-Forms: nplurals=3;plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1))\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
-msgid "Do you want system wide readable home directories?"
-msgstr "Dori˛i ca directoarele acas„ s„ fie citibile per tot sistemul?"
+#: ../templates:2001
+#| msgid "Do you want system wide readable home directories?"
+msgid "Do you want system-wide readable home directories?"
+msgstr "Dori»õi ca directoarele acasƒÉ sƒÉ fie citibile per tot sistemul?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"Normally, home directories can be viewed by all users on the system. If you "
-"want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the user. If you are unsure, enable system "
-"wide readable home directories."
+"By default, users' home directories are readable by all users on the system. "
+"If you want to increase security and privacy, you might want home "
+"directories to be readable only for their owners. But if in doubt, leave "
+"this option enabled."
 msgstr ""
-"Œn mod normal, directoarele acas„ pot fi v„zute de c„tre to˛i utilizatorii sistemului. Dac„ "
-"dori˛i s„ m„ri˛i securitatea/secretizarea Ón sistem, probabil ve˛i dori s„ face˛i ca directoarele acas„ s„ fie citibile doar pentru utilizatorul proprietar. Dac„ "
-"nu sunte˛i sigur(„), activa˛i directoare acas„ citibile per tot sistemul."
+"√én mod implicit, directoarele acasƒÉ pot fi citite de cƒÉtre to»õi utilizatorii "
+"sistemului. DacƒÉ dori»õi sƒÉ mƒÉri»õi securitatea »ôi secretizarea, "
+"probabil ve»õi dori sƒÉ face»õi ca directoarele acasƒÉ sƒÉ fie citibile doar "
+"pentru utilizatorul proprietar. DacƒÉ vƒÉ √Ændoi»õi √Æn legƒÉturƒÉ cu aceastƒÉ decizie, , lƒÉsa»õi activatƒÉ aceastƒÉ op»õiune."
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"This will only affect home directories of users added with the adduser "
-"program later."
-msgstr "Acest lucru va afecta directoarele acas„ pentru utilizatorii care sunt ad„uga˛i ulterior cu adduser."
+"This will only affect home directories of users added from now on with the "
+"adduser command."
+msgstr ""
+"Acest lucru va afecta directoarele acasƒÉ pentru utilizatorii care vor fi "
+"adƒÉuga»õi de acum √Ænainte cu comanda adduser."
 
