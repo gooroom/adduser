@@ -1,10 +1,10 @@
 adduser (3.110) unstable; urgency=low
 
   * New tranlations:
-    - fr (thanks Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>)
-      (closes: #478087)
+    - fr (thanks Nicolas François <nicolas.francois@centraliens.net>)
+      (closes: #478087, #478089)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 10 Aug 2008 22:21:23 +0100
+ -- Stephen Gran <sgran@debian.org>  Sun, 10 Aug 2008 22:24:32 +0100
 
 adduser (3.109) unstable; urgency=low
 
