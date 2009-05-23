@@ -278,7 +278,7 @@ Display version and copyright information.
 
 .TP
 .B 0 
-The user exists as specified. This can have 2 causes: The user was created by adduser or the user was already present on the system before adduser was invoked. Invoking adduser a second time with the same parameters as before also returns 0.
+The user exists as specified. This can have 2 causes: The user was created by adduser or the user was already present on the system before adduser was invoked. If adduser was returning 0 , invoking adduser a second time with the same parameters as before also returns 0.
 .TP
 .B 1
 Creating the user or group failed because it was already present with other UID/GID than specified. The username or groupname was rejected because of a mismatch with the configured regular expressions, see adduser.conf(5). Adduser has been aborted by a signal.

@@ -35,6 +35,17 @@ use strict;
 use Debian::AdduserCommon;
 use Getopt::Long;
 
+
+
+###################
+# return values
+
+use constant RET_OK => 0; # OK
+
+
+
+
+
 BEGIN {
     local $ENV{PERL_DL_NONLAZY}=1;
     eval 'use Locale::gettext';
@@ -110,8 +121,8 @@ our @names;
 # Parse options, sanity checks
 unless ( GetOptions ("quiet|q" => sub { $verbose = 0 },
             "force-badname" => \$allow_badname,
-	    "help|h" => sub { &usage(); exit 0 },
-	    "version|v" => sub { &version(); exit 0 },
+	    "help|h" => sub { &usage(); exit RET_OK },
+	    "version|v" => sub { &version(); exit RET_OK },
 	    "system" => \$found_sys_opt,
 	    "group" => \$found_group_opt,
 	    "ingroup=s" => \$ingroup_name,
@@ -254,7 +265,7 @@ if ($action eq "addsysgroup") {
     if ($ret == 3) {
         print STDERR "$0: " if $verbose;
 	printf STDERR (gtx("The group `%s' already exists as a system group. Exiting.\n"), $new_name) if $verbose;
-	exit 0;
+	exit RET_OK;
     }
 
     if ($ret == 1) {
@@ -289,7 +300,7 @@ if ($action eq "addsysgroup") {
     &systemcall($groupadd, '-g', $new_gid, $new_name);
     &invalidate_nscd("group");
     print (gtx("Done.\n")) if $verbose;
-    exit 0;
+    exit RET_OK;
 }
 
 
@@ -318,7 +329,7 @@ if ($action eq "addgroup") {
     &systemcall($groupadd, '-g', $new_gid, $new_name);
     &invalidate_nscd("group");
     print (gtx("Done.\n")) if $verbose;
-    exit 0;
+    exit RET_OK;
 }
 
 
@@ -333,7 +344,7 @@ if ($action eq "addusertogroup") {
     if (&user_is_member($existing_user, $existing_group)) {
 	printf gtx("The user `%s' is already a member of `%s'.\n"),
                 $existing_user,$existing_group if $verbose;
-	exit 0;			# not really an error
+	exit RET_OK;		# not really an error
     }
 
     printf gtx("Adding user `%s' to group `%s' ...\n"),$existing_user,$existing_group
@@ -343,7 +354,7 @@ if ($action eq "addusertogroup") {
     &systemcall($gpasswd, '-a',$existing_user,$existing_group);
     &invalidate_nscd();
     print (gtx("Done.\n")) if $verbose;
-    exit 0;
+    exit RET_OK;
 }
 
 
@@ -357,7 +368,7 @@ if ($action eq "addsysuser") {
         my $tmp_u = getpwnam($new_name);
         if (($tmp_u >= $config{"first_system_uid"}) and ($tmp_u <= $config{"last_system_uid"})) {
 	    printf (gtx("The system user `%s' already exists. Exiting.\n"), $new_name) if $verbose;
-            exit 0;
+            exit RET_OK
         }
 	printf (gtx("The user `%s' already exists. Exiting.\n"), $new_name) if $verbose;
 	exit 1;
@@ -446,7 +457,7 @@ if ($action eq "addsysuser") {
     }
     create_homedir (0);
 
-    exit 0;
+    exit RET_OK;
 }
 
 
@@ -605,7 +616,7 @@ if ($action eq "adduser") {
     &systemcall('/usr/local/sbin/adduser.local', $new_name, $new_uid,
 		$new_gid, $home_dir) if (-x "/usr/local/sbin/adduser.local");
     
-    exit 0;
+    exit RET_OK;
 }
 
 #
