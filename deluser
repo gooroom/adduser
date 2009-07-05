@@ -206,8 +206,6 @@ if($action eq "deluser") {
 
 
 
-
-
     # Don't allow a non-system user to be deleted when --system is given
     # Also, "user does not exist" is only a warning with --system, but an
     # error without --system.
@@ -237,6 +235,11 @@ if($action eq "deluser") {
         exit 9;
     }
 
+    # consistency check
+    # if --backup-to is specified, --backup should be set too
+    if ($config{"backup_to"}) {
+        $config{"backup"} = 1;
+    }
 
     if($config{"remove_home"} || $config{"remove_all_files"}) {
       s_print (gtx("Looking for files to backup/remove ...\n"));
