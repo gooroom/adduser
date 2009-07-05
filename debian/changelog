@@ -1,3 +1,9 @@
+adduser (3.111) unstable; urgency=low
+
+  * deluser: --backup-to implies --backup; thanks Zak Wilcox (closes: #535857) 
+
+ -- Joerg Hoh <joerg@joerghoh.de>  Sun, 05 Jul 2009 20:37:38 +0200
+
 adduser (3.110) unstable; urgency=low
 
   * New tranlations:
