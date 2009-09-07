@@ -207,7 +207,7 @@ sub preseed_config {
   $configref->{"dir_mode"} = "0755";
   $configref->{"setgid_home"} = "no";
   $configref->{"no_del_paths"} = "^/$ ^/lost+found/.* ^/media/.* ^/mnt/.* ^/etc/.* ^/bin/.* ^/boot/.* ^/dev/.* ^/lib/.* ^/proc/.* ^/root/.* ^/sbin/.* ^/tmp/.* ^/sys/.* ^/srv/.* ^/opt/.* ^/initrd/.* ^/usr/.* ^/var/.*";
-  $configref->{"name_regex"} = "^[a-z][-a-z0-9]*\$";
+  $configref->{"name_regex"} = "^[a-z][-a-z0-9_]*\$";
   $configref->{"exclude_fstypes"} = "(proc|sysfs|usbfs|devpts|tmpfs)";
   $configref->{"skel_ignore_regex"} = "dpkg-(old|new|dist)\$";
   $configref->{"extra_groups"} = "dialout cdrom floppy audio video plugdev users games";
