@@ -4,8 +4,9 @@ adduser (3.111) unstable; urgency=low
   * deluser: sockets should also be backupped and removed (closes: #545024),
     thanks Christian Sievers for spotting.
   * allow underscores again in usernames (closes: #520586)
+  * remove the "games" group from the EXTRA_GROUPS example (closes: #502150)
 
- -- Joerg Hoh <joerg@joerghoh.de>  Mon, 07 Sep 2009 23:18:14 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Mon, 07 Sep 2009 23:23:27 +0200
 
 adduser (3.110) unstable; urgency=low
 
