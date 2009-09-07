@@ -1,8 +1,11 @@
 adduser (3.111) unstable; urgency=low
 
   * deluser: --backup-to implies --backup; thanks Zak Wilcox (closes: #535857) 
+  * deluser: sockets should also be backupped and removed (closes: #545024),
+    thanks Christian Sievers for spotting.
+  
 
- -- Joerg Hoh <joerg@joerghoh.de>  Sun, 05 Jul 2009 20:37:38 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Mon, 07 Sep 2009 23:08:32 +0200
 
 adduser (3.110) unstable; urgency=low
 

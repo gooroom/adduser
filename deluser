@@ -299,9 +299,12 @@ if($action eq "deluser") {
 		(-f $File::Find::name && push(@files, $File::Find::name)) ||
 		(-d $File::Find::name && push(@dirs, $File::Find::name)) ||
                 (-l $File::Find::name && push(@dirs, $File::Find::name)) ||
-                (-s $File::Find::name && push(@dirs, $File::Find::name)) || 
+                (-S $File::Find::name && push(@dirs, $File::Find::name)) || 
                 (-p $File::Find::name && push(@dirs, $File::Find::name))
 	      );
+              if ( -b $File::Find::name || -c $File::Find::name ) {
+                printf (gtx("Cannot handle special file %s\n"),$File::Find::name);
+              }
 	} # sub find_match
 	
 	File::Find::find({wanted => \&find_match, untaint => 1, no_chdir => 1}, '/');

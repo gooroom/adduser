@@ -2,7 +2,6 @@
 
 # adduser: a utility to add users to the system
 # addgroup: a utility to add groups to the system
-my $version = "VERSION";
 
 # Copyright (C) 1997, 1998, 1999 Guy Maor <maor@debian.org>
 # Copyright (C) 1995 Ted Hajek <tedhajek@boombox.micro.umn.edu>
@@ -36,12 +35,16 @@ use Debian::AdduserCommon;
 use Getopt::Long;
 
 
+my $version = "VERSION";
 
 ###################
 # return values
 
 use constant RET_OK => 0; # OK
-
+use constant RET_OBJECT_ALREADY_EXISTS => 1; # the user or group does already exist, so the requested action cannot be performed
+use constant RET_INVALID_CHARS_IN_NAME => 1; # the provided name contains invalid characters
+use constant RET_ADDUSER_ABORTED => 1;  # the program was aborted (eg via Ctrl+C)
+use constant RET_INVALID_CALL => 1; # getopt returned with "false"
 
 
 
@@ -140,7 +143,7 @@ unless ( GetOptions ("quiet|q" => sub { $verbose = 0 },
             "add_extra_groups" => \$add_extra_groups,
 	    "debug" => sub { $verbose = 2 } ) ) {
     &usage();
-    exit 1;
+    exit RET_INVALID_CALL;
 }
 
 # everyone can issue "--help" and "--version", but only root can go on
@@ -271,13 +274,13 @@ if ($action eq "addsysgroup") {
     if ($ret == 1) {
         print STDERR "$0: " if $verbose;
 	printf STDERR (gtx("The group `%s' already exists and is not a system group. Exiting.\n"), $new_name) if $verbose;
-	exit 1;
+	exit RET_OBJECT_ALREADY_EXISTS;
     }
 
     if ($ret == 2) {
         print STDERR "$0: " if $verbose;
 	printf STDERR (gtx("The group `%s' already exists, but has a different GID. Exiting.\n"), $new_name) if $verbose;
-	exit 1;
+	exit RET_OBJECT_ALREADY_EXISTS;
     }
 
     dief (gtx("The GID `%s' is already in use.\n"),$new_gid)
@@ -371,11 +374,11 @@ if ($action eq "addsysuser") {
             exit RET_OK
         }
 	printf (gtx("The user `%s' already exists. Exiting.\n"), $new_name) if $verbose;
-	exit 1;
+	exit RET_OBJECT_ALREADY_EXISTS;
     }
     if (existing_user_ok($new_name, $new_uid) == 2) {
 	printf (gtx("The user `%s' already exists with a different UID. Exiting.\n"), $new_name) if $verbose;
-	exit 1;
+	exit RET_OBJECT_ALREADY_EXISTS;
     }
 
     if (!$ingroup_name && !defined($new_gid) && !$make_group_also) {
@@ -670,9 +673,9 @@ sub create_homedir {
 
       if ($config{"skel"} && $copy_skeleton) {
 	  printf gtx("Copying files from `%s' ...\n"),$config{skel} if $verbose;
-	  open(FIND, "cd $config{skel}; find .  -print |")
+	  open(my $FIND, "cd $config{skel}; find .  -print |")
 	      || &cleanup(sprintf(gtx("fork for `find' failed: %s\n"), $!));
-	  while (<FIND>) {
+	  while (<$FIND>) {
 	      chop;
 	      next if ($_ eq ".");
 	      next if ($_ =~ qr/$config{skel_ignore_regex}/ );
@@ -866,7 +869,7 @@ sub checkname {
 letters, digits, underscores, periods, at signs and dashes, and not start with
 a dash (as defined by IEEE Std 1003.1-2001). For compatibility with Samba
 machine accounts \$ is also supported at the end of the username\n"), $0);
-        exit 1;
+        exit RET_INVALID_CHARS_IN_NAME;;
     }
     if ($name !~ qr/$config{"name_regex"}/) {
       if ($allow_badname) {
@@ -877,7 +880,7 @@ machine accounts \$ is also supported at the end of the username\n"), $0);
 (gtx("%s: Please enter a username matching the regular expression configured
 via the NAME_REGEX configuration variable.  Use the `--force-badname'
 option to relax this check or reconfigure NAME_REGEX.\n"), $0);
-        exit 1;
+        exit RET_INVALID_CHARS_IN_NAME;
       }
     }
 }
@@ -966,7 +969,7 @@ sub cleanup {
 	&systemcall('groupdel', $undogroup);
     }
     # do we need to invalidate the nscd cache here, too?
-    exit 1;
+    exit RET_ADDUSER_ABORTED;
 }
 
 sub handler {
