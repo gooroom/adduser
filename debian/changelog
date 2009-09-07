@@ -5,8 +5,10 @@ adduser (3.111) unstable; urgency=low
     thanks Christian Sievers for spotting.
   * allow underscores again in usernames (closes: #520586)
   * remove the "games" group from the EXTRA_GROUPS example (closes: #502150)
+  * really warn if a user is already present when creating a new system user
+    (closes: 515909)
 
- -- Joerg Hoh <joerg@joerghoh.de>  Mon, 07 Sep 2009 23:23:27 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Mon, 07 Sep 2009 23:30:39 +0200
 
 adduser (3.110) unstable; urgency=low
 
