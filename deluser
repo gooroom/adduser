@@ -303,7 +303,7 @@ if($action eq "deluser") {
                 (-p $File::Find::name && push(@dirs, $File::Find::name))
 	      );
               if ( -b $File::Find::name || -c $File::Find::name ) {
-                printf (gtx("Cannot handle special file %s\n"),$File::Find::name);
+               warnf (gtx("Cannot handle special file %s\n"),$File::Find::name);
               }
 	} # sub find_match
 	
