@@ -1,5 +1,6 @@
 adduser (3.111) unstable; urgency=low
 
+  [ Joerg Hoh ]
   * deluser: --backup-to implies --backup; thanks Zak Wilcox (closes: #535857) 
   * deluser: sockets should also be backupped and removed (closes: #545024),
     thanks Christian Sievers for spotting.
@@ -7,8 +8,9 @@ adduser (3.111) unstable; urgency=low
   * remove the "games" group from the EXTRA_GROUPS example (closes: #502150)
   * really warn if a user is already present when creating a new system user
     (closes: 515909)
+  * document the interaction between --system and --close (closes: #515909) 
 
- -- Joerg Hoh <joerg@joerghoh.de>  Mon, 07 Sep 2009 23:30:39 +0200
+ -- Joerg Hoh <joerg@joerghoh.de>  Sat, 19 Sep 2009 22:05:19 +0200
 
 adduser (3.110) unstable; urgency=low
 
