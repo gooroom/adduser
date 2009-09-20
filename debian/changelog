@@ -11,13 +11,14 @@ adduser (3.111) unstable; urgency=low
   * document the interaction between --system and --close (closes: #515909) 
 
   [ Stephen Gran ]
+  * Update po4a calls
   * Translations:
     - fr (thanks Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>
       closes: #545475)
     - sv (thanks Daniel Nylander <yeager@ubuntu.com> closes: #517505)
     - zh_CN (thanks Aron Xu <happyaron.xu@gmail.com> closes: #544504)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 20 Sep 2009 21:49:49 +0100
+ -- Stephen Gran <sgran@debian.org>  Sun, 20 Sep 2009 21:51:15 +0100
 
 adduser (3.110) unstable; urgency=low
 

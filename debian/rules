@@ -7,14 +7,14 @@ build:
 	$(checkdir)
 	$(MAKE) -C po all adduser.pot
 	# generate man pages
-	cd doc/po4a && po4a po4a.conf
+	cd doc/po4a && po4a --previous po4a.conf
 	touch build
 
 clean:
 	$(checkdir)
 	$(MAKE) -C po update clean
 	debconf-updatepo
-	cd doc/po4a && po4a --rm-translations po4a.conf
+	cd doc/po4a && po4a --previous --rm-translations po4a.conf
 	-rm -f doc/po4a/po/*~
 	-rm -rf build *~ debian/tmp debian/*~ debian/files* debian/substvars
 
