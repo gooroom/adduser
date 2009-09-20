@@ -52,19 +52,31 @@ binary-indep:	checkroot build
 
 	./debian/scripts/install-manpages.pl $(version) doc/ debian/tmp/usr/share/man/
 
-	install -m644 TODO debian/tmp/usr/share/doc/adduser/
-	install -m644 debian/changelog debian/tmp/usr/share/doc/adduser/
-	install -m644 debian/lintian/overrides/adduser debian/tmp/usr/share/lintian/overrides
+	install -o root -g root -d -m755 debian/tmp/usr/share/doc/adduser/examples
+	install -o root -g root -d -m755 debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples
+	install -o root -g root -d -m755 debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples/skel.other
+	install -o root -g root -d -m755 debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples/skel
+	install -o root -g root -m644 TODO debian/tmp/usr/share/doc/adduser/
+	install -o root -g root -m644 debian/changelog debian/tmp/usr/share/doc/adduser/
+	install -o root -g root -m644 debian/lintian/overrides/adduser debian/tmp/usr/share/lintian/overrides
 	find debian/tmp/usr/share/doc -type f | xargs gzip -9f
-	install -m644 deluser.conf debian/tmp/etc
-	cp -r examples debian/tmp/usr/share/doc/adduser
-	chmod -R 644 debian/tmp/usr/share/doc/adduser/examples
-	find debian/tmp/usr/share/doc/adduser/examples -type d -print0 | xargs --null chmod 755
-	chown -R root:root debian/tmp/usr/share/doc/adduser/examples
-	install -m644 adduser.conf debian/tmp/usr/share/adduser
-	install -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
-	install -m644 debian/conffiles debian/tmp/DEBIAN
-	install -m755 debian/postinst debian/postrm debian/config debian/tmp/DEBIAN
+	install -o root -g root -m644 deluser.conf debian/tmp/etc
+	install -o root -g root -m644 examples/adduser.local.conf.examples/skel.other/index.html debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples/skel.other/
+	install -o root -g root -m644 examples/adduser.local.conf.examples/skel/dot.bash_logout debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples/skel/
+	install -o root -g root -m644 examples/adduser.local.conf.examples/skel/dot.bashrc debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples/skel/
+	install -o root -g root -m644 examples/adduser.local.conf.examples/skel/dot.bash_profile debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples/skel/
+	install -o root -g root -m644 examples/adduser.local.conf.examples/bash.bashrc debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples/
+	install -o root -g root -m644 examples/adduser.local.conf.examples/adduser.conf debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples/
+	install -o root -g root -m644 examples/adduser.local.conf.examples/profile debian/tmp/usr/share/doc/adduser/examples/adduser.local.conf.examples/
+	install -o root -g root -m644 examples/adduser.local.conf debian/tmp/usr/share/doc/adduser/examples/
+	install -o root -g root -m644 examples/adduser.local debian/tmp/usr/share/doc/adduser/examples/
+	install -o root -g root -m644 examples/README debian/tmp/usr/share/doc/adduser/examples/
+	install -o root -g root -m644 examples/INSTALL debian/tmp/usr/share/doc/adduser/examples/
+
+	install -o root -g root -m644 adduser.conf debian/tmp/usr/share/adduser
+	install -o root -g root -m644 debian/copyright debian/tmp/usr/share/doc/adduser/ 
+	install -o root -g root -m644 debian/conffiles debian/tmp/DEBIAN/
+	install -o root -g root -m755 debian/postinst debian/postrm debian/config debian/tmp/DEBIAN/
 	po2debconf debian/templates > debian/tmp/DEBIAN/templates
 	$(MAKE) -C po DESTDIR=`pwd`/debian/tmp install 
 
