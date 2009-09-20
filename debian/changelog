@@ -17,8 +17,9 @@ adduser (3.111) unstable; urgency=low
       closes: #545475)
     - sv (thanks Daniel Nylander <yeager@ubuntu.com> closes: #517505)
     - zh_CN (thanks Aron Xu <happyaron.xu@gmail.com> closes: #544504)
+  * update standards version - no changes
 
- -- Stephen Gran <sgran@debian.org>  Sun, 20 Sep 2009 21:51:15 +0100
+ -- Stephen Gran <sgran@debian.org>  Sun, 20 Sep 2009 22:09:53 +0100
 
 adduser (3.110) unstable; urgency=low
 
