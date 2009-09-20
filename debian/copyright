@@ -10,9 +10,13 @@ rewrote most of it.
 Since May 20 2000, it is maintained by Roland Bauerschmidt
 <rb@debian.org>.
 
-Since March 24 2004, it is still maintained by Roland Bauerschmidt
+Since March 24 2004, it is maintained by Roland Bauerschmidt
 <rb@debian.org>, and co-maintained by Marc Haber
 <mh+debian-packages@zugschlus.de>
+
+Since 23 Oct 2005, it has been maintained by Joerg Hoh <joerg@joerghoh.de> 
+
+Since June 2006, it has been maintained by Stephen Gran <sgran@debian.org>
 
 deluser is Copyright (C) 2000 Roland Bauerschmidt <rb@debian.org>
 and based on the source code of adduser.
@@ -40,4 +44,4 @@ GPL V2 as well.
     51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 On Debian GNU/Linux systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL'.
+Public License can be found in `/usr/share/common-licenses/GPL-2'.
