@@ -1,3 +1,10 @@
+adduser (3.112) UNRELEASED; urgency=low
+
+  * deluser: --backup-to implies --backup, but only if passed on the command
+    line (addresses: #535857) (closes: #551929)
+
+ -- Stephen Gran <sgran@debian.org>  Sat, 19 Dec 2009 10:53:27 +0000
+
 adduser (3.111) unstable; urgency=low
 
   [ Joerg Hoh ]

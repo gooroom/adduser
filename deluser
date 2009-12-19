@@ -161,7 +161,6 @@ preseed_config (\@defaults,\%config);
 foreach(keys(%pconfig)) {
     $config{$_} = $pconfig{$_} if ($pconfig{$_});
 }
-undef (%pconfig);
 
 if (($config{remove_home} || $config{remove_all_files} || $config{backup}) && ($install_more_packages)) {
     fail (8, gtx("In order to use the --remove-home, --remove-all-files, and --backup features,
@@ -237,7 +236,7 @@ if($action eq "deluser") {
 
     # consistency check
     # if --backup-to is specified, --backup should be set too
-    if ($config{"backup_to"}) {
+    if ($pconfig{"backup_to"}) {
         $config{"backup"} = 1;
     }
 
