@@ -4,8 +4,10 @@ adduser (3.112) UNRELEASED; urgency=low
     line (addresses: #535857) (closes: #551929)
   * deluser: explicitly set $PATH, patch from Martin Pitt
     <martin.pitt@ubuntu.com> (closes: #555307)
+  * Translations:
+    - ru: thanks Yuri Kozlov <yuray@komyakino.ru> (closes: #559661)
 
- -- Stephen Gran <sgran@debian.org>  Sat, 19 Dec 2009 11:00:43 +0000
+ -- Stephen Gran <sgran@debian.org>  Sat, 19 Dec 2009 11:03:31 +0000
 
 adduser (3.111) unstable; urgency=low
 
