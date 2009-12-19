@@ -104,6 +104,10 @@ if (!defined($configfile)) {
     @defaults = ($configfile);
 }
 
+# explicitly set PATH, because super (1) cleans up the path and makes deluser unusable;
+# this is also a good idea for sudo (which doesn't clean up)
+$ENV{"PATH"}="/bin:/usr/bin:/sbin:/usr/sbin";
+
 my @names = ();
 my ($user,$group);
 
