@@ -1,3 +1,11 @@
+adduser (3.112.0) UNRELEASED; urgency=low
+
+  * NOT YET RELEASED
+  * fix naming inconsistency in adduser.8 man page.
+    Thanks to Piotr Lewandowski (addresses: #453086)
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 07 Jul 2010 23:09:56 +0200
+
 adduser (3.112) UNRELEASED; urgency=low
 
   * deluser: --backup-to implies --backup, but only if passed on the command
