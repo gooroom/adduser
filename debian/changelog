@@ -17,7 +17,8 @@ adduser (3.115) UNRELEASED; urgency=medium
   * Program (translation):
       * Mention "--add_extra_groups" in --help output. Closes: #547911.
   * Manpage:
-    * Improve pointer to NAME_REGEX. Closes: #508740.
+      * Improve pointer to customization files. Closes: #611898.
+      * Improve pointer to NAME_REGEX. Closes: #508740.
 
  -- Afif Elghraoui <afif@debian.org>  Thu, 26 May 2016 21:46:59 -0700
 
