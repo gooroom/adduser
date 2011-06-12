@@ -5,8 +5,10 @@ adduser (3.113) unstable; urgency=low
   * Keep test from complaining (closes: #613009)
   * Use db_settitle instead of db_title (closes: #560313)
   * Add newline to deluser output (closes: #592629)
+  * Don't go wrong if user or group is 0, although, please, stop that
+    (closes: #617480)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 12 Jun 2011 18:06:18 +0100
+ -- Stephen Gran <sgran@debian.org>  Sun, 12 Jun 2011 18:07:53 +0100
 
 adduser (3.112+nmu2) unstable; urgency=low
 

@@ -175,7 +175,7 @@ apt-get install perl-modules.\n"));
  
 my ($pw_uid, $pw_gid, $pw_homedir, $gr_gid, $maingroup);
 
-if($user) {
+if(defined($user)) {
     my @passwd = getpwnam($user);
     $pw_uid = $passwd[2];
     $pw_gid = $passwd[3];
@@ -183,7 +183,7 @@ if($user) {
     
     $maingroup = $pw_gid ? getgrgid($pw_gid) : "";
 }
-if($group) {
+if(defined($group)) {
     #($gr_name,$gr_passwd,$gr_gid,$gr_members) = getgrnam($group);
     my @group = getgrnam($group);
     $gr_gid = $group[2];
