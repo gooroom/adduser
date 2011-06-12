@@ -300,8 +300,8 @@ if($action eq "deluser") {
 	      (
 		($File::Find::name =~ /^\/proc\// && ($File::Find::prune = 1)) ||
 		(-f $File::Find::name && push(@files, $File::Find::name)) ||
+                (-l $File::Find::name && push(@files, $File::Find::name)) ||
 		(-d $File::Find::name && push(@dirs, $File::Find::name)) ||
-                (-l $File::Find::name && push(@dirs, $File::Find::name)) ||
                 (-S $File::Find::name && push(@dirs, $File::Find::name)) || 
                 (-p $File::Find::name && push(@dirs, $File::Find::name))
 	      );
