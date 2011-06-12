@@ -2,8 +2,9 @@ adduser (3.113) unstable; urgency=low
 
   * Warning to STDERR (closes: #561864)
   * Use unlink on symlinks (closes: #609156)
+  * Keep test from complaining (closes: #613009)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 12 Jun 2011 17:56:24 +0100
+ -- Stephen Gran <sgran@debian.org>  Sun, 12 Jun 2011 18:01:53 +0100
 
 adduser (3.112+nmu2) unstable; urgency=low
 
