@@ -1,17 +1,17 @@
 PO4A-HEADER:mode=after;position=VOIR AUSSI;beginboundary=^\.SH
 .SH TRADUCTION
-Ce document est une traduction, réalisée par
+Ce document est une traduction, rÃ©alisÃ©e par
 Christophe Sauthier <christophe@sauthier.com> en 2002.
 .br
-Elle a été reprise avec po4a par Nicolas FRANÇOIS le 29 octobre 2004.
+Elle a Ã©tÃ© reprise avec po4a par Nicolas FRANÃ‡OIS le 29 octobre 2004.
 
-L'équipe de traduction a fait le maximum pour réaliser une adaptation
-française de qualité.
+L'Ã©quipe de traduction a fait le maximum pour rÃ©aliser une adaptation
+franÃ§aise de qualitÃ©.
 
 La version anglaise de ce document est toujours consultable
-en ajoutant l'option «\ \-L C\ » à la commande \fBman\fR.
+en ajoutant l'option Â«\ \-L C\ Â» Ã  la commande \fBman\fR.
 
-N'hésitez pas à signaler à l'auteur ou à la liste de traduction
+N'hÃ©sitez pas Ã  signaler Ã  l'auteur ou Ã  la liste de traduction
 .nh
 <\fIdebian\-l10n\-french@lists.debian.org\fR>,
 .hy

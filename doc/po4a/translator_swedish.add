@@ -1,10 +1,10 @@
-PO4A-HEADER:mode=after;position=^\.SH "SE OCKSÅ";beginboundary=^\.SH
-.SH ÖVERSÄTTARE
-Denna manualsida har översatts av Daniel Nylander <po@danielnylander.se> 
+PO4A-HEADER:mode=after;position=^\.SH "SE OCKSÃ…";beginboundary=^\.SH
+.SH Ã–VERSÃ„TTARE
+Denna manualsida har Ã¶versatts av Daniel Nylander <po@danielnylander.se> 
 den 25 november 2005.
 
-Om du hittar några felaktigheter i översättningen, vänligen skicka ett 
-e-postmeddelande till översättaren eller till sändlistan
+Om du hittar nÃ¥gra felaktigheter i Ã¶versÃ¤ttningen, vÃ¤nligen skicka ett 
+e-postmeddelande till Ã¶versÃ¤ttaren eller till sÃ¤ndlistan
 .nh
 <\fIdebian\-l10n\-swedish@lists.debian.org\fR>,
 .hy

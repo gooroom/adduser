@@ -1,56 +1,49 @@
-# translation of adduser_3.52_da.po to Danish
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
-#    Developers do not need to manually edit POT or PO files.
+# Danish translation adduser.
+# Copyright (C) 2010 adduser & nedenstÃ¥ende oversÃ¦ttere.
+# This file is distributed under the same license as the adduser package.
 # Claus Hindsgaul <claus_h@image.dk>, 2004.
+# Joe Hansen <joedalton2@yahoo.dk>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser_3.52_da\n"
-"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-16 21:56+0000\n"
-"PO-Revision-Date: 2004-04-03 13:25+0200\n"
-"Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
-"Language-Team: Danish <dansk@klid.dk>\n"
+"Project-Id-Version: adduser\n"
+"Report-Msgid-Bugs-To: adduser@packages.debian.org\n"
+"POT-Creation-Date: 2009-12-23 16:11+0000\n"
+"PO-Revision-Date: 2010-10-11 05:26+0100\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
-msgid "Do you want system wide readable home directories?"
-msgstr "Ønsker du globalt læsbare hjemmemapper?"
+#: ../templates:2001
+msgid "Do you want system-wide readable home directories?"
+msgstr "Ã˜nsker du globalt lÃ¦sbare hjemmemapper?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"Normally, home directories can be viewed by all users on the system. If you "
-"want to increase the security/privacy on your system, you might want your "
-"home directories only readable by the user. If you are unsure, enable system "
-"wide readable home directories."
+"By default, users' home directories are readable by all users on the system. "
+"If you want to increase security and privacy, you might want home "
+"directories to be readable only for their owners. But if in doubt, leave "
+"this option enabled."
 msgstr ""
-"Normalt kan indholdet af brugernes hjemmemapper læses af samtlige brugere på "
-"systemet. For at øge systemets sikkerhed/brugernes privatliv kan det være "
-"ønskværdigt at give hver bruger sin egen gruppe, således at indholdet af en "
-"brugers hjemmemappe ikke kan ses af andre end brugeren selv. Hvis du er "
-"usikker, så aktivér globalt læsbare hjemmemapper."
+"Som standard kan indholdet af brugernes hjemmemapper lÃ¦ses af samtlige "
+"brugere pÃ¥ systemet. Hvis du Ã¸nsker at Ã¸ge sikkerheden og brugernes "
+"privatliv, kan det vÃ¦re Ã¸nskvÃ¦rdigt at gÃ¸re hver brugers hjemmemappe lÃ¦sbar "
+"kun for brugeren selv. Hvis du er i tvivl, sÃ¥ efterlad denne indstilling "
+"aktiveret."
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:2001
 msgid ""
-"This will only affect home directories of users added with the adduser "
-"program later."
+"This will only affect home directories of users added from now on with the "
+"adduser command."
 msgstr ""
-"Dette vil kun få indflydelse på hjemmemapper der efterfølgende bliver "
-"tilføjet med programmet adduser."
+"Dette vil kun fÃ¥ indflydelse pÃ¥ hjemmemapper for brugere der tilfÃ¸jes fra nu "
+"af med kommandoen adduser."

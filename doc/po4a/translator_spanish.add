@@ -1,4 +1,4 @@
-PO4A-HEADER:mode=after;position=^\.SH "VÉASE TAMBIÉN";beginboundary=^\.SH
+PO4A-HEADER:mode=after;position=^\.SH "VÃ‰ASE TAMBIÃ‰N";beginboundary=^\.SH
 .SH TRADUCTOR
-Traducción de Rubén Porras Campo <debian-l10n-spanish@lists.debian.org>
+TraducciÃ³n de RubÃ©n Porras Campo <debian-l10n-spanish@lists.debian.org>
 adduser.8 et .5.conf a la fin

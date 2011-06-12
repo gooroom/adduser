@@ -2,68 +2,78 @@
 # Copyright (C) 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 #
 # Yuri Kozlov <kozlov.y@gmail.com>, 2005, 2006, 2007, 2008.
+# Yuri Kozlov <yuray@komyakino.ru>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser 3.107\n"
-"POT-Creation-Date: 2008-03-27 20:45+0000\n"
-"PO-Revision-Date: 2008-03-29 22:18+0300\n"
-"Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
+"Project-Id-Version: adduser 3.112+nmu2\n"
+"POT-Creation-Date: 2010-11-02 14:09-0400\n"
+"PO-Revision-Date: 2010-11-02 21:55+0300\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 # type: TH
+#. type: TH
 #: ../adduser.8:9
 #, no-wrap
 msgid "ADDUSER"
 msgstr "ADDUSER"
 
 # type: TH
+#. type: TH
 #: ../adduser.8:9 ../adduser.conf.5:6 ../deluser.8:9 ../deluser.conf.5:6
 #, no-wrap
 msgid "Version VERSION"
 msgstr "Версия VERSION"
 
 # type: TH
+#. type: TH
 #: ../adduser.8:9 ../adduser.conf.5:6 ../deluser.8:9 ../deluser.conf.5:6
 #, no-wrap
 msgid "Debian GNU/Linux"
 msgstr "Debian GNU/Linux"
 
 # type: SH
+#. type: SH
 #: ../adduser.8:10 ../adduser.conf.5:7 ../deluser.8:10 ../deluser.conf.5:7
 #, no-wrap
 msgid "NAME"
 msgstr "NAME"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:12
 msgid "adduser, addgroup - add a user or group to the system"
 msgstr "adduser, addgroup - добавляют пользователя или группу в систему"
 
 # type: SH
+#. type: SH
 #: ../adduser.8:12 ../deluser.8:12
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr "СИНТАКСИС"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:14
 msgid ""
-"B<adduser> [options] [--home DIR] [--shell|-s SHELL] [--no-create-home] [--"
-"uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--"
-"disabled-password] [--disabled-login] [--gecos GECOS] [--add_extra_groups] "
-"user"
+"B<adduser> [options] [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
+"ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--disabled-"
+"password] [--disabled-login] [--gecos GECOS] [--add_extra_groups] user"
 msgstr ""
-"B<adduser> [параметры] [--home КАТ] [--shell|-s ОБОЛОЧКА] [--no-create-home] "
-"[--uid ID] [--firstuid ID] [--lastuid ID] [--ingroup ГРУППА | --gid ID] [--"
+"B<adduser> [параметры] [--home КАТ] [--shell ОБОЛОЧКА] [--no-create-home] [--"
+"uid ID] [--firstuid ID] [--lastuid ID] [--ingroup ГРУППА | --gid ID] [--"
 "disabled-password] [--disabled-login] [--gecos GECOS] [--add_extra_groups] "
 "пользователь"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:16
 msgid ""
 "B<adduser> --system [options] [--home DIR] [--shell SHELL] [--no-create-"
@@ -75,38 +85,47 @@ msgstr ""
 "password] [--disabled-login] [--gecos GECOS] пользователь"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:18
 msgid "B<addgroup> [options] [--gid ID] group"
 msgstr "B<addgroup> [параметры] [--gid ID] группа"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:20
 msgid "B<addgroup> --system [options] [--gid ID] group"
 msgstr "B<addgroup> --system [параметры] [--gid ID] группа"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:22
 msgid "B<adduser> [options] user group"
 msgstr "B<adduser> [параметры] пользователь группа"
 
 # type: SS
+#. type: SS
 #: ../adduser.8:22 ../deluser.8:20
 #, no-wrap
 msgid "COMMON OPTIONS"
 msgstr "ОБЩИЕ ПАРАМЕТРЫ"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:25
-msgid "[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
-msgstr "[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf ФАЙЛ]"
+msgid ""
+"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf FILE]"
+msgstr ""
+"[--quiet] [--debug] [--force-badname] [--help|-h] [--version] [--conf ФАЙЛ]"
 
 # type: SH
+#. type: SH
 #: ../adduser.8:25 ../adduser.conf.5:12 ../deluser.8:23 ../deluser.conf.5:12
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "ОПИСАНИЕ"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:39
 msgid ""
 "B<adduser> and B<addgroup> add users and groups to the system according to "
@@ -126,12 +145,14 @@ msgstr ""
 "B<addgroup> могут быть запущены в одном из пяти режимов:"
 
 # type: SS
+#. type: SS
 #: ../adduser.8:39
 #, no-wrap
 msgid "Add a normal user"
 msgstr "Добавление обычного пользователя"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:43
 msgid ""
 "If called with one non-option argument and without the B<--system> or B<--"
@@ -141,6 +162,7 @@ msgstr ""
 "B<adduser> добавляет обычного пользователя."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:50
 msgid ""
 "B<adduser> will choose the first available UID from the range specified for "
@@ -152,6 +174,7 @@ msgstr ""
 "uid>."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:56
 msgid ""
 "The range specified in the configuration file may be overridden with the B<--"
@@ -161,6 +184,7 @@ msgstr ""
 "параметров B<--firstuid> и B<--lastuid.>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:73
 msgid ""
 "By default, each user in Debian GNU/Linux is given a corresponding group "
@@ -180,16 +204,17 @@ msgstr ""
 "позволяет групповую запись в каталог, что легко достигается посредством "
 "помещения соответствующих пользователей в новую группу, установкой set-group-"
 "ID бита на каталог и проверкой того, что все пользователи используют "
-"значение umask со значением 002. Если параметру B<USERGROUPS> присвоить "
-"значение I<no>, то все GID пользователей будут устанавливаться в "
-"B<USERS_GID>. Первичные группы пользователей также могут быть изменены "
-"из командной строки с помощью параметров B<--gid> или B<--ingroup>, "
-"которые задают группу по id или по имени соответственно. Также, "
-"пользователей можно добавить в одну или более групп, указанных в "
-"adduser.conf, установкой ADD_EXTRA_GROUPS равной 1 в adduser.conf, "
-"или указав --add_extra_groups в командной строке."
+"значение umask со значением 002. Если данную возможность выключить, задав "
+"параметру B<USERGROUPS> значение I<no>, то все GID пользователей будут "
+"устанавливаться в B<USERS_GID>. Первичные группы пользователей также могут "
+"быть изменены из командной строки с помощью параметров B<--gid> или B<--"
+"ingroup>, которые задают группу по id или по имени, соответственно. Также, "
+"пользователей можно добавить в одну или более групп, указанных в adduser."
+"conf, установкой ADD_EXTRA_GROUPS равной 1 в adduser.conf, или указав --"
+"add_extra_groups в командной строке."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:87
 msgid ""
 "B<adduser> will create a home directory subject to B<DHOME>, B<GROUPHOMES>, "
@@ -207,6 +232,7 @@ msgstr ""
 "каталоге пользователя, будут иметь правильную группу."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:101
 msgid ""
 "B<adduser> will copy files from B<SKEL> into the home directory and prompt "
@@ -225,6 +251,7 @@ msgstr ""
 "помощью SSH RSA ключей)."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:108
 msgid ""
 "If the file B</usr/local/sbin/adduser.local> exists, it will be executed "
@@ -236,34 +263,42 @@ msgstr ""
 "настройки. Аргументы передаваемые B<adduser.local>:"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:110 ../deluser.8:83
 msgid "username uid gid home-directory"
 msgstr "имя_пользователя uid gid домашний_каталог"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:112
-msgid "The environment variable VERBOSE is set according to the following rule:"
-msgstr "Значение переменной среды VERBOSE устанавливается по следующему правилу:"
+msgid ""
+"The environment variable VERBOSE is set according to the following rule:"
+msgstr ""
+"Значение переменной среды VERBOSE устанавливается по следующему правилу:"
 
 # type: TP
+#. type: TP
 #: ../adduser.8:112
 #, no-wrap
 msgid "0 if --quiet is specified"
 msgstr "0, если указан --quiet"
 
 # type: TP
+#. type: TP
 #: ../adduser.8:114
 #, no-wrap
 msgid "1 if neither --quiet nor --debug is specified"
 msgstr "1, если не указан --quiet или --debug"
 
 # type: TP
+#. type: TP
 #: ../adduser.8:116
 #, no-wrap
 msgid "2 if --debug is specified"
 msgstr "2, если указан --debug"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:120
 msgid ""
 "(The same applies to the variable DEBUG, but DEBUG is deprecated and will be "
@@ -273,24 +308,31 @@ msgstr ""
 "использовать, так как она будет удалена в следующей версии adduser.)"
 
 # type: SS
+#. type: SS
 #: ../adduser.8:121
 #, no-wrap
 msgid "Add a system user"
 msgstr "Добавление системного пользователя"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:127
 msgid ""
 "If called with one non-option argument and the B<--system> option, "
 "B<adduser> will add a system user. If a user with the same name already "
 "exists in the system uid range (or, if the uid is specified, if a user with "
-"that uid already exists), adduser will exit with a warning."
+"that uid already exists), adduser will exit with a warning. This warning can "
+"be suppressed by adding \"--quiet\"."
 msgstr ""
 "При запуске с одним параметром без аргументов и параметром B<--system>, "
 "B<adduser> добавляет системного пользователя. Если пользователь с тем же "
-"именем уже существует, то adduser завершает работу с выдачей предупреждения."
+"именем уже существует в диапазоне системных uid (или, если задан uid, если "
+"пользователь с таким uid уже существует), то adduser завершает работу с "
+"выдачей предупреждения. Это предупреждение отключить указав параметр «--"
+"quiet»."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:133
 msgid ""
 "B<adduser> will choose the first available UID from the range specified for "
@@ -304,6 +346,7 @@ msgstr ""
 "указать его с помощью параметра B<--uid>."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:143
 msgid ""
 "By default, system users are placed in the B<nogroup> group.  To place the "
@@ -318,6 +361,7 @@ msgstr ""
 "group>."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:151
 msgid ""
 "A home directory is created by the same rules as for normal users.  The new "
@@ -331,12 +375,14 @@ msgstr ""
 "файлы настроек не копируются."
 
 # type: SS
+#. type: SS
 #: ../adduser.8:151
 #, no-wrap
 msgid "Add a user group"
 msgstr "Добавление пользовательской группы"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:156
 msgid ""
 "If B<adduser> is called with the B<--group> option and without the B<--"
@@ -348,28 +394,32 @@ msgstr ""
 "пользовательская группа."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:162
 msgid ""
 "A GID will be chosen from the range specified for system GIDS in the "
 "configuration file (FIRST_GID, LAST_GID). To override that mechanism you can "
 "give the GID using the B<--gid> option."
 msgstr ""
-"GID будет выбран из диапазона системных GID, заданных в файле "
-"настройки (FIRST_GID, LAST_GID). Чтобы указать определённый GID, "
-"используйте параметр B<--gid>."
+"GID будет выбран из диапазона системных GID, заданных в файле настройки "
+"(FIRST_GID, LAST_GID). Чтобы указать определённый GID, используйте параметр "
+"B<--gid>."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:164 ../adduser.8:175
 msgid "The group is created with no users."
 msgstr "Группа создаётся без пользователей."
 
 # type: SS
+#. type: SS
 #: ../adduser.8:164
 #, no-wrap
 msgid "Add a system group"
 msgstr "Добавление системной группы"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:168
 msgid ""
 "If B<addgroup> is called with the B<--system> option, a system group will be "
@@ -379,23 +429,26 @@ msgstr ""
 "системная группа."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:173
 msgid ""
 "A GID will be chosen from the range specified for system GIDS in the "
 "configuration file (FIRST_SYSTEM_GID, LAST_SYSTEM_GID). To override that "
 "mechanism you can give the GID using the B<--gid> option."
 msgstr ""
-"GID будет выбран из диапазона системных GID, заданных в файле "
-"настройки (FIRST_SYSTEM_GID, LAST_SYSTEM_GID). Чтобы указать "
-"определённый GID, используйте параметр B<--gid>."
+"GID будет выбран из диапазона системных GID, заданных в файле настройки "
+"(FIRST_SYSTEM_GID, LAST_SYSTEM_GID). Чтобы указать определённый GID, "
+"используйте параметр B<--gid>."
 
 # type: SS
+#. type: SS
 #: ../adduser.8:175
 #, no-wrap
 msgid "Add an existing user to an existing group"
 msgstr "Добавление существующего пользователя в существующую группу"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:179
 msgid ""
 "If called with two non-option arguments, B<adduser> will add an existing "
@@ -405,29 +458,34 @@ msgstr ""
 "пользователя в существующую группу."
 
 # type: SH
+#. type: SH
 #: ../adduser.8:179 ../deluser.8:99
 #, no-wrap
 msgid "OPTIONS"
 msgstr "ПАРАМЕТРЫ"
 
 # type: TP
+#. type: TP
 #: ../adduser.8:180 ../deluser.8:100
 #, no-wrap
 msgid "B<--conf FILE>"
 msgstr "B<--conf ФАЙЛ>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:184
 msgid "Use FILE instead of I</etc/adduser.conf>."
 msgstr "Использовать ФАЙЛ вместо I</etc/adduser.conf>."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:184
 #, no-wrap
 msgid "B<--disabled-login>"
 msgstr "B<--disabled-login>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:188
 msgid ""
 "Do not run passwd to set the password.  The user won't be able to use her "
@@ -437,12 +495,14 @@ msgstr ""
 "свою учётную запись, пока его пароль не установлен."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:188
 #, no-wrap
 msgid "B<--disabled-password>"
 msgstr "B<--disabled-password>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:192
 msgid ""
 "Like --disabled-login, but logins are still possible (for example using SSH "
@@ -452,12 +512,14 @@ msgstr ""
 "ключей SSH RSA), но не использующих парольную аутентификацию."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:192
 #, no-wrap
 msgid "B<--force-badname>"
 msgstr "B<--force-badname>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:202
 msgid ""
 "By default, user and group names are checked against the configurable "
@@ -466,32 +528,36 @@ msgid ""
 "validity of the name."
 msgstr ""
 "По умолчанию, имена пользователя и группы проверяются согласно заданному "
-"регулярному выражению B<NAME_REGEX>, указанному в конфигурационном файле."
-"Этот параметр заставляет B<adduser> и B<addgroup> выполнять только слабую "
+"регулярному выражению B<NAME_REGEX>, указанному в файле настройки. Этот "
+"параметр заставляет B<adduser> и B<addgroup> выполнять только слабую "
 "проверку правильности имени."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:202
 #, no-wrap
 msgid "B<--gecos GECOS>"
 msgstr "B<--gecos GECOS>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:207
 msgid ""
 "Set the gecos field for the new entry generated.  B<adduser> will not ask "
 "for finger information if this option is given."
 msgstr ""
 "Задаёт поле gecos для новой создаваемой записи. B<adduser> не будет "
-"запрашивать информацию для finger, если указан этот параметр."
+"запрашивать информацию finger, если указан этот параметр."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:207
 #, no-wrap
 msgid "B<--gid ID>"
 msgstr "B<--gid ID>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:212
 msgid ""
 "When creating a group, this option forces the new groupid to be the given "
@@ -501,12 +567,14 @@ msgstr ""
 "пользователя этот параметр помещает пользователя в группу с этим номером."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:212 ../deluser.8:106
 #, no-wrap
 msgid "B<--group>"
 msgstr "B<--group>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:222
 msgid ""
 "When combined with B<--system>, a group with the same name and ID as the "
@@ -520,23 +588,27 @@ msgstr ""
 "если программа вызывается как B<addgroup>."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:222 ../deluser.8:111
 #, no-wrap
 msgid "B<--help>"
 msgstr "B<--help>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:225 ../deluser.8:114
 msgid "Display brief instructions."
 msgstr "Показать краткую инструкцию."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:225
 #, no-wrap
 msgid "B<--home DIR>"
 msgstr "B<--home КАТ>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:230
 msgid ""
 "Use DIR as the user's home directory, rather than the default specified by "
@@ -548,12 +620,14 @@ msgstr ""
 "будет создан и будут скопированы начальные файлы настроек."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:230
 #, no-wrap
 msgid "B<--shell SHELL>"
 msgstr "B<--shell ОБОЛОЧКА>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:234
 msgid ""
 "Use SHELL as the user's login shell, rather than the default specified by "
@@ -563,40 +637,47 @@ msgstr ""
 "по умолчанию в файле настроек."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:234
 #, no-wrap
 msgid "B<--ingroup GROUP>"
 msgstr "B<--ingroup ГРУППА>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:243
 msgid ""
 "Add the new user to GROUP instead of a usergroup or the default group "
 "defined by B<USERS_GID> in the configuration file.  This affects the users "
 "primary group.  To add additional groups, see the B<add_extra_groups> option"
 msgstr ""
-"Добавить нового пользователя в ГРУППУ, а не в группу с тем же именем "
-"или группу по умолчанию, определяемую B<USERS_GID> в конфигурационном файле. Это влияет на первичную группу пользователей. Для указания "
-"дополнительных групп, смотрите описание параметра B<add_extra_groups>."
+"Добавить нового пользователя в ГРУППУ, а не в группу с тем же именем или "
+"группу по умолчанию, определяемую B<USERS_GID> в файле настройки. Это влияет "
+"на первичную группу пользователей. Для указания дополнительных групп, "
+"смотрите описание параметра B<add_extra_groups>."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:243
 #, no-wrap
 msgid "B<--no-create-home>"
 msgstr "B<--no-create-home>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:246
 msgid "Do not create the home directory, even if it doesn't exist."
 msgstr "Не создавать домашний каталог, даже если он не существует."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:246 ../deluser.8:114
 #, no-wrap
 msgid "B<--quiet>"
 msgstr "B<--quiet>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:249
 msgid "Suppress informational messages, only show warnings and errors."
 msgstr ""
@@ -604,51 +685,60 @@ msgstr ""
 "ошибки."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:249
 #, no-wrap
 msgid "B<--debug>"
 msgstr "B<--debug>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:252
-msgid "Be verbose, most useful if you want to nail down a problem with adduser."
+msgid ""
+"Be verbose, most useful if you want to nail down a problem with adduser."
 msgstr ""
 "Показывать отладочную информацию, очень полезно, если вы хотите понять в чём "
 "проблема у adduser."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:252 ../deluser.8:117
 #, no-wrap
 msgid "B<--system>"
 msgstr "B<--system>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:255
 msgid "Create a system user or group."
 msgstr "Создать системного пользователя или группу."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:255
 #, no-wrap
 msgid "B<--uid ID>"
 msgstr "B<--uid ID>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:260
 msgid ""
 "Force the new userid to be the given number.  B<adduser> will fail if the "
 "userid is already taken."
 msgstr ""
-"Принудительно назначить новому userid определённый номер. B<adduser> "
-"завершится неудачно, если такой userid уже используется."
+"Принудительно назначить новому userid заданный номер. B<adduser> завершится "
+"с ошибкой, если такой userid уже используется."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:260
 #, no-wrap
 msgid "B<--firstuid ID>"
 msgstr "B<--firstuid ID>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:265
 msgid ""
 "Override the first uid in the range that the uid is chosen from (overrides "
@@ -658,12 +748,14 @@ msgstr ""
 "значение B<FIRST_UID>, указанное в конфигурационном файле)."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:265
 #, no-wrap
 msgid "B<--lastuid ID>"
 msgstr "B<--lastuid ID>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:270
 msgid ""
 "Override the last uid in the range that the uid is chosen from "
@@ -673,60 +765,69 @@ msgstr ""
 "( B<LAST_UID> )"
 
 # type: TP
+#. type: TP
 #: ../adduser.8:270
 #, no-wrap
 msgid "B<--add_extra_groups>"
 msgstr "B<--add_extra_groups>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:273
 msgid "Add new user to extra groups defined in the configuration file."
 msgstr ""
-"Добавляет нового пользователя в дополнительные группы, указанные в "
-"конфигурационном файле."
+"Добавить нового пользователя в дополнительные группы, указанные в файле "
+"настройки."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:273 ../deluser.8:139
 #, no-wrap
 msgid "B<--version>"
 msgstr "B<--version>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:276 ../deluser.8:142
 msgid "Display version and copyright information."
 msgstr "Показать номер версии и информацию об авторском праве."
 
 # type: SH
+#. type: SH
 #: ../adduser.8:277
 #, no-wrap
 msgid "EXIT VALUES"
 msgstr "ВОЗВРАЩАЕМЫЕ ЗНАЧЕНИЯ"
 
 # type: TP
+#. type: TP
 #: ../adduser.8:279 ../deluser.8:143
 #, no-wrap
 msgid "B<0>"
 msgstr "B<0>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:282
 msgid ""
 "The user exists as specified. This can have 2 causes: The user was created "
 "by adduser or the user was already present on the system before adduser was "
-"invoked. Invoking adduser a second time with the same parameters as before "
-"also returns 0."
+"invoked. If adduser was returning 0 , invoking adduser a second time with "
+"the same parameters as before also returns 0."
 msgstr ""
 "Указанный пользователь существует. Возникает в 2 случаях: пользователь был "
 "создан adduser или пользователь уже был в системе перед тем как вызывалась "
 "adduser. Запуск adduser второй раз с теми же параметрами также вернёт 0."
 
 # type: TP
+#. type: TP
 #: ../adduser.8:282 ../deluser.8:146
 #, no-wrap
 msgid "B<1>"
 msgstr "B<1>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:285
 msgid ""
 "Creating the user or group failed because it was already present with other "
@@ -740,18 +841,19 @@ msgstr ""
 "conf(5). Работа adduser был прервана сигналом."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:289
 msgid ""
 "Or for many other yet undocumented reasons which are printed to console "
 "then. You may then consider to remove B<--quiet> to make adduser more "
 "verbose."
 msgstr ""
-"Или по многим другим ещё неописанным причинам, которые "
-"объясняются выдаваемыми на консоль сообщениями. Затем вы "
-"можете решить решить убрать параметр B<--quiet>, что сделает "
-"вывод adduser более подробным."
+"Или по многим другим ещё неописанным причинам, которые объясняются "
+"выдаваемыми на консоль сообщениями. Затем вы можете решить решить убрать "
+"параметр B<--quiet>, что сделает вывод adduser более подробным."
 
 # type: SH
+#. type: SH
 #: ../adduser.8:290 ../adduser.conf.5:147 ../deluser.8:174
 #: ../deluser.conf.5:74
 #, no-wrap
@@ -759,17 +861,20 @@ msgid "FILES"
 msgstr "ФАЙЛЫ"
 
 # type: Plain text
+#. type: TP
 #: ../adduser.8:291
 #, no-wrap
 msgid "/etc/adduser.conf"
 msgstr "/etc/adduser.conf"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:294
 msgid "Default configuration file for adduser and addgroup"
 msgstr "Файл настройки по умолчанию для adduser и addgroup"
 
 # type: SH
+#. type: SH
 #: ../adduser.8:294 ../adduser.conf.5:149 ../deluser.8:176
 #: ../deluser.conf.5:76
 #, no-wrap
@@ -777,6 +882,7 @@ msgid "SEE ALSO"
 msgstr "СМОТРИТЕ ТАКЖЕ"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:297
 msgid ""
 "adduser.conf(5), deluser(8), useradd(8), groupadd(8), usermod(8), Debian "
@@ -786,12 +892,14 @@ msgstr ""
 "Policy 9.2.2."
 
 # type: SH
+#. type: SH
 #: ../adduser.8:298 ../deluser.8:179
 #, no-wrap
 msgid "COPYRIGHT"
 msgstr "АВТОРСКОЕ ПРАВО"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:301
 msgid ""
 "Copyright (C) 1997, 1998, 1999 Guy Maor. Modifications by Roland "
@@ -803,6 +911,7 @@ msgstr ""
 "Джорга Хоха (Joerg Hoh) и Стефена Грана (Stephen Gran)."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:305 ../deluser.8:189
 msgid ""
 "Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original "
@@ -812,6 +921,7 @@ msgstr ""
 "Debian B<adduser>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.8:311
 msgid ""
 "Copyright (C) 1994 Ian Murdock.  B<adduser> is free software; see the GNU "
@@ -823,17 +933,22 @@ msgstr ""
 "более новой.  Не предоставляется I<никаких> гарантий."
 
 # type: TH
+#. type: TH
 #: ../adduser.conf.5:6
 #, no-wrap
 msgid "adduser.conf"
 msgstr "adduser.conf"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:12
-msgid "/etc/adduser.conf - configuration file for B<adduser(8)> and B<addgroup(8)>."
-msgstr "/etc/adduser.conf -- файл настройки для B<adduser(8)> и B<addgroup(8)>."
+msgid ""
+"/etc/adduser.conf - configuration file for B<adduser(8)> and B<addgroup(8)>."
+msgstr ""
+"/etc/adduser.conf -- файл настройки для B<adduser(8)> и B<addgroup(8)>."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:28
 msgid ""
 "The file I</etc/adduser.conf> contains defaults for the programs B<adduser(8)"
@@ -843,36 +958,43 @@ msgid ""
 "Comment lines must have a hash sign (#) in the first column."
 msgstr ""
 "Файл I</etc/adduser.conf> содержит установки по умолчанию для программ "
-"B<adduser(8)>, B<addgroup(8)>, B<deluser(8)> и B<delgroup(8)>. Каждая строка "
-"имеет вид I<параметр> = I<значение>. Значение можно помещать в двойные или "
-"одинарные кавычки, а вокруг знака равно могут быть пробелы. Строки "
-"комментария должны иметь знак фунта (#) в первой колонке строки."
+"B<adduser(8)>, B<addgroup(8)>, B<deluser(8)> и B<delgroup(8)>. В каждой "
+"строке содержится по одному значение в формате I<параметр> = I<значение>. "
+"Значение можно помещать в двойные или одинарные кавычки, а вокруг знака "
+"равно могут быть пробелы. Строки комментария должны иметь знак фунта (#) в "
+"первой колонке строки."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:30 ../deluser.conf.5:27
 msgid "The valid configuration options are:"
 msgstr "Действующие параметры настройки:"
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:30
 #, no-wrap
 msgid "B<DSHELL>"
 msgstr "B<DSHELL>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:34
-msgid "The login shell to be used for all new users.  Defaults to I</bin/bash>."
+msgid ""
+"The login shell to be used for all new users.  Defaults to I</bin/bash>."
 msgstr ""
 "Регистрационный shell, который будут использовать все новые пользователи. По "
 "умолчанию I</bin/bash>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:34
 #, no-wrap
 msgid "B<DHOME>"
 msgstr "B<DHOME>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:39
 msgid ""
 "The directory in which new home directories should be created.  Defaults to "
@@ -882,12 +1004,14 @@ msgstr ""
 "I</home>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:39
 #, no-wrap
 msgid "B<GROUPHOMES>"
 msgstr "B<GROUPHOMES>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:47
 msgid ""
 "If this is set to I<yes>, the home directories will be created as I</home/"
@@ -897,12 +1021,14 @@ msgstr ""
 "[имя_группы]/пользователь>. По умолчанию I<no>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:47
 #, no-wrap
 msgid "B<LETTERHOMES>"
 msgstr "B<LETTERHOMES>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:57
 msgid ""
 "If this is set to I<yes>, then the home directories created will have an "
@@ -914,12 +1040,14 @@ msgstr ""
 "пользователя.  Например: I</home/п/пользователь>.  По умолчанию I<no>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:57
 #, no-wrap
 msgid "B<SKEL>"
 msgstr "B<SKEL>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:62
 msgid ""
 "The directory from which skeletal user configuration files should be "
@@ -929,12 +1057,14 @@ msgstr ""
 "По умолчанию I</etc/skel>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:62
 #, no-wrap
 msgid "B<FIRST_SYSTEM_UID> and B<LAST_SYSTEM_UID>"
 msgstr "B<FIRST_SYSTEM_UID> и B<LAST_SYSTEM_UID>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:69
 msgid ""
 "specify an inclusive range of UIDs from which system UIDs can be dynamically "
@@ -948,12 +1078,14 @@ msgstr ""
 "распределяются пакетом base-passwd) никак не заблокирован."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:69
 #, no-wrap
 msgid "B<FIRST_UID> and B<LAST_UID>"
 msgstr "B<FIRST_UID> и B<LAST_UID>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:74
 msgid ""
 "specify an inclusive range of UIDs from which normal user's UIDs can be "
@@ -963,12 +1095,14 @@ msgstr ""
 "обычных пользователей. По умолчанию I<1000> - I<29999>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:74
 #, no-wrap
 msgid "B<FIRST_SYSTEM_GID> and B<LAST_SYSTEM_GID>"
 msgstr "B<FIRST_SYSTEM_GID> и B<LAST_SYSTEM_GID>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:79
 msgid ""
 "specify an inclusive range of GIDs from which system GIDs can be dynamically "
@@ -978,12 +1112,14 @@ msgstr ""
 "динамически выделяться системные GID. По умолчанию I<100> - I<999>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:79
 #, no-wrap
 msgid "B<FIRST_GID> and B<LAST_GID>"
 msgstr "B<FIRST_GID> и B<LAST_GID>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:84
 msgid ""
 "specify an inclusive range of GIDs from which normal group's GIDs can be "
@@ -994,12 +1130,14 @@ msgstr ""
 "I<29999>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:84
 #, no-wrap
 msgid "B<USERGROUPS>"
 msgstr "B<USERGROUPS>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:94
 msgid ""
 "If this is set to I<yes>, then each created user will be given their own "
@@ -1012,12 +1150,14 @@ msgstr ""
 "ниже). По умолчанию I<yes>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:94
 #, no-wrap
 msgid "B<USERS_GID>"
 msgstr "B<USERS_GID>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:101
 msgid ""
 "If B<USERGROUPS> is I<no>, then B<USERS_GID> is the GID given to all newly-"
@@ -1027,28 +1167,32 @@ msgstr ""
 "который даётся всем создаваемым пользователям. По умолчанию I<100>."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:101
 #, no-wrap
 msgid "B<DIR_MODE>"
 msgstr "B<DIR_MODE>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:105
 msgid ""
 "If set to a valid value (e.g. 0755 or 755), directories created will have "
 "the specified permissions as umask. Otherwise 0755 is used as default."
 msgstr ""
 "Если задано допустимое значение (например, 0755 или 755), то создаваемые "
-"каталоги будут иметь указанные права как umask. По умолчанию используется "
-"значение 0755."
+"каталоги будут иметь указанные права как umask. Иначе используется значение "
+"по умолчанию 0755."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:105
 #, no-wrap
 msgid "B<SETGID_HOME>"
 msgstr "B<SETGID_HOME>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:115
 msgid ""
 "If this is set to I<yes>, then home directories for users with their own "
@@ -1065,12 +1209,14 @@ msgstr ""
 "включить его здесь."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:115
 #, no-wrap
 msgid "B<QUOTAUSER>"
 msgstr "B<QUOTAUSER>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:119
 msgid ""
 "If set to a nonempty value, new users will have quotas copied from that "
@@ -1081,12 +1227,14 @@ msgstr ""
 "По умолчанию пользователь не задан."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:119
 #, no-wrap
 msgid "B<NAME_REGEX>"
 msgstr "B<NAME_REGEX>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:125
 msgid ""
 "User and group names are checked against this regular expression. If the "
@@ -1098,15 +1246,18 @@ msgstr ""
 "группы. Если имя не подпадает под регулярное выражение, то adduser не "
 "создаёт учётную запись или группу, если не указан параметр --force-badname. "
 "При указании параметра --force-badname выполняется только слабая проверка. "
-"По умолчанию используется наиболее консервативное ^[a-z][-a-z0-9]*$."
+"По умолчанию используется наиболее консервативное выражение ^[a-z][-a-z0-9]*"
+"$."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:125
 #, no-wrap
 msgid "B<SKEL_IGNORE_REGEX>"
 msgstr "B<SKEL_IGNORE_REGEX>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:131
 msgid ""
 "Files in /etc/skel/ are checked against this regex, and not copied to the "
@@ -1120,12 +1271,14 @@ msgstr ""
 "копирования необъединённых конфигурационных файлов (dpkg-(old|new|dist))."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:131
 #, no-wrap
 msgid "B<ADD_EXTRA_GROUPS>"
 msgstr "B<ADD_EXTRA_GROUPS>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:136
 msgid ""
 "Setting this to something other than 0 (the default) will cause adduser to "
@@ -1137,34 +1290,39 @@ msgstr ""
 "EXTRA_GROUPS (смотрите ниже)."
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:136
 #, no-wrap
 msgid "B<EXTRA_GROUPS>"
 msgstr "B<EXTRA_GROUPS>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:140
 msgid ""
 "This is the list of groups that new non-system users will be added to.  By "
-"default, this list is 'dialout cdrom floppy audio video plugdev users'"
+"default, this list is 'dialout cdrom floppy audio video plugdev users games'"
 msgstr ""
-"Это список групп, в которые будут добавлены новые не системные "
-"пользователи. По умолчанию, список равен 'dialout cdrom floppy audio "
-"video plugdev users'."
+"Это список групп, в которые будут добавлены новые не системные пользователи. "
+"По умолчанию, список равен «dialout cdrom floppy audio video plugdev users "
+"games»."
 
 # type: SH
+#. type: SH
 #: ../adduser.conf.5:140
 #, no-wrap
 msgid "NOTES"
 msgstr "ЗАМЕЧАНИЯ"
 
 # type: TP
+#. type: TP
 #: ../adduser.conf.5:141
 #, no-wrap
 msgid "B<VALID NAMES>"
 msgstr "B<ДОПУСТИМЫЕ ИМЕНА>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:144
 msgid ""
 "adduser and addgroup enforce conformity to IEEE Std 1003.1-2001, which "
@@ -1174,12 +1332,13 @@ msgid ""
 "conform to samba)."
 msgstr ""
 "adduser и addgroup обязаны соответствовать IEEE Std 1003.1-2001, в котором "
-"разрешены только перечисленные далее символы, из которых могут состоять имена пользователей и групп: буквы, цифры, подчёркивания, точки, знаки (@) "
-"и тире. "
-"Имя не может начинаться с тире. Знак \"$\" разрешён в конце имён "
+"разрешены только перечисленные далее символы, из которых могут состоять "
+"имена пользователей и групп: буквы, цифры, подчёркивания, точки, знаки (@) и "
+"тире. Имя не может начинаться с тире. Знак \"$\" разрешён в конце имён "
 "пользователей (для совместимости с samba)."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:146
 msgid ""
 "An additional check can be adjusted via the configuration parameter "
@@ -1189,56 +1348,66 @@ msgstr ""
 "проверка через параметр настройки NAME_REGEX."
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:149
 msgid "I</etc/adduser.conf>"
 msgstr "I</etc/adduser.conf>"
 
 # type: Plain text
+#. type: Plain text
 #: ../adduser.conf.5:150
 msgid "adduser(8), addgroup(8), deluser(8), delgroup(8), deluser.conf(5)"
 msgstr "adduser(8), addgroup(8), deluser(8), delgroup(8), deluser.conf(5)"
 
 # type: TH
+#. type: TH
 #: ../deluser.8:9
 #, no-wrap
 msgid "DELUSER"
 msgstr "DELUSER"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:12
 msgid "deluser, delgroup - remove a user or group from the system"
 msgstr "deluser, delgroup - удаляют пользователя или группу из системы"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:14
 msgid ""
 "B<deluser> [options] [--force] [--remove-home] [--remove-all-files] [--"
 "backup] [--backup-to DIR] user"
 msgstr ""
-"B<deluser> [параметры] [--force] [--remove-home] [--remove-all-files] [--backup] [--"
-"backup-to КАТ] пользователь"
+"B<deluser> [параметры] [--force] [--remove-home] [--remove-all-files] [--"
+"backup] [--backup-to КАТ] пользователь"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:16
 msgid "B<deluser> --group [options] group"
 msgstr "B<deluser> --group [параметры] группа"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:18
 msgid "B<delgroup> [options] [--only-if-empty] group"
 msgstr "B<delgroup> [параметры] [--only-if-empty] группа"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:20
 msgid "B<deluser> [options] user group"
 msgstr "B<deluser> [параметры] пользователь группа"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:23
 msgid "[--quiet] [--system] [--help] [--version] [--conf FILE]"
 msgstr "[--quiet] [--system] [--help] [--version] [--conf ФАЙЛ]"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:37
 msgid ""
 "B<deluser> and B<delgroup> remove users and groups from the system according "
@@ -1258,12 +1427,14 @@ msgstr ""
 "в одном из трёх режимов:"
 
 # type: SS
+#. type: SS
 #: ../deluser.8:37
 #, no-wrap
 msgid "Remove a normal user"
 msgstr "Удаление обычного пользователя"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:41
 msgid ""
 "If called with one non-option argument and without the B<--group> option, "
@@ -1273,6 +1444,7 @@ msgstr ""
 "B<deluser> удалит обычного пользователя."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:49
 msgid ""
 "By default, B<deluser> will remove the user without removing the home "
@@ -1286,6 +1458,7 @@ msgstr ""
 "параметр B<--remove-home>."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:59
 msgid ""
 "The B<--remove-all-files> option removes all files on the system owned by "
@@ -1300,6 +1473,7 @@ msgstr ""
 "files>."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:70
 msgid ""
 "If you want to backup all files before deleting them you can activate the "
@@ -1317,16 +1491,18 @@ msgstr ""
 "файле настройки /etc/deluser.conf. Подробней смотрите B<deluser.conf(5)>."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:74
 msgid ""
 "If you want to remove the root account (uid 0), then use the B<--force> "
 "parameter; this may prevent to remove the root user by accident."
 msgstr ""
 "Если вы хотите удалить учётную запись root (uid 0), воспользуйтесь "
-"параметром B<--force>; его указание подтверждает, что удаление "
-"пользователя root не является случайной ошибкой."
+"параметром B<--force>; его указание подтверждает, что удаление пользователя "
+"root не является случайной ошибкой."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:81
 msgid ""
 "If the file B</usr/local/sbin/deluser.local> exists, it will be executed "
@@ -1338,12 +1514,14 @@ msgstr ""
 "очистки. Аргументы, передаваемые B<deluser.local>:"
 
 # type: SS
+#. type: SS
 #: ../deluser.8:84
 #, no-wrap
 msgid "Remove a group"
 msgstr "Удалить группу"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:88
 msgid ""
 "If B<deluser> is called with the B<--group> option, or B<delgroup> is "
@@ -1353,6 +1531,7 @@ msgstr ""
 "B<delgroup>, то выполняется удаление группы."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:90
 msgid "Warning: The primary group of an existing user cannot be removed."
 msgstr ""
@@ -1360,6 +1539,7 @@ msgstr ""
 "удалена."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:94
 msgid ""
 "If the option B<--only-if-empty> is given, the group won't be removed if it "
@@ -1369,12 +1549,14 @@ msgstr ""
 "в неё входят пользователи."
 
 # type: SS
+#. type: SS
 #: ../deluser.8:95
 #, no-wrap
 msgid "Remove a user from a specific group"
 msgstr "Удаление пользователя из определённой группы"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:99
 msgid ""
 "If called with two non-option arguments, B<deluser> will remove a user from "
@@ -1384,6 +1566,7 @@ msgstr ""
 "пользователя из указанной группы."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:106
 msgid ""
 "Use FILE instead of the default files I</etc/deluser.conf> and I</etc/"
@@ -1393,6 +1576,7 @@ msgstr ""
 "adduser.conf>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:111
 msgid ""
 "Remove a group. This is the default action if the program is invoked as "
@@ -1402,11 +1586,13 @@ msgstr ""
 "вызывается как I<delgroup>."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:117
 msgid "Suppress progress messages."
 msgstr "Не выводить сообщения о ходе работы."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:123
 msgid ""
 "Only delete if user/group is a system user/group. This avoids accidentally "
@@ -1421,55 +1607,65 @@ msgstr ""
 "Debian."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:123
 #, no-wrap
 msgid "B<--backup>"
 msgstr "B<--backup>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:127
 msgid ""
 "Backup all files contained in the userhome and the mailspool-file to a file "
 "named /$user.tar.bz2 or /$user.tar.gz."
 msgstr ""
-"Выполнить резервное копирования всех файлов домашнего каталога и почтовое "
-"хранилище (mailspool-file) в файл с именем /$user.tar.bz2 или /$user.tar.gz."
+"Выполнить резервное копирования всех файлов домашнего каталога и хранилище "
+"почты (mailspool-file) в файл с именем /$user.tar.bz2 или /$user.tar.gz."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:127
 #, no-wrap
 msgid "B<--backup-to>"
 msgstr "B<--backup-to>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:130
 msgid ""
 "Place the backup files not in / but in the directory specified by this "
-"parameter."
-msgstr "Помещать файлы резервных копий не в /, а в каталог, заданный этим параметром."
+"parameter. This implicitly sets --backup also."
+msgstr ""
+"Помещать файлы резервных копий не в /, а в каталог, заданный этим "
+"параметром. Подразумевает также задание параметра --backup."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:130
 #, no-wrap
 msgid "B<--remove-home>"
 msgstr "B<--remove-home>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:134
 msgid ""
 "Remove the home directory of the user and its mailspool. If --backup is "
 "specified, the files are deleted after having performed the backup."
 msgstr ""
-"Удалить домашний каталог пользователя и его почтовое хранилище. Если указан "
-"--backup, то файлы будут удалены после создания резервной копии."
+"Удалить домашний каталог пользователя и его хранилище почты. Если указан --"
+"backup, то файлы будут удалены после создания резервной копии."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:134
 #, no-wrap
 msgid "B<--remove-all-files>"
 msgstr "B<--remove-all-files>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:139
 msgid ""
 "Remove all files from the system owned by this user. Note: --remove-home "
@@ -1477,98 +1673,118 @@ msgid ""
 "deleted after having performed the backup."
 msgstr ""
 "Удалить все файлы из системы, принадлежащие этому пользователю. Замечание: "
-"указывать ещё и --remove-home не имеет смысла. Если указан --backup, то "
-"файлы будут удалены после создания резервной копии."
+"указание --remove-home не имеет смысла. Если указан --backup, то файлы будут "
+"удалены после создания резервной копии."
 
 # type: SH
+#. type: SH
 #: ../deluser.8:142
 #, no-wrap
 msgid "RETURN VALUE"
 msgstr "ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:146
 msgid "The action was successfully executed."
 msgstr "Действие успешно выполнено."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:149
 msgid "The user to delete was not a system account. No action was performed."
 msgstr "Удаляемый пользователь не является системным. Действие не выполнено."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:149
 #, no-wrap
 msgid "B<2>"
 msgstr "B<2>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:152
 msgid "There is no such user. No action was performed."
 msgstr "Пользователь не существует. Действие не выполнено."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:152
 #, no-wrap
 msgid "B<3>"
 msgstr "B<3>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:155
 msgid "There is no such group. No action was performed."
 msgstr "Группа не существует. Действие не выполнено."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:155
 #, no-wrap
 msgid "B<4>"
 msgstr "B<4>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:158
 msgid "Internal error. No action was performed."
 msgstr "Внутренняя ошибка. Действие не выполнено."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:158
 #, no-wrap
 msgid "B<5>"
 msgstr "B<5>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:161
 msgid "The group to delete is not empty. No action was performed."
 msgstr "Удаляемая группа не пуста. Действие не выполнено."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:161
 #, no-wrap
 msgid "B<6>"
 msgstr "B<6>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:164
-msgid "The user does not belong to the specified group. No action was performed."
+msgid ""
+"The user does not belong to the specified group. No action was performed."
 msgstr "Пользователь не принадлежит указанной группе. Действие не выполнено."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:164
 #, no-wrap
 msgid "B<7>"
 msgstr "B<7>"
 
 # type: SS
+#. type: Plain text
 #: ../deluser.8:167
-msgid "You cannot remove a user from its primary group. No action was performed."
-msgstr "Нельзя удалить пользователя из его первичной группы. Действие не выполнено."
+msgid ""
+"You cannot remove a user from its primary group. No action was performed."
+msgstr ""
+"Нельзя удалить пользователя из его первичной группы. Действие не выполнено."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:167
 #, no-wrap
 msgid "B<8>"
 msgstr "B<8>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:170
 msgid ""
 "The required perl-package 'perl modules' is not installed. This package is "
@@ -1578,31 +1794,36 @@ msgstr ""
 "выполнения некоторых действий. Действие не выполнено."
 
 # type: TP
+#. type: TP
 #: ../deluser.8:170
 #, no-wrap
 msgid "B<9>"
 msgstr "B<9>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:173
 msgid ""
 "For removing the root account the parameter \"--force\" is required. No "
 "action was performed."
 msgstr ""
-"Для удаления учётной записи root требуется указание параметра "
-"\"--force\". Действие не было выполнено."
+"Для удаления учётной записи root требуется указание параметра \"--force\". "
+"Действие не было выполнено."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:176
 msgid "/etc/deluser.conf"
 msgstr "/etc/deluser.conf"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:178
 msgid "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
 msgstr "deluser.conf(5), adduser(8), userdel(8), groupdel(8)"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:183
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber "
@@ -1614,11 +1835,13 @@ msgstr ""
 "которая:"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:185
 msgid "Copyright (C) 1997, 1998, 1999 Guy Maor."
 msgstr "Copyright (C) 1997, 1998, 1999 Guy Maor."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.8:195
 msgid ""
 "Copyright (C) 1994 Ian Murdock.  B<deluser> is free software; see the GNU "
@@ -1630,17 +1853,21 @@ msgstr ""
 "более новой. Не предоставляется I<никаких> гарантий."
 
 # type: TH
+#. type: TH
 #: ../deluser.conf.5:6
 #, no-wrap
 msgid "deluser.conf"
 msgstr "deluser.conf"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:12
-msgid "/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
+msgid ""
+"/etc/deluser.conf - configuration file for B<deluser(8)> and B<delgroup(8)>."
 msgstr "/etc/deluser.conf - файл настройки для B<deluser(8)> и B<delgroup(8)>."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:23
 msgid ""
 "The file I</etc/deluser.conf> contains defaults for the programs B<deluser(8)"
@@ -1649,42 +1876,48 @@ msgid ""
 "have a hash sign (#) at the beginning of the line."
 msgstr ""
 "Файл I</etc/deluser.conf> содержит установки по умолчанию для программ "
-"B<deluser(8)> и B<delgroup(8)>. Каждый параметр имеет вид I<параметр> = "
-"I<значение>. Значение можно помещать в двойные или одинарные кавычки. Строки "
-"комментария должны иметь знак фунта (#) в начале строки."
+"B<deluser(8)> и B<delgroup(8)>. В каждой строке содержится по одному "
+"значение в формате I<параметр> = I<значение>. Значение можно помещать в "
+"двойные или одинарные кавычки. Строки комментария должны иметь знак фунта "
+"(#) в начале строки."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:25
 msgid ""
 "deluser(8) and delgroup(8) also read /etc/adduser.conf, see adduser.conf(8); "
 "settings in deluser.conf may overwrite settings made in adduser.conf."
 msgstr ""
 "Команды deluser(8) и delgroup(8) также читают /etc/adduser.conf, смотрите "
-"adduser.conf(8); настройки в deluser.conf могут быть изменены настройками "
-"из adduser.conf."
+"adduser.conf(8); настройки в deluser.conf могут быть изменены настройками из "
+"adduser.conf."
 
 # type: TP
+#. type: TP
 #: ../deluser.conf.5:27
 #, no-wrap
 msgid "B<REMOVE_HOME>"
 msgstr "B<REMOVE_HOME>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:31
 msgid ""
 "Removes the home directory and mail spool of the user to be removed.  Value "
 "may be 0 (don't delete) or 1 (do delete)."
 msgstr ""
-"Удалять домашний каталог и почтовое хранилище удаляемого пользователя. "
-"Значениями могут быть 0 (не удалять) или 1(удалять)."
+"Удалять домашний каталог и хранилище почты удаляемого пользователя. "
+"Значениями могут быть 0 (не удалять) или 1 (удалять)."
 
 # type: TP
+#. type: TP
 #: ../deluser.conf.5:31
 #, no-wrap
 msgid "B<REMOVE_ALL_FILES>"
 msgstr "B<REMOVE_ALL_FILES>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:37
 msgid ""
 "Removes all files on the system owned by the user to be removed.  If this "
@@ -1695,12 +1928,14 @@ msgstr ""
 "или 1."
 
 # type: TP
+#. type: TP
 #: ../deluser.conf.5:37
 #, no-wrap
 msgid "B<BACKUP>"
 msgstr "B<BACKUP>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:49
 msgid ""
 "If B<REMOVE_HOME> or B<REMOVE_ALL_FILES> is activated all files are backuped "
@@ -1715,12 +1950,14 @@ msgstr ""
 "возможных методов сжатия выбирается лучший. Значениями могут быть 0 или 1."
 
 # type: TP
+#. type: TP
 #: ../deluser.conf.5:49
 #, no-wrap
 msgid "B<BACKUP_TO>"
 msgstr "B<BACKUP_TO>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:57
 msgid ""
 "If B<BACKUP> is activated, B<BACKUP_TO> specifies the directory the backup "
@@ -1731,12 +1968,14 @@ msgstr ""
 "каталог."
 
 # type: TP
+#. type: TP
 #: ../deluser.conf.5:57
 #, no-wrap
 msgid "B<NO_DEL_PATHS>"
 msgstr "B<NO_DEL_PATHS>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:64
 msgid ""
 "A list of regular expressions, space separated. All files to be deleted in "
@@ -1752,6 +1991,7 @@ msgstr ""
 "входят системные каталоги, остаётся только /home."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:66
 msgid ""
 "In other words: By default only files below /home belonging to that specific "
@@ -1761,12 +2001,14 @@ msgstr ""
 "заданному пользователю, будут удаляться."
 
 # type: TP
+#. type: TP
 #: ../deluser.conf.5:67
 #, no-wrap
 msgid "B<ONLY_IF_EMPTY>"
 msgstr "B<ONLY_IF_EMPTY>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:70
 msgid ""
 "Only delete a group if there are no user who belong to this group. Defaults "
@@ -1774,12 +2016,14 @@ msgid ""
 msgstr "Удалять группу, только если в ней нет пользователей. По умолчанию 0."
 
 # type: TP
+#. type: TP
 #: ../deluser.conf.5:70
 #, no-wrap
 msgid "B<EXCLUDE_FSTYPES>"
 msgstr "B<EXCLUDE_FSTYPES>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:73
 msgid ""
 "A regular expression which describes all file systems which should be "
@@ -1791,12 +2035,90 @@ msgstr ""
 "devpts|tmpfs)\"."
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:76
 msgid "I</etc/deluser.conf>"
 msgstr "I</etc/deluser.conf>"
 
 # type: Plain text
+#. type: Plain text
 #: ../deluser.conf.5:77
 msgid "deluser(8), delgroup(8), adduser.conf(5)"
 msgstr "deluser(8), delgroup(8), adduser.conf(5)"
 
+# type: Plain text
+#, fuzzy
+#~| msgid "B<addgroup> [options] [--gid ID] group"
+#~ msgid "B<adduser> --group [options] [--gid ID] group"
+#~ msgstr "B<addgroup> [параметры] [--gid ID] группа"
+
+# type: Plain text
+#, fuzzy
+#~| msgid "B<addgroup> --system [options] [--gid ID] group"
+#~ msgid "B<adduser> --group --system [options] [--gid ID] group"
+#~ msgstr "B<addgroup> --system [параметры] [--gid ID] группа"
+
+# type: Plain text
+#, fuzzy
+#~| msgid ""
+#~| "B<adduser> will choose the first available UID from the range specified "
+#~| "for normal users in the configuration file.  The UID can be overridden "
+#~| "with the B<--uid> option."
+#~ msgid ""
+#~ "B<adduser> will choose the first available UID from the range specified "
+#~ "for system users in the configuration file.  The UID can be overridden "
+#~ "with the B<--uid> option."
+#~ msgstr ""
+#~ "B<adduser> выберет первый доступный UID из диапазона обычных "
+#~ "пользователей, заданного в файле настройки.  UID может быть изменён с "
+#~ "помощью параметра B<--uid>."
+
+# type: Plain text
+#, fuzzy
+#~| msgid ""
+#~| "B<adduser> will choose the first available UID from the range specified "
+#~| "for normal users in the configuration file.  The UID can be overridden "
+#~| "with the B<--uid> option."
+#~ msgid ""
+#~ "A GID will be chosen from the range specified for user UIDS in the "
+#~ "configuration file.  The GID can be overridden with the B<--gid> option."
+#~ msgstr ""
+#~ "B<adduser> выберет первый доступный UID из диапазона обычных "
+#~ "пользователей, заданного в файле настройки.  UID может быть изменён с "
+#~ "помощью параметра B<--uid>."
+
+# type: Plain text
+#, fuzzy
+#~| msgid ""
+#~| "A GID will be chosen from the range specified for system GIDS in the "
+#~| "configuration file (FIRST_GID, LAST_GID). To override that mechanism you "
+#~| "can give the GID using the B<--gid> option."
+#~ msgid ""
+#~ "A GID will be chosen from the range specified for system GIDS in the "
+#~ "configuration file.  The GID can be overridden with the B<--gid> option."
+#~ msgstr ""
+#~ "GID будет выбран из диапазона системных GID, заданных в файле настройки "
+#~ "(FIRST_GID, LAST_GID). Чтобы указать определённый GID, используйте "
+#~ "параметр B<--gid>."
+
+# type: Plain text
+#, fuzzy
+#~| msgid ""
+#~| "Override the last uid in the range that the uid is chosen from "
+#~| "( B<LAST_UID> )"
+#~ msgid "Override the first uid in the range that the uid is chosen from."
+#~ msgstr ""
+#~ "Изменить последний uid диапазона, из которого выбран данный uid "
+#~ "( B<LAST_UID> )"
+
+# type: Plain text
+#, fuzzy
+#~| msgid "Use FILE instead of I</etc/adduser.conf>."
+#~ msgid "Use FILE instead of I</etc/deluser.conf>."
+#~ msgstr "Использовать ФАЙЛ вместо I</etc/adduser.conf>."
+
+# type: Plain text
+#, fuzzy
+#~| msgid "deluser(8), delgroup(8), adduser.conf(5)"
+#~ msgid "deluser(8) and delgroup(8) also read /etc/adduser.conf."
+#~ msgstr "deluser(8), delgroup(8), adduser.conf(5)"

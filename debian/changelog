@@ -1,12 +1,60 @@
-adduser (3.112.0) UNRELEASED; urgency=low
+adduser (3.112+nmu2) unstable; urgency=low
 
-  * NOT YET RELEASED
-  * fix naming inconsistency in adduser.8 man page.
-    Thanks to Piotr Lewandowski (addresses: #453086)
+  * Non-maintainer upload.
+  * Fix pending l10n issues. Debconf translations:
+    - Danish (Joe Hansen). Closes: #599836
+    - Catalan (Jordi Mallach). Closes: #601099
+    - Polish (Robert Luberda). Closes: #602344
+  * Manpages translations:
+    - French (David Prévot). Closes: #601453
+    - Polish (Robert Luberda).
+    - Russian (Yuri Kozlov). Closes: #602234
+    - Portuguese (Américo Monteiro).  Closes: #602356
+    - Swedish (Martin Bagge). Closes: #603297
+    - Spanish (Omar Campagne). Closes: #603557
+    - German (Martin Eberhard Schauer). Closes: #603758
+    - Slovak: file moved to po/
+  * Programs translations:
+    - Dutch (Remco Rijnders). Closes: #603825
+    - Catalan (Jordi Mallach).
+    - Danish (Joe Hansen). Closes: #602255, #603523
+    - Russian (Yuri Kozlov).
+    - Simplified Chinese (Aron Xu). Closes: #602269
+    - Czech (Miroslav Kure). Closes: #602294
+    - Polish (Robert Luberda). Closes: #602344
+    - Slovak (Ivan Masár). Closes: #602461
+    - Japanese (Kenshi Muto). Closes: #602514
+    - Portuguese (Américo Monteiro).  Closes: #602650
+    - Vietnamese (Clytie Siddall). Closes: #602688
+    - Swedish (Martin Bagge). Closes: #602801
+    - German (Tobias Quathamer). Closes: #602805
+    - Bokmål, Norwegian (Hans Fredrik Nordhaug).
+    - Italian (Luca Monducci). Closes: #602969
+    - Spanish (Javier Fernández-Sanguino). Closes: #603121
+    - Basque (Iñaki Larrañaga Murgoitio). Closes: #603266
+    - French (Jean-Baka Domelevo Entfellner). Closes: #603546
+    - Brazilian Portuguese (Adriano Rafael Gomes). Closes: #603622
+  * Update po4a.conf and debian/rules for Portuguese and German
+    manual pages translations. Closes: #599695
+  * Handle translated manpages in UTF-8.
+  * Update adduser.pot. Closes: #602547
 
- -- Marc Haber <mh+debian-packages@zugschlus.de>  Wed, 07 Jul 2010 23:09:56 +0200
+ -- David Prévot <david@tilapin.org>  Sun, 21 Nov 2010 17:13:00 -0400
 
-adduser (3.112) UNRELEASED; urgency=low
+adduser (3.112+nmu1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix pending l10n issues. Programs translations:
+    - Bokmål, Norwegian (Hans Fredrik Nordhaug). Closes: #595297
+    - French (Jean-Baka Domelevo Entfellner). Closes: #571406
+    - Portuguese (Américo Monteiro).  Closes: #577994
+    - Spanish (Javier Fernández-Sanguino).  Closes: #592185
+  * Manpages translations:
+    - Portuguese (Américo Monteiro).  Closes: #582322
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 11 Sep 2010 10:23:47 +0200
+
+adduser (3.112) unstable; urgency=low
 
   * deluser: --backup-to implies --backup, but only if passed on the command
     line (addresses: #535857) (closes: #551929)

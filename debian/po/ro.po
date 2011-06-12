@@ -15,21 +15,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
-"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2007-06-30 09:45+0200\n"
+"Report-Msgid-Bugs-To: adduser@packages.debian.org\n"
+"POT-Creation-Date: 2009-12-23 16:11+0000\n"
 "PO-Revision-Date: 2008-07-01 00:40+0300\n"
 "Last-Translator: Eddy Petrișor <eddy.petrisor@gmail.com>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"Plural-Forms:  nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:2001
-#| msgid "Do you want system wide readable home directories?"
 msgid "Do you want system-wide readable home directories?"
 msgstr "Doriți ca directoarele acasă să fie citibile per tot sistemul?"
 
@@ -43,9 +44,10 @@ msgid ""
 "this option enabled."
 msgstr ""
 "În mod implicit, directoarele acasă pot fi citite de către toți utilizatorii "
-"sistemului. Dacă doriți să măriți securitatea și secretizarea, "
-"probabil veți dori să faceți ca directoarele acasă să fie citibile doar "
-"pentru utilizatorul proprietar. Dacă vă îndoiți în legătură cu această decizie, , lăsați activată această opțiune."
+"sistemului. Dacă doriți să măriți securitatea și secretizarea, probabil veți "
+"dori să faceți ca directoarele acasă să fie citibile doar pentru "
+"utilizatorul proprietar. Dacă vă îndoiți în legătură cu această decizie, , "
+"lăsați activată această opțiune."
 
 #. Type: boolean
 #. Description
@@ -56,4 +58,3 @@ msgid ""
 msgstr ""
 "Acest lucru va afecta directoarele acasă pentru utilizatorii care vor fi "
 "adăugați de acum înainte cu comanda adduser."
-
