@@ -6,7 +6,7 @@ set -e
 
 db_version 2.0
 db_capb
-db_title Adduser
+db_settitle adduser/title
 
 # For testing
 #db_fset adduser/homedir-permission isdefault true

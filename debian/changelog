@@ -3,8 +3,9 @@ adduser (3.113) unstable; urgency=low
   * Warning to STDERR (closes: #561864)
   * Use unlink on symlinks (closes: #609156)
   * Keep test from complaining (closes: #613009)
+  * Use db_settitle instead of db_title (closes: #560313)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 12 Jun 2011 18:01:53 +0100
+ -- Stephen Gran <sgran@debian.org>  Sun, 12 Jun 2011 18:04:16 +0100
 
 adduser (3.112+nmu2) unstable; urgency=low
 
