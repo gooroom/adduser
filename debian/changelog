@@ -4,8 +4,9 @@ adduser (3.113) unstable; urgency=low
   * Use unlink on symlinks (closes: #609156)
   * Keep test from complaining (closes: #613009)
   * Use db_settitle instead of db_title (closes: #560313)
+  * Add newline to deluser output (closes: #592629)
 
- -- Stephen Gran <sgran@debian.org>  Sun, 12 Jun 2011 18:04:16 +0100
+ -- Stephen Gran <sgran@debian.org>  Sun, 12 Jun 2011 18:06:18 +0100
 
 adduser (3.112+nmu2) unstable; urgency=low
 

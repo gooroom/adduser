@@ -318,7 +318,7 @@ if($action eq "deluser") {
 	 my $filesfile = new File::Temp(TEMPLATE=>"deluser.XXXXX", DIR=>"/tmp");
 	 my $filesfilename = $filesfile->filename;
 	 my $backup_name = $config{"backup_to"} . "/$user.tar";
-	 print "backup_name = $backup_name";
+	 print "backup_name = $backup_name\n";
 	 print $filesfile join("\n",@files);
 	 $filesfile->close();
          my $tar = &which('tar');
