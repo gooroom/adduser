@@ -1,4 +1,4 @@
-adduser (3.113) UNRELEASED; urgency=low
+adduser (3.113) unstable; urgency=low
 
   * Warning to STDERR (closes: #561864)
   * Use unlink on symlinks (closes: #609156)
