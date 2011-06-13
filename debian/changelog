@@ -1,3 +1,9 @@
+adduser (3.114) UNRELEASED; urgency=low
+
+  * Start new release
+
+ -- Stephen Gran <sgran@debian.org>  Mon, 13 Jun 2011 20:40:22 +0100
+
 adduser (3.113) unstable; urgency=low
 
   * Warning to STDERR (closes: #561864)
