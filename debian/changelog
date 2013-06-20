@@ -25,6 +25,8 @@ adduser (3.115) UNRELEASED; urgency=medium
         translator(s).
       * Fixes in the German translation. Closes: #685529, #698483.
       * Update Portuguese translation. Closes: #756180.
+  * Update example from John Zaitseff <J.Zaitseff@zap.org.au> to version 4.9.
+        Thanks. Closes: #712944.
 
  -- Afif Elghraoui <afif@debian.org>  Thu, 26 May 2016 21:46:59 -0700
 

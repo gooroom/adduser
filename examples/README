@@ -1,7 +1,7 @@
 **************************************************************************
 *                                                                        *
-*                   ADDUSER Local System Additions v4.6                  *
-*                 Copyright (C) 1999-2004, John Zaitseff                 *
+*                   ADDUSER Local System Additions v4.9                  *
+*                 Copyright (C) 1999-2013, John Zaitseff                 *
 *                                                                        *
 **************************************************************************
 
@@ -80,7 +80,7 @@ these steps as root:
 
 1. Copy the actual program to the correct location:
 
-       # cp ./adduser.local /usr/local/sbin
+       # cp --pr=t ./adduser.local /usr/local/sbin
        # chmod 755 /usr/local/sbin/adduser.local
 
 2. Copy the configuration file to the correct location:
@@ -97,7 +97,7 @@ these steps as root:
    files.  For example:
 
        # mkdir /etc/skel.other
-       # cp ./examples/skel.other/index.html /etc/skel.other
+       # cp --pr=t ./examples/skel.other/index.html /etc/skel.other
 
 5. You are finished.
 
@@ -125,8 +125,8 @@ and are NOT covered by the GNU General Public License.
 FEEDBACK
 ========
 
-Your  comments,  suggestions,  corrections  and  enhancements  are  always
-welcome!  Please send these to:
+Your comments, suggestions, corrections and enhancements are always warmly
+welcomed!  Please send these to:
 
 Postal:   John Zaitseff,
           Unit 6, 116 Woodburn Road,
