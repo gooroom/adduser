@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: manpages-de\n"
 "POT-Creation-Date: 2011-06-13 19:26+0000\n"
-"PO-Revision-Date: 2010-11-16 18:17+0100\n"
+"PO-Revision-Date: 2016-06-15 16:23+0200\n"
 "Last-Translator: Martin Eberhard Schauer <Martin.E.Schauer@gmx.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -87,7 +87,7 @@ msgstr "B<addgroup> --system [Optionen] [--gid ID] Gruppe"
 #. type: Plain text
 #: ../adduser.8:22
 msgid "B<adduser> [options] user group"
-msgstr "B<adduser> [Optionen] Benutzergruppe"
+msgstr "B<adduser> [Optionen] Benutzer Gruppe"
 
 #. type: SS
 #: ../adduser.8:22 ../deluser.8:20
@@ -1277,7 +1277,7 @@ msgstr "B<delgroup> [Optionen] [--only-if-empty] Gruppe"
 #. type: Plain text
 #: ../deluser.8:20
 msgid "B<deluser> [options] user group"
-msgstr "B<deluser> [options] Benutzergruppe"
+msgstr "B<deluser> [Optionen] Benutzer Gruppe"
 
 #. type: Plain text
 #: ../deluser.8:23

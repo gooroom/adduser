@@ -23,6 +23,7 @@ adduser (3.115) UNRELEASED; urgency=medium
       * Format SEE ALSO section correctly in all man pages.
       * Various formatting and minor language updates noted by the German
         translator(s).
+      * Fixes in the German translation. Closes: #685529.
 
  -- Afif Elghraoui <afif@debian.org>  Thu, 26 May 2016 21:46:59 -0700
 
