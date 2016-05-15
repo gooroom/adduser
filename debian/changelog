@@ -15,6 +15,7 @@ adduser (3.115) UNRELEASED; urgency=medium
       * Update Turkish translation. Closes: #676356.
       * Fix language field in Norwegian translation. Closes: #695997.
   * Program (translation):
+      * Use "--previous" when generating the updated po files.
       * Mention "--add_extra_groups" in --help output. Closes: #547911.
   * Manpage:
       * Improve pointer to customization files. Closes: #611898.
