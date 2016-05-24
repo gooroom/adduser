@@ -121,6 +121,9 @@ accidentally deleting non-system users/groups. Additionally, if the
 user does not exist, no error value is returned. This option is mainly
 for use in Debian package maintainer scripts.
 .TP
+.B \-\-only-if-empty 
+Only remove if no members are left.
+.TP
 .B \-\-backup
 Backup all files contained in the userhome and the mailspool-file to a file named
 /$user.tar.bz2 or /$user.tar.gz.
