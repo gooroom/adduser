@@ -11,6 +11,8 @@ adduser (3.115) UNRELEASED; urgency=medium
   * Update Vietnamese translation (Closes: #825610)
 
   [ Helge Kreutzmann ]
+  * Debconf:
+    * Fix language field in Norwegian translation. Closes: #695997.
   * Program (translation):
     * Mention "--add_extra_groups" in --help output. Closes: #547911.
 
