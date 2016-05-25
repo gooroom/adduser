@@ -4,3 +4,4 @@ TODO for adduser
 For adduser 3.x there is to do:
 
  * make adduser also work with super (fix #)
+ * do not hard code /usr/share/perl5 in debian/rules (cf. perl policy)
