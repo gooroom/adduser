@@ -1,3 +1,16 @@
+adduser (3.113+nmu1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Re-add missing translations in po/ and doc/po4a/po
+    Closes: #651114, #645951
+  * Manpages translations:
+    - Spanish. Closes: #636240
+  * Fix pending l10n issues. Debconf translations:
+    - Serbian (Zlatan Todoric).  Closes: #634980
+    - Serbian Latin (Zlatan Todoric).  Closes: #634982
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 21 Jan 2012 09:00:03 +0100
+
 adduser (3.113) unstable; urgency=low
 
   * Warning to STDERR (closes: #561864)
