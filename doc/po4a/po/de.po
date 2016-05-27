@@ -1858,11 +1858,6 @@ msgstr "B<EXCLUDE_FSTYPES>"
 
 #. type: Plain text
 #: ../deluser.conf.5:73
-#, fuzzy
-#| msgid ""
-#| "A regular expression which describes all file systems which should be "
-#| "excluded when looking for files of a user to be deleted. Defaults to "
-#| "\"(proc|sysfs|usbfs|devpts|tmpfs)\"."
 msgid ""
 "A regular expression which describes all file systems which should be "
 "excluded when looking for files of a user to be deleted. Defaults to \"(proc|"
@@ -1870,7 +1865,7 @@ msgid ""
 msgstr ""
 "Dieser reguläre Ausdruck beschreibt alle Dateisysteme, die nicht durchsucht "
 "werden, wenn Dateien eines Benutzers gelöscht werden sollen. Der "
-"Standardwert ist »(proc|sysfs|usbfs|devpts|tmpfs)«."
+"Standardwert ist »(proc|sysfs|usbfs|devpts|tmpfs|afs)«."
 
 #. type: Plain text
 #: ../deluser.conf.5:76

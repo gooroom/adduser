@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
-"POT-Creation-Date: 2011-06-13 19:26+0000\n"
+"POT-Creation-Date: 2010-11-02 14:09-0400\n"
 "PO-Revision-Date: 2010-10-26 08:45-0400\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -2059,11 +2059,6 @@ msgstr "B<EXCLUDE_FSTYPES>"
 # type: Plain text
 #. type: Plain text
 #: ../deluser.conf.5:73
-#, fuzzy
-#| msgid ""
-#| "A regular expression which describes all file systems which should be "
-#| "excluded when looking for files of a user to be deleted. Defaults to "
-#| "\"(proc|sysfs|usbfs|devpts|tmpfs)\"."
 msgid ""
 "A regular expression which describes all file systems which should be "
 "excluded when looking for files of a user to be deleted. Defaults to \"(proc|"
@@ -2071,7 +2066,7 @@ msgid ""
 msgstr ""
 "Une expression rationnelle qui décrit les systèmes de fichiers à exclure "
 "lors de la recherche des fichiers de l'utilisateur à supprimer. La valeur "
-"par défaut est \"(proc|sysfs|usbfs|devpts|tmpfs)\"."
+"par défaut est \"(proc|sysfs|usbfs|devpts|tmpfs|afs)\"."
 
 # type: Plain text
 #. type: Plain text

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser manpages italian translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-13 19:26+0000\n"
+"POT-Creation-Date: 2010-11-02 14:09-0400\n"
 "PO-Revision-Date: 2010-11-07 12:42+0100\n"
 "Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -2029,11 +2029,6 @@ msgstr "B<EXCLUDE_FSTYPES>"
 # type: Plain text
 #. type: Plain text
 #: ../deluser.conf.5:73
-#, fuzzy
-#| msgid ""
-#| "A regular expression which describes all file systems which should be "
-#| "excluded when looking for files of a user to be deleted. Defaults to "
-#| "\"(proc|sysfs|usbfs|devpts|tmpfs)\"."
 msgid ""
 "A regular expression which describes all file systems which should be "
 "excluded when looking for files of a user to be deleted. Defaults to \"(proc|"
@@ -2041,7 +2036,7 @@ msgid ""
 msgstr ""
 "Una espressione regolare che indica quali file system devono essere esclusi "
 "durante la ricerca dei file dell'utente da eliminare. Il valore predefinito "
-"è \"(proc|sysfs|usbfs|devpts|tmpfs)\"."
+"è \"(proc|sysfs|usbfs|devpts|tmpfs|afs)\"."
 
 # type: Plain text
 #. type: Plain text
