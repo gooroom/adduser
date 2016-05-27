@@ -1,7 +1,8 @@
 Source: adduser
 Section: admin
 Priority: important
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Maintainer: Debian Adduser Developers <adduser-devel@lists.alioth.debian.org>
+Uploaders: Afif Elghraoui <afif@debian.org>
 Standards-Version: 3.9.2
 Build-Depends: po-debconf, debhelper (>= 9)
 Build-Depends-Indep: gettext, po4a
