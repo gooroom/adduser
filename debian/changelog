@@ -18,6 +18,7 @@ adduser (3.115) UNRELEASED; urgency=medium
       * Use "--previous" when generating the updated po files.
       * Mention "--add_extra_groups" in --help output. Closes: #547911.
       * Update Japanese translation. Closes: #697109.
+      * Update Czech translation. Closes: #825734.
   * Manpage:
       * Improve pointer to customization files. Closes: #611898.
       * Improve pointer to NAME_REGEX. Closes: #508740.
