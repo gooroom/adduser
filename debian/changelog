@@ -1,7 +1,8 @@
 adduser (3.115) UNRELEASED; urgency=medium
 
-  * Set Vcs-* fields to point to Git repository
   * Adopt package (Closes: #811411)
+  * Set Vcs-* fields to point to Git repository
+  * Bump Standards-Version to 3.9.8
 
  -- Afif Elghraoui <afif@debian.org>  Thu, 26 May 2016 21:46:59 -0700
 
