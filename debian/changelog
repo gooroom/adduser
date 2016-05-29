@@ -20,6 +20,7 @@ adduser (3.115) UNRELEASED; urgency=medium
       * Update Japanese translation. Closes: #697109.
       * Update Czech translation. Closes: #825734.
       * Update Slovak translation. Closes: #825770.
+      * Updated Danish translation. Closes: #825778.
       * Update Portugese translation. Closes: #825867.
       * Update Russian translation. Closes: #825876.
       * Update Japanese translation. Closes: #825973.
