@@ -1,3 +1,22 @@
+adduser (3.114) unstable; urgency=medium
+
+  * QA upload.
+  * Set the maintainer to Debian QA Team and remove the
+    Uploaders field.
+  * Drop unnecessary versxioned relations to other packages.
+  * install-manpages.pl: Pass "-n" to gzip to omit timestamps
+    from the compressed files.
+  * install-manpages.pl: Create directories as needed.
+  * Rewrite debian/rules to use debhelper 9.
+  * Apply patch from Antonio Terceiro to add autopkgtests.
+  * Suggest perl instead of perl-modules.
+  * Set the source format to 3.0 (native).
+  * Drop irrelevant lintian overrides.
+  * Drop part of the postrm, which is now inserted by debhelper.
+  * Drop dependencies that debhelper inserts via ${misc:Depends}.
+
+ -- Niels Thykier <niels@thykier.net>  Sat, 12 Mar 2016 15:53:58 +0000
+
 adduser (3.113+nmu3) unstable; urgency=low
 
   * Non-maintainer upload.
