@@ -192,11 +192,11 @@ sub preseed_config {
   $configref->{"first_system_uid"} = 100;
   $configref->{"last_system_uid"} = 999;
   $configref->{"first_uid"} = 1000;
-  $configref->{"last_uid"} = 29999;
+  $configref->{"last_uid"} = 59999;
   $configref->{"first_system_gid"} = 100;
   $configref->{"last_system_gid"} = 999;
   $configref->{"first_gid"} = 1000;
-  $configref->{"last_gid"} = 29999;
+  $configref->{"last_gid"} = 59999;
   $configref->{"dhome"} = "/home";
   $configref->{"skel"} = "/etc/skel";
   $configref->{"usergroups"} = "yes";
