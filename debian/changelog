@@ -1,8 +1,14 @@
 adduser (3.115) UNRELEASED; urgency=medium
 
+  [ Afif Elghraoui ]
   * Adopt package (Closes: #811411)
   * Set Vcs-* fields to point to Git repository
   * Bump Standards-Version to 3.9.8
+  * Extend last_{u,g}id to 59999 to match policy update from 3.9.0
+    (Closes: #776203)
+
+  [ Trần Ngọc Quân ]
+  * Update Vietnamese translation (Closes: #825610)
 
  -- Afif Elghraoui <afif@debian.org>  Thu, 26 May 2016 21:46:59 -0700
 
