@@ -40,6 +40,7 @@ adduser (3.115) UNRELEASED; urgency=medium
       * Update Danish translation. Closes: #825777.
       * Update Russian translation. Closes: #825944.
       * Update Italian translation. Closes: #827012.
+      * Update Polish translation.
   * Update example from John Zaitseff <J.Zaitseff@zap.org.au> to version 4.9.
         Thanks. Closes: #712944.
 
