@@ -26,6 +26,7 @@ adduser (3.115) UNRELEASED; urgency=medium
       * Update Swedish translation. Closes: #826947.
       * Update Brazilian Portugese translation. Closes: #826965.
       * Update Italian translation. Closes: #827011.
+      * Update French translation. Closes: #827140.
   * Manpage:
       * Improve pointer to customization files. Closes: #611898.
       * Improve pointer to NAME_REGEX. Closes: #508740.
