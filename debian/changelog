@@ -45,6 +45,7 @@ adduser (3.115) UNRELEASED; urgency=medium
       * Update Italian translation. Closes: #827012.
       * Update Polish translation.
       * Update French translation.
+      * Update German translation.
   * Update example from John Zaitseff <J.Zaitseff@zap.org.au> to version 4.9.
         Thanks. Closes: #712944.
 
