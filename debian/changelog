@@ -30,6 +30,7 @@ adduser (3.115) UNRELEASED; urgency=medium
       * Update Hungarian translation.
       * Update Polish translation.
       * Update Basque translation.
+      * Update Norwegian translation.
   * Manpage:
       * Improve pointer to customization files. Closes: #611898.
       * Improve pointer to NAME_REGEX. Closes: #508740.
