@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser\n"
+"Project-Id-Version: adduser 3.113+nmu3\n"
 "Report-Msgid-Bugs-To: adduser@packages.debian.org\n"
 "POT-Creation-Date: 2011-06-13 19:26+0000\n"
-"PO-Revision-Date: 2012-05-11 10:21+0200\n"
+"PO-Revision-Date: 2016-06-17 18:02+0200\n"
 "Last-Translator: Atila KOÇ <akoc@artielektronik.com.tr>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "Language: tr\n"
@@ -19,27 +19,18 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:3001
-#| msgid "Do you want system wide readable home directories?"
 msgid "Do you want system-wide readable home directories?"
 msgstr "Ev dizinlerinin herkes tarafından okunabilmesini ister misiniz?"
 
 #. Type: boolean
 #. Description
 #: ../templates:3001
-#| msgid ""
-#| "Normally, home directories can be viewed by all users on the system. If "
-#| "you want to increase the security/privacy on your system, you might want "
-#| "your home directories only readable by the user. If you are unsure, "
-#| "enable system wide readable home directories."
 msgid "By default, users' home directories are readable by all users on the system. If you want to increase security and privacy, you might want home directories to be readable only for their owners. But if in doubt, leave this option enabled."
 msgstr "Öntanımlı olarak, kullanıcıların ev dizinlerine sistemdeki tüm kullanıcıların okuma erişimi yapmasına izin verilir. Daha yüksek güvenlik ve gizlilik için, ev dizinlerinin yalnızca sahipleri tarafından okunabilmesini isteyebilirsiniz. Şüpheye düştüğünüzde, 'Evet' diyerek ev dizinlerinin herkes tarafından okunabilir olmasını sağlayınız."
 
 #. Type: boolean
 #. Description
 #: ../templates:3001
-#| msgid ""
-#| "This will only affect home directories of users added with the adduser "
-#| "program later."
 msgid "This will only affect home directories of users added from now on with the adduser command."
 msgstr "Bu yalnızca bundan sonra 'adduser' komutu ile eklenecek kullanıcıların ev dizinlerini etkileyecektir."
 

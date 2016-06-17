@@ -49,6 +49,7 @@ adduser (3.115) UNRELEASED; urgency=medium
       * Update German translation.
   * Update example from John Zaitseff <J.Zaitseff@zap.org.au> to version 4.9.
         Thanks. Closes: #712944.
+  * Fix issues found by i18nspector.
 
  -- Afif Elghraoui <afif@debian.org>  Thu, 26 May 2016 21:46:59 -0700
 

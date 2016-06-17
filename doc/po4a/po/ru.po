@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.115\n"
 "POT-Creation-Date: 2016-05-29 07:48+0200\n"
-"PO-Revision-Date: 2016-05-31 19:22+0300\n"
+"PO-Revision-Date: 2016-06-17 18:28+0200\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "Language: ru\n"
@@ -186,18 +186,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../adduser.8:74
-#| msgid ""
-#| "By default, each user in Debian GNU/Linux is given a corresponding group "
-#| "with the same name.  Usergroups allow group writable directories to be "
-#| "easily maintained by placing the appropriate users in the new group, "
-#| "setting the set-group-ID bit in the directory, and ensuring that all "
-#| "users use a umask of 002.  If this option is turned off by setting "
-#| "B<USERGROUPS> to I<no>, all users' GIDs are set to B<USERS_GID>.  Users' "
-#| "primary groups can also be overridden from the command line with the B<--"
-#| "gid> or B<--ingroup> options to set the group by id or name, "
-#| "respectively.  Also, users can be added to one or more groups defined in "
-#| "adduser.conf either by setting ADD_EXTRA_GROUPS to 1 in adduser.conf, or "
-#| "by passing --add_extra_groups on the commandline."
 msgid ""
 "By default, each user in Debian GNU/Linux is given a corresponding group "
 "with the same name.  Usergroups allow group writable directories to be "
@@ -298,7 +286,6 @@ msgstr "0, если"
 # type: TP
 #. type: Plain text
 #: ../adduser.8:117
-#| msgid "0 if --quiet is specified"
 msgid "B<--quiet> is specified"
 msgstr "указан B<--quiet>"
 
@@ -311,7 +298,6 @@ msgstr "1, если не указан"
 # type: TP
 #. type: Plain text
 #: ../adduser.8:123
-#| msgid "1 if neither --quiet nor --debug is specified"
 msgid "B<--quiet> nor B<--debug> is specified"
 msgstr "B<--quiet> или B<--debug>"
 
@@ -324,16 +310,12 @@ msgstr "2, если указан"
 # type: TP
 #. type: Plain text
 #: ../adduser.8:127
-#| msgid "2 if --debug is specified"
 msgid "B<--debug> is specified"
 msgstr "B<--debug>"
 
 # type: Plain text
 #. type: Plain text
 #: ../adduser.8:131
-#| msgid ""
-#| "(The same applies to the variable DEBUG, but DEBUG is deprecated and will "
-#| "be removed in a later version of adduser.)"
 msgid ""
 "(The same applies to the variable DEBUG, but DEBUG is deprecated and will be "
 "removed in a later version of B<adduser> .)"
@@ -351,12 +333,6 @@ msgstr "Добавление системного пользователя"
 # type: Plain text
 #. type: Plain text
 #: ../adduser.8:140
-#| msgid ""
-#| "If called with one non-option argument and the B<--system> option, "
-#| "B<adduser> will add a system user. If a user with the same name already "
-#| "exists in the system uid range (or, if the uid is specified, if a user "
-#| "with that uid already exists), adduser will exit with a warning. This "
-#| "warning can be suppressed by adding \"--quiet\"."
 msgid ""
 "If called with one non-option argument and the B<--system> option, "
 "B<adduser> will add a system user. If a user with the same name already "
@@ -561,11 +537,6 @@ msgstr "B<--force-badname>"
 # type: Plain text
 #. type: Plain text
 #: ../adduser.8:218
-#| msgid ""
-#| "By default, user and group names are checked against the configurable "
-#| "regular expression B<NAME_REGEX> specified in the configuration file. "
-#| "This option forces B<adduser> and B<addgroup> to apply only a weak check "
-#| "for validity of the name."
 msgid ""
 "By default, user and group names are checked against the configurable "
 "regular expression B<NAME_REGEX> specified in the configuration file. This "
@@ -692,11 +663,6 @@ msgstr "B<--ingroup ГРУППА>"
 # type: Plain text
 #. type: Plain text
 #: ../adduser.8:259
-#| msgid ""
-#| "Add the new user to GROUP instead of a usergroup or the default group "
-#| "defined by B<USERS_GID> in the configuration file.  This affects the "
-#| "users primary group.  To add additional groups, see the "
-#| "B<add_extra_groups> option"
 msgid ""
 "Add the new user to GROUP instead of a usergroup or the default group "
 "defined by B<USERS_GID> in the configuration file.  This affects the users "
@@ -933,9 +899,6 @@ msgstr "СМОТРИТЕ ТАКЖЕ"
 # type: Plain text
 #. type: Plain text
 #: ../adduser.8:318
-#| msgid ""
-#| "adduser.conf(5), deluser(8), useradd(8), groupadd(8), usermod(8), Debian "
-#| "Policy 9.2.2."
 msgid ""
 "B<adduser.conf>(5), B<deluser>(8), B<groupadd>(8), B<useradd>(8), "
 "B<usermod>(8), Debian Policy 9.2.2."
@@ -1351,10 +1314,6 @@ msgstr "B<EXTRA_GROUPS>"
 # type: Plain text
 #. type: Plain text
 #: ../adduser.conf.5:140
-#| msgid ""
-#| "This is the list of groups that new non-system users will be added to.  "
-#| "By default, this list is 'dialout cdrom floppy audio video plugdev users "
-#| "games'"
 msgid ""
 "This is the list of groups that new non-system users will be added to.  By "
 "default, this list is 'dialout cdrom floppy audio video plugdev users games'."
@@ -1423,7 +1382,6 @@ msgstr "Необязательные пользовательские добав
 # type: Plain text
 #. type: Plain text
 #: ../adduser.conf.5:158
-#| msgid "adduser(8), addgroup(8), deluser(8), delgroup(8), deluser.conf(5)"
 msgid ""
 "B<addgroup>(8), B<adduser>(8), B<delgroup>(8), B<deluser>(8), B<deluser."
 "conf>(5)"
@@ -1576,10 +1534,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../deluser.8:81
-#| msgid ""
-#| "If the file B</usr/local/sbin/deluser.local> exists, it will be executed "
-#| "after the user account has been removed in order to do any local cleanup. "
-#| "The arguments passed to B<deluser.local> are:"
 msgid ""
 "If the file B</usr/local/sbil/deluser.local> exists, it will be executed "
 "after the user account has been removed in order to do any local cleanup. "
@@ -1906,7 +1860,6 @@ msgstr "/etc/deluser.conf"
 # type: Plain text
 #. type: Plain text
 #: ../deluser.8:185
-#| msgid "adduser(8), addgroup(8), deluser(8), delgroup(8), deluser.conf(5)"
 msgid "B<adduser>(8), B<deluser.conf>(5), B<groupdel>(8), B<userdel>(8)"
 msgstr "B<adduser>(8), B<deluser.conf>(5), B<groupdel>(8), B<userdel>(8)"
 
@@ -1972,10 +1925,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../deluser.conf.5:33
-#| msgid ""
-#| "deluser(8) and delgroup(8) also read /etc/adduser.conf, see adduser."
-#| "conf(8); settings in deluser.conf may overwrite settings made in adduser."
-#| "conf."
 msgid ""
 "B<deluser(8)>andB<delgroup(8)> also read I</etc/adduser.conf,> see B<adduser."
 "conf(5);> settings in I<deluser.conf> may overwrite settings made in "
@@ -2105,9 +2054,6 @@ msgstr "B<ONLY_IF_EMPTY>"
 # type: Plain text
 #. type: Plain text
 #: ../deluser.conf.5:78
-#| msgid ""
-#| "Only delete a group if there are no user who belong to this group. "
-#| "Defaults to 0."
 msgid ""
 "Only delete a group if there are no users belonging to this group. Defaults "
 "to 0."
@@ -2135,9 +2081,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../deluser.conf.5:85
-#| msgid ""
-#| "/etc/deluser.conf - configuration file for B<deluser(8)> and "
-#| "B<delgroup(8)>."
 msgid ""
 "I</etc/deluser.conf> Default configuration file for deluser and delgroup"
 msgstr "I</etc/deluser.conf> - файл настройки для deluser и delgroup"
@@ -2151,7 +2094,6 @@ msgstr "/usr/local/sbin/deluser.local"
 # type: Plain text
 #. type: Plain text
 #: ../deluser.conf.5:92
-#| msgid "deluser(8), delgroup(8), adduser.conf(5)"
 msgid "B<adduser.conf>(5), B<delgroup>(8), B<deluser(8)>"
 msgstr "B<adduser.conf>(5), B<delgroup>(8), B<deluser(8)>"
 

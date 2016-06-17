@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 3.41\n"
+"Project-Id-Version: adduser 3.41\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
 "POT-Creation-Date: 2010-11-21 17:13-0400\n"
-"PO-Revision-Date: 2010-11-07 07:45+0100\n"
+"PO-Revision-Date: 2016-06-17 18:26+0200\n"
 "Last-Translator: Remco Rijnders <remco@webconquest.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "Language: nl\n"
