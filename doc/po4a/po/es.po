@@ -1770,7 +1770,7 @@ msgid ""
 "The required perl-package 'perl modules' is not installed. This package is "
 "required to perform the requested actions. No action was performed."
 msgstr ""
-"El paquete requerido perl-modules no está instalado. Este paquete es "
+"El paquete requerido perl no está instalado. Este paquete es "
 "necesario para realizar las acciones solicitadas. No se ha realizado ninguna "
 "acción."
 

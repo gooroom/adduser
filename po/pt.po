@@ -555,12 +555,12 @@ msgstr "Introduza um nome de utilizador para remover: "
 msgid ""
 "In order to use the --remove-home, --remove-all-files, and --backup "
 "features,\n"
-"you need to install the `perl-modules' package. To accomplish that, run\n"
-"apt-get install perl-modules.\n"
+"you need to install the `perl' package. To accomplish that, run\n"
+"apt-get install perl.\n"
 msgstr ""
 "Para usar as funcionalidades --remove-home, --remove-all-files e --backup,\n"
-"precisa de instalar o pacote `perl-modules'. Para fazer isso, execute\n"
-"apt-get install perl-modules.\n"
+"precisa de instalar o pacote `perl'. Para fazer isso, execute\n"
+"apt-get install perl.\n"
 
 #: ../deluser:219
 #, perl-format

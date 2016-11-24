@@ -528,12 +528,12 @@ msgstr "请输入要删除的用户名： "
 msgid ""
 "In order to use the --remove-home, --remove-all-files, and --backup "
 "features,\n"
-"you need to install the `perl-modules' package. To accomplish that, run\n"
-"apt-get install perl-modules.\n"
+"you need to install the `perl' package. To accomplish that, run\n"
+"apt-get install perl.\n"
 msgstr ""
 "为了使用 --remove-home，--remove-all-files，和 --backup 功能，\n"
-"您需要安装\"perl-modules\"软件包。要获得它，请运行\n"
-"apt-get install perl-modules\n"
+"您需要安装\"perl\"软件包。要获得它，请运行\n"
+"apt-get install perl\n"
 
 #: ../deluser:219
 #, perl-format

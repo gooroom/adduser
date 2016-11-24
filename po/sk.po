@@ -543,13 +543,13 @@ msgstr "Zadajte meno používateľa, ktorý má byť odstránený."
 msgid ""
 "In order to use the --remove-home, --remove-all-files, and --backup "
 "features,\n"
-"you need to install the `perl-modules' package. To accomplish that, run\n"
-"apt-get install perl-modules.\n"
+"you need to install the `perl' package. To accomplish that, run\n"
+"apt-get install perl.\n"
 msgstr ""
 "Aby ste mohli použiť voľby --remove-home, --remove-all-files a --backup "
 "features,\n"
-"musíte nainštalovať balík „perl-modules“. Ak tak chcete urobiť, spustite\n"
-"apt-get install perl-modules.\n"
+"musíte nainštalovať balík „perl“. Ak tak chcete urobiť, spustite\n"
+"apt-get install perl.\n"
 
 #: ../deluser:219
 #, perl-format

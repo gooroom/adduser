@@ -548,12 +548,12 @@ msgstr "введіть ім'я користувача для видалення:
 msgid ""
 "In order to use the --remove-home, --remove-all-files, and --backup "
 "features,\n"
-"you need to install the `perl-modules' package. To accomplish that, run\n"
-"apt-get install perl-modules.\n"
+"you need to install the `perl' package. To accomplish that, run\n"
+"apt-get install perl.\n"
 msgstr ""
 "Щоб використовувати можливості --remove-home, --remove-all-files\n"
-"і --backup, потрібно встановити пакунок \"perl-modules. Щоб це\n"
-"зробити, запустіть \"apt-get install perl-modules\".\n"
+"і --backup, потрібно встановити пакунок \"perl. Щоб це\n"
+"зробити, запустіть \"apt-get install perl\".\n"
 
 #: ../deluser:219
 #, perl-format

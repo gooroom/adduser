@@ -1862,7 +1862,7 @@ msgid ""
 "The required perl-package 'perl modules' is not installed. This package is "
 "required to perform the requested actions. No action was performed."
 msgstr ""
-"Le paquet Perl « perl-modules » n'est pas installé. Ce paquet est nécessaire "
+"Le paquet Perl « perl » n'est pas installé. Ce paquet est nécessaire "
 "pour effectuer les actions demandées. Aucune opération n'a été effectuée."
 
 # type: TP
