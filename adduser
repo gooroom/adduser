@@ -373,7 +373,7 @@ if ($action eq "addsysuser") {
 	    printf (gtx("The system user `%s' already exists. Exiting.\n"), $new_name) if $verbose;
             exit RET_OK
         }
-	warnf (gtx("The user `%s' already exists. Exiting.\n"), $new_name);
+	warnf (gtx("The user `%s' already exists, but is not a system user. Exiting.\n"), $new_name);
 	exit RET_OBJECT_ALREADY_EXISTS;
     }
     if (existing_user_ok($new_name, $new_uid) == 2) {
