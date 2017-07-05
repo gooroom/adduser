@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adduser\n"
 "Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2010-11-21 17:13-0400\n"
+"POT-Creation-Date: 2015-07-02 22:08+0200\n"
 "PO-Revision-Date: 2010-11-14 17:30+01:00\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -18,125 +18,125 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. everyone can issue "--help" and "--version", but only root can go on
-#: ../adduser:150
+#: ../adduser:154
 msgid "Only root may add a user or group to the system.\n"
 msgstr "Kun root må tilføje en bruger eller gruppe til systemet.\n"
 
-#: ../adduser:176 ../deluser:137
+#: ../adduser:180 ../deluser:137
 msgid "Only one or two names allowed.\n"
 msgstr "Kun et eller to navne er tilladt.\n"
 
 #. must be addusertogroup
-#: ../adduser:181
+#: ../adduser:185
 msgid "Specify only one name in this mode.\n"
 msgstr "Specificer kun et navn i denne tilstand.\n"
 
-#: ../adduser:197
+#: ../adduser:201
 msgid "The --group, --ingroup, and --gid options are mutually exclusive.\n"
 msgstr "--group, --ingroup og --gid kan ikke bruges sammen.\n"
 
-#: ../adduser:202
+#: ../adduser:206
 msgid "The home dir must be an absolute path.\n"
 msgstr "Hjemmemappen skal være en absolut sti.\n"
 
-#: ../adduser:206
+#: ../adduser:210
 #, perl-format
 msgid "Warning: The home dir %s you specified already exists.\n"
 msgstr "Advarsel: Den hjemmemappe %s du angav findes allerede.\n"
 
-#: ../adduser:208
+#: ../adduser:212
 #, perl-format
 msgid "Warning: The home dir %s you specified can't be accessed: %s\n"
 msgstr "Advarsel: Den hjemmemappe %s du angav kan ikke tilgås: %s\n"
 
-#: ../adduser:270
+#: ../adduser:279
 #, perl-format
 msgid "The group `%s' already exists as a system group. Exiting.\n"
 msgstr "Gruppen »%s« findes allerede som en systemgruppe. Afslutter.\n"
 
-#: ../adduser:276
+#: ../adduser:285
 #, perl-format
 msgid "The group `%s' already exists and is not a system group. Exiting.\n"
 msgstr "Gruppen »%s« findes allerede og er ikke en systemgruppe. Afslutter.\n"
 
-#: ../adduser:282
+#: ../adduser:291
 #, perl-format
 msgid "The group `%s' already exists, but has a different GID. Exiting.\n"
 msgstr "Brugeren »%s« findes allerede, men har en anderledes GID. Afslutter.\n"
 
-#: ../adduser:286 ../adduser:316
+#: ../adduser:295 ../adduser:329
 #, perl-format
 msgid "The GID `%s' is already in use.\n"
 msgstr "GID'et »%s« er allerede i brug.\n"
 
-#: ../adduser:294
+#: ../adduser:303
 #, perl-format
 msgid ""
 "No GID is available in the range %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
 msgstr ""
 "Intet GID er ledigt i intervallet %d-%d (FIRST_SYS_GID - LAST_SYS_GID).\n"
 
-#: ../adduser:295 ../adduser:325
+#: ../adduser:304 ../adduser:338
 #, perl-format
 msgid "The group `%s' was not created.\n"
 msgstr "Gruppe »%s« ikke tilføjet.\n"
 
-#: ../adduser:300 ../adduser:329
+#: ../adduser:309 ../adduser:342
 #, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
 msgstr "Tilføjer gruppe »%s« (GID %d)...\n"
 
-#: ../adduser:305 ../adduser:334 ../adduser:359 ../deluser:370 ../deluser:407
-#: ../deluser:444
+#: ../adduser:318 ../adduser:351 ../adduser:376 ../deluser:387 ../deluser:424
+#: ../deluser:461
 msgid "Done.\n"
 msgstr "Færdig.\n"
 
-#: ../adduser:314 ../adduser:792
+#: ../adduser:327 ../adduser:840
 #, perl-format
 msgid "The group `%s' already exists.\n"
 msgstr "Gruppen »%s« findes allerede.\n"
 
-#: ../adduser:324
+#: ../adduser:337
 #, perl-format
 msgid "No GID is available in the range %d-%d (FIRST_GID - LAST_GID).\n"
 msgstr "Intet GID er ledigt i intervallet %d-%d (FIRST_GID - LAST_GID).\n"
 
-#: ../adduser:343 ../deluser:229 ../deluser:416
+#: ../adduser:360 ../deluser:229 ../deluser:433
 #, perl-format
 msgid "The user `%s' does not exist.\n"
 msgstr "Brugeren »%s« findes ikke.\n"
 
-#: ../adduser:345 ../adduser:591 ../adduser:799 ../deluser:378 ../deluser:419
+#: ../adduser:362 ../adduser:630 ../adduser:847 ../deluser:395 ../deluser:436
 #, perl-format
 msgid "The group `%s' does not exist.\n"
 msgstr "Gruppen »%s« findes ikke.\n"
 
-#: ../adduser:348 ../adduser:595
+#: ../adduser:365 ../adduser:634
 #, perl-format
 msgid "The user `%s' is already a member of `%s'.\n"
 msgstr "Brugeren »%s« er allerede et medlem af »%s«.\n"
 
-#: ../adduser:353 ../adduser:601
+#: ../adduser:370 ../adduser:640
 #, perl-format
 msgid "Adding user `%s' to group `%s' ...\n"
 msgstr "Tilføjer bruger »%s« til gruppen »%s«...\n"
 
-#: ../adduser:373
+#: ../adduser:390
 #, perl-format
 msgid "The system user `%s' already exists. Exiting.\n"
 msgstr "Systembrugeren »%s« findes allerede. Afslutter.\n"
 
-#: ../adduser:376
+#: ../adduser:393
 #, perl-format
 msgid "The user `%s' already exists. Exiting.\n"
 msgstr "Brugeren »%s« findes allerede. Afslutter.\n"
 
-#: ../adduser:380
+#: ../adduser:397
 #, perl-format
 msgid "The user `%s' already exists with a different UID. Exiting.\n"
 msgstr "Brugeren »%s« findes allerede med en anden UID. Afslutter.\n"
 
-#: ../adduser:394
+#: ../adduser:411
 #, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_SYS_UID - "
@@ -145,47 +145,47 @@ msgstr ""
 "Intet UID-/GID-par er ledigt i intervallet %d-%d (FIRST_SYS_UID - "
 "LAST_SYS_UID).\n"
 
-#: ../adduser:395 ../adduser:407 ../adduser:487 ../adduser:499
+#: ../adduser:412 ../adduser:424 ../adduser:513 ../adduser:525
 #, perl-format
 msgid "The user `%s' was not created.\n"
 msgstr "Bruger »%s« blev ikke tilføjet.\n"
 
-#: ../adduser:406
+#: ../adduser:423
 #, perl-format
 msgid ""
 "No UID is available in the range %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 msgstr "Intet UID ledigt i intervallet %d-%d (FIRST_SYS_UID - LAST_SYS_UID).\n"
 
-#: ../adduser:411 ../adduser:417 ../adduser:503 ../adduser:509
+#: ../adduser:428 ../adduser:434 ../adduser:529 ../adduser:535
 msgid "Internal error"
 msgstr "Intern fejl"
 
-#: ../adduser:419
+#: ../adduser:436
 #, perl-format
 msgid "Adding system user `%s' (UID %d) ...\n"
 msgstr "Tilføjer systembruger »%s« (UID %d)...\n"
 
-#: ../adduser:424
+#: ../adduser:441
 #, perl-format
 msgid "Adding new group `%s' (GID %d) ...\n"
 msgstr "Tilføjer ny gruppe »%s« (GID %d)...\n"
 
-#: ../adduser:431
+#: ../adduser:452
 #, perl-format
 msgid "Adding new user `%s' (UID %d) with group `%s' ...\n"
 msgstr "Tilføjer ny bruger »%s« (UID %d) med gruppe »%s«...\n"
 
-#: ../adduser:449 ../AdduserCommon.pm:162
+#: ../adduser:475 ../AdduserCommon.pm:162
 #, perl-format
 msgid "`%s' returned error code %d. Exiting.\n"
 msgstr "»%s« returnerede fejlkode %d. Afslutter.\n"
 
-#: ../adduser:451 ../AdduserCommon.pm:164
+#: ../adduser:477 ../AdduserCommon.pm:164
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
 msgstr "»%s« afsluttede fra signal %d. Afslutter.\n"
 
-#: ../adduser:453
+#: ../adduser:479
 #, perl-format
 msgid ""
 "%s failed with return code 15, shadow not enabled, password aging cannot be "
@@ -194,93 +194,93 @@ msgstr ""
 "%s fejlede med returkode 15, skygge ikke aktiveret, adgangskodeforfald kan "
 "ikke angives. Fortsætter.\n"
 
-#: ../adduser:478
+#: ../adduser:504
 #, perl-format
 msgid "Adding user `%s' ...\n"
 msgstr "Tilføjer bruger »%s«...\n"
 
-#: ../adduser:486
+#: ../adduser:512
 #, perl-format
 msgid ""
 "No UID/GID pair is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr ""
 "Intet UID-/GID-par er ledigt i intervallet %d-%d (FIRST_UID - LAST_UID).\n"
 
-#: ../adduser:498
+#: ../adduser:524
 #, perl-format
 msgid "No UID is available in the range %d-%d (FIRST_UID - LAST_UID).\n"
 msgstr "Intet UID ledigt i intervallet %d-%d (FIRST_UID - LAST_UID).\n"
 
-#: ../adduser:514
+#: ../adduser:540
 #, perl-format
 msgid "Adding new group `%s' (%d) ...\n"
 msgstr "Tilføjer ny gruppe »%s« (%d)...\n"
 
-#: ../adduser:521
+#: ../adduser:551
 #, perl-format
 msgid "Adding new user `%s' (%d) with group `%s' ...\n"
 msgstr "Tilføjer ny bruger »%s« (%d) med gruppe »%s«...\n"
 
 #. hm, error, should we break now?
-#: ../adduser:545
+#: ../adduser:580
 msgid "Permission denied\n"
 msgstr "Tilladelse nægtet\n"
 
-#: ../adduser:546
+#: ../adduser:581
 msgid "invalid combination of options\n"
 msgstr "ugyldig kombination af tilvalg\n"
 
-#: ../adduser:547
+#: ../adduser:582
 msgid "unexpected failure, nothing done\n"
 msgstr "uventet fejl, intet gjort\n"
 
-#: ../adduser:548
+#: ../adduser:583
 msgid "unexpected failure, passwd file missing\n"
 msgstr "uventet fejl, adgangskodefil mangler\n"
 
-#: ../adduser:549
+#: ../adduser:584
 msgid "passwd file busy, try again\n"
 msgstr "adgangskodefil optaget, forsøg igen\n"
 
-#: ../adduser:550
+#: ../adduser:585
 msgid "invalid argument to option\n"
 msgstr "ugyldigt argument for tilvalg\n"
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale noexpr" which regular
 #. expression will be checked to find positive answer.
-#: ../adduser:555
+#: ../adduser:590
 msgid "Try again? [y/N] "
 msgstr "Forsøg igen? [j/N] "
 
 #. Translators: [y/N] has to be replaced by values defined in your
 #. locale.  You can see by running "locale yesexpr" which regular
 #. expression will be checked to find positive answer.
-#: ../adduser:581
+#: ../adduser:620
 msgid "Is the information correct? [Y/n] "
 msgstr "Er informationerne korrekte? [J/n] "
 
-#: ../adduser:588
+#: ../adduser:627
 #, perl-format
 msgid "Adding new user `%s' to extra groups ...\n"
 msgstr "Tilføjer ny bruger »%s« til ekstra grupper...\n"
 
-#: ../adduser:614
+#: ../adduser:653
 #, perl-format
 msgid "Setting quota for user `%s' to values of user `%s' ...\n"
 msgstr "Angiver kvota for bruger »%s« til værdier af bruger »%s«...\n"
 
-#: ../adduser:651
+#: ../adduser:690
 #, perl-format
 msgid "Not creating home directory `%s'.\n"
 msgstr "Opretter ikke hjemmemappe »%s«.\n"
 
-#: ../adduser:654
+#: ../adduser:693
 #, perl-format
 msgid "The home directory `%s' already exists.  Not copying from `%s'.\n"
 msgstr "Hjemmemappen »%s« findes allerede. Kopierer ikke fra »%s«.\n"
 
-#: ../adduser:660
+#: ../adduser:699
 #, perl-format
 msgid ""
 "Warning: The home directory `%s' does not belong to the user you are "
@@ -288,52 +288,56 @@ msgid ""
 msgstr ""
 "Advarsel: Hjemmemappen »%s« tilhører ikke brugeren, du er ved at oprette.\n"
 
-#: ../adduser:665
+#: ../adduser:704
 #, perl-format
 msgid "Creating home directory `%s' ...\n"
 msgstr "Opretter hjemmemappe »%s«...\n"
 
-#: ../adduser:667
+#: ../adduser:706
 #, perl-format
 msgid "Couldn't create home directory `%s': %s.\n"
 msgstr "Kunne ikke oprette hjemmemappe »%s«: %s.\n"
 
-#: ../adduser:675
+#: ../adduser:714
+msgid "Setting up encryption ...\n"
+msgstr ""
+
+#: ../adduser:719
 #, perl-format
 msgid "Copying files from `%s' ...\n"
 msgstr "Kopierer filer fra »%s«...\n"
 
-#: ../adduser:677
+#: ../adduser:721
 #, perl-format
 msgid "fork for `find' failed: %s\n"
 msgstr "forgrening for »find« mislykkedes: %s\n"
 
-#: ../adduser:782
+#: ../adduser:830
 #, perl-format
 msgid "The user `%s' already exists, and is not a system user.\n"
 msgstr "Brugeren »%s« findes allerede, og er ikke en systembruger.\n"
 
-#: ../adduser:784
+#: ../adduser:832
 #, perl-format
 msgid "The user `%s' already exists.\n"
 msgstr "Brugeren »%s« findes allerede.\n"
 
-#: ../adduser:787
+#: ../adduser:835
 #, perl-format
 msgid "The UID %d is already in use.\n"
 msgstr "GID'et %d er allerede i brug.\n"
 
-#: ../adduser:794
+#: ../adduser:842
 #, perl-format
 msgid "The GID %d is already in use.\n"
 msgstr "GID'et %d er allerede i brug.\n"
 
-#: ../adduser:801
+#: ../adduser:849
 #, perl-format
 msgid "The GID %d does not exist.\n"
 msgstr "GID %d findes ikke.\n"
 
-#: ../adduser:848
+#: ../adduser:896
 #, perl-format
 msgid ""
 "Cannot deal with %s.\n"
@@ -342,7 +346,7 @@ msgstr ""
 "Kan ikke håndtere %s.\n"
 "Det er ikke en mappe, fil eller symbolsk henvisning.\n"
 
-#: ../adduser:868
+#: ../adduser:917
 #, perl-format
 msgid ""
 "%s: To avoid problems, the username should consist only of\n"
@@ -357,59 +361,60 @@ msgstr ""
 "(som defineret af IEEE Std 1003.1-2001). For kompatibilitet med\n"
 "Sambamaskinkonti er $ også understøttet i slutningen af brugernavnet\n"
 
-#: ../adduser:876
+#: ../adduser:927
 msgid "Allowing use of questionable username.\n"
 msgstr "Tillader brug af tvivlsomt brugernavn.\n"
 
-#: ../adduser:880
-#, perl-format
+#: ../adduser:931
+#, fuzzy, perl-format
 msgid ""
 "%s: Please enter a username matching the regular expression configured\n"
-"via the NAME_REGEX configuration variable.  Use the `--force-badname'\n"
+"via the NAME_REGEX[_SYSTEM] configuration variable.  Use the `--force-"
+"badname'\n"
 "option to relax this check or reconfigure NAME_REGEX.\n"
 msgstr ""
 "%s: Indtast venligst et brugernavn der matcher det regulære udtryk\n"
 "konfigureret via konfigurationsvariablen NAME_REGEX. Brug tilvalget\n"
 "»--force-badname« til at slække dette tjek eller rekonfigurer NAME_REGEX.\n"
 
-#: ../adduser:896
+#: ../adduser:947
 #, perl-format
 msgid "Selecting UID from range %d to %d ...\n"
 msgstr "Vælger UID fra intervallet %d til %d...\n"
 
-#: ../adduser:914
+#: ../adduser:965
 #, perl-format
 msgid "Selecting GID from range %d to %d ...\n"
 msgstr "Vælger GID fra intervallet %d til %d...\n"
 
-#: ../adduser:958
+#: ../adduser:1023
 #, perl-format
 msgid "Stopped: %s\n"
 msgstr "Stoppet: %s\n"
 
-#: ../adduser:960
+#: ../adduser:1025
 #, perl-format
 msgid "Removing directory `%s' ...\n"
 msgstr "Fjerner mappe »%s«...\n"
 
-#: ../adduser:964 ../deluser:358
+#: ../adduser:1029 ../deluser:375
 #, perl-format
 msgid "Removing user `%s' ...\n"
 msgstr "Fjerner bruger »%s«...\n"
 
-#: ../adduser:968 ../deluser:403
+#: ../adduser:1033 ../deluser:420
 #, perl-format
 msgid "Removing group `%s' ...\n"
 msgstr "Fjerner gruppe »%s«...\n"
 
 #. Translators: the variable %s is INT, QUIT, or HUP.
 #. Please do not insert a space character between SIG and %s.
-#: ../adduser:979
+#: ../adduser:1044
 #, perl-format
 msgid "Caught a SIG%s.\n"
 msgstr "Fangede et SIG%s.\n"
 
-#: ../adduser:984
+#: ../adduser:1049
 #, perl-format
 msgid ""
 "adduser version %s\n"
@@ -418,7 +423,7 @@ msgstr ""
 "adduser version %s\n"
 "\n"
 
-#: ../adduser:985
+#: ../adduser:1050
 msgid ""
 "Adds a user or group to the system.\n"
 "  \n"
@@ -434,7 +439,7 @@ msgstr ""
 "               Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 "\n"
 
-#: ../adduser:992 ../deluser:466
+#: ../adduser:1057 ../deluser:483
 msgid ""
 "This program is free software; you can redistribute it and/or modify\n"
 "it under the terms of the GNU General Public License as published by\n"
@@ -457,11 +462,12 @@ msgstr ""
 "læses i GNU General Public License. Se /usr/share/common-licenses/GPL, for\n"
 "yderligere detaljer.\n"
 
-#: ../adduser:1006
+#: ../adduser:1071
+#, fuzzy
 msgid ""
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
 "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]\n"
-"[--disabled-password] [--disabled-login] USER\n"
+"[--disabled-password] [--disabled-login] [--encrypt-home] USER\n"
 "   Add a normal user\n"
 "\n"
 "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
@@ -483,7 +489,8 @@ msgid ""
 "general options:\n"
 "  --quiet | -q      don't give process information to stdout\n"
 "  --force-badname   allow usernames which do not match the\n"
-"                    NAME_REGEX configuration variable\n"
+"                    NAME_REGEX[_SYSTEM] configuration variable\n"
+"  --extrausers      uses extra users as the database\n"
 "  --help | -h       usage message\n"
 "  --version | -v    version number and copyright\n"
 "  --conf | -c FILE  use FILE as configuration file\n"
@@ -604,64 +611,64 @@ msgstr "Laver ikke sikkerhedskopi/fjerner »%s«, det er et monteringspunkt.\n"
 msgid "Not backing up/removing `%s', it matches %s.\n"
 msgstr "Laver ikke sikkerhedskopi/fjerne »%s«, den matcher %s.\n"
 
-#: ../deluser:309
+#: ../deluser:326
 #, perl-format
 msgid "Cannot handle special file %s\n"
 msgstr "Kan ikke håndtere specialfilen %s\n"
 
-#: ../deluser:317
+#: ../deluser:334
 #, perl-format
 msgid "Backing up files to be removed to %s ...\n"
 msgstr "Laver sikkerhedskopi af filer, der skal fjernes, til %s....\n"
 
-#: ../deluser:343
+#: ../deluser:360
 msgid "Removing files ...\n"
 msgstr "Fjerner filer...\n"
 
-#: ../deluser:355
+#: ../deluser:372
 msgid "Removing crontab ...\n"
 msgstr "Fjerner crontab...\n"
 
-#: ../deluser:361
+#: ../deluser:378
 #, perl-format
 msgid "Warning: group `%s' has no more members.\n"
 msgstr "Advarsel: Gruppe »%s« har ikke flere medlemmer.\n"
 
-#: ../deluser:383
+#: ../deluser:400
 #, perl-format
 msgid "getgrnam `%s' failed. This shouldn't happen.\n"
 msgstr "getgrnam »%s« mislykkedes. Dette burde ikke ske.\n"
 
-#: ../deluser:388
+#: ../deluser:405
 #, perl-format
 msgid "The group `%s' is not a system group. Exiting.\n"
 msgstr "Gruppen »%s« er ikke en systemgruppe. Afslutter.\n"
 
-#: ../deluser:392
+#: ../deluser:409
 #, perl-format
 msgid "The group `%s' is not empty!\n"
 msgstr "Gruppen »%s« er ikke tom!\n"
 
-#: ../deluser:398
+#: ../deluser:415
 #, perl-format
 msgid "`%s' still has `%s' as their primary group!\n"
 msgstr "»%s« har stadig »%s« som deres primære gruppe!\n"
 
-#: ../deluser:422
+#: ../deluser:439
 msgid "You may not remove the user from their primary group.\n"
 msgstr "Du må ikke fjerne brugeren fra dennes primære gruppe.\n"
 
-#: ../deluser:436
+#: ../deluser:453
 #, perl-format
 msgid "The user `%s' is not a member of group `%s'.\n"
 msgstr "Brugeren »%s« er ikke et medlem af gruppen »%s«.\n"
 
-#: ../deluser:439
+#: ../deluser:456
 #, perl-format
 msgid "Removing user `%s' from group `%s' ...\n"
 msgstr "Fjerner bruger »%s« fra gruppe »%s«...\n"
 
-#: ../deluser:458
+#: ../deluser:475
 #, perl-format
 msgid ""
 "deluser version %s\n"
@@ -670,11 +677,11 @@ msgstr ""
 "deluser version %s\n"
 "\n"
 
-#: ../deluser:459
+#: ../deluser:476
 msgid "Removes users and groups from the system.\n"
 msgstr "Fjerner brugere og grupper fra systemet.\n"
 
-#: ../deluser:461
+#: ../deluser:478
 msgid ""
 "Copyright (C) 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
@@ -682,7 +689,7 @@ msgstr ""
 "Ophavsret 2000 Roland Bauerschmidt <roland@copyleft.de>\n"
 "\n"
 
-#: ../deluser:463
+#: ../deluser:480
 msgid ""
 "deluser is based on adduser by Guy Maor <maor@debian.org>, Ian Murdock\n"
 "<imurdock@gnu.ai.mit.edu> and Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
@@ -692,7 +699,7 @@ msgstr ""
 "<imurdock@gnu.ai.mit.edu> og Ted Hajek <tedhajek@boombox.micro.umn.edu>\n"
 "\n"
 
-#: ../deluser:479
+#: ../deluser:496
 msgid ""
 "deluser USER\n"
 "  remove a normal user from the system\n"
@@ -778,3 +785,78 @@ msgstr "Ukendt variabel »%s« på »%s«, linje %d.\n"
 #, perl-format
 msgid "Could not find program named `%s' in $PATH.\n"
 msgstr "Kunne ikke finde program med navnet »%s« i $PATH.\n"
+
+#~ msgid ""
+#~ "%s: Please enter a username matching the regular expression configured\n"
+#~ "via the NAME_REGEX configuration variable.  Use the `--force-badname'\n"
+#~ "option to relax this check or reconfigure NAME_REGEX.\n"
+#~ msgstr ""
+#~ "%s: Indtast venligst et brugernavn der matcher det regulære udtryk\n"
+#~ "konfigureret via konfigurationsvariablen NAME_REGEX. Brug tilvalget\n"
+#~ "»--force-badname« til at slække dette tjek eller rekonfigurer "
+#~ "NAME_REGEX.\n"
+
+#~ msgid ""
+#~ "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
+#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid "
+#~ "ID]\n"
+#~ "[--disabled-password] [--disabled-login] USER\n"
+#~ "   Add a normal user\n"
+#~ "\n"
+#~ "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
+#~ "ID]\n"
+#~ "[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
+#~ "password]\n"
+#~ "[--disabled-login] USER\n"
+#~ "   Add a system user\n"
+#~ "\n"
+#~ "adduser --group [--gid ID] GROUP\n"
+#~ "addgroup [--gid ID] GROUP\n"
+#~ "   Add a user group\n"
+#~ "\n"
+#~ "addgroup --system [--gid ID] GROUP\n"
+#~ "   Add a system group\n"
+#~ "\n"
+#~ "adduser USER GROUP\n"
+#~ "   Add an existing user to an existing group\n"
+#~ "\n"
+#~ "general options:\n"
+#~ "  --quiet | -q      don't give process information to stdout\n"
+#~ "  --force-badname   allow usernames which do not match the\n"
+#~ "                    NAME_REGEX configuration variable\n"
+#~ "  --help | -h       usage message\n"
+#~ "  --version | -v    version number and copyright\n"
+#~ "  --conf | -c FILE  use FILE as configuration file\n"
+#~ "\n"
+#~ msgstr ""
+#~ "adduser [--home MAPPE] [--shell SKAL] [--no-create-home] [--uid ID]\n"
+#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GRUPPE | --gid "
+#~ "ID]\n"
+#~ "[--disabled-password] [--disabled-login] bruger\n"
+#~ "   Tilføjer en normal bruger\n"
+#~ "\n"
+#~ "adduser --system [--home MAPPE] [--shell SKAL] [--no-create-home] [--uid "
+#~ "ID]\n"
+#~ "[--gecos GECOS] [--group | --ingroup GRUPPE | --gid ID] [--disabled-"
+#~ "password]\n"
+#~ "[--disabled-login] BRUGER\n"
+#~ "   Tilføj en systembruger\n"
+#~ "\n"
+#~ "adduser --group [--gid ID] GRUPPE\n"
+#~ "addgroup [--gid ID] GRUPPE\n"
+#~ "   Tilføjer en brugergruppe\n"
+#~ "\n"
+#~ "adduser --group --system [--gid ID] gruppe\n"
+#~ "addgroup --system [--gid ID] gruppe\n"
+#~ "   Tilføj en systemgruppe\n"
+#~ "\n"
+#~ "adduser BRUGER GRUPPE\n"
+#~ "   Tilføj en eksisterende bruger til en eksisterende gruppe\n"
+#~ "\n"
+#~ "Generelle tilvalg:\n"
+#~ "  --quiet | -q     giv ikke procesinformation til stdout\n"
+#~ "  --force-badname  tillad brugernavne som ikke matcher\n"
+#~ "                   konfigurationsvariablen NAME_REGEX\n"
+#~ "  --help | -h      hjælpetekst\n"
+#~ "  --version | -v   versionnummer og ophavsret\n"
+#~ "  --conf | -c FIL  brug FIL som konfigurationsfil\n"

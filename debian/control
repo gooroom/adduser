@@ -1,7 +1,8 @@
 Source: adduser
 Section: admin
 Priority: important
-Maintainer: Debian Adduser Developers <adduser-devel@lists.alioth.debian.org>
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Adduser Developers <adduser-devel@lists.alioth.debian.org>
 Uploaders: Joerg Hoh <joerg@joerghoh.de>, Roland Bauerschmidt <rb@debian.org>, Stephen Gran <sgran@debian.org>
 Standards-Version: 3.9.2
 Build-Depends: po-debconf
@@ -9,12 +10,13 @@ Build-Depends-Indep: gettext (>= 0.13), po4a (>= 0.31)
 Vcs-Svn: svn://svn.debian.org/adduser/
 Vcs-Browser: http://svn.debian.org/wsvn/adduser/
 Homepage: http://alioth.debian.org/projects/adduser/
+XS-Testsuite: autopkgtest
 
 Package: adduser
 Architecture: all
 Multi-Arch: foreign
-Depends: perl-base (>=5.6.0), passwd (>= 1:4.0.12), debconf | debconf-2.0
-Suggests: liblocale-gettext-perl, perl-modules
+Depends: perl-base (>=5.6.0), passwd (>= 1:4.1.5.1-1.1ubuntu6), debconf | debconf-2.0
+Suggests: liblocale-gettext-perl, perl-modules, ecryptfs-utils (>= 67-1)
 Replaces: manpages-pl (<= 20051117-1), manpages-it (<< 0.3.4-2)
 Description: add and remove users and groups
  This package includes the 'adduser' and 'deluser' commands for creating
