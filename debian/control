@@ -3,7 +3,7 @@ Section: admin
 Priority: important
 Maintainer: Debian Adduser Developers <adduser-devel@lists.alioth.debian.org>
 Uploaders: Afif Elghraoui <afif@debian.org>
-Standards-Version: 3.9.8
+Standards-Version: 4.0.1
 Build-Depends: po-debconf, debhelper (>= 9)
 Build-Depends-Indep: gettext, po4a
 Vcs-Git: https://anonscm.debian.org/git/adduser/adduser.git
