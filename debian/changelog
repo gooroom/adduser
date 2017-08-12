@@ -1,3 +1,15 @@
+adduser (3.116) UNRELEASED; urgency=medium
+
+  * Advise installation of 'perl' rather than 'perl-modules'
+    (Closes: #840982)
+  * Improve distinction between informational and essential messages
+    (Closes: #763055)
+  * Improve message accompanying error code for creating system user
+    (Closes: #708073, #759740)
+  * testsuite: add current directory to module search path
+
+ -- Afif Elghraoui <afif@debian.org>  Sat, 12 Aug 2017 11:44:19 -0400
+
 adduser (3.115) unstable; urgency=medium
 
   [ Afif Elghraoui ]
