@@ -105,6 +105,7 @@ our $special_shell = undef;
 our $add_extra_groups = 0;
 our $use_extrausers = 0;
 our $encrypt_home = undef;
+our $encfs_encrypt_home = undef;
 
 # Global variables we need later
 my $existing_user = undef;
@@ -143,6 +144,7 @@ unless ( GetOptions ("quiet|q" => sub { $verbose = 0 },
 	    "conf=s" => \$configfile,
 	    "no-create-home" => \$no_create_home,
 	    "encrypt-home" => \$encrypt_home,
+	    "encfs-encrypt-home" => \$encfs_encrypt_home,
             "add_extra_groups" => \$add_extra_groups,
         "extrausers" => \$use_extrausers,
 	    "debug" => sub { $verbose = 2 } ) ) {
@@ -569,7 +571,10 @@ if ($action eq "adduser") {
     my $yesexpr = langinfo(YESEXPR());
     if ($ask_passwd) {
 	for (;;) {
-          my $passwd = &which('passwd');
+      my $passwd = &which('passwd');
+      if (defined($encfs_encrypt_home)) {
+          $passwd = "/usr/bin/passwd.encfs";
+      }
 	  # do _not_ use systemcall() here, since systemcall() dies on
 	  # non-zero exit code and we need to do special handling here!
           system($passwd, $new_name);
@@ -726,6 +731,23 @@ sub create_homedir {
 	      &copy_to_dir($config{"skel"}, $_, $home_dir, $new_uid,
 			    $new_gid, ($config{"setgid_home"} =~ /yes/i));
 	  }
+      }
+
+      if (defined($encfs_encrypt_home)) {
+          # add to fuse group
+          my $usermod = &which('usermod');
+          &systemcall($usermod, '-aG', 'fuse', $new_name);
+
+          printf gtx("Setting up encryption ...\n") if $verbose;
+
+          # create backup and encfs directory
+          &systemcall('mv', $home_dir, "$home_dir.bak");
+          &systemcall('mkdir', '-p', "/home/.encfs/$new_name", "$home_dir");
+          chown($new_uid, $new_gid, "/home/.encfs/$new_name", "$home_dir");
+
+          # rmdir $home_dir.bak
+          # Delete $home_dir.bak from the passwd.encfs command.
+          #&systemcall('rm', '-rf', "$home_dir.bak");
       }
 
       if (defined($encrypt_home)) {
@@ -1070,7 +1092,7 @@ sub usage {
     printf gtx(
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
 [--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]
-[--disabled-password] [--disabled-login] [--encrypt-home] USER
+[--disabled-password] [--disabled-login] [--encrypt-home] [--encfs-encrypt-home] USER
    Add a normal user
 
 adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
