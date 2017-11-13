@@ -1,3 +1,12 @@
+adduser (3.113+nmu3ubuntu5+grm1u1) zesty; urgency=medium
+
+  [ jongkyung.woo ]
+  * [9de020ce] Added encfs-encrypt-home options - Option to support user-level encryption of encfs
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Mon, 13 Nov 2017 15:12:13 +0900
+
 adduser (3.113+nmu3ubuntu5) zesty; urgency=medium
 
   * testsuite/runsuite.sh: Add the testsuite directory to @INC, so it can find
