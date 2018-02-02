@@ -1,3 +1,15 @@
+adduser (3.117) unstable; urgency=medium
+
+  [ Marc Haber ]
+  * new maintainer address, remove references to devel mailing list
+  * let control file point to salsa instead
+  * make Description "Adduser" translateable and lintian happy
+
+  [ Afif Elghraoui ]
+  * Incorporate updated German translation (Closes: #885082)
+
+ -- Marc Haber <mh+debian-packages@zugschlus.de>  Fri, 02 Feb 2018 17:42:15 +0100
+
 adduser (3.116) unstable; urgency=medium
 
   * Advise installation of 'perl' rather than 'perl-modules'
