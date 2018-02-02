@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.41\n"
-"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
+"Report-Msgid-Bugs-To: adduser@packages.debian.org\n"
 "POT-Creation-Date: 2016-06-17 18:51+0200\n"
 "PO-Revision-Date: 2016-06-17 19:07+0200\n"
 "Last-Translator: Remco Rijnders <remco@webconquest.com>\n"
