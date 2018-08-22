@@ -1,3 +1,2 @@
-Tests: adduser
-# 'chage' prints messages to stderr when tests run with shadow off
-Restrictions: needs-root allow-stderr
+Test-Command: cd testsuite/ && ./runsuite.sh
+Restrictions: allow-stderr breaks-testbed needs-root

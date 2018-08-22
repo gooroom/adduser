@@ -386,12 +386,12 @@ msgstr ""
 #: ../adduser.8:155
 msgid ""
 "A home directory is created by the same rules as for normal users.  The new "
-"system user will have the shell I</bin/false> (unless overridden with the "
+"system user will have the shell I</usr/sbin/nologin> (unless overridden with the "
 "B<--shell> option), and have logins disabled.  Skeletal configuration files "
 "are not copied."
 msgstr ""
 "El directorio personal se crea con las mismas normas que para los usuarios "
-"normales. Los nuevos usuarios del sistema tendrán como consola I</bin/false> "
+"normales. Los nuevos usuarios del sistema tendrán como consola I</usr/sbin/nologin> "
 "(a menos que se modifique con la opción B<--shell>), y tienen la clave "
 "deshabilitada. Los ficheros de configuración esqueleto no se copian."
 
@@ -1100,10 +1100,10 @@ msgstr "B<FIRST_UID> y B<LAST_UID>"
 #: ../adduser.conf.5:74
 msgid ""
 "specify an inclusive range of UIDs from which normal user's UIDs can be "
-"dynamically allocated. Default to I<1000> - I<29999>."
+"dynamically allocated. Default to I<1000> - I<59999>."
 msgstr ""
 "especifica un rango dinámico de identificadores para usuarios normales "
-"(ambos incluidos). Por omisión es I<1000> - I<29999>."
+"(ambos incluidos). Por omisión es I<1000> - I<59999>."
 
 # type: TP
 #. type: TP
@@ -1134,11 +1134,11 @@ msgstr "B<FIRST_GID> y B<LAST_GID>"
 #: ../adduser.conf.5:84
 msgid ""
 "specify an inclusive range of GIDs from which normal group's GIDs can be "
-"dynamically allocated. Default to I<1000> - I<29999>."
+"dynamically allocated. Default to I<1000> - I<59999>."
 msgstr ""
 "define un rango inclusivo de números GID del cual se pueden asignar "
 "dinámicamente números GID de grupo normales. El valor por omisión es I<1000> "
-"- I<29999>."
+"- I<59999>."
 
 # type: TP
 #. type: TP
@@ -1796,7 +1796,7 @@ msgid ""
 "The required perl-package 'perl modules' is not installed. This package is "
 "required to perform the requested actions. No action was performed."
 msgstr ""
-"El paquete requerido perl-modules no está instalado. Este paquete es "
+"El paquete requerido perl no está instalado. Este paquete es "
 "necesario para realizar las acciones solicitadas. No se ha realizado ninguna "
 "acción."
 

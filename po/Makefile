@@ -18,12 +18,12 @@ all: update $(MO)
 update: adduser.pot
 	-@for po in $(PO); do \
 	echo -n "Updating $$po"; \
-	$(MSGMERGE) -U $$po adduser.pot; \
+	$(MSGMERGE) --previous -U $$po adduser.pot; \
 	done;
 
 adduser.pot: $(SOURCES)
 	$(XGETTEXT) -c -L Perl -kgtx \
-	--msgid-bugs-address=adduser-devel@lists.alioth.debian.org \
+	--msgid-bugs-address=adduser@packages.debian.org \
 	-o $@ $(SOURCES)
 
 install: all

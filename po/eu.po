@@ -1,21 +1,21 @@
-# translation of adduser_3.112+nmu2_eu.po to Basque
-# Spanish translation of adduser and deluser
+# Basque translation for adduser
 #
 # Piarres Beobide Egaña <pi@beobide.net>, 2004, 2006, 2008.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2010.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2010, 2016.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: adduser_3.112+nmu2_eu\n"
-"Report-Msgid-Bugs-To: adduser-devel@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2015-07-02 22:08+0200\n"
-"PO-Revision-Date: 2010-11-12 12:37+0100\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"Project-Id-Version: adduser 3.115\n"
+"Report-Msgid-Bugs-To: adduser@packages.debian.org\n"
+"POT-Creation-Date: 2016-05-29 07:48+0200\n"
+"PO-Revision-Date: 2016-06-17 18:21+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <debian-l10n-basque@lists.debian.org>\n"
-"Language: \n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. everyone can issue "--help" and "--version", but only root can go on
@@ -40,7 +40,7 @@ msgstr "--group, --ingroup, eta --gid aukerak ezin dira batera erabili.\n"
 
 #: ../adduser:206
 msgid "The home dir must be an absolute path.\n"
-msgstr "karpeta nagusia bide-izen absolutua izan behar da.\n"
+msgstr "Karpeta nagusia bide-izen absolutua izan behar da.\n"
 
 #: ../adduser:210
 #, perl-format
@@ -55,24 +55,24 @@ msgstr "Abisua: ezarri duzun %s karpeta nagusia ezin da atzitu: %s.\n"
 #: ../adduser:279
 #, perl-format
 msgid "The group `%s' already exists as a system group. Exiting.\n"
-msgstr "'%s' taldea badago lehendik ere sistemako talde gisa. Irtetzen.\n"
+msgstr "'%s' taldea badago lehendik ere sistemako talde gisa. Irteten.\n"
 
 #: ../adduser:285
 #, perl-format
 msgid "The group `%s' already exists and is not a system group. Exiting.\n"
 msgstr ""
-"'%s' taldea badago lehendik ere eta ez da sistemako talde bat. Irtetzen.\n"
+"'%s' taldea badago lehendik ere eta ez da sistemako talde bat. Irteten.\n"
 
 #: ../adduser:291
 #, perl-format
 msgid "The group `%s' already exists, but has a different GID. Exiting.\n"
 msgstr ""
-"'%s' taldea badago lehendik ere, baina GID desberdin bat du. Irtetzen.\n"
+"'%s' taldea badago lehendik ere, baina GID desberdin bat du. Irteten.\n"
 
 #: ../adduser:295 ../adduser:329
 #, perl-format
 msgid "The GID `%s' is already in use.\n"
-msgstr "'%s' GIDa dagoeneko erabilia dago.\n"
+msgstr "'%s' GIDa dagoeneko erabilita dago.\n"
 
 #: ../adduser:303
 #, perl-format
@@ -89,7 +89,7 @@ msgstr "'%s' taldea ez da sortu.\n"
 #: ../adduser:309 ../adduser:342
 #, perl-format
 msgid "Adding group `%s' (GID %d) ...\n"
-msgstr "'%s' taldea gehitzen: (%d GIDa)...\n"
+msgstr "'%s' (%d GIDa) taldea gehitzen...\n"
 
 #: ../adduser:318 ../adduser:351 ../adduser:376 ../deluser:387 ../deluser:424
 #: ../deluser:461
@@ -129,17 +129,17 @@ msgstr "'%s' erabiltzailea '%s' taldeari gehitzen...\n"
 #: ../adduser:390
 #, perl-format
 msgid "The system user `%s' already exists. Exiting.\n"
-msgstr "Sistemako '%s' erabiltzailea badago lehendik ere. Irtetzen.\n"
+msgstr "Sistemako '%s' erabiltzailea badago lehendik ere. Irteten.\n"
 
 #: ../adduser:393
 #, perl-format
 msgid "The user `%s' already exists. Exiting.\n"
-msgstr "'%s' erabiltzailea badago lehendik ere, Irtetzen.\n"
+msgstr "'%s' erabiltzailea badago lehendik ere, Irteten.\n"
 
 #: ../adduser:397
 #, perl-format
 msgid "The user `%s' already exists with a different UID. Exiting.\n"
-msgstr "'%s' erabiltzailea bestelako UID batekin dago. Irtetzen.\n"
+msgstr "'%s' erabiltzailea bestelako UID batekin dago. Irteten.\n"
 
 #: ../adduser:411
 #, perl-format
@@ -184,12 +184,12 @@ msgstr "'%s' erabiltzaile berria (%d UIDa) '%s' taldearekin gehitzen...\n"
 #: ../adduser:475 ../AdduserCommon.pm:162
 #, perl-format
 msgid "`%s' returned error code %d. Exiting.\n"
-msgstr "'%s'(e)k %d errore-kodea itzuli du. Irtetzen.\n"
+msgstr "'%s'(e)k %d errore-kodea itzuli du. Irteten.\n"
 
 #: ../adduser:477 ../AdduserCommon.pm:164
 #, perl-format
 msgid "`%s' exited from signal %d. Exiting.\n"
-msgstr "'%s' %d seinalearekin irten da. Irtetzen.\n"
+msgstr "'%s' %d seinalearekin irten da. Irteten.\n"
 
 #: ../adduser:479
 #, perl-format
@@ -424,7 +424,7 @@ msgstr "'%s' taldea kentzen...\n"
 #: ../adduser:1044
 #, perl-format
 msgid "Caught a SIG%s.\n"
-msgstr "SIG%s seinalea eskuratu da.\n"
+msgstr "SIG%s seinalea jaso da.\n"
 
 #: ../adduser:1049
 #, perl-format
@@ -484,7 +484,7 @@ msgid ""
 "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
 "[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
 "password]\n"
-"[--disabled-login] USER\n"
+"[--disabled-login] [--add_extra_groups] USER\n"
 "   Add a system user\n"
 "\n"
 "adduser --group [--gid ID] GROUP\n"
@@ -508,16 +508,15 @@ msgid ""
 "\n"
 msgstr ""
 "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup TALDEA | --gid "
-"ID]\n"
-"[--disabled-password] [--disabled-login] ERABILTZAILEA\n"
+"[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup TALDEA | --gid ID]\n"
+"[--disabled-password] [--disabled-login] [--add_extra_groups] ERABILTZAILEA\n"
 "   Gehitu erabiltzaile arrunt bat\n"
 "\n"
 "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-"[--gecos GECOS] [--group | --ingroup TALDEA | --gid ID] [--disabled-"
-"password]\n"
-"[--disabled-login] ERABILTZAILEA\n"
-"   Gehitu erabiltzaile arrunt bat\n"
+"[--gecos GECOS] [--group | --ingroup TALDEA | --gid ID]"
+" [--disabled-password]\n"
+"[--disabled-login] [--add_extra_groups] ERABILTZAILEA\n"
+"   Gehitu sistemako erabiltzaile bat\n"
 "\n"
 "adduser --group [--gid ID] TALDEA\n"
 "addgroup [--gid ID] TALDEA\n"
@@ -529,15 +528,14 @@ msgstr ""
 "adduser ERABILTZAILEA TALDEA\n"
 "   Gehitu existitzen den erabiltzaile bat existitzen den talde bati\n"
 "\n"
-"aukera orokorrak:\n"
-"  --quiet | -q     ez erakutsi prozesuaren informazioa irteera\n"
+"aukera orokorraks:\n"
+"  --quiet | -q      ez erakutsi prozesuaren informazioa irteera\n"
 "                             estandarrean (sdtout)\n"
-"  --force-badname  NAME_REGEX konfigurazioko aldagaiarekin\n"
-"                                 bat ez datozten erabiltzaile-izenak "
-"baimendu\n"
-"  --help | -h         erabileraren mezua\n"
+"  --force-badname NAME_REGEX konfigurazioko aldagaiarekin\n"
+"                                 bat ez datozen erabiltzaile-izenak baimendu\n"
+"  --help | -h       erabileraren mezua\n"
 "  --version | -v    bertsioaren zenbakia eta copyright-a\n"
-"  --conf | -c FITXATEGIA      erabili FITXATEGIA konfigurazioko fitxategi "
+"  --conf | -c FITXATEGIA  erabili FITXATEGIA konfigurazioko fitxategi "
 "gisa\n"
 "\n"
 
@@ -564,24 +562,24 @@ msgstr "Idatzi erabiltzaile-izena kentzeko: "
 msgid ""
 "In order to use the --remove-home, --remove-all-files, and --backup "
 "features,\n"
-"you need to install the `perl-modules' package. To accomplish that, run\n"
-"apt-get install perl-modules.\n"
+"you need to install the `perl' package. To accomplish that, run\n"
+"apt-get install perl.\n"
 msgstr ""
-"'perl-modules' paketea instalatu behar da --remove-home, --remove-all-"
+"'perl' paketea instalatu behar da --remove-home, --remove-all-"
 "files,\n"
 "eta --backup aukerak erabiltzeko. Horretarako, exekutatu honako komandoa:\n"
-"apt-get install perl-modules\n"
+"apt-get install perl\n"
 
 #: ../deluser:219
 #, perl-format
 msgid "The user `%s' is not a system user. Exiting.\n"
-msgstr "'%s' erabiltzailea ez da sistemako erabiltzailea. Irtetzen.\n"
+msgstr "'%s' erabiltzailea ez da sistemako erabiltzailea. Irteten.\n"
 
 #: ../deluser:223
 #, perl-format
 msgid "The user `%s' does not exist, but --system was given. Exiting.\n"
 msgstr ""
-"'%s' erabiltzailea ez da existitzen, baina --system eman da. Irtetzen.\n"
+"'%s' erabiltzailea ez da existitzen, baina --system eman da. Irteten.\n"
 
 #: ../deluser:234
 msgid "WARNING: You are just about to delete the root account (uid 0)\n"
@@ -659,7 +657,7 @@ msgstr "huts egin du getgrnam '%s' funtzioak. Hau ez zen gertatu beharko.\n"
 #: ../deluser:405
 #, perl-format
 msgid "The group `%s' is not a system group. Exiting.\n"
-msgstr "'%s' taldea ez da sistemako talde bat. Irtetzen.\n"
+msgstr "'%s' taldea ez da sistemako talde bat. Irteten.\n"
 
 #: ../deluser:409
 #, perl-format
@@ -808,80 +806,3 @@ msgstr "'%s' aldagaia ezezaguna '%s'(e)ko %d. lerroan.\n"
 msgid "Could not find program named `%s' in $PATH.\n"
 msgstr "Ezin izan da '%s' izeneko programarik aurkitu $PATH bide-izenean.\n"
 
-#~ msgid ""
-#~ "%s: Please enter a username matching the regular expression configured\n"
-#~ "via the NAME_REGEX configuration variable.  Use the `--force-badname'\n"
-#~ "option to relax this check or reconfigure NAME_REGEX.\n"
-#~ msgstr ""
-#~ "%s: idatzi NAME_REGEX konfigurazioko aldagaian ezarritako adierazpen\n"
-#~ "erregularra betetzen duen erabiltzaile-izen bat. Erabili '--force-"
-#~ "badname'\n"
-#~ "aukera hau zabaltzeko edo NAME_REGEX birkonfiguratzeko.\n"
-
-#~ msgid ""
-#~ "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid "
-#~ "ID]\n"
-#~ "[--disabled-password] [--disabled-login] USER\n"
-#~ "   Add a normal user\n"
-#~ "\n"
-#~ "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
-#~ "ID]\n"
-#~ "[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-"
-#~ "password]\n"
-#~ "[--disabled-login] USER\n"
-#~ "   Add a system user\n"
-#~ "\n"
-#~ "adduser --group [--gid ID] GROUP\n"
-#~ "addgroup [--gid ID] GROUP\n"
-#~ "   Add a user group\n"
-#~ "\n"
-#~ "addgroup --system [--gid ID] GROUP\n"
-#~ "   Add a system group\n"
-#~ "\n"
-#~ "adduser USER GROUP\n"
-#~ "   Add an existing user to an existing group\n"
-#~ "\n"
-#~ "general options:\n"
-#~ "  --quiet | -q      don't give process information to stdout\n"
-#~ "  --force-badname   allow usernames which do not match the\n"
-#~ "                    NAME_REGEX configuration variable\n"
-#~ "  --help | -h       usage message\n"
-#~ "  --version | -v    version number and copyright\n"
-#~ "  --conf | -c FILE  use FILE as configuration file\n"
-#~ "\n"
-#~ msgstr ""
-#~ "adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]\n"
-#~ "[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup TALDEA | --gid "
-#~ "ID]\n"
-#~ "[--disabled-password] [--disabled-login] ERABILTZAILEA\n"
-#~ "   Gehitu erabiltzaile arrunt bat\n"
-#~ "\n"
-#~ "adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid "
-#~ "ID]\n"
-#~ "[--gecos GECOS] [--group | --ingroup TALDEA | --gid ID] [--disabled-"
-#~ "password]\n"
-#~ "[--disabled-login] ERABILTZAILEA\n"
-#~ "   Gehitu erabiltzaile arrunt bat\n"
-#~ "\n"
-#~ "adduser --group [--gid ID] TALDEA\n"
-#~ "addgroup [--gid ID] TALDEA\n"
-#~ "   Gehitu erabiltzeren talde bat\n"
-#~ "\n"
-#~ "addgroup --system [--gid ID] TALDEA\n"
-#~ "   Gehitu sistemako talde bat\n"
-#~ "\n"
-#~ "adduser ERABILTZAILEA TALDEA\n"
-#~ "   Gehitu existitzen den erabiltzaile bat existitzen den talde bati\n"
-#~ "\n"
-#~ "aukera orokorrak:\n"
-#~ "  --quiet | -q     ez erakutsi prozesuaren informazioa irteera\n"
-#~ "                             estandarrean (sdtout)\n"
-#~ "  --force-badname  NAME_REGEX konfigurazioko aldagaiarekin\n"
-#~ "                                 bat ez datozten erabiltzaile-izenak "
-#~ "baimendu\n"
-#~ "  --help | -h         erabileraren mezua\n"
-#~ "  --version | -v    bertsioaren zenbakia eta copyright-a\n"
-#~ "  --conf | -c FITXATEGIA      erabili FITXATEGIA konfigurazioko fitxategi "
-#~ "gisa\n"
-#~ "\n"
