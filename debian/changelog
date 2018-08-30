@@ -1,3 +1,16 @@
+adduser (3.118) UNRELEASED; urgency=medium
+
+  [ Afif Elghraoui ]
+  * Remove myself from uploaders
+
+  [ Boyuan Yang ]
+  * po: Refresh po files
+  * po: Update Simplified Chinese (zh_CN) translation
+  * debian/rules: Avoid invoking dpkg-parsechangelog directly
+  * debian/control: Bump Standards-Version to 4.2.1.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 30 Aug 2018 15:11:02 -0400
+
 adduser (3.117) unstable; urgency=medium
 
   [ Marc Haber ]
