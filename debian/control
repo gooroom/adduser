@@ -3,7 +3,7 @@ Section: admin
 Priority: important
 Maintainer: Debian Adduser Developers <adduser@packages.debian.org>
 Uploaders: Marc Haber <mh+debian-packages@zugschlus.de>
-Standards-Version: 4.0.1
+Standards-Version: 4.2.1
 Build-Depends: po-debconf, debhelper (>= 9)
 Build-Depends-Indep: gettext, po4a
 Vcs-Browser: https://salsa.debian.org/debian/adduser
