@@ -1,4 +1,6 @@
-adduser (3.118) UNRELEASED; urgency=medium
+adduser (3.118) unstable; urgency=low
+
+  * Team upload
 
   [ Afif Elghraoui ]
   * Remove myself from uploaders
@@ -9,7 +11,16 @@ adduser (3.118) UNRELEASED; urgency=medium
   * debian/rules: Avoid invoking dpkg-parsechangelog directly
   * debian/control: Bump Standards-Version to 4.2.1.
 
- -- Boyuan Yang <byang@debian.org>  Thu, 30 Aug 2018 15:11:02 -0400
+  [ Helge Kreutzmann ]
+  * Update German debconf translation (Closes: #898034)
+
+  [ Frans Spiesschaert ]
+  * Update Dutch debconf translation (Closes: #898769)
+
+  [ Julien Patriarca ]
+  * Update French debconf translation (Closes: #901031)
+
+ -- Afif Elghraoui <afif@debian.org>  Sat, 15 Sep 2018 15:12:39 -0400
 
 adduser (3.117) unstable; urgency=medium
 
