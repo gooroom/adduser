@@ -1,3 +1,16 @@
+adduser (3.117+grm1u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [69882279] Imported adduser_3.113+nmu3ubuntu5.patch
+  * [9de020ce] Added encfs-encrypt-home options - Option to support user-level encryption of encfs
+
+  [ gooroom ]
+  * [34b5a918] Version 3.113+nmu3ubuntu5+grm1u1 released
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Thu, 11 Oct 2018 09:57:55 +0900
+
 adduser (3.117) unstable; urgency=medium
 
   [ Marc Haber ]
