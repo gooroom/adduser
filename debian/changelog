@@ -1,3 +1,27 @@
+adduser (3.118) unstable; urgency=low
+
+  * Team upload
+
+  [ Afif Elghraoui ]
+  * Remove myself from uploaders
+
+  [ Boyuan Yang ]
+  * po: Refresh po files
+  * po: Update Simplified Chinese (zh_CN) translation
+  * debian/rules: Avoid invoking dpkg-parsechangelog directly
+  * debian/control: Bump Standards-Version to 4.2.1.
+
+  [ Helge Kreutzmann ]
+  * Update German debconf translation (Closes: #898034)
+
+  [ Frans Spiesschaert ]
+  * Update Dutch debconf translation (Closes: #898769)
+
+  [ Julien Patriarca ]
+  * Update French debconf translation (Closes: #901031)
+
+ -- Afif Elghraoui <afif@debian.org>  Sat, 15 Sep 2018 15:12:39 -0400
+
 adduser (3.117+grm1u1) unstable; urgency=medium
 
   [ jongkyung.woo ]
