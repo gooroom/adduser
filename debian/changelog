@@ -1,3 +1,12 @@
+adduser (3.118+grm2u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [ee374e8b] Modified Git URL information in control
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Sun, 01 Dec 2019 12:52:16 +0900
+
 adduser (3.118) unstable; urgency=low
 
   * Team upload
