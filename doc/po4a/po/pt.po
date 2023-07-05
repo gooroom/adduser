@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adduser 3.130\n"
-"POT-Creation-Date: 2023-05-25 19:13+0200\n"
+"POT-Creation-Date: 2023-02-12 11:44+0100\n"
 "PO-Revision-Date: 2023-01-06 23:30+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <>\n"

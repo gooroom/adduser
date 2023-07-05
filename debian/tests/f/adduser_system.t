@@ -50,7 +50,9 @@ assert_user_has_disabled_password('foo');
 # Ref: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1004710
 assert_path_does_not_exist('/var/mail/foo');
 
-$uid++;
+while (defined(getpwuid($uid))) {
+    $uid++;
+}
 assert_user_does_not_exist('foo2');
 assert_path_does_not_exist('/nonexistent');
 

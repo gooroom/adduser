@@ -338,7 +338,9 @@ foreach $groupbase( @gnames ) {
         $gidcount=((getgrnam($group))[2]);
     }
     assert_group_has_gid($group, $gidcount);
-    $gidcount++;
+    while (defined(getgrgid($gidcount))) {
+        $gidcount++;
+    }
 }
 assert_command_success('/usr/sbin/addgroup', $quiet,
     '--system',
@@ -360,7 +362,9 @@ foreach $userbase( @unames ) {
     }
     assert_primary_group_membership_exists($user, $prefix.$gnames[0]);
     assert_user_has_uid($user, $uidcount);
-    $uidcount++;
+    while (defined(getpwuid($uidcount))) {
+        $uidcount++;
+    }
 }
 assert_command_success('/usr/sbin/adduser', $quiet,
     '--system',
@@ -384,7 +388,9 @@ foreach $userbase( @unames ) {
     }
     assert_primary_group_membership_exists($user, 'nogroup');
     assert_user_has_uid($user, $uidcount);
-    $uidcount++;
+    while (defined(getpwuid($uidcount))) {
+        $uidcount++;
+    }
 }
 cleanup($prefix);
 
@@ -907,8 +913,8 @@ cleanup($prefix);
 # test group S4L: ranges requested by config, overriden by command line
 
 $prefix='s4l';
-$firstuid1=420;
-$lastuid1=423;
+$firstuid1=320;
+$lastuid1=323;
 $firstgid1=520;
 $lastgid1=523;
 $fuid = 720;

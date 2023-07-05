@@ -16,7 +16,7 @@ my @modes = ("750","2751","3333","55555","8888","wtF??");
 
 my $user = $user_prefix . "default";
 my $home = "/home/$user";
-my $mode = "755";
+my $mode = "750";
 
 assert_user_does_not_exist($user);
 assert_path_does_not_exist($home);
@@ -49,7 +49,7 @@ foreach (@modes) {
   if (mode_is_valid($mode)) {
     assert_path_has_mode($home, $mode);
   } else {
-    my $def_mode = "755";
+    my $def_mode = "750";
     assert_path_has_mode($home, $def_mode, $mode);
   }
   remove_tree($home);

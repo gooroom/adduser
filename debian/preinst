@@ -30,6 +30,8 @@ create_adduser_conf() {
     ab6adcf4067d7d50ef45cc93ca3a8c54b7ab3e7748420434ad846e8d6e6c34d2ae10d576029d3e1e501f7a743951aed3876c8f3d0e03a918410fa3c9d82460e2 \
     b26329cba15b817a79d19c542c49a3e34b7535ffbd60057df7aca2b7027a1ad8db0cdecfd5c00c40d60f50e8b7e2e1675d8401696cf8933a5530e31e430a6675 \
     a91cdf6bf59602a7c7dbb745bca1b4d374035026dd89aa62eb9edea8ffcdff4a764a2274770de81687291d57cf9fbc0f0eb495451460c2b44229cebcecd9d870 \
+    9276d943d595d49f28f391688ab1973b2235a90dcf42cd383ee7a0e7b819fd8c232ec9d7e5da0c2b8a822a8d8f0eba230e88acde34015a4881ca2499b7809cb4 \
+    b9eb41be93cf85fba8f716d4683e6171b39a068b61a4fe4bfb5b1be93400000e8fb24b151ecaf4a88487802c24ac7aec72100fa6fd1926fa49fed9862d45deee \
     d8502b9daf3a3a486ca563a15f2bb03a25eb9247d201d15a4640088626c660a03416b62217f59c37aa94050317243b8979fd46d99e081f555eb7f8adf325a7f8"
   else
     # old version already has adduser.conf as a dpkg-conffile, nothing to do.
@@ -48,16 +50,16 @@ create_adduser_conf() {
       printf "cannot move unchanged adduser.conf to adduser.conf.update-old. You can continue after answering the dpkg configuration file question.\n"
     else
       DIR_MODE="$(< /etc/adduser.conf sed -n '/^\(DIR_MODE=\)/{s///;p;q;}')"
-      DIR_MODE="${DIR_MODE:-0700}"
-      if [ "$DIR_MODE" != "0700" ] && [ "$DIR_MODE" != "0755" ]; then
+      DIR_MODE="${DIR_MODE:-0750}"
+      if [ "$DIR_MODE" != "0750" ] && [ "$DIR_MODE" != "0755" ]; then
 	# We reach this point of control if the local file is identical to what
-	# we have shipped AND DIR_MODE is neither set to 0700 and 0755. This must
+	# we have shipped AND DIR_MODE is neither set to 0750 and 0755. This must
 	# be a local change, therefore a dpkg prompt is expected.
-        printf "DIR_MODE default has changed from %s to 0700. You can continue after answering the dpkg configuration file question.\n" "${DIR_MODE}"
+        printf "DIR_MODE default has changed from %s to 0750. You can continue after answering the dpkg configuration file question.\n" "${DIR_MODE}"
       else
 	# We reach this point of control if the local file is identical to what
-	# we have shipped AND DIR_MODE is either set to 0700 or  0755. If it is
-	# 0700, then our change is already what the user has configured before
+	# we have shipped AND DIR_MODE is either set to 0750 or  0755. If it is
+	# 0750, then our change is already what the user has configured before
 	# (no prompt needed). If it is 0755, the user never changed the default,
 	# hence we are policy compliant to overwrite our unchanged default with
 	# the new one (no prompt needed as well).

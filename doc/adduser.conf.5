@@ -30,6 +30,20 @@ Comment lines must have a hash sign (#) in the first column.
 .PP
 The valid configuration options are:
 .TP
+.B STDERRMSGLEVEL ", " STDOUTMSGLEVEL ", and " LOGMSGLEVEL
+Minimum priority for messages logged to syslog/journal and the console,
+respectively.
+Values are
+\fItrace\fP, \fIdebug\fP, \fIinfo\fP, \fIwarn\fP, \fIerr\fP, and \fIfatal\fP.
+Messages with the priority set here or higher get printed to the
+respective medium.
+Messages printed to stderr are not repeated on stdout.
+That allows the local admin to control \fBadduser\fPs chattiness
+on the console and in the log independently, keeping probably confusing
+information to itself while still leaving helpful information in the log.
+Defaults to \fIinfo\fP for STDOUTMSGLEVEL and LOGMSGLEVEL and
+\fIwarn\fP for STDERRMSGLEVEL.
+.TP
 .B ADD_EXTRA_GROUPS
 Setting this to something other than 0
 will cause \fBadduser\fP to add
