@@ -1,15 +1,14 @@
 Source: adduser
 Section: admin
 Priority: important
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Debian Adduser Developers <adduser@packages.debian.org>
-Uploaders: Marc Haber <mh+debian-packages@zugschlus.de>
+Maintainer: gooroom <gooroom@gooroom.kr>
+XSBC-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Standards-Version: 4.6.2
 Build-Depends: debhelper-compat (= 13), po4a
 Build-Depends-Indep: gettext
 Rules-Requires-Root: no
-Vcs-Browser: https://code.launchpad.net/~ubuntu-core-dev/ubuntu/+source/adduser/+git/adduser
-Vcs-Git: https://git.launchpad.net/~ubuntu-core-dev/ubuntu/+source/adduser
+Vcs-Browser: https://github.com/gooroom/adduser
+Vcs-Git: https://github.com/gooroom/adduser
 X-Debian-Vcs-Browser: https://salsa.debian.org/debian/adduser
 X-Debian-Vcs-Git: https://salsa.debian.org/debian/adduser.git
 
