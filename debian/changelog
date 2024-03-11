@@ -1,3 +1,10 @@
+adduser (3.137ubuntu1+grm4u1) mantic; urgency=medium
+
+  [ jongkyung.woo ]
+  * [11a9ff78] Rebased on gooroom-4.0
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Mon, 11 Mar 2024 15:44:11 +0900
+
 adduser (3.137ubuntu1) mantic; urgency=medium
 
   * Merge from Debian unstable (LP: #2026199). Remaining changes:
